@@ -1,0 +1,35 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:11 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:11  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_crd_date
+end
+
+table suhp
+	field suhp_co_no
+	field suhp_hhsq_hash
+	field suhp_cheq_no
+	field suhp_date_payment
+	field suhp_stat_flag
+	field suhp_presented
+end
+
+table suht
+	field suht_hhsq_hash
+	field suht_est_no
+	field suht_stat_flag
+end
+

@@ -1,0 +1,41 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pmat,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pmat)
+|  Schema Desc  : (Project Monitoring Action Table. )
+|----------------------------------------------------------------------
+| $Log: sch.pmat,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:06  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:39  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pmat
+
+field	pmat_proj_no			type	char	8
+field	pmat_cont_no			type	char	6
+field	pmat_act_date			type	edate
+field	pmat_act_details		type	char	80
+field	pmat_next_act_date		type	edate
+field	pmat_id_no				type	composite
+			pmat_proj_no,
+			pmat_cont_no,
+			pmat_act_date								index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		pmat_proj_no		-	Project Number.
+		pmat_cont_no		-	Contractor Number.
+		pmat_act_date		-	Action Date.
+		pmat_act_details	-	Action Details
+		pmat_next_act_date	-	Next Action Date.
+}

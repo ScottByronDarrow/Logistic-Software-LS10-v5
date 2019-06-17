@@ -1,0 +1,104 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:07:25 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:07:25  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:28:34  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/24 08:37:21  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_hhlo_hash
+	field ccmr_master_wh
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_lrp_ok
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+end
+
+table inws
+	field inws_hhbr_hash
+	field inws_hhcf_hash
+	field inws_hhcc_hash
+	field inws_inws_hash
+	field inws_sup_priority
+	field inws_min_order
+	field inws_norm_order
+	field inws_ord_multiple
+	field inws_pallet_size
+	field inws_weight
+	field inws_volume
+	field inws_upft_pc
+	field inws_upft_amt
+	field inws_stat_flag
+end
+
+table inwd
+	field inwd_inws_hash
+	field inwd_hhcc_hash
+	field inwd_hhbr_hash
+	field inwd_hhcf_hash
+	field inwd_sup_priority
+	field inwd_km
+	field inwd_dflt_lead
+	field inwd_sea_time
+	field inwd_air_time
+	field inwd_lnd_time
+	field inwd_upft_pc
+	field inwd_upft_amt
+	field inwd_demand
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+	field inmr_weight
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_hhcf_hash
+	field excf_cat_desc
+	field excf_stat_flag
+end
+

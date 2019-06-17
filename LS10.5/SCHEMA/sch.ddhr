@@ -1,0 +1,145 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ddhr,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.ddhr)
+|  Schema Desc  : (Direct Delivery Order Header File. )
+|----------------------------------------------------------------------
+| $Log: sch.ddhr,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:31  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+
+file	ddhr	
+
+field	ddhr_co_no				type	char	2
+field	ddhr_br_no				type	char	2
+field	ddhr_dp_no				type	char	2
+field	ddhr_order_no			type	char	8
+field	ddhr_cont_no			type	char	6
+field	ddhr_hhcu_hash			type	long		index dups
+field	ddhr_cus_ord_ref		type	char	20
+field	ddhr_carr_area			type	char	2
+field	ddhr_hhdd_hash			type	serial		index	primary
+field	ddhr_dt_raised			type	edate
+field	ddhr_dt_required		type	edate
+field	ddhr_tax_code			type	char	1
+field	ddhr_tax_no				type	char	15
+field	ddhr_area_code			type	char	2
+field	ddhr_sman_code			type	char	2
+field	ddhr_op_id				type	char	14
+field	ddhr_time_create		type	char	5
+field	ddhr_date_create		type	edate
+field	ddhr_freight        	type	money
+field	ddhr_insurance      	type	money
+field	ddhr_other_cost_1   	type	money
+field	ddhr_other_cost_2   	type	money
+field	ddhr_other_cost_3   	type	money
+field	ddhr_gross				type	money
+field	ddhr_disc				type	money
+field	ddhr_tax				type	money
+field	ddhr_gst				type	money
+field	ddhr_exch_rate			type	double
+field	ddhr_fix_exch			type	char	1
+field	ddhr_del_name			type	char	40
+field	ddhr_del_add1			type	char	40
+field	ddhr_del_add2			type	char	40
+field	ddhr_del_add3			type	char	40
+field	ddhr_req_usr			type	char	40
+field	ddhr_reason				type	char	40
+field	ddhr_stdin1				type	char	60
+field	ddhr_stdin2				type	char	60
+field	ddhr_stdin3				type	char	60
+field	ddhr_din_1				type	char	60
+field	ddhr_din_2				type	char	60
+field	ddhr_din_3				type	char	60
+field	ddhr_fwd_exch			type	char	6
+field	ddhr_sell_terms			type	char	3
+field	ddhr_pay_term			type	char	40
+field	ddhr_progressive		type	char	1
+field	ddhr_inv_no				type	char	8
+field	ddhr_pri_type			type	char	1	
+field	ddhr_no_ctn				type	integer
+field	ddhr_wgt_per_ctn		type	double
+field	ddhr_stat_flag			type	char	1
+field	ddhr_id_no				type	composite
+			ddhr_co_no,
+			ddhr_br_no,
+			ddhr_hhcu_hash,
+			ddhr_order_no									index
+field	ddhr_id_no2				type	composite
+			ddhr_co_no,
+			ddhr_br_no,
+			ddhr_order_no									index
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ddhr_co_no 			- 	Company Number.
+	ddhr_br_no			- 	Branch Number.
+	ddhr_dp_no			- 	Department Number.
+	ddhr_order_no		- 	Sales Order No.
+	ddhr_hhcu_hash		- 	Link to Customer Master file. ( cumr ).
+	ddhr_cont_no		- 	Contract No.
+	ddhr_cus_ord_ref	- 	Customer Order Reference.
+	ddhr_carr_area		-	Carrier Area Code.
+	ddhr_hhdd_hash		- 	Order Hash Linking in order Details.
+	ddhr_dt_raised     	- 	Date order raised.
+	ddhr_dt_required   	- 	Date order required.
+	ddhr_tax_code		-	Tax Code.
+							A - Tax Exempt.
+							B - Tax Your Care.
+							C - Taxable.
+							D - Taxed at Absolute amount.
+	ddhr_tax_no			-	Tax Number.
+	ddhr_area_code		-	Area Code. ( Lookup on exaf ).
+	ddhr_sman_code		- 	Salesman Code. ( Lookup on exsf ).
+	ddhr_op_id			-	Operator ID.
+	ddhr_time_create	-	Time Created.
+	ddhr_date_create	-	Date Created.
+	ddhr_freight		-	Freight Amount.
+	ddhr_insurance		-	Insurance Amount.
+	ddhr_other_cost_1	-	Other Cost 1.
+	ddhr_other_cost_2	-	Other Cost 2.
+	ddhr_other_cost_3	-	Other Cost 3.
+	ddhr_gross  		- 	Gross Amount.
+	ddhr_disc 	 		- 	Discount Amount.
+	ddhr_tax  			- 	Tax Amount.
+	ddhr_gst	  		- 	Gst Amount.
+	ddhr_exch_rate		-	Exchange Rate.
+	ddhr_fix_exch      	-	Fixed Exchange Rate ( Y(es) N(o) )
+	ddhr_del_name      	-	Deliver to Name.
+	ddhr_del_add1      	- 	Deliver to Address 1.
+	ddhr_del_add2      	- 	Deliver to Address 2.
+	ddhr_del_add3      	- 	Deliver to Address 3.
+	ddhr_req_usr		-	User who requested change.
+	ddhr_reason			-	Reason for change.
+	ddhr_stdin1			-	Standard instruction part 1.
+	ddhr_stdin2			-	                          2.
+	ddhr_stdin3			-	                          3.
+	ddhr_din_1			- 	Delivery Instruction Line 1
+	ddhr_din_2			- 	Delivery Instruction Line 2
+	ddhr_din_3			- 	Delivery Instruction Line 3
+	ddhr_forward_exch	- 	Forward Exchange Contract No.
+	ddhr_sel_term       - 	Pricing Terms.
+	ddhr_pay_term       - 	Payment Terms.
+	ddhr_inv_no       	- 	Invoice Number. 
+	ddhr_progressive_inv- 	Progressive Invoicing (Y/N).
+	ddhr_pri_type      	- 	Price Type (Selling price 1-9)
+	ddhr_stat_flag.    	- 	Status Flag
+			            	 P(ending)
+				   		 	 A(ctive)
+							 C(onfirmed)
+							 D(espatched)
+							 I(nvoiced)
+}

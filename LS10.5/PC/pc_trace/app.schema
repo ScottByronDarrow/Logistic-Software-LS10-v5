@@ -1,0 +1,90 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:10:27 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:10:27  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:31:36  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:23:40  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+end
+
+table pclt
+	field pclt_co_no
+	field pclt_br_no
+	field pclt_hhwo_hash
+	field pclt_hhbr_hash
+	field pclt_lot_number
+	field pclt_issue_date
+	field pclt_slot_no
+	field pclt_lot_location
+	field pclt_qty_used
+	field pclt_iss_uom
+end
+
+table pcwo
+	field pcwo_order_no
+	field pcwo_hhwo_hash
+	field pcwo_batch_no
+	field pcwo_hhcc_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_supercession
+	field inmr_alternate
+	field inmr_hhsi_hash
+	field inmr_quick_code
+	field inmr_maker_no
+	field inmr_alpha_code
+	field inmr_dec_pt
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhwh_hash
+	field incc_hhbr_hash
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inum
+	field inum_hhum_hash
+	field inum_uom
+end
+
+table inlo
+	field inlo_inlo_hash      
+	field inlo_hhwh_hash      
+	field inlo_loc_type       
+	field inlo_lot_no         
+end

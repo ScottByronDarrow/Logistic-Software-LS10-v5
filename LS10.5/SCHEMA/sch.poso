@@ -1,0 +1,52 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.poso,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.poso)
+|  Schema Desc  : (Purchase order / Sales order linking file. )
+|----------------------------------------------------------------------
+| $Log: sch.poso,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/03/06 07:26:25  scott
+| Updates 3.0
+|
+| Revision 3.1  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	poso	
+
+field	poso_hhpl_hash			type	long				index	dups
+field	poso_hhsl_hash			type	long
+field	poso_hhcl_hash			type	long
+field	poso_itff_hash			type	long
+field	poso_qty_ord			type	float
+field	poso_qty				type	float
+field	poso_id_no				type	composite
+			poso_hhsl_hash,
+			poso_hhpl_hash									index	dups
+field	poso_id_no2				type	composite
+			poso_itff_hash,
+			poso_hhpl_hash									index	dups
+field	poso_id_no3				type	composite
+			poso_hhcl_hash,
+			poso_hhpl_hash									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	poso_hhpl_hash		-	Link to poln	( poln_hhpl_hash )
+	poso_hhsl_hash		-	Link to soln	( soln_hhsl_hash )
+	poso_hhcl_hash		-	Link to coln	( coln_hhcl_hash )
+	poso_itff_hash		-	Link to itln	( itln_itff_hash )
+	poso_qty_ord		-	Quantity ordered.
+	poso_qty			-	Quantity.
+}

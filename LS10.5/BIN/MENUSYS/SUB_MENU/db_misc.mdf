@@ -1,0 +1,10 @@
+Customers Miscellaneous Menu (SUB)
+db_help
+Customers Maintenance Menu. <a> (1,1)
+menu MENUSYS/db_maint.mdf
+Update Customers Periods. <a> (1,1)
+chain~warning "Update customer periods"~db_period_up~
+Delete Customers. <a> (1,1)
+chain~warning "DELETE CUSTOMERS"~db_mr_delinp PID~db_mr_delete PID~
+((
+))

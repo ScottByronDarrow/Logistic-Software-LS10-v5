@@ -1,0 +1,84 @@
+#
+#   $Id: Dir.info,v 4.5 2002/10/23 03:53:34 scott Exp $
+#   $Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/info/Dir.info,v $
+#		$Log: Dir.info,v $
+#		Revision 4.5  2002/10/23 03:53:34  scott
+#		Changed to add XML_IN and XML_OUT
+#		
+#		Revision 4.4  2002/07/24 09:28:43  scott
+#		.
+#		
+#		Revision 4.3  2002/05/06 02:19:26  scott
+#		Updated to add ARCHIVE directory to installation
+#		
+#		Revision 4.2  2001/11/08 03:05:55  scott
+#		Updated from further testing
+#		
+#		Revision 4.1  2001/09/12 03:21:32  scott
+#		Updated from Scott machine - 12th Sep 2001
+#		
+#		Revision 4.0  2001/03/09 02:49:25  scott
+#		LS10-4.0 New Release as at 10th March 2001
+#		
+#		Revision 1.4  2001/02/01 06:06:21  scott
+#		Updated from more testing
+#		
+#		Revision 1.3  2001/01/16 10:25:53  scott
+#		Updated from testing
+#		
+#		Revision 1.2  2001/01/15 03:28:05  scott
+#		Updated from testing
+#		
+#		New install system
+#		
+#		Directories are listed relative to $PROG_PATH
+#		Lines beginning with '#' and blank lines are ignored.
+#		List of mandatory directories required for an installation
+#		Only the first word of each line is used.
+#
+BIN					Binaries
+BIN/ACCOUNT			System accounting
+BIN/ACCOUNT/.b		Backups for system accounting
+BIN/AUDIT			Audit directory
+BIN/HELP			Help file directory
+BIN/LAYOUT			format-p layout files.
+BIN/LOCK			Lock file directory
+BIN/LOG				Log files for night processing
+BIN/MENUSYS			Menu directory
+BIN/MENUSYS/GUI		Menu directory
+BIN/PNT				Output directory for printed quotes etc.
+BIN/PRT				Output directory for printed quotes etc.
+BIN/PR_FILE			pr_format layout files.
+BIN/SCN				Screen file directory.
+BIN/SCRIPT			Standard Script file directory.
+BIN/SQL				Standard SQL scripts.
+BIN/SUB_MENU		SUB menu files.
+BIN/SUB_MENU/GUI	SUB menu files.
+BIN/UTILS			Required to license files.
+BIN/MENU			Required to license files.
+BIN/LS10_IN			Required for XML_IN
+BIN/LS10_OUT		Required for XML_OUT
+PICTURE				Stock Pictures
+DATA				Database directory
+DOCS				Source Documentation
+EDI					EDI Work directory
+INC++				C++ Include directory
+INCLUDE				C Include directory
+INSTALL				Install directory
+LETTERS				Letters Directory
+LIB					C Library directory
+LIB++				C++ Library directory
+LOCAL				Local Printing directory
+LOG					Log directory
+MAIL				For internal mail
+SCHEMA				Schema for the database
+SPREAD				Spread sheet info.
+ARCHIVE				Output directory for Archive files.
+SRC					Source directory
+SYSTEM				Main System Printer
+TAB					Tabular screen work directory
+USER				User specific directory
+WORK				Work directory
+ARCHIVE				Work directory
+gl_reports			General Ledger reports.
+su_reports			General Ledger reports - Super user.

@@ -1,0 +1,42 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sura,v 5.0 2001/06/19 10:17:32 cha Exp $
+|  Schema Name  : (sch.sura)
+|  Schema Desc  : (Suppliers Rebate Assignment File )
+|----------------------------------------------------------------------
+| $Log: sch.sura,v $
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:32  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:50  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sura	
+
+field	sura_hhsu_hash 		type	long
+field	sura_buygrp 		type	char 6
+field	sura_rebate 		type	char 5
+field	sura_id_no			type	composite
+		sura_hhsu_hash,
+		sura_buygrp,
+		sura_rebate			index
+field	sura_id_no2			type	composite
+		sura_hhsu_hash,
+		sura_rebate,
+		sura_buygrp			index
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+			  sura_hhsu_hash	- link to sumr_hhsu_hash
+			  sura_buygrp		- From ingp_buygrp
+			  sura_rebate		- From inrb_reb_code
+}

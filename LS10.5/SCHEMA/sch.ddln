@@ -1,0 +1,116 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ddln,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.ddln)
+|  Schema Desc  : (Direct Delivery Order Line File. )
+|----------------------------------------------------------------------
+| $Log: sch.ddln,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:31  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	ddln	
+
+field	ddln_hhdl_hash			type	serial		index	primary
+field	ddln_hhdd_hash			type	long
+field	ddln_hhds_hash			type	long		index	dups
+field	ddln_line_no			type	int
+field	ddln_hhbr_hash			type	long		index	dups
+field	ddln_hhsu_hash			type	long		index	dups
+field	ddln_hhpl_hash			type	long		index 	dups
+field	ddln_hhfe_hash			type	long		index 	dups
+field	ddln_cont_status		type	int
+field	ddln_q_order			type	float
+field	ddln_gsale_price		type	money
+field	ddln_sale_price			type	money
+field	ddln_cost_price			type	money
+field	ddln_disc_pc			type	float
+field	ddln_reg_pc				type	float
+field	ddln_disc_a				type	float
+field	ddln_disc_b				type	float
+field	ddln_disc_c				type	float
+field	ddln_cumulative			type	int
+field	ddln_amt_disc			type	money
+field	ddln_on_cost			type	money
+field	ddln_gross				type	money
+field	ddln_tax_pc				type	float
+field	ddln_gst_pc				type	float
+field	ddln_amt_gst			type	money
+field	ddln_amt_tax			type	money
+field	ddln_pack_size			type	char	5
+field	ddln_sman_code			type	char	2
+field	ddln_item_desc			type	char	40
+field	ddln_req_date			type	edate
+field	ddln_due_date			type	edate
+field	ddln_bonus_flag			type	char	1
+field	ddln_keyed				type	int
+field	ddln_stat_flag			type	char	1
+field	ddln_id_no				type	composite
+			ddln_hhdd_hash,
+			ddln_line_no										index
+field	ddln_id_no2				type	composite
+			ddln_hhdd_hash,
+			ddln_hhds_hash										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	ddln_hhdl_hash			-	Unique serial hash.
+	ddln_hhdd_hash			-	Link to ddhr_hhdd_hash ( header )
+	ddln_hhds_hash			-	Link to ddsh_hhds_hash ( shipment )
+	ddln_line_no			-	Line number.  
+	ddln_hhbr_hash			-	Link to inmr_hhbr_hash ( inventory master )
+	ddln_hhsu_hash			-	Link to sumr_hhsu_hash ( supplier master )
+	ddln_hhpl_hash			-	Link to poln_hhpl_hash ( purchase order line )
+	ddln_hhfe_hash			-	Link to fehr_hhfe_hash ( forward exch header )
+	ddln_cont_status		-	Contract status.
+									0 = No Contract applies.
+									1 = Contract applies no discounts.
+									2 = Contract applies, discounts allowed.
+	ddln_q_order			-	Quantity supplied.
+	ddln_gsale_price		-	Gross sales price each before reg pc.
+	ddln_sale_price			-	Nett sales price each after reg pc subtracted.
+	ddln_cost_price			-	Cost price, update by stock update.
+	ddln_disc_pc			-	Discount percent - Final Discount PerCent
+	ddln_reg_pc				-	Regulatory percent.
+	ddln_disc_a				-	Discount percent A.
+	ddln_disc_b				-	Discount percent B.
+	ddln_disc_c				-	Discount percent C.
+	ddln_cumulative			-	Cumulative. 1 or TRUE Discounts are cumulative.
+	                 		-	            0 or FALSE	Discounts are absolute.
+	ddln_amt_disc			-	Discount amount - Final Amount Of Discount
+	ddln_on_cost			-	Amount of on costs.
+	ddln_gross				-	Gross amount. (ddln_sale_price * ddln_q_order)
+	ddln_tax_pc				-	Tax percent.
+	ddln_gst_pc				-	Gst percent.
+	ddln_amt_tax			-	Tax amount.
+	ddln_amt_gst			-	Gst amount.
+	ddln_pack_size			-	Pack Size.
+	ddln_sman_code			-	Salesman code.
+	ddln_item_desc			-	Item description.
+	ddln_req_date			-	Required date.
+	ddln_due_date			-	Due date.
+    ddln_bonus_flag			- 	Bonus Item
+					  			Y  item is a bonus - no sales price
+								N  not a bonus item.
+	ddln_keyed				-	Sale Price override.
+									0 = No override.
+									1 = Uplift overridden.
+									2 = Sale Price Overridden.
+	ddln_stat_flag. 	   	- 	Status Flag
+			           		 	 P(ending)
+				   			 	 A(ctive)
+								 C(onfirmed)
+								 D(espatched)
+								 I(nvoiced)
+}

@@ -1,0 +1,48 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sudt,v 5.1 2001/08/07 00:07:43 scott Exp $
+|  Schema Name  : (sch.sudt)
+|  Schema Desc  : (Creditors Payments - Detail File)
+|----------------------------------------------------------------------
+| $Log: sch.sudt,v $
+| Revision 5.1  2001/08/07 00:07:43  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:49  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sudt
+
+field	sudt_hhsp_hash			type	long			index	dups
+field	sudt_hhsi_hash			type	long			index	dups
+field	sudt_amt_paid_inv		type	money
+field	sudt_loc_paid_inv		type	money
+field	sudt_exch_variatio		type	money
+field	sudt_exch_rate			type	double
+field	sudt_stat_flag			type	char	1
+field	sudt_id_no				type	composite
+			sudt_hhsp_hash,
+			sudt_hhsi_hash								index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sudt_hhsp_hash		-	Link to Cheque Header 	( suhd )
+	sudt_hhsi_hash		-	Link to Invoives 	( suin )
+	sudt_amt_paid_inv	-	Payment Amount on O/S Currency.
+	sudt_loc_paid_inv	-	Payment Amount on LOC Currency.
+	sudt_exch_variation	-	Exchange Variation.
+	sudt_exch_rate		-	Exchange Rate.
+	sudt_stat_flag		-	Spare status flag.
+}

@@ -1,0 +1,17 @@
+Online Invoicing Menu (OLMR)
+olmenu_help
+Sales Master Menu. <a> (1,2)
+menu MENUSYS/main_sale.mdf
+On Line Invoice/Credit Note Entry. <a> (1,2)
+pmenu MENUSYS/SUB_MENU/ol_olin.mdf
+Print Invoices. <a> (1,2)
+pmenu MENUSYS/SUB_MENU/ol_inrpt.mdf
+End of Day reports. <a> (1,2)
+pmenu MENUSYS/SUB_MENU/ol_eod.mdf
+Head Office Options. <a> (1,2)
+pmenu MENUSYS/SUB_MENU/ol_hdof.mdf
+((
+quadrant(21,6)
+box(15,3,48,12)
+line(16,5,47)
+))

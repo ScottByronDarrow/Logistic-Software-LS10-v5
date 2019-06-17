@@ -1,0 +1,329 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:37 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:37  scott
+#	Update - LS10.5
+#	
+#	Revision 4.0  2001/03/09 02:39:15  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:39  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_stat_flag
+end
+
+table inex
+	field inex_hhbr_hash
+	field inex_line_no
+	field inex_desc
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_on_hand
+	field inmr_on_order
+	field inmr_committed
+	field inmr_backorder
+	field inmr_forward
+	field inmr_min_quan
+	field inmr_max_quan
+	field inmr_ltd_sales
+	field inmr_stat_flag
+end
+
+table inlo
+	field inlo_hhwh_hash
+	field inlo_hhum_hash
+	field inlo_location
+	field inlo_loc_type
+	field inlo_lot_no
+	field inlo_slot_no
+	field inlo_expiry_date
+	field inlo_uom
+	field inlo_cnv_fct
+	field inlo_rec_qty
+	field inlo_qty
+	field inlo_no_hits
+	field inlo_no_picks
+	field inlo_op_id
+	field inlo_time_create
+	field inlo_date_upd
+	field inlo_date_create
+end
+
+table ffdm
+	field ffdm_hhbr_hash
+	field ffdm_hhcc_hash
+	field ffdm_date
+	field ffdm_type
+	field ffdm_qty
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_stocking_unit
+	field incc_location
+	field incc_qc_location
+	field incc_ff_option
+	field incc_ff_method
+	field incc_allow_repl
+	field incc_abc_code
+	field incc_abc_update
+	field incc_first_stocked
+	field incc_wks_demand
+	field incc_safety_stock
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_opening_stock
+	field incc_receipts
+	field incc_pur
+	field incc_issues
+	field incc_adj
+	field incc_sales
+	field incc_stake
+	field incc_closing_stock
+	field incc_qc_qty
+	field incc_wo_qty_anti
+	field incc_ytd_receipts
+	field incc_ytd_pur
+	field incc_ytd_issues
+	field incc_ytd_adj
+	field incc_ytd_sales
+	field incc_c_1
+	field incc_c_2
+	field incc_c_3
+	field incc_c_4
+	field incc_c_5
+	field incc_c_6
+	field incc_c_7
+	field incc_c_8
+	field incc_c_9
+	field incc_c_10
+	field incc_c_11
+	field incc_c_12
+	field incc_c_val_1
+	field incc_c_val_2
+	field incc_c_val_3
+	field incc_c_val_4
+	field incc_c_val_5
+	field incc_c_val_6
+	field incc_c_val_7
+	field incc_c_val_8
+	field incc_c_val_9
+	field incc_c_val_10
+	field incc_c_val_11
+	field incc_c_val_12
+	field incc_c_prf_1
+	field incc_c_prf_2
+	field incc_c_prf_3
+	field incc_c_prf_4
+	field incc_c_prf_5
+	field incc_c_prf_6
+	field incc_c_prf_7
+	field incc_c_prf_8
+	field incc_c_prf_9
+	field incc_c_prf_10
+	field incc_c_prf_11
+	field incc_c_prf_12
+	field incc_stat_flag
+end
+
+table inwu
+	field inwu_hhwh_hash
+	field inwu_hhum_hash
+	field inwu_opening_stock
+	field inwu_receipts
+	field inwu_pur
+	field inwu_issues
+	field inwu_adj
+	field inwu_sales
+	field inwu_closing_stock
+end
+
+table coln
+	field coln_hhbr_hash
+end
+
+table poln
+	field poln_hhbr_hash
+end
+
+table soln
+	field soln_hhbr_hash
+end
+
+table itgl
+	field itgl_co_no
+	field itgl_br_no
+	field itgl_sort
+	field itgl_hhbr_hash
+end
+
+table itln
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+end
+
+table qtln
+	field qtln_hhbr_hash
+end
+
+table qtpd
+	field qtpd_hhbr_hash
+end
+
+table intr
+	field intr_hhbr_hash
+end
+
+table ffhs
+	field ffhs_hhbr_hash
+	field ffhs_hhcc_hash
+	field ffhs_per1
+	field ffhs_per2
+	field ffhs_per3
+	field ffhs_per4
+	field ffhs_per5
+	field ffhs_per6
+	field ffhs_per7
+	field ffhs_per8
+	field ffhs_per9
+	field ffhs_per10
+	field ffhs_per11
+	field ffhs_per12
+end
+
+table sapc
+	field sapc_co_no
+	field sapc_br_no
+	field sapc_hhbr_hash
+	field sapc_hhcu_hash
+	field sapc_mtd_sales
+	field sapc_mtd_csale
+	field sapc_mtd_qty
+	field sapc_ytd_sales
+	field sapc_ytd_csale
+	field sapc_ytd_qty
+	field sapc_sman
+end
+
+table sadf
+	field sadf_co_no
+	field sadf_br_no
+	field sadf_year
+	field sadf_hhbr_hash
+	field sadf_hhcu_hash
+	field sadf_qty_per1
+	field sadf_qty_per2
+	field sadf_qty_per3
+	field sadf_qty_per4
+	field sadf_qty_per5
+	field sadf_qty_per6
+	field sadf_qty_per7
+	field sadf_qty_per8
+	field sadf_qty_per9
+	field sadf_qty_per10
+	field sadf_qty_per11
+	field sadf_qty_per12
+	field sadf_sal_per1
+	field sadf_sal_per2
+	field sadf_sal_per3
+	field sadf_sal_per4
+	field sadf_sal_per5
+	field sadf_sal_per6
+	field sadf_sal_per7
+	field sadf_sal_per8
+	field sadf_sal_per9
+	field sadf_sal_per10
+	field sadf_sal_per11
+	field sadf_sal_per12
+	field sadf_cst_per1
+	field sadf_cst_per2
+	field sadf_cst_per3
+	field sadf_cst_per4
+	field sadf_cst_per5
+	field sadf_cst_per6
+	field sadf_cst_per7
+	field sadf_cst_per8
+	field sadf_cst_per9
+	field sadf_cst_per10
+	field sadf_cst_per11
+	field sadf_cst_per12
+	field sadf_fri_per1
+	field sadf_fri_per2
+	field sadf_fri_per3
+	field sadf_fri_per4
+	field sadf_fri_per5
+	field sadf_fri_per6
+	field sadf_fri_per7
+	field sadf_fri_per8
+	field sadf_fri_per9
+	field sadf_fri_per10
+	field sadf_fri_per11
+	field sadf_fri_per12
+	field sadf_sman
+	field sadf_area
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_part
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_stat_flag
+end
+
+table incp
+	field incp_hhbr_hash
+end
+
+table inpr
+	field inpr_hhbr_hash
+end
+
+table inds
+	field inds_hhbr_hash
+end
+

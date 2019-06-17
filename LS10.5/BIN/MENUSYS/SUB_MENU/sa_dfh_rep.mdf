@@ -1,0 +1,16 @@
+12 Months Sales Analysis Reports Menu (SUB)
+sa_reports
+Sales Analysis Master Menu. <a> (1,1)
+menu MENUSYS/sa_master.mdf
+Print 12 Months Sales By Customer By Product. <a> (1,1)
+sa_dfcstprd~"12 Months Sales Analysis By Customer By Product"~
+Print 12 Months Sales By Category For Company <a> (1,1)
+sk_group.i~sa_dfcat~12 Months Sales Analysis By Category For Company~" "~C~
+Print 12 Months Sales By Category For Branch <a> (1,1)
+sk_group.i~sa_dfcat~12 Months Sales Analysis By Category For Branch~" "~B~
+Print 12 Months Sales By Category By Customer <a> (1,1)
+sa_dfprdcst~"12 Months Sales Analysis By Category By Customer"~C~
+Print 12 Months Sales By Product By Customer <a> (1,1)
+sa_dfprdcst~"12 Months Sales Analysis By Product By Customer"~I~
+((
+))

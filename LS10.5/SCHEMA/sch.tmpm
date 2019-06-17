@@ -1,0 +1,136 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmpm,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.tmpm)
+|  Schema Desc  : (Tele-Marketing Prospect Master file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmpm,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:34  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:53  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmpm
+
+field	tmpm_co_no				type	char	2
+field	tmpm_br_no				type	char	2
+field	tmpm_pro_no				type	char	6
+field	tmpm_hhpm_hash			type	serial			index
+field	tmpm_hhcu_hash			type	long			index	dups
+field	tmpm_name				type	char	40
+field	tmpm_acronym			type	char	9
+field	tmpm_area_code			type	char	2
+field	tmpm_sman_code			type	char	2
+field	tmpm_b_sector			type	char	3
+field	tmpm_post_code			type	char	10
+field	tmpm_active_flg			type	char	1
+field	tmpm_cont_name1			type	char	30
+field	tmpm_cont_name2			type	char	30
+field	tmpm_cont_name3			type	char	30
+field	tmpm_cont_name4			type	char	30
+field	tmpm_cont_name5			type	char	30
+field	tmpm_cont_name6			type	char	30
+field	tmpm_cont_code1			type	char	3
+field	tmpm_cont_code2			type	char	3
+field	tmpm_cont_code3			type	char	3
+field	tmpm_cont_code4			type	char	3
+field	tmpm_cont_code5			type	char	3
+field	tmpm_cont_code6			type	char	3
+field	tmpm_mail1_adr			type	char	40
+field	tmpm_mail2_adr			type	char	40
+field	tmpm_mail3_adr			type	char	40
+field	tmpm_del1_adr			type	char	40
+field	tmpm_del2_adr			type	char	40
+field	tmpm_del3_adr			type	char	40
+field	tmpm_fax_no				type	char	15
+field	tmpm_phone_no			type	char	15
+field	tmpm_phone_freq			type	int
+field	tmpm_n_phone_date		type	edate
+field	tmpm_n_phone_time		type	char	5
+field	tmpm_visit_freq			type	int
+field	tmpm_n_visit_date		type	edate
+field	tmpm_n_visit_time		type	char	5
+field	tmpm_mail_flag			type	char	1
+field	tmpm_op_code			type	char	14
+field	tmpm_lst_op_code		type	char	14
+field	tmpm_call_bk_date		type	edate
+field	tmpm_call_bk_time		type	char	5
+field	tmpm_call_no			type	long
+field	tmpm_lphone_date		type   	edate
+field	tmpm_origin				type   	char	3
+field	tmpm_date_create		type   	edate
+field	tmpm_best_ph_time		type   	char	5
+field	tmpm_delete_flag		type   	char	1
+field	tmpm_tax_code			type   	char	1
+field	tmpm_tax_no				type   	char	15
+field	tmpm_stat_flag			type	char	1
+field	tmpm_id_no				type	composite
+		tmpm_co_no,
+		tmpm_br_no,
+		tmpm_pro_no					index	primary
+field	tmpm_id_no2				type	comp
+		tmpm_co_no,
+		tmpm_br_no,
+		tmpm_acronym					index	dups
+field	tmpm_id_no3				type	comp
+		tmpm_co_no,
+		tmpm_pro_no					index	dups
+field	tmpm_id_no4				type	comp
+		tmpm_co_no,
+		tmpm_acronym					index	dups
+field	tmpm_id_no5			type	comp
+		tmpm_co_no,
+		tmpm_lst_op_code,
+		tmpm_pro_no					index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tmpm_co_no			-	Company number.
+	tmpm_br_no			-	Branch number.
+	tmpm_pro_no			-	Prospect number.
+	tmpm_hhpm_hash		-	Serial hash
+	tmpm_hhcu_hash		-	Link to debtors master file.
+	tmpm_name			-	Prospect name.
+	tmpm_acronym		-	Prospect acronym.
+	tmpm_area_code		-	Prospect area code.    ( link to exaf )
+	tmpm_sman_code		-	Prospect salesman code ( link to exsf )
+	tmpm_b_sector		-	Business sector	       ( link to excl )
+	tmpm_post_code		-	Postal code.
+	tmpm_active_flg		-	Active flag ( Y/N )
+	tmpm_mail1_adr		-	Mail address part one.
+	tmpm_mail2_adr		-	Mail address part two.
+	tmpm_mail3_adr		-	Mail address part three.
+	tmpm_del1_adr		-	Deliver to address part one.
+	tmpm_del2_adr		-	Deliver to address part two.
+	tmpm_del3_adr		-	Deliver to address part three.
+	tmpm_fax_no			-	Fax number.
+	tmpm_phone_no		-	Phone number.
+	tmpm_phone_freq		-	Phone frequency.
+	tmpm_n_phone_date	-	Next phone date.
+	tmpm_n_phone_time	-	Next phone time.
+	tmpm_visit_freq		-	Visit frequency.
+	tmpm_n_visit_date	-	Next visit date.
+	tmpm_n_visit_time	-	Next visit time.
+	tmpm_mail_flag		-	Main flag ( Y/N )
+	tmpm_op_code		-	Current Operator code.
+	tmpm_lst_op_code	-	Last operator code.
+	tmpm_call_bk_date	-	Call back date.
+	tmpm_call_bk_time	-	Call back time.
+	tmpm_lphone_date	-	Last phone date.
+	tmpm_origin			-	Origin of call		( link to tmof )
+	tmpm_date_create	-	Date prospect created.
+	tmpm_best_ph_time	-	Best phone time.
+	tmpm_delete_flag	-	Delete flag.
+	tmpm_tax_code		-	Tax code.
+	tmpm_tax_no			-	Tax number.
+	tmpm_stat_flag		-	Spare status flag.
+}

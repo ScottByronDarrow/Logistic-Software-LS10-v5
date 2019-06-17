@@ -1,0 +1,62 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/06/25 06:16:26 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/06/25 06:16:26  scott
+#	Updated for problems on GUI with two screens on one.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_hhcf_hash
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table iuds
+	field iuds_co_no
+	field iuds_spec_no
+	field iuds_spec_desc
+	field iuds_dflt_code
+end
+
+table iudc
+	field iudc_co_no
+	field iudc_spec_no
+	field iudc_code
+	field iudc_desc
+end
+
+table iudi
+	field iudi_hhcf_hash
+	field iudi_hhbr_hash
+	field iudi_spec_no
+	field iudi_code
+end
+

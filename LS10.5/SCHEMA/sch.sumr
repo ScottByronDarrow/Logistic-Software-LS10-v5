@@ -1,0 +1,149 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sumr,v 5.1 2001/08/07 00:07:43 scott Exp $
+|  Schema Name  : (sch.sumr)
+|  Schema Desc  : (Creditors Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.sumr,v $
+| Revision 5.1  2001/08/07 00:07:43  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:49  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sumr
+
+field	sumr_co_no          type	char	2			index	dups
+field	sumr_est_no         type	char	2
+field	sumr_crd_no         type	char	6			index	dups
+field	sumr_hhsu_hash      type	serial			index
+field	sumr_crd_name       type	char	40
+field	sumr_acronym        type	char	9			index	dups
+field	sumr_acc_type       type	char	1
+field	sumr_debtor_no      type	char	12
+field	sumr_adr1           type	char	40
+field	sumr_adr2           type	char	40
+field	sumr_adr3           type	char	40
+field	sumr_adr4           type	char	40
+field	sumr_cont_name      type	char	20
+field	sumr_cont2_name     type	char	20
+field	sumr_cont3_name     type	char	20
+field	sumr_cont_no        type	char	15
+field	sumr_curr_code      type	char	3
+field	sumr_ctry_code      type	char	3
+field	sumr_pay_terms      type	char	3
+field	sumr_disc           type	float
+field	sumr_sic1           type	integer
+field	sumr_sic2           type	integer
+field	sumr_sic3           type	integer
+field	sumr_gl_ctrl_acct   type	char	16
+field	sumr_hold_payment   type	char	1
+field	sumr_fax_no         type	char	14
+field	sumr_pay_method     type	char	1
+field	sumr_gst_reg_no     type	char	15
+field	sumr_bank           type	char	20
+field	sumr_bank_branch    type	char	20
+field	sumr_bank_code      type	char	15
+field	sumr_bank_acct_no   type	char	15
+field	sumr_date_opened    type	edate
+field	sumr_sup_pri        type	integer
+field	sumr_type_code      type	char	6
+field	sumr_ame            type	money
+field	sumr_mtd_exp        type	money
+field	sumr_ytd_exp        type	money
+field	sumr_bo_curr        type	money
+field	sumr_bo_per1        type	money
+field	sumr_bo_per2        type	money
+field	sumr_bo_per3        type	money
+field	sumr_qa_status      type	char	1
+field	sumr_qa_expiry      type	edate
+field	sumr_mail_label     type	char	1
+field	sumr_letter         type	char	1
+field	sumr_tax_code       type	char	1
+field	sumr_remm_prn       type	char	1
+field	sumr_stat_flag      type	char	1
+field	sumr_ship_method    type	char	1
+field	sumr_email    		type	char	60
+field	sumr_id_no          type	composite
+			sumr_co_no,
+			sumr_est_no,
+			sumr_crd_no									index
+field	sumr_id_no2         type	composite
+			sumr_co_no,
+			sumr_est_no,
+			sumr_acronym								index	dups
+field	sumr_id_no3         type	composite
+			sumr_co_no,
+			sumr_crd_no									index	dups
+field	sumr_id_no4         type	composite
+			sumr_co_no,
+			sumr_acronym								index	dups
+field	sumr_qa_id          type	composite
+			sumr_co_no,
+			sumr_est_no,
+			sumr_qa_status,
+			sumr_crd_no									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sumr_co_no			-	Company number.
+	sumr_est_no			-	Branch / Establishment name.
+	sumr_crd_no			-	Creditors Number.
+	sumr_hhsu_hash		-	Creditors Unique Serial Hash.
+	sumr_crd_name		-	Creditors Name.
+	sumr_acronym		-	Creditors Acronym.
+	sumr_acc_type		-	Account type.
+	sumr_debtor_no		-	Debtors Number.
+	sumr_adr1			-	Creditors Address Part 1.
+	sumr_adr2			-	Creditors Address Part 2.
+	sumr_adr3			-	Creditors Address Part 3.
+	sumr_adr4			-	Creditors Address Part 4.
+	sumr_cont_name		-	Contact name.
+	sumr_cont2_name		-	Contact name.
+	sumr_cont3_name		-	Contact name.
+	sumr_cont_no		-	Contact Phone number.
+	sumr_curr_code		-	Currency Code.
+	sumr_ctry_code		-	Country Code.
+	sumr_pay_terms		-	Payment Terms.
+	sumr_disc			-	Discount Percent.
+	sumr_sic1			-	Special instructions 1
+	sumr_sic2			-	Special instructions 2
+	sumr_sic3			-	Special instructions 3
+	sumr_gl_ctrl_acct	-	Creditors G/L control Account.
+	sumr_hold_payment	-	Hold Payments Flag.
+	sumr_fax_no			-	Fax Number.
+	sumr_pay_method		-	Payment method.
+	sumr_gst_reg_no		-	GST registration number.
+	sumr_bank			-	Bank.
+	sumr_bank_branch	-	Bank Branch code.
+	sumr_bank_code		-	Bank Code.
+	sumr_bank_acct_no	-	Bank Account Number.
+	sumr_date_opened	-	Account opening Date.
+	sumr_sup_pri		-   Supplier priority ( 1 - 9 )
+	sumr_type_code      -   Supplier type code. Lookup on pocl.
+	sumr_ame			-	?????
+	sumr_mtd_exp		-	Month to date Purchases.
+	sumr_ytd_exp		-	Year to date purchases.
+	sumr_bo_curr		-	Current Balance.
+	sumr_bo_per1		-	Overdue Balance 1
+	sumr_bo_per2		-	Overdue Balance 2
+	sumr_bo_per3		-	Overdue Balance 3
+	sumr_qa_status		-	Quality Assurance Status - Comes from qamr.
+	sumr_qa_expiry		-	Quality Assurance expiry date.
+	sumr_mail_label		-	Y = Mailer's can be printed.
+	sumr_letter			-	Y = Letters can be printed.
+	sumr_tax_code		-	A = Tax Exempt. C = Tax Applies.
+	sumr_stat_flag		-	Spare status flag.
+	sumr_ship_method	-	Suppliers default shipment method.
+}

@@ -1,0 +1,66 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sobg,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.sobg)
+|  Schema Desc  : (Background Processing file. )
+|----------------------------------------------------------------------
+| $Log: sch.sobg,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/02/19 09:43:28  scott
+| Updated to add comments on type.
+|
+| Revision 3.1  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sobg 
+
+field	sobg_co_no			type	char	2
+field	sobg_br_no			type	char	2
+field	sobg_type			type	char	2
+field	sobg_lpno			type	int
+field	sobg_hash			type	long
+field	sobg_hash2			type	long
+field	sobg_pid			type	long
+field	sobg_value			type	double
+field	sobg_last_line		type	int
+field	sobg_id_no			type	composite
+			sobg_co_no,
+			sobg_br_no,
+			sobg_type,
+			sobg_lpno,
+			sobg_hash											index	dups
+field	sobg_id_no_2			type	composite
+			sobg_type,
+			sobg_lpno											index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sobg_co_no		-	Company number.
+	sobg_br_no		-	Branch Number.
+	sobg_type		-	Background process type.
+							-	PP	Packing	Slip Print.
+							-	PC	Packing Slip Creat.
+							-	PA	Packing Slip Creat & Generate PP
+									ie Creat P/Slip & Send to Print
+							-	RC	Recalculate Committed + Backorder Qtys
+							-	RO	Update for cumr_ord_balance
+							-	SU	Update for Stock
+	sobg_lpno		-	Printer number if required.
+	sobg_hash		-	Hash for lookup.
+	sobg_hash2		-	2nd hash for lookup if required.
+	sobg_pid		-	PID of program that added the sobg record.
+	sobg_value		-	Value if required.
+	sobg_last_line	-	Last soic_line to process if sobg_type = 'RC'
+
+}

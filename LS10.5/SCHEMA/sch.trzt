@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.trzt,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.trzt)
+|  Schema Desc  : (TRansport Zone Time Maintenance.	 )
+|----------------------------------------------------------------------
+| $Log: sch.trzt,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:36  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	trzt
+
+field	trzt_co_no			type	char	2
+field	trzt_time_code		type	char	1
+field	trzt_start_time		type	long
+field	trzt_end_time		type	long
+field	trzt_id_no			type	composite
+			trzt_co_no,
+			trzt_time_code								index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		trzt_co_no				-	Company Number.
+		trzt_time_code			-	Time Code A-Z
+		trzt_start_time			-	Start 	time HH:MM
+		trzt_end_time			-	End 	time HH:MM
+}

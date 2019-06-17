@@ -1,0 +1,38 @@
+Invoice Printing/Posting Menu (INPR)
+invoices_help
+Invoice Master Menu. <a> (1,2)
+menu MENUSYS/in_master.mdf
+Print Invoices. <a> (1,1)
+lp_chain~warning " PRINT   INVOICES"~so_invprnt.i LPNO N I~
+Print Credits. <a> (1,2)
+lp_chain~warning "PRINT    CREDITS"~so_invprnt.i LPNO N C~
+Reprint Invoices. <a> (1,1)
+so_invprnt.i~LPNO~Y~I~
+Reprint Invoice by Customer No. <*> (1,1)
+lp_chain~so_invprnt.i LPNO Y I B~
+Reprint Credits. <a> (1,2)
+so_invprnt.i~LPNO~Y~C~
+Reprint Invoices. (Archive) <a> (1,1)
+ar_invprnt.i~LPNO~I~
+Reprint Credits. (Archive) <a> (1,2)
+ar_invprnt.i~LPNO~C~
+Flag Invoice Batch For Posting. <a> (2,1)
+so_reflag~B~I~7~6~
+Flag Credit Note Batch (Posting) <a> (2,2)
+so_reflag~B~C~7~6~
+Post Invoices/Credit Notes. <a> (2,2)
+lp_chain~warning "POST  INVOICES/CREDITS"~so_overide LPNO 7~day.sh LPNO~
+Print Sales Exception Report. <a> (2,1)
+sk_marg.i~sk_marg~Sales Margin Exception~
+Print Tax Summary Report. <a> (2,2)
+so_taxprt~LPNO~
+Selective Invoices Delete. <a> (2,1)
+so_sauddel~D~Y~
+Delete Invoices Paid. <a> (2,2)
+so_auddel~D~30~Y~
+((
+quadrant(6,6)
+quadrant(44,8)
+box(1,3,76,15)
+line(2,5,75)
+))

@@ -1,0 +1,54 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/23 11:28:25 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/23 11:28:25  scott
+#	Updated from scotts machine
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_crd_date
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_date_of_inv
+	field suin_amt
+	field suin_exch_rate
+	field suin_approved
+	field suin_stat_flag
+end
+
+table suhd
+	field suhd_hhsu_hash
+	field suhd_cheq_no
+	field suhd_date_payment
+	field suhd_date_post
+	field suhd_tot_amt_paid
+	field suhd_loc_amt_paid
+	field suhd_exch_variance
+	field suhd_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_stat_flag
+end
+

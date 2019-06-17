@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inbm,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.inbm)
+|  Schema Desc  : (Item Brand Master)
+|----------------------------------------------------------------------
+| $Log: sch.inbm,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:48  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inbm
+
+field	inbm_co_no				type	char	2
+field	inbm_barcode			type	char	16
+field	inbm_item_no			type	char	16
+field	inbm_uom				type	char	4
+field	inbm_last_mod			type	edate
+field	inbm_id_no2				type	composite
+			inbm_co_no,
+			inbm_item_no,
+			inbm_barcode									index	primary
+field	inbm_id_no				type	composite
+			inbm_co_no,
+			inbm_barcode									index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		inbm_co_no				-		Company number.
+		inbm_barcode			-		Barcode number.
+		inbm_item_no			-		Item Number.
+		inbm_uom				-		Unit of Measure.
+		inbm_last_mod			-		Last modified date.
+}

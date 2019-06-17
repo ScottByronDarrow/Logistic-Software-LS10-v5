@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.saem,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.saem)
+|  Schema Desc  : (Sales Expense Master file. )
+|----------------------------------------------------------------------
+| $Log: sch.saem,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:20  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file saem 
+
+field	saem_co_no				type	char	2
+field	saem_saem_hash			type	serial				index	primary
+field	saem_hhsf_hash			type	long
+field	saem_hhmr_hash			type	long
+field	saem_id_no				type	composite
+			saem_co_no,
+			saem_hhsf_hash									index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	saem_co_no			-	Company Number.
+	saem_saem_hash		-	Unique serial number.
+	saem_hhsf_hash		-	Salesman number. Link to salesman master file.(exsf)
+	saem_hhmr_hash		-	General Ledger Number. Link to GL master file (glmr)
+}

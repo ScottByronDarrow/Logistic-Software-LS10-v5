@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+#
+BUILD=$PROG_PATH/BIN/UTILS/buildsql
+WORKDIR=${TMPDIR:-/tmp}/tbl.$$
+COMPLETE=tables
+
+echo "Building tables"
+if [ ! -d $WORKDIR ]
+then
+	echo "Created working directory"
+	mkdir $WORKDIR
+fi
+
+echo "Making SQL scripts"
+cd $WORKDIR
+for i in $PROG_PATH/SCHEMA/sch.*
+do
+	$BUILD -s $i > /dev/null
+done
+cat *.sql > $COMPLETE
+mv $COMPLETE $COMPLETE.sql
+
+echo "Running SQL script"
+dbaccess $1 -qcr $COMPLETE > /dev/null
+
+echo "Running Grant access script"
+dbaccess $1 -qcr grant > /dev/null
+
+echo "Cleaning up"
+rm -f *
+cd ..
+rmdir $WORKDIR

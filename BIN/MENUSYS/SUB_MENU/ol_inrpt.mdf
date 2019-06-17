@@ -1,0 +1,17 @@
+Online Invoices - Print Menu (SUB)
+invoices_help
+Online Master Menu. <a> (1,2)
+menu MENUSYS/ol_menu.mdf
+Print Invoices. <a> (1,1)
+so_invprnt.i~LPNO~N~I~
+Reprint Invoices. <a> (1,2)
+so_invprnt.i~LPNO~Y~I~
+Print Credits. <a> (1,2)
+so_invprnt.i~LPNO~N~C~
+Reprint Credits. <a> (1,2)
+so_invprnt.i~LPNO~Y~C~
+((
+quadrant(24,6)
+box(15,3,46,10)
+line(16,5,45)
+))

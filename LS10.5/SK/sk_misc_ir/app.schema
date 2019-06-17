@@ -1,0 +1,223 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.3 2001/10/09 23:06:51 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.3  2001/10/09 23:06:51  scott
+#	Updated for returns
+#	
+#	Revision 5.2  2001/08/23 12:08:04  scott
+#	Updated from scotts machine
+#	
+#	Revision 5.1  2001/07/25 02:19:12  scott
+#	Update - LS10.5
+#	
+#
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_est_short       
+	field comm_cc_no         
+	field comm_cc_name       
+	field comm_cc_short       
+	field comm_gl_date        
+	field comm_inv_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+	
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_nx_gr_no
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_abc_code
+	field inmr_abc_update
+	field inmr_active_status
+	field inmr_dec_pt
+	field inmr_ex_code
+	field inmr_qc_qty
+	field inmr_qc_reqd
+	field inmr_std_uom
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_first_stocked
+	field incc_wks_demand
+	field incc_stocking_unit
+	field incc_location
+	field incc_qc_location
+	field incc_committed
+	field incc_backorder
+	field incc_opening_stock
+	field incc_receipts
+	field incc_pur
+	field incc_issues
+	field incc_adj
+	field incc_sales
+	field incc_closing_stock
+	field incc_ytd_receipts
+	field incc_ytd_pur
+	field incc_ytd_issues
+	field incc_ytd_adj
+	field incc_stat_flag
+	field incc_abc_code
+	field incc_abc_update
+	field incc_ff_option
+	field incc_ff_method
+	field incc_allow_repl
+	field incc_qc_qty
+	field incc_qc_time
+	field incc_qc_centre
+	field incc_os_date
+	field incc_os_ldate
+end
+
+table inwu
+	field inwu_hhwh_hash
+	field inwu_hhum_hash
+	field inwu_opening_stock
+	field inwu_receipts
+	field inwu_pur
+	field inwu_issues
+	field inwu_adj
+	field inwu_sales
+	field inwu_closing_stock
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table qcmr
+	field qcmr_co_no
+	field qcmr_br_no
+	field qcmr_centre
+	field qcmr_description
+end
+
+table qchr
+	field qchr_co_no
+	field qchr_br_no
+	field qchr_wh_no
+	field qchr_qc_centre
+	field qchr_hhbr_hash
+	field qchr_hhum_hash
+	field qchr_inlo_hash
+	field qchr_hhqc_hash
+	field qchr_origin_qty
+	field qchr_receipt_dt
+	field qchr_exp_rel_dt
+	field qchr_rel_qty
+	field qchr_rej_qty
+	field qchr_serial_no
+	field qchr_hhsu_hash
+	field qchr_ref_1
+	field qchr_ref_2
+	field qchr_shipment
+	field qchr_next_seq
+	field qchr_source_type
+end
+
+table inir
+	field inir_co_no
+	field inir_ir_type
+	field inir_ir_desc
+	field inir_hhmr_hash
+end
+
+table ffdm
+	field ffdm_hhbr_hash
+	field ffdm_hhcc_hash
+	field ffdm_date
+	field ffdm_type
+	field ffdm_qty
+end
+
+table sknh
+	field sknh_co_no          
+	field sknh_br_no          
+	field sknh_plate_no       
+	field sknh_sknh_hash      
+	field sknh_rec_date       
+	field sknh_iss_date       
+	field sknh_lab_note1      
+	field sknh_lab_note2      
+	field sknh_lab_note3      
+	field sknh_lab_note4      
+	field sknh_lab_note5      
+	field sknh_lab_note6      
+	field sknh_printed        
+	field sknh_edi        
+end
+
+table trve
+	field trve_co_no          
+	field trve_br_no          
+	field trve_ref            
+	field trve_desc           
+	field trve_hhve_hash           
+end
+table sknd
+	field sknd_sknd_hash      
+	field sknd_sknh_hash      
+	field sknd_line_no        
+	field sknd_hhbr_hash      
+	field sknd_hhum_hash      
+	field sknd_hhcc_hash      
+	field sknd_hhsu_hash      
+	field sknd_hhve_hash      
+	field sknd_hhpl_hash      
+	field sknd_cus_ord_ref      
+	field sknd_serial_no      
+	field sknd_qty_rec        
+	field sknd_qty_return        
+	field sknd_land_cst       
+	field sknd_lstat_chg      
+	field sknd_status         
+	field sknd_edi            
+end

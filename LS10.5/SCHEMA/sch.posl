@@ -1,0 +1,59 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.posl,v 5.1 2001/12/03 02:06:07 scott Exp $
+|  Schema Name  : (sch.posl)
+|  Schema Desc  : (Shipment Line Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.posl,v $
+| Revision 5.1  2001/12/03 02:06:07  scott
+| Updated to add new fields for containers.
+|
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file posl 
+
+field	posl_co_no				type	char	2
+field	posl_hhsh_hash			type	long
+field	posl_hhpl_hash			type	long		index	dups
+field	posl_hhpo_hash			type	long
+field	posl_csml_no			type	int
+field	posl_ship_qty			type	float
+field	posl_rec_qty			type	float
+field	posl_sup_price			type	double
+field	posl_case_no			type	int
+field	posl_container			type	char	15
+field	posl_stat_flag			type	char	1
+field	posl_id_no				type	composite
+			posl_co_no,
+			posl_hhsh_hash,
+			posl_hhpl_hash							index	primary
+field	posl_id_no_2			type	composite
+			posl_co_no,
+			posl_hhsh_hash,
+			posl_hhpo_hash							index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	posl_co_no			-	Company number.
+	posl_hhsh_hash		-	Link to shipment. ( pohr_hhsh_hash )
+	posl_hhpl_hash		-	Link to poln	  ( poln_hhpl_hash )
+	posl_hhpo_hash		-	Link to pohr	  ( pohr_hhpo_hash )
+	posl_csml_no		-	Shipment line number.
+	posl_ship_qty		-	Shipment Quantity.
+	posl_rec_qty		-	Receipt Quantity.
+	posl_sup_price		-	Supplier Price.
+	posl_case_no		-	Case number.
+	posl_stat_flag		-	Status flag.
+}

@@ -1,0 +1,24 @@
+Stock Deletions . (SUB)
+sub_menu
+Stock Maintenance Menu. <a> (1,1)
+menu MENUSYS/sk_maint.mdf
+Delete Item - all Levels. <a> (1,1)
+lp_chain~sk_del_inp PID A~sk_delete PID LPNO~
+Delete Master Items. <a> (1,1)
+lp_chain~sk_del_inp PID M~sk_delete PID LPNO~
+Delete Branch Items. <a> (1,1)
+lp_chain~sk_del_inp PID B~sk_delete PID LPNO~
+Delete Warehouse Items. <a> (1,1)
+lp_chain~sk_del_inp PID W~sk_delete PID LPNO~
+Delete Item - all Levels (Fast Track). <a> (1,1)
+lp_chain~sk_adel_inp PID A~sk_delete PID LPNO~
+Delete Master Item(s)    (Fast Track). <a> (1,1)
+lp_chain~sk_adel_inp PID M~sk_delete PID LPNO~
+Delete Branch Item(s)    (Fast Track). <a> (1,1)
+lp_chain~sk_adel_inp PID B~sk_delete PID LPNO~
+Delete Warehouse Item(s) (Fast Track). <a> (1,1)
+lp_chain~sk_adel_inp PID W~sk_delete PID LPNO~
+Delete Multi Bin Locations. <a> (1,1)
+sk_mbin_del~
+((
+))

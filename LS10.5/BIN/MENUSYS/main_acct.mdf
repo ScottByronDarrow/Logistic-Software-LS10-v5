@@ -1,0 +1,26 @@
+Accounting Master Menu (ACCT)
+main_help
+Master Menu. <a> (1,2)
+menu MENUSYS/main.mdf
+Accounts Receivable. <a> (1,2)
+menu MENUSYS/db_master.mdf
+Accounts Payable. <a> (1,2)
+menu MENUSYS/cr_master.mdf
+General Ledger. <a> (1,2)
+menu MENUSYS/gl_master.mdf
+Cash Management. <a> (1,2)
+menu MENUSYS/ca_master.mdf
+Fixed Assets. <a> (1,2)
+menu MENUSYS/fa_master.mdf
+Trade Assets. <a> (1,2)
+menu MENUSYS/ta_master.mdf
+((
+quadrant(25,6)
+quadrant(45,6)
+box(18,3,40,15)
+line(19,5,39)
+HEADING_ON
+TRAILER_ON
+FAST_ON
+SUB_ON
+))

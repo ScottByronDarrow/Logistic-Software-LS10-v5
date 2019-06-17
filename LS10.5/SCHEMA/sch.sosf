@@ -1,0 +1,102 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sosf,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.sosf)
+|  Schema Desc  : (Sales Order Service File. )
+|----------------------------------------------------------------------
+| $Log: sch.sosf,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:48  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sosf
+field	sosf_hhco_hash      type	long					index	dups
+field	sosf_hhso_hash      type	long					index	dups
+field	sosf_hhcu_hash      type	long					index	dups
+field	sosf_cus_ord_ref    type	char	20				index	dups
+field	sosf_cons_no        type	char	16
+field	sosf_carr_code      type	char	4
+field	sosf_del_zone      	type	char	6
+field	sosf_ocre_op_id		type	char	14
+field	sosf_ocre_time    	type	long
+field	sosf_ocre_date		type	edate
+field	sosf_pcre_op_id		type	char	14
+field	sosf_pcre_time    	type	long
+field	sosf_pcre_date		type	edate
+field	sosf_oprn_op_id		type	char	14
+field	sosf_oprn_time    	type	long
+field	sosf_oprn_date		type	edate
+field	sosf_pprn_op_id		type	char	14
+field	sosf_pprn_time    	type	long
+field	sosf_pprn_date		type	edate
+field	sosf_pprn_times		type	int
+field	sosf_iprn_op_id		type	char	14
+field	sosf_iprn_time    	type	long
+field	sosf_iprn_date		type	edate
+field	sosf_iprn_times		type	int
+field	sosf_odes_op_id		type	char	14
+field	sosf_odes_time    	type	long
+field	sosf_odes_date		type	edate
+field	sosf_odel_op_id		type	char	14
+field	sosf_odel_time    	type	long
+field	sosf_odel_date		type	edate
+field	sosf_id_no			type	composite
+			sosf_hhcu_hash,
+			sosf_hhco_hash,
+			sosf_hhso_hash									index	dups
+field	sosf_id_no2			type	composite
+			sosf_hhcu_hash,
+			sosf_hhso_hash,
+			sosf_hhco_hash									index	dups
+field	sosf_id_no3			type	composite
+			sosf_hhcu_hash,
+			sosf_cons_no									index	dups
+field	sosf_id_no4			type	composite
+			sosf_hhcu_hash,
+			sosf_cus_ord_ref								index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		sosf_hhco_hash 			-	Link to Packing slip/Invoice file.
+		sosf_hhso_hash			-	Link to Sales Order file.
+		sosf_hhcu_hash			-	Link to customer master (cumr_hhcu_hash)
+		sosf_chg_hhcu_hash		-	Link to customer master (cumr_hhcu_hash)
+		sosf_cus_ord_ref		-	Customer order reference.
+		sosf_chg_ord_ref		-	Customer order reference. (charge to cust)
+		sosf_grn_no				-	Goods return number.
+		sosf_cons_no			-	Consignment number.
+		sosf_carr_code			-	Carrier Code.
+		sosf_ocre_op_id			-	Order create - Operator ID
+		sosf_ocre_time			-	Order create - Time
+		sosf_ocre_date			-	Order create - Date
+		sosf_pcre_op_id			-	Packing Slip create - Operator ID
+		sosf_pcre_time			-	Packing Slip create - Time
+		sosf_pcre_date			-	Packing Slip create - Date
+		sosf_oprn_op_id			-	Order Confirmation Print - Operator ID
+		sosf_oprn_time			-	Order Confirmation Print - Time
+		sosf_oprn_date			-	Order Confirmation Print - Date
+		sosf_pprn_op_id			-	Packing Slip - Operator ID
+		sosf_pprn_time			-	Packing Slip - Time
+		sosf_pprn_date			-	Packing Slip - Date
+		sosf_pprn_times			-	Packing Slip - No times printed.
+		sosf_iprn_op_id			-	Invoice print - Operator ID
+		sosf_iprn_time			-	Invoice print - Time
+		sosf_iprn_date			-	Invoice print - Date
+		sosf_iprn_times			-	Invoice - No times printed.
+		sosf_odes_op_id			-	Order despatch - Operator ID
+		sosf_odes_time			-	Order despatch - Time
+		sosf_odes_date			-	Order despatch - Date
+		sosf_odel_op_id			-	Order delivery - Operator ID
+		sosf_odel_time			-	Order delivery - Time
+		sosf_odel_date			-	Order delivery - Date
+}

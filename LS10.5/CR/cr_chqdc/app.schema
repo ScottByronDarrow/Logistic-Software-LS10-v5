@@ -1,0 +1,65 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:13 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:13  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_crd_date
+	field comm_stat_flag
+end
+
+table comr
+	field comr_co_no
+	field comr_nx_chq_no
+	field comr_ls_chq_no
+	field comr_pay_bover
+	field comr_pay_freq
+	field comr_stat_flag
+end
+
+table suhd
+	field suhd_hhsu_hash
+	field suhd_cheq_no
+	field suhd_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_hhsu_hash
+	field sumr_stat_flag
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+end
+
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_bank_name
+	field crbk_branch_name
+	field crbk_adr1
+	field crbk_adr2
+	field crbk_adr3
+	field crbk_adr4
+	field crbk_acct_name
+	field crbk_bank_no
+	field crbk_bank_acct_no
+	field crbk_curr_code
+	field crbk_stat_flag
+end
+

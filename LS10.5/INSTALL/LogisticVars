@@ -1,0 +1,134 @@
+#!/bin/sh
+#	$Id: LogisticVars,v 4.2 2001/09/12 03:21:29 scott Exp $
+#
+#	Logistic relocation variables
+#
+################################################################################
+#	$Log: LogisticVars,v $
+#	Revision 4.2  2001/09/12 03:21:29  scott
+#	Updated from Scott machine - 12th Sep 2001
+#	
+#	Revision 4.1  2001/03/09 08:38:36  scott
+#	Updated from more testing
+#	
+#	Revision 4.0  2001/03/09 02:48:28  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.3  2001/01/17 07:45:47  scott
+#	Updated from testing
+#	
+#	Revision 1.2  2001/01/15 03:27:58  scott
+#	Updated from testing
+#	
+#	Revision 1.1  2001/01/12 07:19:40  scott
+#	New install system
+#	
+#
+#
+###	=()<BASE_PATH=@<BASE_PATH>@>()=
+BASE_PATH=/usr
+export BASE_PATH
+
+###	=()<PROG_PATH=@<PROG_PATH>@>()=
+PROG_PATH=/usr/LS10.5
+export PROG_PATH
+
+PB=$PROG_PATH/BIN
+LSL_PATH=.:./bin:$PB/AS:$PB/BM:$PB/CA:$PB/CM:$PB/CR:$PB/DB:$PB/DD:$PB/FA:$PB/FE:$PB/FF:$PB/GL:$PB/MAIL:$PB/MENU:$PB/MH:$PB/MISC:$PB/OL:$PB/PC:$PB/PM:$PB/PO:$PB/POS:$PB/PS:$PB/QC:$PB/QT:$PB/RG:$PB/SA:$PB/SJ:$PB/SK:$PB/SO:$PB/SQL:$PB/TM:$PB/TR:$PB/TS:$PB/UTILS:$PB/LRP:$PB/SCRIPT
+
+#---------------------------------------------------------------
+# System Path. 
+#---------------------------------------------------------------
+###	=()<PATH=$LSL_PATH:@<STDBIN>@:@<DATABASEBIN>@>()=
+PATH=$LSL_PATH:/usr/local/bin:/bin:/etc:/usr/bin:/tcb/bin:/usr/local/samba/bin:/usr/informix7/bin
+export	PATH PROG_PATH
+
+export	PATH PROG_PATH
+BINDIR=$PROG_PATH/BIN
+
+###	=()<DBDATE=@<DBDATE>@>()=
+DBDATE=DMY4
+export DBDATE  
+
+###	=()<DBNAME=@<DBNAME>@>()=
+DBNAME=data
+export DBNAME  
+
+#---------------------------------------------------------------
+# LS10 database type.
+#---------------------------------------------------------------
+###	=()<LS10_DB=@<LS10_DB>@>()=
+LS10_DB=INFORMIX
+export	LS10_DB
+
+#---------------------------------------------------------------
+# Define INFORMIX related stuff.
+#---------------------------------------------------------------
+if [ "$LS10_DB" = "INFORMIX" ]
+then
+	###	=()<INFORMIXDIR=@<INFORMIXDIR>@>()=
+INFORMIXDIR=/usr/informix7
+	export 	INFORMIXDIR
+
+	###	=()<INFORMIXSERVER=@<INFORMIXSERVER>@>()=
+INFORMIXSERVER=local
+	export 	INFORMIXSERVER
+
+	###	=()<if [ -n "@<INFORMIXTERM>@" ] >()=
+if [ -n "terminfo" ] 
+	then
+		###	=()<	INFORMIXTERM=@<INFORMIXTERM>@>()=
+	INFORMIXTERM=terminfo
+		export INFORMIXTERM
+	fi
+
+	###	=()<SQLEXEC=@<SQLEXEC>@>()=
+SQLEXEC=sqlexec
+	export SQLEXEC
+fi
+#---------------------------------------------------------------
+# Define ORACLE related stuff.
+#---------------------------------------------------------------
+if [ "$LS10_DB" = "ORACLE" ]
+then
+	###	=()<ORACLEDIR=@<ORACLEDIR>@>()=
+ORACLEDIR=/usr/oracle
+	export 	ORACLEDIR
+
+	###	=()<ORACLE_HOME=@<ORACLE_HOME>@>()=
+ORACLE_HOME=/usr/oracle
+	export 	ORACLE_HOME
+
+	###	=()<LOCK_DIR=@<LOCK_DIR>@>()=
+LOCK_DIR=/BIN/LOCK
+	export 	LOCK_DIR
+fi
+#---------------------------------------------------------------
+# Define DB2 related stuff.
+#---------------------------------------------------------------
+if [ "$LS10_DB" = "DB2" ]
+then
+	###	=()<DB2DIR=@<DB2DIR>@>()=
+DB2DIR=/usr/DB2
+	export 	DB2DIR
+fi
+#
+# Sysconfig stuff
+###	=()<CONSOLE_TTY=@<CONSOLE_TTY>@>()=
+CONSOLE_TTY=/dev/tty0
+
+###	=()<FISCAL_PRD=@<FISCAL_PRD>@>()=
+FISCAL_PRD=12
+export	FISCAL_PRD
+
+###	=()<BASE_CURR=@<BASE_CURR>@>()=
+BASE_CURR=USD
+export	BASE_CURR
+
+###	=()<ACC_MASK=@<ACC_MASK>@>()=
+ACC_MASK=XXXX-XXXX-XXXX-XXXX
+export	ACC_MASK
+
+DBPATH=$PROG_PATH/DATA
+export DBPATH
+

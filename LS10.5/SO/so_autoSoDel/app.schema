@@ -1,0 +1,44 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:18:38 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:18:38  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 1.1  2001/04/21 03:50:53  scott
+#	New Program for XML delete of sales orders
+#	
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table sohr
+	field sohr_hhso_hash
+	field sohr_order_no
+	field sohr_status
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhsl_hash
+	field soln_status
+	field soln_stat_flag
+end
+table inla
+	field inla_inlo_hash      
+	field inla_hhsl_hash      
+end

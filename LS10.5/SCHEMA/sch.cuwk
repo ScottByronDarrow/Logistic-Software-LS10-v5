@@ -1,0 +1,98 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cuwk,v 5.1 2001/08/07 00:07:41 scott Exp $
+|  Schema Name  : (sch.cuwk)
+|  Schema Desc  : (Debtors Invoice/Credits Work File. )
+|----------------------------------------------------------------------
+| $Log: sch.cuwk,v $
+| Revision 5.1  2001/08/07 00:07:41  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:30  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cuwk
+
+field	cuwk_co_no				type	char	2	index	dups
+field	cuwk_est				type	char	2	index	dups
+field	cuwk_inv_no				type	char	8	index	dups
+field	cuwk_type				type	char	1
+field	cuwk_dbt_no				type	char	6
+field	cuwk_date_of_inv		type	edate
+field	cuwk_post_date			type	edate
+field	cuwk_exch_rate			type	double
+field	cuwk_disc				type	money
+field	cuwk_cus_po_no			type	char	16
+field	cuwk_tax				type	money
+field	cuwk_freight			type	money
+field	cuwk_insurance			type	money
+field	cuwk_other_cost1		type	money
+field	cuwk_other_cost2		type	money
+field	cuwk_other_cost3		type	money
+field	cuwk_dd_oncost			type	money
+field	cuwk_exch_var			type	money
+field	cuwk_sos				type	money
+field	cuwk_restock_fee		type	money
+field	cuwk_item_levy			type	money
+field	cuwk_gst				type	money
+field	cuwk_narrative			type	char	20
+field	cuwk_tot_loc			type	money
+field	cuwk_tot_fx				type	money
+field	cuwk_gl_levy			type	char	16
+field	cuwk_gl_control			type	char	16
+field	cuwk_gl_acc_no			type	char	16
+field	cuwk_period_no			type	char	2
+field	cuwk_loc_amt			type	money
+field	cuwk_fx_amt				type	money
+field	cuwk_currency 			type	char	3
+field	cuwk_stat_flag			type	char	1
+field	cuwk_id_no				type	composite
+			cuwk_co_no,
+			cuwk_est,
+			cuwk_inv_no					index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cuwk_co_no			-	Company Number.
+	cuwk_est			-	Branch / Establishment No.
+	cuwk_inv_no			-	Invoice Number.
+	cuwk_type			-	Type. 1 = Invoice, 2 = Credit.
+	cuwk_dbt_no			-	Debtor Number.
+	cuwk_date_of_inv	-	Date Of Invoice / Credit.
+	cuwk_post_date		-	Date Posted.
+	cuwk_exch_rate		-	Exchange Rate.
+	cuwk_disc			-	Discount Amoumt
+	cuwk_cus_po_no		-	Customer Order Number.
+	cuwk_tax			-	Tax Amount.
+	cuwk_freight		-	Freight Amount.
+	cuwk_insurance		-	Insurance Amount.
+	cuwk_other_cost1	-	Other Cost 1.
+	cuwk_other_cost2	-	Other Cost 2.
+	cuwk_other_cost3	-	Other Cost 3.
+	cuwk_dd_oncost		-	Direct Delivery On-Costs.
+	cuwk_sos			-	Small Order Surcharge.
+	cuwk_restock_fee	-	Restocking Fee Amount.
+	cuwk_gst			-	Gst Amount.
+	cuwk_narrative		-	Narrative.
+	cuwk_tot_loc		-	Total transaction amount local.
+	cuwk_tot_fx			-	Total transaction amount foreign.
+	cuwk_amt			-	Trancaction Amount.
+	cuwk_gl_control		- 	Holds debtors control account.
+	cuwk_gl_acc_no		-	General Ledger Code.
+	cuwk_period_no		-	General Ledger Period.
+	cuwk_loc_amt		-	General Ledger Amount Local.
+	cuwk_fx_amt			-	General Ledger Amount Foreign.
+	cuwk_stat_flag		-	Status Flag.
+}

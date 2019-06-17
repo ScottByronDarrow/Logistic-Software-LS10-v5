@@ -1,0 +1,50 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.somc,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.somc)
+|  Schema Desc  : (Sales Order Processing Missing Invoice Control. )
+|----------------------------------------------------------------------
+| $Log: sch.somc,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file somc 
+
+field	somc_co_no			type	char	2
+field	somc_br_no			type	char	2
+field	somc_active			type	char	1
+field	somc_start_seq			type	char	8
+field	somc_end_seq			type	char	8
+field	somc_id_no			type	composite
+			somc_co_no, 
+			somc_br_no,
+			somc_start_seq, 
+			somc_end_seq					index	primary 
+field	somc_id_no2			type	composite 
+			somc_co_no, 
+			somc_br_no,
+			somc_end_seq, 
+			somc_start_seq					index
+field	somc_stat_flag			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	somc_co_no		-	Company number.
+	somc_br_no		-	Branch number.
+	somc_active		-	Active Flag.
+	somc_start_seq		-	Start Sequence.
+	somc_end_seq		-	End Sequence.
+	somc_stat_flag		-	Status flag.
+}

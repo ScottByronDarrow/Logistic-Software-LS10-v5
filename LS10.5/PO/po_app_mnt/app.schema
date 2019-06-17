@@ -1,0 +1,87 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:11:00 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:11:00  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:32:19  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:23:41  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+	field comm_fiscal
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_ctry_code
+	field sumr_stat_flag
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_type
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_hhsh_hash
+	field pohr_app_code
+	field pohr_curr_code
+	field pohr_curr_rate
+	field pohr_status
+	field pohr_stat_flag
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhcc_hash
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_land_cst
+	field poln_pur_status
+	field poln_stat_flag
+end
+
+table poap
+	field poap_co_no
+	field poap_app_code
+	field poap_app_name
+	field poap_passwd
+	field poap_app_limit
+	field poap_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_alpha_code
+	field inmr_description
+	field inmr_serial_item
+	field inmr_outer_size
+end
+

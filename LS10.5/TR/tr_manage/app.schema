@@ -1,0 +1,216 @@
+#
+#   $Id: app.schema,v 5.1 2001/08/23 11:30:12 scott Exp $
+#
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/23 11:30:12  scott
+#	Updated from scotts machine
+#	
+#	Revision 5.0  2001/06/19 08:21:44  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:42:57  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/12/19 00:03:07  scott
+#	Updated to clean up and add container selection
+#	
+#	Revision 3.0  2000/10/10 12:23:34  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/10/05 06:45:53  scott
+#	Added app.schema
+#	
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+end
+
+table comr
+	field comr_co_no
+	field comr_nx_trip_no
+	field comr_frt_mweight
+	field comr_stat_flag
+end
+
+table trve
+	field trve_co_no
+	field trve_br_no
+	field trve_ref
+	field trve_desc
+	field trve_cap
+	field trve_fr_chg
+	field trve_hhve_hash
+	field trve_avail
+	field trve_unav_res
+	field trve_max_vol
+	field trve_max_wgt
+end
+
+table trln
+	field trln_hhtr_hash
+	field trln_hhco_hash
+	field trln_hhit_hash
+	field trln_hhln_hash
+end
+
+table trhr
+	field trhr_trip_name
+	field trhr_hhve_hash
+	field trhr_del_date
+	field trhr_hhtr_hash
+	field trhr_driver
+	field trhr_rf_number
+	field trhr_act_date
+	field trhr_act_time
+	field trhr_fr_chg
+	field trhr_fr_zchg
+	field trhr_status
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_hhcu_hash
+	field cohr_type
+	field cohr_del_zone
+	field cohr_del_req
+	field cohr_del_date
+	field cohr_asm_req
+	field cohr_asm_date
+	field cohr_asm_hash
+	field cohr_s_timeslot
+	field cohr_e_timeslot
+	field cohr_no_kgs
+	field cohr_hhco_hash
+	field cohr_freight
+	field cohr_dl_name
+	field cohr_dl_add1
+	field cohr_status
+	field cohr_hhtr_hash
+end
+
+table coln
+	field coln_hhcl_hash
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_hhbr_hash
+	field coln_hhum_hash
+	field coln_q_order
+	field coln_freight
+end
+
+table ithr
+	field ithr_co_no
+	field ithr_type
+	field ithr_del_no
+	field ithr_hhit_hash
+	field ithr_iss_date
+	field ithr_tran_ref
+	field ithr_del_zone
+	field ithr_del_req
+	field ithr_del_date
+	field ithr_s_timeslot
+	field ithr_e_timeslot
+	field ithr_hhtr_hash
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_hhum_hash
+end
+
+table inmr
+	field inmr_hhbr_hash
+	field inmr_weight
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_ho_dbt_hash
+end
+
+table trzm
+	field trzm_co_no
+	field trzm_br_no
+	field trzm_del_zone
+	field trzm_desc
+	field trzm_dflt_chg
+	field trzm_trzm_hash
+end
+
+table extf
+	field extf_co_no
+	field extf_code
+	field extf_name
+end
+
+table inuv
+	field inuv_hhbr_hash
+	field inuv_hhum_hash
+	field inuv_weight
+	field inuv_volume
+	field inuv_height
+	field inuv_width
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_dp_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_stat_flag
+end
+
+table trsh
+	field trsh_trzm_hash
+	field trsh_del_date
+	field trsh_sdel_slot
+	field trsh_edel_slot
+	field trsh_hhco_hash
+	field trsh_hhit_hash
+end
+
+table trzt
+	field trzt_co_no
+	field trzt_time_code
+	field trzt_start_time
+	field trzt_end_time
+end
+
+table trzc
+	field trzc_trzm_hash
+	field trzc_del_dcode
+	field trzc_time_slot
+	field trzc_capacity
+end
+
+table skcm
+	field skcm_co_no          
+	field skcm_container      
+	field skcm_desc           
+end
+table skni
+	field skni_hhcl_hash      
+	field skni_container      
+end

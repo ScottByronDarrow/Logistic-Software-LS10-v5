@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+#	$Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/bin/BuildServices,v $
+#	$Revision: 4.2 $
+#
+#	This will build a User_secure file with one entry
+#
+#	$Log: BuildServices,v $
+#	Revision 4.2  2001/09/12 03:21:31  scott
+#	Updated from Scott machine - 12th Sep 2001
+#	
+#	Revision 4.1  2001/03/09 08:38:40  scott
+#	Updated from more testing
+#	
+#	Revision 4.0  2001/03/09 02:48:29  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.2  2001/02/02 01:29:46  scott
+#	Updated to put actual tabs
+#	
+#	Revision 1.1  2001/01/16 10:18:53  scott
+#	Added build for services file.
+#	
+#	Revision 1.1  2001/01/12 07:20:31  scott
+#	New install system
+#	
+#
+. ./InstallShellVars
+. ./LogisticVars
+
+echo "Adding LS10 Records to /etc/services file."
+
+SERVICES=/etc/services
+
+echo "selsrvd		8888/tcp	# LS10 GUI Services" >> $SERVICES
+echo "pwdsrvd		8889/tcp	# LS10 GUI Services" >> $SERVICES

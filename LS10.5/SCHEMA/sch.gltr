@@ -1,0 +1,66 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.gltr,v 5.1 2001/07/25 01:15:51 scott Exp $
+|  Schema Name  : (sch.gltr)
+|  Schema Desc  : (General Ledger Transaction File. )
+|----------------------------------------------------------------------
+| $Log: sch.gltr,v $
+| Revision 5.1  2001/07/25 01:15:51  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:14  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:45  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	gltr
+
+field	gltr_gltr_hash			type	serial		index	primary		
+field	gltr_hhmr_hash			type	long		index	dups
+field	gltr_tran_type			type	char	2
+field	gltr_sys_ref			type	char	10
+field	gltr_batch_no			type	char	10
+field	gltr_tran_date			type	edate
+field	gltr_post_date			type	edate
+field	gltr_narrative			type	char	20
+field	gltr_user_ref			type	char	15
+field	gltr_amount				type	money
+field	gltr_stat_flag			type	char	1
+field	gltr_amt_origin			type	money
+field	gltr_currency			type	char	3
+field	gltr_exch_rate	    	type	double
+field	gltr_id_no				type	composite
+			gltr_hhmr_hash,
+			gltr_tran_type,
+			gltr_tran_date,
+			gltr_user_ref								index	dups
+field	gltr_id_no2				type	composite
+			gltr_hhmr_hash,
+			gltr_tran_date								index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	gltr_hhmr_hash		-	Link to G/ledger master file. (glmr)
+	gltr_tran_type		-	Transaction type ( ex gljc )
+	gltr_sys_ref		-	System Ref.
+	gltr_tran_date		-	Transaction Date.
+	gltr_post_date		-	Posted Date.
+	gltr_narrative		-	General Ledger Narrative.
+	gltr_user_ref		-	User Ref.
+	gltr_amount			-	Amount of Transaction.
+	gltr_stat_flag		-	Spare status flag.
+	gltr_amt_origin		-   Amount of transaction in currency of origin.
+	gltr_currency		-	Currency code of transaction.		
+	gltr_exch_rate		-	Exchange rate of currency.
+
+}

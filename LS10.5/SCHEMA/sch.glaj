@@ -1,0 +1,69 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glaj,v 5.1 2001/07/25 01:15:50 scott Exp $
+|  Schema Name  : (sch.glaj)
+|  Schema Desc  : (General Ledger Automatic Journal Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.glaj,v $
+| Revision 5.1  2001/07/25 01:15:50  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:41  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	glaj
+
+field	glaj_co_no				type	char	2	index	dups
+field	glaj_dbt_acc_no			type	char	16	index	dups
+field	glaj_crd_acc_no			type	char	16	index	dups
+field	glaj_type				type	char	2	index	dups
+field	glaj_curr_code			type	char	3	index	dups
+field	glaj_user_ref			type	char	15	index	dups
+field	glaj_ef_frm				type	edate
+field	glaj_ef_to				type	edate
+field	glaj_date_appl			type	char	2
+field	glaj_orig_amt			type	money
+field	glaj_exch_rate			type	double
+field	glaj_loc_amt			type	money
+field	glaj_date_lproc			type	edate
+field	glaj_stat_flag			type	char	1
+field	glaj_id_no				type	composite
+			glaj_co_no,
+			glaj_dbt_acc_no,
+			glaj_crd_acc_no,
+			glaj_type,
+			glaj_curr_code,
+			glaj_user_ref							index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glaj_co_no			-	Company number.
+	glaj_dbt_acc_no		-	Debit Account number.
+	glaj_crd_acc_no		-	Credit Account number.
+	glaj_type			-	Journal Type
+							1 = Standard.
+							2 = General.
+							3 = Accrual.
+							9 = Dispursements.
+	glaj_curr_code		-	Currency Code.
+	glaj_user_ref		-	User Ref.
+	glaj_ef_frm			-	Effective from date.
+	glaj_ef_to			-	Effective to date.
+	glaj_date_appl		-	Day Journal Applies.
+	glaj_orig_amt		-	Transaction Foreign Amount.
+	glaj_exch_rate		-	Currency exchange price.
+	glaj_loc_amt		-	Transaction Local Amount.
+	glaj_date_lproc		-	Date Last processed.
+	glaj_stat_flag		-	Status flag.
+}

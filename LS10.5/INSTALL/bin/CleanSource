@@ -1,0 +1,32 @@
+#!/bin/sh
+BASE_PATH=/usr
+VERSIONS="LS10.5"
+
+for v in $VERSIONS
+do
+	cd $BASE_PATH/LS10.5/LS10.5
+	for d in ?? ??? ???? ?????
+	do
+		if [ -d $d ]
+		then
+			cd $BASE_PATH/LS10.5/LS10.5/$d
+			rm -f */*.o >/dev/null
+			rm -f */schema >/dev/null
+			rm -f */errors >/dev/null
+			rm -f */Errors >/dev/null
+			rm -f */grep.* >/dev/null
+			rm -f */depend >/dev/null
+			rm -f walk >/dev/null
+			rm -f */walk >/dev/null
+			rm -f */look >/dev/null
+			rm -f */plook >/dev/null
+			cd $BASE_PATH/LS10.5/LS10.5
+		fi
+	done
+	cd $BASE_PATH/LS10.5/LS10.5/LIB
+	rm -f */*.o >/dev/null
+	rm -f */depend >/dev/null
+	cd $BASE_PATH/LS10.5/LS10.5/LIB++
+	rm -f */*.o >/dev/null
+	rm -f */depend >/dev/null
+done

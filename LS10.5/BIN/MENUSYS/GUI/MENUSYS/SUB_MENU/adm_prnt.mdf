@@ -1,0 +1,18 @@
+System Maintenance of Printers (SUB)
+terminals
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Maintain Printers. <ERROR> (1,1)
+chain~warning "Maintain Printers"~pcap_maint~
+Maintain Printer/Queue Types. <ERROR> (1,1)
+chain~warning "Maintain Printer/Queue Types."~prn_maint~
+Maintain Printer security. <ERROR> (1,1)
+chain~warning "Maintain Printer Security."~lp_secmaint~
+Test Printer. <ERROR> (1,1)
+pcap_test~
+Reprint Save Files. <ERROR> (1,1)
+psl_prt_save~LPNO~
+Spooler Administration. <ERROR> (1,1)
+lpmaint~
+((
+))

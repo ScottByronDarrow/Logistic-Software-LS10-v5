@@ -1,0 +1,24 @@
+Project Monitoring Sub Menu (PRSM)
+pr_submenu
+Project Monitoring Master Menu. <a> (1,2)
+menu MENUSYS/pr_master.mdf
+Print Project-Contractor. <a> (1,1)
+pm_prjcon_list~
+Print Actions to be taken. <a> (1,2)
+pm_act_list~
+Prospects Maintenance. <ERROR> (1,1)
+pm_pct_maint~
+Actions Maintenance. <ERROR> (1,2)
+pm_act_maint~
+Relate Projects & Quotes. <ERROR> (1,1)
+pm_pq_maint~
+Project Enquiry. <ERROR> (1,2)
+pm_prj_dtl~
+Project Notes Maintenance. <ERROR> (1,1)
+pm_vi_notes~
+((
+quadrant(7,6)
+quadrant(46,8)
+box(2,3,74,14)
+line(3,5,73)
+))

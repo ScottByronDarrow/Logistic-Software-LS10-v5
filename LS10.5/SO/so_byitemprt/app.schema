@@ -1,0 +1,155 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/10/23 07:16:37 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/10/23 07:16:37  scott
+#	Updated to check and correct rounding.
+#	Changes to ensure ALL inputs and reports round the same way.
+#	
+#	Revision 5.0  2001/06/19 08:19:02  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:40:24  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:21:58  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 09:12:42  gerry
+#	Forced Revision No Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/07/14 04:53:13  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_cus_ord_ref
+	field sohr_dt_raised
+	field sohr_dt_required
+	field sohr_exch_rate
+	field sohr_tax_code
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhum_hash
+	field soln_serial_no
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_sale_price
+	field soln_item_levy
+	field soln_dis_pc
+	field soln_tax_pc
+	field soln_gst_pc
+	field soln_item_desc
+	field soln_due_date
+	field soln_bonus_flag
+	field soln_status
+	field soln_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_curr_code
+	field cumr_tax_code
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_sale_unit
+	field inmr_alpha_code
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_tax_amount
+	field inmr_outer_size
+end
+
+table ithr
+	field ithr_co_no
+	field ithr_type
+	field ithr_del_no
+	field ithr_hhit_hash
+	field ithr_iss_sdate
+	field ithr_iss_date
+	field ithr_rec_date
+	field ithr_printed
+	field ithr_stat_flag
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+	field itln_i_hhcc_hash
+	field itln_r_hhcc_hash
+	field itln_serial_no
+	field itln_qty_order
+	field itln_qty_border
+	field itln_qty_rec
+	field itln_cost
+	field itln_duty
+	field itln_stock
+	field itln_status
+	field itln_due_date
+	field itln_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_hhlo_hash
+	field ccmr_master_wh
+	field ccmr_sman_no
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_type
+	field ccmr_sal_ok
+	field ccmr_pur_ok
+	field ccmr_issues_ok
+	field ccmr_receipts
+	field ccmr_reports_ok
+	field ccmr_stat_flag
+end
+
+table inex
+	field inex_hhbr_hash
+	field inex_line_no
+	field inex_desc
+end
+

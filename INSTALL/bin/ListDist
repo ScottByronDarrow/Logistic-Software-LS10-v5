@@ -1,0 +1,67 @@
+#!/bin/sh
+#
+#	$Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/bin/ListDist,v $
+#	$Revision: 4.1 $
+#
+#	This will echo all the files in a distribution
+#
+#	$Log: ListDist,v $
+#	Revision 4.1  2001/09/12 03:21:31  scott
+#	Updated from Scott machine - 12th Sep 2001
+#	
+#	Revision 4.0  2001/03/09 02:48:30  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.1  2001/01/12 07:20:31  scott
+#	New install system
+#	
+#
+. ./InstallShellVars
+
+DISTPFX=${TMPDIR:-/tmp}/Dist$$.
+GROUPED=${TMPDIR:-/tmp}/Group.$$
+DISTINFO=info/Distrib.info
+
+if [ $# -ne 1 ]
+then
+	echo Usage : $0 distribution
+	exit 1
+fi
+
+GetDist ()
+{
+	for i in ${DISTPFX}*
+	do
+		if [ "`sed -n 1p $i`" = $1 ]
+		then
+			echo $i
+			break
+		fi
+	done
+}
+
+#	Split the distribution file into logical components
+egrep -v '(^#|^$)' $DISTINFO | csplit -s -k -f ${DISTPFX} - '/^[^ 	]/' {10} 2> /dev/null
+
+
+DISTBN=`GetDist $1`
+if [ -n "$DISTBN" ]
+then
+	#
+	#	Echo Ordinary entries
+	grep '^[ 	][^+]' $DISTBN | sed 's/[ 	]*//g'
+
+	#
+	#	Look for Group entries
+	grep '^[ 	]+' $DISTBN | sed 's/[ 	]*//g' > $GROUPED
+	if [ -s "$GROUPED" ]
+	then
+		cat $GROUPED | sed 's/^+//' |
+		( while read GROUP
+		do
+			./bin/ListDist $GROUP
+		done )
+	fi
+fi
+
+rm -f ${DISTPFX}* $GROUPED

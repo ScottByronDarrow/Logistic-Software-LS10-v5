@@ -1,0 +1,52 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.mncd,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.mncd)
+|  Schema Desc  : (Menu System Comment Details File. )
+|----------------------------------------------------------------------
+| $Log: sch.mncd,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:00  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	mncd
+
+field	mncd_hhmn_hash			type	long
+field	mncd_line_no			type	int
+field	mncd_id_no			type	comp
+		mncd_hhmn_hash,
+		mncd_line_no					index	primary
+field	mncd_description		type	char	80
+field	mncd_line			type	int
+field	mncd_column			type	int
+field	mncd_width			type	int
+field	mncd_depth			type	int
+field	mncd_reverse			type	int
+field	mncd_stat_flag			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	mncd_hhmn_hash		-	Link from mnhr file
+	mncd_line_no		-	Unique line number for this hash
+	mncd_description	-	Text to be displayed
+	mncd_line		-	Line number on screen
+	mncd_column		-	Columns number on screen
+	mncd_width		-	Width (for box/line only)
+	mncd_depth		-	Depth (for box only)
+	mncd_reverse		-	If non-zero, comment is reverse-video
+	mncd_stat_flag 		-	0 = Quadrant
+					1 = comment
+					2 = box
+					3 = line
+}

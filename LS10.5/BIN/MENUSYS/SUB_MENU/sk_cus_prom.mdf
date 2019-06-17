@@ -1,0 +1,14 @@
+Customer Pricing Maintenance. (SUB)
+sk_cus_prce
+Stock New Pricing Menu. <a> (1,1)
+menu MENUSYS/sk_price.mdf
+Customer Promotional Pricing By Customer/Item <a> (1,1)
+sk_prom_pr~C~
+Customer Promotional Pricing By Customer/Area/Item <a> (1,1)
+sk_prom_pr~A~
+Customer Promotional Pricing By Cust Type/Item <a> (1,1)
+sk_prom_pr~T~
+Customer Promotional Pricing By Item <a> (1,1)
+sk_prom_pr~I~
+((
+))

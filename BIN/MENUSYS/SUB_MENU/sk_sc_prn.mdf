@@ -1,0 +1,16 @@
+Stock Transfers Print/Reports Menu (SUB)
+sk_sc_prn_hel
+Stock Transfers Menu. <a> (1,2)
+menu MENUSYS/sk_sc_tran.mdf
+Print    Consolidated Transfers. <a> (2,1)
+sk_ir_prn.i~LPNO~N~M~W~sk_sc_tran.p~
+Re-Print Consolidated Transfers. <a> (2,1)
+sk_ir_prn.i~LPNO~Y~M~W~sk_sc_tran.p~
+Re-Print Confirmed Transfers. <a> (2,2)
+sk_ir_prn.i~LPNO~Y~T~W~sk_sc_tran.p~
+Print Backorders Report. <a> (2,2)
+so_br_boprt~P~
+Print Daily Issues & Receipts. <a> (2,1)
+lp_chain~sk_ir_eod LPNO I~sk_ir_eod LPNO R~
+((
+))

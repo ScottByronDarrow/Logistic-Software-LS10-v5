@@ -1,0 +1,18 @@
+SOP - Orders by Item number. (SUB)
+so_help
+Sales Order Reports Menu. <a> (1,1)
+menu MENUSYS/so_reports.mdf
+Print All Orders By Item Number. <a> (1,1)
+so_byitemprt~ ~
+Print Backorder By Item Number. <a> (1,1)
+so_byitemprt~B~
+Print Forward-Orders By Item Number. <a> (1,1)
+so_byitemprt~F~
+Print Held-Orders By Item Number. <a> (1,1)
+so_byitemprt~H~
+Print Scheduled-Orders By Item Number. <a> (1,1)
+so_sch_rep~P~so_sch_rep~
+Print New/Unconsolidated-Order By Item Number. <a> (1,1)
+so_byitemprt~M~
+((
+))

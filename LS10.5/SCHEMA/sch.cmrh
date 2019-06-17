@@ -1,0 +1,79 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmrh,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cmrh)
+|  Schema Desc  : (Contract Management Requisition Header )
+|----------------------------------------------------------------------
+| $Log: sch.cmrh,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmrh
+
+field	cmrh_co_no			type	char	2
+field	cmrh_br_no			type	char	2
+field	cmrh_req_no			type	long
+field	cmrh_hhrq_hash		type	serial			index	primary
+field	cmrh_hhhr_hash		type	long			index	dups
+field	cmrh_req_date		type	edate
+field	cmrh_rqrd_date		type	edate
+field	cmrh_iss_date		type	edate
+field	cmrh_op_id			type	char	14
+field	cmrh_req_by			type	char	20
+field	cmrh_date_create	type	edate
+field	cmrh_time_create	type	long
+field	cmrh_full_supply	type	char	1
+field	cmrh_printed		type	char	1
+field	cmrh_del_name		type	char	40
+field	cmrh_del_adr1		type	char	40
+field	cmrh_del_adr2		type	char	40
+field	cmrh_del_adr3		type	char	40
+field	cmrh_add_int1		type	char	40
+field	cmrh_add_int2		type	char	40
+field	cmrh_add_int3		type	char	40
+field	cmrh_stat_flag		type	char	1
+field	cmrh_id_no			type	composite
+			cmrh_co_no,
+			cmrh_br_no,
+			cmrh_req_no 							index	
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmrh_co_no		- 	Company No
+	cmrh_br_no		- 	Branch No
+	cmrh_req_no		- 	Requisition No
+	cmrh_hhrq_hash		- 	Unique serial hash
+	cmrh_hhhr_hash		- 	Link to contract
+	cmrh_req_date		- 	Requisition Date
+	cmrh_rqrd_date		- 	Required Date
+	cmrh_iss_date		- 	Issue Date
+	cmrh_op_id		- 	Operator ID
+	cmrh_req_by		- 	Requested By
+	cmrh_date_create	- 	Date created
+	cmrh_time_create	- 	Time created
+	cmrh_full_supply	- 	Full Supply  
+	cmrh_printed		- 	Printed Yet  
+	cmrh_del_name		- 	Delivery Name
+	cmrh_del_adr1		- 	Delivery Address 1
+	cmrh_del_adr2		- 	Delivery Address 2
+	cmrh_del_adr3		- 	Delivery Address 3
+	cmrh_add_int1		- 	Additional Instructions 1
+	cmrh_add_int2		- 	Additional Instructions 2
+	cmrh_add_int3		- 	Additional Instructions 3
+	cmrh_stat_flag		- 	R)ready for Release
+					B)ackordered
+					F)orward Ordered
+					C)omplete
+}

@@ -1,0 +1,179 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:22:59 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:22:59  scott
+#	CVS administration
+#	
+#	Revision 1.2  2001/08/06 23:31:25  scott
+#	RELEASE 5.0
+#	
+#	Revision 1.1  2001/06/23 11:53:48  scott
+#	New program
+#	
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_cc_no          
+	field comm_cc_name        
+	field comm_inv_date        
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_acronym
+	field ccmr_name
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_class
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_on_hand
+	field inmr_dec_pt
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_outer_size
+	field inmr_alternate
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_quick_code
+	field inmr_alpha_code
+	field inmr_qc_reqd
+	field inmr_qc_qty
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table pcgl
+	field pcgl_acc_no
+	field pcgl_co_no
+	field pcgl_est_no
+	field pcgl_acronym
+	field pcgl_name
+	field pcgl_chq_inv_no
+	field pcgl_ci_amt
+	field pcgl_o1_amt
+	field pcgl_o2_amt
+	field pcgl_o3_amt
+	field pcgl_o4_amt
+	field pcgl_hhgl_hash
+	field pcgl_tran_type
+	field pcgl_sys_ref
+	field pcgl_tran_date
+	field pcgl_period_no
+	field pcgl_post_date
+	field pcgl_narrative
+	field pcgl_user_ref
+	field pcgl_amount
+	field pcgl_loc_amount
+	field pcgl_jnl_type
+	field pcgl_currency
+	field pcgl_exch_rate
+	field pcgl_stat_flag
+	field pcgl_run_no
+end
+
+table pcms
+	field pcms_co_no
+	field pcms_hhbr_hash
+	field pcms_alt_no
+	field pcms_line_no
+	field pcms_cons
+	field pcms_mabr_hash
+	field pcms_uom
+	field pcms_matl_qty
+	field pcms_matl_wst_pc
+	field pcms_instr_no
+	field pcms_iss_seq
+	field pcms_uniq_id
+	field pcms_amt_issued
+	field pcms_amt_recptd
+	field pcms_qty_issued
+	field pcms_act_qty_in
+	field pcms_hhwo_hash
+end
+
+table pcwo
+	field pcwo_co_no
+	field pcwo_br_no
+	field pcwo_wh_no
+	field pcwo_req_br_no
+	field pcwo_req_wh_no
+	field pcwo_rec_br_no
+	field pcwo_rec_wh_no
+	field pcwo_order_no
+	field pcwo_hhwo_hash
+	field pcwo_reqd_date
+	field pcwo_rtg_seq
+	field pcwo_priority
+	field pcwo_create_date
+	field pcwo_hhbr_hash
+	field pcwo_bom_alt
+	field pcwo_rtg_alt
+	field pcwo_hhcc_hash
+	field pcwo_prod_qty
+	field pcwo_act_prod_qty
+	field pcwo_act_rej_qty
+	field pcwo_order_status
+	field pcwo_batch_no
+	field pcwo_hhsl_hash
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+end
+
+table pchs
+	field pchs_co_no
+	field pchs_br_no
+	field pchs_wh_no
+	field pchs_order_no
+	field pchs_batch_no
+	field pchs_hhwo_hash
+	field pchs_hhbr_hash
+	field pchs_prod_qty
+	field pchs_act_prod_qty
+	field pchs_act_rej_qty
+	field pchs_batch_size
+	field pchs_outer_size
+	field pchs_std_cost
+	field pchs_act_cost
+	field pchs_bom_no
+	field pchs_rtg_no
+end

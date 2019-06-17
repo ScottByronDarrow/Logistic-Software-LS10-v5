@@ -1,0 +1,34 @@
+Telemarketing Maintenance Menu (TMMT)
+tm_maint
+Telemarketing Master Menu. <a|telemktg> (1,2)
+menu MENUSYS/tm_master.mdf
+Maintain Campaigns. <a|telemktg> (1,1)
+tm_campaign~
+Maintain Operators. <a> (1,1)
+tm_operator~
+Maintain Scripts. <a|telemktg> (1,1)
+tm_script~
+Maintain Salesrep Masterfile. <a|telemktg> (1,1)
+tm_smaninp~
+Maintain User Defined Prompts. <a|telemktg> (1,1)
+tm_upmpt_mnt~
+Maintain Lead Origin Masterfile. <a|telemktg> (1,1)
+tm_orig_mnt~O~
+Maintain Contact Position File. <a|telemktg> (1,2)
+tm_orig_mnt~P~
+Load Leads From ASCII File. (Fixed Format) <a|telemktg> (1,1)
+tm_ld_load~F~
+Load Leads From ASCII File. (Delimited) <a|telemktg> (1,1)
+tm_ld_load~D~
+Edit Default Formats For ASCII Loading. <a|telemktg> (1,1)
+tm_dflt_fmt~
+((
+quadrant(20,6)
+box(15,3,48,15)
+line(16,5,47)
+HEADING_ON
+FAST_ON
+SUB_ON
+MENU_NAME_ON
+SHELL_ON
+))

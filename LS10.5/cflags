@@ -1,0 +1,1 @@
+setenv CFLAGS "-s -O3 -Wall -DLINUX -I/usr/informix7/include -I/usr/LS10.5/LS10/INCLUDE"

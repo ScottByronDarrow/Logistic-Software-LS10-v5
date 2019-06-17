@@ -1,0 +1,49 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.lbhr,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.lbhr)
+|  Schema Desc  : (Label .p file desc )
+|----------------------------------------------------------------------
+| $Log: sch.lbhr,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:59  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:34  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file    lbhr
+
+field   lbhr_filename			type    char    13	index primary
+field   lbhr_across			type    int       
+field   lbhr_down			type    int        
+field   lbhr_x_size			type    int       
+field   lbhr_y_size			type    int        
+field   lbhr_x_offset			type    int         
+field   lbhr_y_offset			type    int         
+field   lbhr_x_sp			type    int  
+field   lbhr_y_sp			type    int  
+field   lbhr_lines			type    int
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	lbhr_filename		-  Filename
+	lbhr_across		-  No Of Labels Across
+	lbhr_down		-  No Of Labels Down
+	lbhr_x_size		-  Width Of Label
+	lbhr_y_size		-  Height Of Label
+	lbhr_x_offset		-  Offset From Side Of Page
+	lbhr_y_offset		-  Offset From Top Of Page
+	lbhr_x_sp		-  Space Between Labels
+	lbhr_y_sp		-  Space Between Labels
+	lbhr_lines		-  Number Of Lines On Page
+}

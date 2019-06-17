@@ -1,0 +1,239 @@
+#----------------------------------------------------------------------------
+#	$Id: Distrib.info,v 5.4 2002/11/27 14:30:38 scott Exp $
+#	$Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/info/Distrib.info,v $
+#	$Log: Distrib.info,v $
+#	Revision 5.4  2002/11/27 14:30:38  scott
+#	.
+#	
+#	Revision 5.3  2002/11/27 08:45:00  scott
+#	Updated to include correct schema dir and link
+#	
+#	Revision 5.2  2002/07/24 09:28:43  scott
+#	.
+#	
+#	Revision 5.1  2002/07/18 05:35:23  scott
+#	.
+#	
+#	Revision 5.0  2002/05/08 01:44:43  scott
+#	CVS administration
+#	
+#	Revision 4.3  2002/04/19 01:02:57  scott
+#	Removed web
+#	
+#	Revision 4.2  2001/11/08 03:05:55  scott
+#	Updated from further testing
+#	
+#	Revision 4.1  2001/08/29 01:18:39  scott
+#	Updated from testing
+#	
+#	Revision 4.0  2001/03/09 02:49:26  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.12  2001/03/01 09:26:23  scott
+#	Updated for small changes
+#	
+#	Revision 1.11  2001/02/02 01:20:28  scott
+#	Updated as etc names wrong
+#	
+#	Revision 1.10  2001/02/01 06:06:21  scott
+#	Updated from more testing
+#	
+#	Revision 1.9  2001/01/17 08:30:20  scott
+#	Updated from testing
+#	
+#	Revision 1.8  2001/01/17 07:45:52  scott
+#	Updated from testing
+#	
+#	Revision 1.7  2001/01/16 06:24:27  scott
+#	Updated from testing
+#	
+#	Revision 1.6  2001/01/16 03:07:28  scott
+#	Add more samples
+#	
+#	Revision 1.5  2001/01/16 02:09:17  scott
+#	Updated from testing.
+#	
+#	Revision 1.4  2001/01/15 08:16:59  scott
+#	New linked Scripts
+#	
+#	Revision 1.3  2001/01/15 03:54:35  scott
+#	Updated from testing
+#	
+#	Revision 1.2  2001/01/15 03:28:05  scott
+#	Updated from testing
+#	
+#
+#	New install system
+#
+#	List of files required for a Distribution tape
+#
+#	Empty lines or lines beginning with '#' are ignored.
+#
+#	A distibution list begins with the distribution name at the beginning
+#	of the line, followed by a list of files required for that distribution
+#	suitable for ls (1).
+#
+#	The list of files are specified relative to $PROG_PATH and follow
+#	the distribution name. Each file must be preceded by white space.
+#
+#----------------------------------------------------------------------------
+
+# Base ver.etc
+Base-ver.etc
+	/usr/ver.etc/bin/GenAppSchema
+	/usr/ver.etc/bin/GenNewMake
+	/usr/ver.etc/bin/MakeEnvironment
+	/usr/ver.etc/bin/WhatElse
+	/usr/ver.etc/bin/allmake
+	/usr/ver.etc/bin/bakmake
+	/usr/ver.etc/bin/cdsrc
+	/usr/ver.etc/bin/cvs-log
+	/usr/ver.etc/bin/cvs-log.0
+	/usr/ver.etc/bin/grope
+	/usr/ver.etc/bin/last.ver
+	/usr/ver.etc/bin/make_err
+	/usr/ver.etc/bin/makeenv
+	/usr/ver.etc/bin/makeenv.0
+	/usr/ver.etc/bin/makeproject
+	/usr/ver.etc/bin/module_doco
+	/usr/ver.etc/bin/pinnwatch
+	/usr/ver.etc/bin/plook
+	/usr/ver.etc/bin/prgtrack
+	/usr/ver.etc/bin/progtrack
+	/usr/ver.etc/bin/punedit
+	/usr/ver.etc/bin/rotate
+	/usr/ver.etc/bin/sch
+	/usr/ver.etc/bin/setperms
+	/usr/ver.etc/bin/w4
+	/usr/ver.etc/etc
+	/usr/ver.etc/src
+	/usr/ver.etc/tables
+	/usr/ver.etc/permissions
+	/usr/ver.etc/usr
+	/usr/ver.etc/terminfo
+	/usr/ver.etc/Makefile
+	/usr/ver.etc/BRAND/Leave.This
+
+# Standard Non-Machine Specific Base System
+BaseLS10
+	+Base-ver.etc
+	BIN/.profile
+	BIN/.csh_spec
+	BIN/.profile
+	BIN/.tcshrc
+	BIN/.development
+
+	BIN/MENUSYS/*.mdf
+	BIN/MENUSYS/SUB_MENU/*.mdf
+	BIN/MENUSYS/GUI
+	BIN/MENUSYS/PRINT
+	BIN/MENUSYS/TERM
+	BIN/MENUSYS/LP_SECURE
+	BIN/MENUSYS/Mail_group
+	BIN/MENUSYS/Mail_secure
+	BIN/MENUSYS/Print_secure
+	BIN/MENUSYS/User_secure
+	BIN/MENUSYS/prntype
+	BIN/MENUSYS/queue_type
+	BIN/MENUSYS/sprdcap.cprogs
+	BIN/MENUSYS/termcap.cprogs
+
+	BIN/SCRIPT
+	BIN/HELP
+	BIN/LAYOUT
+	BIN/PR_FILE
+	BIN/Post_Status
+	BIN/SCN
+	BIN/SUB_MENU/*.mdf
+
+	BIN/LogisticEnvironment.unl
+
+	CONFIG
+
+	INSTALL/InstallShellVars
+	INSTALL/LogisticVars
+	INSTALL/bin/
+	INSTALL/info
+	INSTALL/install
+	INSTALL/license_it
+	INSTALL/makedist
+	INSTALL/permissions
+	INSTALL/SampleCpioExtract
+
+	LETTERS
+
+	SCHEMA
+	LS10.5/SCHEMA
+
+	PICTURE
+	ARCHIVE
+
+	SPREAD
+
+	gl_reports
+	su_reports
+
+# Standard Machine Specific Runtime System
+RuntimeSystem
+	+BaseLS10
+	+Base-ver.etc
+
+	/usr/ver.etc/bin/LogisticEnv
+	/usr/ver.etc/bin/LogisticPath
+	/usr/ver.etc/bin/appcschema
+	/usr/ver.etc/bin/appschema
+	/usr/ver.etc/bin/subst
+	/usr/ver.etc/BRAND/Leave.This
+	/usr/lib/libDSOXtraLS10.5.so
+	/usr/lib/libbaseLS10.5.so
+	/usr/lib/libdbifLS10.5.so
+	/usr/lib/libscrgenLS10.5.so
+	/usr/lib/libisam.so
+	/usr/lib/libisam.a
+	/etc/rc.d/init.d/LS10Services
+	/etc/rc.d/rc0.d/K99LS10Services
+	/etc/rc.d/rc2.d/K99LS10Services
+	/etc/rc.d/rc2.d/S99LS10Services
+	/etc/rc.d/rc3.d/K99LS10Services
+	/etc/rc.d/rc3.d/S99LS10Services
+	/etc/rc.d/rc5.d/K99LS10Services
+	/etc/rc.d/rc5.d/S99LS10Services
+	/etc/rc.d/rc6.d/K99LS10Services
+	/etc/rc.d/rc0.d/K98Ease
+	/etc/rc.d/rc2.d/K98Ease
+	/etc/rc.d/rc2.d/S98Ease
+	/etc/rc.d/rc3.d/K98Ease
+	/etc/rc.d/rc3.d/S98Ease
+	/etc/rc.d/rc5.d/K98Ease
+	/etc/rc.d/rc5.d/S98Ease
+	/etc/rc.d/rc6.d/K98Ease
+	/usr/Ease
+
+#	Very Machine specific as they use work files.
+	BIN/SECURE
+	BIN/MENUSYS/COMM
+	BIN/LICENSE
+	BIN/LOGISTIC
+	BIN/SUB_MENU/SUB_MENU
+	BIN/MENUSYS/*.fa
+
+	BIN/??
+	BIN/LRP
+	BIN/LS10-GUI
+	BIN/POS
+	BIN/MENU
+	BIN/MISC
+	BIN/UTILS
+	
+	BIN/lc_demo
+
+RuntimeSystemAndDatabase
+	+RuntimeSystem
+	DATA
+
+#	Development distribution - Client development - Excludes Library source.
+DevelopmentSystem
+	+BaseLS10
+
+	LS10.5
+

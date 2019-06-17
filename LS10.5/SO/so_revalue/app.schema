@@ -1,0 +1,107 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/11/28 04:09:51 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/11/28 04:09:51  scott
+#	SC0053 - Platinum Logistics - LS10.5.2 2002-11-28
+#	Updated for changes in pricing - See S/C for Details
+#	
+#	Revision 5.0  2001/06/19 08:20:23  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:41:40  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/03/06 09:26:13  scott
+#	Updated to allow -ve discounts to be processed.
+#	Problem with this was test on inmr_disc_pc should have been applied
+#	only when inmr_disc_pc had a value.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_dbt_date
+end
+
+table cnch
+	field cnch_co_no
+	field cnch_cont_no
+	field cnch_hhch_hash
+	field cnch_exch_type
+end
+
+table cumr
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_class_type
+	field cumr_disc_code
+	field cumr_tax_code
+	field cumr_stat_flag
+	field cumr_curr_code
+	field cumr_price_type
+end
+
+table inmr
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_category
+	field inmr_outer_size
+	field inmr_sellgrp
+	field inmr_disc_pc
+	field inmr_tax_pc
+	field inmr_gst_pc
+	field inmr_stat_flag
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_cont_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_area_code
+	field sohr_pri_type
+	field sohr_dt_required
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_cont_status
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_gsale_price
+	field soln_sale_price
+	field soln_dis_pc
+	field soln_reg_pc
+	field soln_disc_a
+	field soln_disc_b
+	field soln_disc_c
+	field soln_cumulative
+	field soln_tax_pc
+	field soln_gst_pc
+	field soln_bonus_flag
+	field soln_stat_flag
+end
+

@@ -1,0 +1,24 @@
+Royalties Menu (SUB)
+anni_help
+Ambreed Master Menu. <a> (1,1)
+menu MENUSYS/amb.mdf
+Royalty Class Maintenance. <a> (1,2)
+db_rtype_inp~
+Royalty Codes Maintenance. <a> (1,1)
+so_roy_inp~
+Assign Items to Royalty Codes. <a> (1,2)
+sk_roy_inp~
+Royalty Codes Master File Listing. <a> (1,1)
+sk_roy_item~"Royalty Codes Master File Listing"~
+Update Royalties from Invoices/Credit Notes. <a> (1,1)
+lp_chain~warning "POST  INVOICES/CREDITS"~day.sh~
+Royalties by Royalty Code/Item/Supplier Report. <a> (1,1)
+lp_chain~so_royitcrd LPNO~
+Generate/Print Royalty Payment Advice. <a> (1,1)
+lp_chain~cr_roypay LPNO~
+Print Royalty Invoices. <a> (1,1)
+lp_chain~cr_royprt LPNO~
+Update General Ledger from Royalty Invoices. <a> (1,1)
+lp_chain~cr_roy_up I~
+((
+))

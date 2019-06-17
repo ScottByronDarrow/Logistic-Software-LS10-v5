@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tsxd,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.tsxd)
+|  Schema Desc  : (Tele-Sales External detail file. )
+|----------------------------------------------------------------------
+| $Log: sch.tsxd,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:37  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:55  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tsxd
+
+field	tsxd_hhcu_hash			type	long
+field	tsxd_type			type	char	1
+field	tsxd_line_no			type	int
+field	tsxd_id_no			type	composite
+		tsxd_hhcu_hash,
+		tsxd_type,
+		tsxd_line_no					index	primary
+field	tsxd_desc			type	char	60
+field	tsxd_stat_flag			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tsxd_hhcu_hash		-	Link to cumr.
+	tsxd_type		-       C - Complaints 
+					L - Last call comments
+					N - Notes 
+					V - Next Visit Notes
+	tsxd_line_no		-	Sequence line No.
+	tsxd_desc		-	Description.
+	tsxd_stat_flag		-	Spare status flag.
+}

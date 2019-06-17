@@ -1,0 +1,52 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.saed,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.saed)
+|  Schema Desc  : (Sales Expense Detail file. )
+|----------------------------------------------------------------------
+| $Log: sch.saed,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:20  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file saed 
+
+field	saed_saem_hash			type	long				index	dups
+field	saed_seq_no				type	integer
+field	saed_dkt_no				type	char	8
+field	saed_dkt_desc			type	char	60
+field	saed_date				type	edate
+field	saed_amt				type	money
+field	saed_refunded			type	money
+field	saed_gl_posted			type	char	1
+field	saed_gl_amt     		type	money
+field	saed_stat_flag			type	char	1
+field	saed_id_no				type	composite
+			saed_saem_hash,
+			saed_seq_no										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	saed_saem_hash		-	Link to sales expense header file (saeh)
+	saed_seq_no			-	Sequence number of expense.
+	saed_dkt_no			-	Docket number, may relate to invoice or credit.
+	saed_dkt_desc		-	Docket description related to expense.
+	saed_date			-	Date of expense.
+	saed_amt			-	Amount being claimed.
+	saed_refunded		- 	Amount refunded as deduction from trip remittance
+	saed_gl_posted		-	Expense process flag.
+								N = Record not processed.
+								Y = Record processed.
+								D = Record to be deleted.
+	saed_stat_flag		-	Spare.
+}

@@ -1,0 +1,42 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmxf,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.tmxf)
+|  Schema Desc  : (Tele-Marketing External detail file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmxf,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:35  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:53  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmxf
+
+field	tmxf_hhpm_hash			type	long
+field	tmxf_type			type	char	1
+field	tmxf_line_no			type	int
+field	tmxf_id_no			type	composite
+		tmxf_hhpm_hash,
+		tmxf_type,
+		tmxf_line_no					index	primary
+field	tmxf_desc			type	char	60
+field	tmxf_stat_flag			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tmxf_hhpm_hash		-	Link to txpm.
+	tmxf_type		-	N(otes) L(ast call comments) 
+				        U(ser defined) 
+	tmxf_line_no		-	Sequence line No.
+	tmxf_desc		-	Description.
+	tmxf_stat_flag		-	Spare status flag.
+}

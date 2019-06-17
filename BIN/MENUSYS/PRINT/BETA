@@ -1,0 +1,6 @@
+#
+#  Printer Entry For ND10 printer. P0 = 10' P2 = 20'
+#   BETA label printer for vidcom
+BETA|Star ND10|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E-1:UF=\E-0:\
+	:P0=\EP\022:P2=\EM\017:EX=2:

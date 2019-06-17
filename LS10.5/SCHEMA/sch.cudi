@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cudi,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cudi)
+|  Schema Desc  : (Customer Delivery Address File. )
+|----------------------------------------------------------------------
+| $Log: sch.cudi,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:28  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file cudi 
+
+field	cudi_hhcu_hash			type	long
+field	cudi_del_no				type	int
+field	cudi_name				type	char	40
+field	cudi_adr1				type	char	40
+field	cudi_adr2				type	char	40
+field	cudi_adr3				type	char	40
+field	cudi_adr4				type	char	40
+field	cudi_id_no				type	comp	
+			cudi_hhcu_hash,
+			cudi_del_no								index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cudi_hhcu_hash		-	Link to Customer Master file.
+	cudi_del_no		-	Delivery number.
+	cudi_name		-	Delivery instruction name.
+	cudi_adr1		-	Delivery Instruction Address Part 1
+	cudi_adr2		-	Delivery Instruction Address Part 2
+	cudi_adr3		-	Delivery Instruction Address Part 3
+	cudi_adr4		-	Delivery Instruction Address Part 4
+}

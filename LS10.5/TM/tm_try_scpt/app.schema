@@ -1,0 +1,106 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/13 05:30:41 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/13 05:30:41  scott
+#	Updated to convert to app.schema
+#	Update to clean code.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table comr
+	field comr_co_no
+	field comr_nx_call_no
+end
+
+table tmcf
+	field tmcf_co_no
+	field tmcf_campaign_no
+	field tmcf_hhcf_hash
+	field tmcf_c_name1
+	field tmcf_c_name2
+end
+
+table tmxf
+	field tmxf_hhpm_hash
+	field tmxf_type
+	field tmxf_line_no
+	field tmxf_desc
+	field tmxf_stat_flag
+end
+
+table tmud
+	field tmud_co_no
+	field tmud_line_no
+	field tmud_prmpt_desc
+	field tmud_stat_flag
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_hhop_hash
+	field tmop_op_passwd
+	field tmop_op_name
+	field tmop_short_id
+	field tmop_campaign_no
+	field tmop_unscripted
+	field tmop_in_scr_no
+	field tmop_out_scr_no
+	field tmop_curr_c_no
+	field tmop_curr_l_no
+	field tmop_curr_prmpt
+	field tmop_sman_code
+	field tmop_login_time
+	field tmop_cam_time
+	field tmop_stat_flag
+end
+
+table tmsh
+	field tmsh_co_no
+	field tmsh_script_no
+	field tmsh_hhsh_hash
+	field tmsh_n_prmpt_no
+	field tmsh_desc
+end
+
+table tmsl
+	field tmsl_hhsh_hash
+	field tmsl_prmpt_no
+	field tmsl_desc
+	field tmsl_text1
+	field tmsl_text2
+	field tmsl_text3
+	field tmsl_text4
+	field tmsl_text5
+	field tmsl_text6
+	field tmsl_text7
+	field tmsl_rep1_desc
+	field tmsl_rep2_desc
+	field tmsl_rep3_desc
+	field tmsl_rep4_desc
+	field tmsl_rep5_desc
+	field tmsl_rep6_desc
+	field tmsl_rep7_desc
+	field tmsl_rep8_desc
+	field tmsl_rep1_goto
+	field tmsl_rep2_goto
+	field tmsl_rep3_goto
+	field tmsl_rep4_goto
+	field tmsl_rep5_goto
+	field tmsl_rep6_goto
+	field tmsl_rep7_goto
+	field tmsl_rep8_goto
+	field tmsl_stat_flag
+end
+

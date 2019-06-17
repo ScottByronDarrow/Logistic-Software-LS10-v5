@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.exmm,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.exmm)
+|  Schema Desc  : (External Merchandiser Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.exmm,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:38  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file exmm 
+
+field	exmm_co_no				type	char	2
+field	exmm_exmm_hash			type	serial
+field	exmm_name				type	char	60
+field	exmm_agency				type	char	2
+field	exmm_day				type	char	7
+field	exmm_st_date			type	edate
+field	exmm_en_date			type	edate
+field	exmm_id_no				type	composite
+			exmm_co_no,
+			exmm_exmm_hash								index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	exmm_co_no			-		Company Number.
+	exmm_exmm_hash		-		Unique serial ID.
+	exmm_name			-		Merchandiser Name.
+	exmm_agency			-		Merchandiser Agency Code.
+	exmm_day			-		Merchandiser Day(s) off.
+	exmm_st_date		-		Start Date when merchandiser agreement started.
+	exmm_en_date		-		End Date when merchandiser agreement ends.
+}

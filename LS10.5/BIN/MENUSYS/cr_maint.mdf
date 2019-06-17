@@ -1,0 +1,28 @@
+Supplier Maintenance Menu (APMT)
+cr_maint
+Supplier Master Menu. <a> (1,2)
+menu MENUSYS/cr_master.mdf
+Maintain Supplier Master. <a> (1,1)
+cr_mr_inpt~
+Maintain Bank Details. <a> (1,1)
+cr_bk_inpt~
+Enter Bank Transfer Journals. <a> (1,2)
+lp_chain~cr_bktrsfr LPNO~
+Maintain Currency Details. <a> (1,1)
+po_mnt_inp~C~
+Maintain Country / Freight File. <a> (1,1)
+po_mnt_inp~F~
+Maintain Supplier Type File. <a> (1,1)
+po_mnt_inp~T~
+Maintain Remittance Message. <a> (1,2)
+db_stmtinp~R~
+Update Supplier Periods. <a> (1,1)
+cr_period_up~ 0~
+Delete Supplier. <a> (1,1)
+chain~cr_mr_delinp PID~cr_mr_delete PID~
+((
+quadrant(23,6)
+quadrant(46,6)
+box(17,3,45,15)
+line(18,5,44)
+))

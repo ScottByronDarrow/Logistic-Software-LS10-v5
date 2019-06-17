@@ -1,0 +1,13 @@
+#
+# SCO Openserver 5
+#
+C++C			=	g++
+LD				=	g++
+CXXDBG			=	-Wall -g
+CDBG			=	-g
+LDFLAGS			=	-O2 -s
+
+#
+#	Resolution quirks
+#
+QUIRKSLIB		=	-lsocket -lprot -lx -ltinfo -lm

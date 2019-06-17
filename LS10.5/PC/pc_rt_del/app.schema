@@ -1,0 +1,88 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:24:19 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:24:19  scott
+#	CVS administration
+#	
+#	Revision 1.1  2002/05/02 09:15:18  scott
+#	First release of new program.
+#	
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table soln
+	field soln_hhsl_hash
+end
+
+table pcat
+	field pcat_hhwo_hash      
+end
+
+table pcbp
+	field pcbp_seq_no         
+	field pcbp_hhbr_hash      
+	field pcbp_hhwo_hash      
+end
+
+table pchs
+	field pchs_hhwo_hash      
+end
+
+table pcln
+	field pcln_seq_no         
+	field pcln_line_no        
+	field pcln_hhwo_hash      
+end
+
+table pclt
+	field pclt_hhwo_hash      
+end
+
+table pcms
+	field pcms_hhwo_hash      
+end
+
+table pcoi
+	field pcoi_hhwo_hash      
+	field pcoi_line_no        
+end
+
+table pcrq
+	field pcrq_hhwo_hash      
+	field pcrq_seq_no         
+	field pcrq_line_no        
+end
+
+table pcsf
+	field pcsf_hhwo_hash      
+	field pcsf_uniq_id        
+	field pcsf_line_no        
+end
+
+table pcwl
+	field pcwl_hhwo_hash      
+	field pcwl_hhcu_hash      
+end
+
+table pstq
+	field pstq_hhwo_hash      
+end
+
+table pcwo
+	field pcwo_order_no       
+	field pcwo_hhwo_hash      
+	field pcwo_reqd_date      
+	field pcwo_create_date    
+	field pcwo_hhsl_hash      
+	field pcwo_order_status      
+end

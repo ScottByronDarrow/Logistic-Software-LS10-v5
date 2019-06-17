@@ -1,0 +1,95 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cuhd,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.cuhd)
+|  Schema Desc  : (Debtors Payments Header File Record. )
+|----------------------------------------------------------------------
+| $Log: sch.cuhd,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cuhd
+
+field	cuhd_hhcu_hash			type	long			index	dups
+field	cuhd_receipt_no			type	char	8		index	dups
+field	cuhd_index_date			type	edate
+field	cuhd_cheque_no			type	char	20
+field	cuhd_or_no				type	char	10
+field	cuhd_type				type	char	1
+field	cuhd_bank_id			type	char	5
+field	cuhd_bank_amt 			type	money
+field	cuhd_bank_exch 			type	double
+field	cuhd_bank_lcl_exch 		type	double
+field	cuhd_bank_chg  			type	money
+field	cuhd_rec_type  			type	char	1
+field	cuhd_alt_drawer			type	char	20
+field	cuhd_due_date			type	edate
+field	cuhd_present_date		type	edate
+field	cuhd_hhcp_hash			type	serial			index
+field	cuhd_narrative			type	char	20
+field	cuhd_date_payment		type	edate
+field	cuhd_date_posted		type	edate
+field	cuhd_tot_amt_paid		type	money
+field	cuhd_loc_amt_paid		type	money
+field	cuhd_disc_given			type	money
+field	cuhd_loc_disc_give		type	money
+field	cuhd_exch_variance		type	money
+field	cuhd_lodge_flag			type	char	1
+field	cuhd_clear_fee			type	money   
+field	cuhd_db_bank			type	char	3
+field	cuhd_db_branch			type	char	20
+field	cuhd_dishonoured		type	char	1
+field	cuhd_stat_flag			type	char	1
+field	cuhd_id_no				type	composite
+			cuhd_hhcu_hash,
+			cuhd_receipt_no,
+			cuhd_index_date									index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cuhd_hhcu_hash		-	Link to Customer master file (cumr)
+	cuhd_receipt_no		-	Receipt / Cheque Number.
+	cuhd_cheque_no		-	Cheque number - Reference only.
+	cuhd_or_no			-	OR number     - Reference only.
+	cuhd_type			-	Type of Transaction
+								1 = Cheque.
+								2 = Linking Journal.
+ 	cuhd_bank_id		-	Bank id ( look up in crbk )
+ 	cuhd_bank_amt		-	Bank Amount.
+ 	cuhd_bank_exch		-	Bank exchange rate.
+ 	cuhd_bank_chg		-	Bank charges.
+ 	cuhd_rec_type		-	Receipt Type.
+								(A)Cash
+								(B)Bank Draft.
+								(C)Cheque.
+								(D)Direct Credit.
+ 	cuhd_alt_drawer		-	Alternate drawer details.
+ 	cuhd_due_date		-	Bank draft due date.
+	cuhd_hhcp_hash		-	Link to cheque detail file. (cudt)
+	cuhd_narrative		-	Narrative.
+	cuhd_date_payment	-	Payment Date.
+	cuhd_date_posted	-	Date Posted.
+	cuhd_tot_amt_paid	-	Amount of payment in O/S Currency.
+ 	cuhd_loc_amt_paid	-	Amount of payment in Loc Currency.
+	cuhd_disc_given		-	Discount given in O/S Currency.
+ 	cuhd_loc_disc_give	-	Discount given in Loc Currency.
+ 	cuhd_exch_variance	-	Exchange Variation.
+	cuhd_lodge_flag		-	Bank Lodgement flag. Printed (Y/N).
+	cuhd_clear_fee		-	Cheque clearance fee.
+	cuhd_db_bank		-	Debtors bank code.
+	cuhd_db_branch		-	Debtors bank branch.
+	cuhd_stat_flag		-	Spare status flag.
+}

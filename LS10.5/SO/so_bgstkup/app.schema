@@ -1,0 +1,338 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:50 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:50  scott
+#	Update - LS10.5
+#	
+#	Revision 4.0  2001/03/09 02:40:13  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:40:40  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#	Revision 3.0  2000/10/10 12:21:52  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.2  2000/09/14 00:39:23  scott
+#	Updated to add processing of file llih (Lot/Location Invoice History).
+#	Changes effect so_bgstkup and so_stkup and require a schema sch.llih
+#	Changes will be required to customers invoice print program.
+#	
+#	Revision 2.1  2000/09/14 00:28:48  scott
+#	Updated to add processing of file llih (Lot/Location Invoice History).
+#	Changes effect so_bgstkup and so_stkup and require a schema sch.llih
+#	Changes will be required to customers invoice print program.
+#	
+#	Revision 2.0  2000/07/15 09:12:36  gerry
+#	Forced Revision No Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/02/09 04:19:27  scott
+#	Added app.schema
+#	
+#
+table comr
+	field comr_co_no          
+	field comr_inv_date       
+	field comr_stat_flag      
+end
+
+table esmr
+	field esmr_co_no          
+	field esmr_est_no         
+	field esmr_inv_date       
+	field esmr_stat_flag      
+end
+
+table ccmr
+	field ccmr_cc_no          
+	field ccmr_hhcc_hash      
+end
+
+table bpro
+	field bpro_co_no          
+	field bpro_br_no          
+	field bpro_program        
+	field bpro_hash           
+	field bpro_pid            
+end
+
+table sobg
+	field sobg_co_no          
+	field sobg_br_no          
+	field sobg_type           
+	field sobg_lpno           
+	field sobg_hash           
+	field sobg_pid            
+end
+
+table inmr
+	field inmr_co_no          
+	field inmr_item_no        
+	field inmr_hhbr_hash      
+	field inmr_hhsi_hash      
+	field inmr_class          
+	field inmr_category       
+	field inmr_grade          
+	field inmr_lot_ctrl       
+	field inmr_costing_flag   
+	field inmr_outer_size     
+	field inmr_on_hand  
+	field inmr_dec_pt  
+	field inmr_ex_code        
+	field inmr_ltd_sales        
+	field inmr_stat_flag      
+end
+
+table ingd
+	field ingd_co_no          
+	field ingd_grade          
+	field ingd_writedown      
+	field ingd_stat_flag      
+end
+
+table cumr
+	field cumr_co_no          
+	field cumr_dbt_no         
+	field cumr_hhcu_hash      
+	field cumr_curr_code      
+	field cumr_stat_flag          
+end
+
+table cohr
+	field cohr_co_no          
+	field cohr_br_no          
+	field cohr_dp_no          
+	field cohr_inv_no         
+	field cohr_hhcu_hash      
+	field cohr_type           
+	field cohr_hhso_hash      
+	field cohr_hhco_hash      
+	field cohr_date_raised    
+	field cohr_tax_code       
+	field cohr_batch_no       
+	field cohr_exch_rate      
+	field cohr_stat_flag      
+	field cohr_drop_ship      
+end
+
+table coln
+	field coln_hhcl_hash      
+	field coln_hhco_hash      
+	field coln_line_no        
+	field coln_hhbr_hash      
+	field coln_incc_hash      
+	field coln_hhum_hash      
+	field coln_crd_type       
+	field coln_serial_no      
+	field coln_q_order        
+	field coln_sale_price     
+	field coln_cost_price     
+	field coln_gross          
+	field coln_amt_disc       
+	field coln_erate_var      
+	field coln_hhah_hash      
+	field coln_status     
+	field coln_stat_flag      
+end
+
+table ffdm
+	field ffdm_hhbr_hash      
+	field ffdm_hhcc_hash      
+	field ffdm_date           
+	field ffdm_type           
+	field ffdm_qty            
+end
+
+table incc
+	field incc_hhcc_hash      
+	field incc_hhbr_hash      
+	field incc_hhwh_hash      
+	field incc_location       
+	field incc_opening_stock  
+	field incc_receipts       
+	field incc_pur            
+	field incc_issues         
+	field incc_adj            
+	field incc_sales          
+	field incc_stake          
+	field incc_closing_stock  
+	field incc_ytd_sales      
+	field incc_c_1            
+	field incc_c_2            
+	field incc_c_3            
+	field incc_c_4            
+	field incc_c_5            
+	field incc_c_6            
+	field incc_c_7            
+	field incc_c_8            
+	field incc_c_9            
+	field incc_c_10           
+	field incc_c_11           
+	field incc_c_12           
+	field incc_c_val_1        
+	field incc_c_val_2        
+	field incc_c_val_3        
+	field incc_c_val_4        
+	field incc_c_val_5        
+	field incc_c_val_6        
+	field incc_c_val_7        
+	field incc_c_val_8        
+	field incc_c_val_9        
+	field incc_c_val_10       
+	field incc_c_val_11       
+	field incc_c_val_12       
+	field incc_c_prf_1        
+	field incc_c_prf_2        
+	field incc_c_prf_3        
+	field incc_c_prf_4        
+	field incc_c_prf_5        
+	field incc_c_prf_6        
+	field incc_c_prf_7        
+	field incc_c_prf_8        
+	field incc_c_prf_9        
+	field incc_c_prf_10       
+	field incc_c_prf_11       
+	field incc_c_prf_12       
+	field incc_stat_flag      
+	field incc_os_date        
+	field incc_os_ldate       
+end
+
+table inwu
+	field inwu_hhwh_hash      
+	field inwu_hhum_hash      
+	field inwu_opening_stock  
+	field inwu_receipts       
+	field inwu_pur            
+	field inwu_issues         
+	field inwu_adj            
+	field inwu_sales          
+	field inwu_stake          
+	field inwu_stake_calc     
+	field inwu_closing_stock  
+end
+
+table inme
+	field inme_hhwh_hash      
+	field inme_opening_stock  
+	field inme_receipts       
+	field inme_pur            
+	field inme_issues         
+	field inme_adj            
+	field inme_sales          
+	field inme_stake          
+	field inme_closing_stock  
+	field inme_qty            
+	field inme_value          
+	field inme_profit         
+	field inme_stat_flag      
+end
+
+table inmu
+	field inmu_co_no          
+	field inmu_br_no          
+	field inmu_wh_no          
+	field inmu_class          
+	field inmu_category       
+	field inmu_year           
+	field inmu_period         
+	field inmu_sal_dly        
+	field inmu_sal_mty        
+	field inmu_sal_qty        
+	field inmu_icst_dly       
+	field inmu_icst_mty       
+	field inmu_crd_dly        
+	field inmu_crd_mty        
+	field inmu_crd_qty        
+	field inmu_ccst_dly       
+	field inmu_ccst_mty       
+	field inmu_stat_flag      
+end
+
+table intr
+	field intr_co_no          
+	field intr_br_no          
+	field intr_hhbr_hash      
+	field intr_hhcc_hash      
+	field intr_hhum_hash      
+	field intr_type           
+	field intr_date           
+	field intr_batch_no       
+	field intr_ref1           
+	field intr_ref2           
+	field intr_qty            
+	field intr_cost_price     
+	field intr_sale_price     
+	field intr_stat_flag      
+end
+table sokt
+	field sokt_co_no          
+	field sokt_hhbr_hash      
+	field sokt_line_no        
+	field sokt_mabr_hash      
+	field sokt_matl_qty       
+end
+
+table inla
+	field inla_inlo_hash      
+	field inla_pid            
+	field inla_line_no        
+	field inla_hhcl_hash      
+	field inla_qty_alloc      
+end
+
+table inlo
+	field inlo_inlo_hash      
+	field inlo_hhwh_hash      
+	field inlo_hhum_hash      
+	field inlo_location       
+	field inlo_loc_type       
+	field inlo_lot_no         
+	field inlo_slot_no        
+	field inlo_expiry_date    
+	field inlo_uom            
+	field inlo_cnv_fct        
+	field inlo_rec_qty        
+	field inlo_qty            
+	field inlo_no_hits        
+	field inlo_no_picks       
+	field inlo_op_id          
+	field inlo_time_create    
+	field inlo_date_upd       
+	field inlo_date_create    
+end
+table inaf
+	field inaf_co_no          
+	field inaf_br_no          
+	field inaf_wh_no          
+	field inaf_sys_date       
+	field inaf_hhbr_hash      
+	field inaf_hhcc_hash      
+	field inaf_hhum_hash      
+	field inaf_type           
+	field inaf_date           
+	field inaf_batch_no       
+	field inaf_ref1           
+	field inaf_ref2           
+	field inaf_qty            
+	field inaf_cost_price     
+	field inaf_sale_price     
+	field inaf_stat_flag      
+end
+table llih
+	field llih_hhcl_hash      
+	field llih_hhcu_hash      
+	field llih_hhbr_hash      
+	field llih_inv_no         
+	field llih_des_date       
+	field llih_lot_no         
+	field llih_slot_no        
+	field llih_expiry_date    
+	field llih_uom            
+	field llih_qty            
+end

@@ -1,0 +1,40 @@
+Contract Management Master (CMMR)
+psl_help
+Service Master Menu. <a> (1,2)
+menu MENUSYS/main_serv.mdf
+Contract Entry. <a> (1,2)
+cm_mrmaint~
+Maintenance Menu. <a> (1,2)
+menu MENUSYS/cm_maint.mdf
+Requisition Menu. <a> (1,2)
+menu MENUSYS/cm_requis.mdf
+Reports Menu. <a> (1,2)
+menu MENUSYS/cm_reports.mdf
+Timesheet Entry. <a> (1,2)
+lp_chain~cm_emp_time LPNO~
+Adjustment Journals <a> (1,1)
+lp_chain~cm_adj_jnl LPNO~
+Prepare Invoices. <ERROR> (2,1)
+cm_inv_prep~
+Print Invoices <a> (2,1)
+lp_chain~cm_invprnt.i LPNO N I~
+Reprint Invoices <a> (2,1)
+lp_chain~cm_invprnt.i LPNO Y I~
+Post Completed Invoice <ERROR> (2,2)
+cm_post.sh~
+Contracts Status Enquiry (Single). <a> (2,1)
+cm_alldisp~S~
+Contracts Status Enquiry (Range). <a> (2,2)
+cm_alldisp~M~
+Close/Re-Open Contracts. <a> (2,1)
+cm_close~
+Release/Cancel Held Contracts. <a> (2,1)
+cm_cnt_rel~
+Set/Purge Closed/History Contracts. <a> (2,1)
+cm_cnt_set~
+((
+quadrant(7,6)
+quadrant(40,8)
+box(2,3,74,15)
+line(3,5,73)
+))

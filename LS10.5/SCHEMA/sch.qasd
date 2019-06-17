@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.qasd,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.qasd)
+|  Schema Desc  : (Quality Assurance Supplier Detail. )
+|----------------------------------------------------------------------
+| $Log: sch.qasd,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:17  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	qasd
+
+field	qasd_hhsu_hash			type	long	
+field	qasd_line_no			type	integer
+field	qasd_desc				type	char	60 
+field	qasd_stat_flag			type	char	1 
+field	qasd_id_no				type	comp 
+			qasd_hhsu_hash, 
+			qasd_line_no									index	dups 
+end
+{
+
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		qasd_hhsu_hash		- Link to supplier master file.
+		qasd_line_no		- Line sequence number.
+		qasd_desc			- Line description.
+		qasd_stat_flag		- Spare status flag.
+}

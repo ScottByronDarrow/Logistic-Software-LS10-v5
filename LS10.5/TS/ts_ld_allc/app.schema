@@ -1,0 +1,95 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:22:11 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:22:11  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/03/28 02:45:11  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to add sleep delay - did not work with LS10-GUI
+#	Updated to adjust screen to look better with LS10-GUI
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	Updated to ensure "0xff" is used instead of "~" for end of range.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_hhop_hash
+	field tmop_op_name
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_class_type
+	field cumr_curr_code
+	field cumr_area_code
+end
+
+table tspm
+	field tspm_hhcu_hash
+	field tspm_phone_freq
+	field tspm_n_phone_date
+	field tspm_op_code
+	field tspm_lst_op_code
+	field tspm_lphone_date
+end
+
+table tsal
+	field tsal_hhop_hash
+	field tsal_line_no
+	field tsal_hhcu_hash
+	field tsal_hhlh_hash
+end
+
+table tslh
+	field tslh_co_no
+	field tslh_let_code
+	field tslh_let_desc
+	field tslh_lett_type
+	field tslh_hhlh_hash
+end
+
+table tsls
+	field tsls_co_no
+	field tsls_hhlh_hash
+	field tsls_hhcu_hash
+	field tsls_date_sent
+	field tsls_date_called
+	field tsls_time_called
+	field tsls_stat_flag
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_rate
+	field exaf_stat_flag
+end
+

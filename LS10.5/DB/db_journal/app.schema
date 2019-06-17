@@ -1,0 +1,131 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:14 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:14  scott
+#	Update - LS10.5
+#	
+#
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_dbt_date        
+	field comm_gl_date        
+	field comm_fiscal         
+end
+table comr
+	field comr_co_no
+	field comr_co_name
+	field comr_co_short_name
+	field comr_dbt_date
+	field comr_gl_date
+	field comr_closed_period
+	field comr_stat_flag
+	field comr_base_curr
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+end
+
+table cudp
+	field cudp_co_no
+	field cudp_br_no
+	field cudp_dp_no
+	field cudp_dp_name
+	field cudp_dp_short
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_class_type
+	field cumr_curr_code
+	field cumr_crd_prd
+	field cumr_sman_code
+	field cumr_ho_dbt_hash
+	field cumr_gl_ctrl_acct
+	field cumr_mtd_sales
+	field cumr_ytd_sales
+	field cumr_stat_flag
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_ho_hash
+	field cuin_hhci_hash
+	field cuin_type
+	field cuin_co_no
+	field cuin_est
+	field cuin_dp
+	field cuin_inv_no
+	field cuin_narrative
+	field cuin_date_of_inv
+	field cuin_date_posted
+	field cuin_pay_terms
+	field cuin_due_date
+	field cuin_currency
+	field cuin_exch_rate
+	field cuin_er_fixed
+	field cuin_amt
+	field cuin_stat_flag
+end
+
+table cuhd
+	field cuhd_hhcu_hash
+	field cuhd_receipt_no
+	field cuhd_index_date
+	field cuhd_type
+	field cuhd_hhcp_hash
+	field cuhd_narrative
+	field cuhd_date_payment
+	field cuhd_date_posted
+	field cuhd_tot_amt_paid
+	field cuhd_loc_amt_paid
+	field cuhd_disc_given
+	field cuhd_loc_disc_give
+	field cuhd_exch_variance
+	field cuhd_stat_flag
+end
+
+table cudt
+	field cudt_hhcp_hash
+	field cudt_hhci_hash
+	field cudt_hhdt_hash
+	field cudt_amt_paid_inv
+	field cudt_loc_paid_inv
+	field cudt_exch_variatio
+	field cudt_exch_rate
+	field cudt_stat_flag
+end
+
+table sach
+	field sach_sach_hash
+	field sach_hhcu_hash
+	field sach_hhci_hash
+	field sach_inv_amt
+	field sach_com_val
+end
+
+table sacl
+	field sacl_sach_hash
+	field sacl_hhcp_hash
+	field sacl_rec_amt
+	field sacl_rec_date
+	field sacl_com_amt
+	field sacl_status
+end
+

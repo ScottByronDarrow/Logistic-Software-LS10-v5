@@ -1,0 +1,133 @@
+/*=====================================================================
+|  Copyright (C) 1999 - 2000 LogisticSoftware                         |
+|=====================================================================|
+| $Id: app.schema,v 5.1 2001/11/28 01:35:01 scott Exp $
+-----------------------------------------------------------------------
+| $Log: app.schema,v $
+| Revision 5.1  2001/11/28 01:35:01  scott
+| Updated to have a warning message that location allocated to picking slip.
+|
+| Revision 5.0  2001/06/19 08:15:56  robert
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 02:37:15  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 1.3  2000/12/06 05:34:18  scott
+| Updated to use sknd_sknd_hash == inlo_sknd_hash instead of
+| 		       sklo_inlo_hash == inlo_inlo_hash as not 1:M
+| Updated to allow any transaction type to be split.
+|
+| Revision 1.2  2000/12/05 05:48:30  scott
+| Updated to add both pack and unit quantity. Added QC quantity and allow lines to be split.
+|
+| Revision 1.1  2000/11/20 07:32:18  scott
+| New features related to 3PL environment
+| New features related to Number Plates
+| All covered in release 3 notes
+|
+*/
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_est_short        
+	field comm_cc_no          
+	field comm_cc_name        
+	field comm_cc_short        
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_abc_code
+	field inmr_abc_update
+	field inmr_active_status
+	field inmr_dec_pt
+	field inmr_ex_code
+	field inmr_qc_qty
+	field inmr_qc_reqd
+	field inmr_std_uom
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+end
+
+table llst
+	field llst_co_no          
+	field llst_code           
+	field llst_desc           
+end
+
+table sknd
+	field sknd_sknh_hash      
+	field sknd_sknd_hash      
+	field sknd_lstat_chg      
+end
+
+table sknh
+	field sknh_plate_no     
+	field sknh_sknh_hash      
+end
+table inlo
+	field inlo_inlo_hash      
+	field inlo_hhwh_hash      
+	field inlo_sknd_hash      
+	field inlo_hhum_hash      
+	field inlo_location       
+	field inlo_loc_type       
+	field inlo_loc_status     
+	field inlo_lot_no         
+	field inlo_slot_no        
+	field inlo_expiry_date    
+	field inlo_pack_qty       
+	field inlo_chg_wgt        
+	field inlo_gross_wgt      
+	field inlo_cu_metre       
+	field inlo_uom            
+	field inlo_cnv_fct        
+	field inlo_rec_qty        
+	field inlo_qty            
+	field inlo_stake          
+	field inlo_no_hits        
+	field inlo_no_picks       
+	field inlo_op_id          
+	field inlo_time_create    
+	field inlo_date_upd       
+	field inlo_date_create    
+end
+table skni
+	field skni_sknd_hash      
+	field skni_hhsl_hash      
+	field skni_hhcl_hash      
+	field skni_qty_issued     
+end

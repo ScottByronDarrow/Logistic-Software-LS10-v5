@@ -1,0 +1,16 @@
+Customer Letter Sub Menu (DBSM)
+pr_letter
+Customer Master Menu. <a> (1,2)
+menu MENUSYS/db_maint.mdf
+Paragraph Maintenance. <a> (1,1)
+db_para_inp~
+Assemble Letters. <a> (1,2)
+db_para_asm~
+Display/Print Letters. <a> (2,1)
+db_lett_prn~
+((
+quadrant(7,6)
+quadrant(46,8)
+box(2,3,74,14)
+line(3,5,73)
+))

@@ -1,0 +1,41 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tsbc,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.tsbc)
+|  Schema Desc  : (Tele-Sales Brand Code Description File. )
+|----------------------------------------------------------------------
+| $Log: sch.tsbc,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:36  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tsbc
+
+field	tsbc_co_no			type	char	2
+field	tsbc_brand			type	char	16
+field	tsbc_brand_desc			type	char	40
+field	tsbc_stat_flag			type	char	1
+
+field	tsbc_id_no			type	composite
+		tsbc_co_no,
+		tsbc_brand					index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tsbc_co_no		-	Company Number.
+	tsbc_brand		-	Brand Code
+	tsbc_brand_desc		-	Brand Description.         
+	tsbc_stat_flag		-	Spare stat flag.           
+}

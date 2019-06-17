@@ -1,0 +1,712 @@
+#=========================================================================
+#  Copyright (C) 1999 - Logistic Software.                               |
+#=========================================================================
+#
+# DOCUMENTATION ON 'C' PROGRAMS TERMCAP
+#   "cd=",  Clear to end of display.         (NEEDED)
+#   "ce=",  Clear to end of line.            (NEEDED)
+#   "cl=",  Clear screen.                    (NEEDED)
+#   "dc=",  Delete character. 
+#   "dl=",  Delete line.
+#   "SD=",  Screen Dump Sequence.
+#   "ic=",  Insert character.
+#   "iS=",  Terminal initialisation string. 
+#   "so=",  Start stand out mode.            (NEEDED)
+#   "se=",  Start stand out mode.            (NEEDED)
+#   "us=",  Start underscore mode.
+#   "ue=",  End underscore mode.
+#   "bx=",  Box characters.                  (NEEDED)
+#   "rv=",  Reverse on.                      (NEEDED) NOTE Same as so=
+#   "re=",  Reverse off.                     (NEEDED) NOTE Same as se=
+#   "cm=",  Cursor addressing sequence.      (NEEDED)
+#   "go=",  Graphics mode on.                (NEEDED)
+#   "ge=",  Graphics mode off.               (NEEDED)
+#   "fl=",  Flashing start.                  (NEEDED)
+#   "fe=",  Flashing end.                    (NEEDED)
+#   "sW=",  Switch to wide mode.             (NEEDED)
+#   "sN=",  Switch to normal mode.           (NEEDED)
+#   "dW#",  Delay on 80/132 switch
+#   "cc=",  Suppress cursor.                 (NEEDED)
+#   "cb=",  Begin cursor.                    (NEEDED)
+#   "CM=",  Alternate cursor movement.       (NEEDED) NOTE Same as cm=
+#   "ku=",  Arrow up.
+#   "kd=",  Arrow down.
+#   "kl=",  Arrow left.
+#   "kr="   Arrow right.
+#===========================================================================
+# DOCUMENTATION ON BOX CHARACTERS
+#    Position in string  Character Printed
+#            0         -        top_left
+#            1         -        top_right
+#            2         -        bottom_left
+#            3         -        bottom_right
+#            4         -        vertical_bar
+#            5         -        vertical_bar
+#            6         -        horizontal_bar
+#            7         -        cross
+#            8         -        down_tick
+#            9         -        up_tick
+#           10         -        left_tick
+#           11         -        right_tick
+#===========================================================================
+# DOCUMENTATION ON ALL PROGRAMS USING PFORMAT 
+#    "TF=",  Top of Form.                    (NEEDED)
+#    "XN=",  Expanded Print on.
+#    "XF=",  Expanded Print off.
+#    "I1=",  Initialisation string
+#    "I2=",  Deinitialisation string
+#    "P0=",  Set '10' Pitch
+#    "P2=",  Set '12' Pitch
+#    "UN=",  Start underscore mode
+#    "UF=",  End underscore mode
+#    "F1=",  Select Font number 1
+#    "F2=",  Select Font number 2
+#    "F3=",  Select Font number 3
+#    "SN=",  Select Character overstrike
+#    "SF=",  Deselect Character overstrike
+#    "EX=",  Divisor for centering
+#===========================================================================
+#
+#  Termcap for Altos III terminal
+#
+#	:us=\E[9p:ue=\E[p:\
+#	:rv=\E[7p:re=\E[p:\
+#	:fl=\E[7p:fe=\E[p:\
+altos3|alt3|a3|altos 3|Altos III:\
+	:cd=\E[J:ce=\E[K:\
+	:cl=\E[;H\E[2J:SD=\E[;H\E[2J.:\
+	:dc=\E[P:dl=\E[M:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[7m:se=\E[0m:\
+	:us=\E[9p:ue=\E[0p:\
+	:bx=MLNKYYJOXWUVPBR :\
+	:rv=\E[7m:re=\E[0m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(0:ge=\E(B:\
+	:fl=\E[7m:fe=\E[0m:\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:cc=\E[>5h:cb=\E[>5l:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:
+#
+#  Termcap for Altos III terminal
+#
+altos3T|alt3|a3|altos 3|Altos III:\
+	:cd=\E[J:ce=\E[K:\
+	:cl=\E[;H\E[2J:\
+	:dc=\E[P:dl=\E[M:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[7m:se=\E[0m:\
+	:us=\E[9p:ue=\E[0p:\
+	:bx=MLNKYYJOXWUVPBR :\
+	:rv=\E[7m:re=\E[0m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(0:ge=\E(B:\
+	:fl=\E[7m:fe=\E[0m:\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:cc=\E[>5h:cb=\E[>5l:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:\
+	:HP=^AP^M:IC=\E[@:IL=\E[L:DC=\E[P:DL=\E[M:\
+	:k0=^A@^M:k1=^AA^M:k2=^AB^M:k3=^AC^M:\
+	:k4=^AD^M:k5=^AE^M:k6=^AF^M:k7=^AG^M:\
+	:k8=^AH^M:k9=^AI^M:kA=^AJ^M:kB=^AK^M:\
+	:kC=^AL^M:kD=^AM^M:kE=^AN^M:kF=^AO^M:\
+	:c0=^A`^M:c1=^Aa^M:c2=^Ab^M:c3=^Ac^M:\
+	:c4=^Ad^M:c5=^Ae^M:c6=^Af^M:c7=^Ag^M:\
+	:c8=^Ah^M:c9=^Ai^M:cA=^Aj^M:cB=^Ak^M:\
+	:cC=^Al^M:cD=^Am^M:cE=^An^M:cF=^Ao^M:
+#
+#  Termcap for Altos III terminal
+#
+altos3P|altos3P|a3|altos 3|Altos III with screen dump:\
+	:cd=\E[J:ce=\E[K:\
+	:cl=\E[;H\E[2J:\
+	:dc=\E[P:dl=\E[M:\
+	:SD=\E[0i:\
+	:ic=\E[@:\
+	:so=^H<:se=^H :\
+	:us=^H<:ue=^H :\
+	:bx=++++||-+++++*** :\
+	:rv=^H<:re=^H :\
+	:cm=\E[%i%d;%dH:\
+	:go=:ge=:\
+	:fl=^H<:fe=^H :\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:cc=\E[>5h:cb=\E[>5l:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:
+#
+#  Termcap for Altos V terminal
+#
+altos5|alt5|a5|altos 5|Altos V:\
+	:cd=\E[0J:ce=\E[0K:\
+	:cl=\E[;H\E[2J:\
+	:dc=\E[P:dl=\E[M:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[1m\E[7m:se=\E[m:\
+	:us=\E[2m\E[7m:ue=\E[m:\
+	:bx=MLNKYYROXWUVPBR :\
+	:rv=\E[7m:re=\E[27m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(0:ge=\E(B:\
+	:fl=\E[0m:fe=\E[0m:\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:cc=\E[?25l:cb=\E[?25h:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:
+#
+#  Termcap for VT100 terminal
+#
+vt100|vt100|vt100|vt100|vt100:\
+	:cd=\E[J:ce=\E[K:\
+	:cl=\E[;H\E[2J:\
+	:dc=\E[P:dl=\E[M:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[7m:se=\E[0m:\
+	:us=\E[9p:ue=\E[0p:\
+	:bx=lkmjxxqnwvtu:\
+	:rv=\E[7m:re=\E[0m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(0:ge=\E(B:\
+	:fl=\E[7m:fe=\E[0m:\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:cc=\E[>5h:cb=\E[>5l:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:
+
+#
+#  Termcap for VT220 Terminal
+#
+vt220:\
+	:cd=\E[J:\
+	:ce=\E[K:\
+	:cl=\E[;H\E[2J:\
+	:dc=\E[3~:\
+	:dl=\E[M:\
+	:SD=:\
+	:ic=\E[2~:\
+	:is=:\
+	:so=\E[0;1;4m:\
+	:se=\E[0m:\
+	:us=\E[0;1;5m:\
+	:ue=\E[0m:\
+	:bx=lkmjxxqnwvtuaþ~ :\
+	:rv=\E[0;1;2m:\
+	:re=\E[0m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(0:\
+	:ge=\E(B:\
+	:fl=\E[0;1;7m:\
+	:fe=\E[0m:\
+	:sW=\E[?3h:\
+	:sN=\E[?3l:\
+	:cc=\E[?25l:\
+	:cb=\E[?25h:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:\
+	:kd=\E[B:\
+	:kl=\E[D:\
+	:kr=\E[C:\
+	:HP=:\
+	:IC=\E[2~:\
+	:DC=\E[3~:\
+	:IL=\EOR:\
+	:DL=\EOS:\
+	:k0=\E[11~:\
+	:k1=\E[12~:\
+	:k2=\E[13~:\
+	:k3=\E[14~:\
+	:k4=\E[15~:\
+	:k5=\E[17~:\
+	:k6=\E[18~:\
+	:k7=\E[19~:\
+	:k8=\E[20~:\
+	:k9=\E[21~:\
+	:kA=\E[23~:\
+	:kB=\E[24~:\
+	:kC=\E[25~:\
+	:kD=\E[26~:\
+	:kE=\E[28~:\
+	:kF=\E[29~:\
+	:c0=^A`^M:\
+	:c1=^Aa^M:\
+	:c2=^Ab^M:\
+	:c3=^Ac^M:\
+	:c4=^Ad^M:\
+	:c5=^Ae^M:\
+	:c6=^Af^M:\
+	:c7=^Ag^M:\
+	:c8=^Ah^M:\
+	:c9=^Ai^M:\
+	:cA=^Aj^M:\
+	:cB=^Ak^M:\
+	:cC=^Al^M:\
+	:cD=^Am^M:\
+	:cE=^An^M:\
+	:cF=\E[44~:\
+	:PM=^Z:\
+	:W1=^W:\
+	:W2=^E:\
+	:W3=^R:\
+	:W4=^T:\
+	:W5=^Y:
+#
+#  Termcap for Kimtron/Adm85 Terminal
+#
+abm85|abm85|kimtron:is=\Eu\EY\036:\
+	:cd=\EY:ce=\ET:\
+	:cl=^Z:\
+	:dc=\EW:dl=\ER:\
+	:ho=^^:\
+	:ic=:\
+	:so=\Ej:se=\Ek:\
+	:us=\El:ue=\Em:\
+	:bx=BADCJJIKFGEH:\
+	:rv=\E(:re=\E):\
+	:cm=\E=%+ %+ :\
+	:go=\E$:ge=\E%%:\
+	:fl=\E^:fe=\Eq:\
+	:sW=:sN=:\
+	:cc=\E.:cb=:\E.\
+	:CM=\E=%+ %+ :\
+	:ku=^K:kd=^J:kl=^H:kr=^L:
+#
+#  Termcap for Qume Terminal
+#
+Q|QVT-102|Qume:is=\036\EY:iS=\E{:\
+	:cd=\EY:ce=\ET:\
+	:cl=^Z:\
+	:dc=\EW:dl=\ER:\
+	:ho=^^:\
+	:ic=:\EQ\
+	:so=\EG4:se=\EG0:\
+	:us=\EG8:ue=\EG0:\
+	:bx=fgehjjkinoml:\
+	:rv=\E(:re=\E):\
+	:cm=\E=%+ %+ :\
+	:go=\E$:ge=\E%%:\
+	:fl=\EG6:fe=\EG0:\
+	:sW=:sN=:\
+	:cc=\E.:cb=:\E.\
+	:CM=\E=%+ %+ :\
+	:ku=^K:kd=^J:kl=^H:kr=^L:
+#
+#  Termcap for Wyse 60 Terminal.
+#
+w6|w60|wyse6|wyse60|Wyse wy-60 w/reverse video:is=\Eu\E0:\
+	:cd=\EY:ce=\ET:\
+	:cl=^Z:\
+	:dc=\EW:dl=\ER:\
+	:ho=^^:\
+	:ic=:\EQ:\
+	:so=\E):se=\E(:\
+	:us=\EGt:ue=\EG0:\
+	:bx=rsquvvzxp]ty;7? :\
+	:rv=\EG0:re=\EG4:\
+	:cm=\E=%+ %+ :\
+	:go=\EH^B:ge=\EH^C:\
+	:fl=\EG4:fe=\EG0:\
+	:sW=\E`;:sN=\E`\072:\
+	:dW#:\
+	:cc=\E`0:cb=\E`1:\
+	:CM=\Ea%dR%dC%i:\
+	:ku=^K:kd=^J:kl=^H:kr=^L:
+#
+#  Termcap for Wyse 50/ Altos IV Terminal
+#
+wyse5|wyse50|w5|w50|wyse|Wyse wy-50 w/reverse video:is=\Eu\E0:\
+	:cd=\EY:ce=\Et:\
+	:cl=^Z:\
+	:ho=^^:\
+	:ic=:\EQ:\
+	:dc=\EW:dl=\ER:\
+	:so=\E):se=\E(:\
+	:us=\E):ue=\E(:\
+	:bx=rsquvvzxp]ty7;? :\
+	:rv=\E):re=\E(:\
+	:cm=\E=%+ %+ :\
+	:go=\EH^B:ge=\EH^C:\
+	:fl=\E):fe=\E(:\
+	:sW=\E`;:sN=\E`\072:\
+	:dW#:\
+	:cc=\E`0:cb=\E`1:\
+	:CM=\Ea%dR%dC%i:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:\
+	:HP=^AP^M:IC=\EQ:IL=\EE:DC=\EW:DL=\ER:\
+	:k0=^A@^M:k1=^AA^M:k2=^AB^M:k3=^AC^M:\
+	:k4=^AD^M:k5=^AE^M:k6=^AF^M:k7=^AG^M:\
+	:k8=^AH^M:k9=^AI^M:kA=^AJ^M:kB=^AK^M:\
+	:kC=^AL^M:kD=^AM^M:kE=^AN^M:kF=^AO^M:\
+	:c0=^A`^M:c1=^Aa^M:c2=^Ab^M:c3=^Ac^M:\
+	:c4=^Ad^M:c5=^Ae^M:c6=^Af^M:c7=^Ag^M:\
+	:c8=^Ah^M:c9=^Ai^M:cA=^Aj^M:cB=^Ak^M:\
+	:cC=^Al^M:cD=^Am^M:cE=^An^M:cF=^Ao^M:\
+	:SD=^Z.:
+#
+#  Termcap for Wyse 50/ Altos IV Terminal
+#
+wyse50|wyse|Wyse wy-50 w/reverse video:is=\Eu\E0:\
+	:cd=\EY:ce=\Et:\
+	:cl=^Z:\
+	:ho=^^:\
+	:ic=:\EQ:\
+	:dc=\EW:dl=\ER:\
+	:so=\E):se=\E(:\
+	:us=\E):ue=\E(:\
+	:bx=rsquvvzxp]ty7;? :\
+	:rv=\E):re=\E(:\
+	:cm=\E=%+ %+ :\
+	:go=\EH^B:ge=\EH^C:\
+	:fl=\E):fe=\E(:\
+	:sW=\E`;:sN=\E`\072:\
+	:dW#:\
+	:cc=\E`0:cb=\E`1:\
+	:CM=\Ea%dR%dC%i:\
+	:ku=^K:kd=^J:kr=^L:\
+	:HP=:IC=\EQ:IL=\EE:DC=\EW:DL=\ER:\
+	:k0=^A@^M:k1=^AA^M:k2=^AB^M:k3=^AC^M:\
+	:k4=^AD^M:k5=^AE^M:k6=^AF^M:k7=^AG^M:\
+	:k8=^AH^M:k9=^AI^M:kA=^AJ^M:kB=^AK^M:\
+	:kC=^AL^M:kD=^AM^M:kE=^AN^M:kF=^AO^M:\
+	:c0=^A`^M:c1=^Aa^M:c2=^Ab^M:c3=^Ac^M:\
+	:c4=^Ad^M:c5=^Ae^M:c6=^Af^M:c7=^Ag^M:\
+	:c8=^Ah^M:c9=^Ai^M:cA=^Aj^M:cB=^Ak^M:\
+	:cC=^Al^M:cD=^Am^M:cE=^An^M:cF=^Ao^M:\
+	:SD=^Z.:
+#
+#  Termcap for Wyse 50/ Altos IV Terminal
+#
+wyse5P|wyse5P|Wyse wy-50 w/reverse video to print:is=\Eu\E0:\
+	:cd=\EY:ce=\Et:\
+	:cl=^Z:\
+	:dc=\EW:dl=\ER:\
+	:SD=\EP:\
+	:ic=:\EQ:\
+	:so=^H\136:se=^H :\
+	:us=^H\136:ue=^H :\
+	:bx=++++||-+++++:\
+	:rv=^H<:re=^H :\
+	:cm=\E=%+ %+ :\
+	:go=:ge=:\
+	:fl=^H<:fe=^H :\
+	:sW=\E`;:sN=\E`\072:\
+	:dW#:\
+	:cc=\E`0:cb=\E`1:\
+	:CM=\Ea%dR%dC%i:\
+	:ku=^K:kd=^J:kl=^H:kr=^L:
+#
+#  Termcap for Altos II terminal
+#
+alt2|altos2|a2|altos 2|Altos II:\
+	:cd=\E[J:ce=\E[K:\
+	:cl=\E[;H\E[2J:\
+	:dl=\E[M:dc=\E[P:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[1m:se=\E[m:\
+	:us=\E[9p:ue=\E[p:\
+	:bx=V7S=33DEEEEE:\
+	:rv=\E[7m:re=\E[m:\
+	:cm=\E[%i%d;%dH:\
+        :go=\E(0:ge=\E(B:\
+	:fl=#:fe= :\
+        :sW=\E[?3h:sN=\E[?3l:\
+        :cb=\E[>5l:cc=\E[>5h:\
+	:CM=\E[%i%d;%dH:\
+	:ku=\E[A:kd=\E[B:kr=\E[C:kl=\E[D:
+#
+# Termcap for IBM 3151 terminal.
+#
+ibm3151:\
+	:cd=\EJ:ce=\EI:cl=\EK:\
+	:dc=\EQ:dl=\EO:\
+	:SD=:\
+	:ic=\EP:\
+	:is=\E\0401:\
+	:so=\E4\101:se=\E4\100:\
+	:us=\E4\102:ue=\E4\100:\
+	:bx=lkmjxxqnwvtu~rs :\
+	:rv=\E4\101:re=\E4\100:\
+	:cm=%I:\
+	:go=\E<A:ge=\E<\100:\
+	:fl=:fe=:\
+	:sW=\E r!! 8$D:sN=\E r!! 8"P:\
+	:dW#:\
+	:cc=:cb=:\
+	:CM=%I:\
+	:kd=\EB\015:kl=\EC\015:kr=\ED\015:ku=\EA\015:\
+	:k0=\Ea\015:k1=\Eb\015:k2=\Ec\015:k3=\Ed\015:\
+	:k4=\E!a\015:k5=\E!b\015:k6=\E!c\015:k7=\Ee\015:\
+	:k8=\Ef\015:k9=\Eg\015:kA=\Eh\015:kB=\Ei\015:\
+	:kC=\E!d\015:kD=\Ej\015:kE=\Ek\015:kF=\El\015:\
+	:cF=\E!l\015:
+#
+#  Termcap for Wang 2110A terminal
+#
+wang2110|w2110|Wang 2110A:\
+	:cd=\E[J:ce=\E[K:\
+	:cl=\E[;H\E[2J:SD=\E[;H\E[2J.:\
+	:dc=\E[P:dl=\E[M:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[7m:se=\E[0m:\
+	:us=\E[9p:ue=\E[0p:\
+	:bx=EFGDIIJHMNKLbT  :\
+	:rv=\E[7m:re=\E[0m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(3:ge=\E(1:\
+	:fl=\E[7m:fe=\E[0m:\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:cc=\E[>5h:cb=\E[>5l:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:
+#
+#  Printer Entry For ML84 printer.
+#
+ML84|Microline 84 printer|This is a printer entry:\
+	:TF=\014:XN=\037:XF=\034:I1=:I2=:\
+	:P0=\036:P2=\034:UN=\EC:UF=\ED:F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\EI:EX=2:
+#
+#  Printer Entry For NECp3 printer.
+#
+NEP3|Nec P3 printer|This is a printer entry:\
+	:TF=\014:XN=\EE:XF=\EF:I1=:I2=:\
+	:P0=\E?0:P2=\E?3:UN=\EC:UF=\ED:F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\EI:EX=4:
+#
+#  Printer Entry For NDK Printstar 5010 printer.
+#
+NDK|NDK Printstar 5010 Printer|This is a printer entry:\
+	:TF=\014:XN=\E@B1:XF=\E@B0:I1=:I2=:\
+	:P0= :P2= :UN=\E@E1:UF=\E@E0:F1=\E@A0:F2=\E@A1:\
+	:SN=\E@C1:SF=\E@C0:EX=2:
+#
+#  Printer Entry For Microline 182/183 printer.
+#
+ML182|Microline 182/183 Printer|This is a printer entry:\
+	:TF=\014:XN=\037:XF=\034:I1=:I2=:\
+	:P0=\036:P2=\034:UN= :UF= :F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\ET:EX=2:
+#
+#  Printer Entry For Citoh C645 printer. (Epson mode)
+#
+C645E|Citoh C645 Printer|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:I1=:I2=:\
+	:P0=\EP:P2=\EM:UN=\E-1:UF=\E-0:F1=:F2=:\
+	:SN=\EG:SF=\EH:EX=2:
+#
+#  Printer Entry For Citoh C645 printer. (IBM Mode)
+#
+C645|Citoh C645 Printer|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:I1=:I2=:\
+	:P0=\022:P2=\E\072:UN=\E-1:UF=\E-0:F1=:F2=:\
+	:SN=\EE:SF=\EF:EX=2:
+#
+#  Printer Entry For C.ITOH CI-4000 printer.
+#
+CI4000|C.ITOH 4000 Printer|This is a printer entry:\
+	:TF=\014:XN=\024:XF=\016:I1=:I2=\Er:\
+	:P0=\EP:P2=\EM:UN=:UF=:F1=:F2=:\
+	:SN=:SF=:EX=2:
+#
+#  Printer Entry For C.ITOH CI-4000 Model 20
+#
+CI4020|C.ITOH 4000 Printer|This is a printer entry:\
+	:TF=\014:XN=\EW\001:XF=\Er:I1=:I2=:\
+	:P0=\EP:P2=\EM:UN=\EX:UF=\EY:F1=:F2=:\
+	:SN=\EG:SF=\EH:EX=2:
+#
+#  Printer Entry For C.ITOH CI-4000 printer.Model-20 Condensed Print
+#
+CI402C|C.ITOH 4000 Printer|This is a printer entry:\
+	:TF=\014:XN=\EW\001:XF=\Er:I1=\Ec:I2=\EM:\
+	:P0=\Ec:P2=\Ec:UN=\EX:UF=\EY:F1=:F2=:\
+	:SN=\EG:SF=\EH:EX=2:
+#
+#  Printer Entry For C.ITOH CI-3500 MODEL-30  printer.
+#
+CI353|C.ITOH 3500 Printer|This is a printer entry:\
+	:TF=\014:XN=\E0!:XF=\E0 :I1=:I2=:\
+	:P0=\E?" :P2=\E?"!:UN=\E2!:UF=\E2 :F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\EI:EX=2:
+#
+#  Printer Entry For C.ITOH CI-3500 MODEL-30  printer. 15 pitch
+#
+CI35-15|C.ITOH 3500 Printer|This is a printer entry:\
+	:TF=\014:XN=\E0!:XF=\E0 :I1=\E?* :I2=:\
+	:P0=\E?" :P2=\E?"":UN=\E2!:UF=\E2 :F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\EI:EX=2:
+#
+#  Printer Entry For C.ITOH CI-3500 MODEL-30  printer. 17 pitch
+#
+CI35-17|C.ITOH 3500 Printer|This is a printer entry:\
+	:TF=\014:XN=\E0!:XF=\E0 :I1=\E?* :I2=:\
+	:P0=\E?" :P2=\E?"#:UN=\E2!:UF=\E2 :F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\EI:EX=2:
+#
+#  Printer Entry For C.ITOH CI-3500 MODEL-10  printer.
+#
+CI351|C.ITOH 3500 Printer|This is a printer entry:\
+	:TF=\014:XN=\E[6w:XF=\E[2w:I1=\E[0"z\E[?29l\E[1w:I2=\E[0"z\E[1w:\
+	:P0=\E[1w:P2=\E[2w:UN=\E2!:UF=\E2 :F1=:F2=:\
+	:SN=\EH:SF=\EI:EX=2:
+#
+#  Printer Entry For C.ITOH CI-3500 MODEL-10  printer. (8 pitch vertical)
+#
+CI3518V|C.ITOH 3500 Printer|This is a printer entry:\
+	:TF=\014:XN=\E[6w:XF=\E[2w:\
+	:I1=\E[2z\E[0"z\E[?29l\E[1w:I2=\E[1z\E[0"z\E[1w:\
+	:P0=\E[1w:P2=\E[2w:UN=\E2!:UF=\E2 :F1=:F2=:\
+	:SN=\EH:SF=\EI:EX=2:
+#
+#  Printer Entry For C.ITOH CI-3500 MODEL-10  printer. 13.2 pitch
+#
+CI351-3|C.ITOH 3500 Printer|This is a printer entry:\
+	:TF=\014:XN=\E[6w:XF=\E[2w:I1=\E[0"z\E[0w:I2=\E[0"z\E[0w:\
+	:P0=\E[0w:P2=\E[3w:UN=\E2!:UF=\E2 :F1=:F2=:\
+	:SN=\EH:SF=\EI:EX=2:
+#
+#  Printer Entry For C.ITOH CI-3500 MODEL-10  printer. 16.5
+#
+CI351-6|C.ITOH 3500 Printer|This is a printer entry:\
+	:TF=\014:XN=\E[6w:XF=\E[2w:I1=\E[0"z\E[0w:I2=\E[0"z\E[0w:\
+	:P0=\E[0w:P2=\E[4w:UN=\E2!:UF=\E2 :F1=:F2=:\
+	:SN=\EH:SF=\EI:EX=2:
+#
+#  Printer Entry For C.ITOH CI-310 MODEL-10  printer.
+#
+CI310|C.ITOH 310 Printer|This is a printer entry:\
+	:TF=\014:XN=\016:XF=\024:I1=:I2=:\
+	:P0=\022:P2=\E\072:UN=\E2!:UF=\E2 :F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\EI:EX=2:
+#
+#  Printer Entry For A DUMB printer.
+#
+DUMB|Dumb Printer|This is a printer entry:\
+	:TF=\014:XN=<:XF=>:UN=:UF=:F1=:F2=:\
+	:P0=:P2=:I1=:I2=:EX=2:
+#
+#  Printer Entry For Star Gemini printerat ABC (renamed STAR NR-10/15).
+#
+STARNR-10/15|Gemini STAR|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E1:UF=\E0:F1=\E5:F2=\E4:\
+	:P0=\EP:P2=\EM:I1=:I2=:EX=2:
+#
+#  Printer Entry For Star Gemini printer.
+#
+STAR|Gemini STAR|This is a printer entry:\
+	:TF=\014:XN=\016:XF=\024:UN=\E1:UF=\E0:F1=\E5:F2=\E4:\
+	:P0=^R:P2=^O:I1=:I2=:EX=2:
+#
+#  Printer Entry For OKI 2410 printer.
+#
+OKI|OKI 2410 printer|This is a printer entry:\
+	:TF=\014:XN=\EC:XF=\EZ:I1=:I2=:\
+	:P0=\E6:P2=\EA:UN=\EU:UF=\EV:F1=\E8:F2=\E9:F3=\E7:\
+	:EX=2:
+#
+#  Printer Entry For Brother 2518 printer
+#
+BR2518|Brother 2518 printer|This is a printer entry:\
+	:TF=\014:\
+	:XN=\016:XF=\024:\
+	:I1=:I2=:\
+	:P0=\EP:P2=\EM:\
+	:UN=\E-\001:UF=\E-\000:\
+	:F1=:F2=:\
+	:SN=\EG:SF=\EH:\
+	:EX=2:
+#
+#  Printer Entry For Seikosha printer.
+#
+BP|Seikosha BP-5420A printer|This is a printer entry:\
+	:TF=\014:\
+	:XN=\016:XF=\024:\
+	:I1=:I2=:\
+	:P0=\EP:P2=\EM:\
+	:UN=\E-\001:UF=\E-\000:\
+	:F1=:F2=:\
+	:SN=\EG:SF=\EH:\
+	:EX=2:
+#
+#  Printer Entry For Axis printer.
+#
+AXIS|Axis printer|This is a printer entry:\
+	:TF=\014:XN=\E!:XF=\E":UN=\EX:UF=\EY:F1=\EF0:F2=\EF1:\
+	:P0=\EN:P2=\EE:I1=:I2=:EX=2:
+#
+#  Printer Entry For Axis printer.
+#
+ML182|Microline 182/183|This is a printer entry:\
+	:TF=\014:XN=\037:XF=\040:UN=\EC:UF=\ED:F1=\E0:F2=\E1:\
+	:P0=\036:P2=\034:I1=:I2=:EX=2:
+#
+#  Printer Entry For ND15 printer. P0 = 10' P2 = 12'
+#
+ND15|Star ND15|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E-1:UF=\E-0:\
+	:P0=\EP:P2=\EM:EX=2:
+#
+#  Printer Entry For ND10 printer. P0 = 10' P2 = 12'
+#
+ND10|Star ND10|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E-1:UF=\E-0:\
+	:P0=\EP:P2=\EM:EX=2:
+#
+#  Printer Entry For ND10 printer. P0 = 10' & nlq  P2 = 20' & draft
+#   1" label printer for vidcom
+ONEINCH|Star ND10|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E-1:UF=\E-0:\
+	:P0=\EP\022\Ex1:P2=\Ex0\EM\017:EX=2:
+#
+#  Printer Entry For ND10 printer. P0 = 10' P2 = 12'
+#   U-MATIC label printer for vidcom
+UMATIC|Star ND10|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E-1:UF=\E-0:\
+	:P0=\EP\022:P2=\EM\022:EX=2:
+#
+#  Printer Entry For ND10 printer. P0 = 10' P2 = 20'
+#   BETA label printer for vidcom
+BETA|Star ND10|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E-1:UF=\E-0:\
+	:P0=\EP\022:P2=\EM\017:EX=2:
+#
+#  Printer Entry For ND10 printer. P0 = 10' P2 = 17'
+#   VHS label printer for vidcom
+VHS|Star ND10|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E-1:UF=\E-0:\
+	:P0=\EP\022:P2=\EP\017:EX=2:
+#
+#  Printer Entry For HL-8PS Laser Jet Printer Portrait
+#
+HL-8PSP|HL-8PSP|This is a printer entry:\
+	:TF=\014:XN=:XF:UN=:UF=:\
+	:I1=\E&l70P\E&l6D\E&l2E\E&l66F\E(s0P\E(s12H\E(s12V\E(s0S\E(s0B:\
+	:I2=:P0=:P2=:EX=2:
+#
+#  Printer Entry For HL-8PS Laser Jet Printer Landscape
+#
+HL-8PSL|HL-8PSL|This is a printer entry:\
+	:TF=\014:XN=\E(s6V\E(s12V:XF=\E(s12V\E(s12V:UN=:UF=:\
+	:I1=\E&l70P\E&l6D\E&l2E\E&l66F\E(s0P\E(s12H\E(s12V\E(s0S\E(s0B\E&l0O:\
+	:I2=\EE:P0=\E(s10H\E(s12V:P2=\E(s12H\E(s12V:EX=2:
+#
+#  Printer Entry For Documentation Purposes
+#
+DOCO|DOCO|This is a printer entry:\
+	:TF=.PA\012:XN=:XF=@:UN=:UF=:\
+	:I1=:I2=:\
+	:P0=.SN PI10\012:P2=.SN PI12\012:EX=2:
+#
+#  Printer Entry For Epson FX-1170 Printer. (Epson mode)
+#
+EPS-FX1170|Epson Printer|This is a printer entry:\
+	:TF=\014:XN=\016:XF=\E\016:I1=:\E@I2=:\
+	:P0=\EP:P2=\EM:P6=\E\017:US=\E-1:UE=\E-0:F1=:F2=:\
+	:SN=\EG:SF=\EH:EX=2:

@@ -1,0 +1,20 @@
+so_stkup~X~4~I~
+so_stkup~7~4~I~
+so_stkup~6~4~I~
+so_overide~LPNO~4~
+so_gl_ledup~4~3~I~LPNO~
+so_invsaup~3~2~I~
+so_invglup~2~1~I~
+so_comm_upd~1~0~I~LPNO~
+so_invmhup~0~9~I~
+db_winvtogl~I~LPNO~
+gl_postbat~PID~LPNO~ 4~
+so_stkup~X~4~C~
+so_stkup~7~4~C~
+so_stkup~6~4~C~
+so_gl_ledup~4~3~C~LPNO~
+so_crdsaup~3~2~C~
+so_invglup~2~1~C~
+so_comm_upd~1~9~C~LPNO~
+db_winvtogl~C~LPNO~
+gl_postbat~PID~LPNO~ 5~

@@ -1,0 +1,16 @@
+Sales Analysis Detailed Reports Menu (SUB)
+sa_reports
+Sales Analysis Master Menu. <a> (1,1)
+menu MENUSYS/sa_master.mdf
+Print Sales By Customer no By Item number. <a> (1,1)
+sa_salesm.i~sa_salesm~C~P~C~
+Print Sales By Customer Type By Item number. <a> (1,1)
+sa_salesm.i~sa_salesm~C~P~T~
+Print Sales By Item number By Customer no. <a> (1,1)
+sa_salesm.i~sa_salesm~P~P~I~
+Print Sales By Item number By inventory Category. <a> (1,1)
+sa_salesm.i~sa_salesm~P~P~A~
+Print Sales By Salesperson By Item number. <a> (1,1)
+sa_salesm.i~sa_salesm~C~P~S~
+((
+))

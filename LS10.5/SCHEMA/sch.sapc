@@ -1,0 +1,46 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sapc,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sapc)
+|  Schema Desc  : (Sales Analysis By Product/Customer. )
+|----------------------------------------------------------------------
+| $Log: sch.sapc,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:20  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sapc
+
+field	sapc_co_no		type	char	2	
+field	sapc_br_no		type	char	2
+field	sapc_hhbr_hash		type	long		index	dups
+field	sapc_hhcu_hash		type	long		index 	dups
+field	sapc_mtd_sales		type	money
+field	sapc_mtd_csale		type	money
+field	sapc_mtd_qty		type	float
+field	sapc_ytd_sales		type	money
+field	sapc_ytd_csale		type	money
+field	sapc_ytd_qty		type	float
+field	sapc_sman		type	char 2
+field	sapc_id_no		type	comp	
+		sapc_co_no,	
+		sapc_br_no,
+		sapc_hhbr_hash,
+		sapc_hhcu_hash,
+		sapc_sman 				index	primary
+field	sapc_id_no2		type	comp	
+		sapc_co_no,	
+		sapc_br_no,
+		sapc_hhcu_hash,
+		sapc_hhbr_hash,
+		sapc_sman 				index
+
+end

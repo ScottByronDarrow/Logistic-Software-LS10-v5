@@ -1,0 +1,20 @@
+Purchase Order Display Menu (SUB)
+po_display
+Purchase Order Master Menu. <a> (1,1)
+menu MENUSYS/po_master.mdf
+Display Supplier Status. <a> (1,1)
+po_ss_disp~
+Display Shipment details. <a> (1,1)
+po_ship_disp~
+Display Goods In Transit by Purchase Order. <a> (1,1)
+po_gitdisp~
+Display Purchase Order(s) By Supplier. <a> (1,1)
+po_supdisp~
+Display Purchase Order(s) By Item. <a> (1,1)
+po_stkdisp~
+Display Purchase Order(s) History By Supplier. <a> (1,1)
+po_sup_enq~
+Display Purchase Order(s) History By Item. <a> (1,1)
+po_itm_enq~
+((
+))

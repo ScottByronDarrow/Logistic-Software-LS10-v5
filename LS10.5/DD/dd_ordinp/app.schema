@@ -1,0 +1,638 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/12/01 04:48:14 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/12/01 04:48:14  scott
+#	SC0053 - Platinum Logistics LS10.5.2.2002-12-01
+#	
+#	Revision 5.0  2001/06/19 08:05:41  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:26:11  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:23:23  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_bank_name
+	field crbk_curr_code
+end
+
+table ddhr
+	field ddhr_co_no
+	field ddhr_br_no
+	field ddhr_dp_no
+	field ddhr_order_no
+	field ddhr_cont_no
+	field ddhr_hhcu_hash
+	field ddhr_cus_ord_ref
+	field ddhr_carr_area
+	field ddhr_hhdd_hash
+	field ddhr_dt_raised
+	field ddhr_dt_required
+	field ddhr_tax_code
+	field ddhr_tax_no
+	field ddhr_area_code
+	field ddhr_sman_code
+	field ddhr_op_id
+	field ddhr_time_create
+	field ddhr_date_create
+	field ddhr_freight
+	field ddhr_insurance
+	field ddhr_other_cost_1
+	field ddhr_other_cost_2
+	field ddhr_other_cost_3
+	field ddhr_gross
+	field ddhr_disc
+	field ddhr_tax
+	field ddhr_gst
+	field ddhr_exch_rate
+	field ddhr_fix_exch
+	field ddhr_del_name
+	field ddhr_del_add1
+	field ddhr_del_add2
+	field ddhr_del_add3
+	field ddhr_req_usr
+	field ddhr_reason
+	field ddhr_stdin1
+	field ddhr_stdin2
+	field ddhr_stdin3
+	field ddhr_din_1
+	field ddhr_din_2
+	field ddhr_din_3
+	field ddhr_fwd_exch
+	field ddhr_sell_terms
+	field ddhr_pay_term
+	field ddhr_progressive
+	field ddhr_inv_no
+	field ddhr_pri_type
+	field ddhr_no_ctn
+	field ddhr_wgt_per_ctn
+	field ddhr_stat_flag
+end
+
+table ddln
+	field ddln_hhdl_hash
+	field ddln_hhdd_hash
+	field ddln_hhds_hash
+	field ddln_line_no
+	field ddln_hhbr_hash
+	field ddln_hhsu_hash
+	field ddln_hhpl_hash
+	field ddln_hhfe_hash
+	field ddln_cont_status
+	field ddln_q_order
+	field ddln_gsale_price
+	field ddln_sale_price
+	field ddln_cost_price
+	field ddln_disc_pc
+	field ddln_reg_pc
+	field ddln_disc_a
+	field ddln_disc_b
+	field ddln_disc_c
+	field ddln_cumulative
+	field ddln_amt_disc
+	field ddln_on_cost
+	field ddln_gross
+	field ddln_tax_pc
+	field ddln_gst_pc
+	field ddln_amt_gst
+	field ddln_amt_tax
+	field ddln_pack_size
+	field ddln_sman_code
+	field ddln_item_desc
+	field ddln_req_date
+	field ddln_due_date
+	field ddln_bonus_flag
+	field ddln_keyed
+	field ddln_stat_flag
+end
+
+table ddsh
+	field ddsh_hhdd_hash
+	field ddsh_hhsu_hash
+	field ddsh_ship_no
+	field ddsh_hhds_hash
+	field ddsh_due_date
+	field ddsh_ship_method
+	field ddsh_con_no
+	field ddsh_vessel
+	field ddsh_space_book
+	field ddsh_book_ref
+	field ddsh_bol_no
+	field ddsh_carrier
+	field ddsh_airway
+	field ddsh_date_load
+	field ddsh_con_rel_no
+	field ddsh_ship_depart
+	field ddsh_ship_arrive
+	field ddsh_packing
+	field ddsh_port_orig
+	field ddsh_dept_orig
+	field ddsh_port_dsch
+	field ddsh_port_dest
+	field ddsh_mark0
+	field ddsh_mark1
+	field ddsh_mark2
+	field ddsh_mark3
+	field ddsh_mark4
+	field ddsh_cost_flag
+	field ddsh_stat_flag
+end
+
+table ddgd
+	field ddgd_co_no
+	field ddgd_hhds_hash
+	field ddgd_line_no
+	field ddgd_category
+	field ddgd_allocation
+	field ddgd_currency
+	field ddgd_fgn_value
+	field ddgd_exch_rate
+	field ddgd_loc_value
+end
+
+table suds
+	field suds_hhsu_hash
+	field suds_buy_group
+	field suds_reg_pc
+	field suds_qty_brk1
+	field suds_qty_brk2
+	field suds_qty_brk3
+	field suds_qty_brk4
+	field suds_qty_brk5
+	field suds_qty_brk6
+	field suds_disca_pc1
+	field suds_disca_pc2
+	field suds_disca_pc3
+	field suds_disca_pc4
+	field suds_disca_pc5
+	field suds_disca_pc6
+	field suds_discb_pc1
+	field suds_discb_pc2
+	field suds_discb_pc3
+	field suds_discb_pc4
+	field suds_discb_pc5
+	field suds_discb_pc6
+	field suds_discc_pc1
+	field suds_discc_pc2
+	field suds_discc_pc3
+	field suds_discc_pc4
+	field suds_discc_pc5
+	field suds_discc_pc6
+	field suds_cumulative
+	field suds_anticipated
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_part
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_fob_cost
+	field inis_lcost_date
+	field inis_duty
+	field inis_licence
+	field inis_sup_uom
+	field inis_pur_conv
+	field inis_min_order
+	field inis_norm_order
+	field inis_ord_multiple
+	field inis_pallet_size
+	field inis_lead_time
+	field inis_sea_time
+	field inis_air_time
+	field inis_lnd_time
+	field inis_dflt_lead
+	field inis_weight
+	field inis_volume
+	field inis_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_cont_name
+	field sumr_curr_code
+	field sumr_ctry_code
+	field sumr_pay_terms
+	field sumr_sic1
+	field sumr_sic2
+	field sumr_sic3
+	field sumr_stat_flag
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_type
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_hhdd_hash
+	field pohr_date_raised
+	field pohr_due_date
+	field pohr_conf_date
+	field pohr_contact
+	field pohr_app_code
+	field pohr_op_id
+	field pohr_time_create
+	field pohr_date_create
+	field pohr_req_usr
+	field pohr_reason
+	field pohr_stdin1
+	field pohr_stdin2
+	field pohr_stdin3
+	field pohr_delin1
+	field pohr_delin2
+	field pohr_delin3
+	field pohr_curr_code
+	field pohr_curr_rate
+	field pohr_term_order
+	field pohr_sup_term_pay
+	field pohr_bnk_term_pay
+	field pohr_pay_date
+	field pohr_ship_method
+	field pohr_status
+	field pohr_stat_flag
+	field pohr_drop_ship
+end
+
+table poso
+	field poso_hhpl_hash
+	field poso_hhcl_hash
+	field poso_qty_ord
+	field poso_qty
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhum_hash
+	field poln_hhcc_hash
+	field poln_hhlc_hash
+	field poln_hhpl_hash
+	field poln_exch_rate
+	field poln_serial_no
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_reg_pc
+	field poln_disc_a
+	field poln_disc_b
+	field poln_disc_c
+	field poln_cumulative
+	field poln_grs_fgn_cst
+	field poln_fob_fgn_cst
+	field poln_fob_nor_cst
+	field poln_frt_ins_cst
+	field poln_duty
+	field poln_licence
+	field poln_lcost_load
+	field poln_land_cst
+	field poln_cat_code
+	field poln_item_desc
+	field poln_case_no
+	field poln_hhso_hash
+	field poln_due_date
+	field poln_pur_status
+	field poln_stat_flag
+end
+
+table cnch
+	field cnch_co_no
+	field cnch_cont_no
+	field cnch_hhch_hash
+	field cnch_desc
+	field cnch_contact
+	field cnch_date_wef
+	field cnch_date_rev
+	field cnch_date_ren
+	field cnch_date_exp
+	field cnch_exch_type
+end
+
+table cncl
+	field cncl_hhch_hash
+	field cncl_hhcu_hash
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_dbt_date
+	field comm_gst_rate
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+	field comm_fiscal
+end
+
+table comr
+	field comr_co_no
+	field comr_sur_amt
+	field comr_sur_cof
+	field comr_frt_min_amt
+	field comr_frt_mweight
+	field comr_stat_flag
+	field comr_po_sic1
+	field comr_po_sic2
+	field comr_po_sic3
+	field comr_nx_po_no
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_nx_inv_no
+	field esmr_nx_pur_ord_no
+	field esmr_sales_acc
+	field esmr_nx_dd_order
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_name
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_sman_no
+end
+
+table cucc
+	field cucc_hhcu_hash
+	field cucc_record_no
+	field cucc_comment
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_class_type
+	field cumr_curr_code
+	field cumr_price_type
+	field cumr_po_flag
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_dl_adr4
+	field cumr_stop_credit
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_crd_flag
+	field cumr_area_code
+	field cumr_sman_code
+	field cumr_disc_code
+	field cumr_tax_code
+	field cumr_tax_no
+	field cumr_ho_dbt_hash
+	field cumr_freight_chg
+	field cumr_inst_fg1
+	field cumr_inst_fg2
+	field cumr_inst_fg3
+	field cumr_ord_value
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_od_flag
+	field cumr_stat_flag
+	field cumr_item_codes
+end
+
+table cuit
+	field cuit_hhcu_hash
+	field cuit_hhbr_hash
+	field cuit_item_no
+	field cuit_item_desc
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+end
+
+table cudp
+	field cudp_co_no
+	field cudp_br_no
+	field cudp_dp_no
+	field cudp_dp_name
+	field cudp_dp_short
+end
+
+table pocf
+	field pocf_co_no
+	field pocf_code
+	field pocf_description
+	field pocf_load_type
+	field pocf_freight_load
+	field pocf_lead_time
+	field pocf_last_update
+end
+
+table insp
+	field insp_hhsu_hash
+	field insp_hhbr_hash
+	field insp_qty_brk1
+	field insp_qty_brk2
+	field insp_qty_brk3
+	field insp_qty_brk4
+	field insp_qty_brk5
+	field insp_price1
+	field insp_price2
+	field insp_price3
+	field insp_price4
+	field insp_price5
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_abc_code
+	field inmr_abc_update
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_weight
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_ex_code
+	field inmr_bo_flag
+	field inmr_bo_release
+	field inmr_sellgrp
+	field inmr_buygrp
+	field inmr_disc_pc
+	field inmr_gst_pc
+	field inmr_licence
+	field inmr_duty
+	field inmr_duty_amt
+	field inmr_std_uom
+	field inmr_outer_uom
+	field inmr_outer_size
+	field inmr_tax_pc
+	field inmr_tax_amount
+	field inmr_active_status
+	field inmr_stat_flag
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_avge_cost
+	field inei_last_cost
+	field inei_stat_flag
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_first_stocked
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_closing_stock
+	field incc_qc_time
+	field incc_qc_centre
+	field incc_qc_qty
+	field incc_stat_flag
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_rate
+end
+
+table exsi
+	field exsi_co_no
+	field exsi_inst_code
+	field exsi_inst_text
+	field exsi_stat_flag
+end
+
+table inum
+	field inum_hhum_hash
+	field inum_uom
+end
+
+table cudi
+	field cudi_hhcu_hash
+	field cudi_del_no
+	field cudi_name
+	field cudi_adr1
+	field cudi_adr2
+	field cudi_adr3
+end
+
+table cfhr
+	field cfhr_co_no
+	field cfhr_br_no
+	field cfhr_carr_code
+	field cfhr_cfhh_hash
+	field cfhr_carr_desc
+	field cfhr_markup_pc
+	field cfhr_stat_flag
+end
+
+table cfln
+	field cfln_cfhh_hash
+	field cfln_area_code
+	field cfln_carr_code
+	field cfln_cost_kg
+	field cfln_stat_flag
+end
+
+table podt
+	field podt_co_no
+	field podt_code
+	field podt_description
+	field podt_im_tariff
+	field podt_im_band
+	field podt_ex_tariff
+	field podt_ex_band
+	field podt_duty_type
+	field podt_im_duty
+	field podt_ex_draw
+end
+
+table fehr
+	field fehr_co_no
+	field fehr_cont_no
+	field fehr_hhfe_hash
+	field fehr_bank_id
+	field fehr_curr_code
+	field fehr_date_wef
+	field fehr_date_exp
+	field fehr_val_orig
+	field fehr_val_avail
+	field fehr_stat_flag
+	field fehr_exch_rate
+end
+
+table feln
+	field feln_hhfe_hash
+	field feln_index_by
+	field feln_index_hash
+	field feln_value
+end
+

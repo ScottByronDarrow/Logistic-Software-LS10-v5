@@ -1,0 +1,6 @@
+mount /dev/cd0 /cdrom
+cd /usr/LS10.5/BIN
+cpio -ivBmud < /cdrom/BaseLS10.cpio
+cpio -ivBmud < /cdrom/RuntimeSystem.cpio
+cpio -ivBmud < /cdrom/RuntimeSystemAndDatabase.cpio
+cpio -ivBmud < /cdrom/DevelopmentSystem.cpio

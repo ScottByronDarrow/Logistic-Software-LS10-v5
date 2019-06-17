@@ -1,0 +1,50 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.gltc,v 5.1 2001/07/25 01:16:29 scott Exp $
+|  Schema Name  : (sch.gltc)
+|  Schema Desc  : (General Ledger Transaction Consolidation File. )
+|----------------------------------------------------------------------
+| $Log: sch.gltc,v $
+| Revision 5.1  2001/07/25 01:16:29  scott
+| Updated for LS10.5
+|
+|=====================================================================}
+file	gltc
+
+field	gltc_gltr_hash			type	long				index	dups
+field	gltc_tran_type			type	char	2
+field	gltc_sys_ref			type	char	10
+field	gltc_batch_no			type	char	10
+field	gltc_tran_date			type	edate
+field	gltc_post_date			type	edate
+field	gltc_narrative			type	char	20
+field	gltc_user_ref			type	char	15
+field	gltc_amount				type	money
+field	gltc_stat_flag			type	char	1
+field	gltc_amt_origin			type	money
+field	gltc_currency			type	char	3
+field	gltc_exch_rate	    	type	double
+field	gltc_id_no				type	comp
+			gltc_gltr_hash,
+			gltc_tran_date									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	gltc_gltr_hash		-	Link to G/ledger master file. (glmr)
+	gltc_tran_type		-	Transaction type ( ex gljc )
+	gltc_sys_ref		-	System Ref.
+	gltc_tran_date		-	Transaction Date.
+	gltc_post_date		-	Posted Date.
+	gltc_narrative		-	General Ledger Narrative.
+	gltc_user_ref		-	User Ref.
+	gltc_amount			-	Amount of Transaction.
+	gltc_stat_flag		-	Spare status flag.
+	gltc_amt_origin		-   Amount of transaction in currency of origin.
+	gltc_currency		-	Currency code of transaction.		
+	gltc_exch_rate		-	Exchange rate of currency.
+
+}

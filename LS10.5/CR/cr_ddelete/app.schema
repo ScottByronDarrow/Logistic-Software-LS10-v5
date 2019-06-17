@@ -1,0 +1,51 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/10 05:08:21 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/10 05:08:21  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_crd_date
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_stat_flag
+end
+
+table suhd
+	field suhd_hhsu_hash
+	field suhd_hhsp_hash
+	field suhd_tot_amt_paid
+	field suhd_loc_amt_paid
+	field suhd_disc_taken
+	field suhd_loc_disc_take
+	field suhd_stat_flag
+end
+
+table sudt
+	field sudt_hhsp_hash
+	field sudt_amt_paid_inv
+	field sudt_loc_paid_inv
+	field sudt_stat_flag
+end
+

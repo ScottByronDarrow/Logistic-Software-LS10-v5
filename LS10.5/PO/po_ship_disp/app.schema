@@ -1,0 +1,158 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:24:38 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:24:38  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/12/03 00:32:06  scott
+#	New program to display shipments.
+#	
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_dbt_date
+	field comm_crd_date
+	field comm_inv_date
+	field comm_payroll_date
+	field comm_gl_date
+	field comm_closed_period
+end
+
+table posd
+	field posd_co_no
+	field posd_hhsh_hash
+	field posd_hhpo_hash
+	field posd_inv_no
+	field posd_total
+	field posd_comment
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_type
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_date_raised
+	field pohr_due_date
+	field pohr_conf_date
+	field pohr_contact
+	field pohr_delin1
+	field pohr_delin2
+	field pohr_delin3
+	field pohr_ship1_no
+	field pohr_ship2_no
+	field pohr_ship3_no
+	field pohr_curr_code
+	field pohr_term_order
+	field pohr_sup_term_pay
+	field pohr_bnk_term_pay
+	field pohr_pay_date
+	field pohr_status
+	field pohr_stat_flag
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhum_hash
+	field poln_hhcc_hash
+	field poln_hhlc_hash
+	field poln_hhpl_hash
+	field poln_serial_no
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_item_desc
+	field poln_due_date
+	field poln_pur_status
+	field poln_stat_flag
+end
+
+table sumr
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_std_uom
+	field inmr_stat_flag
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table skcm
+	field skcm_co_no          
+	field skcm_container      
+	field skcm_desc           
+	field skcm_skcm_hash      
+	field skcm_stat_code      
+end
+table posh
+	field posh_co_no          
+	field posh_hhsh_hash      
+	field posh_ship_depart    
+	field posh_ship_arrive    
+	field posh_csm_no         
+	field posh_curr_code      
+	field posh_ex_rate        
+	field posh_ship_method    
+	field posh_vessel         
+	field posh_v_comm1        
+	field posh_v_comm2        
+	field posh_s_comm1        
+	field posh_s_comm2        
+	field posh_r_comm1        
+	field posh_r_comm2        
+	field posh_port           
+	field posh_destination    
+	field posh_doc_rec        
+	field posh_doc_agent      
+	field posh_neg_bol        
+	field posh_bol_no         
+	field posh_costing_date   
+	field posh_status         
+end
+table posl
+	field posl_co_no          
+	field posl_hhsh_hash      
+	field posl_hhpl_hash      
+	field posl_hhpo_hash      
+	field posl_csml_no        
+	field posl_ship_qty       
+	field posl_rec_qty        
+	field posl_sup_price      
+	field posl_case_no        
+	field posl_container      
+	field posl_stat_flag      
+end
+table pocr
+	field pocr_co_no          
+	field pocr_code           
+	field pocr_description    
+end

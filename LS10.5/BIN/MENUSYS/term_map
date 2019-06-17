@@ -1,0 +1,10 @@
+#
+# Copyright (c) 1996 -1997 Logistic Software Limited   .
+# This file contains entries describing which physical port are available
+#  as a Logistic terminal
+# Terminal number 1 MUST ALWAYS be configured as first entry. (console)
+#
+# Major  Minor Termno
+#=====================
+      0      1      2
+      0      3      1

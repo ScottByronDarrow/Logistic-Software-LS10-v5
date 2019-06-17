@@ -1,0 +1,88 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.trve,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.trve)
+|  Schema Desc  : (Transport vehicle file record. 		 )
+|----------------------------------------------------------------------
+| $Log: sch.trve,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:36  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	trve	
+
+field	trve_co_no          type	char	2
+field	trve_br_no          type	char	2
+field	trve_ref            type	char	10
+field	trve_desc           type	char	40
+field	trve_cap            type	float
+field	trve_fr_chg         type	money
+field	trve_internal		type	char	1
+field	trve_hhmr_hash		type	long
+field	trve_vehi_type		type	char	10
+field	trve_hhve_hash      type	serial				index   primary
+field	trve_truck_type     type	char	10
+field	trve_avail     		type	char	1
+field	trve_unav_res 		type	char	30
+field	trve_trcm_hash 		type	long				index	dups
+field	trve_min_vol     	type	float
+field	trve_max_vol     	type	float
+field	trve_min_wgt     	type	float
+field	trve_max_wgt     	type	float
+field	trve_min_hei     	type	float
+field	trve_max_hei     	type	float
+field	trve_min_wid     	type	float
+field	trve_max_wid     	type	float
+field	trve_cont_no		type	char	20
+field	trve_per_month		type	money
+field	trve_per_day		type	money
+field	trve_per_trip		type	money
+field	trve_per_weight		type	money
+field	trve_per_vol		type	money
+field	trve_id_no			type	composite
+			trve_co_no,
+			trve_br_no,
+			trve_ref									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		trve_co_no			-	Company Number.
+		trve_br_no			-	Branch Number.
+		trve_ref 			-	Vehicle Reference
+		trve_desc			-	Vehicle Description
+		trve_cap			-	Capacity (now dedundant)
+		trve_fr_chg			-	Freight charge.
+		trve_internal		-	Y(es) for internal Carrier
+								N(o)  for external Carrier. i.e DHL
+		trve_hhmr_hash		-	Link to general ledger master.
+		trve_vehi_type		-	Vehicle type (free text)
+		trve_hhve_hash		-	Unique serial hash
+		trve_truck_type		-	Not used.
+		trve_avail 			-	Vehicle available Y/N 
+		trve_unav_res 		-	Unavailable Reason. (Free text)
+		trve_trcm_hash		-	Link to Carrier file. (trcm)
+		trve_min_vol 		-	Minimum Volume 
+		trve_max_vol		-	Maximum Volume 
+		trve_min_wgt		-	Minimum Weight
+		trve_max_wgt		-	Maximum Weight
+		trve_min_hei		-	Minimum Height
+		trve_max_hei		-	Maximum Height
+		trve_min_wid		-	Minimum Width
+		trve_max_wid		-	Maximum Width
+		trve_cont_no		-	Contact Number.
+		trve_per_month		-	Cost Per Month
+		trve_per_day		-	Cost Per Day
+		trve_per_trip		-	Cost per Trip
+		trve_per_weight		-	Cost Per Kg
+		trve_per_vol		-	Cost Per Cubic Meter
+}

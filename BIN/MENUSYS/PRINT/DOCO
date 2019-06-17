@@ -1,0 +1,7 @@
+#
+#  Printer Entry For Documentation Purposes
+#
+DOCO|DOCO|This is a printer entry:\
+	:TF=.PA\012:XN=\012:XF=@@:UN=:UF=:\
+	:I1=:I2=:\
+	:P0=.SN PI10\012:P2=.SN PI12\012:EX=2:P6=.SN PI16\012

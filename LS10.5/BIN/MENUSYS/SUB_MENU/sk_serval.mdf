@@ -1,0 +1,12 @@
+Serial Item Valuation Menu (SUB)
+sk_vfi
+Stock Valuation Reports Menu. <a> (1,1)
+menu MENUSYS/sk_value.mdf
+Summary Serial Valuation. <a> (1,1)
+chain~sk_group.i "sk_ser_cage" "SUMMARY SERIAL VALUATION." " "~
+Detail  Serial Valuation. <a> (1,1)
+chain~sk_group.i "sk_prtser" "DETAILED SERIAL VALUATION." " "~
+Detail  Serial Valuation. ( Dollar Values ). <a> (1,1)
+chain~sk_group.i "sk_ser_age" "DETAILED SERIAL VALUATION ( DOLLAR VALUES)" " "~
+((
+))

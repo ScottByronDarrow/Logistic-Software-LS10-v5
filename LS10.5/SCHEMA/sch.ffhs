@@ -1,0 +1,60 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ffhs,v 5.0 2001/06/19 10:17:13 cha Exp $
+|  Schema Name  : (sch.ffhs)
+|  Schema Desc  : (Focus forecasting history file. )
+|----------------------------------------------------------------------
+| $Log: sch.ffhs,v $
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:40  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file ffhs 
+
+field  ffhs_hhbr_hash               type  long     index dups
+field  ffhs_hhcc_hash               type  long
+field  ffhs_id_no                   type  comp
+                                          ffhs_hhbr_hash,
+                                          ffhs_hhcc_hash	index primary
+field  ffhs_per1                    type  float
+field  ffhs_per2                    type  float
+field  ffhs_per3                    type  float
+field  ffhs_per4                    type  float
+field  ffhs_per5                    type  float
+field  ffhs_per6                    type  float
+field  ffhs_per7                    type  float
+field  ffhs_per8                    type  float
+field  ffhs_per9                    type  float
+field  ffhs_per10                   type  float
+field  ffhs_per11                   type  float
+field  ffhs_per12                   type  float
+field  ffhs_per13                   type  float
+field  ffhs_per14                   type  float
+field  ffhs_per15                   type  float
+field  ffhs_per16                   type  float
+field  ffhs_per17                   type  float
+field  ffhs_per18                   type  float
+field  ffhs_per19                   type  float
+field  ffhs_per20                   type  float
+field  ffhs_per21                   type  float
+field  ffhs_per22                   type  float
+field  ffhs_per23                   type  float
+field  ffhs_per24                   type  float
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ffhs_hhbr_hash		-	Link to inmr ( inmr_hhbr_hash )
+	ffhs_hhcc_hash		-	Link to ccmr ( ccmr_hhcc_hash )
+	ffhs_per( x )		-	Period sale in quantity.
+}

@@ -1,0 +1,58 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:17:40 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:17:40  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 1.1  2001/03/14 01:40:59  scott
+#	New program to copy containers.
+#	
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_short
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_short
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table skcs
+	field skcs_co_no          
+	field skcs_code           
+	field skcs_desc           
+end
+
+table skcm
+	field skcm_co_no          
+	field skcm_container           
+	field skcm_desc           
+	field skcm_skcm_hash      
+	field skcm_stat_code      
+	field skcm_min_vol        
+	field skcm_max_vol        
+	field skcm_std_vol        
+	field skcm_min_wgt        
+	field skcm_max_wgt        
+	field skcm_std_wgt        
+	field skcm_min_hei        
+	field skcm_max_hei        
+	field skcm_std_hei        
+	field skcm_min_wid        
+	field skcm_max_wid        
+	field skcm_std_wid        
+	field skcm_min_dth        
+	field skcm_max_dth        
+	field skcm_std_dth        
+	field skcm_per_vol        
+	field skcm_per_wgt        
+	field skcm_per_cont       
+end

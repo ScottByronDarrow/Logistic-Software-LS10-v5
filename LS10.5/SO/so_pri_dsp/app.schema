@@ -1,0 +1,120 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/11/28 04:09:46 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/11/28 04:09:46  scott
+#	SC0053 - Platinum Logistics - LS10.5.2 2002-11-28
+#	Updated for changes in pricing - See S/C for Details
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_acc_type
+	field cumr_class_type
+	field cumr_price_type
+end
+
+table incp
+	field incp_key
+	field incp_hhcu_hash
+	field incp_area_code
+	field incp_cus_type
+	field incp_hhbr_hash
+	field incp_curr_code
+	field incp_status
+	field incp_date_from
+	field incp_date_to
+	field incp_price1
+	field incp_price2
+	field incp_price3
+	field incp_price4
+	field incp_price5
+	field incp_price6
+	field incp_price7
+	field incp_price8
+	field incp_price9
+	field incp_comment
+	field incp_dis_allow
+	field incp_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_type
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_alpha_code
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+end
+
+table exaf
+	field exaf_co_no          
+	field exaf_area_code      
+	field exaf_area           
+end

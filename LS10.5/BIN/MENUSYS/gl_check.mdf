@@ -1,0 +1,22 @@
+General Ledger Integrity check Menu (GLCHK)
+glcheck_help
+General Ledger Master Menu. <a> (1,2)
+menu MENUSYS/gl_master.mdf
+General Ledger structure check <a> (1,2)
+gl_glmrCheck~
+General Ledger period check <a> (1,2)
+gl_glpdCheck~R~
+General Ledger period versus transaction check <a> (1,2)
+gl_gltrCheck~
+General Ledger integrity report - Accounts Receivable. <a> (1,2)
+gl_ar_bal~
+General Ledger integrity report - Accounts Payable. <a> (1,2)
+gl_ap_bal~
+General Ledger integrity report - Inventory. <a> (1,2)
+gl_sk_bal~
+((
+quadrant(8,6)
+quadrant(46,6)
+box(2,3,74,15)
+line(3,5,73)
+))

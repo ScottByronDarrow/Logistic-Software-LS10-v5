@@ -1,0 +1,379 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.3 2002/11/28 04:09:47 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.3  2002/11/28 04:09:47  scott
+#	SC0053 - Platinum Logistics - LS10.5.2 2002-11-28
+#	Updated for changes in pricing - See S/C for Details
+#	
+#	Revision 5.2  2002/07/16 08:39:05  scott
+#	S/C 004152 - Structure error on oracle.
+#	
+#	Revision 5.1  2001/08/20 23:40:41  scott
+#	Updated for development related to bullet proofing
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+end
+
+table arhr
+	field arhr_co_no
+	field arhr_br_no
+	field arhr_inv_no
+	field arhr_type
+	field arhr_hhco_hash
+	field arhr_sale_code
+	field arhr_area_code
+	field arhr_carr_area
+end
+
+table arln
+	field arln_hhco_hash
+	field arln_line_no
+	field arln_sman_code
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_sman_no
+end
+
+table cfhr
+	field cfhr_co_no
+	field cfhr_br_no
+	field cfhr_carr_code
+	field cfhr_cfhh_hash
+	field cfhr_carr_desc
+end
+
+table cfhs
+	field cfhs_co_no
+	field cfhs_br_no
+	field cfhs_wh_no
+	field cfhs_ref_no
+	field cfhs_date
+	field cfhs_hhcu_hash
+	field cfhs_cons_no
+	field cfhs_carr_code
+	field cfhs_area_code
+	field cfhs_no_cartons
+	field cfhs_no_kgs
+	field cfhs_est_frt_cst
+	field cfhs_act_frt_cst
+	field cfhs_cumr_chg
+	field cfhs_stat_flag
+end
+
+table cfln
+	field cfln_cfhh_hash
+	field cfln_area_code
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_inv_no
+	field cohr_type
+	field cohr_hhco_hash
+	field cohr_sale_code
+	field cohr_area_code
+	field cohr_carr_area
+end
+
+table coln
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_sman_code
+end
+
+table cudb
+	field cudb_co_no
+	field cudb_class_type
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_dbt_no
+	field cumr_dbt_acronym
+	field cumr_hhcu_hash
+	field cumr_class_type
+	field cumr_cont_type
+	field cumr_sman_code
+	field cumr_area_code
+end
+
+table cusf
+	field cusf_hhcu_hash
+	field cusf_line_no
+	field cusf_sman
+end
+
+table cuwk
+	field cuwk_co_no
+	field cuwk_est
+	field cuwk_inv_no
+	field cuwk_type
+	field cuwk_dbt_no
+	field cuwk_date_of_inv
+	field cuwk_post_date
+	field cuwk_exch_rate
+	field cuwk_disc
+	field cuwk_cus_po_no
+	field cuwk_tax
+	field cuwk_freight
+	field cuwk_insurance
+	field cuwk_other_cost1
+	field cuwk_other_cost2
+	field cuwk_other_cost3
+	field cuwk_dd_oncost
+	field cuwk_exch_var
+	field cuwk_sos
+	field cuwk_restock_fee
+	field cuwk_gst
+	field cuwk_narrative
+	field cuwk_tot_loc
+	field cuwk_tot_fx
+	field cuwk_gl_control
+	field cuwk_gl_acc_no
+	field cuwk_period_no
+	field cuwk_loc_amt
+	field cuwk_fx_amt
+	field cuwk_currency
+	field cuwk_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_area_code
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_rate
+	field exaf_stat_flag
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+
+table exct
+	field exct_co_no
+	field exct_cont_type
+	field exct_cont_desc
+	field exct_stat_flag
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_hhsf_hash
+	field exsf_logname
+	field exsf_salesman
+	field exsf_sell_type
+	field exsf_sell_grp
+	field exsf_sell_pos
+	field exsf_area_code
+	field exsf_route_no
+	field exsf_carr_code
+	field exsf_up_sman1
+	field exsf_up_sman2
+	field exsf_up_sman3
+	field exsf_sale_stat
+	field exsf_com_status
+	field exsf_com_type
+	field exsf_com_pc
+	field exsf_com_min
+	field exsf_sman_com
+	field exsf_lev1_com
+	field exsf_lev2_com
+	field exsf_lev3_com
+	field exsf_lev4_com
+	field exsf_stat_flag
+	field exsf_update
+end
+
+table exsi
+	field exsi_co_no
+	field exsi_inst_code
+	field exsi_inst_text
+	field exsi_stat_flag
+end
+
+table incp
+	field incp_key
+	field incp_hhcu_hash
+	field incp_area_code
+	field incp_cus_type
+	field incp_hhbr_hash
+	field incp_curr_code
+	field incp_status
+	field incp_date_from
+end
+
+table inds
+	field inds_co_no
+	field inds_br_no
+	field inds_hhcu_hash
+	field inds_price_type
+	field inds_category
+	field inds_sel_group
+	field inds_cust_type
+	field inds_hhbr_hash
+	field inds_hhcc_hash
+end
+
+table inls
+	field inls_co_no
+	field inls_est_no
+	field inls_sale_code
+	field inls_area_code
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+end
+
+table inpr
+	field inpr_hhbr_hash
+	field inpr_cust_type
+end
+
+table ithr
+	field ithr_co_no
+	field ithr_del_no
+	field ithr_carr_area
+end
+
+table mhdr
+	field mhdr_co_no
+	field mhdr_cust_type
+	field mhdr_cust_area
+end
+
+table qthr
+	field qthr_co_no
+	field qthr_br_no
+	field qthr_quote_no
+	field qthr_hhcu_hash
+	field qthr_hhqt_hash
+	field qthr_sman_code
+end
+
+table qtph
+	field qtph_co_no
+	field qtph_hhph_hash
+	field qtph_dt_sman
+end
+
+table sact
+	field sact_co_no
+	field sact_class_type
+	field sact_year_flag
+end
+
+table sadf
+	field sadf_co_no
+	field sadf_br_no
+	field sadf_year
+	field sadf_hhbr_hash
+	field sadf_hhcu_hash
+	field sadf_sman
+	field sadf_area
+end
+
+table sale
+	field sale_key
+	field sale_category
+	field sale_sman
+	field sale_area
+	field sale_ctype
+	field sale_dbt_no
+	field sale_year_flag
+	field sale_period
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_sman_code
+	field sohr_area_code
+	field sohr_carr_area
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_sman_code
+end
+
+table tmpm
+	field tmpm_co_no
+	field tmpm_pro_no
+	field tmpm_hhcu_hash
+	field tmpm_sman_code
+	field tmpm_area_code
+end
+
+table sasg
+	field sasg_co_no
+	field sasg_sell_grp
+	field sasg_desc
+end
+
+table sasp
+	field sasp_co_no
+	field sasp_pos_code
+	field sasp_pos_desc
+end
+
+table sast
+	field sast_co_no
+	field sast_code
+	field sast_desc
+end
+
+table exms
+	field exms_co_no
+	field exms_stat_code
+	field exms_desc
+end
+
+table exma
+	field exma_co_no
+	field exma_code
+	field exma_desc
+end
+
+table saca
+	field saca_co_no
+	field saca_code
+	field saca_desc
+end
+
+table curt
+	field curt_co_no
+	field curt_chq_type
+	field curt_chq_desc
+	field curt_fwd_stat
+	field curt_stat_flag
+end
+

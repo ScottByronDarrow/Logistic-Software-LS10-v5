@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.innd,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.innd)
+|  Schema Desc  : (Inventory Note Pad Detail Record. )
+|----------------------------------------------------------------------
+| $Log: sch.innd,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file innd
+
+field	innd_hhnh_hash			type	long
+field	innd_line_no			type	int
+field	innd_id_no			type	comp
+		innd_hhnh_hash,
+		innd_line_no				index	primary
+field	innd_comments			type	char	60
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	innd_hhnh_hash		-	Link to innh ( innh_hhbh_hash )
+	innd_line_no		-	Sequence line number.
+	innd_comments		-	Comments.
+
+end

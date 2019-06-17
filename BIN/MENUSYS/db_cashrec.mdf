@@ -1,0 +1,30 @@
+Customers Cash Receipts Menu (ARCR)
+db_cashrec
+Customers Master Menu. <a> (1,2)
+menu MENUSYS/db_master.mdf
+Enter Customers Receipts. <a> (1,2)
+lp_chain~db_crcinp PID~db_percalc PID~db_crctogl PID LPNO Y~
+Enter Cancelled Cheques. <a> (1,2)
+lp_chain~db_crcdis PID~db_percalc PID~db_crctogl PID LPNO Y~
+Allocate Unallocated Receipts. <a> (1,2)
+lp_chain~db_crcallc PID~db_percalc PID~db_crctogl PID LPNO Y~
+Enter Sundry Receipts. <a> (1,2)
+lp_chain~db_crc2inp PID~db_crc2togl PID LPNO~db_crc2rep LPNO PID~
+Print Bank Lodgements. <a> (1,2)
+db_bkl_prn~
+Maintain Letters Of Credit. <a> (2,2)
+db_lc_inp~
+Letters Of Credit Display. <a> (2,2)
+db_lc_dsp~
+Maintain Cheque Types. <a> (2,2)
+ex_miscinp~CURT~
+Reverse/post Due Bills. <a> (2,2)
+db_bill_rev~LPNO~
+Reverse/post Forward Cheques. <a> (2,2)
+db_fwd_rev~LPNO~
+((
+quadrant(8,6)
+quadrant(46,8)
+box(2,3,74,14)
+line(3,5,73)
+))

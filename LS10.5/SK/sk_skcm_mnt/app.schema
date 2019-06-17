@@ -1,0 +1,68 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:17:41 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:17:41  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:38:56  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.3  2000/12/19 04:10:09  scott
+#	Updated to add audit report.
+#	
+#	Revision 1.2  2000/12/13 03:00:57  scott
+#	Updated to change field name to container and length to 15
+#	
+#	Revision 1.1  2000/12/12 07:30:37  scott
+#	New Program to maintain container master file.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_short
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_short
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table skcs
+	field skcs_co_no          
+	field skcs_code           
+	field skcs_desc           
+end
+
+table skcm
+	field skcm_co_no          
+	field skcm_container           
+	field skcm_desc           
+	field skcm_skcm_hash      
+	field skcm_stat_code      
+	field skcm_min_vol        
+	field skcm_max_vol        
+	field skcm_std_vol        
+	field skcm_min_wgt        
+	field skcm_max_wgt        
+	field skcm_std_wgt        
+	field skcm_min_hei        
+	field skcm_max_hei        
+	field skcm_std_hei        
+	field skcm_min_wid        
+	field skcm_max_wid        
+	field skcm_std_wid        
+	field skcm_min_dth        
+	field skcm_max_dth        
+	field skcm_std_dth        
+	field skcm_per_vol        
+	field skcm_per_wgt        
+	field skcm_per_cont       
+end

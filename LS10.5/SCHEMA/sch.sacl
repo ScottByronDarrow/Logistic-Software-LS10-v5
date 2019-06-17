@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sacl,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.sacl)
+|  Schema Desc  : (Sales commission Detail file. )
+|----------------------------------------------------------------------
+| $Log: sch.sacl,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:19  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sacl 
+
+field	sacl_sach_hash			type	long				index	dups
+field	sacl_hhcp_hash			type	long
+field	sacl_rec_amt 			type	money
+field	sacl_rec_date 			type	edate
+field	sacl_com_amt 			type	money
+field	sacl_status			 	type	char	1
+field	sacl_id_no				type	comp
+			sacl_sach_hash,
+			sacl_hhcp_hash									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sacl_sach_hash		-	Link to sales commission header file (sach)
+	sacl_hhcp_hash		- 	Link to cheque payment header (cuhd)
+	sacl_rec_amt 		-	Amount of receipt paid toward this invoice.
+	sacl_rec_date 		-	Date receipt payment was made.
+	sacl_com_amt 	    -   Total Commission in amount. 
+	sacl_status			-	Process status flag
+								0 - to be processed.
+								1 - Processed.
+								9 - To Deleted.
+}

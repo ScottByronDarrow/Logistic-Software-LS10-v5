@@ -1,0 +1,149 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:13:25 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:13:25  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:34:35  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:18:52  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/09/01 02:28:54  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_dbt_date
+	field comm_fiscal
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_stat_flag
+end
+
+table cusa
+	field cusa_hhcu_hash
+	field cusa_year
+	field cusa_val1
+	field cusa_val2
+	field cusa_val3
+	field cusa_val4
+	field cusa_val5
+	field cusa_val6
+	field cusa_val7
+	field cusa_val8
+	field cusa_val9
+	field cusa_val10
+	field cusa_val11
+	field cusa_val12
+	field cusa_val13
+	field cusa_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_stat_flag
+end
+
+table ryhs
+	field ryhs_co_no
+	field ryhs_hhry_hash
+	field ryhs_publish
+	field ryhs_roy_pc
+	field ryhs_roy_basis
+	field ryhs_mtd_qty
+	field ryhs_mtd_gross
+	field ryhs_mtd_nett
+	field ryhs_mtd_roy
+	field ryhs_ytd_qty
+	field ryhs_ytd_gross
+	field ryhs_ytd_nett
+	field ryhs_ytd_roy
+	field ryhs_htd_qty
+	field ryhs_htd_gross
+	field ryhs_htd_nett
+	field ryhs_htd_roy
+end
+
+table sale
+	field sale_key
+	field sale_category
+	field sale_sman
+	field sale_area
+	field sale_ctype
+	field sale_dbt_no
+	field sale_year_flag
+	field sale_period
+end
+
+table sadf
+	field sadf_co_no
+	field sadf_br_no
+	field sadf_year
+	field sadf_hhbr_hash
+	field sadf_hhcu_hash
+	field sadf_qty_per1
+	field sadf_qty_per2
+	field sadf_qty_per3
+	field sadf_qty_per4
+	field sadf_qty_per5
+	field sadf_qty_per6
+	field sadf_qty_per7
+	field sadf_qty_per8
+	field sadf_qty_per9
+	field sadf_qty_per10
+	field sadf_qty_per11
+	field sadf_qty_per12
+	field sadf_qty_per13
+	field sadf_sal_per1
+	field sadf_sal_per2
+	field sadf_sal_per3
+	field sadf_sal_per4
+	field sadf_sal_per5
+	field sadf_sal_per6
+	field sadf_sal_per7
+	field sadf_sal_per8
+	field sadf_sal_per9
+	field sadf_sal_per10
+	field sadf_sal_per11
+	field sadf_sal_per12
+	field sadf_sal_per13
+	field sadf_cst_per1
+	field sadf_cst_per2
+	field sadf_cst_per3
+	field sadf_cst_per4
+	field sadf_cst_per5
+	field sadf_cst_per6
+	field sadf_cst_per7
+	field sadf_cst_per8
+	field sadf_cst_per9
+	field sadf_cst_per10
+	field sadf_cst_per11
+	field sadf_cst_per12
+	field sadf_cst_per13
+	field sadf_sman
+	field sadf_area
+end
+

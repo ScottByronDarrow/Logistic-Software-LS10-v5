@@ -1,0 +1,63 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/04/30 07:56:49 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/04/30 07:56:49  scott
+#	Update for new Archive modifications;
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_short
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_cus_ord_ref
+	field sohr_status
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhsl_hash
+	field soln_status
+	field soln_stat_flag
+end
+
+table coln
+	field coln_hhsl_hash
+	field coln_status
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+end
+
+table sobg
+	field sobg_co_no
+	field sobg_br_no
+	field sobg_type
+	field sobg_lpno
+	field sobg_hash
+end
+

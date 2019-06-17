@@ -1,0 +1,18 @@
+Stock Take Valuation Menu [ FIFO/LIFO ] (STVFI)
+sk_vfi
+Stock Take Valuation Reports Menu. <a> (1,2)
+menu MENUSYS/sk_st_val.mdf
+Detail  Fifo Stock Valuation. <a> (1,2)
+sk_nst_vsel~sk_prtfifo~G~
+Summary Fifo Stock Ageing Report. <a> (1,2)
+sk_nst_vsel~sk_catage~G~
+Detail  Fifo Stock Ageing Report. <a> (1,2)
+sk_nst_vsel~sk_age~G~
+Detail  Fifo Stock Ageing Report ( Dollar Values ). <a> (1,2)
+sk_nst_vsel~sk_age_pc~G~
+((
+quadrant(16,6)
+quadrant(45,6)
+box(9,3,60,12)
+line(10,5,59)
+))

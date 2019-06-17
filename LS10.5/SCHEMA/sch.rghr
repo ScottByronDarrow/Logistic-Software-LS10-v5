@@ -1,0 +1,47 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.rghr,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.rghr)
+|  Schema Desc  : (Routing Header File. )
+|----------------------------------------------------------------------
+| $Log: sch.rghr,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:18  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:44  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	rghr	
+
+field	rghr_co_no			type	char	2
+field	rghr_br_no			type	char	2
+field	rghr_hhbr_hash			type	long
+field	rghr_alt_no			type	int
+field	rghr_hhgr_hash			type	serial		index	primary
+field	rghr_print_all			type	char	1
+field	rghr_id_no			type	comp
+		rghr_co_no,
+		rghr_br_no,
+		rghr_hhbr_hash,
+		rghr_alt_no					index
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	rghr_co_no			- Company Number
+	rghr_br_no			- Branch Number
+	rghr_hhbr_hash			- Destination product,
+	rghr_alt_no			- Alternate # (Default = 1)
+	rghr_hhgr_hash			- Unique 'step-identifier'
+	rghr_print_all			- A:pc_chk_iss prints ALL info.
+					  N:pc_chk_iss prints NEXT info.
+}

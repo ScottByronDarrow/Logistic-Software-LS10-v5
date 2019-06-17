@@ -1,0 +1,10 @@
+#ifndef SCHEMA
+#define SCHEMA
+
+#ifdef CCMAIN
+
+#else
+
+#endif	/* CCMAIN */
+
+#endif	/* SCHEMA */

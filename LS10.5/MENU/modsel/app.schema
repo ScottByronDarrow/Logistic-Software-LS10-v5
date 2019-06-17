@@ -1,0 +1,59 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:08:40 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:08:40  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/05/02 08:47:25  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_crd_date
+	field comm_inv_date
+	field comm_payroll_date
+	field comm_gl_date
+end
+
+table comr
+	field comr_co_no
+	field comr_master_br
+	field comr_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_dbt_date
+	field esmr_crd_date
+	field esmr_inv_date
+	field esmr_pay_date
+	field esmr_gl_date
+	field esmr_stat_flag
+end
+
+table mect
+	field mect_co_no
+	field mect_br_no
+	field mect_module_type
+	field mect_status
+	field mect_start_time
+	field mect_end_time
+	field mect_closed_mth
+	field mect_txt_file
+	field mect_prog_stat
+end
+

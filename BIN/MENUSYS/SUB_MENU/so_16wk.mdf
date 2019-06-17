@@ -1,0 +1,16 @@
+SOP - 16 Week Projection Options. (SUB)
+so_help
+Sales Order Reports Menu. <a> (1,1)
+menu MENUSYS/so_reports.mdf
+Print 16 Week Projection. ( ALL ORDERS ) <a> (1,1)
+so_select.i~so_16wkprt~"16 WEEK PROJECTION (ALL ORDERS)"~S~ ~
+Print 16 Week Projection. ( BACKORDER ) <a> (1,1)
+so_select.i~so_16wkprt~"16 WEEK PROJECTION OF BACKORDERS"~S~B~
+Print 16 Week Projection. ( FORWARD-ORDERS ) <a> (1,1)
+so_select.i~so_16wkprt~"16 WEEK PROJECTION (FORWARD ORDERS)"~S~F~
+Print 16 Week Projection. ( HELD-ORDERS ) <a> (1,1)
+so_select.i~so_16wkprt~"16 WEEK PROJECTION (HELD ORDERS)"~S~H~
+Print 16 Week Projection. ( NEW/UNCONSOLIDATED-ORDER ) <a> (1,1)
+so_select.i~so_16wkprt~"16 WEEK PROJECTION (NEW/UNCONSOLIDATED ORDERS)"~S~M~
+((
+))

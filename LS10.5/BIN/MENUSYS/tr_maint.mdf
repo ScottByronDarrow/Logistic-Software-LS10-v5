@@ -1,0 +1,28 @@
+Transport Management Menu. (TRMT)
+tr_help
+Transport Master Menu. <a> (1,2)
+menu MENUSYS/tr_master.mdf
+Maintain Transport Time Codes <a> (1,1)
+tr_trzt_mnt~
+Maintain Carrier Master File. <a> (1,1)
+tr_trcm_inp~
+Maintain Transport Delivery Zones <a> (1,2)
+tr_trzm_mnt~
+Maintain Vehicle Master. <a> (1,1)
+tr_vehimaint~
+Maintain Driver Master. <a> (1,2)
+tr_maint~
+Maintain Container Status Master. <a> (1,1)
+sk_skcs_mnt~
+Copy Container Master. <a> (1,1)
+sk_skcm_cp~
+Maintain Container Master. <a> (1,1)
+sk_skcm_mnt~
+Print Driver Master. <a> (2,1)
+tr_truck_list~
+((
+quadrant(6,6)
+quadrant(50,8)
+box(1,3,76,14)
+line(2,5,75)
+))

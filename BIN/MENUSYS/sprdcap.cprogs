@@ -1,0 +1,306 @@
+#=========================================================================
+#  Copyright (C) 1999 - Logistic Software.                               |
+#=========================================================================
+#
+# DOCUMENTATION ON 'C' PROGRAMS SPRDCAP
+#	"celf=",	00 Cell address format.		(NEEDED)
+#	"rngf=",	01 Range address format.	(NEEDED)
+#	"goto=",	02 Goto cell.			(NEEDED)
+#	"cpcl=",	03 Copy cell.			(NEEDED)
+#	"cprg=",	04 Copy range.			(VERY SLOW WITHOUT!)
+#	"mvcl=",	05 Move cell.			(SLOW WITHOUT)
+#	"mvrg=",	06 Move range.			(VERY SLOW WITHOUT!)
+#	"clcl=",	07 Clear cell.			(NEEDED)
+#	"clrg=",	08 Clear range.			(VERY SLOW WITHOUT!)
+#	"clws=",	09 Clear worksheet.		(NEEDED)
+#	"sumb=",	10 Begin summation.		(NEEDED)
+#	"sums=",	11 Summation separator.		(NEEDED)
+#	"sume=",	12 Summation end.		(NEEDED)
+#	"scwd=",	13 Set column width.		(NEEDED)
+#	"sdwd=",	14 Set default width.		(NEEDED)
+#	"text=",	15 Text with dflt just.		(NEEDED)
+#	"txtl=",	16 Left justified text.		(NEEDED if no jstl)
+#	"txtr=",	17 Right justified text.	(NEEDED if no jstr)
+#	"txtc=",	18 Centred text.
+#	"data=",	19 Data with dflt just.		(NEEDED)
+#	"datl=",	20 Left justified data.
+#	"datr=",	21 Right justified data.
+#	"datc=",	22 Centred data.
+#	"jstl=",	23 Left justify.		(NEEDED if no txtl)
+#	"jstr=",	24 Right justify.		(NEEDED if no txtr)
+#	"jstc=",	25 Centralise.
+#	"cmnt=",	26 Comment.
+#	"vwof=",	27 Quiet mode (view off)
+#	"vwon=",	28 Normal mode (view on)
+#	"save=",	29 Save worksheet
+#	"load=",	30 Load worksheet
+#	"runm=",	31 Run a macro file
+#	"manc=",	32 Manual calculation mode
+#	"autc=",	33 Automatic calculation mode
+# Note:
+#	For ffix (34) to fcom (39), the first character of the string
+#	represents the number of replacement fields on the line.
+#	"ffix=",	34 Fixed point format
+#	"fexp=",	35 Exponent format
+#	"fdol=",	36 Money format
+#	"fper=",	37 Percentage format
+#	"fneg=",	38 Negative format
+#	"fcom=",	39 Comma format
+#	"scwm=",	40 Set column width method
+#				(0 = default column, 1 = specify column)
+#	"entm=",	41 Text/Data entry method
+#				(0 = default cell, 1 = specify cell)
+#	"labl=",	42 Set a label for the specified range
+#	"glbl=",	43 Total spreadsheet
+#	"maxr=",	44 Maximum available row	(NEEDED)
+#	"maxc=",	45 Maximum available column	(NEEDED)
+#	"fbeg=",	46 Formula begin		(NEEDED)
+#	"fset=",	47 Formula set			(NEEDED)
+#	"fadd=",	48 Formula addition		(NEEDED)
+#	"fend=",	49 Formula terminate		(NEEDED)
+#	"cadd=",	50 Calc for addition		(NEEDED)
+#	"csub=",	51 Calc for subtraction		(NEEDED)
+#	"cmul=",	52 Calc for multiplication	(NEEDED)
+#	"cdiv=",	53 Calc for division		(NEEDED)
+#	"cpct=",	54 Calc for percentage		(NEEDED)
+#	"ldef=",	55 Link definition.		(NEEDED)
+#	"lfrm=",	56 Link from.			(NEEDED)
+#	"quit=",	57 Exit spreadsheet		(NEEDED)
+#===========================================================================
+2020:\
+	:celf=[%d,%d]:\
+	:rngf=[%d,%d]..[%d,%d]:\
+	:goto=>%s\012:\
+	:cpcl=/CE%s\012%s\012:\
+	:cprg=/CE%s\012%s\012:\
+	:mvcl=/MM%s\012%s\012:\
+	:mvrg=/MM%s\012%s\012:\
+	:clcl=:\
+	:clrg=:\
+	:clws=:\
+	:sumb=sum(:\
+	:sums=,:\
+	:sume=)\012:\
+	:scwd=:\
+	:sdwd=:\
+	:quit=:
+2plus:\
+	:celf=%i%rr%dc%d:\
+	:rngf=%rr%dc%d\072r%dc%d:\
+	:goto=cur %s\012:\
+	:cpcl=co %s > %s\012:\
+	:cprg=co %s > %s\012:\
+	:mvcl=m %s > %s\012:\
+	:mvrg=m %s > %s\012:\
+	:clcl=cur %s\012'\012:\
+	:clrg=:\
+	:clws=new\012:\
+	:sumb==sum(%s:\
+	:sums=,%s:\
+	:sume=)\012:\
+	:scwd=cw c%d %d\012:\
+	:sdwd=cw all %d\012:\
+	:text=t %s\012:\
+	:txtl=cur %s\012f@left\012t@,%s\012:\
+	:txtr=cur %s\012f@right\012t@,%s\012:\
+	:txtc=cur %s\012f@center\012t@,%s\012:\
+	:data=d %s=%s\012:\
+	:datl=:\
+	:datr=:\
+	:datc=:\
+	:jstl=f left\012:\
+	:jstr=f right\012:\
+	:jstc=f center\012:\
+	:cmnt=#\012# %s\012#\012:\
+	:vwof=st off\012view off\012:\
+	:vwon=st on\012view on\012:\
+	:save=s in %s\012:\
+	:load=get from %s\012:\
+	:runm=use %s\012:\
+	:manc=c off\012:\
+	:autc=c on\012:\
+	:ffix=2f %s dec %d\012:\
+	:fexp=1f %s sci\012:\
+	:fdol=1f %s $\012:\
+	:fper=1f %s %\012:\
+	:fneg=1f %s\012:\
+	:fcom=1f %s comma\012:\
+	:scwm=1:\
+	:entm=1:\
+	:labl=lab %s = %s\012:\
+	:glbl=all:\
+	:maxr=1000:\
+	:maxc=1000:\
+	:fbeg==(:\
+	:fset=%s:\
+	:fadd= + :\
+	:fend=)\012:\
+	:cadd==(%s+%s)\012:\
+	:csub==(%s-%s)\012:\
+	:cmul==(%s*%s)\012:\
+	:cdiv==if(%s==0,0,%s/%s)\012:\
+	:cpct==if(%s==0,0,%s/%s*100)\012:\
+	:ldef=C123get %s > %s from %s\012:\
+	:lfrm=41312get %s from %s\012m %s > %s\012:\
+	:quit=q\012*\012:
+2plusv6:\
+	:celf=%i%rr%dc%d:\
+	:rngf=%rr%dc%d\072r%dc%d:\
+	:goto=cur %s\012:\
+	:cpcl=co %s > %s\012:\
+	:cprg=co %s > %s\012:\
+	:mvcl=m %s > %s\012:\
+	:mvrg=m %s > %s\012:\
+	:clcl=cur %s\012'\012:\
+	:clrg=:\
+	:clws=new\012:\
+	:sumb==sum(%s:\
+	:sums=,%s:\
+	:sume=)\012:\
+	:scwd=cw c%d %d\012:\
+	:sdwd=cw all %d\012:\
+	:text=t %s\012:\
+	:txtl=cur %s\012f@left\012t@,%s\012:\
+	:txtr=cur %s\012f@right\012t@,%s\012:\
+	:txtc=cur %s\012f@center\012t@,%s\012:\
+	:data=d %s=%s\012:\
+	:datl=:\
+	:datr=:\
+	:datc=:\
+	:jstl=f left\012:\
+	:jstr=f right\012:\
+	:jstc=f center\012:\
+	:cmnt=#\012# %s\012#\012:\
+	:vwof=st off\012view off\012:\
+	:vwon=st on\012view on\012:\
+	:save=s in %s\012:\
+	:load=get from %s\012:\
+	:runm=use %s\012:\
+	:manc=c off\012:\
+	:autc=c on\012:\
+	:ffix=2f %s dec %d\012:\
+	:fexp=1f %s sci\012:\
+	:fdol=1f %s $\012:\
+	:fper=1f %s %\012:\
+	:fneg=1f %s\012:\
+	:fcom=1f %s comma\012:\
+	:scwm=1:\
+	:entm=1:\
+	:labl=lab %s = %s\012:\
+	:glbl=all:\
+	:maxr=1024:\
+	:maxc=256:\
+	:fbeg==(:\
+	:fset=%s:\
+	:fadd= + :\
+	:fend=)\012:\
+	:cadd==(%s+%s)\012:\
+	:csub==(%s-%s)\012:\
+	:cmul==(%s*%s)\012:\
+	:cdiv==if(%s==0,0,%s/%s)\012:\
+	:cpct==if(%s==0,0,%s/%s*100)\012:\
+	:ldef=C123get %s > %s from %s\012:\
+	:lfrm=41312get %s from %s\012m %s > %s\012:\
+	:quit=q\012*\012:
+123:\
+	:celf=r%s c%d:\
+	:rngf=%i%S%d\072%S%d:\
+	:goto=>%s\012:\
+	:cpcl=/C%s\012%s\012:\
+	:cprg=/C%s\012%s\012:\
+	:mvcl=/M%s\012%s\012:\
+	:mvrg=/M%s\012%s\012:\
+	:clcl=/B%s\012:\
+	:clrg=/B%s\012:\
+	:clws=/WEY:\
+	:sumb=@sum(:\
+	:sums=,:\
+	:sume=)\012:\
+	:scwd=/FC%d\012:\
+	:sdwd=/WGDC%d\012:\
+	:text='%s\012:\
+	:txtl='%s\012:\
+	:txtr="%s\012:\
+	:txtc=^%s\012:\
+	:data=%s\012:\
+	:datl=:\
+	:datr=:\
+	:datc=:\
+	:jstl=/FJL\012:\
+	:jstr=/FJR\012:\
+	:jstc=/FJC\012:\
+	:cmnt=--%s--\012:\
+	:vwof=:\
+	:vwon=:\
+	:save=/FS%s\012:\
+	:load=/FR%s\012:\
+	:quit=/Q\012Y\012:
+	:manc=:\
+	:autc=:\
+	:ffix=:\
+	:fexp=:\
+	:fdol=:\
+	:fper=:\
+	:fneg=:\
+	:fcom=:\
+	:scwm=0:\
+	:entm=0:
+excel:\
+	:celf=%i%rr%dc%d:\
+	:rngf=%rr%dc%d\072r%dc%d:\
+	:goto=Application.Goto Reference := %s\012:\
+	:cpcl=co %s > %s\012:\
+	:cprg=co %s > %s\012:\
+	:mvcl=m %s > %s\012:\
+	:mvrg=m %s > %s\012:\
+	:clcl=cur %s\012'\012:\
+	:clrg=:\
+	:clws=new\012:\
+	:sumb==sum(%s:\
+	:sums=,%s:\
+	:sume=)\012:\
+	:scwd=cw c%d %d\012:\
+	:sdwd=cw all %d\012:\
+	:text=t %s\012:\
+	:txtl=cur %s\012f@left\012t@,%s\012:\
+	:txtr=cur %s\012f@right\012t@,%s\012:\
+	:txtc=cur %s\012f@center\012t@,%s\012:\
+	:data=d %s=%s\012:\
+	:datl=:\
+	:datr=:\
+	:datc=:\
+	:jstl=f left\012:\
+	:jstr=f right\012:\
+	:jstc=f center\012:\
+	:cmnt=#\012# %s\012#\012:\
+	:vwof=st off\012view off\012:\
+	:vwon=st on\012view on\012:\
+	:save=s in %s\012:\
+	:load=get from %s\012:\
+	:runm=use %s\012:\
+	:manc=c off\012:\
+	:autc=c on\012:\
+	:ffix=2f %s dec %d\012:\
+	:fexp=1f %s sci\012:\
+	:fdol=1f %s $\012:\
+	:fper=1f %s %\012:\
+	:fneg=1f %s\012:\
+	:fcom=1f %s comma\012:\
+	:scwm=1:\
+	:entm=1:\
+	:labl=lab %s = %s\012:\
+	:glbl=all:\
+	:maxr=1000:\
+	:maxc=1000:\
+	:fbeg==(:\
+	:fset=%s:\
+	:fadd= + :\
+	:fend=)\012:\
+	:cadd==(%s+%s)\012:\
+	:csub==(%s-%s)\012:\
+	:cmul==(%s*%s)\012:\
+	:cdiv==if(%s==0,0,%s/%s)\012:\
+	:cpct==if(%s==0,0,%s/%s*100)\012:\
+	:ldef=C123get %s > %s from %s\012:\
+	:lfrm=41312get %s from %s\012m %s > %s\012:\
+	:quit=q\012*\012:

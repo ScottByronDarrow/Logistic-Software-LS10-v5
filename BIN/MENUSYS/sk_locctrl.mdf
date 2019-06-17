@@ -1,0 +1,34 @@
+Inventory Location Control Menu (SKLC)
+sk_mast
+Stock Master Menu. <a> (1,2)
+menu MENUSYS/sk_master.mdf
+Display Location Master. <a> (1,1)
+sk_locmdsp~
+Display Location Where Used. <a> (1,2)
+sk_loc_dsp~
+Print Location Master. <a> (1,1)
+sk_locmprt~LPNO~
+Print Loc. Qty Discepancies. <a> (1,1)
+sk_lot_disprt~
+Print Stock by Item Group/Loc. <a> (1,1)
+chain~sk_group.i "sk_locprn" "Stock report by Item Group / Location." " "~
+Print Stock by Loc/Item. <a> (1,2)
+sk_locmprn~
+Maintain Location Master. <a> (2,1)
+sk_locminp~
+Maintain Location Status Codes. <a> (2,1)
+sk_llst_mnt~
+Maintain Location Status. <a> (2,1)
+sk_inlo_smnt~
+Maintain Location Routes. <a> (2,1)
+sk_locsrt_mnt~
+Maintain Location Transfers. <a> (2,2)
+sk_loctran~LPNO~
+Delete Multi Bin Locations. <a> (2,1)
+sk_mbin_del~
+((
+quadrant(6,6)
+quadrant(44,8)
+box(1,3,76,11)
+line(2,5,75)
+))

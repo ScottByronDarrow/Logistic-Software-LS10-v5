@@ -1,0 +1,26 @@
+System Administrators Displays. (SUB)
+terminals
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Display User Session. <a> (1,1)
+dsp_session~
+Display Terminal Slots. <a> (1,1)
+dsp_slots~
+Display License Information. <a> (1,1)
+dsp_brand~
+Display System/Database Errors. <a> (1,1)
+psl_errdsp~
+Display Directory Structure. <a> (1,1)
+prog_help~dir.c~
+Display Tables and Serial Links. <a> (1,1)
+dsp_indexes~
+Display Directory Listing. <a> (1,1)
+psl_ls~
+Display Fast Access. <a> (1,1)
+dsp_fast~
+Display Pop-up Sub Menus. <a> (1,1)
+sub_maint~D~
+Monitor Background Processes. <a> (1,1)
+bg_monitor~
+((
+))

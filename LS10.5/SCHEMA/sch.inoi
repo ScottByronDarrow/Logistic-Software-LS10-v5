@@ -1,0 +1,52 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inoi,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inoi)
+|  Schema Desc  : (Outlet Inventory file 		 )
+|----------------------------------------------------------------------
+| $Log: sch.inoi,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:31  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file inoi 
+
+field	inoi_hhcu_hash		type	long
+field	inoi_hhbr_hash		type	long
+field	inoi_stake_date		type	date
+field	inoi_pack_type		type	char	2
+field	inoi_tot_disp		type	float
+field	inoi_tot_store		type	float
+field	inoi_item_exp		type	date
+field	inoi_lst_pullout	type	date
+field	inoi_id_no			type	comp
+			inoi_hhcu_hash,
+			inoi_hhbr_hash,
+			inoi_stake_date							index	primary
+field	inoi_id_no2			type	comp
+			inoi_hhbr_hash,
+			inoi_hhcu_hash,
+			inoi_stake_date							index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inoi_hhcu_hash		-  Link to Customer file (cumr)
+	inoi_hhbr_hash		-  Link to Item file (inmr)
+	inoi_stake_date		-  Stock take date
+	inoi_pack_type		-  Package type (link to expt file)
+	inoi_tot_disp		-  Total display stock at last stocktake.
+	inoi_tot_store		-  Total stock held in warehouse at last stocktake.
+	inoi_item_exp		-  Item expiry date
+	inoi_lst_pullout	-  Last Pullout date
+}

@@ -1,0 +1,72 @@
+{======================================================================
+|  Copyright (C) 1998 - 2002 LogisticSoftware
+|======================================================================
+| $Id: sch.arpohr,v 5.0 2002/05/07 10:16:41 scott Exp $
+|  Schema Name  : (sch.arpohr)
+|  Schema Desc  : (Archive Copy - Purchase order header file)
+|----------------------------------------------------------------------
+| $Log: sch.arpohr,v $
+| Revision 5.0  2002/05/07 10:16:41  scott
+| Updated to bring version number to 5.0
+|
+| Revision 1.2  2002/05/02 04:20:29  scott
+| Updated to remove as not required in archiving system
+|
+| Revision 1.1  2002/04/30 02:28:46  scott
+| Update for new Archive modifications;
+|
+|=====================================================================}
+file	arpohr	
+
+field	arpohr_co_no				type	char	2		
+field	arpohr_br_no				type	char	2	
+field	arpohr_type					type	char	1	
+field	arpohr_hhsu_hash			type	long			index	dups
+field	arpohr_pur_ord_no			type	char	15	
+field	arpohr_hhpo_hash			type	long			index
+field	arpohr_hhsh_hash			type	long
+field	arpohr_hhdd_hash			type	long			
+field	arpohr_date_raised			type	edate
+field	arpohr_due_date				type	edate
+field	arpohr_conf_date			type	edate
+field	arpohr_contact				type	char	40
+field	arpohr_app_code				type	char	15
+field	arpohr_op_id				type	char	14
+field	arpohr_time_create			type	char	5
+field	arpohr_date_create			type	edate
+field	arpohr_req_usr				type	char	40
+field	arpohr_reason				type	char	40
+field	arpohr_stdin1				type	char	60
+field	arpohr_stdin2				type	char	60
+field	arpohr_stdin3				type	char	60
+field	arpohr_delin1				type	char	60
+field	arpohr_delin2				type	char	60
+field	arpohr_delin3				type	char	60
+field	arpohr_ship1_no				type	long
+field	arpohr_ship2_no				type	long
+field	arpohr_ship3_no				type	long
+field	arpohr_curr_code			type	char	3
+field	arpohr_curr_rate			type	double
+field	arpohr_term_order			type	char	20
+field	arpohr_sup_trm_pay			type	char	30
+field	arpohr_bnk_trm_pay			type	char	30
+field	arpohr_pay_date				type	edate
+field	arpohr_fgn_total			type	double
+field	arpohr_fgn_ostand			type	double
+field	arpohr_ship_method			type	char	1
+field	arpohr_drop_ship  			type	char	1
+field	arpohr_status				type	char	1
+field	arpohr_stat_flag			type	char	1	
+field	arpohr_sup_type				type	char	1	
+field	arpohr_id_no				type	composite
+			arpohr_co_no,	
+			arpohr_br_no,	
+			arpohr_hhsu_hash,	
+			arpohr_pur_ord_no								index	dups
+end
+{
+              =====================================
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+              =====================================
+			  SEE POHR - THIS IS AN EXACT COPY FOR ARCHIVING
+}	

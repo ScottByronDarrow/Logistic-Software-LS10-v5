@@ -1,0 +1,97 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:19:19 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:19:19  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/11/06 08:47:13  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+	field esmr_stat_flag
+end
+
+table cuch
+	field cuch_co_no
+	field cuch_hhcu_hash
+	field cuch_letter_no
+	field cuch_hhch_hash
+	field cuch_curr_code
+	field cuch_bank_id
+	field cuch_create_date
+	field cuch_expiry_date
+	field cuch_limit
+	field cuch_delete
+	field cuch_stat_flag
+end
+
+table cucd
+	field cucd_hhch_hash
+	field cucd_rec_date
+	field cucd_hhcp_hash
+	field cucd_amount
+	field cucd_stat_flag
+end
+
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_bank_name
+	field crbk_branch_name
+	field crbk_adr1
+	field crbk_adr2
+	field crbk_adr3
+	field crbk_adr4
+	field crbk_acct_name
+	field crbk_curr_code
+	field crbk_stat_flag
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_curr_code
+	field cumr_ctry_code
+	field cumr_stat_flag
+end
+
+table cuhd
+	field cuhd_receipt_no
+	field cuhd_hhcp_hash
+	field cuhd_date_payment
+	field cuhd_tot_amt_paid
+	field cuhd_loc_amt_paid
+	field cuhd_disc_given
+	field cuhd_loc_disc_give
+	field cuhd_exch_variance
+	field cuhd_stat_flag
+end
+

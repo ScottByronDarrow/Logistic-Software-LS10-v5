@@ -1,0 +1,22 @@
+Miscellaneous Reports. (SUB)
+misc_rep_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Print Stock Category Master File <a> (1,1)
+BACK~ex_lists~LPNO~2~
+Print Area Master File. <a> (1,1)
+BACK~ex_lists~LPNO~3~
+Print Salesman Master File. <a> (1,1)
+BACK~ex_lists~LPNO~1~
+Print Branch Master File. <a> (1,1)
+ms_lists~LPNO~1~
+Print Department Master File. <a> (1,1)
+ms_lists~LPNO~2~
+Print Warehouse Master File. <a> (1,1)
+ms_lists~LPNO~3~
+Print Extra Inventory Desc. <a> (1,1)
+BACK~sk_xdes_inp~P~LPNO~
+Display / Print Carrier / Area Control file. <a> (1,1)
+so_cf_dsp~"Display / Print Carrier / Area Control file."~
+((
+))

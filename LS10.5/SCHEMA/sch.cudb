@@ -1,0 +1,49 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cudb,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cudb)
+|  Schema Desc  : (Customer Discount level Break file. )
+|----------------------------------------------------------------------
+| $Log: sch.cudb,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:28  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cudb 
+
+field	cudb_co_no				type	char	2
+field	cudb_class_type			type	char	3
+field	cudb_value1				type	money
+field	cudb_value2				type	money
+field	cudb_value3				type	money
+field	cudb_value4				type	money
+field	cudb_value5				type	money
+field	cudb_disc_code1			type	char	1
+field	cudb_disc_code2			type	char	1
+field	cudb_disc_code3			type	char	1
+field	cudb_disc_code4			type	char	1
+field	cudb_disc_code5			type	char	1
+field	cudb_disc_code6			type	char	1
+field	cudb_id_no				type	comp
+			cudb_co_no,
+			cudb_class_type									index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cudb_co_no			Company
+	cudb_class_type			Class (to match on cumr)
+	cudb_value[1-5]			Level-break limit
+	cudb_disc_code[1-5]		Discount code for level
+	cudb_disc_code6    		Default Discount Code
+}

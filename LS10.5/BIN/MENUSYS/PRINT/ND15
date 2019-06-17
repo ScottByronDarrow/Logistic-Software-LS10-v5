@@ -1,0 +1,6 @@
+#
+#  Printer Entry For ND15 printer. P0 = 10' P2 = 12'
+#
+ND15|Star ND15|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E-1:UF=\E-0:\
+	:P0=\EP:P2=\EM:EX=2:

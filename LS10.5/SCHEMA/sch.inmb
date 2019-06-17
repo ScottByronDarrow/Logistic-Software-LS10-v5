@@ -1,0 +1,62 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inmb,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inmb)
+|  Schema Desc  : (Inventory Movements Balance Record )
+|----------------------------------------------------------------------
+| $Log: sch.inmb,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:55  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inmb
+
+field	inmb_co_no			type	char	2
+field	inmb_hhbr_hash		type	long		index	dups
+field	inmb_hhcc_hash		type	long
+field	inmb_date			type	edate		
+field	inmb_opening_bal	type	float
+field	inmb_avge_cost		type	money
+field	inmb_prev_cost		type	money
+field	inmb_last_cost		type	money
+field	inmb_std_cost		type	money
+field	inmb_latest_fifo	type	money
+field	inmb_insuf_trx		type	char	1
+field	inmb_id_no			type	comp
+			inmb_co_no,
+			inmb_hhbr_hash,
+			inmb_date,
+			inmb_hhcc_hash						 		index
+field	inmb_id_no2			type	comp
+			inmb_hhbr_hash,
+			inmb_hhcc_hash,
+			inmb_date									index
+field	inmb_id_no3			type 	comp
+			inmb_co_no,
+			inmb_date									index	dups
+
+end
+
+{
+	inmb_co_no			- Company
+	inmb_hhbr_hash		- Link => inmr
+	inmb_hhcc_hash		- Link => ccmr
+	inmb_period			- Date for which this is the opening balance.
+	inmb_opening_bal	- Opening balance for this date
+	inmb_ave_cost		- Average cost at creation of record (month end roll)
+	inmb_prev_cost		- Previous cost at creation of record
+	inmb_last_cost		- Last cost at creation of record
+	inmb_std_cost		- Standard cost at creation of record
+	inmb_latest_fifo	- Most recent FIFO cost at creation of record
+	inmb_insuf_trx		- If intr records have been deleted for this month then
+							this flag will be set to 'Y'.  If FULL transaction
+							history exists then flag set to 'N'.
+}

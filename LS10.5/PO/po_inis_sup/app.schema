@@ -1,0 +1,79 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:11:30 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:11:30  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/05/13 05:32:11  scott
+#	Updated to add app.schema - removes code related to tables from program as it allows for better quality contol.
+#	Updated to add sleep delay - did not work with LS10-GUI
+#	Updated to adjust screen to look better with LS10-GUI
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_description
+	field inmr_category
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_part
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_fob_cost
+	field inis_lcost_date
+	field inis_duty
+	field inis_licence
+	field inis_sup_uom
+	field inis_pur_conv
+	field inis_min_order
+	field inis_norm_order
+	field inis_ord_multiple
+	field inis_pallet_size
+	field inis_lead_time
+	field inis_sea_time
+	field inis_air_time
+	field inis_lnd_time
+	field inis_dflt_lead
+	field inis_weight
+	field inis_volume
+	field inis_stat_flag
+end
+
+table inum
+	field inum_hhum_hash
+	field inum_uom
+end
+

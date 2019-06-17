@@ -1,0 +1,41 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.rgbp,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.rgbp)
+|  Schema Desc  : (Routing By-Product File. )
+|----------------------------------------------------------------------
+| $Log: sch.rgbp,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:18  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:44  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	rgbp	
+
+field	rgbp_hhgr_hash			type	long
+field	rgbp_seq_no			type	int
+field	rgbp_hhbr_hash			type	long
+field	rgbp_id_no			type	comp
+		rgbp_hhgr_hash,
+		rgbp_seq_no,
+		rgbp_hhbr_hash					index
+field	rgbp_qty			type	float
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	rgbp_hhgr_hash			- Copied from header (rghr)
+	rgbp_seq_no			- To specify which 'step'
+	rgbp_hhbr_hash			- Link->inmr
+	rgbp_qty			- Default quantity produced
+}

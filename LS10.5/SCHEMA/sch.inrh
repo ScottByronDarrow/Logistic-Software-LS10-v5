@@ -1,0 +1,57 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inrh,v 5.0 2001/06/19 10:17:19 cha Exp $
+|  Schema Name  : (sch.inrh)
+|  Schema Desc  : (Reel History File for Reel Certificates. )
+|----------------------------------------------------------------------
+| $Log: sch.inrh,v $
+| Revision 5.0  2001/06/19 10:17:19  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:57  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:32  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+
+file	inrh
+
+field	inrh_hhcu_hash			type	long
+field	inrh_hhbr_hash			type	long
+field	inrh_hhcc_hash			type	long
+field	inrh_serial_no			type	char	25
+field	inrh_id_no			type	composite
+		inrh_hhcu_hash,
+		inrh_serial_no					index	dups
+field	inrh_id_no_2			type	composite
+		inrh_hhbr_hash,
+		inrh_hhcc_hash,
+		inrh_serial_no					index	dups
+field	inrh_id_no_3			type	composite
+		inrh_serial_no,
+		inrh_hhcu_hash					index	dups
+field	inrh_post_date			type	edate
+field	inrh_inv_date			type	edate
+field	inrh_qty			type	float
+field	inrh_sale_price			type	money
+field	inrh_cost_price			type	money
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inrh_hhcu_hash		-	Link to cumr ( cumr_hhcu_hash )
+	inrh_hhbr_hash		-	Link to hhbr ( inmr_hhbr_hash )
+	inrh_hhcc_hash		-	Link to hhcc ( ccmr_hhcc_hash )
+	inrh_serial_no		-	Serial Number.
+	inrh_post_date		-	Date transaction posted.
+	inrh_inv_date		-	Date invoiced.
+	inrh_qty		-	Reel Quantity.
+	inrh_sale_price		-	Sale price.
+	inrh_cost_price		-	Cost price.
+}

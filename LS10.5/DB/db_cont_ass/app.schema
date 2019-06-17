@@ -1,0 +1,58 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/22 06:19:12 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/22 06:19:12  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table cncd
+	field cncd_hhch_hash
+	field cncd_line_no
+	field cncd_hhbr_hash
+	field cncd_hhcc_hash
+	field cncd_hhsu_hash
+	field cncd_hhcl_hash
+	field cncd_price
+	field cncd_curr_code
+	field cncd_disc_ok
+	field cncd_cost
+end
+
+table cnch
+	field cnch_co_no
+	field cnch_cont_no
+	field cnch_hhch_hash
+	field cnch_desc
+	field cnch_date_exp
+	field cnch_exch_type
+end
+
+table cncl
+	field cncl_hhch_hash
+	field cncl_hhcu_hash
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_curr_code
+end
+

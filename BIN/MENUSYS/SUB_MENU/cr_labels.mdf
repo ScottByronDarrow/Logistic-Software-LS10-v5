@@ -1,0 +1,14 @@
+Supplier Labels Sub Menu (CRLA)
+cr_labels
+Supplier Master Menu. <a> (1,2)
+menu MENUSYS/cr_master.mdf
+Maintain Label Definition. <a> (1,1)
+psl_labels~S~
+Print Labels. <a> (1,2)
+psl_lbl_prt~S~
+((
+quadrant(7,6)
+quadrant(46,8)
+box(2,3,74,14)
+line(3,5,73)
+))

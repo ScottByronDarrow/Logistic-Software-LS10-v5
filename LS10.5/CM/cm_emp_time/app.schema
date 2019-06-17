@@ -1,0 +1,155 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 22:56:15 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 22:56:15  scott
+#	RELEASE 5.0
+#	
+#
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_gl_date        
+	field comm_inv_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+
+table cmeq
+	field cmeq_co_no
+	field cmeq_eq_name
+	field cmeq_hheq_hash
+	field cmeq_desc
+	field cmeq_inum_hash
+	field cmeq_rate
+	field cmeq_cost
+end
+
+table cumr
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+end
+
+table cmcm
+	field cmcm_co_no
+	field cmcm_ch_code
+	field cmcm_desc
+	field cmcm_hhcm_hash
+	field cmcm_hhum_hash
+end
+
+table cmcd
+	field cmcd_hhhr_hash
+	field cmcd_line_no
+	field cmcd_text
+	field cmcd_stat_flag
+end
+
+table cmcb
+	field cmcb_hhhr_hash
+	field cmcb_hhcm_hash
+	field cmcb_budg_type
+	field cmcb_budg_cost
+	field cmcb_budg_qty
+	field cmcb_budg_value
+	field cmcb_dtl_lvl
+end
+
+table cmts
+	field cmts_hhem_hash
+	field cmts_date
+	field cmts_hhhr_hash
+	field cmts_hhcm_hash
+	field cmts_hheq_hash
+	field cmts_time_ord
+	field cmts_time_hlf
+	field cmts_time_dbl
+	field cmts_units
+	field cmts_lab_cost
+	field cmts_oh_cost
+	field cmts_sale
+	field cmts_stat_flag
+end
+
+table cmem
+	field cmem_co_no
+	field cmem_emp_no
+	field cmem_emp_name
+	field cmem_hhem_hash
+	field cmem_hheq_hash
+	field cmem_clab_rate
+	field cmem_clab_pc
+	field cmem_coh_rate
+	field cmem_coh_pc
+	field cmem_olab_rate
+	field cmem_olab_pc
+	field cmem_ooh_rate
+	field cmem_ooh_pc
+end
+
+table cmws
+	field cmws_co_no
+	field cmws_wp_stat
+	field cmws_desc
+end
+
+table cmhr
+	field cmhr_co_no
+	field cmhr_br_no
+	field cmhr_cont_no
+	field cmhr_hhhr_hash
+	field cmhr_mast_hhhr
+	field cmhr_hhcu_hash
+	field cmhr_hhit_hash
+	field cmhr_cus_ref
+	field cmhr_contact
+	field cmhr_adr1
+	field cmhr_adr2
+	field cmhr_adr3
+	field cmhr_it_date
+	field cmhr_wip_date
+	field cmhr_st_date
+	field cmhr_due_date
+	field cmhr_end_date
+	field cmhr_hhjt_hash
+	field cmhr_wip_glacc
+	field cmhr_lab_glacc
+	field cmhr_o_h_glacc
+	field cmhr_wip_status
+	field cmhr_quote_type
+	field cmhr_progress
+	field cmhr_anni_day
+	field cmhr_quote_val
+	field cmhr_est_costs
+	field cmhr_est_prof
+	field cmhr_usr_ref1
+	field cmhr_usr_ref2
+	field cmhr_usr_ref3
+	field cmhr_usr_ref4
+	field cmhr_usr_ref5
+	field cmhr_internal
+	field cmhr_lab_rate
+	field cmhr_oh_rate
+	field cmhr_status
+end
+
+table cmer
+	field cmer_hhem_hash
+	field cmer_hhhr_hash
+	field cmer_hhcm_hash
+	field cmer_lab_rate
+	field cmer_lab_pc
+	field cmer_o_h_rate
+	field cmer_o_h_pc
+end

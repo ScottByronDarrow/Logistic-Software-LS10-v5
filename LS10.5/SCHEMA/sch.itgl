@@ -1,0 +1,78 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.itgl,v 5.1 2001/07/25 01:15:52 scott Exp $
+|  Schema Name  : (sch.itgl)
+|  Schema Desc  : (Inventory Transfer General Ledger work file. )
+|----------------------------------------------------------------------
+| $Log: sch.itgl,v $
+| Revision 5.1  2001/07/25 01:15:52  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:58  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:33  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	itgl
+
+field	itgl_co_no			type	char	2
+field	itgl_br_no			type	char	2
+field	itgl_sort			type	char	6
+field	itgl_i_co_no			type	char	2
+field	itgl_i_br_no			type	char	2
+field	itgl_r_co_no			type	char	2
+field	itgl_r_br_no			type	char	2
+field	itgl_type				type	char	1
+field	itgl_ic_trans			type	char	1
+field	itgl_hhbr_hash			type	long
+field	itgl_hhcc_hash			type	long
+field	itgl_tran_date			type	edate
+field	itgl_post_date			type	edate
+field	itgl_period_no			type	char	2
+field	itgl_tran_type			type	char	2
+field	itgl_sys_ref			type	char	10
+field	itgl_batch_no			type	char	10
+field	itgl_narr				type	char	20
+field	itgl_user_ref			type	char	15
+field	itgl_jnl_type			type	char	1
+field	itgl_amount				type	money
+field	itgl_stat_flag			type	char	1
+field	itgl_id_no				type	composite
+			itgl_co_no,
+			itgl_br_no,
+			itgl_sort										index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	itgl_co_no			- Company number.
+	itgl_br_no			- Branch number.
+	itgl_sort			- Sort ( Delivery number. )
+	itgl_i_co_no		- Issuing company number.
+	itgl_i_br_no		- Issuing branch number.
+	itgl_r_co_no		- Receiving company number.
+	itgl_r_br_no		- Receiving branch number.
+	itgl_type			- I(ssue) R(eceipt).
+	itgl_ic_trans		- Y(es) / N(o)
+	itgl_hhbr_hash		- Link to inmr_hhbr_hash.
+	itgl_hhcc_hash		- Link to ccmr_hhcc_hash.
+	itgl_tran_date		- Transaction Date.
+	itgl_post_date		- Post date.
+	itgl_period_no		- Period number.
+	itgl_tran_type		- Transaction type.
+	itgl_sys_ref		- System ref.
+	itgl_narr			- Narrative.
+	itgl_user_ref		- User Ref.
+	itgl_jnl_type		- Jnl type.
+	itgl_amount			- Amount.
+	itgl_stat_flag		- Stat flag.
+}

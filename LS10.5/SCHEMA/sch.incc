@@ -1,0 +1,181 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.incc,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.incc)
+|  Schema Desc  : (Inventory Warehouse record (sometimes refered to as cost centre))
+|----------------------------------------------------------------------
+| $Log: sch.incc,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:49  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	incc
+
+field	incc_hhcc_hash			type	long		index	dups
+field	incc_hhbr_hash			type	long		index	dups
+field	incc_hhwh_hash			type	serial		index
+field	incc_sort				type	char	28
+field	incc_stocking_unit		type	char	4
+field	incc_location			type	char	10
+field	incc_qc_location		type	char	10
+field	incc_ff_option			type	char	1
+field	incc_ff_method			type	char	1
+field	incc_allow_repl			type	char	1
+field	incc_abc_code			type	char	1
+field	incc_abc_update			type	char	1
+field	incc_first_stocked		type	edate
+field	incc_wks_demand			type	float
+field	incc_pwks_demand		type	float
+field	incc_safety_stock		type	float
+field	incc_on_order			type	float
+field	incc_committed			type	float
+field	incc_backorder			type	float
+field	incc_forward			type	float
+field	incc_opening_stock		type	float
+field	incc_receipts			type	float
+field	incc_pur				type	float
+field	incc_issues				type	float
+field	incc_adj				type	float
+field	incc_sales				type	float
+field	incc_stake				type	float
+field	incc_freeze_date		type	edate
+field	incc_closing_stock		type	float
+field	incc_qc_qty				type	float
+field	incc_wo_qty_anti		type	float
+field	incc_ytd_receipts		type	float
+field	incc_ytd_pur			type	float
+field	incc_ytd_issues			type	float
+field	incc_ytd_adj			type	float
+field	incc_ytd_sales			type	float
+field	incc_c_1				type	float
+field	incc_c_2				type	float
+field	incc_c_3				type	float
+field	incc_c_4				type	float
+field	incc_c_5				type	float
+field	incc_c_6				type	float
+field	incc_c_7				type	float
+field	incc_c_8				type	float
+field	incc_c_9				type	float
+field	incc_c_10				type	float
+field	incc_c_11				type	float
+field	incc_c_12				type	float
+field	incc_c_val_1			type	money
+field	incc_c_val_2			type	money
+field	incc_c_val_3			type	money
+field	incc_c_val_4			type	money
+field	incc_c_val_5			type	money
+field	incc_c_val_6			type	money
+field	incc_c_val_7			type	money
+field	incc_c_val_8			type	money
+field	incc_c_val_9			type	money
+field	incc_c_val_10			type	money
+field	incc_c_val_11			type	money
+field	incc_c_val_12			type	money
+field	incc_c_prf_1			type	money
+field	incc_c_prf_2			type	money
+field	incc_c_prf_3			type	money
+field	incc_c_prf_4			type	money
+field	incc_c_prf_5			type	money
+field	incc_c_prf_6			type	money
+field	incc_c_prf_7			type	money
+field	incc_c_prf_8			type	money
+field	incc_c_prf_9			type	money
+field	incc_c_prf_10			type	money
+field	incc_c_prf_11			type	money
+field	incc_c_prf_12			type	money
+field	incc_dflt_bom			type	int
+field	incc_dflt_rtg			type	int
+field	incc_eoq				type	float
+field	incc_acc_mlt			type	float
+field	incc_lead_time			type	float
+field	incc_last_bom			type	int
+field	incc_last_rtg			type	int
+field	incc_qc_time			type	float
+field	incc_qc_centre			type	char	4
+field	incc_stat_flag			type	char	1
+field	incc_os_date			type	edate
+field	incc_os_ldate			type	edate
+field	timestamp				type	long
+field	incc_id_no				type	composite
+			incc_hhcc_hash,
+			incc_hhbr_hash							index
+field	incc_id_no_2			type	composite
+			incc_hhcc_hash,
+			incc_sort								index	dups
+field	incc_id_no_3			type	composite
+			incc_hhcc_hash,
+			incc_location,
+			incc_sort								index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	incc_hhcc_hash		-	Link to ccmr ( ccmr_hhcc_hash )
+	incc_hhbr_hash		-	Link to inmr ( inmr_hhmr_hash )
+	incc_hhwh_hash		-	Unique serial index.
+	incc_sort			-	Sort code to speed up reports.
+								inmr_class,
+								inmr_category,
+								inmr_item_no
+	incc_stocking_unit	-	Narrative stocking unit.
+	incc_location		-	Default location for item.
+	incc_qc_location	-	Default qc location for qc item.
+	incc_ff_option		-	DRP/FF option.
+ 								A(utomatic)
+					 			M(anual)
+								P(redetermined)
+	incc_ff_method		-	DRP/FF Method
+	incc_allow_repl		-	Allow stock replenishment.
+ 								I(nclude in rep reports )
+ 								E(xclude from rep reports )
+	incc_abc_code		-	ABC code. 
+	incc_abc_update		-	ABC code update (Y/N)
+	incc_first_stocked	-	First stock date of item in warehouse.
+	incc_wks_demand		-	Weeks demand in weeks.
+	incc_safety_stock	-	Safety stock in weeks.
+	incc_on_order		-	Stock on order.
+	incc_committed		-	Stock committed.
+	incc_backorder		-	Stock backordered.
+	incc_forward		-	Stock forward.
+	incc_opening_stock	-	Opening stock.
+	incc_receipts		-	Receipts. ( transfers in )
+	incc_pur			-	Purchases.
+	incc_issues			-	Issues.	  ( transfers out )
+	incc_adj			-	Stock Adjustments.
+	incc_sales			-	Stock Sales.
+	incc_stake			-	Stock take frozen value.
+	incc_closing_stock	-	Closing Stock.
+	incc_qc_qty			-	Quantity Requiring QC Checking.
+	incc_wo_qty_anti	-	Works Order Quantity Anticipated.
+	incc_ytd_receipts	-	Year to date Receipts.
+	incc_ytd_pur		-	Year to date Purchases.
+	incc_ytd_issues		-	Year to date issues.
+	incc_ytd_adj		-	Year to date adjustments.
+	incc_ytd_sales		-	Year to date sales.
+	incc_c_[12]			-	12 months consumption ( sales qty )
+	incc_c_val_[12]		-	12 months value       ( sales value )
+	incc_c_prf_[12]		-	12 months profit      ( sales profit )
+	incc_dflt_bom		-	Default BOM number.
+	incc_dflt_rtg		-	Default Routing number.
+	incc_eoq			-	Economic Order Quantity.
+	incc_acc_mlt		-	Accumulative Manufacturing Lead Time (ALT).
+	incc_lead_time		-	Manufacturing Lead Time (MLT) / Lead Time (LT).
+	incc_last_bom		-	Last BOM Number Used for ALT/LT & MLT Calculation.
+	incc_last_rtg		-	Last RTG Number Used for ALT/LT & MLT Calculation.
+	incc_qc_time		-	QC Checking Time (in weeks).
+	incc_qc_centre		-	QC Centre.
+	incc_stat_flag		-	Spare status flag.
+	incc_os_date		-	Out of stock date.
+	incc_os_ldate		-	Out of stock date.
+}

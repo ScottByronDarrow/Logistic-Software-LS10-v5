@@ -1,0 +1,24 @@
+#
+#  Termcap for VT200 terminal
+#
+vt200|vt200|vt200|vt200|vt200:\
+	:cd=\E[J:ce=\E[K:\
+	:cl=\E[;H\E[2J:\
+	:dc=\E[P:dl=\E[M:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[7m:se=\E[0m:\
+	:us=\E[9p:ue=\E[0p:\
+	:bx=lkmjxxqnwvtua`~ :\
+	:rv=\E[7m:re=\E[0m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(0:ge=\E(B:\
+	:fl=\E[7m:fe=\E[0m:\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:co#80:\
+	:cc=\E[>5h:cb=\E[>5l:\
+	:CM=\E[%i%d;%df:\
+	:HP=^P:\
+	:k0=\EOP:k1=\EOQ:k2=\EOR:k3=\EOS:k4=\E5:\
+	:k5=\E[17~:k6=\E[18~:k7=\E[19~:k8=\E[20~:k9=\E[21~:\
+	:kA=\E[23~:kB=\E[24~:kC=\E[25~:kD=\E[26~:kE=\E[28~:kF=\E[29~:\

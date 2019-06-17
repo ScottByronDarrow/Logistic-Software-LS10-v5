@@ -1,0 +1,64 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:22:06 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:22:06  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/03/27 09:50:10  scott
+#	Updated to fix core dump on some machines (always in windows).
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to adjust screen to look better with LS10-GUI
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	Updated to ensure "0xff" is used instead of "~" for end of range.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_hhop_hash
+	field tmop_op_name
+	field tmop_campaign_no
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_sman_code
+end
+
+table tspm
+	field tspm_hhcu_hash
+	field tspm_op_code
+end
+
+table tsxd
+	field tsxd_hhcu_hash
+	field tsxd_type
+	field tsxd_line_no
+	field tsxd_desc
+	field tsxd_stat_flag
+end
+

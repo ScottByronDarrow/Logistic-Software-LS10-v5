@@ -1,0 +1,32 @@
+Customers Maintenance Menu (ARMT)
+db_maint
+Customers Master Menu. <a> (1,2)
+menu MENUSYS/db_master.mdf
+Maintain Master File. <a> (1,2)
+db_mr_inpt~
+Maintain Bank Details. <a> (1,2)
+db_bk_inpt~
+Maintain Currency details. <a> (1,2)
+po_mnt_inp~C~
+Maintain Country / Freight details. <a> (1,2)
+po_mnt_inp~F~
+Maintain Statement Messages. <a> (1,2)
+db_stmtinp~S~
+Maintain Default Discounts. <a> (2,2)
+db_exdisinp~
+Maintain Setup Defaults. <a> (2,2)
+psl_default~C~
+Maintain Late Notices. <ERROR> (2,2)
+psl_rep_edit~/usr/ver9/LETTERS~
+Customers Letters Menu. >> <a> (2,1)
+pmenu MENUSYS/SUB_MENU/db_letter.mdf
+Customers Labels Menu. >> <ERROR> (2,2)
+pmenu MENUSYS/SUB_MENU/db_labels.mdf
+Customers Misc. Maintenance >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/db_misc.mdf
+((
+quadrant(6,6)
+quadrant(46,8)
+box(1,3,76,14)
+line(2,5,75)
+))

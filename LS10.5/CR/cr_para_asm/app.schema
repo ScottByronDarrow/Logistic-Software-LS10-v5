@@ -1,0 +1,51 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:03:31 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:03:31  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:23:59  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/23 01:12:09  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table dblh
+	field dblh_co_no
+	field dblh_par_code
+	field dblh_par_desc
+	field dblh_dblh_hash
+end
+
+table dbld
+	field dbld_dblh_hash
+	field dbld_line_no
+	field dbld_desc
+end
+
+table dbph
+	field dbph_co_no
+	field dbph_letter_code
+	field dbph_letter_desc
+	field dbph_dbph_hash
+end
+
+table dbpd
+	field dbpd_dbph_hash
+	field dbpd_dblh_hash
+	field dbpd_line_no
+end
+

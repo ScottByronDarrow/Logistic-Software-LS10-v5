@@ -1,0 +1,14 @@
+Buying and Selling Group Maintenance. (SUB)
+sk_grp_prce
+Stock Maintenance Menu. <a> (1,1)
+menu MENUSYS/sk_maint.mdf
+Maintain Buying  Group Codes <a> (1,1)
+sk_buygrp~N~
+Maintain Selling Group Codes <a> (1,1)
+sk_sellgrp~N~
+Delete Buying  Group Codes <a> (1,1)
+sk_buygrp~D~
+Delete Selling Group Codes <a> (1,1)
+sk_sellgrp~D~
+((
+))

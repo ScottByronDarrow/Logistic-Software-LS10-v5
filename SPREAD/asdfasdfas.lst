@@ -1,0 +1,600 @@
+ 000-000-0000-000000                                                       
+ 100-000-0000-000000                CURRENT ASSETS                         
+ 100-100-0000-000000                CASH & CASH EQU                        
+ 100-100-0001-000000                STD CHARTERED CURR A/C                 
+ 100-100-0002-000000                PETTY CASH HKD                         
+ 100-100-0003-000000                ABN CURRENT                            
+ 100-100-0004-000000                HSBC CURR A/C                          
+ 100-100-0005-000000                Special Time Deposit                   
+ 100-200-0000-000000                SHORT TERM INVESTMENT                  
+ 100-200-0001-000000                MARKETABLE SECRUITIES                  
+ 100-300-0000-000000                ACCOUNTS RECEIVABLE                    
+ 100-300-0001-000000                TRADE RECEIVABLES HKD                  
+ 100-300-0002-000000                NOTES RECEIVABLES HKD                  
+ 100-300-0003-000000                COV-TRADE RECEIVABLES H                
+ 100-300-0005-000000                ALLOWANCE FOR BAD DEBT                 
+ 100-300-0006-000000                ALLOWANCE FOR CREDIT                   
+ 100-350-0000-000000                INTERCO RECEIVABLE                     
+ 100-350-0001-000000                INTERCO REC -SHANGHAI H                
+ 100-400-0000-000000                OTHER RECEIVABLES                      
+ 100-400-0001-000000                EMPLOYEE ADVANCES HKD                  
+ 100-400-0001-000100                ADVANCE - ERIC HKD                     
+ 100-400-0001-000200                ADVANCE - PETER HKD                    
+ 100-400-0001-000300                ADVANCE - JOVE HKD                     
+ 100-400-0001-000400                ADVANCE - RAYMOND HKD                  
+ 100-400-0001-000500                ADVANCE - BONIEL HKD                   
+ 100-400-0001-000600                ADVANCE - ANTONY HKD                   
+ 100-400-0001-000700                ADVANCE - PHILIP HKD                   
+ 100-400-0001-000800                ADVANCE - JOHN HKD                     
+ 100-400-0001-000900                ADVANCE - TONY HKD                     
+ 100-400-0001-001000                ADVANCE - WILLIAM HKD                  
+ 100-400-0001-001100                ADVANCE - CK YEUNG HKD                 
+ 100-400-0001-001200                ADVANCE - KEITH HKD                    
+ 100-400-0001-001300                ADVANCE - ANTONIO HKD                  
+ 100-400-0001-001500                ADVANCE - OTHERS HKD                   
+ 100-400-0002-000000                VAT RECEIVABLES                        
+ 100-400-0003-000000                INTEREST RECEIVABLES                   
+ 100-400-0004-000000                OTHER RECEIVABLES                      
+ 100-400-0004-000100                RECEIVABLE -GIETC                      
+ 100-400-0004-000200                RECEIVABLE -JNPIEC                     
+ 100-400-0004-000300                RECEIVABLE - USD                       
+ 100-400-0004-001000                RECEIVABLE - OTHERS                    
+ 100-500-0000-000000                INVENTORY                              
+ 100-500-0001-000000                INVENTORIES                            
+ 100-500-0002-000000                GIT CHEMICALS                          
+ 100-500-0003-000000                GIT SYSTEMS                            
+ 100-500-0004-000000                GIT SUPPLIES                           
+ 100-500-0005-000000                GIT OTHERS                             
+ 100-500-0010-000000                WIP ESD                                
+ 100-500-0011-000000                WIP MIC PAC                            
+ 100-500-0020-000000                ALLOWANCE FOR OBSOLETED                
+ 100-600-0000-000000                PREPAYMENTS                            
+ 100-600-0001-000000                PREPAID INSURANCE                      
+ 100-600-0002-000000                COST OF SALES WH1                      
+ 100-600-0003-000000                PREPAID TAXES                          
+ 100-600-0010-000000                PREPAID OTHERS                         
+ 100-700-0000-000000                DEFERRED TAX ASSETS -CU                
+ 100-800-0000-000000                INTERCO RECEIVABLES                    
+ 150-000-0000-000000                FIXED ASSETS                           
+ 150-100-0000-000000                LAND AND BUILDINGS                     
+ 150-100-0001-000000                LAND                                   
+ 150-100-0002-000000                BUILDINGS                              
+ 150-200-0000-000000                MACHINERY AND EQUIP                    
+ 150-200-0001-000000                MACHINERY & EQUIP                      
+ 150-200-0002-000000                INSTAPAK SYSTEMS                       
+ 150-200-0003-000000                LEASEHOLD IMPROVEMENT                  
+ 150-200-0004-000000                VEHICLES                               
+ 150-200-0005-000000                COMPUTER                               
+ 150-200-0006-000000                FURNITURE & FIXTURE                    
+ 150-200-0010-000000                CONSTRCTION IN PROGRESS                
+ 150-210-0000-000000                ACC DEPRECIATION                       
+ 150-210-0001-000000                ACC. DEPN -LAND                        
+ 150-210-0002-000000                ACC. DEPN -BLDG                        
+ 150-210-0011-000000                ACC. DEPN -M&E                         
+ 150-210-0012-000000                ACC. DEPN -INSTAPAK                    
+ 150-210-0013-000000                ACC. DEPN -LEASE IMP                   
+ 150-210-0014-000000                ACC. DEPN -VEHICLES                    
+ 150-210-0015-000000                ACC. DEPN -COMPUTERS                   
+ 150-210-0016-000000                ACC, DEPN -F&F                         
+ 150-300-0000-000000                PATENT & GOODWILL                      
+ 150-400-0000-000000                INVESTMENT /LOAN TO AFF                
+ 150-400-0001-000000                INVESTMENT IN SASPL                    
+ 150-400-0002-000000                LOAN TO SHANGHAI                       
+ 150-400-0003-000000                LOAN TO CRYOVAC                        
+ 150-500-0000-000000                OTHERS ASSETS                          
+ 150-500-0001-000000                RENTAL DEPOSIT                         
+ 150-500-0002-000000                UTILTIIES DEPOSIT                      
+ 150-500-0003-000000                OTHER REFUNDABLE DEPOSI                
+ 150-500-0004-000000                DEFERRED STOCK AWARD                   
+ 150-500-0005-000000                DEFERRED SOFTWARE                      
+ 150-500-0006-000000                ACC. AMORT DEF SOFTWARE                
+ 150-500-0007-000000                DEFERRED EXPENSES                      
+ 150-700-0000-000000                LEASED SYSTEMS                         
+ 150-700-0001-000000                INSTAPAK SYSTEM ON LOAN                
+ 150-700-0002-000000                PPD SYSTEM ON LOAN                     
+ 150-710-0000-000000                ACC DEPN -LOANED SYSTEM                
+ 150-710-0001-000000                ACC. DEPN -LOANED EPD                  
+ 150-710-0002-000000                ACC. DEPN -LOANED PPD                  
+ 200-000-0000-000000                CURRENT LIAB                           
+ 200-100-0000-000000                NOTES PAYABLE/S-T DEBTS                
+ 200-100-0001-000000                HSBC BANK OVERDRAFT                    
+ 200-200-0000-000000                CURR PORTION OF L-t DEB                
+ 200-200-0001-000000                CURR PORTION OF L-T DEB                
+ 200-300-0000-000000                ACCOUNTS PAYABLE                       
+ 200-300-0001-000000                A/C PAYABLE -BILLED                    
+ 200-300-0002-000000                A/C PAYABLE -UNBILLED                  
+ 200-300-0003-000000                PURCHASE CLEARING                      
+ 200-400-0000-000000                ACCRUED PAYROLL                        
+ 200-400-0001-000000                UNPAID SALARIES                        
+ 200-400-0002-000000                ACCRUED COMMISSION                     
+ 200-400-0003-000000                ACCRUED 13 MONTH PAY                   
+ 200-400-0004-000000                ACCRUED MBO                            
+ 200-400-0005-000000                ACCRUED 14 MONTH PAY                   
+ 200-410-0000-000000                ACCRUED INTEREST                       
+ 200-410-0001-000000                ACCRUED INTEREST                       
+ 200-420-0000-000000                ACCRUED OTHERS                         
+ 200-420-0001-000000                ACCRUED AUDIT FEE                      
+ 200-420-0002-000000                ACCRUED TRADE COMMISSIO                
+ 200-420-0003-000000                ACCRUED OTHERS                         
+ 200-500-0000-000000                INCOME TAX PAYABLE                     
+ 200-500-0001-000000                INCOME TAX PAYABLE - CU                
+ 200-500-0002-000000                INCOME TAX PAYABLE -PRI                
+ 200-600-0000-000000                DEFERRED INCOME                        
+ 200-600-0001-000000                ADVANCE RECEIPT                        
+ 200-600-0002-000000                SUSPENSE ACCOUNT                       
+ 200-700-0000-000000                INTERCO PAYABLE                        
+ 200-700-0001-000000                INTERCO PAY -SHANGHAI H                
+ 250-000-0000-000000                LONG TERM LIAB                         
+ 250-100-0000-000000                LONG TERM BORROWINGS                   
+ 250-200-0000-000000                DEFERRED TAX LIAB                      
+ 250-300-0000-000000                LOAN FM AFF./ OTH LT DE                
+ 250-300-0001-000000                RETIREMENT ACCRUALS                    
+ 250-300-0002-000000                DEFERRED COMPENSATION                  
+ 300-000-0000-000000                EQUITY                                 
+ 300-100-0000-000000                COMMON STOCK                           
+ 300-200-0000-000000                PAID IN CAPITAL                        
+ 300-500-0000-000000                RETAINED EARNINGS                      
+ 300-600-0000-000000                DIVIDENDS PAID                         
+ 400-000-0000-000000                GROSS SALES                            
+ 400-100-0000-000000                SALES -LOCAL                           
+ 400-100-0001-000000                GROSS SALES                            
+ 400-100-0021-000000                SALES -LOCAL, MIC PAC                  
+ 400-100-0022-000000                SALES -LOCAL, RIPADFIL                 
+ 400-100-0023-000000                SALES -LOCAL, ESD                      
+ 400-100-0024-000000                SALES -LOCAL,JIFFY PADD                
+ 400-100-0025-000000                SALES -LOCAL, JIFFY LIT                
+ 400-100-0026-000000                SALES -LOCAL, VOIDKRAFT                
+ 400-100-0027-000000                SALES -LOCAL, PPD EQUIP                
+ 400-100-0028-000000                SALES -LOCAL, COURIER                  
+ 400-100-0029-000000                SALES -LOCAL, TAMP EVI                 
+ 400-100-0030-000000                SALES -LOCAL, PLANK                    
+ 400-100-0031-000000                SALES -LOCAL, PLOYLAM                  
+ 400-100-0032-000000                SALES -LOCAL, VOID PAK                 
+ 400-100-0033-000000                SALES -LOCAL, KORRUV                   
+ 400-100-0034-000000                SALES -LOCAL, HDPE                     
+ 400-100-0035-000000                SALES -LOCAL, CELL-AIRE                
+ 400-100-0036-000000                SALES -LOCAL, FILL AIR                 
+ 400-100-0045-000000                SALES -LOCAL, OTHERS                   
+ 400-100-0101-000000                SALES -LOCAL, CHEMICAL                 
+ 400-100-0102-000000                SALES -LOCAL, EPD EQUIP                
+ 400-100-0103-000000                SALES -LOCAL, PARTS/SEV                
+ 400-100-0104-000000                SALES -LOCAL, PRE MLDG                 
+ 400-100-0105-000000                SALES -LOCAL, FILM                     
+ 400-100-0201-000000                SALES -LOCAL, DIR LOC                  
+ 400-100-0202-000000                SALES -LOCAL, PAD LOC                  
+ 400-100-0203-000000                SALES -LOCAL, VSP FILM                 
+ 400-100-0204-000000                SALES -LOCAL, PERFLEX                  
+ 400-100-0205-000000                SALES -LOCAL, TUFFLEX                  
+ 400-100-0206-000000                SALES -LOCAL, OTHER FPD                
+ 400-100-0207-000000                SALES -LOCAL, INTACT M/                
+ 400-100-0208-000000                SALES -LOCAL, TUFFAV                   
+ 400-200-0000-000000                SALES -INDENT                          
+ 400-200-0021-000000                SALES -INDENT, MIC PAC                 
+ 400-200-0022-000000                SALES -INDENT, RIPADFIL                
+ 400-200-0023-000000                SALES -INDENT, ESD                     
+ 400-200-0024-000000                SALE -INDENT,JIFFY PADD                
+ 400-200-0025-000000                SALES -INDENT, JIFFY LI                
+ 400-200-0026-000000                SALES -INDENT, VOIDKRAF                
+ 400-200-0027-000000                SALES -INDENT, PPD EQUI                
+ 400-200-0028-000000                SALES -INDENT, COURIER                 
+ 400-200-0029-000000                SALES -INDENT, TAMP EVI                
+ 400-200-0030-000000                SALES -INDENT, PLANK                   
+ 400-200-0031-000000                SALES -INDENT, POLYLAM                 
+ 400-200-0032-000000                SALES -INDENT, VOID PAK                
+ 400-200-0033-000000                SALES -INDENT KORRUV                   
+ 400-200-0034-000000                SALES -INDENT, HDPE                    
+ 400-200-0035-000000                SALES -INDENT, CELL-AIR                
+ 400-200-0036-000000                SALES -INDENT, FILL AIR                
+ 400-200-0045-000000                SALES -INDENT, OTHERS                  
+ 400-200-0101-000000                SALES -INDENT, CHEMICAL                
+ 400-200-0102-000000                SALES -INDENT, EPD EQUI                
+ 400-200-0103-000000                SALES -INDENT, PARTS/SE                
+ 400-200-0104-000000                SALES -INDENT, PRE MLDG                
+ 400-200-0105-000000                SALES -INDENT, FILM                    
+ 400-200-0201-000000                SALES -INDENT, DIR LOC                 
+ 400-200-0202-000000                SALES -INDENT, PAD LOC                 
+ 400-200-0203-000000                SALES -INDENT, VSP FILM                
+ 400-200-0204-000000                SALES -INDENT, PERFLEX                 
+ 400-200-0205-000000                SALES -INDENT, TUFFLEX                 
+ 400-200-0206-000000                SALES -INDENT, OTHER FP                
+ 400-200-0207-000000                SALES -INDENT, INTACT M                
+ 400-200-0208-000000                SALES -INDENT, TUFFAV                  
+ 400-300-0000-000000                SALES -I'CO                            
+ 400-300-0021-000000                SALES -I'CO, MIC PAC                   
+ 400-300-0022-000000                SALES -I'CO, RIPADFIL                  
+ 400-300-0023-000000                SALES -I'CO, ESD                       
+ 400-300-0024-000000                SALES -I'CO, JIFFY PADD                
+ 400-300-0025-000000                SALES -I'CO, JIFFY LITE                
+ 400-300-0026-000000                SALES -I'CO, VOIDKRAFT                 
+ 400-300-0027-000000                SALES -I'CO, PPD EQUIP                 
+ 400-300-0028-000000                SALES -I'CO, COURIER                   
+ 400-300-0029-000000                SALES -I'CO, TAMP EVI                  
+ 400-300-0030-000000                SALES -I'CO, PLANK                     
+ 400-300-0031-000000                SALES -I'CO, POLYLAM                   
+ 400-300-0032-000000                SALES -I'CO, VOID PAK                  
+ 400-300-0033-000000                SAELS -I'CO, KORRUV                    
+ 400-300-0034-000000                SALES -I'CO, HDPE                      
+ 400-300-0035-000000                SALES -I'CO, CELL-AIRE                 
+ 400-300-0036-000000                SALES -I'CO, FILL AIR                  
+ 400-300-0045-000000                SALES -I'CO, OTHERS                    
+ 400-300-0101-000000                SALES -I'CO, CHEMICAL                  
+ 400-300-0102-000000                SALES -I'CO, EPD EQUIP                 
+ 400-300-0103-000000                SALES -I'CO, PARTS/SEV                 
+ 400-300-0104-000000                SALES -I'CO, PRE MLDG                  
+ 400-300-0105-000000                SALES -I'CO, FILM                      
+ 400-300-0201-000000                SALES -I'CO, DIR LOC                   
+ 400-300-0202-000000                SALES -I'CO, PAD LOC                   
+ 400-300-0203-000000                SALES -I'CO, VSP FILM                  
+ 400-300-0204-000000                SALES -I'CO, PERFLEX                   
+ 400-300-0205-000000                SALES -I'CO, TUFFLEX                   
+ 400-300-0206-000000                SALES -I'CO, OTHER FPD                 
+ 400-300-0207-000000                SALES -I'CO, INTACT M/C                
+ 400-300-0208-000000                SALES -I'CO, TUFFAV                    
+ 450-000-0000-000000                FREIGHT                                
+ 450-100-0000-000000                FRT -LOCAL                             
+ 450-100-0021-000000                FRT -LOCAL, MIC PAC                    
+ 450-100-0022-000000                FRT -LOCAL, RIPADFIL                   
+ 450-100-0023-000000                FRT -LOCAL, ESD                        
+ 450-100-0024-000000                FRT -LOCAL, JIFFY PADDE                
+ 450-100-0025-000000                FRT -LOCAL, JIFFY LITE                 
+ 450-100-0026-000000                FRT -LOCAL, VOIDKRAFT                  
+ 450-100-0027-000000                FRT -LOCAL, PPD EQUIP                  
+ 450-100-0028-000000                FRT -LOCAL, COURIER                    
+ 450-100-0029-000000                FRT -LOCAL, TAMP EVI                   
+ 450-100-0030-000000                FRT -LOCAL, PLANK                      
+ 450-100-0031-000000                FRT -LOCAL, POLYLAM                    
+ 450-100-0032-000000                FRT -LOCAL, VOID PAK                   
+ 450-100-0033-000000                FRT -LOCAL, KORRUV                     
+ 450-100-0034-000000                FRT -LOCAL, HDPE                       
+ 450-100-0035-000000                FRT -LOCAL, CELL-AIRE                  
+ 450-100-0036-000000                FRT -LOCAL, FILL AIR                   
+ 450-100-0045-000000                FRT -LOCAL, OTHERS                     
+ 450-100-0101-000000                FRT -LOCAL, CHEMICAL                   
+ 450-100-0102-000000                FRT -LOCAL, EPD EQUIP                  
+ 450-100-0103-000000                FRT -LOCAL, PARTS/SEV                  
+ 450-100-0104-000000                FRT -LOCAL, PRE MLDG                   
+ 450-100-0105-000000                FRT -LOCAL, FILM                       
+ 450-100-0201-000000                FRT -LOCAL, DIR LOC                    
+ 450-100-0202-000000                FRT -LOCAL, PAD LOC                    
+ 450-100-0203-000000                FRT -LOCAL, VSP FILM                   
+ 450-100-0204-000000                FRT -LOCAL, PERFLEX                    
+ 450-100-0205-000000                FRT -LOCAL, TUFFLEX                    
+ 450-100-0206-000000                FRT -LOCAL, OTHER FPD                  
+ 450-100-0207-000000                FRT -LOCAL, INTACT M/C                 
+ 450-100-0208-000000                FRT -LOCAL, TUFFAV                     
+ 450-200-0000-000000                FRT -INDENT                            
+ 450-200-0021-000000                FRT -INDENT, MIC PAC                   
+ 450-200-0022-000000                FRT -INDENT, RIPADFIL                  
+ 450-200-0023-000000                FRT -INDENT, ESD                       
+ 450-200-0024-000000                FRT -INDENT, JIFFY PADD                
+ 450-200-0025-000000                FRT -INDENT, JIFFY LITE                
+ 450-200-0026-000000                FRT -INDENT, VOIDKRAFT                 
+ 450-200-0027-000000                FRT -INDENT, PPD EQUIP                 
+ 450-200-0028-000000                FRT -INDENT, COURIER                   
+ 450-200-0029-000000                FRT -INDENT, TAMP EVI                  
+ 450-200-0030-000000                FRT -INDENT, PLANK                     
+ 450-200-0031-000000                FRT -INDENT,  POLYLAM                  
+ 450-200-0032-000000                FRT -INDENT, VOID PAK                  
+ 450-200-0033-000000                FRT -INDENT, KORRUV                    
+ 450-200-0034-000000                FRT -INDENT, HDPE                      
+ 450-200-0035-000000                FRT -INDENT, CELL-AIRE                 
+ 450-200-0036-000000                FRT -INDENT, FILL AIR                  
+ 450-200-0045-000000                FRT -INDENT, OTHERS                    
+ 450-200-0101-000000                FRT -INDENT, CHEMICAL                  
+ 450-200-0102-000000                FRT -INDENT, EPD EQUIP                 
+ 450-200-0103-000000                FRT -INDENT, PARTS/SEV                 
+ 450-200-0104-000000                FRT -INDENT, PRE MLDG                  
+ 450-200-0105-000000                FRT -INDENT, FILM                      
+ 450-200-0201-000000                FRT -INDENT, DIR LOC                   
+ 450-200-0202-000000                FRT -INDENT, PAD LOC                   
+ 450-200-0203-000000                FRT -INDENT, VSP FILM                  
+ 450-200-0204-000000                FRT -INDENT, PERFLEX                   
+ 450-200-0205-000000                FRT -INDENT, TUFFLEX                   
+ 450-200-0206-000000                FRT -INDENT, OTHER FPD                 
+ 450-200-0207-000000                FRT -INDENT, INTACT M/C                
+ 450-200-0208-000000                FRT -INDENT, TUFFAV                    
+ 450-300-0000-000000                FRT -I'CO                              
+ 450-300-0021-000000                FRT -I'CO, MIC PAC                     
+ 450-300-0022-000000                FRT -I'CO, RIPADFIL                    
+ 450-300-0023-000000                FRT -I'CO, ESD                         
+ 450-300-0024-000000                FRT -I'CO, JIFFY PADDED                
+ 450-300-0025-000000                FRT -I'CO, JIFFY LITE                  
+ 450-300-0026-000000                FRT -I'CO, VOIDKRAFT                   
+ 450-300-0027-000000                FRT -I'CO, PPD EQUIP                   
+ 450-300-0028-000000                FRT -I'CO, COURIER                     
+ 450-300-0029-000000                FRT -I'CO, TAMP EVI                    
+ 450-300-0030-000000                FRT -I'CO, PLANK                       
+ 450-300-0031-000000                FRT -I'CO, POLYLAM                     
+ 450-300-0032-000000                FRT -I'CO, VOID PAK                    
+ 450-300-0034-000000                FRT -I'CO, HDPE                        
+ 450-300-0035-000000                FRT -I'CO, CELL-AIRE                   
+ 450-300-0036-000000                FRT -I'CO, FILL AIR                    
+ 450-300-0045-000000                FRT -I'CO, OTHERS                      
+ 450-300-0101-000000                FRT -I'CO, CHEMICAL                    
+ 450-300-0102-000000                FRT -I'CO, EPD EQUIP                   
+ 450-300-0103-000000                FRT -I'CO, PARTS/SEV                   
+ 450-300-0104-000000                FRT -I'CO, PRE MLDG                    
+ 450-300-0105-000000                FRT -I'CO, FILM                        
+ 450-300-0201-000000                FRT -I'CO, DIR LOC                     
+ 450-300-0202-000000                FRT -I'CO, PAD LOC                     
+ 450-300-0203-000000                FRT -I'CO, VSP FILM                    
+ 450-300-0204-000000                FRT -I'CO, PERFLEX                     
+ 450-300-0205-000000                FRT -I'CO, TUFFLEX                     
+ 450-300-0206-000000                FRT -I'CO, OTHER FPD                   
+ 450-300-0207-000000                FRT -I'CO, INTACT M/C                  
+ 450-300-0208-000000                FRT -I'CO, TUFFAV                      
+ 500-000-0000-000000                COST OF GOODS SOLD                     
+ 500-100-0000-000000                COGS -LOCAL                            
+ 500-100-0021-000000                COGS -LOCAL, MIC PAC                   
+ 500-100-0022-000000                COGS -LOCAL, RIPADFIL                  
+ 500-100-0023-000000                COGS -LOCAL, ESD                       
+ 500-100-0024-000000                COGS -LOCAL, JIFFY PADD                
+ 500-100-0025-000000                COGS -LOCAL, JIFFY LITE                
+ 500-100-0026-000000                COGS -LOCAL, VOIDKRAFT                 
+ 500-100-0027-000000                COGS -LOCAL, PPD EQUIP                 
+ 500-100-0028-000000                COGS -LOCAL, COURIER                   
+ 500-100-0029-000000                COGS -LOCAL, TAMP EVI                  
+ 500-100-0030-000000                COGS -LOCAL, PLANK                     
+ 500-100-0031-000000                COGS -LOCAL, POLYLAM                   
+ 500-100-0032-000000                COGS -LOCAL, VOID PAK                  
+ 500-100-0033-000000                COGS -LOCAL, KORRUV                    
+ 500-100-0034-000000                COGS -LOCAL, HDPE                      
+ 500-100-0035-000000                COGS -LOCAL, CELL-AIRE                 
+ 500-100-0036-000000                COGS -LOCAL, FILL AIR                  
+ 500-100-0045-000000                COGS -LOCAL, OTHERS                    
+ 500-100-0101-000000                COGS -LOCAL, CHEMICAL                  
+ 500-100-0102-000000                COGS -LOCAL, EPD EQUIP                 
+ 500-100-0103-000000                COGS -LOCAL, PARTS/SEV                 
+ 500-100-0104-000000                COGS -LOCAL, PRE MLDG                  
+ 500-100-0105-000000                COGS -LOCAL, FILM                      
+ 500-100-0201-000000                COGS -LOCAL, DIR LOC                   
+ 500-100-0202-000000                COGS -LOCAL, PAD LOC                   
+ 500-100-0203-000000                COGS -LOCAL, VSP FILM                  
+ 500-100-0204-000000                COGS -LOCAL, PERFLEX                   
+ 500-100-0205-000000                COGS -LOCAL, TUFFLEX                   
+ 500-100-0206-000000                COGS -LOCAL, OTHER FPD                 
+ 500-100-0207-000000                COGS -LOCAL, INTACT M/C                
+ 500-100-0208-000000                COGS -LOCAL, TUFFAV                    
+ 500-200-0000-000000                COGS -INDENT                           
+ 500-200-0021-000000                COGS -INDENT, MIC PAC                  
+ 500-200-0022-000000                COGS -INDENT, RIPADFIL                 
+ 500-200-0023-000000                COGS -INDENT, ESD                      
+ 500-200-0024-000000                COGS -INDENT, JIFFY PAD                
+ 500-200-0025-000000                COGS -INDENT, JIFFY LIT                
+ 500-200-0026-000000                COGS -INDENT, VOIDKRAFT                
+ 500-200-0027-000000                COGS -INDENT, PPD EQUIP                
+ 500-200-0028-000000                COGS -INDENT, COURIER                  
+ 500-200-0029-000000                COGS -INDENT, TAMP EVI                 
+ 500-200-0030-000000                COGS -INDENT, PLANK                    
+ 500-200-0031-000000                COGS -INDENT, POLYLAM                  
+ 500-200-0032-000000                COGS -INDENT, VOID PAK                 
+ 500-200-0033-000000                COGS -INDENT, KORRUV                   
+ 500-200-0034-000000                COGS -INDENT, HDPE                     
+ 500-200-0035-000000                COGS -INDENT, CELL-AIRE                
+ 500-200-0036-000000                COGS -INDENT, FILL AIR                 
+ 500-200-0045-000000                COGS -INDENT, OTHERS                   
+ 500-200-0101-000000                COGS -INDENT, CHEMICAL                 
+ 500-200-0102-000000                COGS -INDENT, EPD EQUIP                
+ 500-200-0103-000000                COGS -INDENT, PARTS/SEV                
+ 500-200-0104-000000                COGS -INDENT, PRE MLDG                 
+ 500-200-0105-000000                COGS -INDENT, FILM                     
+ 500-200-0201-000000                COGS -INDENT, DIR LOC                  
+ 500-200-0202-000000                COGS -INDENT, PAD LOC                  
+ 500-200-0203-000000                COGS -INDENT, VSP FILM                 
+ 500-200-0204-000000                COGS -INDENT, PERFLEX                  
+ 500-200-0205-000000                COGS -INDENT, TUFFLEX                  
+ 500-200-0206-000000                COGS -INDENT, OTHER FPD                
+ 500-200-0207-000000                COGS -INDENT, INTACT M/                
+ 500-200-0208-000000                COGS -INDENT, TUFFAV                   
+ 500-300-0000-000000                COGS I'CO                              
+ 500-300-0021-000000                COGS I'CO, MIC PAC                     
+ 500-300-0022-000000                COGS I'CO, RIPADFIL                    
+ 500-300-0023-000000                COGS I'CO, ESD                         
+ 500-300-0024-000000                COGS I'CO, JIFFY PADDED                
+ 500-300-0025-000000                COGS I'CO, JIFFY LITE                  
+ 500-300-0026-000000                COGS I'CO, VOIDKRAFT                   
+ 500-300-0027-000000                COGS I'CO, PPD EQUIP                   
+ 500-300-0028-000000                COGS -I'CO, COURIER                    
+ 500-300-0029-000000                COGS -I'CO, TAMP EVI                   
+ 500-300-0030-000000                COGS I'CO, PLANK                       
+ 500-300-0031-000000                COGS I'CO, POLYLAM                     
+ 500-300-0032-000000                COGS I'CO, VOID PAK                    
+ 500-300-0033-000000                COGS I'CO, KORRUV                      
+ 500-300-0034-000000                COGS I'CO, HDPE                        
+ 500-300-0035-000000                COGS I'CO, CELL-AIRE                   
+ 500-300-0036-000000                COGS I'CO, FILL AIR                    
+ 500-300-0045-000000                COGS I'CO, OTHERS                      
+ 500-300-0101-000000                COGS I'CO, CHEMICAL                    
+ 500-300-0102-000000                COGS I'CO, EPD EQUIP                   
+ 500-300-0103-000000                COGS I'CO, PARTS/SEV                   
+ 500-300-0104-000000                COGS I'CO, PRE MLDG                    
+ 500-300-0105-000000                COGS I'CO, FILM                        
+ 500-300-0201-000000                COGS I'CO, DIR LOC                     
+ 500-300-0202-000000                COGS I'CO, PAD LOC                     
+ 500-300-0203-000000                COGS I'CO, VSP FILM                    
+ 500-300-0204-000000                COGS I'CO, PERFLEX                     
+ 500-300-0205-000000                COGS I'CO, TUFFLEX                     
+ 500-300-0206-000000                COGS I'CO, OTHER FPD                   
+ 500-300-0207-000000                COGS -I'CO, INTACT M/C                 
+ 500-300-0208-000000                COGS -I'CO, TUFFAV                     
+ 510-000-0000-000000                COST OF GOODS MANF.                    
+ 510-101-0000-000000                WIP DIRECT MATERIAL COS                
+ 510-102-0000-000000                WIP DIRECT LABOUR COSTS                
+ 510-103-0000-000000                WIP DIRECT MACHINE COST                
+ 510-104-0000-000000                WIP DIRECT QC COSTS                    
+ 510-105-0000-000000                WIP DIRECT SPECIAL COST                
+ 510-106-0000-000000                WIP DIRECT OTHER COSTS                 
+ 510-107-0000-000000                WIP FOH LABOUR COSTS                   
+ 510-108-0000-000000                WIP FOH MACHINE COSTS                  
+ 510-109-0000-000000                WIP FOH QC COSTS                       
+ 510-110-0000-000000                WIP FOH SPECIAL COSTS                  
+ 510-111-0000-000000                WIP FOH OTHER COSTS                    
+ 510-201-0000-000000                REC DIRECT LABOUR COSTS                
+ 510-202-0000-000000                REC DIRECT MACHINE COST                
+ 510-203-0000-000000                REC DIRECT QC COSTS                    
+ 510-204-0000-000000                REC DIRECT SPECIAL COST                
+ 510-205-0000-000000                REC DIRECT OTHER COSTS                 
+ 510-206-0000-000000                REC FOH LABOUR COSTS                   
+ 510-207-0000-000000                REC FOH MACHINE COSTS                  
+ 510-208-0000-000000                REC FOH QC COSTS                       
+ 510-209-0000-000000                REC FOH SPECIAL COSTS                  
+ 510-210-0000-000000                REC FOH OTHER COSTS                    
+ 510-301-0000-000000                MAN VAR DIR MATL COSTS                 
+ 510-302-0000-000000                MAN VAR DIR LABOUR COST                
+ 510-303-0000-000000                MAN VAR DIR MACHINE COS                
+ 510-304-0000-000000                MAN VAR DIR QC COSTS                   
+ 510-305-0000-000000                MAN VAR DIR SPECIAL COS                
+ 510-306-0000-000000                MAN VAR DIR OTHER COSTS                
+ 510-307-0000-000000                MAN VAR FOH LABOUR COST                
+ 510-308-0000-000000                MAN VAR FOH MACHINE COS                
+ 510-309-0000-000000                MAN VAR FOH QC COSTS                   
+ 510-310-0000-000000                MAN VAR FOH SPECIAL COS                
+ 510-311-0000-000000                MAN VAR FOH OTHER COSTS                
+ 550-000-0000-000000                COGS VARIANCE                          
+ 550-100-0000-000000                VAR -LOCAL                             
+ 550-100-0021-000000                VAR -LOCAL, MIC PAC                    
+ 550-100-0023-000000                VAR -LOCAL, ESD                        
+ 550-100-0101-000000                VAR -LOCAL, CHEMICAL                   
+ 550-100-0104-000000                VAR -LOCAL, PRE MLDG                   
+ 550-100-0205-000000                VAR -LOCAL, TUFFLEX                    
+ 550-200-0000-000000                VAR -INDENT                            
+ 550-200-0021-000000                VAR -INDENT, MIC PAC                   
+ 550-300-0000-000000                VAR -I'CO                              
+ 550-300-0021-000000                VAR -I'CO, MIC PAC                     
+ 600-000-0000-000000                MFG EXPENSES                           
+ 600-100-0000-000000                MFG                                    
+ 600-100-0001-000000                MFG, SALARIES & WAGES                  
+ 600-100-0002-000000                MFG, PART TIME HELP                    
+ 600-100-0003-000000                MFG, MAINTENANCE LABOUR                
+ 600-100-0004-000000                MFG, OVERTIME                          
+ 600-100-0005-000000                MFG, BENEFITS                          
+ 600-100-0006-000000                MFG, PROFIT SHARING                    
+ 600-100-0007-000000                MFG, BONUSES                           
+ 600-100-0008-000000                MFG, TRAVEL & ENTERTAIN                
+ 600-100-0008-010000                MFG, TRAVEL                            
+ 600-100-0008-020000                MFG, ENTERTAINMENT                     
+ 600-100-0008-030000                MFG, FOREIGN TRAVEL                    
+ 600-100-0008-040000                MFG, FOREIGN TRAINING                  
+ 600-100-0009-000000                MFG, PERSONNEL                         
+ 600-100-0010-000000                MFG, EDUCATION                         
+ 600-100-0011-000000                MFG, MEETINGS                          
+ 600-100-0012-000000                MFG, CONSULTANTS                       
+ 600-100-0013-000000                MFG, OFFICE SUPPLIES                   
+ 600-100-0014-000000                MFG, DUE & SUBSCRIPTION                
+ 600-100-0015-000000                MFG, POSTAGE                           
+ 600-100-0016-000000                MFG, TELEPHONE                         
+ 600-100-0017-000000                MFG, MACHINE LEASE                     
+ 600-100-0018-000000                MFG, SAFTY                             
+ 600-100-0019-000000                MFG, REPAIR & MAINTENAN                
+ 600-100-0020-000000                MGF, QUALITY CONTROL                   
+ 600-100-0021-000000                MFG, INSURANCE                         
+ 600-100-0022-000000                MFG, RENT/FALCILITY                    
+ 600-100-0023-000000                MFG, HEAT LIGHT & POWER                
+ 600-100-0024-000000                MFG, PLANT SECRUITY                    
+ 600-100-0025-000000                MFG, CLEANING                          
+ 600-100-0026-000000                MFG, TAXES -PERSONAL PR                
+ 600-100-0027-000000                MFG, TAX -REAL ESTATE                  
+ 600-100-0028-000000                MFG, DEP'N -M&E                        
+ 600-100-0029-000000                MFG, DEP'N -F&F                        
+ 600-100-0030-000000                MFG, DEP'N BLDG                        
+ 600-100-0031-000000                MFG, DEP'N -VEHICLES                   
+ 600-100-0032-000000                MFG, DEP'N - LAND IMPRO                
+ 600-100-0033-000000                MFG, AMORT. -LEASEHOLD                 
+ 600-100-0034-000000                MFG, OUTSIDE SERVICES                  
+ 600-100-0035-000000                MFG, OUTSIDE STORAGE                   
+ 600-100-0036-000000                MFG, FREIGHT MISC                      
+ 610-000-0000-000000                MKTG EXPENSES                          
+ 610-100-0000-000000                MKTG                                   
+ 610-100-0001-000000                MKTG, SALARIES                         
+ 610-100-0001-010000                MKTG, SALARIES - HK                    
+ 610-100-0001-020000                MKTG, SALARIES - SHANGH                
+ 610-100-0002-000000                MKTG, COMMISSION                       
+ 610-100-0003-000000                MKTG, PART-TIME HELP                   
+ 610-100-0004-000000                MKTG, OVERTIME                         
+ 610-100-0005-000000                MKTG, BENEFITS                         
+ 610-100-0005-010000                MKTG, BENEFITS - HK                    
+ 610-100-0005-020000                MKTG, BENEFITS - SHANGH                
+ 610-100-0006-000000                MKTG, PROFIT SHARING                   
+ 610-100-0007-000000                MKTG, BONUS                            
+ 610-100-0007-010000                MKTG, BONUS - HK                       
+ 610-100-0007-020000                MKTG, BONUS - SHANGHAI                 
+ 610-100-0008-000000                MKTG, T&E -ADMIN                       
+ 610-100-0008-010000                MKTG, TRAVEL & AUTO                    
+ 610-100-0008-020000                MKTG, ENTERTAINMENT                    
+ 610-100-0008-030000                MKTG, FOREIGN TRAVEL                   
+ 610-100-0008-040000                MKTG, FOREIGN TRAINING                 
+ 610-100-0009-000000                MKTG, T&E -SALES                       
+ 610-100-0009-010000                MKTG, TRAVEL & AUTO                    
+ 610-100-0009-020000                MKTG, ENTERTAINMENT                    
+ 610-100-0009-030000                MKTG, FOREIGN TRAVEL                   
+ 610-100-0009-040000                MKTG, FOREIGN TRAINING                 
+ 610-100-0009-050000                MKTG, T&E - SHANGHAI                   
+ 610-100-0010-000000                MKTG, PERSONNEL                        
+ 610-100-0011-000000                MKTG, EDUCATION                        
+ 610-100-0012-000000                MKTG, OFFICE SUPPLIES                  
+ 610-100-0013-000000                MKTG, DUE & SUB                        
+ 610-100-0014-000000                MKTG, POSTAGE                          
+ 610-100-0015-000000                MKTG, MACHINE LEASE                    
+ 610-100-0016-000000                MKTG, TELEPHONE                        
+ 610-100-0016-010000                MKTG, TELEPHONE - HK                   
+ 610-100-0016-020000                MKTG, TELEPHONE -SHANGH                
+ 610-100-0017-000000                MKTG, PATENT LEGAL                     
+ 610-100-0018-000000                MKTG, RENT/FACILITIES                  
+ 610-100-0019-000000                MKTG, HEAT, LIGHT & POW                
+ 610-100-0020-000000                MKTG, INSURANCE                        
+ 610-100-0021-000000                MKTG, TAX -REAL ESTATE                 
+ 610-100-0022-000000                MKTG, DEP'N -M&E                       
+ 610-100-0023-000000                MKTG, DEP'N -F&F                       
+ 610-100-0024-000000                MKTG, AMORT -LEASEHOLD                 
+ 610-100-0025-000000                MKTG, PATENT AMORT                     
+ 610-100-0026-000000                MKTG, OUTSIDE SERVICES                 
+ 610-100-0027-000000                MKTG, PROMOTIONS & CONT                
+ 610-100-0028-000000                MKTG, MKTG RESEARCH                    
+ 610-100-0029-000000                MKTG, LEAD RESPONSE                    
+ 610-100-0030-000000                MKTG, SPACE AD.                        
+ 610-100-0031-000000                MKTG, PUBLIC RELATIONS                 
+ 610-100-0032-000000                MKTG, TRADE SHOWS                      
+ 610-100-0033-000000                MKTG, DISTRIBUTION AID                 
+ 610-100-0034-000000                MKTG, PRINTING                         
+ 610-100-0035-000000                MKTG, DIRECT MAIL                      
+ 610-100-0036-000000                MKTG, SALES MEETINGS                   
+ 610-100-0037-000000                MKTG, SAMPLES                          
+ 610-100-0038-000000                MKTG, BAD DEBTS                        
+ 610-100-0039-000000                MKTG, COLLECTION FEES                  
+ 610-100-0040-000000                MKTG, REPAIR & MAINT                   
+ 620-000-0000-000000                ADMIN EXPENSES                         
+ 620-100-0000-000000                ADM                                    
+ 620-100-0001-000000                ADM, SALARIES                          
+ 620-100-0002-000000                ADM, PART-TIME HELP                    
+ 620-100-0003-000000                ADM, OVERTIME                          
+ 620-100-0004-000000                ADM, BENEFIT                           
+ 620-100-0005-000000                ADM, PROFIT SHARING                    
+ 620-100-0006-000000                ADM, BONUS                             
+ 620-100-0007-000000                ADM, T&E                               
+ 620-100-0007-010000                ADM, TRAVEL & AUTO                     
+ 620-100-0007-020000                ADM, ENTERTAINMENT                     
+ 620-100-0007-030000                ADM, FOREIGN TRAVEL                    
+ 620-100-0007-040000                ADM, FOREIGN TRAINING                  
+ 620-100-0008-000000                ADM, PENSION                           
+ 620-100-0009-000000                ADM, PERSONNEL                         
+ 620-100-0010-000000                ADM, EDUCATION                         
+ 620-100-0011-000000                ADM, MEETINGS                          
+ 620-100-0012-000000                ADM, OFFICE SUPPLIES                   
+ 620-100-0013-000000                ADM, DUE & SUB                         
+ 620-100-0014-000000                ADM, POSTAGE                           
+ 620-100-0015-000000                ADM, MACHINE LEASE                     
+ 620-100-0016-000000                ADM, TELEPHONE                         
+ 620-100-0017-000000                ADM, AUDIT & TAX                       
+ 620-100-0018-000000                ADM, LEGAL EXPENSES                    
+ 620-100-0019-000000                ADM, LEASE & RENTALS                   
+ 620-100-0020-000000                ADM, HEAT LIGHT & POWER                
+ 620-100-0021-000000                ADM, TAX -REAL ESTATE                  
+ 620-100-0022-000000                ADM, INSURANCE                         
+ 620-100-0023-000000                ADM, DEP'N -M&E                        
+ 620-100-0024-000000                ADM, DEP'N -F&F                        
+ 620-100-0025-000000                ADM, GOODWILL AMORT                    
+ 620-100-0026-000000                ADM, PATENT AMORT                      
+ 620-100-0027-000000                ADM, SOFTWARE AMORT                    
+ 620-100-0028-000000                ADM, STOCK BONUS AMORT                 
+ 620-100-0029-000000                ADM, PROFESSIONAL FEE                  
+ 620-100-0030-000000                ADM, REPARI AND M                      

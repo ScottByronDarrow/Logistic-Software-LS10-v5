@@ -1,0 +1,52 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cfhr,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cfhr)
+|  Schema Desc  : (Carrier file header record. )
+|----------------------------------------------------------------------
+| $Log: sch.cfhr,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cfhr	
+
+field	cfhr_co_no			type	char	2
+field	cfhr_br_no			type	char	2
+field	cfhr_carr_code		type	char	4
+field	cfhr_cfhh_hash		type	serial
+field	cfhr_carr_desc		type	char	40
+field	cfhr_phone			type	char	15
+field	cfhr_fax_no			type	char	15
+field	cfhr_contact_name	type	char	20
+field	cfhr_markup_pc		type	float
+field	cfhr_stat_flag		type	char	1	
+field	cfhr_id_no			type	comp
+			cfhr_co_no,
+			cfhr_br_no,
+			cfhr_carr_code								index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cfhr_co_no			-	Company number.
+	cfhr_br_no			-	Branch number.
+	cfhr_carr_code		-	Carrier Code .
+	cfhr_cfhh_hash		-	Unique Carrier file hash.
+	cfhr_carr_desc		-	Carrier Description.
+	cfhr_phone			-	Carrier Phone Number.
+	cfhr_fax_no			-	Carrier fax number.
+	cfhr_contact_name	-	Carrier contact name.
+	cfhr_markup_pc		-	Carrier Markup percent.
+	cfhr_stat_flag		-	Spare status flag.
+}

@@ -1,0 +1,47 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:08:21 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:08:21  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:29:37  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:16:01  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/08/28 02:27:01  scott
+#	General Maintenance - Added App.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_hhcf_hash
+	field excf_cat_desc
+	field excf_max_disc
+	field excf_min_marg
+	field excf_gp_mkup
+	field excf_item_alloc
+	field excf_no_trans
+	field excf_no_days
+	field excf_cont_drugs
+	field excf_stat_flag
+end
+
+table posdtup
+	field pos_no              
+	field file_name           
+	field record_hash         
+end

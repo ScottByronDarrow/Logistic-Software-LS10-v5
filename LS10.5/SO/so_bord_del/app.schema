@@ -1,0 +1,140 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/10/23 07:16:35 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/10/23 07:16:35  scott
+#	Updated to check and correct rounding.
+#	Changes to ensure ALL inputs and reports round the same way.
+#	
+#	Revision 5.0  2001/06/19 08:18:51  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.2  2001/05/31 10:01:51  scott
+#	Updated to ensure works order is checked before delete alowed.
+#	
+#	Revision 4.1  2001/04/21 03:53:40  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to add sleep delay - did not work with LS10-GUI
+#	Updated to adjust screen to look better with LS10-GUI
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_status
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhsl_hash
+	field soln_serial_no
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_sale_price
+	field soln_dis_pc
+	field soln_bonus_flag
+	field soln_status
+	field soln_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_serial_item
+	field inmr_outer_size
+end
+
+table insf
+	field insf_hhbr_hash
+	field insf_status
+	field insf_serial_no
+	field insf_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_curr_code
+	field cumr_area_code
+	field cumr_sman_code
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_ex1_factor
+end
+
+table sobg
+	field sobg_co_no
+	field sobg_br_no
+	field sobg_type
+	field sobg_lpno
+	field sobg_hash
+end
+
+table exls
+	field exls_co_no
+	field exls_code
+	field exls_description
+end
+
+table inls
+	field inls_co_no
+	field inls_est_no
+	field inls_date
+	field inls_hhbr_hash
+	field inls_hhcc_hash
+	field inls_hhcu_hash
+	field inls_area_code
+	field inls_sale_code
+	field inls_qty
+	field inls_value
+	field inls_cost
+	field inls_res_code
+	field inls_res_desc
+	field inls_status
+end
+
+table inla
+	field inla_inlo_hash
+	field inla_hhsl_hash
+end
+
+table pcwo
+	field pcwo_order_status   
+	field pcwo_hhsl_hash      
+end

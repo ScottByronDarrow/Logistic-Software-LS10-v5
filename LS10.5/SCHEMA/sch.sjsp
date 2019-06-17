@@ -1,0 +1,46 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sjsp,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sjsp)
+|  Schema Desc  : (Service Job Spare Parts Usage File. )
+|----------------------------------------------------------------------
+| $Log: sch.sjsp,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:23  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sjsp 
+
+field	sjsp_co_no				type	char	2  
+field	sjsp_est_no				type	char	2 
+field	sjsp_dp_no				type	char	2
+field	sjsp_order_no			type	long 
+field	sjsp_partno				type	char	16
+field	sjsp_part_desc			type	char	40 
+field	sjsp_date				type	edate 
+field	sjsp_qty				type	float
+field	sjsp_uom				type	char	3
+field	sjsp_u_cost				type	double  
+field	sjsp_u_sell				type	double  
+field	sjsp_porder_no			type	char	6 
+field	sjsp_id_no				type	composite
+			sjsp_co_no,
+			sjsp_est_no,
+			sjsp_dp_no,
+			sjsp_order_no,
+			sjsp_partno					index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

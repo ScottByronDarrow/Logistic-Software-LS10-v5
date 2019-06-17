@@ -1,0 +1,76 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:23 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:23  scott
+#	RELEASE 5.0
+#	
+#	Revision 5.0  2001/06/19 08:03:03  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:23:31  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:12:45  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/09/08 08:33:51  ramil
+#	Initial Checkin.
+#	
+#
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_crd_date       
+	field comm_gl_date        
+	field comm_fiscal         
+	field comm_gst_rate         
+end
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_branch_name
+	field crbk_bank_no
+	field crbk_curr_code
+	field crbk_gl_bank_chg
+	field crbk_gl_bank_acct
+	field crbk_gl_exch_var
+	field crbk_gl_bill_rec
+	field crbk_clear_fee
+	field crbk_stat_flag
+end
+
+table sudt
+	field sudt_hhsp_hash
+	field sudt_hhsi_hash
+	field sudt_amt_paid_inv
+	field sudt_loc_paid_inv
+	field sudt_exch_variatio
+	field sudt_exch_rate
+	field sudt_stat_flag
+end
+
+table suin
+	field suin_hhsi_hash
+	field suin_est
+	field suin_inv_no
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_gl_ctrl_acct
+	field sumr_tax_code
+end
+

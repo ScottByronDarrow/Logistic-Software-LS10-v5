@@ -1,0 +1,79 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.0 2001/06/19 08:02:52 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:02:52  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:23:21  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:12:33  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:40:37  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.3  1999/11/10 05:21:59  scott
+#	*** empty log message ***
+#	
+#
+table crbk
+field crbk_co_no          
+field crbk_bank_id        
+field crbk_curr_code      
+end
+
+table pocr
+field pocr_co_no          
+field pocr_code           
+field pocr_prime_unit     
+field pocr_sub_unit       
+end
+
+table sumr
+field sumr_co_no          
+field sumr_est_no         
+field sumr_crd_no         
+field sumr_hhsu_hash      
+field sumr_crd_name       
+field sumr_acronym        
+field sumr_adr1           
+field sumr_adr2           
+field sumr_adr3           
+field sumr_adr4           
+field sumr_stat_flag      
+end
+
+table suhd
+field suhd_hhsu_hash      
+field suhd_pid            
+field suhd_cheq_no        
+field suhd_hhsp_hash      
+field suhd_date_payment   
+field suhd_tot_amt_paid   
+field suhd_bank_id        
+field suhd_rem_prt        
+field suhd_stat_flag      
+end
+
+table sudt
+field sudt_hhsp_hash      
+field sudt_hhsi_hash      
+field sudt_amt_paid_inv   
+field sudt_stat_flag      
+end
+
+table suin
+field suin_hhsu_hash      
+field suin_hhsi_hash      
+field suin_type           
+field suin_est            
+field suin_inv_no         
+field suin_narrative      
+field suin_date_of_inv    
+field suin_date_posted    
+field suin_amt            
+end

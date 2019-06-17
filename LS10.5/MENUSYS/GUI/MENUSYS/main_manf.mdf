@@ -1,0 +1,30 @@
+Manufacturing Master Menu (MANF)
+main_help
+Master Menu. <a> (1,2)
+menu MENUSYS/main.mdf
+BOM Maintenance Menu. <a> (1,1)
+menu MENUSYS/bom_maint.mdf
+BOM Displays Menu. <a> (1,1)
+menu MENUSYS/bom_dsplay.mdf
+BOM Reports Menu. <a> (1,2)
+menu MENUSYS/bom_report.mdf
+Routing Maintenance Menu. <a> (1,2)
+menu MENUSYS/rtg_master.mdf
+Resorce Maintenance Menu. <a> (1,2)
+menu MENUSYS/rtg_resmnt.mdf
+Production Control Menu. <a> (2,2)
+menu MENUSYS/pct_master.mdf
+Costing and Lead Time Menu. <a> (2,2)
+menu MENUSYS/cst_master.mdf
+Production Scheduling. <ERROR> (2,2)
+ps_schmodel~
+((
+box(4,3,70,12)
+quadrant(9,6)
+quadrant(43,8)
+line(5,5,69)
+HEADING_ON
+TRAILER_ON
+FAST_ON
+SUB_ON
+))

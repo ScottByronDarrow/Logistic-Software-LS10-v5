@@ -1,0 +1,137 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/23 04:28:53 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/23 04:28:53  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+	field comm_fiscal
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+end
+
+table sapc
+	field sapc_co_no
+	field sapc_br_no
+	field sapc_hhbr_hash
+	field sapc_hhcu_hash
+	field sapc_mtd_sales
+	field sapc_mtd_csale
+	field sapc_mtd_qty
+	field sapc_ytd_sales
+	field sapc_ytd_csale
+	field sapc_ytd_qty
+	field sapc_sman
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_c_1
+	field incc_c_2
+	field incc_c_3
+	field incc_c_4
+	field incc_c_5
+	field incc_c_6
+	field incc_c_7
+	field incc_c_8
+	field incc_c_9
+	field incc_c_10
+	field incc_c_11
+	field incc_c_12
+	field incc_c_val_1
+	field incc_c_val_2
+	field incc_c_val_3
+	field incc_c_val_4
+	field incc_c_val_5
+	field incc_c_val_6
+	field incc_c_val_7
+	field incc_c_val_8
+	field incc_c_val_9
+	field incc_c_val_10
+	field incc_c_val_11
+	field incc_c_val_12
+	field incc_c_prf_1
+	field incc_c_prf_2
+	field incc_c_prf_3
+	field incc_c_prf_4
+	field incc_c_prf_5
+	field incc_c_prf_6
+	field incc_c_prf_7
+	field incc_c_prf_8
+	field incc_c_prf_9
+	field incc_c_prf_10
+	field incc_c_prf_11
+	field incc_c_prf_12
+	field incc_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_stat_flag
+end
+
+table sadf
+	field sadf_co_no
+	field sadf_br_no
+	field sadf_year
+	field sadf_hhbr_hash
+	field sadf_hhcu_hash
+	field sadf_qty_per1
+	field sadf_qty_per2
+	field sadf_qty_per3
+	field sadf_qty_per4
+	field sadf_qty_per5
+	field sadf_qty_per6
+	field sadf_qty_per7
+	field sadf_qty_per8
+	field sadf_qty_per9
+	field sadf_qty_per10
+	field sadf_qty_per11
+	field sadf_qty_per12
+	field sadf_sal_per1
+	field sadf_sal_per2
+	field sadf_sal_per3
+	field sadf_sal_per4
+	field sadf_sal_per5
+	field sadf_sal_per6
+	field sadf_sal_per7
+	field sadf_sal_per8
+	field sadf_sal_per9
+	field sadf_sal_per10
+	field sadf_sal_per11
+	field sadf_sal_per12
+	field sadf_cst_per1
+	field sadf_cst_per2
+	field sadf_cst_per3
+	field sadf_cst_per4
+	field sadf_cst_per5
+	field sadf_cst_per6
+	field sadf_cst_per7
+	field sadf_cst_per8
+	field sadf_cst_per9
+	field sadf_cst_per10
+	field sadf_cst_per11
+	field sadf_cst_per12
+end
+

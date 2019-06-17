@@ -1,0 +1,83 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.srdb,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.srdb)
+|  Schema Desc  : (SeaRch file for Debtors. )
+|----------------------------------------------------------------------
+| $Log: sch.srdb,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:48  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	srdb
+
+field	srdb_co_no				type	char	2
+field	srdb_br_no				type	char	2
+field	srdb_dbt_no				type	char	6
+field	srdb_hhcu_hash			type	long				index	primary
+field	srdb_acronym			type	char	9			index	dups
+field	srdb_sman_code			type	char	2	
+field	srdb_contact_name		type	char	20	
+field	srdb_name				type	char	40
+
+field	srdb_dbt_id				type	composite
+			srdb_co_no,
+			srdb_dbt_no										index	dups
+field	srdb_dbt_id2			type	composite
+			srdb_co_no,
+			srdb_br_no,
+			srdb_dbt_no										index	dups
+
+field	srdb_acr_id				type	composite
+			srdb_co_no,
+			srdb_acronym									index	dups
+field	srdb_acr_id2			type	composite
+			srdb_co_no,
+			srdb_br_no,
+			srdb_acronym									index	dups
+
+field	srdb_sal_id				type	composite
+			srdb_co_no,
+			srdb_sman_code									index	dups
+field	srdb_sal_id2			type	composite
+			srdb_co_no,
+			srdb_br_no,
+			srdb_sman_code									index	dups
+
+field	srdb_cnt_id				type	composite
+			srdb_co_no,
+			srdb_contact_name								index	dups
+field	srdb_cnt_id2			type	composite
+			srdb_co_no,
+			srdb_br_no,
+			srdb_contact_name								index	dups
+
+field	srdb_des_id				type	composite
+			srdb_co_no,
+			srdb_name										index	dups
+field	srdb_des_id2			type	composite
+			srdb_co_no,
+			srdb_br_no,
+			srdb_name										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	srdb_co_no			-	Company Number.
+	srdb_br_no			-	Branch Number.
+	srdb_dbt_no			-	Debtor Number.
+	srdb_hhcu_hash		-	Link to customer master file.
+	srdb_acronym		-	Customer acronym.
+	srdb_sman_code		-	Salesman
+	srdb_contact_name	-	Contact name
+	srdb_name			-	Customer name.
+}

@@ -1,0 +1,50 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.exst,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.exst)
+|  Schema Desc  : (External Sales Tax Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.exst,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:39  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file exst 
+
+field	exst_co_no					type  	char	2 
+field	exst_year					type	int
+field	exst_period					type	char	2 
+field	exst_tax_code				type	char	1
+field	exst_tax_percent			type	float
+field	exst_sales_value			type	money
+field	exst_tax_value				type	money
+field	exst_stat_flag				type	char	1
+field	exst_id_no					type	comp
+			exst_co_no,
+			exst_year,
+			exst_period,
+			exst_tax_code,
+			exst_tax_percent							index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	exst_co_no			-	Company number.
+	exst_year			-	Year of transaction.
+	exst_period			-	Period ( 01 = Jan )  ( 12 = Dec ).
+	exst_tax_code		-	Tax Code A-Z
+	exst_tax_percent	-	Tax Percent.
+	exst_sales_value	-	Sales value.
+	exst_tax_value		-	Taxable value.
+	exst_stat_flag		-	Spare Status.
+}

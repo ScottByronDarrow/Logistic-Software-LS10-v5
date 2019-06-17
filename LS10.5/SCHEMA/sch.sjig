@@ -1,0 +1,48 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sjig,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sjig)
+|  Schema Desc  : (Service Job Invoice G/L analysis file. )
+|----------------------------------------------------------------------
+| $Log: sch.sjig,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:23  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sjig 
+
+field	sjig_co_no				type	char	2  
+field	sjig_est_no				type	char	2  
+field	sjig_dp_no				type	char	2  
+field	sjig_invno				type	char	8
+field	sjig_order_no			type	long
+field	sjig_acc_no				type	char	16
+field	sjig_amount				type	double 
+field	sjig_id_no				type	composite
+			sjig_co_no,
+			sjig_est_no,
+			sjig_dp_no,
+			sjig_invno,
+			sjig_acc_no								index	dups
+field	sjig_id_no2				type	composite
+			sjig_co_no,
+			sjig_est_no,
+			sjig_dp_no,
+			sjig_order_no,
+			sjig_invno,
+			sjig_acc_no								index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

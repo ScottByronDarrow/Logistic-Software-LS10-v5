@@ -1,0 +1,116 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:28 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:28  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/03/21 00:25:02  scott
+#	Updated to change message and performed general code clean up.
+#	
+#	Revision 4.0  2001/03/09 02:38:44  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/02/16 07:25:40  scott
+#	Updated to convert to app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+	field inmr_source
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_outer_size
+	field inmr_uom_cfactor
+end
+
+table bmms
+	field bmms_co_no
+	field bmms_hhbr_hash
+	field bmms_alt_no
+	field bmms_line_no
+	field bmms_mabr_hash
+	field bmms_uom
+	field bmms_matl_qty
+	field bmms_matl_wst_pc
+end
+
+table rghr
+	field rghr_co_no
+	field rghr_br_no
+	field rghr_hhbr_hash
+	field rghr_alt_no
+	field rghr_hhgr_hash
+end
+
+table rgln
+	field rgln_hhgr_hash
+	field rgln_hhrs_hash
+	field rgln_seq_no
+	field rgln_rate
+	field rgln_ovhd_var
+	field rgln_ovhd_fix
+	field rgln_setup
+	field rgln_run
+	field rgln_clean
+	field rgln_qty_rsrc
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_std_cost
+	field inei_std_batch
+	field inei_last_bom
+	field inei_last_rtg
+end
+
+table inem
+	field inem_hhbr_hash
+	field inem_est_no
+	field inem_res_type
+	field inem_setup_std_dir
+	field inem_setup_std_fix
+	field inem_setup_act_dir
+	field inem_setup_act_fix
+	field inem_run_std_dir
+	field inem_run_std_fix
+	field inem_run_act_dir
+	field inem_run_act_fix
+	field inem_clean_std_dir
+	field inem_clean_std_fix
+	field inem_clean_act_dir
+	field inem_clean_act_fix
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_cnv_fct
+end
+
+table rgrs
+	field rgrs_hhrs_hash
+	field rgrs_type
+end
+

@@ -1,0 +1,40 @@
+Sales Order Entry Master Menu (SOMR)
+so_help
+Sales Menu <a> (1,2)
+menu MENUSYS/main_sale.mdf
+Enter One-Step Sales Orders. <a> (1,1)
+lp_chain~so_input R so_input.s LPNO~
+Enter Two-Step Sales Orders. <a> (1,2)
+so_input~M~so_input.s~
+Maintain Sales Orders. <a> (1,1)
+so_maint~M~so_maint.s~
+Maintain Order Ship details. <a> (1,1)
+so_sdmaint~S~M~M~
+Maintain Invoice Ship details. <a> (1,2)
+so_sdmaint~I~X~X~
+Consolidated Orders Release. <a> (1,2)
+lp_chain~warning "CONSOLIDATED ORDERS RELEASE"~so_ps_cons M P~
+Packing Slip Despatch Confirmation. <a> (1,1)
+so_des_conf~X~I~so_des_conf.s~LPNO~
+Automatic P/Slip Despatch Conf. <a> (1,2)
+so_ades_conf~X~I~LPNO~
+Credit Check Released Orders. <a> (2,1)
+lp_chain~warning "CREDIT  CHECK  RELEASED  ORDERS"~so_bgcrchk~
+Selective Held Order Release. <a> (2,2)
+so_relheld~LPNO~
+Sales Order Displays Menu. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/so_display.mdf
+Sales Order Release  Menu. <a> (2,1)
+menu MENUSYS/so_release.mdf
+Sales Order Reports  Menu. <a> (2,1)
+menu MENUSYS/so_reports.mdf
+Sales Order Kits/Bom Menu. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/so_kits.mdf
+Delete Orders. <a> (2,1)
+so_bord_del~LPNO~
+((
+quadrant(6,6)
+quadrant(46,8)
+box(1,3,76,15)
+line(2,5,75)
+))

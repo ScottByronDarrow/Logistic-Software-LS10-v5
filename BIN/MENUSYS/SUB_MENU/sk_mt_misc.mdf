@@ -1,0 +1,26 @@
+Miscellaneous Stock Maintenance. (SUB)
+sk_misc_mnt
+Stock Maintenance menu. <a> (1,1)
+menu MENUSYS/sk_maint.mdf
+Maintain Write-off-Codes. <a> (1,1)
+sk_womaint~
+Maintain Issue / Receipt Codes. <a> (1,1)
+sk_inir_inp~
+Maintain Active Status Codes. <a> (1,2)
+sk_act_mnt~
+Maintain Supercessions. <a> (1,1)
+sk_sup~
+Maintain Synonym Items. <a> (1,1)
+sk_syn_inp~
+Maintain Alternate items. <a> (1,1)
+sk_alt_inp~
+Maintain Life To Date Sales. <a> (1,1)
+sk_ltd_inpt~
+Maintain Base Indent Items. <a> (1,1)
+sk_inin_inp~
+Maintain Note Pad (Normal). <a> (1,1)
+sk_note_pad~N~
+Maintain Note Pad (Serial). <a> (1,1)
+sk_note_pad~S~
+((
+))

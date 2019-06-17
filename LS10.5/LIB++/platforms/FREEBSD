@@ -1,0 +1,7 @@
+#
+# FreeBSD
+#
+CDBG			=	-Wall -g
+C++DBG			=	-Wall -g
+
+CXXFLAGS		=	${C++FLAGS}

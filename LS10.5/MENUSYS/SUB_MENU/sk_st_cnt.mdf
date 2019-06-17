@@ -1,0 +1,20 @@
+Stock-Take Count Input Menu (SKCN)
+sk_stake
+Stock Take Master Menu. <a> (1,1)
+menu MENUSYS/sk_st_mst.mdf
+Input Stock-Take Count (EACH). <a> (1,1)
+sk_nst_fix~
+Input Stock-Take Count By Item. <a> (1,1)
+chain~sk_nst_sel sk_nst_sort I PID~sk_nst_inpt PID~
+Input Stock-Take Count By Product Group. <a> (1,1)
+chain~sk_nst_sel sk_nst_sort G PID~sk_nst_inpt PID~
+Input Stock-Take Count By Location. <a> (1,1)
+chain~sk_nst_sel sk_nst_sort L PID~sk_nst_inpt PID~
+Input Stock-Take Count By Location/Item Number. <a> (1,1)
+chain~sk_nst_sel sk_nst_sort B PID~sk_nst_inpt PID~
+Input Stock-Take Count By ABC Code. <a> (1,1)
+chain~sk_nst_sel sk_nst_sort A PID~sk_nst_inpt PID~
+Input Serial Stock-Take Count. <a> (1,1)
+sk_st_sinp~
+((
+))

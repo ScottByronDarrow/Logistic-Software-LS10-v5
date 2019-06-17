@@ -1,0 +1,96 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/14 08:48:18 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/14 08:48:18  scott
+#	Updated to add app.schema
+#	Updated to clean code.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table tmsh
+	field tmsh_co_no
+	field tmsh_script_no
+	field tmsh_hhsh_hash
+	field tmsh_n_prmpt_no
+	field tmsh_desc
+end
+
+table tmsl
+	field tmsl_hhsh_hash
+	field tmsl_prmpt_no
+	field tmsl_desc
+	field tmsl_text1
+	field tmsl_text2
+	field tmsl_text3
+	field tmsl_text4
+	field tmsl_text5
+	field tmsl_text6
+	field tmsl_text7
+	field tmsl_rep1_desc
+	field tmsl_rep2_desc
+	field tmsl_rep3_desc
+	field tmsl_rep4_desc
+	field tmsl_rep5_desc
+	field tmsl_rep6_desc
+	field tmsl_rep7_desc
+	field tmsl_rep8_desc
+	field tmsl_rep1_goto
+	field tmsl_rep2_goto
+	field tmsl_rep3_goto
+	field tmsl_rep4_goto
+	field tmsl_rep5_goto
+	field tmsl_rep6_goto
+	field tmsl_rep7_goto
+	field tmsl_rep8_goto
+	field tmsl_stat_flag
+end
+
+table tmrc
+	field tmrc_hhlh_hash
+	field tmrc_hhcf_hash
+	field tmrc_hhsh_hash
+	field tmrc_prompt
+	field tmrc_response
+end
+
+table tmcf
+	field tmcf_co_no
+	field tmcf_campaign_no
+	field tmcf_hhcf_hash
+	field tmcf_c_name1
+	field tmcf_c_name2
+	field tmcf_c_obj1
+	field tmcf_c_obj2
+	field tmcf_c_obj3
+	field tmcf_c_obj4
+	field tmcf_c_obj5
+	field tmcf_c_manager
+	field tmcf_start_date
+	field tmcf_end_date
+	field tmcf_bg_incalls
+	field tmcf_bg_insales
+	field tmcf_bg_invalue
+	field tmcf_bg_outcalls
+	field tmcf_bg_outsales
+	field tmcf_bg_outvalue
+end
+
+table tmlh
+	field tmlh_co_no
+	field tmlh_hhcf_hash
+	field tmlh_let_code
+	field tmlh_let_desc
+	field tmlh_hhlh_hash
+end
+

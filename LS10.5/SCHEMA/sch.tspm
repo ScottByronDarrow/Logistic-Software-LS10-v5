@@ -1,0 +1,79 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tspm,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.tspm)
+|  Schema Desc  : (Tele-Sales Prospect Master file. )
+|----------------------------------------------------------------------
+| $Log: sch.tspm,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:37  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tspm
+
+field	tspm_hhcu_hash			type	long		index	primary
+field	tspm_cont_name1			type	char	30
+field	tspm_cont_name2			type	char	30
+field	tspm_email1				type	char	60
+field	tspm_email2				type	char	60
+field	tspm_cont_code1			type	char	3
+field	tspm_cont_code2			type	char	3
+field	tspm_phone_freq			type	int
+field	tspm_n_phone_date		type	edate
+field	tspm_n_phone_time		type	char	5
+field	tspm_visit_freq			type	int
+field	tspm_n_visit_date		type	edate
+field	tspm_n_visit_time		type	char	5
+field	tspm_mail_flag			type	char	1
+field	tspm_op_code			type	char	14
+field	tspm_lst_op_code		type	char	14
+field	tspm_lphone_date		type   	edate
+field	tspm_lst_ord			type   	double
+field	tspm_date_create		type   	edate
+field	tspm_best_ph_time		type   	char	5
+field	tspm_delete_flag		type   	char	1
+field	tspm_sales_per			type   	char	1
+field	tspm_stat_flag			type	char	1
+field	tspm_id_no			type	composite
+			tspm_lst_op_code,
+			tspm_hhcu_hash										index	
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tspm_hhcu_hash		-	Link to debtors master file.
+	tspm_cont_name1		-	Contact #1
+	tspm_cont_name2		-	Contact #2
+	tspm_email1			-	Email #1
+	tspm_email2			-	Email #2
+	tspm_fax_no			-	Fax number.
+	tspm_phone_no		-	Phone number.
+	tspm_phone_freq		-	Phone frequency.
+	tspm_n_phone_date	-	Next phone date.
+	tspm_n_phone_time	-	Next phone time.
+	tspm_visit_freq		-	Visit frequency.
+	tspm_n_visit_date	-	Next visit date.
+	tspm_n_visit_time	-	Next visit time.
+	tspm_mail_flag		-	Main flag ( Y/N )
+	tspm_op_code		-	Current Operator code.
+	tspm_lst_op_code	-	Last operator code.
+	tspm_lphone_date	-	Last phone date.
+	tspm_lst_ord		-	Last Order Value
+	tspm_date_create	-	Date prospect created.
+	tspm_best_ph_time	-	Best phone time.
+	tspm_delete_flag	-	Delete flag.
+	tspm_sales_per		-	Period of sales analysis
+					- D(aily)
+					- W(eekly)
+					- M(onthly)
+	tspm_stat_flag		-	Spare status flag.
+}

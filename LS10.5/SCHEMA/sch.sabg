@@ -1,0 +1,107 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sabg,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.sabg)
+|  Schema Desc  : (Sales / Budget file. )
+|----------------------------------------------------------------------
+| $Log: sch.sabg,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:19  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sabg
+
+field	sabg_co_no			type	char	2 
+field	sabg_area_code			type	char	2 
+field	sabg_sman_code			type	char	2 
+field	sabg_ctype_code			type	char	3 
+field	sabg_category			type	char	11 
+field	sabg_hhcu_hash			type	long
+field	sabg_year_flag			type	char	1
+field	sabg_id_no1			type	comp
+		sabg_co_no, 
+		sabg_area_code,
+		sabg_year_flag					index	dups
+field	sabg_id_no2			type	comp
+		sabg_co_no, 
+		sabg_sman_code,
+		sabg_year_flag					index	dups
+field	sabg_id_no3			type	comp
+		sabg_co_no, 
+		sabg_ctype_code,
+		sabg_year_flag					index	dups
+field	sabg_id_no4			type	comp
+		sabg_co_no, 
+		sabg_category,
+		sabg_year_flag					index	dups
+field	sabg_id_no5			type	comp
+		sabg_co_no, 
+		sabg_sman_code,
+		sabg_category,
+		sabg_year_flag					index	dups
+field	sabg_id_no6			type	comp
+		sabg_co_no, 
+		sabg_hhcu_hash,
+		sabg_year_flag					index	dups
+field	sabg_bg1_qty			type	double
+field	sabg_bg2_qty			type	double
+field	sabg_bg3_qty			type	double
+field	sabg_bg4_qty			type	double
+field	sabg_bg5_qty			type	double
+field	sabg_bg6_qty			type	double
+field	sabg_bg7_qty			type	double
+field	sabg_bg8_qty			type	double
+field	sabg_bg9_qty			type	double
+field	sabg_bg10_qty			type	double
+field	sabg_bg11_qty			type	double
+field	sabg_bg12_qty			type	double
+field	sabg_bg1_sales			type	double
+field	sabg_bg2_sales			type	double
+field	sabg_bg3_sales			type	double
+field	sabg_bg4_sales			type	double
+field	sabg_bg5_sales			type	double
+field	sabg_bg6_sales			type	double
+field	sabg_bg7_sales			type	double
+field	sabg_bg8_sales			type	double
+field	sabg_bg9_sales			type	double
+field	sabg_bg10_sales			type	double
+field	sabg_bg11_sales			type	double
+field	sabg_bg12_sales			type	double
+field	sabg_bg1_profit			type	double
+field	sabg_bg2_profit			type	double
+field	sabg_bg3_profit			type	double
+field	sabg_bg4_profit			type	double
+field	sabg_bg5_profit			type	double
+field	sabg_bg6_profit			type	double
+field	sabg_bg7_profit			type	double
+field	sabg_bg8_profit			type	double
+field	sabg_bg9_profit			type	double
+field	sabg_bg10_profit		type	double
+field	sabg_bg11_profit		type	double
+field	sabg_bg12_profit		type	double
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sabg_co_no		-	Company Number.
+	sabg_area_code		-	Area Code.		( ex exaf )
+	sabg_sman_code		-	Salesman Code		( ex exsf )
+	sabg_ctype_code		-	Customer Type Code.	( ex excl )
+	sabg_category		-	Category Code		( ex excf )
+	sabg_hhcu_hash		-	link to cumr ( cumr_hhcu_hash ) 
+	sabg_year_flag		-	Year flag 	C(urrent
+							L(ast
+							N(ext
+	sabg_bg_qty (x)		-	Quantity
+	sabg_bg_sales (x)	-	Sales
+	sabg_bg_profit	(x)	-	Profits.
+}

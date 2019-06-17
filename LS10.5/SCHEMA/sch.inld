@@ -1,0 +1,40 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inld,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inld)
+|  Schema Desc  : (Stock Inventory-supplier Lead Dates Record. )
+|----------------------------------------------------------------------
+| $Log: sch.inld,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:54  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inld
+
+field	inld_hhis_hash			type	long
+field	inld_ord_date			type	edate
+field	inld_sup_date			type	edate
+field	inld_id_no			type	comp
+		inld_hhis_hash,
+		inld_ord_date					index	primary
+field	inld_id_no2			type	comp
+		inld_hhis_hash,
+		inld_sup_date					index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inld_hhis_hash		-	Link to inis
+	inld_ord_date		-	Must order on or before this date
+	inld_sup_date		-	Expect delivery by this date
+}

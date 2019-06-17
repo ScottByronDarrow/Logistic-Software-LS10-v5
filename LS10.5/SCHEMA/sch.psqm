@@ -1,0 +1,51 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.psqm,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.psqm)
+|  Schema Desc  : (Production Scheduling Q Modelling Control File )
+|----------------------------------------------------------------------
+| $Log: sch.psqm,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	psqm
+
+field	psqm_co_no			type	char	2
+field	psqm_model_name			type	char	10
+field	psqm_hhqm_hash			type	serial		index
+field	psqm_dt_create			type	edate
+field	psqm_tm_create			type	long
+field	psqm_op_create			type	char	14
+field	psqm_dt_modify			type	edate
+field	psqm_tm_modify			type	long
+field	psqm_stat_flag			type	char	1
+
+field	psqm_id_no			type	comp
+		psqm_co_no,
+		psqm_model_name					index	primary
+		
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	psqm_co_no			- Company Number.
+	psqm_hhqm_hash			- Unique serial hash.
+	psqm_model_name			- Name Of Data Model.
+	psqm_dt_create			- Create date.
+	psqm_tm_create			- Create time.
+	psqm_op_create			- Name Of Operator Who Created Model.
+	psqm_dt_modify			- Last modification date.
+	psqm_tm_modify			- Last modification time.
+	psqm_stat_flag			- Spare status flag.
+}

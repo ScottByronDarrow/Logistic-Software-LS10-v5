@@ -1,0 +1,53 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.bkmr,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.bkmr)
+|  Schema Desc  : (System Backup Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.bkmr,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:23  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file bkmr
+
+field   bkmr_co_no              type    char    2
+field   bkmr_br_no              type    char    2
+field   bkmr_type               type    char    1
+field   bkmr_seq_limit          type    int
+field   bkmr_last_no            type    int
+field   bkmr_real_time          type    char    1
+field   bkmr_hhct_hash          type    long
+field   bkmr_id_no              type    composite
+			bkmr_co_no,
+			bkmr_br_no,
+			bkmr_type										index   primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        bkmr_co_no              - Company number.
+        bkmr_br_no              - Branch number.
+        bkmr_type               - Type D(aily)
+                                       W(eekly)
+                                       M(onthly)
+                                       S(pecial)
+                                       Y(ear end)
+        bkmr_seq_limit          - From 1 to x
+        bkmr_last_no            - Last backup number.
+        bkmr_real_time          - Y/N
+                                  if Y(es) backup is run when bk_backup is run
+                                  if N(o) backup is sent to script BACKUP.
+        bkmr_hhct_hash          - Link to control file bkct.
+}

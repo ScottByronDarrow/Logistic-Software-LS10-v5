@@ -1,0 +1,6 @@
+#
+#  Printer Entry For Star Gemini printer.
+#
+STAR|Gemini STAR|This is a printer entry:\
+	:TF=\014:XN=\016:XF=\024:UN=\E1:UF=\E0:F1=\E5:F2=\E4:\
+	:P0=^R:P2=^O:I1=:I2=:co#80:EX=2:

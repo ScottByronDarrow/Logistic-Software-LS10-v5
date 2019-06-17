@@ -1,0 +1,33 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:21:43 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:21:43  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/06/08 02:56:28  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+end
+
+table extf
+	field extf_co_no
+	field extf_code
+	field extf_name
+end
+

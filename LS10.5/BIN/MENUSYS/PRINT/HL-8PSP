@@ -1,0 +1,7 @@
+#
+#  Printer Entry For HL-8PS Laser Jet Printer Portrait
+#
+HL-8PSP|HL-8PSP|This is a printer entry:\
+	:TF=\014:XN=\E(s6V\E(s12V:XF=\E(s12V\E(s12V:UN=:UF=:\
+	:I1=\E&l70P\E&l6D\E&l2E\E&l66F\E(s0P\E(s12H\E(s12V\E(s0S\E(s0B:\
+	:I2=\EE:P0=\E(s10H\E(s12V:P2=\E(s12H\E(s12V:EX=2:

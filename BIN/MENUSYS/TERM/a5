@@ -1,0 +1,21 @@
+#
+#  Termcap for Altos V terminal
+#
+a5|alt5|altos5|altos 5|Altos V:\
+	:cd=\E[0J:ce=\E[0K:\
+	:cl=\E[;H\E[2J:\
+	:dc=\E[P:dl=\E[M:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[1m\E[7m:se=\E[m:\
+	:us=\E[2m\E[7m:ue=\E[m:\
+	:bx=MLNKYYROXWUVBPR :\
+	:rv=\E[7m:re=\E[27m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(0:ge=\E(B:\
+	:fl=\E[0m:fe=\E[0m:\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:co#80:\
+	:cc=\E[?25l:cb=\E[?25h:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:

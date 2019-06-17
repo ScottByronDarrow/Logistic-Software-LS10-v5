@@ -1,0 +1,70 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:15:44 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:15:44  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 1.2  2001/05/21 00:54:16  scott
+#	Updated to add new features including cuurrency
+#	
+#	Revision 1.1  2001/04/19 09:39:19  cha
+#	Initial Checkin.
+#	
+#	
+#
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_on_hand
+end
+
+table inal
+	field inal_hhbr_hash      
+	field inal_br_no          
+	field inal_curr_code      
+	field inal_date_from      
+	field inal_date_to        
+	field inal_value          
+	field inal_percent        
+	field inal_stat_flag      
+end
+
+table pocr
+	field pocr_co_no          
+	field pocr_code           
+	field pocr_description    
+	field pocr_ex1_factor     
+	field pocr_stat_flag      
+end
+
+table esmr
+	field esmr_co_no          
+	field esmr_est_no         
+	field esmr_est_name       
+	field esmr_stat_flag      
+end

@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.trcl,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.trcl)
+|  Schema Desc  : (TRansport Carrier Line File. 		 )
+|----------------------------------------------------------------------
+| $Log: sch.trcl,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:35  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:53  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	trcl	
+
+field	trcl_trcm_hash			type	long
+field	trcl_trzm_hash			type	long
+field	trcl_cost_kg			type	double
+field	trcl_stat_flag			type	char	1	
+field 	trcl_id_no				type	composite
+			trcl_trcm_hash,
+			trcl_trzm_hash 								index 	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	trcl_trcm_hash		-	Link to Carrier master file.     
+	trcl_trzm_hash		-	Link to Zone Master file.
+	trcl_cost_kg		-	Cost per Kg for zone.
+	trcl_stat_flag		-	Spare status flag.
+}

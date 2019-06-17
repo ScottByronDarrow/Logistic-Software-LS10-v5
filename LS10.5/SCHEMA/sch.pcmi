@@ -1,0 +1,42 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcmi,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pcmi)
+|  Schema Desc  : (Master Instruction File. )
+|----------------------------------------------------------------------
+| $Log: sch.pcmi,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:02  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:38  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcmi	
+
+field	pcmi_co_no			type	char	2
+field	pcmi_inst_name			type	char	8
+field	pcmi_line_no			type	integer	
+field	pcmi_id_no			type	composite
+						pcmi_co_no,
+						pcmi_inst_name,
+						pcmi_line_no 	index	primary
+field	pcmi_text			type	char	60	
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pcmi_co_no			- Company number
+	pcmi_inst_name			- Instruction Name
+	pcmi_line_no			- Line no within instruction
+	pcmi_version			- Version Number
+	pcmi_text			- Free format text.
+}

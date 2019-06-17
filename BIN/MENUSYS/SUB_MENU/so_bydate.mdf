@@ -1,0 +1,10 @@
+SOP - Orders by Customer. (SUB)
+so_help
+Sales Order Reports Menu. <a> (1,1)
+menu MENUSYS/so_reports.mdf
+Print Sales Log. <a> (2,2)
+so_select.i~so_sal_log~PRINT ORDERS LOG~M~ ~
+Print Scheduled-Orders By Date. <a> (1,1)
+so_sch_rep~D~so_sch_rep~
+((
+))

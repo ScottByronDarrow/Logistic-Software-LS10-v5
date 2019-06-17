@@ -1,0 +1,78 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcms,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pcms)
+|  Schema Desc  : (BoM Material Specification File. )
+|----------------------------------------------------------------------
+| $Log: sch.pcms,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.1  2001/05/14 05:42:22  scott
+| Updated to add new file sch.xmle
+| Updated to add new fields to pcms
+|
+| Revision 4.0  2001/03/09 01:01:02  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:38  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcms	
+
+field	pcms_co_no				type	char	2
+field	pcms_hhbr_hash			type	long				index	dups
+field	pcms_alt_no				type	int
+field	pcms_line_no			type	int
+field	pcms_cons				type	char	1
+field	pcms_mabr_hash			type	long				index	dups
+field	pcms_uom				type	long
+field	pcms_matl_qty			type	float
+field	pcms_matl_wst_pc		type	float
+field	pcms_instr_no			type	int
+field	pcms_iss_seq			type	int
+{
+	Fields above this point are identical to bmms... CHANGE BOTH!!
+}
+field	pcms_pcms_hash			type	serial				index	primary
+field	pcms_uniq_id			type	int
+field	pcms_amt_issued			type	money
+field	pcms_amt_recptd			type	money
+field	pcms_qty_issued			type	float
+field	pcms_act_qty_in			type	char	1
+field	pcms_qty_scrap			type	float
+field	pcms_amt_scrap			type	money
+field	pcms_hhwo_hash			type	long				index	dups
+field	pcms_id_no				type	composite
+			pcms_hhwo_hash,
+			pcms_uniq_id									index
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pcms_co_no				- Company Number
+	pcms_hhbr_hash			- Destination product
+	pcms_line_no			- Added for 'uniqueness'
+	pcms_cons				- Consolidate this line with other bills
+	pcms_mabr_hash			- Source component/Raw material
+	pcms_uom				- UOM for source (Link => inud)
+	pcms_matl_qty			- Quantity of source required
+	pcms_matl_wst_pc		- Waste percentage
+	pcms_instr_no			- Instruction number
+	pcms_iss_seq			- Issue of stk must occur on OR before
+							  this routing sequence number
+	pcms_uniq_id			- UNIQUE id number for a pcms record for
+							  a works order.
+	pcms_pcms_hash			- Unique serial hash
+	pcms_amt_issued			- Amount issued from stock
+	pcms_amt_recptd			- Amount receipted back into stock
+	pcms_qty_issued			- Actual qty issued to this W/O.
+	pcms_act_qty_in			- Quantity has been 'accepted'
+	pcms_hhwo_hash			- Link to W/Order (pcwo)
+}

@@ -1,0 +1,18 @@
+Sales Analysis Displays (SUB)
+sa_master
+Sales Analysis Master Menu. <a> (1,1)
+menu MENUSYS/sa_master.mdf
+Display Sales By Customer no By Item number. <a> (1,1)
+sa_sadf.i~sa_sadf_dsp~C~C~I~
+Display Sales By Customer Type By Item number. <a> (1,1)
+sa_sadf.i~sa_sadf_dsp~C~T~I~
+Display Sales By Salesperson By Item Number. <a> (1,1)
+sa_sadf.i~sa_sadf_dsp~C~S~I~
+Display Sales By Item number By Customer no. <a> (1,1)
+sa_sadf.i~sa_sadf_dsp~P~I~I~
+Display Sales By Item By Customer (Cat Selection) <a> (1,1)
+sa_sadf.i~sa_sadf_dsp~P~I~C~
+Display Sales By Item number By Inventory Category. <a> (1,1)
+sa_sadf.i~sa_sadf_dsp~P~A~I~
+((
+))

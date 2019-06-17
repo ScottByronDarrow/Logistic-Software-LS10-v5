@@ -1,0 +1,21 @@
+#
+#  Termcap for Qume Terminal
+#
+qume|Q|QVT-102|Qume:is=\036\EY:iS=\E{:\
+	:cd=\EY:ce=\ET:\
+	:cl=^Z:\
+	:dc=\EW:dl=\ER:\
+	:ho=^^:\
+	:ic=:\EQ\
+	:so=\EG4:se=\EG0:\
+	:us=\EG8:ue=\EG0:\
+	:bx=fgehjjkinoml:\
+	:rv=\E(:re=\E):\
+	:cm=\E=%+ %+ :\
+	:go=\E$:ge=\E%%:\
+	:fl=\EG6:fe=\EG0:\
+	:sW=:sN=:\
+	:co#80:\
+	:cc=\E.:cb=:\E.\
+	:CM=\E=%+ %+ :\
+	:ku=^K:kd=^J:kl=^H:kr=^L:

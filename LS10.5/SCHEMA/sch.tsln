@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tsln,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.tsln)
+|  Schema Desc  : (Tele-Sales Letter Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.tsln,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:37  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+
+file tsln 
+
+field	tsln_hhlh_hash		type	long
+field	tsln_line_no		type	int
+field	tsln_id_no		type	composite
+		tsln_hhlh_hash,
+		tsln_line_no					index 	primary
+field	tsln_desc		type	char	78
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tsln_hhlh_hash		-	Hash to link to Letter Header.
+	tsln_line_no		-	Letter line seq number.
+	tsln_desc		-	Letter Line Description.
+}

@@ -1,0 +1,21 @@
+#
+#  Termcap for Kimtron/Adm85 Terminal
+#
+abm85|abm85|kimtron:is=\Eu\EY\036:\
+	:cd=\EY:ce=\ET:\
+	:cl=^Z:\
+	:dc=\EW:dl=\ER:\
+	:ho=^^:\
+	:ic=:\
+	:so=\Ej:se=\Ek:\
+	:us=\El:ue=\Em:\
+	:bx=BADCJJIKFGEH:\
+	:rv=\E(:re=\E):\
+	:cm=\E=%+ %+ :\
+	:go=\E$:ge=\E%%:\
+	:fl=\E^:fe=\Eq:\
+	:sW=:sN=:\
+	:co#80:\
+	:cc=\E.:cb=:\E.\
+	:CM=\E=%+ %+ :\
+	:ku=^K:kd=^J:kl=^H:kr=^L:

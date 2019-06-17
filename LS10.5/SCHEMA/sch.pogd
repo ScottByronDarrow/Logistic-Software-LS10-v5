@@ -1,0 +1,73 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pogd,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pogd)
+|  Schema Desc  : (Goods Received Header Details File. )
+|----------------------------------------------------------------------
+| $Log: sch.pogd,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:11  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:41  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pogd	
+
+field	pogd_co_no			type	char	2	
+field	pogd_hhgr_hash			type	long	
+field	pogd_hhsh_hash			type	long	
+field	pogd_hhpo_hash			type	long	
+field	pogd_line_no			type	int	
+field	pogd_id_no			type	composite
+		pogd_co_no,
+		pogd_hhgr_hash,
+		pogd_line_no					index	dups
+field	pogd_id_no2			type	composite
+		pogd_co_no,
+		pogd_hhsh_hash,
+		pogd_line_no					index	dups
+field	pogd_id_no3			type	composite
+		pogd_co_no,
+		pogd_hhpo_hash,
+		pogd_line_no					index	dups
+field	pogd_category			type	char	20	
+field	pogd_hhsu_hash			type	long
+field	pogd_invoice			type	char	15	
+field	pogd_currency			type	char	3
+field	pogd_foreign			type	double
+field	pogd_exch_rate			type	double
+field	pogd_nz_value			type	double
+field	pogd_nz_gst			type	double
+field	pogd_allocation			type	char	1
+field	pogd_cost_edit			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pogd_co_no		-	Company number.
+	pogd_hhgr_hash		-	Links to Goods receipt  (pogh_hhgr_hash)
+	pogd_hhsh_hash		-	Links to Shipment       (posh_hhsh_hash)
+	pogd_hhpo_hash		-	Links to Purchase order (pohr_hhpo_hash)
+	pogd_line_no		-	Line number.
+	pogd_category		-	Category Number.
+	pogd_hhsu_hash		-	Link to Supplier	(sumr_hhsu_hash)
+	pogd_invoice		-	Invoice Number.
+	pogd_currency		-	Currency Code.
+	pogd_foreign		-	Foreign Currency code.
+	pogd_exch_rate		-	Exchange rate.
+	pogd_nz_value		-	Local Value.
+	pogd_nz_gst		-	Local GST ( NZ Only )
+	pogd_allocation		-	Allocation :
+						D(ollar
+						W(eight
+						V(olumn
+	pogd_cost_edit		-	Cost edit complete Y/N.
+}

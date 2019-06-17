@@ -1,0 +1,145 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.2 2001/10/25 07:54:32 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.2  2001/10/25 07:54:32  scott
+#	Updated to make changes related to container and seals.
+#	
+#	Revision 5.1  2001/08/23 11:30:05  scott
+#	Updated from scotts machine
+#	
+#	Revision 5.0  2001/06/19 08:21:40  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:42:54  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.3  2000/12/28 06:00:54  jonel
+#	added update of scott : dated dec 28, 2000
+#	
+#	Revision 1.2  2000/12/19 00:04:15  scott
+#	Final version before User QA
+#	
+#	Revision 1.1  2000/12/14 08:24:40  scott
+#	First Release, not tested
+#	
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+end
+
+table coln
+	field coln_hhcl_hash
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_hhbr_hash
+	field coln_hhum_hash
+	field coln_q_order
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+end
+
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_dl_adr4
+	field cumr_dbt_acronym
+	field cumr_ho_dbt_hash
+end
+
+table skcs
+	field skcs_co_no          
+	field skcs_code           
+	field skcs_desc           
+end
+table sknh
+	field sknh_co_no          
+	field sknh_br_no          
+	field sknh_plate_no       
+	field sknh_pur_ord_no     
+	field sknh_sknh_hash      
+	field sknh_rec_date       
+	field sknh_iss_date       
+	field sknh_lab_note1      
+	field sknh_lab_note2      
+	field sknh_lab_note3      
+	field sknh_lab_note4      
+	field sknh_lab_note5      
+	field sknh_lab_note6      
+	field sknh_printed        
+	field sknh_edi            
+end
+table inuv
+	field inuv_hhbr_hash      
+	field inuv_hhum_hash      
+	field inuv_weight         
+	field inuv_volume         
+	field inuv_height         
+	field inuv_width          
+	field inuv_carton_flag    
+end
+table cohr
+	field cohr_co_no          
+	field cohr_br_no          
+	field cohr_dp_no          
+	field cohr_inv_no         
+	field cohr_hhcu_hash      
+	field cohr_type           
+	field cohr_cus_ord_ref           
+	field cohr_no_kgs         
+	field cohr_hhco_hash      
+	field cohr_date_raised    
+	field cohr_date_required  
+end
+table skcm
+	field skcm_co_no          
+	field skcm_container      
+	field skcm_desc           
+	field skcm_last_seal      
+	field skcm_skcm_hash      
+	field skcm_stat_code      
+	field skcm_max_vol        
+	field skcm_max_wgt        
+end
+table comr
+	field comr_co_no          
+	field comr_frt_min_amt    
+	field comr_frt_mweight    
+end
+table sknd
+	field sknd_sknd_hash      
+	field sknd_sknh_hash      
+end
+table skni
+	field skni_sknd_hash      
+	field skni_hhcu_hash      
+	field skni_hhsl_hash      
+	field skni_hhcl_hash      
+	field skni_container      
+	field skni_seal_no        
+	field skni_load_seq       
+	field skni_cus_ord_ref    
+	field skni_qty_issued     
+end

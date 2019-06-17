@@ -1,0 +1,46 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/01/10 07:07:17 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/01/10 07:07:17  scott
+#	Updated as first phase of contract management cleanup on it's way to becoming
+#	useable for 3PL.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table cmit
+	field cmit_co_no
+	field cmit_issto
+	field cmit_hhit_hash
+	field cmit_iss_name
+	field cmit_hhsu_hash
+	field cmit_hhem_hash
+end
+
+table cmem
+	field cmem_co_no
+	field cmem_emp_no
+	field cmem_emp_name
+	field cmem_hhem_hash
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+

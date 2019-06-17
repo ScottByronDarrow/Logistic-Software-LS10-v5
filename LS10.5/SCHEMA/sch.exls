@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.exls,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.exls)
+|  Schema Desc  : (External Lost Sale File. )
+|----------------------------------------------------------------------
+| $Log: sch.exls,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:32  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file exls
+
+field	exls_co_no			type	char	2
+field	exls_code			type	char	2
+field	exls_description	type	char	60
+field	exls_demand_ok		type	char	1
+field	exls_id_no			type	composite
+			exls_co_no,
+			exls_code										index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	exls_co_no			-	Company number.
+	exls_code			-	Lost sale code.
+	exls_demand_ok		-	Y(es) if demand is tracked as lost sale.
+	              		-	N(o)  if demand is not tracked as lost sale.
+	exls_description	-	Lost sale code description.
+}

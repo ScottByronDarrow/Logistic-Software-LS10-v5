@@ -1,0 +1,48 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.bmin,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.bmin)
+|  Schema Desc  : (BoM Material INstruction File. )
+|----------------------------------------------------------------------
+| $Log: sch.bmin,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:23  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	bmin	
+
+field	bmin_co_no				type	char	2
+field	bmin_hhbr_hash			type	long			index	dups
+field	bmin_alt_no				type	int
+field	bmin_line_no			type	int
+field	bmin_tline				type	int
+field	bmin_text				type	char	40
+field	bmin_id_no				type	comp
+			bmin_co_no,
+			bmin_hhbr_hash,
+			bmin_alt_no,
+			bmin_line_no,
+			bmin_tline									index	primary
+
+end
+
+{
+
+			  +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+			  +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	bmin_co_no			- Company Number
+	bmin_hhbr_hash		- Destination product
+	bmin_alt_no			- Alternate Number
+	bmin_line_no		- Added for 'uniqueness'
+	bmin_tline			- Text line no sequence
+	bmin_text			- Consolidate this line with other bills
+}

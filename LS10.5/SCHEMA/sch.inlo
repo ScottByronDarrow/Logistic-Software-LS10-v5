@@ -1,0 +1,115 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inlo,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inlo)
+|  Schema Desc  : (Inventory Location File. )
+|----------------------------------------------------------------------
+| $Log: sch.inlo,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:55  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.3  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file inlo 
+
+field	inlo_inlo_hash			type	serial				index	primary
+field	inlo_hhwh_hash			type	long				index	dups
+field	inlo_sknd_hash			type	long				index	dups
+field	inlo_hhum_hash			type	long
+field	inlo_location			type	char	10			index	dups
+field	inlo_loc_type			type	char	1		
+field	inlo_loc_status			type	char	1		
+field	inlo_lot_no				type	char	7
+field	inlo_slot_no			type	char	7
+field	inlo_expiry_date		type	edate
+field	inlo_pack_qty			type	float
+field	inlo_chg_wgt			type	float
+field	inlo_gross_wgt			type	float
+field	inlo_cu_metre			type	float
+field	inlo_uom				type	char	4
+field	inlo_cnv_fct			type	float
+field	inlo_rec_qty			type	float
+field	inlo_qty				type	float
+field	inlo_stake				type	float
+field	inlo_no_hits			type	int
+field	inlo_no_picks			type	int
+field	inlo_op_id          	type	char 14
+field	inlo_time_create    	type	char 5
+field	inlo_date_upd 		   	type	edate
+field	inlo_date_create    	type	edate
+field	inlo_mst_id				type	comp	
+			inlo_hhwh_hash,
+			inlo_hhum_hash,
+			inlo_location,
+			inlo_lot_no 									index	
+field	inlo_mst_lot			type	comp
+			inlo_hhwh_hash,
+			inlo_hhum_hash,
+			inlo_lot_no										index	dups
+field	inlo_mst_loc			type	comp
+			inlo_hhwh_hash,
+			inlo_hhum_hash,
+			inlo_location									index	dups
+field	inlo_id_lot				type	comp
+			inlo_hhwh_hash,
+			inlo_loc_type,
+			inlo_lot_no										index	dups
+field	inlo_id_loc				type	comp
+			inlo_hhwh_hash,
+			inlo_loc_type,
+			inlo_location									index	dups
+field	inlo_id_exp				type	comp
+			inlo_hhwh_hash,
+			inlo_loc_type,
+			inlo_expiry_date								index	dups
+field	inlo_id_fifo			type	comp
+			inlo_hhwh_hash,
+			inlo_loc_type,
+			inlo_date_create								index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		inlo_inlo_hash			-	Unique serial hash 
+		inlo_hhwh_hash			-	Link to incc_hhwh_hash
+		inlo_sknd_hash			-	Link to sknd_sknd_hash
+		inlo_hhum_hash			-	Link to inum_hhum_hash
+		inlo_location			-	Location code
+		inlo_loc_type			-	Location type
+									L	-	Loose
+									B	-	Bulk
+									D	-	Damaged
+									P	-	Pick 
+									S	-	Salvage
+									R	-	Refrigerated
+									C	-	Clean Room
+									O	-	Other
+		inlo_loc_status			-	Location Status (llst)
+		inlo_lot_no				-	Lot number - Internal
+		inlo_slot_no			-	Supplier Lot number - ex supplier
+		inlo_expiry_date		-	Expiry date
+		inlo_pack_qty			-	Package quantity
+		inlo_chg_wgt			-	Charge weight
+		inlo_gross_wgt			-	Gross weight
+		inlo_cu_metre			-	Cubic Metres 
+		inlo_uom				-	Create Unit Of Measure
+		inlo_cnv_fct			-	Conversion to base UOM
+		inlo_rec_qty			-	Receipt quantity (in base UOM)
+		inlo_qty				-	Current quantity (in base UOM)
+		inlo_stake				-	Stock take frozen quantity (in base UOM)
+		inlo_no_hits			-	Number of system hits on location.
+		inlo_no_picks			-	Number of user picks on location.
+		inlo_op_id          	-	Operator ID
+		inlo_time_create    	-	Time location touched
+		inlo_date_upd 			-	Date Location touched
+		inlo_date_create		-	Date location created
+}
+

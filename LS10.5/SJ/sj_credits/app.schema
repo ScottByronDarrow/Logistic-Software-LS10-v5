@@ -1,0 +1,92 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:41:14 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:41:14  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dp_no
+	field comm_gst_rate
+end
+
+table sjhr
+	field sjhr_co_no
+	field sjhr_est_no
+	field sjhr_dp_no
+	field sjhr_order_no
+	field sjhr_status
+	field sjhr_chg_client
+	field sjhr_end_client
+	field sjhr_cust_type
+	field sjhr_cust_ord_no
+	field sjhr_cost_estim
+	field sjhr_reqd_date
+	field sjhr_issue_date
+	field sjhr_inv_amt
+end
+
+table sjjd
+	field sjjd_co_no
+	field sjjd_est_no
+	field sjjd_dp_no
+	field sjjd_order_no
+	field sjjd_line_no
+	field sjjd_detail
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_class_type
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_nx_crd_nte_no
+end
+
+table sjis
+	field sjis_co_no
+	field sjis_est_no
+	field sjis_dp_no
+	field sjis_invno
+	field sjis_order_no
+	field sjis_date
+	field sjis_chg_client
+	field sjis_end_client
+	field sjis_cust_ord_no
+	field sjis_cost_estim
+	field sjis_invoice_cost
+	field sjis_invoice_chg
+	field sjis_prebill_amt
+	field sjis_status
+	field sjis_gst_pc
+	field sjis_type
+	field sjis_prt_stat
+end
+
+table sjig
+	field sjig_co_no
+	field sjig_est_no
+	field sjig_dp_no
+	field sjig_invno
+	field sjig_order_no
+	field sjig_acc_no
+	field sjig_amount
+end
+

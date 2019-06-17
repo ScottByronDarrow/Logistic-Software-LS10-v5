@@ -1,0 +1,106 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:24 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:24  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/05/04 01:33:46  scott
+#	Updated to add incf_gr_number as required by standard function
+#	
+#	Revision 4.0  2001/03/09 02:38:38  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/02/19 08:01:34  scott
+#	Updated to use app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_costing_flag
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_dec_pt
+	field inmr_outer_size
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+end
+
+table incc
+	field incc_hhbr_hash
+	field incc_hhcc_hash
+	field incc_hhwh_hash
+	field incc_closing_stock
+	field incc_first_stocked
+	field incc_c_1
+	field incc_c_2
+	field incc_c_3
+	field incc_c_4
+	field incc_c_5
+	field incc_c_6
+	field incc_c_7
+	field incc_c_8
+	field incc_c_9
+	field incc_c_10
+	field incc_c_11
+	field incc_c_12
+	field incc_c_val_1
+	field incc_c_val_2
+	field incc_c_val_3
+	field incc_c_val_4
+	field incc_c_val_5
+	field incc_c_val_6
+	field incc_c_val_7
+	field incc_c_val_8
+	field incc_c_val_9
+	field incc_c_val_10
+	field incc_c_val_11
+	field incc_c_val_12
+	field incc_c_prf_1
+	field incc_c_prf_2
+	field incc_c_prf_3
+	field incc_c_prf_4
+	field incc_c_prf_5
+	field incc_c_prf_6
+	field incc_c_prf_7
+	field incc_c_prf_8
+	field incc_c_prf_9
+	field incc_c_prf_10
+	field incc_c_prf_11
+	field incc_c_prf_12
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end

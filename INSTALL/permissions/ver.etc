@@ -1,0 +1,47 @@
+#
+#	Permission settings, using setperms (which must be run as root)
+#
+#
+
+
+#
+#	Settings for most files.
+owner=root
+group=lsl
+default-dir-perm=777
+default-file-perm=666
+
+#
+#	Exceptions to the rule
+#
+#	This uses regular-expressions, not shell-wildcards
+#
+
+#
+#Pattern					Mode		User	Comment
+#
+Makefile					777
+bin						777
+etc						777
+logs						777
+permissions					777
+src						777
+tables						777
+terminfo					777
+usr						777
+
+bin\/.*\.*					777
+etc\/.*\.*					777
+src\/.*\.*					777
+log\/.*\.*					777
+tables\/.*\.*					777
+terminfo\/.*\.*					777
+permissions\/.*\.*				777
+
+#
+#	Developers
+#
+#Pattern					Mode		User	Comment
+.*,v						444
+.*\/s\..*					444	# hangover SCCS files
+*.exe						777	# hangover SCCS files

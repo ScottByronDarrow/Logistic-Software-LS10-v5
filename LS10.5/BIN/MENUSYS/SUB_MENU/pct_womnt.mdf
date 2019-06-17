@@ -1,0 +1,16 @@
+Works Order Maintenance Menu. (SUB)
+sub_menu
+Exit to Production Control menu. <a> (1,1)
+menu MENUSYS/pct_master.mdf
+Works Order Creation/Maintenance. <a> (1,1)
+pc_womaint~LPNO~
+Confirm Planned Orders. <a> (1,1)
+pc_stat_mnt~0~P~
+Works Order Deletion. <a> (1,2)
+pc_wodel~LPNO~
+Print Works Order/Job Sheet. <a> (1,1)
+pc_woprint~"Works Order / Job Sheet"~
+Released W/O Qty & Date Maintenance. <a> (1,1)
+pc_relmaint~
+((
+))

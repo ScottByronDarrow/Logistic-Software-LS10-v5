@@ -1,0 +1,62 @@
+{======================================================================
+|  Copyright (C) 1998 - 2002 LogisticSoftware
+|======================================================================
+| $Id: sch.bmxd,v 1.1 2002/12/01 04:41:48 scott Exp $
+|  Schema Name  : (sch.bmxd)
+|  Schema Desc  : (BoM Material eXtra Detail file.)
+|----------------------------------------------------------------------
+| $Log: sch.bmxd,v $
+| Revision 1.1  2002/12/01 04:41:48  scott
+| New Schema's
+|
+======================================================================}
+file	bmxd	
+
+field	bmxd_co_no				type	char	2
+field	bmxd_hhbr_hash			type	long		
+field	bmxd_alt_no				type	int
+field	bmxd_line_no 			type	int
+field	bmxd_scanvalue			type	char	10
+field	bmxd_actscancode		type	char	30
+field	bmxd_scanstation		type	char	30
+field	bmxd_scansequence		type	char	10
+field	bmxd_serscanvalue		type	char	10
+field	bmxd_autolvvalue		type	char	10
+field	bmxd_labprintval		type	char	30
+field	bmxd_wgtmeasure			type	char	10
+field	bmxd_comblabval			type	char	10
+field	bmxd_orderclient		type	char	10
+field	bmxd_text1				type	char	10
+field	bmxd_text2				type	char	10
+field	bmxd_text3				type	char	10
+field	bmxd_text4				type	char	30
+field	bmxd_text5				type	char	30
+field	bmxd_id_no				type	comp
+			bmxd_co_no,
+			bmxd_hhbr_hash,
+			bmxd_alt_no,
+			bmxd_line_no									index	primary
+
+end
+
+{
+
+			  =====================================
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+			  =====================================
+	bmxd_co_no			- Company Number
+	bmxd_hhbr_hash		- Destination product
+	bmxd_alt_no			- Alternate Number
+	bmxd_line_no		- Added for 'uniqueness'
+	bmxd_scanvalue		- Scan Value	
+	bmxd_actscancode	- Actual Scan Value
+	bmxd_scanstation	- Scan Station
+	bmxd_scansequence	- Scan Sequence
+	bmxd_serscanvalue	- Serial Item Scan Value
+	bmxd_autolvvalue	- Auto Level Value
+	bmxd_labprintval	- Label Print Value
+	bmxd_wgtmeasure		- Weight Measure
+	bmxd_comblabval		- Combine Lable Value
+	bmxd_orderclient	- Order Client
+	bmxd_text1-5		- Text 1-5
+}

@@ -1,0 +1,41 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/14 07:13:31 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/14 07:13:31  scott
+#	Updated to convert to app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table tmlh
+	field tmlh_co_no
+	field tmlh_hhcf_hash
+	field tmlh_let_code
+	field tmlh_let_desc
+	field tmlh_hhlh_hash
+end
+
+table tmln
+	field tmln_hhlh_hash
+	field tmln_line_no
+	field tmln_desc
+end
+
+table tmcf
+	field tmcf_co_no
+	field tmcf_campaign_no
+	field tmcf_hhcf_hash
+	field tmcf_c_name1
+	field tmcf_c_name2
+end
+

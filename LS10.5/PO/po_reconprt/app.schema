@@ -1,0 +1,53 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:11:59 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:11:59  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:33:15  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:15  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table posd
+	field posd_co_no
+	field posd_hhsh_hash
+	field posd_hhpo_hash
+	field posd_inv_no
+	field posd_total
+end
+
+table posh
+	field posh_co_no
+	field posh_hhsh_hash
+	field posh_csm_no
+	field posh_curr_code
+	field posh_ex_rate
+end
+
+table sumr
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+end
+
+table pohr
+	field pohr_pur_ord_no
+	field pohr_hhsu_hash
+	field pohr_hhpo_hash
+end
+

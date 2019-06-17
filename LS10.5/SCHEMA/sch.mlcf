@@ -1,0 +1,32 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.mlcf,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.mlcf)
+|  Schema Desc  : (Screen generator field label text. )
+|----------------------------------------------------------------------
+| $Log: sch.mlcf,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:00  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	mlcf
+
+field	mlcf_lang_no 			type	int				index	primary
+field	mlcf_lang_desc			type	char	40	
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		mlcf_lang_no 				-		Language number.
+		mlcf_lang_desc				-		Language description.
+}

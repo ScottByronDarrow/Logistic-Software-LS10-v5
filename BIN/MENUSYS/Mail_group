@@ -1,0 +1,11 @@
+# This file associates mail users with group names.
+# Group names may be a maximum of 14 characters in length
+# A user may belong to more than one group.
+# A group may belong to another group, however the child group must be defined
+#   in the file BEFORE it is included in another group.
+#
+#Group  Users
+#
+dev	psl|scott
+sales	dev|psl|scott
+manage	dev|psl|scott

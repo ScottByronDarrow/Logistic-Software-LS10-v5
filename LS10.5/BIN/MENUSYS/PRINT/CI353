@@ -1,0 +1,7 @@
+#
+#  Printer Entry For C.ITOH CI-3500 MODEL-30  printer.
+#
+CI353|C.ITOH 3500 Printer|This is a printer entry:\
+	:TF=\014:XN=\E0!:XF=\E0 :I1=:I2=:\
+	:P0=\E?" :P2=\E?"!:UN=\E2!:UF=\E2 :F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\EI:EX=2:

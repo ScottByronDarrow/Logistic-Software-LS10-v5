@@ -1,0 +1,81 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/12 05:01:46 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/12 05:01:46  scott
+#	Updated to add app.schema
+#	Updated to clean code
+#	Updated to line up prompts.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table tmcf
+	field tmcf_co_no
+	field tmcf_campaign_no
+	field tmcf_hhcf_hash
+	field tmcf_c_name1
+	field tmcf_c_name2
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_hhop_hash
+	field tmop_op_name
+	field tmop_campaign_no
+end
+
+table tmpm
+	field tmpm_co_no
+	field tmpm_br_no
+	field tmpm_pro_no
+	field tmpm_hhpm_hash
+	field tmpm_name
+	field tmpm_acronym
+	field tmpm_area_code
+	field tmpm_b_sector
+	field tmpm_phone_freq
+	field tmpm_n_phone_date
+	field tmpm_op_code
+	field tmpm_lst_op_code
+	field tmpm_lphone_date
+end
+
+table tmah
+	field tmah_co_no
+	field tmah_hhcf_hash
+	field tmah_hhop_hash
+	field tmah_hhla_hash
+end
+
+table tmal
+	field tmal_hhla_hash
+	field tmal_line_no
+	field tmal_hhpm_hash
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_rate
+	field exaf_stat_flag
+end
+

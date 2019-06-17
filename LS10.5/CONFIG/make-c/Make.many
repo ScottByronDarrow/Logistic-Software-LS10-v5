@@ -1,0 +1,33 @@
+#
+#	Basic setup for Pinnacle applications using C
+#
+#	Multiple targets
+#
+######################################################
+include ${BASE_PATH}/${VERSION}/CONFIG/config
+
+#
+#
+#
+OBJS			=	${SRCS:.c=.o}
+
+#
+#	Common rules
+#
+TARGET			=	${DESTDIR}/${APP}
+
+all:	${TARGET} ${ALTS}
+
+${TARGET}:	schema depend ${OBJS}
+	${CC} ${LDFLAGS} -o $@ ${OBJS} ${RLDFLAGS} ${CLIBPATH} ${CLIBS}
+
+depend:	${SRCS}
+	w4 ${INC} ${DEF++} ${SRCS} > $@
+
+schema:	app.schema
+	appcschema ${APPSFLAGS} -o $@ app.schema
+
+${ALTS}:	${TARGET}
+	-ln -f ${TARGET} $@
+
+include depend

@@ -1,0 +1,88 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/14 06:44:56 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/14 06:44:56  scott
+#	Updated to convert to app.schema
+#	Updated to clean code
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_hhop_hash
+	field tmop_op_passwd
+	field tmop_op_name
+	field tmop_short_id
+	field tmop_campaign_no
+	field tmop_unscripted
+	field tmop_in_scr_no
+	field tmop_out_scr_no
+	field tmop_curr_c_no
+	field tmop_curr_l_no
+	field tmop_curr_prmpt
+	field tmop_sman_code
+	field tmop_login_time
+	field tmop_cam_time
+	field tmop_stat_flag
+end
+
+table tmpm
+	field tmpm_co_no
+	field tmpm_br_no
+	field tmpm_pro_no
+	field tmpm_hhpm_hash
+	field tmpm_name
+	field tmpm_acronym
+	field tmpm_area_code
+	field tmpm_sman_code
+	field tmpm_b_sector
+	field tmpm_active_flg
+	field tmpm_cont_name1
+	field tmpm_fax_no
+	field tmpm_phone_no
+	field tmpm_phone_freq
+	field tmpm_n_phone_date
+	field tmpm_n_phone_time
+	field tmpm_visit_freq
+	field tmpm_n_visit_date
+	field tmpm_n_visit_time
+	field tmpm_mail_flag
+	field tmpm_op_code
+	field tmpm_lst_op_code
+	field tmpm_call_bk_date
+	field tmpm_call_bk_time
+	field tmpm_call_no
+	field tmpm_lphone_date
+	field tmpm_origin
+	field tmpm_date_create
+	field tmpm_best_ph_time
+	field tmpm_delete_flag
+	field tmpm_tax_code
+	field tmpm_tax_no
+	field tmpm_stat_flag
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_logname
+	field exsf_salesman
+	field exsf_com_type
+	field exsf_com_pc
+	field exsf_com_min
+	field exsf_stat_flag
+end
+

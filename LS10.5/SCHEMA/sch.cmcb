@@ -1,0 +1,65 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmcb,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cmcb)
+|  Schema Desc  : (Contract Management Costheads/Contract Budget )
+|----------------------------------------------------------------------
+| $Log: sch.cmcb,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmcb
+
+field	cmcb_hhhr_hash			type	long		index 	dups
+field	cmcb_hhcm_hash			type	long		index	dups
+field	cmcb_sum_cost			type	money
+field	cmcb_sum_qty			type	float	
+field	cmcb_sum_value			type	money
+field	cmcb_budg_type			type	char	1
+field	cmcb_budg_cost			type	money
+field	cmcb_budg_qty			type	float	
+field	cmcb_budg_value			type	money
+field	cmcb_dtl_lvl			type	char	1
+field	cmcb_wip_glacc			type	char	16
+field	cmcb_lab_glacc			type	char	16
+field	cmcb_o_h_glacc			type	char	16
+field	cmcb_sal_glacc			type	char	16
+field	cmcb_cog_glacc			type	char	16
+field	cmcb_var_glacc			type	char	16
+field	cmcb_int_glacc			type	char	16
+field	cmcb_id_no				type	composite
+			cmcb_hhhr_hash,
+			cmcb_hhcm_hash							index	primary
+end
+
+{
+
+			  +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+			  +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmcb_hhhr_hash		-	Link to cmhr (Contract Header)
+	cmcb_hhcm_hash		-	Link to cmcm (Costhead Master)
+	cmcb_sum_cost		-	Unit Cost e.g Cost of Truck Per Hour
+							only entered in if type == Variable
+	cmcb_sum_qty		-	How Many Needed
+							only entered in if type == Variable
+	cmcb_sum_value		-	Total Value for Completing task
+							only entered in if type == Fixed
+	cmcb_budg_type		-	F)ixed Or V)ariable 
+	cmcb_budg_cost		-	Unit Cost e.g Cost of Truck Per Hour
+							only entered in if type == Variable
+	cmcb_budg_qty		-	How Many Needed
+							only entered in if type == Variable
+	cmcb_budg_value		-	Total Value for Completing task
+							only entered in if type == Fixed
+	cmcb_dtl_lvl		-	Detail Level For Capture to coln
+}

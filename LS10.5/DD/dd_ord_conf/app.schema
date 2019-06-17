@@ -1,0 +1,86 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:19:36 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:19:36  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/11/06 03:05:26  scott
+#	Converted to app.schema
+#	
+#
+#
+
+table ddhr
+	field ddhr_co_no
+	field ddhr_br_no
+	field ddhr_order_no
+	field ddhr_hhcu_hash
+	field ddhr_cus_ord_ref
+	field ddhr_hhdd_hash
+	field ddhr_dt_raised
+	field ddhr_sman_code
+	field ddhr_op_id
+	field ddhr_din_1
+	field ddhr_din_2
+	field ddhr_din_3
+	field ddhr_sell_terms
+	field ddhr_pay_term
+end
+
+table ddln
+	field ddln_hhdd_hash
+	field ddln_hhds_hash
+	field ddln_line_no
+	field ddln_hhbr_hash
+	field ddln_q_order
+	field ddln_sale_price
+	field ddln_item_desc
+end
+
+table cumr
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_curr_code
+	field cumr_ch_adr1
+	field cumr_ch_adr2
+	field cumr_ch_adr3
+	field cumr_ch_adr4
+end
+
+table ddsh
+	field ddsh_hhdd_hash
+	field ddsh_ship_no
+	field ddsh_hhds_hash
+	field ddsh_vessel
+	field ddsh_ship_depart
+	field ddsh_ship_arrive
+	field ddsh_packing
+	field ddsh_port_orig
+	field ddsh_port_dsch
+	field ddsh_port_dest
+	field ddsh_mark0
+	field ddsh_mark1
+	field ddsh_mark2
+	field ddsh_mark3
+	field ddsh_mark4
+end
+
+table inmr
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_std_uom
+end
+
+table inum
+	field inum_hhum_hash
+	field inum_uom
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+end
+

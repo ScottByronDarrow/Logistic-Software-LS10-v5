@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glpc,v 5.0 2001/06/19 10:17:14 cha Exp $
+|  Schema Name  : (sch.glpc)
+|  Schema Desc  : (General Ledger Currency File for Each glpd.	) )
+|----------------------------------------------------------------------
+| $Log: sch.glpc,v $
+| Revision 5.0  2001/06/19 10:17:14  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:44  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	glpc
+
+field	glpc_hhgp_hash			type 	long  	index	
+field	glpc_currency			type	char	3
+field	glpc_amount				type	money
+field	glpc_exch_rate			type	double
+field	glpc_local_amt			type	money
+field	glpc_ytd_amount			type	money
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glpc_hhgp_hash		-	Serial Unique field.
+	glpc_currency		-	Currency code.
+	glpc_amount         -	Amount of Transaction.
+	glpc_exch_rate		-	Exchange Rate. 
+	glpc_local_amt		-	Equivalent amount in local.
+	glpc_ytd_amount     -   Total of glpc_amount.
+}

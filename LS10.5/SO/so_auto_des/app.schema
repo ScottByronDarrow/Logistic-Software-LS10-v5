@@ -1,0 +1,30 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:18:39 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:18:39  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/05/02 04:05:29  scott
+#	Updated to use so_AutoDesConf as silly to maintain two automatic dispatch programs
+#	
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_hhcu_hash
+	field cohr_type
+	field cohr_hhco_hash
+end

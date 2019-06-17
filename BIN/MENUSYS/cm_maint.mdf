@@ -1,0 +1,30 @@
+Contract Management Maintenance (CMMT)
+psl_help
+Contract Management Master Menu. <a> (1,2)
+menu MENUSYS/cm_master.mdf
+WIP Status Master File Maintenance. <a> (1,1)
+cm_wip_mnt~
+Job Type Maintenance. <a> (1,1)
+cm_jtmaint~
+Issue To Maintenance. <a> (1,1)
+cm_iss_to~
+Costhead Maintenance. <a> (1,1)
+cm_costhd~
+Employee/Rate Maintenance. <a> (1,1)
+cm_emp_inpt~
+Employee/Contract/Rate Maintenance. <a> (1,1)
+cm_emp_rate~
+Equipment Maintenance. <a> (1,1)
+cm_eqmaint~cm_eqmaint.s~
+Contract Costhead And Budget Setup. <a> (1,2)
+cm_costbudg~
+Contract WIP Status Update. <a> (1,1)
+cm_wip_upd~
+Ongoing Contract Description Maintenance. <a> (1,1)
+cm_cnt_desc~
+((
+quadrant(16,6)
+quadrant(44,8)
+box(10,3,54,15)
+line(11,5,53)
+))

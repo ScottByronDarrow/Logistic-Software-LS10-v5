@@ -1,0 +1,36 @@
+Sales Order Entry Reports Menu (SOPR)
+so_report
+Sales Order Entry Menu. <a> (1,2)
+menu MENUSYS/so_master.mdf
+Print Packing Slips. <a> (1,2)
+lp_chain~warning "PRINT  PACKING  SLIPS"~so_invprnt.i LPNO N P~
+Reprint Packing Slips. <a> (1,2)
+so_invprnt.i~LPNO~Y~P~
+Print Held Orders. <a> (1,2)
+BACK~so_heldrep~LPNO~
+Print Backorder Report. <a> (1,2)
+so_bo_prt~P~
+Print Lost Sale Report. <a> (1,2)
+so_lsaleprt~
+Sales Order Analysis. <a> (1,2)
+so_sales~
+Print Packing Slips by Order. <a> (2,2)
+so_by_ps~LPNO~
+Print 16 Week Projection. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/so_16wk.mdf
+Print Customer Late List. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/so_latelst.mdf
+Print Orders By Category. >> <a> (2,1)
+pmenu MENUSYS/SUB_MENU/so_bycat.mdf
+Print Orders By Item number. >> <a> (2,1)
+pmenu MENUSYS/SUB_MENU/so_byitem.mdf
+Print Orders By Customer. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/so_bycust.mdf
+Print Orders By Date. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/so_bydate.mdf
+((
+quadrant(7,6)
+quadrant(44,8)
+box(2,3,74,15)
+line(3,5,73)
+))

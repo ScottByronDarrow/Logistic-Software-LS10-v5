@@ -1,0 +1,29 @@
+#
+# Key breaks
+stty intr '^c' kill '^?'
+stty tab3
+# bindkey -v
+# bindkey "\177" backward-kill-line	#	tcsh (enables kill)
+
+#	Personal preferences
+alias	WHO		'who | sort'
+alias 	dc 		cd
+alias 	pm 		psl_mail
+
+set autoexpand autocorrect autolist chase_symlinks
+set listlinks listjobs lineedit notify
+set correct=cmd
+set cdpath=(~ ~/work ~/src)
+set fignore=.o
+set history=100
+
+if ($?prompt) then
+	if ($?WINDOW) then
+		#	screen sub-shell
+		set prompt="(${WINDOW}):%m <%t> \!# "
+		unsetenv TERMCAP						# Forces EaseSpool to work
+	else
+		#	Normal sub-shell
+		set prompt="%m <%t> \!# "
+	endif
+endif

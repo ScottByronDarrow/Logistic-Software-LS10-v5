@@ -1,0 +1,28 @@
+Service Job Reports Menu (SJPR)
+job_reports_he
+Service Job Master Menu. <a> (1,1)
+menu MENUSYS/sj_master.mdf
+Labour Analysis By Job <a> (1,1)
+sj_isrep.i~sj_jobrep~Labour Analysis By Job Report~ ~
+Periodic Labour Analysis By Job <a> (1,1)
+sj_isrep.i~sj_jobrp2~Periodic Labour Analysis by Job report~W~
+Periodic Labour Analysis By Employee <a> (1,1)
+sj_isrep.i~sj_emprep~Labour Analysis by Employee report~W~
+Labour Analysis YTD Summary <a> (1,1)
+sj_ytdrep~LPNO~
+Print/Display Service Job Status <a> (1,1)
+sj_stat.i~sj_statrep~Print/Display Service Job Status~
+Print/Display Service Job Costs <a> (1,1)
+sj_stat.i~sj_wiprep~Print/Display Service Job Costs~
+Print/Display Job Costs Sheet <a> (1,1)
+sj_cstrp.i~
+Service Invoice Summary Report <a> (1,1)
+sj_isrep.i~sj_isrep.i~Service Invoice Summary Report~X~
+Reprint Service Invoices <a> (1,1)
+sj_ivrpr.i~sj_invprt~Reprint Service Invoices~
+Reprint Service Prebills/Credits <a> (1,1)
+sj_ivrpr.i~sj_pbcr_prt~Reprint Service Prebill/Credits Invoices~
+Vehicle/Service Person/Labour Rates File List <a> (1,1)
+sj_lists~
+((
+))

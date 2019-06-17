@@ -1,0 +1,86 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ddsh,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.ddsh)
+|  Schema Desc  : (Direct Delivery Shipment File. )
+|----------------------------------------------------------------------
+| $Log: sch.ddsh,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:31  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file ddsh 
+
+field	ddsh_hhdd_hash			type	long
+field	ddsh_hhsu_hash			type	long
+field	ddsh_ship_no			type	char 2
+field	ddsh_hhds_hash			type	serial				index
+field	ddsh_due_date			type	edate
+field	ddsh_ship_method		type	char	1
+field	ddsh_con_no				type	long
+field	ddsh_vessel				type	char	29
+field	ddsh_space_book			type	char	10
+field	ddsh_book_ref			type	char	10
+field	ddsh_bol_no				type	char	10
+field	ddsh_carrier			type	char	42
+field	ddsh_airway				type	char	20
+field	ddsh_date_load			type	edate
+field	ddsh_con_rel_no			type	char	20
+field	ddsh_ship_depart		type	edate
+field	ddsh_ship_arrive		type	edate
+field	ddsh_packing			type	char	40
+field	ddsh_port_orig			type	char	25
+field	ddsh_dept_orig			type	char	20
+field	ddsh_port_dsch			type	char	18
+field	ddsh_port_dest			type	char	25
+field	ddsh_mark0				type	char	33
+field	ddsh_mark1				type	char	33
+field	ddsh_mark2				type	char	33
+field	ddsh_mark3				type	char	33
+field	ddsh_mark4				type	char	33
+field	ddsh_cost_flag			type	char	1
+field	ddsh_stat_flag			type	char	1
+field	ddsh_id_no				type	composite
+			ddsh_hhdd_hash,	
+			ddsh_hhsu_hash,	
+			ddsh_ship_no									index	primary
+field	ddsh_id_no2				type	composite
+			ddsh_hhdd_hash,	
+			ddsh_hhsu_hash,	
+			ddsh_due_date									index	dups
+field	ddsh_id_no3				type	composite
+			ddsh_hhdd_hash,	
+			ddsh_hhds_hash									index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ddsh_co_no			-	Company number.
+	ddsh_br_no			-	Branch number.
+	ddsh_hhcu_hash		-	Link to customer master.(cumr_hhcu_hash)
+	ddsh_order_no		-	Direct delivery order number.
+	ddsh_hhdd_hash		-	Link to direct delivery header.(ddhr_hhdd_hash)
+	ddsh_hhsu_hash		-	Link to supplier master.(sumr_hhsu_hash)
+	ddsh_ship_no		-	Shipment number.
+	ddsh_hhds_hash		-	Shipment hash linking in on costs.
+	ddsh_ship_depart	-	Shipment departure date.
+	ddsh_ship_arrive	-	Shipment Arrival date.
+	ddsh_ship_method	-	Shipment Method.  A(ir) / S(ea) / L(and)
+	ddsh_vessel			-	Vessel.
+	ddsh_airway			-	Airway bill no.
+	ddsh_bol_no			-	B.O.L. number.
+	ddsh_port_orig		-	Port of origin.
+	ddsh_port_dest		-	Port of destination.
+	ddsh_cost_flag		-	On costs entered. 
+	ddsh_stat_flag		-	Status Flag.
+}

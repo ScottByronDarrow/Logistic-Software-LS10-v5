@@ -1,0 +1,46 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.prmr,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.prmr)
+|  Schema Desc  : (PayRoll employee Master file. )
+|----------------------------------------------------------------------
+| $Log: sch.prmr,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	prmr
+
+field	prmr_hhmr_hash			type	serial		index	primary
+field	prmr_co_no			type	char	2
+field	prmr_br_no			type	char	2
+field	prmr_code			type	char	8
+field	prmr_hhrs_hash			type	long
+field	prmr_name			type	char	40
+
+field	prmr_id_no			type	composite
+						prmr_co_no,
+						prmr_br_no,
+						prmr_code	index
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	prmr_hhmr_hash			- Unique record id
+	prmr_co_no			- Company
+	prmr_br_no			- Branch
+	prmr_code			- Resource code
+	prmr_hhrs_hash			- Link to DEFAULT resource
+	prmr_desc			- Resource description
+}

@@ -1,0 +1,320 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:15 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:15  scott
+#	Update - LS10.5
+#	
+#	Revision 5.0  2001/06/19 08:05:12  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.2  2001/06/04 08:13:20  robert
+#	updated to remove empty structure table wkmr
+#	
+#	Revision 4.1  2001/06/04 06:59:43  scott
+#	Updated to use  app.schema
+#	Updated to ensure defaults are correct
+#	General clean up
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+end
+
+table srdb
+	field srdb_co_no
+	field srdb_br_no
+	field srdb_dbt_no
+	field srdb_hhcu_hash
+	field srdb_acronym
+	field srdb_sman_code
+	field srdb_contact_name
+	field srdb_name
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_short_name
+	field esmr_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_acc_type
+	field cumr_stmt_type
+	field cumr_class_type
+	field cumr_cont_type
+	field cumr_buy_grp
+	field cumr_curr_code
+	field cumr_ctry_code
+	field cumr_price_type
+	field cumr_payment_flag
+	field cumr_int_flag
+	field cumr_bo_flag
+	field cumr_bo_cons
+	field cumr_bo_days
+	field cumr_po_flag
+	field cumr_sur_flag
+	field cumr_ch_adr1
+	field cumr_ch_adr2
+	field cumr_ch_adr3
+	field cumr_ch_adr4
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_dl_adr4
+	field cumr_contact_name
+	field cumr_contact2_name
+	field cumr_contact3_name
+	field cumr_spec_note1
+	field cumr_spec_note2
+	field cumr_phone_no
+	field cumr_fax_no
+	field cumr_telex
+	field cumr_post_code
+	field cumr_stop_credit
+	field cumr_date_stop
+	field cumr_total_days_sc
+	field cumr_credit_limit
+	field cumr_crd_ext
+	field cumr_crd_prd
+	field cumr_crd_flag
+	field cumr_credit_ref
+	field cumr_bank_code
+	field cumr_branch_code
+	field cumr_area_code
+	field cumr_del_zone
+	field cumr_sman_code
+	field cumr_merchant
+	field cumr_roy_type
+	field cumr_disc_code
+	field cumr_tax_code
+	field cumr_tax_no
+	field cumr_ch_to_ho_flg
+	field cumr_ho_dbt_hash
+	field cumr_hhsu_hash
+	field cumr_cat_sa_flag
+	field cumr_stmnt_flg
+	field cumr_freight_chg
+	field cumr_restock_fee
+	field cumr_nett_pri_prt
+	field cumr_reprint_inv
+	field cumr_cus_gl_type
+	field cumr_inst_fg1
+	field cumr_inst_fg2
+	field cumr_inst_fg3
+	field cumr_gl_ctrl_acct
+	field cumr_pay_method
+	field cumr_bk_name
+	field cumr_bk_branch
+	field cumr_bk_code
+	field cumr_bk_acct_no
+	field cumr_date_open
+	field cumr_date_lastinv
+	field cumr_date_lastpay
+	field cumr_amt_lastpay
+	field cumr_mtd_sales
+	field cumr_ytd_sales
+	field cumr_ord_value
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_od_flag
+	field cumr_stat_flag
+	field cumr_item_codes
+	field cumr_mail_label
+	field cumr_letter
+	field cumr_cash_flag
+	field cumr_ca_no
+	field cumr_crd_expiry
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_cont_name
+	field sumr_curr_code
+	field sumr_ctry_code
+	field sumr_pay_terms
+	field sumr_sic1
+	field sumr_sic2
+	field sumr_sic3
+	field sumr_stat_flag
+	field sumr_ship_method
+end
+
+table tspm
+	field tspm_hhcu_hash
+	field tspm_cont_name1
+	field tspm_cont_name2
+	field tspm_email1
+	field tspm_email2
+	field tspm_cont_code1
+	field tspm_cont_code2
+	field tspm_phone_freq
+	field tspm_n_phone_date
+	field tspm_n_phone_time
+	field tspm_visit_freq
+	field tspm_n_visit_date
+	field tspm_n_visit_time
+	field tspm_mail_flag
+	field tspm_op_code
+	field tspm_lst_op_code
+	field tspm_lphone_date
+	field tspm_lst_ord
+	field tspm_date_create
+	field tspm_best_ph_time
+	field tspm_delete_flag
+	field tspm_sales_per
+	field tspm_stat_flag
+end
+
+table tmpf
+	field tmpf_co_no
+	field tmpf_pos_code
+	field tmpf_pos_desc
+	field tmpf_stat_flag
+end
+
+table cudp
+	field cudp_co_no
+	field cudp_br_no
+	field cudp_dp_no
+	field cudp_dp_name
+	field cudp_stat_flag
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+
+table exmm
+	field exmm_co_no
+	field exmm_exmm_hash
+	field exmm_name
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_stat_flag
+end
+
+table trzm
+	field trzm_co_no
+	field trzm_br_no
+	field trzm_del_zone
+	field trzm_desc
+	field trzm_trzm_hash
+end
+
+table exct
+	field exct_co_no
+	field exct_cont_type
+	field exct_cont_desc
+	field exct_stat_flag
+end
+
+table exdf
+	field exdf_co_no
+	field exdf_code
+	field exdf_disc_pc
+end
+
+table exsi
+	field exsi_co_no
+	field exsi_inst_code
+	field exsi_inst_text
+	field exsi_stat_flag
+end
+
+table dbry
+	field dbry_co_no
+	field dbry_cr_type
+	field dbry_desc
+	field dbry_stat_flag
+end
+
+table cubd
+	field cubd_co_no
+	field cubd_bank_code
+	field cubd_branch_code
+end
+
+table cumd
+	field cumd_co_no
+	field cumd_est_no
+	field cumd_acc_type
+	field cumd_stmt_type
+	field cumd_price_type
+	field cumd_bo_flag
+	field cumd_bo_cons
+	field cumd_bo_days
+	field cumd_po_flag
+	field cumd_sur_flag
+	field cumd_stop_credit
+	field cumd_crd_prd
+	field cumd_roy_type
+	field cumd_disc_code
+	field cumd_tax_code
+	field cumd_stmnt_flg
+	field cumd_freight_chg
+	field cumd_restock_fee
+	field cumd_nett_pri_prt
+	field cumd_stat_flag
+	field cumd_gl_ctrl_acct
+end
+
+table pocf
+	field pocf_co_no
+	field pocf_code
+	field pocf_description
+end
+
+table posdtup
+	field pos_no              
+	field file_name           
+	field record_hash         
+	field action              
+end

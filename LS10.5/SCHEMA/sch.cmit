@@ -1,0 +1,49 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmit,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cmit)
+|  Schema Desc  : (Contract Management Issue To Master File )
+|----------------------------------------------------------------------
+| $Log: sch.cmit,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmit
+
+field	cmit_co_no			type	char	2
+field	cmit_issto			type	char	10
+field	cmit_hhit_hash		type	serial					index
+field	cmit_iss_name		type	char	40
+field	cmit_hhsu_hash		type	long
+field	cmit_hhem_hash		type	long
+field	cmit_id_no			type	composite
+			cmit_co_no,
+			cmit_issto										index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmit_co_no			-	Company Number
+	cmit_issto			-	Who It Is Issued To
+	cmit_hhit_hash		-	Unique Hash
+	cmit_iss_name		-	Full Name of Who It Is Issued To
+	cmit_hhsu_hash		-	Link To sumr (Creditors Master File)
+	cmit_hhem_hash		-	Link To cmem (Employee Master File)
+
+	NOTES
+	=====
+	Either cmit_hhsu_hash or cmit_hhem_hash will be zero
+	the other will link to the relevant table.
+}

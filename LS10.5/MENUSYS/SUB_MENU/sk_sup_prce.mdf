@@ -1,0 +1,10 @@
+Supplier Pricing Maintenance. (SUB)
+so_sup_pr
+Stock New Pricing Menu. <a> (1,1)
+menu MENUSYS/sk_price.mdf
+Mass Supplier Quantity Breaks/Cost Maint <a> (1,1)
+sk_msupcost~
+Mass Supplier Quantity Breaks Update <a> (1,1)
+sk_supqtyb~
+((
+))

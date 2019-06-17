@@ -1,0 +1,47 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:07:38 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:07:38  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:28:47  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/26 09:08:56  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table ffwk
+	field ffwk_hhcc_hash
+	field ffwk_filename
+	field ffwk_stat_flag
+end
+

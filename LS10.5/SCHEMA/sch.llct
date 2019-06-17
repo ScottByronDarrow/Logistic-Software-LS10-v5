@@ -1,0 +1,129 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.llct,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.llct)
+|  Schema Desc  : (System Lot/location control file. )
+|----------------------------------------------------------------------
+| $Log: sch.llct,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:59  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:34  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	llct
+
+field	llct_hhcc_hash			type	long			index	primary
+field	llct_nx_3pl_no			type	long			
+field	llct_pick_ord			type	char	3
+field	llct_pick_flg1			type	char	10
+field	llct_pick_flg2			type	char	10
+field	llct_pick_flg3			type	char	10
+field	llct_alt_uom			type	char	1
+field	llct_auto_all			type	char	1
+field	llct_exp_items			type	char	1
+field	llct_all_locs 			type	char	1
+field	llct_val_locs			type	char	10
+field	llct_pick_locs			type	char	10
+field	llct_rept_locs			type	char	10
+field	llct_qc_locs			type	char	10
+field	llct_invoice			type	char	1
+field	llct_input				type	char	1
+field	llct_credit				type	char	1
+field	llct_ccn_inp			type	char	1
+field	llct_des_conf			type	char	1
+field	llct_ades_conf			type	char	1
+field	llct_pc_issue			type	char	1
+field	llct_only_loc			type	char	10
+field	llct_dflt_loc			type	char	10
+field	llct_dflt_stat			type	char	1
+field	llct_stat_flag			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		llct_hhcc_hash			-		Link to warehouse record.
+		llct_pick_ord			-		Pick Order.
+											L(ocation)
+											E(xpiry date)
+											F(ifo date)
+		llct_pick_flg1			-		Used for location order if pick
+										order equals location.
+		llct_pick_flg2			-		Used for location order if pick
+										order equals location.
+		llct_pick_flg3			-		User for location order if pick
+										order equals location.
+		llct_alt_uom			-		Pick from Alternate UOM's 
+ 										'1' = Yes. '0' = No.
+		llct_auto_all			-		Automatic Allocation
+										'1' = Yes. '0' = No'
+		llct_exp_items			-		Allow Expired Items to be picked.
+										'1' = Yes. '0' = No'
+		llct_pick_locs			-		Valid pick location location types.
+									L	-	Loose
+									B	-	Bulk
+									D	-	Damaged
+									P	-	Pick 
+									S	-	Salvage
+									R	-	Refrigerated
+									C	-	Clean Room
+									O	-	Other
+		llct_rept_locs			-		Valid put-away location types.
+									L	-	Loose
+									B	-	Bulk
+									D	-	Damaged
+									P	-	Pick 
+									S	-	Salvage
+									R	-	Refrigerated
+									C	-	Clean Room
+									O	-	Other
+		llct_qc_locs			-		Valid QC location types.
+									L	-	Loose
+									B	-	Bulk
+									D	-	Damaged
+									P	-	Pick 
+									S	-	Salvage
+									R	-	Refrigerated
+									C	-	Clean Room
+									O	-	Other
+		llct_invoice			-	Valid input flag defaults
+									A	-	Automatic, don't view
+									V	-	View Lot Information.
+									M	-	Manual/Automatic (Allocated but
+                                              also shows other lots.)
+		llct_input				-	Valid input flag defaults
+									A	-	Automatic, don't view
+									V	-	View Lot Information.
+									M	-	Manual/Automatic (Allocated but
+                                              also shows other lots.)
+		llct_credit				-	Valid input flag defaults
+									A	-	Automatic, don't view
+									V	-	View Lot Information.
+									M	-	Manual/Automatic (Allocated but
+                                              also shows other lots.)
+		llct_ccn_inp			-	Valid input flag defaults
+									A	-	Automatic, don't view
+									V	-	View Lot Information.
+									M	-	Manual/Automatic (Allocated but
+                                              also shows other lots.)
+		llct_des_conf			-	Valid input flag defaults.
+									A	-	Automatic, don't view
+									V	-	View Lot Information.
+									M	-	Manual/Automatic (Allocated but
+                                              also shows other lots.)
+		llct_ades_conf			-	Valid input flag defaults.
+									A	-	Automatic, don't view
+									V	-	View Lot Information.
+									M	-	Manual/Automatic (Allocated but
+                                              also shows other lots.)
+		llct_dflt_stat			-	Default status from (llst)
+		llct_stat_flag			-		Spare status flag
+}

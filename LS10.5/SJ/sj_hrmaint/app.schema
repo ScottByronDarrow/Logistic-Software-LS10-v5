@@ -1,0 +1,91 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:41:26 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:41:26  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dp_no
+	field comm_pay_terms
+	field comm_dbt_date
+	field comm_fiscal
+end
+
+table sjhr
+	field sjhr_co_no
+	field sjhr_est_no
+	field sjhr_dp_no
+	field sjhr_order_no
+	field sjhr_status
+	field sjhr_chg_client
+	field sjhr_end_client
+	field sjhr_cust_type
+	field sjhr_cust_ord_no
+	field sjhr_cost_estim
+	field sjhr_estim_type
+	field sjhr_contact
+	field sjhr_invoice_no
+	field sjhr_issue_date
+	field sjhr_reqd_date
+	field sjhr_inv_amt
+	field sjhr_fixed_labour
+	field sjhr_comp_date
+	field sjhr_gl_expense
+end
+
+table sjjd
+	field sjjd_co_no
+	field sjjd_est_no
+	field sjjd_dp_no
+	field sjjd_order_no
+	field sjjd_line_no
+	field sjjd_detail
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_acc_type
+	field cumr_class_type
+	field cumr_po_flag
+	field cumr_ch_adr1
+	field cumr_ch_adr2
+	field cumr_ch_adr3
+	field cumr_contact_name
+	field cumr_stop_credit
+	field cumr_credit_limit
+	field cumr_crd_flag
+	field cumr_credit_ref
+	field cumr_tax_code
+	field cumr_ord_value
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_od_flag
+	field cumr_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_nx_job_no
+end
+

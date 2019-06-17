@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.exmd,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.exmd)
+|  Schema Desc  : (External Market Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.exmd,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:33  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file exmd 
+
+field	exmd_exmh_hash			type	long
+field	exmd_hhbr_hash			type	long
+field	exmd_insc_hash			type	long
+field	exmd_supp_stat			type	char	2
+field	exmd_unit_price			type	money
+field	exmd_disc				type	float
+field	exmd_comments			type	char	20
+field	exmd_id_no				type	composite
+			exmd_exmh_hash,
+			exmd_hhbr_hash									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	exmd_exmh_hash		-	Link to market header file (exmh)
+	exmd_hhbr_hash		-	Link to item master file (inmr)
+	exmd_insc_hash		-	Link to Substitute item file (incs)
+	exmd_supp_stat		-	Supplier status code. Lookup on file (exms)
+	exmd_unit_price		-	Unit price of compeditors item.
+	exmd_disc			-	Discount given by compeditor.
+	exmd_comments		-	General user defined comments.
+}

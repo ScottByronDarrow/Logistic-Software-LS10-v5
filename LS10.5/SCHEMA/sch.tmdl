@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmdl,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.tmdl)
+|  Schema Desc  : (Tele-Marketing Default Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.tmdl,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:33  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:50  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmdl
+
+field	tmdl_hhdf_hash			type	long		index	dups
+field	tmdl_line_no			type	int
+field	tmdl_field_name			type	char	19
+field	tmdl_offset			type	int
+field	tmdl_length			type	int
+field	tmdl_default			type	char	40
+field	tmdl_id_no			type	composite
+		tmdl_hhdf_hash,
+		tmdl_line_no					index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	tmdl_hhdf_hash		-	Link to tmdf.
+	tmdl_field_name		-	Name of field in tmpm
+	tmdl_offset		-	Field Offset.
+	tmdl_length		-	Length of field.
+	tmdl_default		-	Default for field.    
+}

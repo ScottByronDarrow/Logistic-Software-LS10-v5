@@ -1,0 +1,5 @@
+#
+#   Informix SE
+#
+DBIFLIB		=	-ldbif${VERSION}
+DBASELIB	=	-L${INFORMIXDIR}/lib -lisam

@@ -1,0 +1,79 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.0 2001/06/19 08:02:58 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:02:58  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:23:27  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:12:42  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:40:42  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/01/27 04:18:02  scott
+#	Added app.schema
+#	
+#	Revision 1.1  2000/01/27 01:32:43  scott
+#	Added app.schema
+#	
+#
+table comm
+field comm_term           
+field comm_co_no          
+field comm_co_name        
+field comm_est_no         
+field comm_est_name       
+field comm_crd_date       
+field comm_gl_date        
+end
+
+table sumr
+field sumr_co_no          
+field sumr_est_no         
+field sumr_crd_no         
+field sumr_hhsu_hash      
+field sumr_crd_name       
+field sumr_acronym        
+field sumr_curr_code      
+field sumr_pay_terms      
+field sumr_pay_method      
+field sumr_mtd_exp        
+field sumr_ytd_exp        
+field sumr_bo_curr        
+field sumr_bo_per1        
+field sumr_bo_per2        
+field sumr_bo_per3        
+field sumr_stat_flag      
+end
+
+table pocr
+field pocr_co_no          
+field pocr_code           
+field pocr_description    
+field pocr_ex1_factor     
+field pocr_stat_flag      
+end
+
+table suin
+field suin_hhsu_hash      
+field suin_hhsi_hash      
+field suin_type           
+field suin_est            
+field suin_inv_no         
+field suin_narrative      
+field suin_date_of_inv    
+field suin_date_posted    
+field suin_pay_date       
+field suin_amt            
+field suin_pay_amt        
+field suin_amt_paid       
+field suin_exch_rate      
+field suin_er_fixed       
+field suin_stat_flag      
+end

@@ -1,0 +1,38 @@
+Stock Maintenance (SKMT)
+sk_mant
+Stock Master Menu. <a> (1,2)
+menu MENUSYS/sk_master.mdf
+Maintain Master File. <a> (1,1)
+sk_mrmaint~
+Maintain Branch File. <a> (1,1)
+sk_brmaint~
+Maintain Warehouse File. <a> (1,2)
+sk_whmaint~
+Maintain Product Categories. <a> (1,1)
+excfmaint~
+Maintain Bar Codes. <a> (1,2)
+sk_bcode_inp~
+Maintain Inventory Defaults. <a> (1,2)
+psl_default~I~
+Maintain Std  Units-of-Measure. <a> (1,1)
+sk_uom_mnt~
+Maintain Item Units-of-Measure. <a> (1,2)
+sk_item_uom~
+Maintain Item Levy. <a> (2,2)
+sk_inal_mnt~
+Misc Maintenance Functions. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_mt_misc.mdf
+Maintain User Specific Codes >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_mt_ucode.mdf
+Maintain Buy/Selling Groups >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_grp_prce.mdf
+Inventory Tax Functions. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_tax_mnt.mdf
+Stock Delete Functions. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_mt_del.mdf
+((
+quadrant(6,6)
+quadrant(44,8)
+box(1,3,76,15)
+line(2,5,75)
+))

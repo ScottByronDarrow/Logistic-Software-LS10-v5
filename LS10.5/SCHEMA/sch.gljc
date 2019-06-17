@@ -1,0 +1,78 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.gljc,v 5.0 2001/06/19 10:17:13 cha Exp $
+|  Schema Name  : (sch.gljc)
+|  Schema Desc  : (General Ledger Journal Control Record. )
+|----------------------------------------------------------------------
+| $Log: sch.gljc,v $
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:43  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file gljc
+
+field	gljc_co_no				type	char	2	index	dups
+field	gljc_journ_type			type	char	2	index	dups
+field	gljc_run_no				type	long
+field	gljc_jnl_desc			type	char	15
+field	gljc_nxt_pge_no			type	long
+field	gljc_tot_1				type	money
+field	gljc_tot_2				type	money
+field	gljc_tot_3				type	money
+field	gljc_tot_4				type	money
+field	gljc_tot_5				type	money
+field	gljc_tot_6				type	money
+field	gljc_stat_flag			type	char	1
+field	gljc_rep_prog1			type	char	40
+field	gljc_rep_prog2			type	char	40
+field	gljc_id_no				type	composite
+		gljc_co_no,
+		gljc_journ_type					index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	gljc_co_no			-	Company Number.
+	gljc_journ_type		-	Journal Types
+						 1 = General Journal.
+						 2 = Standard Journal.
+						 3 = Accrual Journal.
+						 4 = Sales Journal.
+						 5 = Sales Returns Journal.
+						 6 = Receipts Journal.
+						 7 = Payables Journal.
+						 8 = Creditors Credit Notes Journal.
+						 9 = Disbursements Journal.
+						10 = Stock Issues / Receipts Journal.
+						11 = Purchases Journal.
+						12 = Stock Adjustments Journal.
+						13 = Stock Cost of Sales Journal.
+						14 = Stock Take Journal.
+						15 = Exchange Variance Journal.
+						16 = Debtors Journals Journal.
+						17 = Creditors Journals Journal.
+						18 = Bank Transfers.
+	gljc_run_no			-	General Ledger Last run number.
+	gljc_jnl_desc		-	Journal Description.
+	gljc_nxt_pge_no		-	Next Journal Page number.
+	gljc_tot_1			-	Control total 1
+	gljc_tot_2			-	Control total 2
+	gljc_tot_3			-	Control total 3
+	gljc_tot_4			-	Control total 4
+	gljc_tot_5			-	Control total 5
+	gljc_tot_6			-	Control total 6
+	gljc_stat_flag		-	Spare Status flag.
+	gljc_rep_prog1		-	First Program for printing report for this kind
+							of journal
+	gljc_rep_prog2		-	Second Program for printing report for this kind
+							of journal
+}

@@ -1,0 +1,22 @@
+:
+#!/bin/sh
+#
+# Mail notifier
+#
+# This expects PROG_PATH to set up properly prior to execution.
+# Usually put into the crontab for root for every 5 minutes :
+#
+# 0,5,10,15,20,25,30,35,40,45,50,55 * * * * /bin/env PROG_PATH=??? .../BIN/SCRIPT/PSL_mailnotify
+#
+#
+DBPATH=$PROG_PATH/DATA
+
+# +=+=+=+=+=+=+=+=
+# | System Path. |
+# +=+=+=+=+=+=+=+=
+cd $PROG_PATH/BIN
+PATH=:BM:CM:CR:DB:FA:FF:GL:MENU:MH:OL:PC:PO:PS:QT:RG:SA:SCRIPT:SJ:SK:SO:TM:TS:UTILS:${LPDIR}:/usr/bin:/bin:/usr/informix/bin:/etc:/usr/lib:/usr/fx/bin:/usr/ucb:/usr/lbin:/usr/UAP/bin
+
+export PATH DBPATH
+
+$PROG_PATH/BIN/UTILS/psl_mctrl

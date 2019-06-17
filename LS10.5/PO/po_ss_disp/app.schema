@@ -1,0 +1,326 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:12:15 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:12:15  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:33:28  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:28  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_crd_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_fiscal
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_dbt_name
+end
+
+table exsi
+	field exsi_co_no
+	field exsi_inst_code
+	field exsi_inst_text
+end
+
+table pocl
+	field pocl_co_no
+	field pocl_type
+	field pocl_desc
+	field pocl_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_alpha_code
+	field inmr_description
+	field inmr_serial_item
+	field inmr_outer_size
+	field inmr_std_uom
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table pocf
+	field pocf_co_no
+	field pocf_code
+	field pocf_description
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_type
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_date_raised
+	field pohr_app_code
+	field pohr_op_id
+	field pohr_time_create
+	field pohr_date_create
+	field pohr_req_usr
+	field pohr_reason
+	field pohr_status
+	field pohr_stat_flag
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhum_hash
+	field poln_hhpl_hash
+	field poln_serial_no
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_land_cst
+	field poln_due_date
+	field poln_pur_status
+	field poln_stat_flag
+end
+
+table pons
+	field pons_hhpl_hash
+	field pons_line_no
+	field pons_desc
+end
+
+table sudt
+	field sudt_hhsp_hash
+	field sudt_hhsi_hash
+	field sudt_amt_paid_inv
+	field sudt_loc_paid_inv
+	field sudt_exch_variatio
+	field sudt_exch_rate
+	field sudt_stat_flag
+end
+
+table suhd
+	field suhd_hhsu_hash
+	field suhd_pid
+	field suhd_cheq_no
+	field suhd_hhsp_hash
+	field suhd_narrative
+	field suhd_date_payment
+	field suhd_date_post
+	field suhd_tot_amt_paid
+	field suhd_loc_amt_paid
+	field suhd_disc_taken
+	field suhd_loc_disc_take
+	field suhd_exch_variance
+	field suhd_bank_id
+	field suhd_bank_amt
+	field suhd_bank_exch
+	field suhd_bank_chg
+	field suhd_pay_type
+	field suhd_rem_prt
+	field suhd_clear_fee
+	field suhd_stat_flag
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_hhsi_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_narrative
+	field suin_date_of_inv
+	field suin_date_posted
+	field suin_pay_date
+	field suin_gl_date
+	field suin_gst
+	field suin_amt
+	field suin_pay_amt
+	field suin_amt_paid
+	field suin_hold_reason
+	field suin_cus_po_no
+	field suin_currency
+	field suin_exch_rate
+	field suin_er_fixed
+	field suin_destin
+	field suin_approved
+	field suin_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_acc_type
+	field sumr_debtor_no
+	field sumr_adr1
+	field sumr_adr2
+	field sumr_adr3
+	field sumr_adr4
+	field sumr_cont_name
+	field sumr_cont2_name
+	field sumr_cont3_name
+	field sumr_cont_no
+	field sumr_curr_code
+	field sumr_ctry_code
+	field sumr_pay_terms
+	field sumr_disc
+	field sumr_sic1
+	field sumr_sic2
+	field sumr_sic3
+	field sumr_hold_payment
+	field sumr_fax_no
+	field sumr_pay_method
+	field sumr_bank
+	field sumr_bank_branch
+	field sumr_bank_code
+	field sumr_bank_acct_no
+	field sumr_date_opened
+	field sumr_sup_pri
+	field sumr_type_code
+	field sumr_ame
+	field sumr_mtd_exp
+	field sumr_ytd_exp
+	field sumr_bo_curr
+	field sumr_bo_per1
+	field sumr_bo_per2
+	field sumr_bo_per3
+	field sumr_stat_flag
+end
+
+table sunt
+	field sunt_hhsu_hash
+	field sunt_line_no
+	field sunt_text
+	field sunt_stat_flag
+end
+
+table suds
+	field suds_hhsu_hash
+	field suds_buy_group
+	field suds_reg_pc
+	field suds_qty_brk1
+	field suds_qty_brk2
+	field suds_qty_brk3
+	field suds_qty_brk4
+	field suds_qty_brk5
+	field suds_qty_brk6
+	field suds_disca_pc1
+	field suds_disca_pc2
+	field suds_disca_pc3
+	field suds_disca_pc4
+	field suds_disca_pc5
+	field suds_disca_pc6
+	field suds_discb_pc1
+	field suds_discb_pc2
+	field suds_discb_pc3
+	field suds_discb_pc4
+	field suds_discb_pc5
+	field suds_discb_pc6
+	field suds_discc_pc1
+	field suds_discc_pc2
+	field suds_discc_pc3
+	field suds_discc_pc4
+	field suds_discc_pc5
+	field suds_discc_pc6
+	field suds_cumulative
+	field suds_anticipated
+end
+
+table insp
+	field insp_hhsu_hash
+	field insp_hhbr_hash
+	field insp_qty_brk1
+	field insp_qty_brk2
+	field insp_qty_brk3
+	field insp_qty_brk4
+	field insp_qty_brk5
+	field insp_price1
+	field insp_price2
+	field insp_price3
+	field insp_price4
+	field insp_price5
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+	field ingp_sell_reg_pc
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_part
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_fob_cost
+	field inis_lcost_date
+	field inis_duty
+	field inis_licence
+	field inis_sup_uom
+	field inis_pur_conv
+	field inis_min_order
+	field inis_norm_order
+	field inis_ord_multiple
+	field inis_pallet_size
+	field inis_lead_time
+	field inis_sea_time
+	field inis_air_time
+	field inis_lnd_time
+	field inis_dflt_lead
+	field inis_weight
+	field inis_volume
+	field inis_stat_flag
+end
+
+table qasd
+	field qasd_hhsu_hash
+	field qasd_line_no
+	field qasd_desc
+	field qasd_stat_flag
+end
+

@@ -1,0 +1,63 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.0 2001/06/19 08:19:56 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:19:56  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:41:11  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:22:35  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 09:13:23  gerry
+#	Forced Revision No Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/06/08 08:08:01  scott
+#	Added new app.schema file.
+#	
+#
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+end
+
+table sokt
+	field sokt_co_no
+	field sokt_hhbr_hash
+	field sokt_line_no
+	field sokt_mabr_hash
+	field sokt_matl_qty
+	field sokt_due_date
+	field sokt_bonus
+end
+
+table posdtup
+	field pos_no              
+	field file_name           
+	field record_hash         
+	field action              
+end

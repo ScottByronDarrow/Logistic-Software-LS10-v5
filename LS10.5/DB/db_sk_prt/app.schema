@@ -1,0 +1,63 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/27 09:42:30 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/27 09:42:30  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+	field inmr_quick_code
+end
+
+table inex
+	field inex_hhbr_hash
+	field inex_line_no
+	field inex_desc
+end
+
+table cuit
+	field cuit_hhcu_hash
+	field cuit_hhbr_hash
+	field cuit_item_no
+	field cuit_item_desc
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_dbt_acronym
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_contact_name
+	field cumr_stat_flag
+	field cumr_item_codes
+end
+

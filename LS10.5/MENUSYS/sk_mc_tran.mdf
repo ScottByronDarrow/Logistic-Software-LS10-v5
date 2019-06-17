@@ -1,0 +1,26 @@
+Stock Transfers (Inter-)
+sk_trans
+Stock Adjustments Menu. <a> (1,2)
+menu MENUSYS/sk_adj.mdf
+Enter Issues ( ONE-STEP ). <a> (1,2)
+lp_chain~sk_mc_tran 0 PID IO sk_mc_tran.p N~
+Enter Transfer Request. <a> (1,1)
+lp_chain~sk_mc_tran 0 PID IR sk_mc_tran.p N~
+Confirm Transfer Request. <a> (1,2)
+lp_chain~sk_mc_tran LPNO PID RC sk_mc_tran.p N~
+Enter Transfer Receipts. <a> (1,2)
+lp_chain~sk_mc_tran 0 PID RE sk_mc_tran.p N~
+Transfer Display. <a> (2,2)
+sk_ir_mcdisp~
+Print transfers. <a> (2,1)
+sk_ir_mprn.i~LPNO~N~B~sk_mc_tran.p~
+Re-Print transfers. <a> (2,2)
+sk_ir_mprn.i~LPNO~Y~B~sk_mc_tran.p~
+Post Transfers to G/L. <a> (2,2)
+lp_chain~sk_ir_glup LPNO B~
+((
+box(1,3,76,15)
+line(2,5,75)
+quadrant(6,6)
+quadrant(48,8)
+))

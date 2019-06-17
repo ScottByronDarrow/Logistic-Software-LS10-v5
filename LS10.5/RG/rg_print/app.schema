@@ -1,0 +1,104 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/03/07 07:27:33 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/03/07 07:27:33  scott
+#	S/C 830
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_source
+	field inmr_dec_pt
+end
+
+table pcid
+	field pcid_co_no
+	field pcid_hhbr_hash
+	field pcid_hhwc_hash
+	field pcid_instr_no
+	field pcid_version
+	field pcid_line_no
+	field pcid_text
+end
+
+table pcwc
+	field pcwc_hhwc_hash
+	field pcwc_co_no
+	field pcwc_br_no
+	field pcwc_work_cntr
+	field pcwc_name
+end
+
+table rgbp
+	field rgbp_hhgr_hash
+	field rgbp_seq_no
+	field rgbp_hhbr_hash
+	field rgbp_qty
+end
+
+table rghr
+	field rghr_co_no
+	field rghr_br_no
+	field rghr_hhbr_hash
+	field rghr_alt_no
+	field rghr_hhgr_hash
+	field rghr_print_all
+end
+
+table rgln
+	field rgln_hhgr_hash
+	field rgln_seq_no
+	field rgln_hhwc_hash
+	field rgln_hhrs_hash
+	field rgln_rate
+	field rgln_ovhd_var
+	field rgln_ovhd_fix
+	field rgln_setup
+	field rgln_run
+	field rgln_clean
+	field rgln_qty_rsrc
+	field rgln_instr_no
+	field rgln_yld_clc
+	field rgln_can_split
+end
+
+table rgrs
+	field rgrs_hhrs_hash
+	field rgrs_co_no
+	field rgrs_br_no
+	field rgrs_code
+	field rgrs_desc
+	field rgrs_type
+	field rgrs_type_name
+	field rgrs_cost_type
+	field rgrs_rate
+	field rgrs_ovhd_var
+	field rgrs_ovhd_fix
+end
+

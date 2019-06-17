@@ -1,0 +1,101 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ithr,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.ithr)
+|  Schema Desc  : (Inventory Transfer Header File. )
+|----------------------------------------------------------------------
+| $Log: sch.ithr,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:58  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:34  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	ithr
+
+field	ithr_co_no				type	char	2
+field	ithr_type				type	char	1
+field	ithr_del_no				type	long
+field	ithr_hhit_hash			type	serial			index	primary
+field	ithr_iss_sdate			type	edate
+field	ithr_iss_date			type	edate
+field	ithr_rec_date			type	edate
+field	ithr_tran_ref			type	char	16
+field	ithr_op_id				type	char	14
+field	ithr_time_create		type	char	5
+field	ithr_date_create		type	edate
+field	ithr_del_zone  	    	type	char	6
+field	ithr_del_req  	    	type	char	1
+field	ithr_del_date  	    	type	edate
+field	ithr_s_timeslot	    	type	char	1
+field	ithr_e_timeslot	    	type	char	1
+field	ithr_cons_no			type	char	16
+field	ithr_carr_code			type	char	4
+field	ithr_carr_area			type	char	2
+field	ithr_no_cartons			type	int
+field	ithr_frt_cost			type	double
+field	ithr_no_kgs				type	float
+field	ithr_frt_req			type	char	1
+field	ithr_full_supply		type	char	1
+field	ithr_printed			type	char	1
+field	ithr_hhtr_hash			type	long			index	dups
+field	ithr_stat_flag			type	char	1
+
+field	ithr_id_no				type	composite
+			ithr_co_no,
+			ithr_type,
+			ithr_del_no 								index	dups
+field	ithr_id_no2				type	composite
+			ithr_co_no,
+			ithr_iss_date,
+			ithr_type,
+			ithr_del_no									index	dups
+field	ithr_id_no3				type	composite
+			ithr_type,
+			ithr_del_no									index	dups
+field	ithr_id_no4				type	composite
+			ithr_co_no,
+			ithr_del_no									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ithr_co_no		- Company Number.
+	ithr_del_no		- Docket number.
+	ithr_type		- B: Backorder	(ALL itln's = 'B')
+				  D: Delete	(ALL itln's = 'D')
+				  M: One-step	(Needs confirming)
+				  R: Request	(Needs confirming)
+				  T: In Transit
+				  U: Two-step	(Needs confirming)
+	ithr_hhit_hash   	- Serial hash to link to itln file. )
+	ithr_iss_sdate		- System issue date.
+	ithr_iss_date		- Keyed issue Date.
+	ithr_rec_date		- Keyed Receipt date.
+	ithr_op_id			- Operator Id.
+	ithr_time_create	- Time Record Created.
+	ithr_date_create	- Date Record Created.
+	ithr_del_zone		-	Delivery Zone. (See trzm file)
+	ithr_del_req		-	Delivery Required Y/N.
+	ithr_del_date		-	Delivery date.
+	ithr_s_timeslot		-	Delivery start time slot (See trzt file)
+	ithr_e_timeslot		-	Delivery start time slot (See trzt file)
+	ithr_cons_no		- Consigment Note No.
+	ithr_carr_code		- Carrier Code.
+	ithr_carr_area		- Carrier Area.
+	ithr_no_cartons		- Number of Cartons.
+	ithr_frt_cost		- Cost of freight.  
+	ithr_no_kgs			- Number of Kgs.
+	ithr_full_supply	- Y if Transfer must be supplied in full.
+						- N if not
+	ithr_printed		- Y if Printed, N if not.
+	ithr_hhtr_hash		- Link to transport.
+	ithr_stat_flag		- Status flag.
+}

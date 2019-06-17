@@ -1,0 +1,76 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sjhr,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sjhr)
+|  Schema Desc  : (Service Job Header Record File. )
+|----------------------------------------------------------------------
+| $Log: sch.sjhr,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:22  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sjhr 
+
+field	sjhr_co_no				type	char	2  
+field	sjhr_est_no				type	char	2
+field	sjhr_dp_no				type	char	2
+field	sjhr_order_no			type	long   
+field	sjhr_status				type	char	1
+field	sjhr_chg_client			type	long
+field	sjhr_end_client			type	long
+field	sjhr_cust_type			type	char	1
+field	sjhr_cust_ord_no		type	char	10
+field	sjhr_cost_estim			type	double 
+field	sjhr_estim_type			type	char	1
+field	sjhr_contact			type	char	20
+field	sjhr_invoice_no			type	char	8 
+field	sjhr_issue_date			type	edate  
+field	sjhr_reqd_date			type	edate
+field	sjhr_prebill_amt		type	double 
+field	sjhr_inv_amt			type	double 
+field	sjhr_inv_date			type	edate 
+field	sjhr_fixed_labour		type	double 
+field	sjhr_comp_date			type	edate
+field	sjhr_oh_cost			type	double 
+field	sjhr_oh_chg				type	double 
+field	sjhr_lb_cost			type	double 
+field	sjhr_lb_chg				type	double 
+field	sjhr_lb_hrs				type	float 
+field	sjhr_mt_cost			type	double 
+field	sjhr_mt_chg				type	double 
+field	sjhr_km					type	float 
+field	sjhr_km_chg				type	double 
+field	sjhr_gl_expense			type	char	16
+field	sjhr_id_no				type	composite
+			sjhr_co_no,
+			sjhr_est_no,
+			sjhr_dp_no,
+			sjhr_order_no 										index
+field	sjhr_id_no2				type	composite
+			sjhr_co_no,
+			sjhr_est_no,
+			sjhr_dp_no,
+			sjhr_status,
+			sjhr_order_no										index
+field	sjhr_id_no3				type	composite
+			sjhr_co_no,
+			sjhr_est_no,
+			sjhr_dp_no,
+			sjhr_chg_client,
+			sjhr_status,
+			sjhr_order_no										index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

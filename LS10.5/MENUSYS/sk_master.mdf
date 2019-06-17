@@ -1,0 +1,36 @@
+Inventory Control Menu (SKMR)
+sk_mast
+Distribution Menu <a> (1,2)
+menu MENUSYS/main_dist.mdf
+Display Stock Status. <a> (1,1)
+sk_alldisp~
+Restricted Stock Status. <a> (1,1)
+sk_resdisp~
+Stock Status Selection Display. <a> (1,2)
+sk_dispsel~
+Miscellaneous Stock Displays. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_display.mdf
+Stock Adjustments Menu. <a> (1,2)
+menu MENUSYS/sk_adj.mdf
+Stock Maintenance Menu. <a> (1,2)
+menu MENUSYS/sk_maint.mdf
+Stock Quality Control  Menu. <a> (1,2)
+menu MENUSYS/qc_master.mdf
+Stock location Control Menu. <a> (2,2)
+menu MENUSYS/sk_locctrl.mdf
+Stock Lot Control Menu. <a> (2,2)
+menu MENUSYS/sk_lot.mdf
+Stock-Take Master Menu. <a> (2,2)
+menu MENUSYS/sk_st_mst.mdf
+Outlet Inventory Menu. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_oi_mon.mdf
+Stock Pricing Menu. <a> (2,2)
+menu MENUSYS/sk_price.mdf
+Stock Reports Menus. <a> (2,2)
+menu MENUSYS/sk_report.mdf
+((
+quadrant(6,6)
+quadrant(48,8)
+box(1,3,76,15)
+line(2,5,75)
+))

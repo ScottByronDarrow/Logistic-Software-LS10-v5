@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2002 LogisticSoftware
+|======================================================================
+| $Id: sch.bmxh,v 1.1 2002/12/01 04:41:48 scott Exp $
+|  Schema Name  : (sch.bmxh)
+|  Schema Desc  : (BoM Material eXtra Header file.)
+|----------------------------------------------------------------------
+| $Log: sch.bmxh,v $
+| Revision 1.1  2002/12/01 04:41:48  scott
+| New Schema's
+|
+======================================================================}
+file	bmxh	
+
+field	bmxh_co_no				type	char	2
+field	bmxh_hhbr_hash			type	long		
+field	bmxh_alt_no				type	int
+field	bmxh_labprintval		type	char	30
+field	bmxh_wgtmeasure			type	char	10
+field	bmxh_text1				type	char	10
+field	bmxh_text2				type	char	10
+field	bmxh_text3				type	char	30
+field	bmxh_id_no				type	comp
+			bmxh_co_no,
+			bmxh_hhbr_hash,
+			bmxh_alt_no									index	primary
+
+end
+
+{
+
+			  =====================================
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+			  =====================================
+	bmxh_co_no			- Company Number
+	bmxh_hhbr_hash		- Destination product
+	bmxh_alt_no			- Alternate Number
+	bmxh_line_no		- Added for 'uniqueness'
+	bmxh_lab_value		- MKU Level Print Value
+	bmxh_wgt_value		- MKU weight Measure Value
+	bmxh_text1			- MKU text 1
+	bmxh_text2			- MKU text 2
+	bmxh_text3			- MKU text 3
+}

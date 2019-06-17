@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.bkct,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.bkct)
+|  Schema Desc  : (System Backup Control File. )
+|----------------------------------------------------------------------
+| $Log: sch.bkct,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:23  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file bkct
+
+field   bkct_hhct_hash          type    serial		index   primary
+field   bkct_desc               type    char    40
+field   bkct_label              type    char    20
+field   bkct_command            type    char    40
+field   bkct_bkup_files         type    char    80
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        bkct_hhct_hash          - Serial field.
+        bkct_desc               - Description of Backup.
+        bkct_label              - Label as it is shown on tape.
+        bkct_command            - Command run, i.e. tar -cvbf 1024 /dev/rct
+        bkct_bkup_files         - Files to backup, i.e /usr/DB/DATA
+}
+

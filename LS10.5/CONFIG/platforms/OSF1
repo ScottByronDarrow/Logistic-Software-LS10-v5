@@ -1,0 +1,19 @@
+#
+# DEC Alpha using gcc
+#
+C++				=	g++
+LD				=	g++
+CXXDBG			=	-g -Wall
+LDFLAGS			=	-g
+# Uncomment to use shared-library (site location *must* match)
+#RLDFLAGS		=	-rpath ${INFORMIXDIR}/lib
+
+#
+#	Resolution quirks
+#
+QUIRKSLIB		=	-lots
+
+#
+#	Include rules to build C++ sources
+#
+include ${BASE_PATH}/${VERSION}/CONFIG/Rules.c++

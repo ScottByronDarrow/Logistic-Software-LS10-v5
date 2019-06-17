@@ -1,0 +1,20 @@
+SOP - Orders by Customer. (SUB)
+so_help
+Sales Order Reports Menu. <a> (1,1)
+menu MENUSYS/so_reports.mdf
+Print All Orders By Customer. <a> (1,1)
+so_bycusprt~ ~
+Print Backorder By Customer. <a> (1,1)
+so_bycusprt~B~
+Print Forward-Orders By Customer. <a> (1,1)
+so_bycusprt~F~
+Print Held-Orders By Customer. <a> (1,1)
+so_bycusprt~H~
+Print New/Unconsolidated-Order By Customer. <a> (1,1)
+so_bycusprt~M~
+Print Scheduled-Orders By Customer. <a> (1,1)
+so_sch_rep~C~so_sch_rep~
+Print Packing Slips By Customer. <a> (1,1)
+so_bycusprt~P~
+((
+))

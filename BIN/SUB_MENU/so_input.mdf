@@ -1,0 +1,6 @@
+SUB MENU (SUB)
+sub_menu
+Exit <*>
+logout~
+Enter Sales Order. <*>
+so_input~R~so_input.s~LPNO~

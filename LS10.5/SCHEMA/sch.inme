@@ -1,0 +1,59 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inme,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inme)
+|  Schema Desc  : (Inventory Month end processing file)
+|----------------------------------------------------------------------
+| $Log: sch.inme,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inme
+
+field	inme_hhwh_hash			type	long		index	primary
+field	inme_opening_stock		type	float
+field	inme_receipts			type	float
+field	inme_pur				type	float
+field	inme_issues				type	float
+field	inme_adj				type	float
+field	inme_sales				type	float
+field	inme_stake				type	float
+field	inme_closing_stock		type	float
+field	inme_qc_qty				type	float
+field	inme_wo_qty_anti		type	float
+field	inme_qty				type	float
+field	inme_value				type	money
+field	inme_profit				type	money
+field	inme_stat_flag			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	inme_hhwh_hash		-	Unique serial index.
+	inme_opening_stock	-	Opening stock.
+	inme_receipts		-	Receipts. ( transfers in )
+	inme_pur			-	Purchases.
+	inme_issues			-	Issues.	  ( transfers out )
+	inme_adj			-	Stock Adjustments.
+	inme_sales			-	Stock Sales.
+	inme_stake			-	Stock take frozen value.
+	inme_closing_stock	-	Closing Stock.
+	inme_qc_qty			-	Quantity Requiring QC Checking.
+	inme_wo_qty_anti	-	Works Order Quantity Anticipated.
+	inme_qty			-	Quantity Sold.
+	inme_value			-	Value Sold.
+	inme_profit 		-	Profit Sold.
+	inme_stat_flag		-	Spare status flag.
+}

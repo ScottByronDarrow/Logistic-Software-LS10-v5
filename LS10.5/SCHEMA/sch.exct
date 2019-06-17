@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.exct,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.exct)
+|  Schema Desc  : (Debtors Contract Type Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.exct,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:32  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file exct 
+
+field	exct_co_no                   	type	char	2    	index	dups
+field	exct_cont_type	            	type	char	3    	index	dups
+field	exct_cont_desc       			type	char	40
+field	exct_stat_flag               	type	char	1
+field	exct_id_no                   	type	composite 
+			exct_co_no, 
+			exct_cont_type										index	primary
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	exct_co_no		-	Company Number.
+	exct_cont_type		-	Contract Type.
+	exct_cont_desc		-	Contract Description.
+	exct_stat_flag		-	Spare status flag.
+}
+end

@@ -1,0 +1,123 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.soln,v 5.1 2001/08/07 00:07:42 scott Exp $
+|  Schema Name  : (sch.soln)
+|  Schema Desc  : (Sales Order Detail Lines File. )
+|----------------------------------------------------------------------
+| $Log: sch.soln,v $
+| Revision 5.1  2001/08/07 00:07:42  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	soln
+
+field	soln_hhso_hash			type	long
+field	soln_line_no			type	int
+field	soln_hhbr_hash			type	long					index	dups
+field	soln_hhcc_hash			type	long	
+field	soln_hhum_hash			type	long	
+field	soln_hhsl_hash			type	serial					index	primary	
+field	soln_serial_no			type	char	25
+field	soln_cont_status		type	int
+field	soln_qty_order			type	float
+field	soln_qty_bord			type	float
+field	soln_qty_org_ord		type	float
+field	soln_gsale_price		type	money
+field	soln_sale_price			type	money
+field	soln_cost_price			type	money
+field	soln_item_levy			type	money
+field	soln_dis_pc				type	float
+field	soln_reg_pc				type	float
+field	soln_disc_a				type	float
+field	soln_disc_b				type	float
+field	soln_disc_c				type	float
+field	soln_cumulative			type	int
+field	soln_tax_pc				type	float
+field	soln_gst_pc				type	float
+field	soln_o_xrate			type	float
+field	soln_n_xrate			type	float
+field	soln_pack_size			type	char	5
+field	soln_sman_code			type	char	2
+field	soln_cus_ord_ref		type	char	20
+field	soln_pri_or				type	char	1
+field	soln_dis_or				type	char	1
+field	soln_item_desc			type	char	40
+field	soln_due_date			type	edate
+field	soln_del_no				type	integer
+field	soln_bonus_flag			type	char	1
+field	soln_hide_flag			type	char	1
+field	soln_hhah_hash			type	long
+field	soln_status				type	char	1
+field	soln_stat_flag			type	char	1
+field	soln_id_no				type	composite
+			soln_hhso_hash,
+			soln_line_no											index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+    soln_hhso_hash 		- 	Order hash linking line to Header.
+    soln_line_no 		- 	Line number.
+    soln_hhbr_hash 		- 	Links line with inventory item number.
+    soln_incc_hash 		- 	Links line with inventory Warehouse number.
+    soln_serial_no  	- 	Holds Serial Number if Applicable.
+	soln_cont_status		-	Contract status.
+									0 = No Contract applies.
+									1 = Contract applies no discounts.
+									2 = Contract applies, discounts allowed.
+    soln_qty_order 		- 	Quantity Still On Order.
+    soln_qty_desp  		- 	Quantity Despatched (& invoiced).
+						- 	qty_order + qty_desp = original order qty
+						- 	cannot invoice more than qty_order.
+	soln_gsale_price	-   Sale Price ( Gross before Reg percent )
+    soln_sale_price 	- 	Sale Price ( Nett  after  reg percent )
+    soln_cost_price 	- 	Cost Price (each)
+    soln_dis_pc			- 	Discount Percent.
+	soln_reg_pc			-	Regulatory percent
+	soln_disc_a			-	Discount Percent A
+	soln_disc_b			-	Discount Percent B
+	soln_disc_c			-	Discount Percent C
+	soln_cumulative		-	Cumulative. 1 or TRUE	Discounts are cumulative.
+	                 	-	            0 or FALSE	Discounts are absolute.
+    soln_tax_pc			- 	Tax Percent.
+    soln_gst_pc			- 	Gst Percent.
+    soln_o_xrate		- 	Old Exchange Rate.
+    soln_n_xrate		- 	New Exchange Rate.
+    soln_category   	- 	Inventory Product Category.
+    soln_item_desc  	- 	Inventory Product Description.
+    soln_due_date   	- 	Due Date.
+    soln_bdel_no		- 	Delivery Address number
+								0 = Sames as header delivery address.
+    soln_bonus_flag		- 	Bonus Item
+					  			Y  item is a bonus - no sales price
+								N  not a bonus item.
+    soln_hide_flag		- 	Hidden lines flag.
+					  			Y  item is hidden.
+								N  item is not hidden.
+    soln_hhah_hash		- 	Hash link to inah_hhah_hash
+	soln_status			-	Status of sales order line.
+								P(acking Slip)
+								M(anual Release Order)  
+								F(orward Order)
+								B(ackorder)
+								C(redit Check)
+								O(ver Margin)
+								H(eld Order)
+								R(elease Order)
+
+    soln_stat_flag      - 	Status Flag
+}

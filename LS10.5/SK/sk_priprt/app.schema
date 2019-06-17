@@ -1,0 +1,154 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.2 2002/12/01 04:48:17 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.2  2002/12/01 04:48:17  scott
+#	SC0053 - Platinum Logistics LS10.5.2.2002-12-01
+#	
+#	Revision 5.1  2001/11/07 07:17:11  scott
+#	Updated to remove gets
+#	Updated to convert to app.schema
+#	Updated to clean SOME of code.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_hhlo_hash
+	field ccmr_master_wh
+	field ccmr_sman_no
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_type
+	field ccmr_sal_ok
+	field ccmr_pur_ok
+	field ccmr_issues_ok
+	field ccmr_receipts
+	field ccmr_reports_ok
+	field ccmr_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_supercession
+	field inmr_description
+	field inmr_sale_unit
+	field inmr_on_hand
+	field inmr_stat_flag
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_std_cost
+end
+
+table inpr
+	field inpr_hhbr_hash
+	field inpr_price_type
+	field inpr_br_no
+	field inpr_wh_no
+	field inpr_curr_code
+	field inpr_area_code
+	field inpr_cust_type
+	field inpr_hhgu_hash
+	field inpr_price_by
+	field inpr_qty_brk1
+	field inpr_qty_brk2
+	field inpr_qty_brk3
+	field inpr_qty_brk4
+	field inpr_qty_brk5
+	field inpr_qty_brk6
+	field inpr_qty_brk7
+	field inpr_qty_brk8
+	field inpr_qty_brk9
+end
+
+table inph
+	field inph_co_no
+	field inph_this_page
+	field inph_hhph_hash
+	field inph_blank_page
+end
+
+table inps
+	field inps_hhph_hash
+	field inps_sub_page
+	field inps_page_style
+	field inps_hhpr_hash
+end
+
+table inpl
+	field inpl_hhpr_hash
+	field inpl_line_no
+	field inpl_length
+	field inpl_hhbr_hash_1
+	field inpl_hhbr_hash_2
+	field inpl_hhbr_hash_3
+	field inpl_hhbr_hash_4
+	field inpl_hhbr_hash_5
+	field inpl_hhbr_hash_6
+	field inpl_hhbr_hash_7
+end
+
+table inpt
+	field inpt_hhpr_hash
+	field inpt_line_no
+	field inpt_format
+	field inpt_title
+end
+
+table inpc
+	field inpc_hhpr_hash
+	field inpc_col_no
+	field inpc_col_type
+	field inpc_width
+	field inpc_heading_1
+	field inpc_heading_2
+	field inpc_format
+end
+
+table inpb
+	field inpb_co_no
+	field inpb_book
+	field inpb_description
+	field inpb_hhpb_hash
+end
+
+table inpd
+	field inpd_hhpb_hash
+	field inpd_seq_no
+	field inpd_hhph_hash
+end
+
+table inpi
+	field inpi_hhph_hash
+	field inpi_reference
+end
+

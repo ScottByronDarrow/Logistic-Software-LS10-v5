@@ -1,0 +1,40 @@
+TRADE ASSETS MENU (TAMR)
+ta_master
+Accounting Master Menu. <a> (1,2)
+menu MENUSYS/main_acct.mdf
+Supplier Master file. <a> (1,2)
+cr_mr_inpt~
+Trade Asset Specifications. <a> (1,1)
+as_spec_inp~
+Trade Asset Groups <a> (1,1)
+fa_group~
+Trade Asset Types <a> (1,1)
+as_type_inp~
+Trade Asset Movement Types <a> (1,1)
+as_type_mov~
+Trade Asset Service Types <a> (1,1)
+as_srty_inp~
+Trade Asset Brands <a> (1,1)
+as_brnd_inp~
+Trade Asset Status <a> (1,2)
+as_stat_inp~
+Trade Asset Master File <a> (2,1)
+as_mrmaint~
+Trade Asset Service Records <a> (2,1)
+as_ser_inp~
+Trade Asset Movements <a> (2,2)
+as_move_inp~
+Trade Assets Acquisition Report <a> (2,1)
+as_acq_prn~
+Trade Assets Deployment Report <a> (2,1)
+as_dep_prn~
+Trade Assets Movement Report <a> (2,1)
+as_move_prn~
+Trade Assets Repair Report <a> (2,1)
+as_fix_prn~
+((
+quadrant(6,6)
+quadrant(44,8)
+box(1,3,76,14)
+line(2,5,75)
+))

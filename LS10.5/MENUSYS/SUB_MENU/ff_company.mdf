@@ -1,0 +1,12 @@
+Focus Forecast By Company (SUB)
+ff_reorder_hel
+Focus Forecasting Master Menu. <a> (1,1)
+menu MENUSYS/ff_master.mdf
+Print/Update Demand Forecast ( By Company ). <a> (1,1)
+ff_demand.i~ff_cdemand~Print / Update Demand Forecast By Company Report~
+Print Summary Demand Forecast  ( By Company ). <a> (1,1)
+ff_cdsummary~LPNO~
+Print/Generate Suggested Reorder Report ( By Company ). <a> (1,1)
+ff_reorder.i~ff_creorder~Suggested Reorder By Company Report~
+((
+))

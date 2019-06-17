@@ -1,0 +1,106 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:04:30 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:04:30  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:24:58  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:13:45  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/09/06 05:32:14  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+end
+
+table exmh
+	field exmh_exmh_hash
+	field exmh_hhcu_hash
+	field exmh_hhsf_hash
+	field exmh_date
+	field exmh_remarks
+end
+
+table exmd
+	field exmd_exmh_hash
+	field exmd_hhbr_hash
+	field exmd_insc_hash
+	field exmd_supp_stat
+	field exmd_unit_price
+	field exmd_disc
+	field exmd_comments
+end
+
+table exms
+	field exms_co_no
+	field exms_stat_code
+	field exms_desc
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_hhsf_hash
+	field exsf_salesman
+end
+
+table incs
+	field incs_co_no
+	field incs_incs_hash
+	field incs_hhbr_hash
+	field incs_subs_code
+	field incs_subs_desc
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+end
+
+table cuit
+	field cuit_hhcu_hash
+	field cuit_hhbr_hash
+	field cuit_item_no
+	field cuit_item_desc
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_sman_code
+	field cumr_item_codes
+end
+

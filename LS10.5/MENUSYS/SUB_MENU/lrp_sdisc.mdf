@@ -1,0 +1,8 @@
+LRP - SUPPLY DISCOUNT SUB-MENU (SUB)
+lrp_help
+LRP - SUPPLY MASTER MENU <a> (1,3)
+menu MENUSYS/lrp_supply.mdf
+Supplier Discount Maintenance <a> (3,2)
+sk_sup_disc~
+((
+))

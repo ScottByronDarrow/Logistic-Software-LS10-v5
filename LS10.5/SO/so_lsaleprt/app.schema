@@ -1,0 +1,66 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:20:02 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:20:02  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/03/16 04:34:28  scott
+#	Updated to clean code and add app.schema
+#	Updated to ensure selection screen displays correctly with LS10-GUI
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_description
+	field inmr_category
+end
+
+table inls
+	field inls_co_no
+	field inls_est_no
+	field inls_date
+	field inls_hhbr_hash
+	field inls_hhcc_hash
+	field inls_hhcu_hash
+	field inls_area_code
+	field inls_sale_code
+	field inls_qty
+	field inls_value
+	field inls_res_code
+	field inls_res_desc
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_acronym
+end
+

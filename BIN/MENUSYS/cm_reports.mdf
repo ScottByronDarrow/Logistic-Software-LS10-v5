@@ -1,0 +1,32 @@
+Contract Management Reports Menu (CMRP)
+psl_help
+Contract Management Master Menu. <a> (1,2)
+menu MENUSYS/cm_master.mdf
+Contract Master Listing <a> (1,1)
+cm_cont_lst~Contract Master File Listing~
+Costhead Code Master Listing <a> (1,1)
+cm_csthd_lst~Costhead Code Master File Listing~
+G/L Setup by Job Types Listing <a> (1,1)
+cm_jtype_lst~G/L Accounts Setup by Job Types Listing~
+Plant Rates Master Listing <a> (1,1)
+cm_equip_lst~Plant Rates Master File Listing~
+Issue To Codes Master Listing <a> (1,1)
+cm_issto_lst~Issue To Codes Master File Listing~
+Employee Master Listing <a> (1,1)
+cm_emp_lst~Employee Master File Listing~
+Employee Rates Master Listing <a> (1,2)
+cm_erate_lst~Employee Rates Master File Listing~
+Anniversary Day Report <a> (1,2)
+cm_anniprt~
+Print Contracts Ready For Billing <a> (1,1)
+cm_cont_due~Print Open Contracts Ready For Billing/Updating~
+Print Invoice Summary Report <a> (2,2)
+cm_inv_sum~Print Invoice Summary Report~
+Labour Analysis Report <a> (2,2)
+cm_emp_anal~LabAnal~
+((
+quadrant(6,6)
+quadrant(46,8)
+box(1,3,76,15)
+line(2,5,75)
+))

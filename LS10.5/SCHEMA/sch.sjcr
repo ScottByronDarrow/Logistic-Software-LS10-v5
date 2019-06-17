@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sjcr,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sjcr)
+|  Schema Desc  : (Service Job Extras Rate File. )
+|----------------------------------------------------------------------
+| $Log: sch.sjcr,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:22  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sjcr
+
+field	sjcr_co_no				type	char	2
+field	sjcr_est_no				type	char	2
+field	sjcr_dp_no				type	char	2
+field	sjcr_dis_pc_markup		type	float
+field	sjcr_gl_wip				type	char	16
+field	sjcr_gl_ext_sales		type	char	16
+field	sjcr_gl_int_sales		type	char	16
+field	sjcr_gl_ext_cos			type	char	16
+field	sjcr_gl_int_cos			type	char	16
+field	sjcr_gl_ext_cos_va		type	char	16
+field	sjcr_gl_int_cos_va		type	char	16
+field	sjcr_id_no				type	composite
+			sjcr_co_no,
+			sjcr_est_no,
+			sjcr_dp_no									index primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ffpr,v 5.0 2001/06/19 10:17:13 cha Exp $
+|  Schema Name  : (sch.ffpr)
+|  Schema Desc  : (Focus Forcasting Reorder Review Period file. )
+|----------------------------------------------------------------------
+| $Log: sch.ffpr,v $
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:40  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+
+file ffpr 
+
+field	ffpr_category			type	char 11
+field	ffpr_hhbr_hash			type	long
+field	ffpr_br_no				type	char 2
+field	ffpr_id_no				type	composite
+			ffpr_hhbr_hash,
+			ffpr_br_no					index	dups
+field	ffpr_id_no_1			type	composite
+			ffpr_category,
+			ffpr_br_no					index 	dups
+field	ffpr_review_prd			type	float
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ffpr_category		-	Category 	( ex excf )
+	ffpr_hhbr_hash		-	Link to inmr	( inmr_hhbr_hash )
+	ffpr_br_no		-	Branch number.
+	ffpr_review_prd		-	Review period.
+}

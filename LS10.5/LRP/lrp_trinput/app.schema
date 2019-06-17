@@ -1,0 +1,115 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/07/23 05:15:43 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/07/23 05:15:43  scott
+#	.
+#	
+#	Revision 5.0  2001/06/19 08:07:46  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:28:56  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/30 05:24:30  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_acronym
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_inv_date
+end
+
+table comr
+	field comr_co_no
+	field comr_contingency
+	field comr_stat_flag
+end
+
+table ffwk
+	field ffwk_hhcc_hash
+	field ffwk_hhbr_hash
+	field ffwk_hhsu_hash
+	field ffwk_hhpo_hash
+	field ffwk_hhit_hash
+	field ffwk_filename
+	field ffwk_sort
+	field ffwk_crd_no
+	field ffwk_r_hhcc_hash
+	field ffwk_review_pd
+	field ffwk_wks_demand
+	field ffwk_sugg_qty
+	field ffwk_order_qty
+	field ffwk_source
+	field ffwk_cons_1
+	field ffwk_cons_2
+	field ffwk_cons_3
+	field ffwk_cons_4
+	field ffwk_cons_5
+	field ffwk_cons_6
+	field ffwk_cons_7
+	field ffwk_cons_8
+	field ffwk_cons_9
+	field ffwk_cons_10
+	field ffwk_cons_11
+	field ffwk_cons_12
+	field ffwk_alt_supp
+	field ffwk_stat_flag
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_abc_code
+	field incc_safety_stock
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_closing_stock
+	field incc_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_supercession
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_abc_code
+	field inmr_reorder
+	field inmr_sale_unit
+	field inmr_on_hand
+	field inmr_on_order
+	field inmr_committed
+	field inmr_backorder
+	field inmr_forward
+	field inmr_sellgrp
+	field inmr_buygrp
+	field inmr_min_quan
+	field inmr_safety_stock
+end
+

@@ -1,0 +1,73 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.crbk,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.crbk)
+|  Schema Desc  : (Creditors Bank File. )
+|----------------------------------------------------------------------
+| $Log: sch.crbk,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	crbk
+
+field	crbk_co_no			type	char	2		index	dups
+field	crbk_hhac_hash		type	serial			index	primary
+field	crbk_bank_id		type	char	5		index	dups
+field	crbk_bank_name		type	char	40
+field	crbk_branch_name	type	char	40
+field	crbk_adr1			type	char	40
+field	crbk_adr2			type	char	40
+field	crbk_adr3			type	char	40
+field	crbk_adr4			type	char	40
+field	crbk_acct_name		type	char	20
+field	crbk_bank_no		type	char	15
+field	crbk_bank_acct_no	type	char	15
+field	crbk_curr_code		type	char	3
+field	crbk_gl_bank_chg	type	char	16
+field	crbk_gl_bank_acct	type	char	16
+field	crbk_gl_exch_var	type	char	16
+field	crbk_gl_bill_rec	type	char	16
+field	crbk_gl_fwd_rec		type	char	16
+field	crbk_gl_int_acct	type	char	16
+field	crbk_gl_pcash_acct	type	char	16
+field	crbk_clear_fee		type	money
+field	crbk_stat_flag		type	char	1
+field	crbk_id_no			type	comp
+			crbk_co_no,
+			crbk_bank_id									index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	crbk_co_no			-	Company Number.
+	crbk_bank_id		-	Bank Code.
+	crbk_bank_name		-	Bank Name.
+	crbk_branch_name	-	Branch Name.
+	crbk_adr1			-	Bank Address Part 1.
+	crbk_adr2			-	Bank Address Part 2.
+	crbk_adr3			-	Bank Address Part 3.
+	crbk_adr4			-	Bank Address Part 4.
+	crbk_acct_name		-	Account Name.
+	crbk_bank_no		-	Bank Number.
+	crbk_bank_acct_no	-	Bank Account Number.
+	crbk_curr_code		-	Currency Code.
+	crbk_gl_bank_chg	-	G/L Bank Charges Account.
+	crbk_gl_bank_acct	-	G/L Bank Account.
+	crbk_gl_exch_var	-	G/L Exchange Variation Account.
+	crbk_gl_bill_rec	-	G/L Bills Receivable Account.
+	crbk_gl_int_acct	-	G/L Interest Account.
+	crbk_gl_pcash_acct	-	G/L Petty Cash Account.
+	crbk_clear_fee		-	Clearance Fee.
+	crbk_stat_flag		-	Spare Stat flag.
+}

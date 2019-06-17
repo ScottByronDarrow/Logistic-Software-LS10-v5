@@ -1,0 +1,63 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:00 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:00  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+	field ingp_sell_reg_pc
+end
+
+table cuqb
+	field cuqb_co_no
+	field cuqb_buygrp
+	field cuqb_sellgrp
+	field cuqb_category
+	field cuqb_qty_brk1
+	field cuqb_qty_brk2
+	field cuqb_qty_brk3
+	field cuqb_qty_brk4
+	field cuqb_qty_brk5
+	field cuqb_qty_brk6
+	field cuqb_qty_brk7
+	field cuqb_qty_brk8
+	field cuqb_qty_brk9
+	field cuqb_update_flag
+	field cuqb_price_type
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+end
+

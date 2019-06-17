@@ -1,0 +1,30 @@
+Stock Movements Report Menu (SUB)
+sk_rep
+Stock Report Menu. <a> (1,2)
+menu MENUSYS/sk_report.mdf
+Standard Stock Movements Report. <a> (1,2)
+BACK~sk_moveprn~LPNO~
+Stock Movements Report Detailed - Company. <a> (1,1)
+sk_group.i~sk_move~"Movements Report"~" "~1~
+Stock Movements Report Detailed - Branch. <a> (1,1)
+sk_group.i~sk_move~"Movements Report"~" "~2~
+Stock Movements Report Detailed - Warehouse. <a> (1,1)
+sk_group.i~sk_move~"Movements Report"~" "~3~
+Stock Movements Report Summary - Company. <a> (1,1)
+sk_group.i~sk_move~"Movements Report"~" "~4~
+Stock Movements Report Summary - Branch. <a> (1,1)
+sk_group.i~sk_move~"Movements Report"~" "~5~
+Stock Movements Report Summary - Warehouse. <a> (1,1)
+sk_group.i~sk_move~"Movements Report"~" "~6~
+Stock Movements Report Intermediate - Company. <a> (1,1)
+sk_group.i~sk_move~"Movements Report"~" "~7~
+Stock Movements Report Intermediate - Branch. <a> (1,1)
+sk_group.i~sk_move~"Movements Report"~" "~8~
+Stock Movements Report Intermediate - Warehouse. <a> (1,1)
+sk_group.i~sk_move~"Movements Report"~" "~9~
+((
+quadrant(7,6)
+quadrant(43,8)
+box(1,3,76,14)
+line(2,5,75)
+))

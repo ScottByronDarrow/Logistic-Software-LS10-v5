@@ -1,0 +1,54 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmch,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.tmch)
+|  Schema Desc  : (Tele-Marketing Call Header file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmch,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:33  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:50  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmch
+
+field	tmch_co_no			type	char	2
+field	tmch_call_no			type	long
+field	tmch_call_date			type	edate
+field	tmch_hhpm_hash			type	long		index	dups
+field	tmch_hhcf_hash			type	long		index	dups
+field	tmch_hhop_hash			type	long		index	dups
+field	tmch_hhsh_hash			type	long		index	dups
+field	tmch_hhcl_hash			type	serial		index
+field	tmch_io_flag			type	char	1
+field	tmch_cus_ord_ref		type	char	16
+field	tmch_ord_value			type	double
+field	tmch_id_no			type	composite 
+		tmch_co_no,
+		tmch_call_no					index	primary
+field	tmch_stat_flag			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tmch_co_no		-	Company number.
+	tmch_call_no		-	Call number.
+	tmch_call_date		-	Call date.
+	tmch_hhpm_hash		-	Link to Prospect file 	(tmpm)
+	tmch_hhcf_hash		-	Link to Campaign File	(tmcf)
+	tmch_hhop_hash		-	Link to OPerator file	(tmof)
+	tmch_hhsh_hash		-	Link to Script file	(tmsh)
+	tmch_hhcl_hash		-	Unique Serial Hash.
+	tmch_io_flag		-	I(n) / O(ut) Call flag.
+	tmch_cus_ord_ref	-	Customer order ref.
+	tmch_ord_value		-	Order Value.
+	tmch_stat_flag		-	Spare status flag.
+}

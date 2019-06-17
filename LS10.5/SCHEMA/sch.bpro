@@ -1,0 +1,56 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.bpro,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.bpro)
+|  Schema Desc  : (System Batch Control file. )
+|----------------------------------------------------------------------
+| $Log: sch.bpro,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file bpro 
+
+field	bpro_co_no			type	char	2
+field	bpro_br_no			type	char	2
+field	bpro_program		type	char	14		index	dups
+field	bpro_hash			type	serial			index	primary
+field	bpro_status			type	char	1
+field	bpro_up_date		type	edate
+field	bpro_up_time		type	char	5
+field	bpro_pid			type	long
+field	bpro_lpno			type	int
+field	bpro_parameters		type	char	30
+field	bpro_stat_flag		type	char	1	
+field	bpro_id_no			type	composite
+			bpro_co_no,
+			bpro_br_no,
+			bpro_program							index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	bpro_co_no		- Company number.
+	bpro_br_no		- Branch number.
+	bpro_program	- Name of program running.
+	bpro_hash		- Unique hash created when record added.
+	bpro_status		- Status of Job.
+					  R(unning)
+					  S(topped).
+	bpro_up_date	- Date background process started.
+	bpro_up_time	- Time background process started.
+	bpro_pid		- Process ID of Background process.
+	bpro_lpno		- Default printer number of Background process.
+	bpro_parameters	- Arguments passed to program when run.
+	bpro_stat_flag	- Spare status flag.
+}

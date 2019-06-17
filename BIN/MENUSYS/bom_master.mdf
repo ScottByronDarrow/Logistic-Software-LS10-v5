@@ -1,0 +1,15 @@
+Bill of Materials Master Menu. (BOMMR)
+bom_help
+Manufacturing Menu <a> (1,2)
+menu MENUSYS/main_manf.mdf
+Bill of Materials Maintenance Menu. <a> (1,2)
+menu MENUSYS/bom_maint.mdf
+Bill of Materials Displays Menu. <a> (1,2)
+menu MENUSYS/bom_dsplay.mdf
+Bill of Materials Reports Menu. <a> (1,2)
+menu MENUSYS/bom_report.mdf
+((
+quadrant(22,6)
+line(15,5,49)
+box(14,3,50,10)
+))

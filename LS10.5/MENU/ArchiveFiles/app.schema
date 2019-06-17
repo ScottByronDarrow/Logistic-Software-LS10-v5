@@ -1,0 +1,417 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/07 10:02:57 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/07 10:02:57  scott
+#	Updated to ensure version numbers on new programs are correct.
+#	
+#	Revision 1.1  2002/05/07 02:49:04  scott
+#	First Release New Archive Program
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_fiscal
+end
+
+table arpcwo
+	field arpcwo_co_no        
+	field arpcwo_br_no        
+	field arpcwo_wh_no        
+	field arpcwo_order_no     
+	field arpcwo_req_br_no    
+	field arpcwo_req_wh_no    
+	field arpcwo_rec_br_no    
+	field arpcwo_rec_wh_no    
+	field arpcwo_hhwo_hash    
+	field arpcwo_reqd_date    
+	field arpcwo_rtg_seq      
+	field arpcwo_priority     
+	field arpcwo_op_id        
+	field arpcwo_create_time  
+	field arpcwo_create_date  
+	field arpcwo_mfg_date     
+	field arpcwo_hhbr_hash    
+	field arpcwo_bom_alt      
+	field arpcwo_rtg_alt      
+	field arpcwo_hhcc_hash    
+	field arpcwo_prod_qty     
+	field arpcwo_act_prod_q   
+	field arpcwo_act_rej_q    
+	field arpcwo_order_stat   
+	field arpcwo_batch_no     
+	field arpcwo_hhsl_hash    
+	field arpcwo_stat_flag    
+end
+
+table arpohr
+	field arpohr_co_no        
+	field arpohr_br_no        
+	field arpohr_type         
+	field arpohr_hhsu_hash    
+	field arpohr_pur_ord_no   
+	field arpohr_hhpo_hash    
+	field arpohr_hhsh_hash    
+	field arpohr_hhdd_hash    
+	field arpohr_date_raised  
+	field arpohr_due_date     
+	field arpohr_conf_date    
+	field arpohr_contact      
+	field arpohr_app_code     
+	field arpohr_op_id        
+	field arpohr_time_create  
+	field arpohr_date_create  
+	field arpohr_req_usr      
+	field arpohr_reason       
+	field arpohr_stdin1       
+	field arpohr_stdin2       
+	field arpohr_stdin3       
+	field arpohr_delin1       
+	field arpohr_delin2       
+	field arpohr_delin3       
+	field arpohr_ship1_no     
+	field arpohr_ship2_no     
+	field arpohr_ship3_no     
+	field arpohr_curr_code    
+	field arpohr_curr_rate    
+	field arpohr_term_order   
+	field arpohr_sup_trm_pay  
+	field arpohr_bnk_trm_pay  
+	field arpohr_pay_date     
+	field arpohr_fgn_total    
+	field arpohr_fgn_ostand   
+	field arpohr_ship_method  
+	field arpohr_drop_ship    
+	field arpohr_status       
+	field arpohr_stat_flag    
+	field arpohr_sup_type     
+end
+
+table arpoln
+	field arpoln_hhpo_hash    
+	field arpoln_line_no      
+	field arpoln_hhbr_hash    
+	field arpoln_hhum_hash    
+	field arpoln_hhcc_hash    
+	field arpoln_hhlc_hash    
+	field arpoln_hhpl_hash    
+	field arpoln_hhpl_orig    
+	field arpoln_exch_rate    
+	field arpoln_serial_no    
+	field arpoln_container    
+	field arpoln_cus_ord_ref  
+	field arpoln_qty_ord      
+	field arpoln_qty_rec      
+	field arpoln_pack_qty     
+	field arpoln_chg_wgt      
+	field arpoln_gross_wgt    
+	field arpoln_cu_metre     
+	field arpoln_reg_pc       
+	field arpoln_disc_a       
+	field arpoln_disc_b       
+	field arpoln_disc_c       
+	field arpoln_cumulative   
+	field arpoln_grs_fgn_cst  
+	field arpoln_fob_fgn_cst  
+	field arpoln_fob_nor_cst  
+	field arpoln_frt_ins_cst  
+	field arpoln_duty         
+	field arpoln_licence      
+	field arpoln_lcost_load   
+	field arpoln_land_cst     
+	field arpoln_cat_code     
+	field arpoln_item_desc    
+	field arpoln_ship_no      
+	field arpoln_case_no      
+	field arpoln_hhso_hash    
+	field arpoln_due_date     
+	field arpoln_fwd_date     
+	field arpoln_pur_status   
+	field arpoln_status       
+	field arpoln_stat_flag    
+end
+
+table arsohr
+	field arsohr_co_no        
+	field arsohr_br_no        
+	field arsohr_dp_no        
+	field arsohr_order_no     
+	field arsohr_cont_no      
+	field arsohr_hhcu_hash    
+	field arsohr_chg_hhcu     
+	field arsohr_hhso_hash    
+	field arsohr_inv_no       
+	field arsohr_cus_ord_ref  
+	field arsohr_chg_ord_ref  
+	field arsohr_op_id        
+	field arsohr_time_create  
+	field arsohr_date_create  
+	field arsohr_cons_no      
+	field arsohr_del_zone     
+	field arsohr_del_req      
+	field arsohr_del_date     
+	field arsohr_asm_req      
+	field arsohr_asm_date     
+	field arsohr_s_timeslot   
+	field arsohr_e_timeslot   
+	field arsohr_carr_code    
+	field arsohr_carr_area    
+	field arsohr_no_cartons   
+	field arsohr_no_kgs       
+	field arsohr_sch_ord      
+	field arsohr_ord_type     
+	field arsohr_pri_type     
+	field arsohr_frei_req     
+	field arsohr_dt_raised    
+	field arsohr_dt_required  
+	field arsohr_tax_code     
+	field arsohr_tax_no       
+	field arsohr_area_code    
+	field arsohr_sman_code    
+	field arsohr_sell_terms   
+	field arsohr_pay_term     
+	field arsohr_freight      
+	field arsohr_insurance    
+	field arsohr_ins_det      
+	field arsohr_o_cost_1     
+	field arsohr_o_cost_2     
+	field arsohr_o_cost_3     
+	field arsohr_deposit      
+	field arsohr_discount     
+	field arsohr_exch_rate    
+	field arsohr_fix_exch     
+	field arsohr_batch_no     
+	field arsohr_cont_name    
+	field arsohr_cont_phone   
+	field arsohr_del_name     
+	field arsohr_del_add1     
+	field arsohr_del_add2     
+	field arsohr_del_add3     
+	field arsohr_din_1        
+	field arsohr_din_2        
+	field arsohr_din_3        
+	field arsohr_new          
+	field arsohr_prt_price    
+	field arsohr_full_supply  
+	field arsohr_two_step     
+	field arsohr_status       
+	field arsohr_stat_flag    
+end
+
+table arsoln
+	field arsoln_hhso_hash    
+	field arsoln_line_no      
+	field arsoln_hhbr_hash    
+	field arsoln_hhcc_hash    
+	field arsoln_hhum_hash    
+	field arsoln_hhsl_hash    
+	field arsoln_serial_no    
+	field arsoln_cont_status  
+	field arsoln_qty_order    
+	field arsoln_qty_bord     
+	field arsoln_qty_org_ord  
+	field arsoln_gsale_price  
+	field arsoln_sale_price   
+	field arsoln_cost_price   
+	field arsoln_item_levy    
+	field arsoln_dis_pc       
+	field arsoln_reg_pc       
+	field arsoln_disc_a       
+	field arsoln_disc_b       
+	field arsoln_disc_c       
+	field arsoln_cumulative   
+	field arsoln_tax_pc       
+	field arsoln_gst_pc       
+	field arsoln_o_xrate      
+	field arsoln_n_xrate      
+	field arsoln_pack_size    
+	field arsoln_sman_code    
+	field arsoln_cus_ord_ref  
+	field arsoln_pri_or       
+	field arsoln_dis_or       
+	field arsoln_item_desc    
+	field arsoln_due_date     
+	field arsoln_del_no       
+	field arsoln_bonus_flag   
+	field arsoln_hide_flag    
+	field arsoln_hhah_hash    
+	field arsoln_status       
+	field arsoln_stat_flag    
+end
+
+table arhr
+	field arhr_co_no          
+	field arhr_br_no          
+	field arhr_dp_no          
+	field arhr_inv_no         
+	field arhr_app_inv_no     
+	field arhr_hhcu_hash      
+	field arhr_chg_hhcu_hash  
+	field arhr_type           
+	field arhr_cont_no        
+	field arhr_drop_ship      
+	field arhr_hhds_hash      
+	field arhr_cus_ord_ref    
+	field arhr_chg_ord_ref    
+	field arhr_ord_ref        
+	field arhr_grn_no         
+	field arhr_cons_no        
+	field arhr_del_zone       
+	field arhr_del_req        
+	field arhr_del_date       
+	field arhr_asm_req        
+	field arhr_asm_date       
+	field arhr_asm_hash       
+	field arhr_s_timeslot     
+	field arhr_e_timeslot     
+	field arhr_carr_code      
+	field arhr_carr_area      
+	field arhr_no_cartons     
+	field arhr_wgt_per_ctn    
+	field arhr_no_kgs         
+	field arhr_hhso_hash      
+	field arhr_hhco_hash      
+	field arhr_frei_req       
+	field arhr_date_raised    
+	field arhr_date_required  
+	field arhr_tax_code       
+	field arhr_tax_no         
+	field arhr_area_code      
+	field arhr_sale_code      
+	field arhr_op_id          
+	field arhr_time_create    
+	field arhr_date_create    
+	field arhr_gross          
+	field arhr_freight        
+	field arhr_insurance      
+	field arhr_other_cost_1   
+	field arhr_other_cost_2   
+	field arhr_other_cost_3   
+	field arhr_tax            
+	field arhr_gst            
+	field arhr_disc           
+	field arhr_deposit        
+	field arhr_ex_disc        
+	field arhr_erate_var      
+	field arhr_sos            
+	field arhr_item_levy      
+	field arhr_exch_rate      
+	field arhr_fix_exch       
+	field arhr_batch_no       
+	field arhr_dl_name        
+	field arhr_dl_add1        
+	field arhr_dl_add2        
+	field arhr_dl_add3        
+	field arhr_din_1          
+	field arhr_din_2          
+	field arhr_din_3          
+	field arhr_pay_type       
+	field arhr_pay_terms      
+	field arhr_sell_terms     
+	field arhr_ins_det        
+	field arhr_pri_type       
+	field arhr_pri_break      
+	field arhr_ord_type       
+	field arhr_prt_price      
+	field arhr_status         
+	field arhr_stat_flag      
+	field arhr_ps_print       
+	field arhr_ps_print_no    
+	field arhr_inv_print      
+	field arhr_ccn_print      
+	field arhr_printing       
+	field arhr_hhtr_hash      
+	field arhr_load_flag      
+	field arhr_wrmr_hash      
+	field arhr_pos_inv_no     
+	field arhr_pos_tran_type  
+end
+
+table arln
+	field arln_hhcl_hash      
+	field arln_hhco_hash      
+	field arln_line_no        
+	field arln_hhbr_hash      
+	field arln_incc_hash      
+	field arln_hhum_hash      
+	field arln_hhsl_hash      
+	field arln_order_no       
+	field arln_hhdl_hash      
+	field arln_crd_type       
+	field arln_serial_no      
+	field arln_cont_status    
+	field arln_qty_org_ord    
+	field arln_q_order        
+	field arln_qty_del        
+	field arln_qty_ret        
+	field arln_q_backorder    
+	field arln_gsale_price    
+	field arln_sale_price     
+	field arln_cost_price     
+	field arln_item_levy      
+	field arln_disc_pc        
+	field arln_reg_pc         
+	field arln_disc_a         
+	field arln_disc_b         
+	field arln_disc_c         
+	field arln_cumulative     
+	field arln_tax_pc         
+	field arln_gst_pc         
+	field arln_gross          
+	field arln_freight        
+	field arln_on_cost        
+	field arln_amt_disc       
+	field arln_amt_tax        
+	field arln_amt_gst        
+	field arln_erate_var      
+	field arln_pack_size      
+	field arln_sman_code      
+	field arln_cus_ord_ref    
+	field arln_org_ord_ref    
+	field arln_o_xrate        
+	field arln_n_xrate        
+	field arln_item_desc      
+	field arln_due_date       
+	field arln_status         
+	field arln_bonus_flag     
+	field arln_hide_flag      
+	field arln_hhah_hash      
+	field arln_price_type     
+	field arln_stat_flag      
+	field arln_hhwo_hash      
+end
+
+table arct
+	field arct_co_no          
+	field arct_filename       
+	field arct_op_id          
+	field arct_time_create    
+	field arct_date_create    
+	field arct_stat_flag      
+end
+
+table inmr
+	field inmr_item_no        
+	field inmr_hhbr_hash      
+	field inmr_description    
+end
+
+table cumr
+	field cumr_dbt_no         
+	field cumr_hhcu_hash      
+	field cumr_dbt_name       
+end
+table sumr
+	field sumr_crd_no         
+	field sumr_hhsu_hash      
+	field sumr_crd_name       
+end

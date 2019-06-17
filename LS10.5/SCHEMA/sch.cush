@@ -1,0 +1,46 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cush,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.cush)
+|  Schema Desc  : (Customer Sales history file. )
+|----------------------------------------------------------------------
+| $Log: sch.cush,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:30  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file cush 
+
+field	cush_hhcu_hash			type	long
+field	cush_line_no			type	int
+field	cush_item_no			type	char 16 
+field	cush_item_desc			type	char 40 
+field	cush_item_qty			type	float
+field	cush_item_price			type	money
+field	cush_item_disc			type	float
+field	cush_pur_date			type	edate
+field	cush_id_no				type	composite
+			cush_hhcu_hash,
+			cush_line_no					index 	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cush_hhcu_hash		-	Link to cumr ( cumr_hhcu_hash )
+	cush_line_no		-	Line number.
+	cush_item_no		-	Item Number.
+	cush_item_desc		-	Item Description.
+	cush_item_qty		-	Item Quantity.
+	cush_item_price		-	Item price.
+	cush_item_disc		-	Item discount.
+	cush_pur_date		-	Purchase date.
+}

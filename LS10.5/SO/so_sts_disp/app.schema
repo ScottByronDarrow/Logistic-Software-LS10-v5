@@ -1,0 +1,93 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:20:46 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:20:46  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:42:02  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/03/06 01:23:58  scott
+#	added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_stat_flag
+end
+
+table inmr
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_std_uom
+	field inmr_sale_unit
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_cnv_fct
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_dt_raised
+	field sohr_full_supply
+	field sohr_status
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_hhum_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhsl_hash
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_item_desc
+	field soln_due_date
+	field soln_status
+	field soln_stat_flag
+end
+
+table cohr
+	field cohr_inv_no
+	field cohr_hhco_hash
+end
+
+table coln
+	field coln_hhco_hash
+	field coln_hhsl_hash
+end
+

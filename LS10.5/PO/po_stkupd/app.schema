@@ -1,0 +1,340 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.5 2001/10/22 04:14:51 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.5  2001/10/22 04:14:51  scott
+#	Updated as wrong variable being used for allocated return to PO.
+#	
+#	Revision 5.4  2001/10/05 02:48:52  cha
+#	Changes made to cater for goods returns processing.
+#	
+#	Revision 5.3  2001/09/24 01:25:34  scott
+#	Updated for number plates and returns
+#	
+#	Revision 5.2  2001/08/23 11:52:35  scott
+#	Updated from scotts machine
+#	
+#	Revision 5.1  2001/07/25 02:18:30  scott
+#	Update - LS10.5
+#	
+#	Revision 4.0  2001/03/09 02:33:30  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.6  2001/03/08 09:12:01  scott
+#	Updated to ensure purchases returns allocated to an existing PO are processed
+#	correctly. Those not allocated to a PO are processed based on FIFO or LIFO
+#	based on environment PO_RETURN_APPLY
+#	
+#	Revision 3.5  2001/02/15 09:39:47  scott
+#	Updated to add special index and mode of running for XML transfered information
+#	
+#	Revision 3.4  2000/12/06 06:06:09  scott
+#	Updated to remove use of sknd_inlo_hash
+#	
+#	Revision 3.3  2000/12/05 10:02:13  scott
+#	Updated to remove container number and replace with customer order ref.
+#	
+#	Revision 3.2  2000/11/23 03:58:32  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#	Revision 3.1  2000/11/20 07:39:55  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#	Revision 3.0  2000/10/10 12:18:11  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/09/01 01:14:02  scott
+#	Updated to add numberplating
+#	Updated for app.schema
+#	Updated for general cleanup
+#	
+#	Revision 2.0  2000/07/15 09:05:40  gerry
+#	Forced Revision No Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/01/10 04:50:35  scott
+#	Updated to add app.schema
+#	
+#	
+#	
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_cc_no          
+	field comm_cc_name        
+	field comm_inv_date       
+end
+
+table ccmr
+	field ccmr_co_no          
+	field ccmr_est_no         
+	field ccmr_cc_no          
+	field ccmr_hhcc_hash      
+	field ccmr_acronym        
+end
+
+table pogh
+	field pogh_co_no          
+	field pogh_br_no          
+	field pogh_hhsu_hash      
+	field pogh_hhsh_hash      
+	field pogh_gr_no          
+	field pogh_pur_ord_no          
+	field pogh_hhgr_hash      
+	field pogh_date_raised    
+	field pogh_exch_rate      
+	field pogh_pur_status     
+	field pogh_gl_status      
+	field pogh_drop_ship      
+	field pogh_pid      
+end
+
+table pogl
+	field pogl_hhgr_hash      
+	field pogl_line_no        
+	field pogl_hhgl_hash      
+	field pogl_hhbr_hash      
+	field pogl_hhum_hash      
+	field pogl_hhcc_hash      
+	field pogl_hhpl_hash      
+	field pogl_hhlc_hash      
+	field pogl_hhve_hash      
+	field pogl_po_number      
+	field pogl_cus_ord_ref      
+	field pogl_serial_no      
+	field pogl_location       
+	field pogl_lot_no         
+	field pogl_slot_no        
+	field pogl_exp_date       
+	field pogl_qty_ord        
+	field pogl_qty_rec        
+	field pogl_qty_left       
+	field pogl_pack_qty       
+	field pogl_chg_wgt        
+	field pogl_gross_wgt      
+	field pogl_cu_metre       
+	field pogl_land_cst       
+	field pogl_act_cst        
+	field pogl_fob_fgn_cst    
+	field pogl_fob_nor_cst    
+	field pogl_frt_ins_cst    
+	field pogl_lcost_load     
+	field pogl_duty           
+	field pogl_duty_pc        
+	field pogl_licence        
+	field pogl_cat_code       
+	field pogl_item_desc      
+	field pogl_rec_date       
+	field pogl_auto_cost      
+	field pogl_pur_status     
+	field pogl_gl_status      
+	field pogl_stat_flag      
+end
+
+table poca
+	field poca_co_no          
+	field poca_br_no          
+	field poca_type           
+	field poca_item_cat       
+	field poca_item_no        
+	field poca_gr_no          
+	field poca_line_no        
+	field poca_item_desc      
+	field poca_po_no          
+	field poca_est_cst        
+	field poca_act_cst        
+	field poca_date_print     
+	field poca_status         
+end
+
+table posh
+	field posh_co_no          
+	field posh_hhsh_hash      
+	field posh_status         
+end
+
+table inex
+	field inex_hhbr_hash      
+	field inex_line_no        
+	field inex_desc           
+end
+
+table inmr
+	field inmr_co_no          
+	field inmr_item_no        
+	field inmr_hhbr_hash      
+	field inmr_hhsi_hash      
+	field inmr_supercession   
+	field inmr_class          
+	field inmr_description    
+	field inmr_category       
+	field inmr_costing_flag   
+	field inmr_serial_item      
+	field inmr_sale_unit      
+	field inmr_std_uom      
+	field inmr_outer_size      
+	field inmr_ex_code      
+	field inmr_on_hand      
+	field inmr_qc_qty      
+	field inmr_qc_reqd      
+end
+
+table incc
+	field incc_hhcc_hash      
+	field incc_hhbr_hash      
+	field incc_hhwh_hash      
+	field incc_sort           
+	field incc_wks_demand     
+	field incc_stocking_unit     
+	field incc_location     
+	field incc_opening_stock  
+	field incc_receipts       
+	field incc_pur            
+	field incc_issues         
+	field incc_adj            
+	field incc_sales          
+	field incc_closing_stock  
+	field incc_ytd_receipts   
+	field incc_ytd_pur        
+	field incc_ytd_issues     
+	field incc_ytd_adj        
+	field incc_ytd_sales      
+	field incc_qc_qty        
+	field incc_qc_centre      
+	field incc_stat_flag      
+	field incc_os_date        
+	field incc_os_ldate       
+end
+
+table inum
+	field inum_uom_group      
+	field inum_hhum_hash      
+	field inum_uom            
+	field inum_desc           
+	field inum_cnv_fct        
+end
+
+table inwu
+	field inwu_hhwh_hash      
+	field inwu_hhum_hash      
+	field inwu_opening_stock  
+	field inwu_receipts       
+	field inwu_pur            
+	field inwu_issues         
+	field inwu_adj            
+	field inwu_sales          
+	field inwu_closing_stock  
+end
+
+table ffex
+	field ffex_hhbr_hash      
+	field ffex_hhcc_hash      
+	field ffex_year           
+	field ffex_type           
+	field ffex_per1           
+	field ffex_per2           
+	field ffex_per3           
+	field ffex_per4           
+	field ffex_per5           
+	field ffex_per6           
+	field ffex_per7           
+	field ffex_per8           
+	field ffex_per9           
+	field ffex_per10          
+	field ffex_per11          
+	field ffex_per12          
+end
+
+table sknh
+	field sknh_co_no          
+	field sknh_br_no          
+	field sknh_plate_no       
+	field sknh_sknh_hash      
+	field sknh_rec_date       
+	field sknh_iss_date       
+	field sknh_lab_note1      
+	field sknh_lab_note2      
+	field sknh_lab_note3      
+	field sknh_lab_note4      
+	field sknh_lab_note5      
+	field sknh_lab_note6      
+	field sknh_printed        
+end
+
+table ffdm
+	field ffdm_hhbr_hash      
+	field ffdm_hhcc_hash      
+	field ffdm_date           
+	field ffdm_type           
+	field ffdm_qty            
+end
+
+table sknd
+	field sknd_sknd_hash      
+	field sknd_sknh_hash      
+	field sknd_line_no        
+	field sknd_hhbr_hash      
+	field sknd_hhum_hash      
+	field sknd_hhcc_hash      
+	field sknd_hhsu_hash      
+	field sknd_hhve_hash      
+	field sknd_hhpl_hash      
+	field sknd_cus_ord_ref      
+	field sknd_serial_no      
+	field sknd_qty_rec        
+	field sknd_qty_return        
+	field sknd_land_cst       
+	field sknd_lstat_chg      
+	field sknd_status         
+	field sknd_edi            
+end
+table poln
+	field poln_hhpo_hash      
+	field poln_line_no        
+	field poln_hhbr_hash      
+	field poln_hhpl_hash      
+	field poln_hhpl_orig      
+end
+table inla
+	field inla_inlo_hash      
+	field inla_pid            
+	field inla_line_no        
+	field inla_hhgl_hash      
+	field inla_qty_alloc      
+end
+table inlo
+	field inlo_inlo_hash      
+	field inlo_hhwh_hash      
+	field inlo_sknd_hash      
+	field inlo_hhum_hash      
+	field inlo_location       
+	field inlo_loc_type       
+	field inlo_loc_status     
+	field inlo_lot_no         
+	field inlo_slot_no        
+#	field inlo_expiry_date    
+#	field inlo_pack_qty       
+#	field inlo_chg_wgt        
+#	field inlo_gross_wgt      
+#	field inlo_cu_metre       
+	field inlo_uom            
+	field inlo_cnv_fct        
+#	field inlo_rec_qty        
+#	field inlo_qty            
+#	field inlo_stake          
+#	field inlo_no_hits        
+#	field inlo_no_picks       
+#	field inlo_op_id          
+#	field inlo_time_create    
+#	field inlo_date_upd       
+	field inlo_date_create    
+end

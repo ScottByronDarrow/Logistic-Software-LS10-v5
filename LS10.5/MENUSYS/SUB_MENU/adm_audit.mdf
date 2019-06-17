@@ -1,0 +1,12 @@
+LogisticSoftware File Audit System (SUB)
+adm_audit
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Audit File Selection. <a> (1,1)
+psl_aud_sel~
+Audit File Display. <a> (1,1)
+psl_aud_dsp~
+Audit File Purge. <a> (1,1)
+psl_aud_del~Audit file Purge.~
+((
+))

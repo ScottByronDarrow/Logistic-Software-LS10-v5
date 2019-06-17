@@ -1,0 +1,197 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:22:27 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:22:27  scott
+#	CVS administration
+#	
+#	Revision 1.4  2001/08/06 23:31:23  scott
+#	RELEASE 5.0
+#	
+#	Revision 1.3  2001/06/23 01:11:50  scott
+#	Updated to produce an error log
+#	Update to post directly to gl work file
+#	
+#	Revision 1.2  2001/06/21 10:17:48  scott
+#	Updated to use standard rather than actual.
+#	
+#	Revision 1.1  2001/06/21 05:23:02  scott
+#	First release - program re-creates gl transactions for automatic production issue
+#	
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_cc_no          
+	field comm_cc_name        
+	field comm_inv_date        
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_name
+	field ccmr_hhcc_hash
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_avge_cost
+	field inei_last_cost
+	field inei_prev_cost
+	field inei_std_cost
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_outer_uom
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_qc_reqd
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table pcgl
+	field pcgl_acc_no
+	field pcgl_co_no
+	field pcgl_est_no
+	field pcgl_acronym
+	field pcgl_name
+	field pcgl_chq_inv_no
+	field pcgl_ci_amt
+	field pcgl_o1_amt
+	field pcgl_o2_amt
+	field pcgl_o3_amt
+	field pcgl_o4_amt
+	field pcgl_hhgl_hash
+	field pcgl_tran_type
+	field pcgl_sys_ref
+	field pcgl_tran_date
+	field pcgl_period_no
+	field pcgl_post_date
+	field pcgl_narrative
+	field pcgl_user_ref
+	field pcgl_amount
+	field pcgl_loc_amount
+	field pcgl_jnl_type
+	field pcgl_currency
+	field pcgl_exch_rate
+	field pcgl_stat_flag
+	field pcgl_run_no
+end
+
+table pcms
+	field pcms_co_no
+	field pcms_hhbr_hash
+	field pcms_alt_no
+	field pcms_line_no
+	field pcms_cons
+	field pcms_mabr_hash
+	field pcms_uom
+	field pcms_matl_qty
+	field pcms_matl_wst_pc
+	field pcms_instr_no
+	field pcms_iss_seq
+	field pcms_uniq_id
+	field pcms_pcms_hash
+	field pcms_amt_issued
+	field pcms_amt_recptd
+	field pcms_qty_issued
+	field pcms_act_qty_in
+	field pcms_qty_scrap
+	field pcms_amt_scrap
+	field pcms_hhwo_hash
+end
+
+table pcwo
+	field pcwo_co_no
+	field pcwo_br_no
+	field pcwo_wh_no
+	field pcwo_req_br_no
+	field pcwo_req_wh_no
+	field pcwo_rec_br_no
+	field pcwo_rec_wh_no
+	field pcwo_order_no
+	field pcwo_hhwo_hash
+	field pcwo_reqd_date
+	field pcwo_rtg_seq
+	field pcwo_priority
+	field pcwo_create_date
+	field pcwo_mfg_date
+	field pcwo_hhbr_hash
+	field pcwo_hhcc_hash
+	field pcwo_prod_qty
+	field pcwo_act_prod_qty
+	field pcwo_act_rej_qty
+	field pcwo_order_status
+	field pcwo_batch_no
+	field pcwo_stat_flag
+end
+
+table pclt
+	field pclt_co_no
+	field pclt_br_no
+	field pclt_hhwo_hash
+	field pclt_hhbr_hash
+	field pclt_lot_number
+	field pclt_issue_date
+	field pclt_slot_no
+	field pclt_lot_location
+	field pclt_qty_used
+	field pclt_iss_uom
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_short_name
+end
+
+table exwo
+	field exwo_co_no          
+	field exwo_code           
+	field exwo_description    
+	field exwo_hhmr_hash      
+end

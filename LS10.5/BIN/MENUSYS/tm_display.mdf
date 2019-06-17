@@ -1,0 +1,33 @@
+Telemarketing Displays Menu (TMDS)
+tm_display
+Telemarketing Master Menu. <a|telemktg> (1,2)
+menu MENUSYS/tm_master.mdf
+Display Campaign Analysis. <a|telemktg> (1,2)
+tm_canalysis~
+Display Call Summary. <a|telemktg> (1,2)
+tm_call_summ~
+Display Callbacks. <a|telemktg> (1,2)
+tm_clbk_dsp~
+Display Operator Productivity. <a|telemktg> (1,1)
+tm_op_prod~
+Display Operator Progress. <a|telemktg> (2,2)
+tm_progress~
+Lead Masterfile Display. <a|telemktg> (2,2)
+tm_lead_dsp~L~
+Display Next Visit Dates. <a|telemktg> (2,2)
+tm_lead_dsp~V~
+Display Scripts. <a|telemktg> (2,2)
+tm_scpt_dsp~
+Trial Run Scripts. <a|telemktg> (2,1)
+tm_try_scpt~
+((
+quadrant(9,6)
+quadrant(45,6)
+box(4,3,70,12)
+line(5,5,69)
+HEADING_ON
+FAST_ON
+SUB_ON
+MENU_NAME_ON
+SHELL_ON
+))

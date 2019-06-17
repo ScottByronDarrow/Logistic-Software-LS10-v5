@@ -1,0 +1,99 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/01/18 01:51:16 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/01/18 01:51:16  scott
+#	Updated as first phase of contract management cleanup on it's way to becoming
+#	useable for 3PL.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table cmcd
+	field cmcd_hhhr_hash
+	field cmcd_line_no
+	field cmcd_text
+	field cmcd_stat_flag
+end
+
+table cmhr
+	field cmhr_cont_no
+	field cmhr_hhhr_hash
+end
+
+table cmrd
+	field cmrd_hhrq_hash
+	field cmrd_line_no
+	field cmrd_hhcm_hash
+	field cmrd_hhbr_hash
+	field cmrd_hhcc_hash
+	field cmrd_serial_no
+	field cmrd_qty_order
+	field cmrd_qty_border
+	field cmrd_qty_iss
+	field cmrd_cost
+	field cmrd_sale_price
+	field cmrd_disc_pc
+	field cmrd_due_date
+	field cmrd_item_desc
+	field cmrd_stat_flag
+end
+
+table cmrh
+	field cmrh_co_no
+	field cmrh_br_no
+	field cmrh_req_no
+	field cmrh_hhrq_hash
+	field cmrh_hhhr_hash
+	field cmrh_req_date
+	field cmrh_rqrd_date
+	field cmrh_iss_date
+	field cmrh_op_id
+	field cmrh_req_by
+	field cmrh_date_create
+	field cmrh_time_create
+	field cmrh_full_supply
+	field cmrh_printed
+	field cmrh_del_name
+	field cmrh_del_adr1
+	field cmrh_del_adr2
+	field cmrh_del_adr3
+	field cmrh_add_int1
+	field cmrh_add_int2
+	field cmrh_add_int3
+	field cmrh_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_serial_item
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+end
+

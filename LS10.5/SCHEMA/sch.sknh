@@ -1,0 +1,74 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sknh,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.sknh)
+|  Schema Desc  : (Goods receipts number plate Header )
+|----------------------------------------------------------------------
+| $Log: sch.sknh,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.4  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sknh	
+
+field	sknh_co_no				type	char	2     
+field	sknh_br_no				type	char	2
+field	sknh_plate_no			type	char	15
+field	sknh_pur_ord_no			type	char	15
+field	sknh_sknh_hash			type	serial				index	primary
+field	sknh_rec_date			type	edate
+field	sknh_iss_date			type	edate
+field	sknh_lab_note1			type	char	60
+field	sknh_lab_note2			type	char	60
+field	sknh_lab_note3			type	char	60
+field	sknh_lab_note4			type	char	60
+field	sknh_lab_note5			type	char	60
+field	sknh_lab_note6			type	char	60
+field	sknh_printed			type	char	1
+field	sknh_edi				type	char	1
+field	sknh_id_no				type	composite
+			sknh_co_no,
+			sknh_br_no,
+			sknh_plate_no									index
+field	sknh_id_no2				type	composite
+			sknh_co_no,
+			sknh_br_no,
+			sknh_pur_ord_no									index	dups
+field	sknh_id_no3				type	composite
+			sknh_co_no,
+			sknh_br_no,
+			sknh_plate_no,
+			sknh_pur_ord_no									index
+field	sknh_id_no4				type	composite
+			sknh_co_no,
+			sknh_br_no,
+			sknh_rec_date									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sknh_co_no				-		Company Number
+	sknh_br_no				-		Branch Number
+	sknh_plate_no			-		Plate Number.
+	sknh_pur_ord_no			-		Purchase Order Number.
+	sknh_sknh_hash			-		Unique hash for header
+	sknh_rec_date			-		Receipt Date
+	sknh_iss_date			-		Issue Date
+	sknh_lab_note1			-		Label notes #1
+	sknh_lab_note2			-		Label notes #2
+	sknh_lab_note3			-		Label notes #3
+	sknh_lab_note4			-		Label notes #4
+	sknh_lab_note5			-		Label notes #5
+	sknh_lab_note6			-		Label notes #6
+	sknh_printed			-		0 = not printed, 1 = printed.
+	sknh_edi				-		0 = not processed 1 = processed 
+}

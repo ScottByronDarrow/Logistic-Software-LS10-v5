@@ -1,0 +1,12 @@
+LRP - Reorder Menu (SUB)
+lrp_help
+LRP - Demand reorder Menu. <a> (1,1)
+menu MENUSYS/lrp_rorder.mdf
+Generate / Print Company Suggested Reorder Report. <a> (1,1)
+lrp_reorder.i~lrp_creorder~Suggested Reorder By Company Report~
+Generate / Print Branch  Suggested Reorder Report. <a> (1,1)
+lrp_reorder.i~lrp_breorder~Suggested Reorder By Branch Report~
+Generate / Print W/House Suggested Reorder Report. <a> (1,1)
+lrp_reorder.i~lrp_reorder~Suggested Reorder By Warehouse Report~
+((
+))

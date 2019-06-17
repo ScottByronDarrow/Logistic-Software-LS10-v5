@@ -1,0 +1,18 @@
+General Ledger Reports Menu (GLPR)
+genrep_help
+General Ledger Master Menu. <a> (1,2)
+menu MENUSYS/gl_master.mdf
+Run G/L Report Generator - NORMAL. <a> (1,1)
+gl_reptgen.i~//usr/LS10.5/gl_reports~GLDATE~gl_reptgen~
+Maintain Ledger Reports  - NORMAL. <a> (1,2)
+psl_rep_edit~/usr/LS10.5/gl_reports~
+Run G/L Report Generator - SU. <a> (1,1)
+gl_reptgen.i~//usr/LS10.5/su_reports~GLDATE~gl_reptgen~
+Maintain Ledger Reports  - SU. <a> (1,1)
+psl_rep_edit~/usr/LS10.5/su_reports~
+((
+quadrant(23,6)
+quadrant(46,6)
+box(17,3,45,12)
+line(18,5,44)
+))

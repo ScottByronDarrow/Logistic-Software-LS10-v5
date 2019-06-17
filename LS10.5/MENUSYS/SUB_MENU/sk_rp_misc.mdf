@@ -1,0 +1,14 @@
+Miscellaneous Stock Reports. (SUB)
+sub_menu
+Exit to Stock Reports menu. <a> (1,1)
+menu MENUSYS/sk_report.mdf
+Active Status Codes Report. <a> (1,1)
+sk_act_rep~Active Status Codes Report~
+Print Synonym Items. <a> (1,1)
+BACK~sk_alt_prn~LPNO~
+Print Number Plates. <a> (1,1)
+sk_np_prnt~
+Print Stock Levy. <a> (1,1)
+sk_inal_prn~LPNO~
+((
+))

@@ -1,0 +1,14 @@
+Purchase Order Assignment Menu (SUB)
+po_master_help
+Purchase Order Processing Menu. <a> (1,1)
+menu MENUSYS/po_process.mdf
+Assign Serial Items to P/Order. <a> (1,1)
+po_seralloc~
+Assign Sales Orders to P/Order. <a> (1,1)
+po_so_assign~
+Assign Transfers    to P/Order. <a> (1,1)
+po_tr_assign~
+Print SO -> PO Assignment. <a> (1,1)
+po_ass_prn~
+((
+))

@@ -1,0 +1,75 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:05:19 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:05:19  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/05/28 06:57:24  scott
+#	Updated to look better with LS10-GUI.
+#	Converted to use app.schema as per standard.
+#	Converted to use new Makefile.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_crd_date
+	field comm_gl_date
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_ho_dbt_hash
+	field cumr_stat_flag
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_ho_hash
+	field cuin_hhci_hash
+	field cuin_type
+	field cuin_est
+	field cuin_dp
+	field cuin_inv_no
+	field cuin_date_of_inv
+	field cuin_date_posted
+	field cuin_pay_terms
+	field cuin_due_date
+	field cuin_disc
+	field cuin_amt
+	field cuin_stat_flag
+end
+
+table cuhd
+	field cuhd_hhcu_hash
+	field cuhd_receipt_no
+	field cuhd_type
+	field cuhd_hhcp_hash
+	field cuhd_narrative
+	field cuhd_date_payment
+	field cuhd_date_posted
+	field cuhd_tot_amt_paid
+	field cuhd_disc_given
+	field cuhd_stat_flag
+end
+
+table cudt
+	field cudt_hhcp_hash
+	field cudt_hhci_hash
+	field cudt_amt_paid_inv
+	field cudt_stat_flag
+end
+

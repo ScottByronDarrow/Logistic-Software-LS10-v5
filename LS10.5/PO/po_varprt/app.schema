@@ -1,0 +1,46 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:12:24 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:12:24  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:33:35  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:30  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_dbt_date
+end
+
+table poca
+	field poca_co_no
+	field poca_br_no
+	field poca_type
+	field poca_item_cat
+	field poca_item_no
+	field poca_gr_no
+	field poca_line_no
+	field poca_item_desc
+	field poca_po_no
+	field poca_est_cst
+	field poca_act_cst
+	field poca_date_print
+	field poca_status
+end
+

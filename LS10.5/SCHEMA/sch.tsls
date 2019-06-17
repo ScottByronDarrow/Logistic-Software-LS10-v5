@@ -1,0 +1,54 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tsls,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.tsls)
+|  Schema Desc  : (Tele-Sales Letters Sent History file. )
+|----------------------------------------------------------------------
+| $Log: sch.tsls,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:37  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tsls
+
+field	tsls_co_no			type	char	2	index	dups
+field	tsls_hhlh_hash			type	long
+field	tsls_hhcu_hash			type	long
+field	tsls_file_name			type	char	14
+field	tsls_date_sent			type	edate
+field	tsls_date_called		type	edate
+field	tsls_time_called		type	char	5
+field	tsls_stat_flag			type	char	1
+
+field	tsls_id_no			type	composite
+		tsls_hhlh_hash,
+		tsls_hhcu_hash,
+		tsls_date_sent					index	primary
+
+field	tsls_id_no2			type	composite
+		tsls_hhcu_hash,
+		tsls_hhlh_hash,
+		tsls_date_sent					index	primary
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tsls_co_no		-	Company number.
+	tsls_hhlh_hash		-	Link to letter header file.
+	tsls_hhcu_hash		-	Link to debtor master file.
+	tsls_file_name		-	Name of file printed.      
+	tsls_date_sent		-	Date letter was sent.      
+	tsls_date_called	-	Date of follow up call.    
+	tsls_time_called	-	Time of follow up call.    
+	tsls_stat_flag		-	Spare stat_flag. 
+}

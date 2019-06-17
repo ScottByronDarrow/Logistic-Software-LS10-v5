@@ -1,0 +1,302 @@
+table bmms
+	field bmms_mabr_hash
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_cc_no
+	field comm_inv_date
+	field comm_gst_rate
+	field comm_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_master_wh
+	field ccmr_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_stat_flag
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_item_alloc
+	field excf_stat_flag
+end
+
+table inas
+	field inas_co_no
+	field inas_act_code
+	field inas_description
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_sort
+	field incc_stocking_unit
+	field incc_ff_option
+	field incc_ff_method
+	field incc_abc_code
+	field incc_abc_update
+	field incc_first_stocked
+	field incc_safety_stock
+	field incc_dflt_bom
+	field incc_dflt_rtg
+	field incc_eoq
+	field incc_stat_flag
+end
+
+table ined
+	field ined_co_no
+	field ined_code
+	field ined_desc
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_min_stock
+	field inei_safety_stock
+	field inei_std_batch
+	field inei_abc_code
+	field inei_abc_update
+	field inei_dflt_bom
+	field inei_dflt_rtg
+	field inei_eoq
+	field inei_stat_flag
+end
+
+table ingd
+	field ingd_co_no
+	field ingd_grade
+	field ingd_writedown
+	field ingd_stat_flag
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_part
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_fob_cost
+	field inis_lcost_date
+	field inis_duty
+	field inis_licence
+	field inis_sup_uom
+	field inis_pur_conv
+	field inis_min_order
+	field inis_norm_order
+	field inis_ord_multiple
+	field inis_pallet_size
+	field inis_lead_time
+	field inis_sea_time
+	field inis_air_time
+	field inis_lnd_time
+	field inis_dflt_lead
+	field inis_weight
+	field inis_volume
+	field inis_stat_flag
+end
+
+table inmd
+	field inmd_co_no
+	field inmd_class
+	field inmd_abc_code
+	field inmd_grade
+	field inmd_abc_update
+	field inmd_lot_ctrl
+	field inmd_source
+	field inmd_costing_flag
+	field inmd_serial_item
+	field inmd_dec_pt
+	field inmd_bo_flag
+	field inmd_bo_release
+	field inmd_gst_pc
+	field inmd_min_quan
+	field inmd_safety_stock
+	field inmd_licence
+	field inmd_duty
+	field inmd_duty_amt
+	field inmd_std_uom
+	field inmd_std_duom
+	field inmd_alt_uom
+	field inmd_alt_duom
+	field inmd_uom_cfactor
+	field inmd_outer_uom
+	field inmd_outer_size
+	field inmd_tax_pc
+	field inmd_tax_amount
+	field inmd_schg_flag
+	field inmd_dflt_bom
+	field inmd_dflt_rtg
+	field inmd_eoq
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+	field ingp_sell_reg_pc
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_commodity
+	field inmr_class
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+	field inmr_quick_code
+	field inmr_abc_code
+	field inmr_reorder
+	field inmr_grade
+	field inmr_abc_update
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_weight
+	field inmr_on_hand
+	field inmr_on_order
+	field inmr_committed
+	field inmr_backorder
+	field inmr_forward
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_ex_code
+	field inmr_bo_flag
+	field inmr_bo_release
+	field inmr_disc_pc
+	field inmr_gst_pc
+	field inmr_min_quan
+	field inmr_safety_stock
+	field inmr_licence
+	field inmr_duty
+	field inmr_duty_amt
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_outer_uom
+	field inmr_outer_size
+	field inmr_pc_off_trade
+	field inmr_scrap_pc
+	field inmr_tax_pc
+	field inmr_tax_amount
+	field inmr_ltd_sales
+	field inmr_active_status
+	field inmr_schg_flag
+	field inmr_stat_flag
+	field inmr_sellgrp
+	field inmr_buygrp
+	field inmr_dflt_bom
+	field inmr_dflt_rtg
+	field inmr_eoq
+	field inmr_qc_reqd
+	field inmr_min_sell_pric
+end
+
+table inex
+	field inex_hhbr_hash
+	field inex_line_no
+	field inex_desc
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table inuv
+	field inuv_hhbr_hash
+	field inuv_hhum_hash
+	field inuv_volume
+end
+
+table podt
+	field podt_co_no
+	field podt_code
+	field podt_description
+end
+
+table polh
+	field polh_co_no
+	field polh_est_no
+	field polh_lic_cate
+	field polh_lic_no
+	field polh_type
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_ctry_code
+	field sumr_ship_method
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+end
+
+table srsk
+field srsk_co_no          
+field srsk_hhbr_hash      
+field srsk_item_no        
+field srsk_class          
+field srsk_category       
+field srsk_active_status  
+field srsk_alpha_code     
+field srsk_alternate      
+field srsk_barcode        
+field srsk_maker_no       
+field srsk_description    
+field srsk_source         
+field srsk_sellgrp        
+field srsk_buygrp         
+field srsk_spare          
+field srsk_qc_reqd          
+end
+
+table posdtup
+	field pos_no              
+	field file_name           
+	field record_hash         
+	field action              
+end

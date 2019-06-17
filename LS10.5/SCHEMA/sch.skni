@@ -1,0 +1,37 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.skni,v 5.1 2001/08/23 11:47:53 scott Exp $
+|  Schema Name  : (sch.skni)
+|  Schema Desc  : (Goods receipts number plate issues)
+|----------------------------------------------------------------------
+| $Log: sch.skni,v $
+| Revision 5.1  2001/08/23 11:47:53  scott
+| Updated from scotts machine
+|
+|=====================================================================}
+file	skni	
+
+field	skni_sknd_hash			type	long			index	dups			
+field	skni_hhcu_hash			type	long			index	dups
+field	skni_hhsl_hash			type	long			index	dups
+field	skni_hhcl_hash			type	long			index	dups
+field	skni_container			type	char	15		index	dups
+field	skni_seal_no			type	char	15
+field	skni_load_seq			type	int
+field	skni_cus_ord_ref		type	char	20	
+field	skni_qty_issued			type	float
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	skni_sknd_hash		-	Unique Serial Hash
+	skni_hhcu_hash		-	Link to supplier master file	(sumr_hhsu_hash)
+	skni_hhsl_hash		-	Link to Sales order line.	    (soln_hhsl_hash)
+	skni_hhcl_hash		-	Link to Packing Slip / Invoice  (coln_hhcl_hash)
+	skni_container		-	Container number
+	skni_seal_no		-	Seal number for container
+	skni_load_seq		-	Load Sequence Number.
+	skni_qty_issued		-	Quantity issued.
+}

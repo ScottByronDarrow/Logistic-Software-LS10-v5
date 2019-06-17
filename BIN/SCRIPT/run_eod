@@ -1,0 +1,38 @@
+TDATE=$5
+export TDATE
+#
+# Warning Do NOT place quotes around the UNIX environment ($2) on next line
+#
+echo $TDATE > $2.log
+re_select "$1" "$2" "$3"
+echo "Branch $2 End Of Day Reports"
+echo "Branch $2 End Of Day Reports" >> $2.log
+echo "Stock Issues Audit Started at `date` "
+echo "Stock Issues Audit Started at `date` " >> $2.log
+sk_ir_eod $4 I
+echo "Stock Receipts Audit Started at `date` "
+echo "Stock Receipts Audit Started at `date` " >> $2.log
+sk_ir_eod $4 R
+echo "Stock Purchases Audit Started at `date` "
+echo "Stock Purchases Audit Started at `date` " >> $2.log
+sk_ir_eod $4 P
+echo "Invoicing Audit Started at `date` "
+echo "Invoicing Audit Started at `date` " >> $2.log
+ol_audit $4 A N
+echo "End Of Day Report Started at `date` "
+echo "End Of Day Report Started at `date` " >> $2.log
+ol_eod $4 YYYYYY 
+#echo "Sales Margin By Customer Started at `date` "
+#echo "Sales Margin By Customer Started at `date` " >> $2.log
+# sales margin by Customer after posting
+#sk_marg $4 C "      " "~~~~~~" 80.00 A $5 $5 N A
+#sk_marg $4 C "      " "~~~~~~" 0.01 B $5 $5 N A
+echo "Zero Stock Report Started at `date` "
+echo "Zero Stock Report Started at `date` " >> $2.log
+# Zero stock report
+sk_nostock $4 N
+sk_nostock $4 Z
+echo "End Of Day Report Finished at `date` " >> $2.log
+mv $2.log /usr/DB/BIN/LOG
+re_select "$1" "$2" "$3"
+#lockout_br L

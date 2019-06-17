@@ -1,0 +1,157 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/08/01 01:46:43 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/08/01 01:46:43  scott
+#	.
+#	
+#
+#
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_dl_adr4
+	field cumr_branch_code
+	field cumr_area_code
+	field cumr_sman_code
+	field cumr_pay_method
+end
+
+table inmr
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_std_uom
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+end
+
+table cohr
+	field cohr_hhcu_hash
+	field cohr_hhco_hash
+	field cohr_area_code
+end
+
+table coln
+	field coln_hhcl_hash
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_hhbr_hash
+	field coln_incc_hash
+	field coln_hhsl_hash
+	field coln_hhdl_hash
+	field coln_crd_type
+	field coln_serial_no
+	field coln_cont_status
+	field coln_q_order
+	field coln_qty_del
+	field coln_qty_ret
+	field coln_q_backorder
+	field coln_gsale_price
+	field coln_sale_price
+	field coln_cost_price
+	field coln_disc_pc
+	field coln_reg_pc
+	field coln_disc_a
+	field coln_disc_b
+	field coln_disc_c
+	field coln_cumulative
+	field coln_tax_pc
+	field coln_gst_pc
+	field coln_gross
+	field coln_on_cost
+	field coln_amt_disc
+	field coln_amt_tax
+	field coln_amt_gst
+	field coln_erate_var
+	field coln_pack_size
+	field coln_sman_code
+	field coln_cus_ord_ref
+	field coln_o_xrate
+	field coln_n_xrate
+	field coln_item_desc
+	field coln_due_date
+	field coln_status
+	field coln_bonus_flag
+	field coln_hide_flag
+	field coln_hhah_hash
+	field coln_stat_flag
+	field coln_hhum_hash
+end
+
+table trhr
+	field trhr_trip_name
+	field trhr_hhve_hash
+	field trhr_del_date
+	field trhr_hhtr_hash
+	field trhr_driver
+	field trhr_act_date
+	field trhr_act_time
+	field trhr_status
+end
+
+table trln
+	field trln_hhtr_hash
+	field trln_hhco_hash
+	field trln_hhln_hash
+end
+
+table trve
+	field trve_co_no
+	field trve_br_no
+	field trve_ref
+	field trve_desc
+	field trve_hhve_hash
+end
+
+table extf
+	field extf_co_no
+	field extf_code
+	field extf_name
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_logname
+	field exsf_salesman
+	field exsf_area_code
+	field exsf_com_type
+	field exsf_com_pc
+	field exsf_com_min
+	field exsf_stat_flag
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_rate
+	field exaf_stat_flag
+end
+

@@ -1,0 +1,100 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:16:44 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:16:44  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/04/28 04:10:15  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	Updated for changes to insp schema to change money fields to double to allow
+#	for four digit price.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_cc_no
+end
+
+table insp
+	field insp_hhsu_hash
+	field insp_hhbr_hash
+	field insp_qty_brk1
+	field insp_qty_brk2
+	field insp_qty_brk3
+	field insp_qty_brk4
+	field insp_qty_brk5
+	field insp_price1
+	field insp_price2
+	field insp_price3
+	field insp_price4
+	field insp_price5
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_part
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_fob_cost
+	field inis_lcost_date
+	field inis_duty
+	field inis_licence
+	field inis_sup_uom
+	field inis_pur_conv
+	field inis_min_order
+	field inis_norm_order
+	field inis_ord_multiple
+	field inis_pallet_size
+	field inis_lead_time
+	field inis_sea_time
+	field inis_air_time
+	field inis_lnd_time
+	field inis_dflt_lead
+	field inis_weight
+	field inis_volume
+	field inis_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_buygrp
+end
+

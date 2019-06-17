@@ -1,0 +1,15 @@
+Lot Quantities Maintenance Menu. (SKLOT)
+sk_mast
+Stock Master Menu. <a> (1,2)
+menu MENUSYS/sk_master.mdf
+Display / Print Expired Lots. <a> (1,2)
+sk_lexp_disp~
+Lot & Bin Location Quantity Discepancies Report. <a> (1,2)
+sk_lot_disprt~
+Lot Number & Lot Expiry Date Amendment. <a> (1,2)
+sk_lot_expiry~
+((
+quadrant(10,6)
+line(6,5,64)
+box(5,3,65,12)
+))

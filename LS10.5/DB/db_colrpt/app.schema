@@ -1,0 +1,90 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:04:08 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:04:08  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:24:38  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:13:28  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/09/06 05:31:40  scott
+#	*** empty log message ***
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_pay_terms
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_ho_hash
+	field cuin_hhci_hash
+	field cuin_inv_no
+end
+
+table cuhd
+	field cuhd_hhcu_hash
+	field cuhd_receipt_no
+	field cuhd_index_date
+	field cuhd_cheque_no
+	field cuhd_alt_drawer
+	field cuhd_due_date
+	field cuhd_hhcp_hash
+	field cuhd_date_payment
+	field cuhd_tot_amt_paid
+	field cuhd_disc_given
+	field cuhd_db_bank
+	field cuhd_db_branch
+end
+
+table cudt
+	field cudt_hhcp_hash
+	field cudt_hhci_hash
+	field cudt_amt_paid_inv
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_payment_flag
+	field cumr_curr_code
+	field cumr_credit_limit
+	field cumr_date_lastpay
+	field cumr_amt_lastpay
+	field cumr_sman_code
+	field cumr_ho_dbt_hash
+	field cumr_stat_flag
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_ex1_factor
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+	field exsf_stat_flag
+end
+

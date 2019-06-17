@@ -1,0 +1,12 @@
+System Maintenance of Display Hot Keys. (SUB)
+terminals
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Maintain Hot Keys for Stock Display. <a> (1,1)
+ps_ring_sec~sk_alldisp~
+Maintain Hot Keys for Customer Enquiry. <a> (1,1)
+ps_ring_sec~so_cc_disp~
+Maintain Hot Keys for Suppliers Enquiry. <a> (1,1)
+ps_ring_sec~po_ss_disp~
+((
+))

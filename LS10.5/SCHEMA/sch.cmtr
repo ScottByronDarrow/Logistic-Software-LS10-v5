@@ -1,0 +1,64 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmtr,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cmtr)
+|  Schema Desc  : (Contract Management Transaction File. )
+|----------------------------------------------------------------------
+| $Log: sch.cmtr,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmtr
+
+field	cmtr_hhhr_hash			type	long		index	dups
+field	cmtr_hhcm_hash			type	long
+field	cmtr_hhbr_hash			type	long
+field	cmtr_qty				type	float
+field	cmtr_cost_price			type	money
+field	cmtr_sale_price			type	money
+field	cmtr_disc_pc			type	float
+field	cmtr_gst_pc				type	float
+field	cmtr_tax_pc				type	float
+field	cmtr_ser_no				type	char	25
+field	cmtr_date				type	edate
+field	cmtr_time				type	char    8 
+field	cmtr_desc				type	char    40 
+field	cmtr_stat_flag			type	char	1
+field	cmtr_id_no				type	composite
+			cmtr_hhhr_hash,
+			cmtr_hhcm_hash,
+			cmtr_sale_price,
+			cmtr_disc_pc									index	dups
+field	cmtr_id_no2				type	composite
+			cmtr_hhhr_hash,
+			cmtr_hhcm_hash,
+			cmtr_date										index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		cmtr_hhhr_hash		- Link to cmhr
+		cmtr_hhcm_hash		- Link to cmcm
+		cmtr_hhbr_hash		- Link to inmr
+		cmtr_qty			- Qty Despatched
+		cmtr_cost_price		- Unit Cost Price
+		cmtr_sale_price		- Unit Sale Price
+		cmtr_disc_pc		- Discount Rate
+		cmtr_gst_pc			- NOT USED
+		cmtr_tax_pc			- NOT USED
+		cmtr_ser_no			- Serial Number
+		cmtr_date			- Date Created
+		cmtr_time			- Time Created
+		cmtr_stat_flag		- P)osted
+}

@@ -1,0 +1,43 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/10/09 22:34:25 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/10/09 22:34:25  scott
+#	Updated from Scotts machine.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table cmem
+	field cmem_co_no
+	field cmem_emp_no
+	field cmem_emp_name
+	field cmem_hhem_hash
+	field cmem_hheq_hash
+	field cmem_clab_rate
+	field cmem_clab_pc
+	field cmem_coh_rate
+	field cmem_coh_pc
+	field cmem_olab_rate
+	field cmem_olab_pc
+	field cmem_ooh_rate
+	field cmem_ooh_pc
+end
+
+table cmeq
+	field cmeq_co_no
+	field cmeq_eq_name
+	field cmeq_hheq_hash
+	field cmeq_desc
+end
+

@@ -1,0 +1,42 @@
+Cash Disbursements Menu (APCD)
+cashpay_help
+Supplier Master Menu. <a> (1,2)
+menu MENUSYS/cr_master.mdf
+Payment Select By Due Date. <a> (1,1)
+cr_paysel~
+Payment Select By Document. <a> (1,1)
+cr_paysli~
+Amend Invoice Payment Amount. <a> (1,2)
+cr_invpay~
+Enter Suppliers Cheques. <a> (1,1)
+lp_chain~cr_cshinp PID~cr_percalc PID~cr_cshtogl PID LPNO~
+Allocate Unallocated Cheques. <a> (1,1)
+lp_chain~cr_cshallc PID~cr_percalc PID~cr_cshtogl PID LPNO~
+Enter Sundry Payments. <a> (1,2)
+lp_chain~cr_chqsdry PID LPNO~
+Computer Printed Cheques. <a> (1,1)
+lp_chain~cr_chqcrt LPNO PID~cr_chqtogl PID C 6 LPNO~
+Print Cash Reqts By Supplier. <a> (1,1)
+cr_comrep1~LPNO~
+Print Cash Reqts By Currency. <a> (1,2)
+cr_comrep2~LPNO~
+Print Remittance Advice. <a> (2,1)
+cr_remtprn.i~cr_remtprn~Supplier Remittance Print~
+Print Direct Credit Schedule. <a> (2,2)
+lp_chain~cr_chqdc LPNO PID~cr_percalc PID~cr_chqtogl PID T 6 LPNO~
+Flag Presented Cheques. <a> (2,1)
+cr_bkr_inp~
+Print Unpresented Cheques. <a> (2,1)
+BACK~cr_cheqlist~LPNO~U~
+Print Presented Cheques. <a> (2,1)
+BACK~cr_cheqlist~LPNO~P~
+Print Cheque Listing. <a> (2,1)
+BACK~cr_cheqlist~LPNO~C~
+Delete Cheque Listing. <a> (2,2)
+BACK~cr_cheq_del~
+((
+quadrant(8,6)
+quadrant(45,8)
+box(3,3,73,15)
+line(4,5,71)
+))

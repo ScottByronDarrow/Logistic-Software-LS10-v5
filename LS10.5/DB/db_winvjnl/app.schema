@@ -1,0 +1,50 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:17 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:17  scott
+#	Update - LS10.5
+#	
+#	Revision 5.0  2001/06/19 08:05:36  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/06/04 06:59:56  scott
+#	Updated to use  app.schema
+#	Updated to ensure defaults are correct
+#	General clean up
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_fiscal
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_dbt_name
+end
+
+table extr
+	field extr_co_no
+	field extr_jnl_type
+	field extr_gl_per
+	field extr_run_no
+	field extr_int_no
+	field extr_ref_no
+	field extr_date
+	field extr_sal_val
+	field extr_gst_val
+	field extr_stat_flag
+end
+

@@ -1,0 +1,85 @@
+{======================================================================
+|  Copyright (C) 1999 - 2002 LogisticSoftware                         |
+|======================================================================
+| $Id: sch.incp,v 5.1 2002/11/28 04:03:53 scott Exp $
+|  Schema Name  : (sch.incp)
+|  Schema Desc  : (Inventory Contract Price File)
+|----------------------------------------------------------------------
+| $Log: sch.incp,v $
+| Revision 5.1  2002/11/28 04:03:53  scott
+| SC0053 - Platinum Logistics - LS10.5.2 2002-11-28
+|
+======================================================================}
+file	incp
+
+field	incp_key				type	char	6
+field	incp_hhcu_hash			type	long
+field	incp_area_code			type	char	2
+field	incp_cus_type			type	char	3
+field	incp_hhbr_hash			type	long				index	dups
+field	incp_curr_code			type	char	3
+field	incp_status				type	char	1
+field	incp_date_from			type	edate
+field	incp_date_to			type	edate
+field	incp_price1				type	money
+field	incp_price2				type	money
+field	incp_price3				type	money
+field	incp_price4				type	money
+field	incp_price5				type	money
+field	incp_price6				type	money
+field	incp_price7				type	money
+field	incp_price8				type	money
+field	incp_price9				type	money
+field	incp_comment			type	char	40
+field	incp_dis_allow			type	char	1
+field	incp_stat_flag			type	char	1
+field	incp_id_no				type	composite	
+			incp_key,
+			incp_curr_code,
+			incp_status,
+			incp_hhcu_hash,	
+			incp_area_code,	
+			incp_cus_type,	
+			incp_hhbr_hash,	
+			incp_date_from								index	dups
+field	incp_id_no2				type	composite	
+			incp_key,
+			incp_status,
+			incp_hhcu_hash,	
+			incp_area_code,	
+			incp_cus_type,	
+			incp_hhbr_hash,	
+			incp_date_from,
+			incp_curr_code								index	dups
+
+end
+{
+              =====================================
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+              =====================================
+	incp_key			-	Key is a combined field of Company Number, Branch
+							Number and Warehouse Number 2 characters each.
+	incp_hhcu_hash		-	Link to cumr_hhcu_hash
+	incp_area_code		-	Customer Area Code.
+	incp_cus_type		-	Customer type.
+	incp_hhbr_hash		-	Link to inmr_hhbr_hash
+	incp_curr_code		-	Currency Code
+	incp_status			-	A(ctive),
+				   		 	D(elete), 
+				   		 	H(istory) 
+				   		 	N(ew Pricing) 
+	incp_date_from		-	Effective from date.
+	incp_date_to		-	Effective to date.
+	incp_price1			-	Inventory price 1
+	incp_price2			-	Inventory price 2
+	incp_price3			-	Inventory price 3
+	incp_price4			-	Inventory price 4
+	incp_price5			-	Inventory price 5
+	incp_price6			-	Inventory price 6
+	incp_price7			-	Inventory price 7
+	incp_price8			-	Inventory price 8
+	incp_price9			-	Inventory price 9
+	incp_comment		-	Comments relating to price update.
+	incp_dis_allow		-	Yes if discounting allowed for item/cust
+	incp_stat_flag		-	Spare stat flag.
+}

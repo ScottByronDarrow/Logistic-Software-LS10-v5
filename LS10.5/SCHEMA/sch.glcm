@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glcm,v 5.0 2001/06/19 10:17:13 cha Exp $
+|  Schema Name  : (sch.glcm)
+|  Schema Desc  : (General Ledger Control Account Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.glcm,v $
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:42  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file glcm 
+
+field	glcm_co_no                   	type	char	2 
+field	glcm_br_no                   	type	char	2
+field	glcm_code						type	char	10
+field	glcm_desc						type  	char	40
+field	glcm_acc_no						type	char	16
+field	glcm_stat_flag					type	char	1
+field	glcm_id_no                   	type  	composite 
+			glcm_co_no, 
+			glcm_br_no,
+			glcm_code				  							index primary
+	end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glcm_co_no		= company number.
+	glcm_br_no		= branch number.
+	glcm_code		= control code. 
+	glcm_desc		= control full description.
+	glcm_acc_no		= General ledger Account number. 
+	glcm_stat_flag	= Status flag.
+}

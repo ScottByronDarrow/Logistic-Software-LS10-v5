@@ -1,0 +1,55 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glpd,v 5.0 2001/06/19 10:17:14 cha Exp $
+|  Schema Name  : (sch.glpd)
+|  Schema Desc  : (General Ledger Period Balance file. )
+|----------------------------------------------------------------------
+| $Log: sch.glpd,v $
+| Revision 5.0  2001/06/19 10:17:14  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:44  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	glpd
+
+field	glpd_hhmr_hash			type	long
+field	glpd_prd_no				type	int
+field	glpd_year				type	int
+field	glpd_budg_no			type	int
+field	glpd_mod_time			type	long
+field	glpd_user_id			type	char	8
+field	glpd_balance			type	money
+field	glpd_fx_balance			type	money
+field	glpd_hhgp_hash			type 	long
+field	glpd_id_no				type	composite
+			glpd_hhmr_hash,
+			glpd_budg_no,
+			glpd_year,
+			glpd_prd_no								index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glpd_hhmr_hash		-	Link to G/Ledger Master file (glmr).
+	glpd_prd_no			-	Period Number.
+                                           1 - 12 Calender months.
+                                           1 - 13 4 week months.
+                                                or as specified.
+	glpd_year			-	Year of period.
+	glpd_budg_no		- 	Budget number.
+					   		0 - Actual.
+					   		1 - n Budgets.
+	glpd_mod_time		-	Date & time of last posting.
+	glpd_user_id		-	User who last posted. 
+	glpd_balance		-	Balance for that period in company base currency.
+	glpd_fx_balance		-	Balance for that period in glmr account currency.
+	glpd_hhgp_hash		-   Link to Currency File for Each glpd (glpc).
+	}

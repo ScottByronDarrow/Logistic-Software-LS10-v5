@@ -1,0 +1,21 @@
+Routing Master Menu. (RTGMR)
+rtg_help
+Manufacturing Menu <a> (1,2)
+menu MENUSYS/main_manf.mdf
+Product Routing Maintenance. <a> (1,1)
+rg_maint~
+Product Routing Print. <a> (1,1)
+rg_print~Routing Print~
+Product Routing Copy. <a> (1,2)
+rg_copy~
+Work-Centre Maintenance. <a> (1,2)
+pc_wcmaint~
+Master Instruction Maintenance. <a> (1,1)
+pc_mimaint~
+Instruction Detail Maintenance. <a> (1,1)
+pc_idmaint~
+((
+quadrant(20,6)
+line(12,5,55)
+box(11,3,56,13)
+))

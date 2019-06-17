@@ -1,0 +1,139 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:07:12 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:07:12  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:28:16  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:15:21  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:58:32  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/06/13 05:47:23  scott
+#	S/C LSANZ 16400
+#	Updated to allow for demand type '6' related to production issues.
+#	NOTE : Please see release notes on new search.
+#	sk_mrmaint, sk_delete, psl_sr_gen and sch.srsk must be installed/rebuilt.
+#	
+#
+#
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_acronym
+	field ccmr_lrp_ok
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_inv_date
+end
+
+table ffpr
+	field ffpr_category
+	field ffpr_hhbr_hash
+	field ffpr_br_no
+	field ffpr_review_prd
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_ff_option
+	field incc_ff_method
+	field incc_abc_code
+	field incc_first_stocked
+	field incc_safety_stock
+	field incc_pwks_demand
+	field incc_wks_demand
+	field incc_stat_flag
+end
+
+table lrph
+	field lrph_hhwh_hash
+	field lrph_curr_sel
+	field lrph_prev_sel
+	field lrph_a_actual
+	field lrph_a_forecast
+	field lrph_a_wks_dem
+	field lrph_a_sqr_err
+	field lrph_a_pc_err
+	field lrph_b_actual
+	field lrph_b_forecast
+	field lrph_b_wks_dem
+	field lrph_b_sqr_err
+	field lrph_b_pc_err
+	field lrph_c_actual
+	field lrph_c_forecast
+	field lrph_c_wks_dem
+	field lrph_c_sqr_err
+	field lrph_c_pc_err
+	field lrph_d_actual
+	field lrph_d_forecast
+	field lrph_d_wks_dem
+	field lrph_d_sqr_err
+	field lrph_d_pc_err
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_lcost_date
+	field inis_lead_time
+	field inis_stat_flag
+end
+
+table inld
+	field inld_hhis_hash
+	field inld_ord_date
+	field inld_sup_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_supercession
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_abc_code
+	field inmr_sale_unit
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_safety_stock
+	field inei_abc_code
+	field inei_stat_flag
+end
+

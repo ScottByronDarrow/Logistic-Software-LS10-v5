@@ -1,0 +1,66 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.excf,v 5.1 2001/08/20 23:34:16 scott Exp $
+|  Schema Name  : (sch.excf)
+|  Schema Desc  : (External Category File Record. )
+|----------------------------------------------------------------------
+| $Log: sch.excf,v $
+| Revision 5.1  2001/08/20 23:34:16  scott
+| Updated for development related to bullet proofing
+|
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:32  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file excf
+
+field	excf_co_no				type	char	2	index	dups
+field	excf_cat_no				type	char	11	index	dups
+field	excf_hhcf_hash			type	serial		index	
+field	excf_ex_rate			type	double
+field	excf_cat_desc			type	char	40
+field	excf_max_disc			type	float
+field	excf_min_marg			type	float
+field	excf_ol_min_marg		type	float
+field	excf_ol_max_marg		type	float
+field	excf_gp_mkup			type	float
+field	excf_item_alloc			type	char	1
+field	excf_no_trans			type	int
+field	excf_no_days			type	int
+field	excf_review_prd			type	float
+field	excf_cont_drugs			type	char	1
+field	excf_ib_marg			type	float
+field	excf_stat_flag			type	char	1
+field	excf_id_no				type	composite	
+			excf_co_no,	
+			excf_cat_no									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	excf_co_no		-	Company Number.
+	excf_cat_no		-	Category Number.
+	excf_hhcf_hash		-	Serial hash.
+	excf_ex_rate		-	Exchange rate.
+	excf_cat_desc		-	Category Description.
+	excf_max_disc		-	Max Discount allowed.
+	excf_min_marg		-	Min Margin allowed.
+	excf_gp_mkup		-	Gross profit Markup.
+	excf_item_alloc		-	Item Allocation Y(es) if items
+					can be allocated against N(o) is not.
+	excf_no_trans		-	Min number of transactions held.
+	excf_no_days		-	No of days transactions are held.
+	excf_review_prd		- 	Review Period for FF. ( NOT USED DRP ).
+	excf_cont_drugs		- 	Y(es) Control drugs Applies.
+	                                N(o)  Control drugs does not apply.
+	excf_stat_flag		-	Status flag.
+}

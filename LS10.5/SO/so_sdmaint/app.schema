@@ -1,0 +1,452 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:20:41 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:20:41  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:41:56  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/12/06 09:34:07  scott
+#	New app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_dbt_date
+	field comm_gst_rate
+end
+
+table comr
+	field comr_co_no
+	field comr_frt_min_amt
+	field comr_frt_mweight
+	field comr_stat_flag
+end
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_class_type
+	field cumr_curr_code
+	field cumr_price_type
+	field cumr_bo_flag
+	field cumr_bo_cons
+	field cumr_po_flag
+	field cumr_ch_adr1
+	field cumr_ch_adr2
+	field cumr_ch_adr3
+	field cumr_ch_adr4
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_dl_adr4
+	field cumr_stop_credit
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_crd_flag
+	field cumr_area_code
+	field cumr_del_zone
+	field cumr_sman_code
+	field cumr_disc_code
+	field cumr_tax_code
+	field cumr_tax_no
+	field cumr_ho_dbt_hash
+	field cumr_freight_chg
+	field cumr_inst_fg1
+	field cumr_inst_fg2
+	field cumr_inst_fg3
+	field cumr_ord_value
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_od_flag
+	field cumr_stat_flag
+	field cumr_item_codes
+	field cumr_contact_name
+	field cumr_phone_no
+end
+
+table sosd
+	field sosd_hhso_hash
+	field sosd_hhco_hash
+	field sosd_line_no
+	field sosd_text
+end
+
+table cudi
+	field cudi_hhcu_hash
+	field cudi_del_no
+	field cudi_name
+	field cudi_adr1
+	field cudi_adr2
+	field cudi_adr3
+end
+
+table exsi
+	field exsi_co_no
+	field exsi_inst_code
+	field exsi_inst_text
+	field exsi_stat_flag
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_stat_flag
+end
+
+table trsh
+	field trsh_trzm_hash
+	field trsh_del_date
+	field trsh_sdel_slot
+	field trsh_edel_slot
+	field trsh_hhso_hash
+end
+
+table trzm
+	field trzm_co_no
+	field trzm_br_no
+	field trzm_del_zone
+	field trzm_desc
+	field trzm_dflt_chg
+	field trzm_chg_kg
+	field trzm_trzm_hash
+end
+
+table trcm
+	field trcm_co_no
+	field trcm_br_no
+	field trcm_carr_code
+	field trcm_trcm_hash
+	field trcm_carr_desc
+	field trcm_carr_name
+	field trcm_carr_addr1
+	field trcm_carr_addr2
+	field trcm_carr_addr3
+	field trcm_carr_addr4
+	field trcm_min_wgt
+	field trcm_max_wgt
+	field trcm_min_vol
+	field trcm_max_vol
+	field trcm_bonded
+	field trcm_phone
+	field trcm_fax_no
+	field trcm_contact_name
+	field trcm_cont_start
+	field trcm_cont_end
+	field trcm_comment
+	field trcm_markup_pc
+	field trcm_day_charge
+	field trcm_wky_charge
+	field trcm_mth_charge
+	field trcm_stat_flag
+end
+
+table trcl
+	field trcl_trcm_hash
+	field trcl_trzm_hash
+	field trcl_cost_kg
+	field trcl_stat_flag
+end
+table cohr
+	field cohr_co_no          
+	field cohr_br_no          
+	field cohr_dp_no          
+	field cohr_inv_no         
+	field cohr_app_inv_no     
+	field cohr_hhcu_hash      
+	field cohr_chg_hhcu_hash  
+	field cohr_type           
+	field cohr_cont_no        
+	field cohr_drop_ship      
+	field cohr_hhds_hash      
+	field cohr_cus_ord_ref    
+	field cohr_chg_ord_ref    
+	field cohr_ord_ref        
+	field cohr_grn_no         
+	field cohr_cons_no        
+	field cohr_del_zone       
+	field cohr_del_req        
+	field cohr_del_date       
+	field cohr_asm_req        
+	field cohr_asm_date       
+	field cohr_asm_hash       
+	field cohr_s_timeslot     
+	field cohr_e_timeslot     
+	field cohr_carr_code      
+	field cohr_carr_area      
+	field cohr_no_cartons     
+	field cohr_wgt_per_ctn    
+	field cohr_no_kgs         
+	field cohr_hhso_hash      
+	field cohr_hhco_hash      
+	field cohr_frei_req       
+	field cohr_date_raised    
+	field cohr_date_required  
+	field cohr_tax_code       
+	field cohr_tax_no         
+	field cohr_area_code      
+	field cohr_sale_code      
+	field cohr_op_id          
+	field cohr_time_create    
+	field cohr_date_create    
+	field cohr_gross          
+	field cohr_freight        
+	field cohr_insurance      
+	field cohr_other_cost_1   
+	field cohr_other_cost_2   
+	field cohr_other_cost_3   
+	field cohr_tax            
+	field cohr_gst            
+	field cohr_disc           
+	field cohr_deposit        
+	field cohr_ex_disc        
+	field cohr_erate_var      
+	field cohr_sos            
+	field cohr_exch_rate      
+	field cohr_fix_exch       
+	field cohr_batch_no       
+	field cohr_dl_name        
+	field cohr_dl_add1        
+	field cohr_dl_add2        
+	field cohr_dl_add3        
+	field cohr_din_1          
+	field cohr_din_2          
+	field cohr_din_3          
+	field cohr_pay_type       
+	field cohr_pay_terms      
+	field cohr_sell_terms     
+	field cohr_ins_det        
+	field cohr_pri_type       
+	field cohr_pri_break      
+	field cohr_ord_type       
+	field cohr_prt_price      
+	field cohr_status         
+	field cohr_stat_flag      
+	field cohr_ps_print       
+	field cohr_ps_print_no    
+	field cohr_inv_print      
+	field cohr_ccn_print      
+	field cohr_printing       
+	field cohr_hhtr_hash      
+	field cohr_load_flag      
+	field cohr_wrmr_hash      
+	field cohr_pos_inv_no     
+	field cohr_pos_tran_type  
+end
+table sohr
+	field sohr_co_no          
+	field sohr_br_no          
+	field sohr_dp_no          
+	field sohr_order_no       
+	field sohr_cont_no        
+	field sohr_hhcu_hash      
+	field sohr_chg_hhcu_hash  
+	field sohr_hhso_hash      
+	field sohr_inv_no         
+	field sohr_cus_ord_ref    
+	field sohr_chg_ord_ref    
+	field sohr_op_id          
+	field sohr_time_create    
+	field sohr_date_create    
+	field sohr_cons_no        
+	field sohr_del_zone       
+	field sohr_del_req        
+	field sohr_del_date       
+	field sohr_asm_req        
+	field sohr_asm_date       
+	field sohr_s_timeslot     
+	field sohr_e_timeslot     
+	field sohr_carr_code      
+	field sohr_carr_area      
+	field sohr_no_cartons     
+	field sohr_no_kgs         
+	field sohr_sch_ord        
+	field sohr_ord_type       
+	field sohr_pri_type       
+	field sohr_frei_req       
+	field sohr_dt_raised      
+	field sohr_dt_required    
+	field sohr_tax_code       
+	field sohr_tax_no         
+	field sohr_area_code      
+	field sohr_sman_code      
+	field sohr_sell_terms     
+	field sohr_pay_term       
+	field sohr_freight        
+	field sohr_insurance      
+	field sohr_ins_det        
+	field sohr_other_cost_1   
+	field sohr_other_cost_2   
+	field sohr_other_cost_3   
+	field sohr_deposit        
+	field sohr_discount       
+	field sohr_exch_rate      
+	field sohr_fix_exch       
+	field sohr_batch_no       
+	field sohr_cont_name      
+	field sohr_cont_phone     
+	field sohr_del_name       
+	field sohr_del_add1       
+	field sohr_del_add2       
+	field sohr_del_add3       
+	field sohr_din_1          
+	field sohr_din_2          
+	field sohr_din_3          
+	field sohr_new            
+	field sohr_prt_price      
+	field sohr_full_supply    
+	field sohr_two_step       
+	field sohr_status         
+	field sohr_stat_flag      
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhum_hash
+	field soln_hhsl_hash
+	field soln_serial_no
+	field soln_cont_status
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_qty_org_ord
+	field soln_gsale_price
+	field soln_sale_price
+	field soln_cost_price
+	field soln_dis_pc
+	field soln_reg_pc
+	field soln_disc_a
+	field soln_disc_b
+	field soln_disc_c
+	field soln_cumulative
+	field soln_tax_pc
+	field soln_gst_pc
+	field soln_o_xrate
+	field soln_n_xrate
+	field soln_pack_size
+	field soln_sman_code
+	field soln_cus_ord_ref
+	field soln_pri_or
+	field soln_dis_or
+	field soln_item_desc
+	field soln_due_date
+	field soln_del_no
+	field soln_bonus_flag
+	field soln_hide_flag
+	field soln_hhah_hash
+	field soln_status
+	field soln_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_weight
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_bo_flag
+	field inmr_bo_release
+	field inmr_sellgrp
+	field inmr_disc_pc
+	field inmr_gst_pc
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_outer_size
+	field inmr_tax_pc
+	field inmr_tax_amount
+	field inmr_qc_reqd
+	field inmr_stat_flag
+end
+table coln
+	field coln_hhcl_hash      
+	field coln_hhco_hash      
+	field coln_line_no        
+	field coln_hhbr_hash      
+	field coln_incc_hash      
+	field coln_hhum_hash      
+	field coln_hhsl_hash      
+	field coln_hhdl_hash      
+	field coln_crd_type       
+	field coln_serial_no      
+	field coln_cont_status    
+	field coln_qty_org_ord    
+	field coln_q_order        
+	field coln_qty_del        
+	field coln_qty_ret        
+	field coln_q_backorder    
+	field coln_gsale_price    
+	field coln_sale_price     
+	field coln_cost_price     
+	field coln_disc_pc        
+	field coln_reg_pc         
+	field coln_disc_a         
+	field coln_disc_b         
+	field coln_disc_c         
+	field coln_cumulative     
+	field coln_tax_pc         
+	field coln_gst_pc         
+	field coln_gross          
+	field coln_freight        
+	field coln_on_cost        
+	field coln_amt_disc       
+	field coln_amt_tax        
+	field coln_amt_gst        
+	field coln_erate_var      
+	field coln_pack_size      
+	field coln_sman_code      
+	field coln_cus_ord_ref    
+	field coln_org_ord_ref    
+	field coln_o_xrate        
+	field coln_n_xrate        
+	field coln_item_desc      
+	field coln_due_date       
+	field coln_status         
+	field coln_bonus_flag     
+	field coln_hide_flag      
+	field coln_hhah_hash      
+	field coln_price_type     
+	field coln_stat_flag      
+end

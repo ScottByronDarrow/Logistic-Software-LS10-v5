@@ -1,0 +1,26 @@
+Telemarketing Master Menu (TMMR)
+tm_mast
+Marketing Menu <a|telemktg> (1,2)
+menu MENUSYS/main_mark.mdf
+Make / Receive Calls. <a|telemktg> (1,2)
+tm_call~
+Lead Maintenance. >> <a|telemktg> (1,2)
+pmenu MENUSYS/SUB_MENU/tm_lead.mdf
+Maintain Masterfiles. <a|telemktg> (1,2)
+menu MENUSYS/tm_maint.mdf
+Telemarketing Displays. <a|telemktg> (1,2)
+menu MENUSYS/tm_display.mdf
+Telemarketing Reports. >> <a|telemktg> (1,2)
+pmenu MENUSYS/SUB_MENU/tm_reports.mdf
+Telemarketing Letters. >> <a|telemktg> (1,2)
+pmenu MENUSYS/SUB_MENU/tm_letter.mdf
+((
+quadrant(24,6)
+box(17,3,43,15)
+line(18,5,42)
+HEADING_ON
+FAST_ON
+SUB_ON
+MENU_NAME_ON
+SHELL_ON
+))

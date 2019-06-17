@@ -1,0 +1,93 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inmd,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inmd)
+|  Schema Desc  : (Inventory Master File default file. )
+|----------------------------------------------------------------------
+| $Log: sch.inmd,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inmd
+
+field	inmd_co_no			type	char	2	index	dups
+field	inmd_class			type	char	1	
+field	inmd_abc_code		type	char	1
+field	inmd_grade			type	char	1
+field	inmd_abc_update		type	char	1
+field	inmd_lot_ctrl		type	char	1
+field	inmd_source			type	char	2
+field	inmd_costing_flag	type	char	1
+field	inmd_serial_item	type	char	1
+field	inmd_dec_pt			type	integer
+field	inmd_bo_flag		type	char	1
+field	inmd_bo_release		type	char	1
+field	inmd_gst_pc			type	float
+field	inmd_min_quan		type	float
+field	inmd_max_quan		type	float
+field	inmd_safety_stock	type	float
+field	inmd_licence		type	char	2
+field	inmd_duty			type	char	2
+field	inmd_duty_amt		type	float
+field	inmd_std_uom		type	long
+field	inmd_std_duom		type	char	4
+field	inmd_alt_uom		type	long
+field	inmd_alt_duom		type	char	4
+field	inmd_uom_cfactor	type	float
+field	inmd_outer_uom		type	long
+field	inmd_outer_size		type	float
+field	inmd_tax_pc			type	float
+field	inmd_tax_amount		type	money
+field	inmd_schg_flag		type	char	1
+field	inmd_lot_expiry		type	int
+field	inmd_dflt_bom		type	int
+field	inmd_dflt_rtg		type	int
+field	inmd_eoq			type	float
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inmd_co_no			-	Company number.
+	inmd_class			-	Item Class.
+	inmd_abc_code		-	Item ABC Code.
+	inmd_grade			-	Item's Inventory Grade.
+	inmd_abc_update		-	Abc analysis update (Y/N)
+	inmd_lot_ctrl		-	Lot control (Y/N)
+	inmd_source			-	PP/RM/MP/MC/BM/BP
+	inmd_dec_pt			-	Decimal points (0-6)
+	inmd_ex_code		-	Extra description code.
+	inmd_bo_flag		-	Backorders allowed (Y/N/F)
+	inmd_bo_release		-	Backorder release (A(utomatic)/M(anual))
+	inmd_gst_pc			-	Gst Percent.
+	inmd_min_quan		-	Min Order quantity.
+	inmd_max_quan		-	Max Order quantity.
+	inmd_safety_stock	-	Safety Stock.
+	inmd_licence		-	Licence Code -> polc
+	inmd_duty			-	Duty Code -> pocf.
+	inmd_duty_amt		-	Duty amount
+	inmd_std_uom		-	Standard (Holding) UOM
+	inmd_std_duom		-	Standard (Holding) UOM Description.
+	inmd_alt_uom		-	Alternate UOM
+	inmd_alt_duom		-	Alternate UOM Description.
+	inmd_uom_cfactor	-	Alternate UOM conversion.
+	inmd_outer_uom		-	Outer UOM (Pricing/Costing)
+	inmd_outer_size		-	Outer Size (Used in pricing/costing)
+	inmd_tax_pc			-	Tax percent.
+	inmd_tax_amount		-	Tax Absolute amount.
+	inmd_schg_flag		-	Surcharge flag.
+	inmd_lot_expiry		-   Lot expiry time.
+	inmd_dflt_bom		-	Default BOM Number.
+	inmd_dflt_rtg		-	Default Routing Number.
+	inmd_eoq			-	Economic Order Quantity.
+}

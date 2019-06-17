@@ -1,0 +1,79 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcgl,v 5.2 2001/08/07 00:07:42 scott Exp $
+|  Schema Name  : (sch.pcgl)
+|  Schema Desc  : (General Ledger Manufacturing Transactions Work File)
+|----------------------------------------------------------------------
+| $Log: sch.pcgl,v $
+| Revision 5.2  2001/08/07 00:07:42  scott
+| RELEASE 5.0
+|
+|=====================================================================}
+file	pcgl
+
+field	pcgl_acc_no				type	char	16
+field	pcgl_co_no				type	char	2
+field	pcgl_est_no				type	char	2
+field	pcgl_acronym			type	char	9
+field	pcgl_name				type	char	30
+field	pcgl_chq_inv_no			type	char	15
+field	pcgl_ci_amt				type	money
+field	pcgl_o1_amt				type	money
+field	pcgl_o2_amt				type	money
+field	pcgl_o3_amt				type	money
+field	pcgl_o4_amt				type	money
+field	pcgl_hhgl_hash			type	long				index	dups
+field	pcgl_tran_type			type	char	2
+field	pcgl_sys_ref			type	char	10
+field	pcgl_batch_no			type	char	10
+field	pcgl_tran_date			type	edate
+field	pcgl_period_no			type	char	2
+field	pcgl_post_date			type	edate
+field	pcgl_narrative			type	char	20			index	dups
+field	pcgl_alt_desc1			type	char	20
+field	pcgl_alt_desc2			type	char	20
+field	pcgl_alt_desc3			type	char	20
+field	pcgl_user_ref			type	char	15			index	dups
+field	pcgl_amount				type	money
+field	pcgl_loc_amount			type	money
+field	pcgl_jnl_type			type	char	1
+field	pcgl_currency 			type	char	3
+field	pcgl_exch_rate			type	double     
+field	pcgl_stat_flag			type	char	1
+field	pcgl_run_no				type	char	10
+field	pcgl_id_no				type	composite
+			pcgl_tran_type,
+			pcgl_sys_ref									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pcgl_acc_no			-	General Ledger Account Number.
+	pcgl_co_no			-	Company Number.
+	pcgl_est_no			-	Branch / Establishment No.
+	pcgl_acronym		-	Acronym.
+	pcgl_name			-	Name.
+	pcgl_chq_inv_no		-	Cheque/Invoice No.
+	pcgl_ci_amt			-	Total Amount.
+	pcgl_o1_amt			-	Other 1.
+	pcgl_o2_amt			-	Other 2.
+	pcgl_o3_amt			-	Other 3.
+	pcgl_o4_amt			-	Other 4.
+	pcgl_hhgl_hash		-	Link gl Master file	( glmr ).
+	pcgl_tran_type		-	Transaction type	( ex gljc )
+	pcgl_sys_ref		-	System Ref. ( starts with terminal # )
+	pcgl_tran_date		-	Transaction Date.
+	pcgl_period_no		-	Period No.
+	pcgl_post_date		-	Post Date.
+	pcgl_narrative		-	Narrative.
+	pcgl_user_ref		-	User Ref.
+	pcgl_amount			-	Amount.
+	pcgl_loc_amount		-	Amount of transaction after conversion to local.
+	pcgl_jnl_type		-	Journal Type.
+	pcgl_currency 	    -	Currency code of orig. amount
+	pcgl_exch_rate		-   Exchange rate for the currency.	
+	pcgl_stat_flag		-	Status Flag. 
+}

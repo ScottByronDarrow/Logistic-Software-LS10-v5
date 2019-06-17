@@ -1,0 +1,123 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.suin,v 5.1 2001/08/07 00:07:43 scott Exp $
+|  Schema Name  : (sch.suin)
+|  Schema Desc  : (Creditors Invoice File. )
+|----------------------------------------------------------------------
+| $Log: sch.suin,v $
+| Revision 5.1  2001/08/07 00:07:43  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:49  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file suin
+
+field	suin_hhsu_hash      type	long				index	dups
+field	suin_hhsi_hash      type	serial				index
+field	suin_type           type	char	1
+field	suin_est            type	char	2			index	dups
+field	suin_inv_no         type	char	15			index	dups
+field	suin_narrative      type	char	20
+field	suin_date_of_inv    type	edate
+field	suin_date_posted    type	edate
+field	suin_pay_date       type	edate
+field	suin_gl_date        type	edate
+field	suin_gst            type	money
+field	suin_amt            type	money
+field	suin_pay_amt        type	money
+field	suin_amt_paid       type	money
+field	suin_hold_reason    type	char	3
+field	suin_cus_po_no      type	char	15			index	dups
+field	suin_currency       type	char	3
+field	suin_exch_rate      type	double
+field	suin_er_fixed       type	char	1
+field	suin_destin         type	char	20
+field	suin_approved       type	char	1
+field	suin_rec_type       type	char	1
+field	suin_cst_type       type	integer
+field	suin_doc_no         type	char	15 
+field	suin_stat_flag      type	char	1
+field	suin_pay_voucher    type	char	1
+field	suin_tax_code1      type	char	2
+field	suin_tax_code2      type	char	2
+field	suin_tax_code3      type	char	2
+field	suin_tax_code4      type	char	2
+field	suin_tax_code5      type	char	2
+field	suin_tax_amnt1      type	money
+field	suin_tax_amnt2      type	money
+field	suin_tax_amnt3      type	money
+field	suin_tax_amnt4      type	money
+field	suin_tax_amnt5      type	money
+field	suin_tax_val1       type	money
+field	suin_tax_val2       type	money
+field	suin_tax_val3       type	money
+field	suin_tax_val4       type	money
+field	suin_tax_val5       type	money
+field	suin_cron           type	composite
+			suin_hhsu_hash,
+			suin_date_of_inv						index	dups
+field	suin_id_no          type	composite
+			suin_hhsu_hash,
+			suin_est,
+			suin_inv_no								index
+field	suin_id_no2         type	composite
+			suin_hhsu_hash,
+			suin_inv_no								index
+field	suin_im_id          type	composite
+			suin_rec_type,
+			suin_doc_no								index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	suin_hhsu_hash		-	Link to supplier master file ( sumr )
+	suin_hhsi_hash		-	Unique Serial Hash.
+	suin_type			-	Transaction Type.
+					   			1 = Invoice.
+					   			2 = Credit.
+					   			3 = Journal.
+	suin_est			-	Branch / Establishment.
+	suin_inv_no			-	Invoice No.
+	suin_narrative		-	Narrative.
+	suin_date_of_inv	-	Date of Invoice.
+	suin_date_posted	-	Date posted.
+	suin_pay_date		-	Pay Date.
+	suin_gl_date		-	GL Date.
+	suin_gst			-	GST amount.
+	suin_amt			-	Amount of transaction.
+	suin_pay_amt		-	Amount to Pay on trancaction.
+	suin_amt_paid		-	Amount Already Paid.
+	suin_hold_reason	-	Hold Reason code.
+	suin_cus_po_no		-	Purchase order number.
+	suin_currency		-	Currency Code.
+	suin_exch_rate		-	Exchange rate.
+	suin_er_fixed		-	Fixed Exchange rate. Y(es) N(o).
+	suin_destin			-	Invoice to be Approved By.
+	suin_approved		-	Approved. Y(es) N(o).
+	suin_rec_type		-   Used in invoice matching.
+                              G(oods receipt number)
+                              P(urchase order number)
+                              S(hipment number)
+							  ' ' Not applicable.
+	suin_cst_type		-	Used in invoice matching.
+							0 = N/A 
+							1-9 = Standard cost analysis.
+
+	suin_doc_no			-	Document no.
+	suin_stat_flag		-	Spare status flag.
+	suin_tax_code1-5	-	Tax codes 1-5.
+	suin_tax_amnt1-5	-	Invoice amount being taxed 1-5.
+	suin_tax_val1-5		-	Actual tax amount 1-5.
+}

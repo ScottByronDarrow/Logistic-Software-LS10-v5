@@ -1,0 +1,34 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glis,v 5.1 2001/08/23 11:47:49 scott Exp $
+|  Schema Name  : (sch.glis)
+|  Schema Desc  : (General Ledger Integrity system control file.)
+|----------------------------------------------------------------------
+| $Log: sch.glis,v $
+| Revision 5.1  2001/08/23 11:47:49  scott
+| Updated from scotts machine
+|
+|=====================================================================}
+file glis 
+
+field	glis_co_no				type	char	2
+field	glis_code				type	char	10
+field	glis_desc				type	char	40
+field	glis_find_inf			type	char	10
+field	glis_use_inf			type	char	10
+field	glis_id_no				type	composite
+			glis_co_no,
+			glis_code,
+			glis_find_inf								index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glis_co_no			-		Company Number.
+	glis_code			-		Checking system code. 
+	glis_desc			-		Checking description. 
+	glis_find_inf		-		Find interface code.   
+	glis_use_inf		-		Use interface code.   
+}

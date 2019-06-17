@@ -1,0 +1,86 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:25 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:25  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_crd_date        
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_gl_ctrl_acct
+	field sumr_pay_terms
+	field sumr_mtd_exp
+	field sumr_ytd_exp
+	field sumr_bo_curr
+	field sumr_bo_per1
+	field sumr_bo_per2
+	field sumr_bo_per3
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_hhsi_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_narrative
+	field suin_date_of_inv
+	field suin_date_posted
+	field suin_pay_date
+	field suin_gst
+	field suin_amt
+	field suin_pay_amt
+	field suin_amt_paid
+	field suin_hold_reason
+	field suin_cus_po_no
+	field suin_currency
+	field suin_exch_rate
+	field suin_er_fixed
+	field suin_destin
+	field suin_approved
+	field suin_stat_flag
+end
+
+table wfbc
+	field wfbc_co_no
+	field wfbc_work_file
+	field wfbc_system
+	field wfbc_pid_no
+	field wfbc_date_create
+	field wfbc_batch_tot_1
+	field wfbc_stat_flag
+end
+

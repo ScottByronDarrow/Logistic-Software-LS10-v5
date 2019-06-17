@@ -1,0 +1,139 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.poln,v 5.2 2002/01/08 07:38:42 scott Exp $
+|  Schema Name  : (sch.poln)
+|  Schema Desc  : (Purchase order detail lines. )
+|----------------------------------------------------------------------
+| $Log: sch.poln,v $
+| Revision 5.2  2002/01/08 07:38:42  scott
+| Updated to add correct status flags
+|
+| Revision 5.1  2001/09/24 05:42:13  cha
+| Check in for Scott because of the changes
+| required to Number Plates.
+|
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:15  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.5  2001/03/08 10:15:55  scott
+| Updated to add poln_hhpl_orig to provide link from purchase return to
+| origional purchase order.
+|
+| Revision 3.4  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	poln	
+
+field	poln_hhpo_hash			type	long					index	dups
+field	poln_line_no			type	int
+field	poln_hhbr_hash			type	long					index	dups
+field	poln_hhum_hash			type	long
+field	poln_hhcc_hash			type	long
+field	poln_hhlc_hash			type	long
+field	poln_hhpl_hash			type	serial					index	primary
+field	poln_hhpl_orig			type	long					index	dups
+field	poln_exch_rate			type	double
+field	poln_serial_no			type	char	25
+field	poln_container			type	char	15
+field	poln_cus_ord_ref		type	char	20				index	dups
+field	poln_qty_ord			type	float
+field	poln_qty_rec			type	float
+field	poln_pack_qty			type	float
+field	poln_chg_wgt			type	float
+field	poln_gross_wgt			type	float
+field	poln_cu_metre			type	float
+field	poln_reg_pc				type	float
+field	poln_disc_a				type	float
+field	poln_disc_b				type	float
+field	poln_disc_c				type	float
+field	poln_cumulative			type	int
+field	poln_grs_fgn_cst		type	double
+field	poln_fob_fgn_cst		type	double
+field	poln_fob_nor_cst		type	double
+field	poln_frt_ins_cst		type	double
+field	poln_duty				type	double
+field	poln_licence			type	double
+field	poln_lcost_load			type	double
+field	poln_land_cst			type	double
+field	poln_cat_code			type	char	11
+field	poln_item_desc			type	char	40
+field	poln_ship_no			type	long
+field	poln_case_no			type	int
+field	poln_hhso_hash			type	long
+field	poln_due_date			type	edate
+field	poln_fwd_date			type	edate
+field	poln_pur_status			type	char	1
+field	poln_status 			type	char	1
+field	poln_stat_flag			type	char	1
+field	poln_id_no				type	composite
+			poln_hhpo_hash,
+			poln_line_no										index	dups
+field	poln_id_no_2			type	composite
+			poln_hhbr_hash,
+			poln_hhpo_hash										index	dups
+field	poln_id_date			type	composite
+			poln_hhbr_hash,
+			poln_due_date										index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	poln_hhpo_hash		-	Link to Purchase order header ( pohr_hhpo_hash )
+	poln_line_no		-	Purchase order line number.
+	poln_hhbr_hash		-	Link to Item number ( inmr_hhbr_hash )
+	poln_hhum_hash		-	Link to Unit of Measure file (inum_hhum_hash)
+	poln_hhcc_hash		-	Link to Item Warehouse Record ( ccmr_hhcc_hash )
+	poln_hhlc_hash		-	Link to Licence control file. ( polc_hhlc_hash )
+	poln_hhpl_hash		-	Unique Serial Hash.
+	poln_exch_rate		-	Exchange Rate.
+	poln_serial_no		-	Serial Number.
+	poln_qty_ord		-	Quantity Ordered.
+	poln_qty_rec		-	Quantity Received.
+	poln_pack_qty		-	Package quantity
+	poln_chg_wgt		-	Charge weight
+	poln_gross_wgt		-	Gross weight
+	poln_cu_metre		-	Cubic Meters
+	poln_reg_pc			-	Regulatory Percent.
+	poln_disc_a			-	Discount percent A
+	poln_disc_b			-	Discount percent B
+	poln_disc_c			-	Discount percent C
+	poln_cumulative		-   Cumulative. 1 or TRUE = Discount are cumulative.
+	                                    0 or FALSE = Discount are absolute.
+	poln_grs_fgn_cst	-	FOB COST( FGN ) Gross before discounts etc.
+	poln_fob_fgn_cst	-	FOB COST( FGN ) Nett  after discounts etc.
+	poln_fob_nor_cst	-	FOB COST( LOCAL )
+	poln_frt_ins_cst	-	FREIGHT & INSURANCE COST.
+	poln_duty			-	DUTY AMOUNT.
+	poln_licence		-	LICENCE AMOUNT.
+	poln_lcost_load		-	LANDED COST LOADING.
+	poln_land_cst		-	LANDED COST.
+	poln_cat_code		-	Category Code.
+	poln_item_desc		-	Item Description.
+	poln_ship_no		-	Shipment number.
+	poln_case_no		-	Case Now.
+	poln_hhso_hash		-	Sales Order number.
+	poln_due_date		-	Due Date.
+	poln_fwd_date		-	Forward Date.
+	poln_pur_status		-	PO Purchase(completion) Status.
+	poln_status 		-	Purchase order Status
+							U - Unapproved
+							D - Deleted   
+							O - Open      
+							C - Confirmed 
+							c - costed.   
+							R - Receipted 
+							r - Receipted Over
+							T - Transmited
+							I - In Transit
+							H - Held Line 
+							X - Cancelled
+	poln_stat_flag		-	Spare Status flag.
+}

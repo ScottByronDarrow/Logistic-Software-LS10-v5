@@ -1,0 +1,129 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sadf,v 5.1 2001/08/07 00:07:42 scott Exp $
+|  Schema Name  : (sch.sadf)
+|  Schema Desc  : (Sales Analysis Detail file By Item/Customer. )
+|----------------------------------------------------------------------
+| $Log: sch.sadf,v $
+| Revision 5.1  2001/08/07 00:07:42  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:19  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sadf
+field	sadf_co_no          type	char 2
+field	sadf_br_no          type	char 2
+field	sadf_year           type	char 1
+field	sadf_hhbr_hash      type	long
+field	sadf_hhcu_hash      type	long
+field	sadf_qty_per1       type	float
+field	sadf_qty_per2       type	float
+field	sadf_qty_per3       type	float
+field	sadf_qty_per4       type	float
+field	sadf_qty_per5       type	float
+field	sadf_qty_per6       type	float
+field	sadf_qty_per7       type	float
+field	sadf_qty_per8       type	float
+field	sadf_qty_per9       type	float
+field	sadf_qty_per10      type	float
+field	sadf_qty_per11      type	float
+field	sadf_qty_per12      type	float
+field	sadf_qty_per13      type	float
+field	sadf_sal_per1       type	double
+field	sadf_sal_per2       type	double
+field	sadf_sal_per3       type	double
+field	sadf_sal_per4       type	double
+field	sadf_sal_per5       type	double
+field	sadf_sal_per6       type	double
+field	sadf_sal_per7       type	double
+field	sadf_sal_per8       type	double
+field	sadf_sal_per9       type	double
+field	sadf_sal_per10      type	double
+field	sadf_sal_per11      type	double
+field	sadf_sal_per12      type	double
+field	sadf_sal_per13      type	double
+field	sadf_cst_per1       type	double
+field	sadf_cst_per2       type	double
+field	sadf_cst_per3       type	double
+field	sadf_cst_per4       type	double
+field	sadf_cst_per5       type	double
+field	sadf_cst_per6       type	double
+field	sadf_cst_per7       type	double
+field	sadf_cst_per8       type	double
+field	sadf_cst_per9       type	double
+field	sadf_cst_per10      type	double
+field	sadf_cst_per11      type	double
+field	sadf_cst_per12      type	double
+field	sadf_cst_per13      type	double
+field	sadf_fri_per1       type	double
+field	sadf_fri_per2       type	double
+field	sadf_fri_per3       type	double
+field	sadf_fri_per4       type	double
+field	sadf_fri_per5       type	double
+field	sadf_fri_per6       type	double
+field	sadf_fri_per7       type	double
+field	sadf_fri_per8       type	double
+field	sadf_fri_per9       type	double
+field	sadf_fri_per10      type	double
+field	sadf_fri_per11      type	double
+field	sadf_fri_per12      type	double
+field	sadf_fri_per13      type	double
+field	sadf_sman           type	char 2
+field	sadf_area           type	char 2
+field	sadf_id_no          type	composite
+			sadf_co_no,
+			sadf_br_no,
+			sadf_year,
+			sadf_hhbr_hash,
+			sadf_hhcu_hash,
+			sadf_sman,
+			sadf_area									index
+field	sadf_id_no2         type	composite
+			sadf_co_no,
+			sadf_br_no,
+			sadf_year,
+			sadf_hhcu_hash,
+			sadf_hhbr_hash,
+			sadf_sman,
+			sadf_area									index
+field	sadf_id_no3         type	composite
+			sadf_hhcu_hash,
+			sadf_hhbr_hash								index	dups
+field	sadf_id_no4         type	composite
+			sadf_hhbr_hash,
+			sadf_hhcu_hash								index	dups
+field	sadf_id_no5			type	comp	
+			sadf_co_no,	
+			sadf_year,
+			sadf_br_no,
+			sadf_area,
+			sadf_hhbr_hash,
+			sadf_hhcu_hash								index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sadf_co_no			- Company number.
+	sadf_br_no			- Branch number.
+	sadf_year			- Year flag,
+							C-urrent, L-ast year.
+							c-urrent (Bonus), l-ast year (Bonus)
+	sadf_hhbr_hash		- Link to inmr.
+	sadf_hhcu_hash		- Link to cumr.
+	sadf_qty_per(1-12)	- Qty sold.
+	sadf_sal_per(1-12)	- Sales value ( each ) sold.
+	sadf_cst_per(1-12)	- Cost value  ( each ) sold.
+	sadf_sman			- Salesman number ( exsf ).
+	sadf_area			- Area Code, 	  ( exaf ).
+}

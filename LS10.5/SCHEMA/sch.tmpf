@@ -1,0 +1,37 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmpf,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.tmpf)
+|  Schema Desc  : (Tele-Marketing Position File. )
+|----------------------------------------------------------------------
+| $Log: sch.tmpf,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:34  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:52  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmpf
+
+field	tmpf_co_no			type	char	2
+field	tmpf_pos_code			type	char	3
+field	tmpf_pos_desc			type	char	20
+field	tmpf_id_no			type	composite
+		tmpf_co_no,
+		tmpf_pos_code					index	primary
+field	tmpf_stat_flag			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tmpf_co_no		-	Company number.
+	tmpf_pos_code		-	Position code.
+	tmpf_pos_desc		-	Position description.
+}

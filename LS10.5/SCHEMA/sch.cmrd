@@ -1,0 +1,92 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmrd,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cmrd)
+|  Schema Desc  : (Contract Management Requisition Detail File )
+|----------------------------------------------------------------------
+| $Log: sch.cmrd,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmrd
+
+field	cmrd_cmrd_hash			type	serial
+field	cmrd_hhrq_hash			type	long
+field	cmrd_line_no			type	int
+field	cmrd_hhcm_hash			type	long
+field	cmrd_hhbr_hash			type	long		index dups
+field	cmrd_hhcc_hash			type	long
+field	cmrd_hhum_hash			type	long
+field	cmrd_serial_no			type	char	25
+field	cmrd_cont_status		type	int	
+field	cmrd_location			type	char	10
+field	cmrd_qty_order			type	float
+field	cmrd_qty_border			type	float
+field	cmrd_qty_iss			type	float
+field	cmrd_cost				type	money
+field	cmrd_gsale_price		type	money
+field	cmrd_sale_price			type	money
+field	cmrd_disc_pc			type	float
+field	cmrd_reg_pc				type	float
+field	cmrd_disc_a				type	float
+field	cmrd_disc_b				type	float
+field	cmrd_disc_c				type	float
+field	cmrd_cumulative			type	int
+field	cmrd_due_date			type	edate
+field	cmrd_item_desc			type	char	40
+field	cmrd_stat_flag			type	char	1
+field	cmrd_id_no				type	composite
+			cmrd_hhrq_hash,
+			cmrd_line_no									index primary
+field	cmrd_id_no2				type	composite
+			cmrd_hhrq_hash,
+			cmrd_stat_flag									index dups
+		
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmrd_cmrd_hash		- 	Serial hash. 
+	cmrd_hhrq_hash		- 	link to cmrh
+	cmrd_line_no		- 	line number of requisiation item
+	cmrd_hhcm_hash		- 	link to cmcm
+	cmrd_hhbr_hash		- 	link to inmr
+	cmrd_hhcc_hash		- 	link to issuing WH incc
+	cmrd_hhum_hash		- 	link to UOM file.          
+	cmrd_serial_no		- 	Serial number if applicable
+	cmrd_cont_status	-	Contract status.
+								0 = No Contract applies.
+								1 = Contract applies no discounts.
+								2 = Contract applies, discounts allowed.
+	cmrd_location		- 	Location if applicable
+	cmrd_qty_order		- 	Qty left on order
+	cmrd_qty_border		- 	Qty left on backorder
+	cmrd_qty_iss		- 	Qty issued so far
+	cmrd_cost			- 	Unit cost
+	cmrd_gsale_price	-	Gross sales price each before reg pc.
+	cmrd_sale_price		- 	Unit sales price
+	cmrd_disc_pc		- 	Discount rate per line
+	cmrd_reg_pc			-	Regulatory percent.
+	cmrd_disc_a			-	Discount percent A.
+	cmrd_disc_b			-	Discount percent B.
+	cmrd_disc_c			-	Discount percent C.
+	cmrd_cumulative		-	Cumulative. 1 or TRUE Discounts are cumulative.
+	                 	-	            0 or FALSE	Discounts are absolute.
+	cmrd_due_date		- 	Same as cmrh due date
+	cmrd_item_desc		- 	Description from inmr
+	cmrd_stat_flag		- 	R = able to be released
+						- 	B)ackordered
+						- 	F)orward Ordered
+						- 	C)ompleted
+}

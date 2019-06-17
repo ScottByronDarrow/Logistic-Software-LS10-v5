@@ -1,0 +1,172 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:03 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:03  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/05/31 10:04:56  scott
+#	Updated to ensure works order and BOM are deleted
+#	
+#	Revision 4.0  2001/03/09 02:36:59  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:20:03  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 09:10:40  gerry
+#	Forced Revision No Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/06/08 08:07:57  scott
+#	Added new app.schema file.
+#	
+#
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_commodity
+	field inmr_class
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+	field inmr_quick_code
+	field inmr_abc_code
+	field inmr_grade
+	field inmr_abc_update
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_weight
+	field inmr_on_hand
+	field inmr_on_order
+	field inmr_committed
+	field inmr_backorder
+	field inmr_forward
+	field inmr_wo_qty_anti
+	field inmr_qc_qty
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_ex_code
+	field inmr_bo_flag
+	field inmr_bo_release
+	field inmr_sellgrp
+	field inmr_buygrp
+	field inmr_disc_pc
+	field inmr_gst_pc
+	field inmr_min_quan
+	field inmr_max_quan
+	field inmr_safety_stock
+	field inmr_licence
+	field inmr_duty
+	field inmr_duty_amt
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_outer_uom
+	field inmr_outer_size
+	field inmr_pc_off_trade
+	field inmr_scrap_pc
+	field inmr_tax_pc
+	field inmr_tax_amount
+	field inmr_ltd_sales
+	field inmr_active_status
+	field inmr_schg_flag
+	field inmr_dflt_bom
+	field inmr_dflt_rtg
+	field inmr_eoq
+	field inmr_qc_reqd
+	field inmr_stat_flag
+end
+
+table srsk
+	field srsk_co_no
+	field srsk_hhbr_hash
+	field srsk_item_no
+	field srsk_alpha_code
+	field srsk_alternate
+	field srsk_barcode
+	field srsk_maker_no
+	field srsk_description
+end
+
+table inex
+	field inex_hhbr_hash
+	field inex_line_no
+	field inex_desc
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+end
+
+table intr
+	field intr_hhbr_hash
+end
+
+table inis
+	field inis_hhbr_hash
+end
+
+table inad
+	field inad_hhwh_hash
+	field inad_lot_no
+end
+
+table inlo
+	field inlo_hhwh_hash
+end
+
+table inme
+	field inme_hhwh_hash
+end
+
+table inwu
+	field inwu_hhwh_hash
+	field inwu_hhum_hash
+end
+
+table sttf
+	field sttf_hhwh_hash
+	field sttf_location
+end
+
+table stts
+	field stts_hhwh_hash
+	field stts_serial_no
+end
+
+table insp
+	field insp_hhbr_hash
+end
+
+table bmms
+	field bmms_hhbr_hash      
+	field bmms_mabr_hash      
+end
+
+table pcms
+	field pcms_hhbr_hash      
+	field pcms_mabr_hash      
+end

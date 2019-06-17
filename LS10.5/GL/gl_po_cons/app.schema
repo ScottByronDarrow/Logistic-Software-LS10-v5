@@ -1,0 +1,117 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:53 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:53  scott
+#	Update - LS10.5
+#	
+#	Revision 5.0  2001/06/19 08:06:45  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:27:19  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.2  2001/02/15 09:41:33  scott
+#	Updated to add special mode for XML transmitions
+#	
+#	Revision 3.1  2000/11/20 07:23:39  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_cc_no
+	field comm_gl_date
+end
+
+table pogl
+	field pogl_hhgr_hash
+	field pogl_line_no
+	field pogl_hhbr_hash
+	field pogl_hhcc_hash
+	field pogl_po_number
+	field pogl_qty_ord
+	field pogl_qty_rec
+	field pogl_qty_left
+	field pogl_land_cst
+	field pogl_act_cst
+	field pogl_cat_code
+	field pogl_item_desc
+	field pogl_rec_date
+	field pogl_pur_status
+	field pogl_gl_status
+	field pogl_stat_flag
+end
+
+table pogh
+	field pogh_co_no
+	field pogh_br_no
+	field pogh_hhsu_hash
+	field pogh_hhsh_hash
+	field pogh_hhpo_hash
+	field pogh_gr_no
+	field pogh_pur_ord_no
+	field pogh_hhgr_hash
+	field pogh_rec_by
+	field pogh_cst_by
+	field pogh_pur_status
+	field pogh_gl_status
+	field pogh_drop_ship
+	field pogh_pid
+end
+
+table pohr
+	field pohr_hhpo_hash
+	field pohr_pur_ord_no
+	field pohr_stat_flag
+	field pohr_drop_ship
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_stat_flag
+end
+
+table powk
+	field powk_co_no
+	field powk_br_no
+	field powk_sort
+	field powk_dbt_acc
+	field powk_crd_acc
+	field powk_dbt_hash
+	field powk_crd_hash
+	field powk_amount
+	field powk_narrative
+	field powk_alt_desc1
+	field powk_alt_desc2
+	field powk_user_ref
+	field powk_stat_flag
+end
+
+table inmr
+	field inmr_hhbr_hash
+	field inmr_outer_size
+end
+
+table sumr
+	field sumr_crd_no
+	field sumr_hhsu_hash
+end
+
+table posh
+	field posh_co_no
+	field posh_hhsh_hash
+	field posh_csm_no
+end
+

@@ -1,0 +1,89 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.0 2001/06/19 08:16:25 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:16:25  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:37:41  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:40:12  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#	Revision 3.0  2000/10/10 12:20:27  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 09:11:08  gerry
+#	Forced Revision No Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/06/08 08:07:58  scott
+#	Added new app.schema file.
+#	
+#
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_cc_no
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+	field inmr_lot_ctrl
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+end
+
+table inlo
+	field inlo_inlo_hash      
+	field inlo_hhwh_hash      
+	field inlo_sknd_hash      
+	field inlo_hhum_hash      
+	field inlo_location       
+	field inlo_loc_type       
+	field inlo_loc_status     
+	field inlo_lot_no         
+	field inlo_slot_no        
+	field inlo_expiry_date    
+	field inlo_pack_qty       
+	field inlo_chg_wgt        
+	field inlo_gross_wgt      
+	field inlo_cu_metre       
+	field inlo_uom            
+	field inlo_cnv_fct        
+	field inlo_rec_qty        
+	field inlo_qty            
+	field inlo_stake          
+	field inlo_no_hits        
+	field inlo_no_picks       
+	field inlo_op_id          
+	field inlo_time_create    
+	field inlo_date_upd       
+	field inlo_date_create    
+end

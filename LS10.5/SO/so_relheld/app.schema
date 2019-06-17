@@ -1,0 +1,119 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.2 2001/10/23 07:16:45 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.2  2001/10/23 07:16:45  scott
+#	Updated to check and correct rounding.
+#	Changes to ensure ALL inputs and reports round the same way.
+#	
+#	Revision 5.1  2001/07/25 02:20:03  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_crd_date
+	field comm_inv_date
+	field comm_fiscal
+end
+
+table comr
+	field comr_co_no
+	field comr_pay_terms
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_dt_required
+	field sohr_tax_code
+	field sohr_two_step
+	field sohr_status
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_serial_no
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_sale_price
+	field soln_item_levy
+	field soln_dis_pc
+	field soln_tax_pc
+	field soln_gst_pc
+	field soln_bonus_flag
+	field soln_status
+	field soln_stat_flag
+end
+
+table inmr
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_outer_size
+	field inmr_tax_amount
+	field inmr_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_payment_flag
+	field cumr_contact_name
+	field cumr_phone_no
+	field cumr_stop_credit
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_credit_ref
+	field cumr_area_code
+	field cumr_sman_code
+	field cumr_tax_code
+	field cumr_mtd_sales
+	field cumr_ytd_sales
+	field cumr_ord_value
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+end
+
+table cusa
+	field cusa_hhcu_hash
+	field cusa_year
+	field cusa_val1
+	field cusa_val2
+	field cusa_val3
+	field cusa_val4
+	field cusa_val5
+	field cusa_val6
+	field cusa_val7
+	field cusa_val8
+	field cusa_val9
+	field cusa_val10
+	field cusa_val11
+	field cusa_val12
+end
+
+table incc
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+end

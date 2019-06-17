@@ -1,0 +1,24 @@
+Fixed Asset Menu (FAMR)
+fasset_help
+Accounting Menu <a> (1,2)
+menu MENUSYS/main_acct.mdf
+Maintain Fixed Asset Groups. <a> (1,2)
+fa_group~
+Maintain Fixed Assets. <a> (1,2)
+fa_maint~
+Enter Disposals. <a> (1,2)
+fa_sale~
+Display Individual Asset. <a> (2,2)
+fa_display~
+Month-End Processing. <a> (2,2)
+lp_chain~warning "Fixed Assets Month End Close"~fa_mend LPNO~
+Internal Fixed Asset. >> <a> (2, 2)
+pmenu MENUSYS/SUB_MENU/fa_internal.mdf
+Tax Fixed Asset. >> <a> (2, 2)
+pmenu MENUSYS/SUB_MENU/fa_tax.mdf
+((
+quadrant(10,6)
+quadrant(46, 6)
+box(1,3,76,14)
+line(2,5,75)
+))

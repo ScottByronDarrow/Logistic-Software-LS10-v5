@@ -1,0 +1,63 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:45:25 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:45:25  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table innh
+	field innh_co_no
+	field innh_hhbr_hash
+	field innh_hhwh_hash
+	field innh_hhnh_hash
+	field innh_serial_no
+	field innh_stat_flag
+end
+
+table innd
+	field innd_hhnh_hash
+	field innd_line_no
+	field innd_comments
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+	field inmr_abc_code
+	field inmr_serial_item
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+end

@@ -1,0 +1,24 @@
+Stock-Take Sheet Print Menu (SKSH)
+sk_stake
+Stock Take Master Menu. <a> (1,1)
+menu MENUSYS/sk_st_mst.mdf
+Print Stock Take Sheets By Item. <a> (1,1)
+sk_nst_sel~sk_nst_prt~I~
+Print Stock Take Sheets By Product Group. <a> (1,1)
+sk_nst_sel~sk_nst_prt~G~
+Print Stock Take Sheets By Location. <a> (1,1)
+sk_nst_sel~sk_nst_prt~L~
+Print Stock Take Sheets By ABC Code. <a> (1,1)
+sk_nst_sel~sk_nst_prt~A~
+Print Serial Sheets By Item          [Show  Serial Nos]. <a> (1,1)
+sk_nst_sel~sk_st_ssprt~I~
+Print Serial Sheets By Product Group [Show  Serial Nos]. <a> (1,1)
+sk_nst_sel~sk_st_ssprt~G~
+Print Serial Sheets By Item          [Blank Serial Nos]. <a> (1,1)
+sk_nst_sel~sk_st_sprt~I~
+Print Serial Sheets By Product Group [Blank Serial Nos]. <a> (1,1)
+sk_nst_sel~sk_st_sprt~G~
+Print stock expiry date report. <a> (1,1)
+sk_nst_sel~sk_st_rep~G~
+((
+))

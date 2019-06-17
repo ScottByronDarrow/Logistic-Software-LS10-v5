@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glid,v 5.1 2001/07/25 01:15:51 scott Exp $
+|  Schema Name  : (sch.glid)
+|  Schema Desc  : (General Ledger Interface Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.glid,v $
+| Revision 5.1  2001/07/25 01:15:51  scott
+| Updated for LS10.5
+|
+| Revision 4.0  2001/03/09 01:00:42  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file glid 
+
+field	glid_hhih_hash              type	long			index	dups 
+field	glid_br_no                  type	char	2
+field 	glid_wh_no					type	char	2
+field	glid_acct_no				type	char	16		index	dups
+field	glid_id_no                   type  composite 
+			glid_hhih_hash, 
+			glid_br_no,
+			glid_wh_no				index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glid_co_no				-	Link to Interface Header File.
+	glid_br_no				-	Branch Number.
+	glid_wh_no				-	Warehouse Number.
+	glid_acct_no  			-	General ledger account no.
+}

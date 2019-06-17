@@ -1,0 +1,14 @@
+Customer Labels Sub Menu (ARLA)
+db_labels
+Customers Maintenance Menu. <a> (1,2)
+menu MENUSYS/db_maint.mdf
+Maintain Label Definition. <a> (1,1)
+psl_labels~C~
+Print Labels. <a> (1,2)
+psl_lbl_prt~C~
+((
+quadrant(7,6)
+quadrant(46,8)
+box(2,3,74,14)
+line(3,5,73)
+))

@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmud,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.tmud)
+|  Schema Desc  : (Tele-Marketing User defined prompts. )
+|----------------------------------------------------------------------
+| $Log: sch.tmud,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:35  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:53  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmud
+
+field	tmud_co_no			type	char	2
+field	tmud_line_no			type	int
+field	tmud_prmpt_desc			type	char	14
+field	tmud_id_no			type	composite
+		tmud_co_no,
+		tmud_line_no					index	primary
+field	tmud_stat_flag			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tmud_co_no		-	Company number.
+	tmud_line_no		-	line number.
+	tmud_prmpt_desc		-	Prompt description
+	tmud_stat_flag		-	Spare status flag.
+}

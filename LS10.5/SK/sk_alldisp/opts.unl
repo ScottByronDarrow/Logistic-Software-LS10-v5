@@ -1,0 +1,63 @@
+*|sk_alldisp|1|<S1>|Y|Select display of Popup Window One.|
+*|sk_alldisp|2|<S2>|Y|Select display of Popup Window two.|
+*|sk_alldisp|3|<S3>|Y|Select display of Popup Window three.|
+*|sk_alldisp|4|<S4>|Y|Select display of Popup Window four.|
+*|sk_alldisp|5|<S5>|Y|Select display of Popup Window five.|
+*|sk_alldisp|6|<S6>|Y|Select display of Popup Window six.|
+*|sk_alldisp|7|<S7>|Y|Select display of Popup Window six.|
+*|sk_alldisp|8|<Movements>|Y|Display Inventory Movements.|
+*|sk_alldisp|9|<Branch Status>|Y|Display Branch Status.|
+*|sk_alldisp|10|<MEND Movements>|Y|Display Month end Inventory Movements.|
+*|sk_alldisp|11|<UOM SOH>|Y|Display UOM stock on hand.|
+*|sk_alldisp|12|<Standard Pricing>|Y|Display Item Pricing.|
+*|sk_alldisp|13|<Special Pricing>|Y|Display Special Pricing.|
+*|sk_alldisp|14|<Sales Orders>|Y|Display Sales Orders.|
+*|sk_alldisp|15|<Back Orders>|Y|Display Backorders.|
+*|sk_alldisp|16|<Purchase Orders>|Y|Display Purchase Orders.|
+*|sk_alldisp|17|<Shipments>|Y|Display Shipments.|
+*|sk_alldisp|18|<Purchase Orders DD>|Y|Display Purchase Orders for Direct Deliveries.|
+*|sk_alldisp|19|<Purchase History>|Y|Display Purchase Orders History.|
+*|sk_alldisp|20|<Supplier Records>|Y|Display Supplier Records.|
+*|sk_alldisp|21|<Supply Warehouses>|Y|Display Supply Warehouses.|
+*|sk_alldisp|22|<Global Supply Warehouses>|Y|Display Global Warehouses.|
+*|sk_alldisp|23|<Forward Schedule>|Y|Display Forward Schedule.|
+*|sk_alldisp|24|<Reorder Review>|Y|Display Reorder Review.|
+*|sk_alldisp|25|<Formula Statistics>|Y|Display Formula Statistics information.|
+*|sk_alldisp|26|<Graph Demand>|Y|Display Reorder Demand.|
+*|sk_alldisp|27|<Graph-This/last year>|Y|Grahical Display of This years Ver Last years Sales History|
+*|sk_alldisp|28|<Graph-24 Months>|Y|Grahical Display of 24 months Sales History.|
+*|sk_alldisp|29|<Graph-Sales/Profits>|Y|Grahical Display of Sales ver Profits.|
+*|sk_alldisp|30|<In-Trans Stock>|Y|Display Stock In Transit.|
+*|sk_alldisp|31|<Transfer Requests>|Y|Display Stock Transfer Requests.|
+*|sk_alldisp|32|<FIFO Records>|Y|Display FIFO Records.|
+*|sk_alldisp|33|<Location/Lot Records>|Y|Display Location/Lot Records.|
+*|sk_alldisp|34|<Batch History>|Y|Display Lot History Records.|
+*|sk_alldisp|35|<Number Plate>|Y|Display Number Plate Details.|
+*|sk_alldisp|36|<Serial Records>|Y|Display Serial Numbers.|
+*|sk_alldisp|37|<Item Note Pad>|Y|Display Inventory Item Internal Note Pad.|
+*|sk_alldisp|38|<Maintain Item Note Pad>|Y|Maintain Inventory Item Internal Note Pad.|
+*|sk_alldisp|39|<Display Item Descriptions>|Y|Display Inventory Item Descriptions.|
+*|sk_alldisp|40|<Maintain Item Descriptions>|Y|Maintain Inventory Item Descriptions.|
+*|sk_alldisp|41|<Display Bar Codes>|Y|Display Item Bar Codes.  [ B ]|
+*|sk_alldisp|42|<Item User Defined Fields>|Y|Display Item User Defined Information. [ I ]|
+*|sk_alldisp|43|<User Defined Fields>|Y|Display User Defined Information. [ U ]|
+*|sk_alldisp|44|<Outlet Inventory>|Y|Display Outlet Inventory. [ O ]|
+*|sk_alldisp|45|<Royalty>|Y|Display Royalties.|
+*|sk_alldisp|46|<Trans - All>|Y|Display All Inventory Transactions.|
+*|sk_alldisp|47|<Trans - P/Orders>|Y|Display Inventory transactions for P/orders.|
+*|sk_alldisp|48|<Trans - Iss/Rec>|Y|Display Inventory transactions for Issues/Receipts.|
+*|sk_alldisp|49|<Trans - Inv/Crd>|Y|Display Inventory transactions for Invoices/Credits.|
+*|sk_alldisp|50|<Trans - Stock Adj>|Y|Display Inventory transactions for Stock Adjustments.|
+*|sk_alldisp|51|<Trans - Dir-Del>|Y|Display Inventory transactions for Direct Deliveries.|
+*|sk_alldisp|52|<Month Disp>|Y|Display Inventory transactions by Month [ M ]|
+*|sk_alldisp|53|<Requisitions>|Y|Display Requisitions.|
+*|sk_alldisp|54|<Backorder Requisitions>|Y|Display Backorder Requisitions.|
+*|sk_alldisp|55|<Forward Requisitions>|Y|Display Forward Requisitions.|
+*|sk_alldisp|56|<Works Orders>|Y|Displays Works Orders for this Manufactured Item and Where U|
+*|sk_alldisp|57|<W/O Mfg Item>|Y|Displays Works Orders for this Manufactured Item.|
+*|sk_alldisp|58|<W/O Where Used>|Y|Display Works Orders that use this Component Item.|
+*|sk_alldisp|59|<Pre-Released QC Records>|Y|Display Pre-Released QC Retreival Records.|
+*|sk_alldisp|60|<Released QC Records>|Y|Display Released QC Retreival Records|
+*|sk_alldisp|61|<Sales History>|Y|Display Sales History.|
+*|sk_alldisp|62|<Company>|Y|Display by Company.|
+*|sk_alldisp|63|<Warehouse>|Y|Display by Warehouse.|

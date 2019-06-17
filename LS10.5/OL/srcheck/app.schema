@@ -1,0 +1,26 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:09:57 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:09:57  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/04/06 06:42:35  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+#
+#
+
+table essr
+	field essr_co_no
+	field essr_est_no
+	field essr_op_id
+	field essr_op_passwd
+	field essr_op_name
+	field essr_short_id
+	field essr_sec_level
+end
+

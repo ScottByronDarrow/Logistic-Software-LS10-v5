@@ -1,0 +1,10 @@
+Mail System Administration. (SUB)
+mail
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Maintain Mail Groups. <a> (1,1)
+psl_grp_mnt~
+Mail administration. <a> (1,1)
+psl_admail~
+((
+))

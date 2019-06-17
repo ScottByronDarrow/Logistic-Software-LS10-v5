@@ -1,0 +1,50 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pogf,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pogf)
+|  Schema Desc  : (Purchase Order / General ledger Control File. )
+|----------------------------------------------------------------------
+| $Log: sch.pogf,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:11  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:41  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pogf	
+
+field	pogf_gr_no			type	long
+field	pogf_po_no			type	char	15
+field	pogf_line_no		type	int
+field	pogf_hhbr_hash		type	long
+field	pogf_hhcc_hash		type	long
+field	pogf_qty     		type	float
+field	pogf_loc_cost		type	double
+field	pogf_status			type	char	1
+field	pogf_stat_flag		type	char	1
+field	pogf_id_no			type	composite
+			pogf_gr_no,
+			pogf_po_no,
+			pogf_line_no					index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pogf_gr_no	 		- Goods receipt Number.
+	pogf_po_no			- Purchase Order Number.
+	pogf_line_no		- Line Number.
+	pogf_hhbr_hash		- Product hash.
+	pogf_hhcc_hash		- Warehouse Hash.
+	pogf_qty			- Quantity Rec.
+	pogf_loc_cost		- Local Cost.
+	pogf_status			- Status.	U(pdate) D(etete).
+	pogf_stat_flag		- Stat Flag	(Spare) .
+}

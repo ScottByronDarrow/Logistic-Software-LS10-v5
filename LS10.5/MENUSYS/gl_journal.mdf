@@ -1,0 +1,22 @@
+General Ledger Journal Menu (GLJL)
+gl_help
+General Ledger Master Menu. <a> (1,2)
+menu MENUSYS/gl_master.mdf
+Batch Journal - Maintenance. <a> (1,1)
+lp_chain~gl_batch LPNO~
+Batch Journal - Enquiry. <a> (1,1)
+gl_batch_disp~
+Batch Journal - Printing. <a> (1,1)
+lp_chain~gl_batch_list LPNO~
+Batch Journal - Posting. <a> (1,2)
+lp_chain~gl_postbat PID LPNO~
+Batch Journal - Void. <a> (1,2)
+lp_chain~gl_batchVoid PID LPNO~
+Input Allocation Codes. <a> (1,2)
+gl_alloc~
+((
+quadrant(17,6)
+quadrant(12,8)
+box(12,3,54,12)
+line(13,5,53)
+))

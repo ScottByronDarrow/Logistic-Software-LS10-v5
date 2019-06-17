@@ -1,0 +1,68 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.polh,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.polh)
+|  Schema Desc  : (Purchase order licence control. )
+|----------------------------------------------------------------------
+| $Log: sch.polh,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.1  2001/03/22 06:58:10  scott
+| Cleanup only, no changes to fields.
+|
+| Revision 4.0  2001/03/09 01:01:15  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+
+file	polh	
+
+field	polh_co_no				type	char	2
+field	polh_est_no				type	char	2
+field	polh_lic_cate			type	char	2
+field	polh_lic_no				type	char	10
+field	polh_hhlc_hash			type	serial				index
+field	polh_lic_area			type	char	10
+field	polh_lic_val			type	double
+field	polh_tender_rate		type	float
+field	polh_ap_lic_rate		type	float
+field	polh_type				type	char	20
+field	polh_from_date			type	edate
+field	polh_to_date			type	edate
+field	polh_tot_alloc			type	double
+field	polh_comment_1			type	char	50
+field	polh_comment_2			type	char	50
+field	polh_comment_3			type	char	50
+field	polh_id_no				type	composite
+			polh_co_no,
+			polh_est_no,
+			polh_lic_cate,
+			polh_lic_no										index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	polh_co_no			-	Company number.
+	polh_est_no			-	Branch / establishment No.
+	polh_lic_cate		-	Licence Category.
+	polh_lic_no			-	Licence number.
+	polh_hhlc_hash		-	Unique licence hash.
+	polh_lic_area		-	Licence Area.
+	polh_lic_val		-	Licence Value.
+	polh_tender_rate	-	Tender rate.
+	polh_ap_lic_rate	- 	Applied Licence Rate.
+	polh_type			-	Licence type.
+	polh_from_date		-	Licence effective from Date.
+	polh_to_date		-	Licence effective to Date.
+	polh_tot_alloc		-	Total allocation amoumt
+	polh_comment_1		-	Comments Part 1
+	polh_comment_2		-	Comments Part 2
+	polh_comment_3		-	Comments Part 3
+}

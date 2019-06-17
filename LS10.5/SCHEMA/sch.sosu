@@ -1,0 +1,41 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sosu,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.sosu)
+|  Schema Desc  : (Packing Slip Summary Picking Chart. )
+|----------------------------------------------------------------------
+| $Log: sch.sosu,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:48  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sosu 
+
+field	sosu_type				type	char 1
+field	sosu_pid				type	int
+field	sosu_hhcl_hash			type	long
+field	sosu_id_no				type	composite
+						sosu_type,
+						sosu_pid,
+						sosu_hhcl_hash	index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sosu_type			-	Either S (single) or M (multiple)
+	sosu_pid			-	If the sosu_type is S then this is the PID of the
+							Packing Slip program.
+							If the sosu_type is M then this is the Parent PID 
+							of the Packing Slip program.
+	sosu_hhcl_hash		-	Link to coln ( coln_hhcl_hash )
+}

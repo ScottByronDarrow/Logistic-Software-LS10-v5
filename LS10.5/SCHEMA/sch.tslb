@@ -1,0 +1,60 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tslb,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.tslb)
+|  Schema Desc  : (Tele-Sales Letters Sent History file. )
+|----------------------------------------------------------------------
+| $Log: sch.tslb,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:36  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tslb
+
+field	tslb_co_no			type	char	2
+field	tslb_operator			type	char	14
+field	tslb_hhlb_hash			type	serial		index	primary
+field	tslb_hhcu_hash			type	long		index	dups
+field	tslb_hhlh_hash			type	long
+field	tslb_date_sent			type	edate
+field	tslb_time_sent			type	long
+field	tslb_label_prt			type	char	1
+field	tslb_stat_flag			type	char	1
+
+field	tslb_id_no			type	composite
+		tslb_hhcu_hash,
+		tslb_hhlh_hash,
+		tslb_date_sent,
+		tslb_time_sent					index	dups
+
+field	tslb_id_no3			type	composite
+		tslb_co_no,
+		tslb_operator,
+		tslb_label_prt,
+		tslb_date_sent,
+		tslb_time_sent,
+		tslb_hhcu_hash					index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tslb_co_no		-	Company number.
+	tslb_hhlb_hash		-	Unique serial field.       
+	tslb_hhcu_hash		-	Link to debtor master file.
+	tslb_hhlh_hash		-	Link to letter header file.
+	tslb_date_sent		-	Date letter was sent.      
+	tslb_date_sent		-	Time letter was sent.      
+	tslb_label_prt		-   	Label printed (Y/N).
+	tslb_stat_flag		-	Spare stat_flag. 
+}

@@ -1,0 +1,22 @@
+Bill Of Materials Displays Menu. (BOMDS)
+bom_help
+Manufacturing Master Menu. <a> (1,2)
+menu MENUSYS/main_manf.mdf
+Display Detailed Material Specification. <a> (1,2)
+bm_muse_dsp~D~
+Display Summary Material Specification. <a> (1,2)
+bm_muse_dsp~S~
+Material Where Used Display. <a> (1,2)
+bm_wuse_dsp~
+Display Product Alternates. <a> (1,2)
+sk_alt_dsp~
+Display Master Instructions. <a> (1,2)
+pc_inst_dsp~M~
+Display Product Instructions. <a> (1,2)
+pc_inst_dsp~D~
+((
+quadrant(20,6)
+quadrant(7,13)
+box(13,3,50,15)
+line(14,5,49)
+))

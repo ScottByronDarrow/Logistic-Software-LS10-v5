@@ -1,0 +1,50 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.bkhs,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.bkhs)
+|  Schema Desc  : (System Backup History File. )
+|----------------------------------------------------------------------
+| $Log: sch.bkhs,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:23  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file    bkhs
+
+field   bkhs_type               type    char    1
+field   bkhs_date               type    edate
+field   bkhs_time               type    long
+field   bkhs_user               type    char    16
+field   bkhs_tape_no            type    int
+field   bkhs_hhct_hash          type    long
+field   bkhs_id_no              type    composite
+			bkhs_type,
+			bkhs_date,
+			bkhs_time										index   primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+        bkhs_type               - Type D(aily)
+                                       W(eekly)
+                                       M(onthly)
+                                       S(pecial)
+                                       Y(ear end)
+
+        bkhs_date               - Date DD/MM/YY
+        bkhs_time               - Held in long format (from time())
+        bkhs_user               - User name.
+        bkhs_tape_no            - Tape number.
+        bkhs_hhct_hash          - link to bkct file.
+}

@@ -1,0 +1,63 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cncd,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cncd)
+|  Schema Desc  : (Debtors Contract detail lines. )
+|----------------------------------------------------------------------
+| $Log: sch.cncd,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cncd	
+
+field	cncd_hhch_hash			type	long			index	dups
+field	cncd_line_no			type	int
+field	cncd_hhbr_hash			type	long			index	dups
+field	cncd_hhcc_hash			type	long
+field	cncd_hhsu_hash			type	long
+field	cncd_hhcl_hash			type	serial			index	
+field	cncd_price				type	money
+field	cncd_curr_code			type	char	3
+field	cncd_disc_ok			type	char	1
+field	cncd_cost				type	money
+field	cncd_id_no				type	composite
+			cncd_hhch_hash,
+			cncd_line_no								index	primary
+field	cncd_id_no2				type	composite
+			cncd_hhch_hash,
+			cncd_hhbr_hash,
+			cncd_curr_code								index	
+field	cncd_id_no3				type	composite
+			cncd_hhch_hash,
+			cncd_curr_code								index	dups
+	
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+		cncd_hhch_hash			-	Link to contract header (hhch).
+		cncd_line_no			-	Detail line number.
+		cncd_id_no				-	primary index (cnch_hash, line_no).
+		cncd_hhbr_hash			-	Link to inventory master (inmr).
+		cncd_hhcc_hash			-	Link to warehouse master (ccmr).
+		cncd_hhsu_hash			-	Link to supplier master (sumr).
+		cncd_hhcl_hash			-	Unique hash for detail record.	
+		cncd_price				-	Contract Price.
+		cncd_curr_code			-	Currency for contract price.
+		cncd_disc_ok			-	Further discounts allowed?
+		cncd_cost				-	Contract cost from supplier. (Suppliers Cur)
+		cncd_id_no2				-	Index on hhch_hash, hhbr_hash, curr_code.
+		cncd_id_no3				-	Index on hhch_hash, curr_code.
+}

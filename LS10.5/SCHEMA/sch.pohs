@@ -1,0 +1,64 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pohs,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pohs)
+|  Schema Desc  : (Purchase Order HiStory file. )
+|----------------------------------------------------------------------
+| $Log: sch.pohs,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:15  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pohs
+
+field	pohs_co_no				type	char	2
+field	pohs_br_no				type	char	2
+field	pohs_gr_no				type	char	15
+field	pohs_hhsu_hash			type	long
+field	pohs_pur_ord_no			type	char	15
+field	pohs_date_receipt		type	edate
+field	pohs_date_cost			type	edate
+field	pohs_est_cost			type	double
+field	pohs_act_cost			type	double
+field	pohs_prc_var			type	double
+field	pohs_qty_var			type	double
+field	pohs_printed			type	char	1
+field	pohs_stat_flag			type	char	1
+field	pohs_id_no				type	composite
+			pohs_co_no,
+			pohs_br_no,
+			pohs_gr_no,
+			pohs_hhsu_hash								index
+field	pohs_id_no2				type	comp
+			pohs_co_no,
+			pohs_br_no,
+			pohs_stat_flag								index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pohs_co_no			-	Company Number.
+	pohs_br_no			-	Branch Number.
+	pohs_gr_no			-	Goods Receipt number.
+	pohs_hhsu_hash		-	Link to Supplier master file	(sumr)
+	pohs_pur_ord_no		-	Purchase order number.
+	pohs_date_receipted	-	Date receipted.
+	pohs_date_costed	-	Date costed.
+	pohs_est_cost		-	Estimated Aggregate Cost
+	pohs_act_cost		-	Actual Aggregate Cost
+	pohs_prc_var		-	Price variance
+	pohs_qty_var		-	Quantity variance
+	pohs_printed		-	Y or N
+	pohs_stat_flag		-	R - Receipted
+						-	C - Costed
+}

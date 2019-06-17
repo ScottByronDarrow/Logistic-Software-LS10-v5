@@ -1,0 +1,51 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.essr,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.essr)
+|  Schema Desc  : (Establishment/Branch Security Record. )
+|----------------------------------------------------------------------
+| $Log: sch.essr,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.1  2001/04/19 12:53:17  scott
+| Updated for program descriptions
+|
+| Revision 4.0  2001/03/09 01:00:32  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file essr
+
+field	essr_co_no				type	char	2			index	dups
+field	essr_est_no				type	char	2			index	dups
+field	essr_op_id				type	char	14			index	dups
+field	essr_op_passwd			type	char	13
+field	essr_op_name			type	char	40
+field	essr_short_id			type	char	2
+field	essr_sec_level			type	integer
+field	essr_id_no				type	comp	
+			essr_co_no,
+			essr_est_no,
+			essr_op_id										index
+field	essr_pass_no			type	comp
+			essr_co_no,
+			essr_est_no,
+			essr_op_passwd									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	essr_co_no		-	Company number.
+	essr_est_no		-	Branch number.
+	essr_op_passwd		-	Operator password.
+	essr_op_name		-	Operator Name.
+	essr_short_id		-	Operator short ID.
+	essr_sec_level		-	Operator Security level.
+}

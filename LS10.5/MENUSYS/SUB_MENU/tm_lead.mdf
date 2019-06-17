@@ -1,0 +1,16 @@
+Telemarketing Lead Maintenance Menu (SUB)
+tm_lead
+Telemarketing Master Menu. <a|telemktg> (1,2)
+menu MENUSYS/tm_master.mdf
+Allocate Leads. <a|telemktg> (1,1)
+tm_ld_allc~
+Maintain Lead Masterfile. <a|telemktg> (1,1)
+tm_pro_inp~
+Maintain Lead Masterfile. (Restricted) <a|telemktg> (1,1)
+tm_pro_inp~1~
+Convert A Customer To A Lead. <a|telemktg> (1,1)
+tm_convert~D~
+Convert A Lead To A Customer. <a|telemktg> (1,1)
+tm_convert~L~
+((
+))

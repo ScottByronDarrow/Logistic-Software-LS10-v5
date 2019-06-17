@@ -1,0 +1,80 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.skcm,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.skcm)
+|  Schema Desc  : (Stock/Transport - Container Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.skcm,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	skcm	
+
+field	skcm_co_no          type	char	2
+field	skcm_container		type	char	15
+field	skcm_desc           type	char	40
+field	skcm_last_seal		type	char	15
+field	skcm_skcm_hash		type	serial				index	primary
+field	skcm_stat_code		type	char	2
+field	skcm_min_vol     	type	float
+field	skcm_max_vol     	type	float
+field	skcm_std_vol     	type	float
+field	skcm_min_wgt     	type	float
+field	skcm_max_wgt     	type	float
+field	skcm_std_wgt     	type	float
+field	skcm_min_hei     	type	float
+field	skcm_max_hei     	type	float
+field	skcm_std_hei     	type	float
+field	skcm_min_wid     	type	float
+field	skcm_max_wid     	type	float
+field	skcm_std_wid     	type	float
+field	skcm_min_dth     	type	float
+field	skcm_max_dth     	type	float
+field	skcm_std_dth     	type	float
+field	skcm_per_vol		type	money
+field	skcm_per_wgt		type	money
+field	skcm_per_cont		type	money
+field	skcm_id_no			type	composite
+			skcm_co_no,
+			skcm_container										index	
+field	skcm_id_no2			type	composite
+			skcm_co_no,
+			skcm_stat_code										index dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		skcm_co_no         	-	Company Number
+		skcm_container		-	Container Number
+		skcm_desc           -	Container Description
+		skcm_skcm_hash		-	Unique Serial Hash
+		skcm_stat_code		-	Status code (ex skcs)
+		skcm_min_vol     	-	Minimum Volume
+		skcm_max_vol     	-	Maximum Volume
+		skcm_std_vol     	-	Standard Volume
+		skcm_min_wgt     	-	Minimum Weight
+		skcm_max_wgt     	-	Maximum Weight
+		skcm_std_wgt     	-	Standard Weight
+		skcm_min_hei     	-	Minimum Height
+		skcm_max_hei     	-	Maximum Height
+		skcm_std_hei     	-	Standard Height
+		skcm_min_wid     	-	Minimum Width
+		skcm_max_wid     	-	Maximum Width
+		skcm_std_wid     	-	Standard Width
+		skcm_min_dth     	-	Minimum Depth
+		skcm_max_dth     	-	Maximum Depth
+		skcm_std_dth     	-	Standard Depth
+		skcm_per_vol		-	Charge per volume (cbm)
+		skcm_per_wgt		-	Charge per weight 
+		skcm_per_cont		-	Charge per container 
+}

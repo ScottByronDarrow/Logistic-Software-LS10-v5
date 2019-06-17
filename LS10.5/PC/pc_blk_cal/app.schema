@@ -1,0 +1,44 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/07/03 04:20:07 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/07/03 04:20:07  scott
+#	Updated to add SetSortArray () for new LS10-GUI screen features
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table rgrs
+	field rgrs_hhrs_hash
+	field rgrs_co_no
+	field rgrs_br_no
+	field rgrs_code
+	field rgrs_desc
+	field rgrs_type
+	field rgrs_type_name
+	field rgrs_cost_type
+	field rgrs_rate
+	field rgrs_ovhd_var
+	field rgrs_ovhd_fix
+	field rgrs_cal_sel
+end
+
+table pccl
+	field pccl_co_no
+	field pccl_br_no
+	field pccl_hhrs_hash
+	field pccl_act_date
+	field pccl_act_time
+	field pccl_duration
+	field pccl_stat_flag
+end
+

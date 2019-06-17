@@ -1,0 +1,88 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:11:12 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:11:12  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:32:31  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:23:45  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_curr_code
+	field sumr_stat_flag
+end
+
+table pogh
+	field pogh_co_no
+	field pogh_hhsu_hash
+	field pogh_hhsh_hash
+	field pogh_gr_no
+	field pogh_hhgr_hash
+	field pogh_date_raised
+	field pogh_exch_rate
+	field pogh_pur_status
+end
+
+table pogl
+	field pogl_hhgr_hash
+	field pogl_line_no
+	field pogl_hhbr_hash
+	field pogl_hhcc_hash
+	field pogl_po_number
+	field pogl_serial_no
+	field pogl_qty_ord
+	field pogl_qty_rec
+	field pogl_land_cst
+	field pogl_fob_fgn_cst
+	field pogl_frt_ins_cst
+	field pogl_duty
+	field pogl_licence
+	field pogl_cat_code
+	field pogl_item_desc
+	field pogl_rec_date
+	field pogl_pur_status
+	field pogl_stat_flag
+end
+
+table posh
+	field posh_co_no
+	field posh_hhsh_hash
+	field posh_csm_no
+end
+

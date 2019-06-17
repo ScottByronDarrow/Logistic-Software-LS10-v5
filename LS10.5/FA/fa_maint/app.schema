@@ -1,0 +1,90 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:25:54 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:25:54  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_crd_date
+end
+
+table fagl
+	field fagl_famr_hash
+	field fagl_posted
+	field fagl_tran_date
+	field fagl_dep_rule
+	field fagl_crd_acc
+	field fagl_dbt_acc
+	field fagl_int_amt
+	field fagl_tax_amt
+	field fagl_int_pc
+	field fagl_tax_pc
+	field fagl_stat_flag
+end
+
+table famr
+	field famr_co_no
+	field famr_ass_group
+	field famr_ass_no
+	field famr_famr_hash
+	field famr_ass_desc1
+	field famr_ass_desc2
+	field famr_ass_desc3
+	field famr_ass_desc4
+	field famr_pur_date
+	field famr_ass_life
+	field famr_cost_price
+	field famr_disp_date
+	field famr_disp_price
+	field famr_gl_crd_acc
+	field famr_gl_dbt_acc
+	field famr_gl_ass_acc
+	field famr_f_y_rule
+	field famr_f_y_amt
+	field famr_dep_rule
+	field famr_max_deprec
+	field famr_priv_use_tax
+	field famr_tax_open_val
+	field famr_tax_dtype
+	field famr_tax_pa_flag
+	field famr_tax_d_pc
+	field famr_tax_d_amt
+	field famr_int_open_val
+	field famr_int_dtype
+	field famr_int_pa_flag
+	field famr_int_d_pc
+	field famr_int_d_amt
+	field famr_gl_updated
+	field famr_stat_flag
+end
+
+table fatr
+	field fatr_co_no
+	field fatr_group
+	field fatr_group_desc
+	field fatr_dep_rule
+	field fatr_nxt_asset
+	field fatr_ass_life
+	field fatr_max_depr
+	field fatr_tax_dtype
+	field fatr_tax_pa_flag
+	field fatr_int_dtype
+	field fatr_int_pa_flag
+	field fatr_stat_flag
+end
+

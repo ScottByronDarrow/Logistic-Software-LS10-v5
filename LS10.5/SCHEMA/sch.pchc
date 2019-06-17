@@ -1,0 +1,41 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pchc,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pchc)
+|  Schema Desc  : (Hazard Class/Handling Class File. )
+|----------------------------------------------------------------------
+| $Log: sch.pchc,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:02  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:38  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pchc
+
+field	pchc_co_no			type	char	2
+field	pchc_type			type	char	1
+field	pchc_class			type	char	4
+field	pchc_id_no			type	comp
+		pchc_co_no,
+		pchc_type,
+		pchc_class					index	primary
+field	pchc_desc			type	char	40
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pchc_co_no			- Company Number.
+	pchc_type			- H/Z (Handling or haZard)
+	pchc_class			- Hazard class (as used within PSL)
+	pchc_desc			- Long description of hazard class
+}

@@ -1,0 +1,26 @@
+Project Monitoring Master Menu (PRMR)
+pr_master
+Sales Menu. <a> (1,2)
+menu MENUSYS/main_sale.mdf
+Projects Maintenance. <a> (1,1)
+pm_prjt_inp~
+Project-Contractor Maintenance. <a> (1,2)
+pm_proj_con~
+Prospects Maintenance. <a> (1,1)
+pm_pct_maint~
+Actions Maintenance. <a> (1,2)
+pm_act_maint~
+Relate Projects & Quotes. <a> (1,1)
+pm_pq_maint~
+Project Enquiry. <a> (1,2)
+pm_prj_dtl~
+Project Notes Maintenance. <a> (1,1)
+pm_vi_notes~
+Project Report Listing >> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/pr_submenu.mdf
+((
+quadrant(20,6)
+quadrant(46,8)
+box(14,3,44,15)
+line(15,5,43)
+))

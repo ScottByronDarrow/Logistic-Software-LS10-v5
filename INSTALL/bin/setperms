@@ -1,0 +1,240 @@
+#! /usr/bin/perl
+#
+#	Expects one argument : the configuration file
+#		Optional arguments:
+#			-n						: don't do anything
+#			-d start-directory		: start from given directory
+#			-v verbosity			: verbosity level
+#
+require "getopts.pl";
+
+#
+#	Check for optional and mandatory arguments
+#
+&Getopts ('nv:d:') || &Usage;
+@ARGV || &Usage;
+
+#
+#	Some safe defaults
+$owner = "root";				# it's always there
+$group = "other";				# ditto
+$def_dir_perm = 777;			# promiscous
+$def_file_perm = 666;			# ditto
+@patterns = ();
+@perms = ();
+
+&LoadConfig (@ARGV [0]);
+
+#
+# Misc initialisation
+#
+$opt_d = $ENV {'PROG_PATH'} unless $opt_d;
+$opt_v = 0 unless $opt_v;
+$def_uid = (getpwnam ($owner)) [2];
+$def_gid = (getgrnam ($group)) [2];
+$opt_d || die ("ERR: Require valid prog_path\n");
+
+#
+#	Work thru' the path from PROG_PATH
+#
+open (FILES, "find $opt_d/* -follow -print |");
+READIT:
+while (<FILES>)
+{
+	chop;										# remove trailing '\n'
+	$cname = substr ($_, length ($opt_d) + 1);	# strip $PROG_PATH
+	local ($fname) = $_;
+
+	local ($f_uid, $f_gid, $f_mode) = (stat ($fname)) [4, 5, 2];
+
+	#
+	#	Check to see whether the name matches any of
+	#	the internal pattern namespace
+	#
+	for ($i = 0; $i < @patterns; $i++)
+	{
+		local ($pattern) = $patterns [$i];
+		local ($perm)    = $perms [$i];
+		local ($uid)     = $owners {$i} ? $owners {$i} : $def_uid;
+
+		$cname =~ /^$pattern$/ &&
+			do
+			{
+				if ($perm >= 0)
+				{
+					#
+					#	Only modify files that shouldn't be ignored
+					#
+					&ChangeBits ($fname,
+						$f_uid, $f_gid, $f_mode,
+						$uid, $def_gid, oct ($perm));
+				}
+				else
+				{
+					print "$fname ignored\n" if $opt_v >= 2;
+				}
+				next READIT;
+			}
+	}
+
+	#
+	#	Apply defaults
+	#
+	if (-d $fname)
+	{
+		&ChangeBits ($fname,
+			$f_uid, $f_gid, $f_mode,
+			$def_uid, $def_gid, oct ($def_dir_perm));
+	}
+	else
+	{
+		&ChangeBits ($fname,
+			$f_uid, $f_gid, $f_mode,
+			$def_uid, $def_gid, oct ($def_file_perm));
+	}
+}
+close (FILES);
+exit 0;				# Normal exit
+
+#
+#	Support functions
+#
+sub Usage
+{
+	local (@cmd) = split ('/', $0);
+	local ($cmd) = pop @cmd;
+	die "Usage: $cmd [-n] [-v n] [-d prog_path] configuration-file\n"
+}
+
+#
+#	Configuration management
+#
+sub LoadConfig
+{
+	#
+	#	Read in configuration
+	#
+	local ($config) = @_;
+
+	open (CONFIG, $config) || die "ERR: Error opening - $config\n";
+	while (<CONFIG>)
+	{
+		chop;
+
+		/^#.*/ && next;		# skip comments
+
+		/([^=]+)=(\S+)/ &&
+			do
+			{
+				#
+				#	Configuration settings
+				#
+				&SetConfig ($1, $2);
+				next;
+			};
+
+		/(\S+)\s+(\d+)\s+(\S+)/ &&
+			do
+			{
+				#	Pattern match with possible owner
+				#	- add to pattern list
+				push (@patterns, $1);
+				push (@perms, $2);
+				$owners {@perms - 1} = $3 if (substr ($3, 0, 1) ne '#');
+				next;
+			};
+
+		/(\S+)\s+(\d+)/ &&
+			do
+			{
+				#	Pattern match - add to pattern list
+				push (@patterns, $1);
+				push (@perms, $2) if (substr ($2, 0, 1) ne '#');
+				next;
+			};
+
+		/(\S+)/ &&
+			do
+			{
+				#	Pattern match (to ignore)
+				push (@patterns, $1);
+				push (@perms, -1);
+			}
+	}
+	close (CONFIG);
+}
+
+sub SetConfig
+{
+	local ($id, $value) = @_;
+
+	#
+	#	General config
+	#
+	if ($id =~ /\bowner\b/)
+	{
+		$owner = $value;						# standard owner
+		return;
+	}
+	if ($id =~ /\bgroup\b/)
+	{
+		$group = $value;						# standard group
+		return;
+	}
+	if ($id =~ /\bdefault-dir-perm\b/)
+	{
+		$def_dir_perm = $value;					# default directory permission
+		return;
+	}
+	if ($id =~ /\bdefault-file-perm\b/)
+	{
+		$def_file_perm = $value;				# default file permission
+		return;
+	}
+
+	die "ERR: Unknown configuration id - $id\n";
+}
+
+sub ChangeBits
+{
+	local ($fname, $o_uid, $o_gid, $o_mode, $n_uid, $n_gid, $n_mode) = @_;
+	local ($changed) = 0;
+
+	$o_mode &=07777;		# only take low 12 bits (some systems report more)
+
+	#
+	#	Check user and group
+	if ($o_uid != $n_uid || $o_gid != $n_gid)
+	{
+		chown ($n_uid, $n_gid, $fname) unless $opt_n;
+		$changed = 1;
+	}
+	#
+	#	Check permissions
+	if ($o_mode != $n_mode)
+	{
+		chmod ($n_mode, $fname) unless $opt_n;
+		$changed = 1;
+	}
+
+	#
+	#	Debug if necessary
+	#
+	if ($changed)
+	{
+		if ($opt_v >= 2)
+		{
+			printf STDOUT "$fname: uid=%s(%s), gid=%s(%s), mode=%o(%o)\n",
+				$n_uid, $o_uid, $n_gid, $o_gid, $n_mode, $o_mode;
+		}
+		elsif ($opt_v >= 1)
+		{
+			printf STDOUT "$fname: uid=%s, gid=%s, mode=%o\n",
+				$n_uid, $n_gid, $n_mode;
+		}
+	}
+	else
+	{
+		print "$fname unchanged\n" if $opt_v >= 2;
+	}
+}

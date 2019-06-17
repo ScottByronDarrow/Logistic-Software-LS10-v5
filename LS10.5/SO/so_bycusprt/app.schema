@@ -1,0 +1,94 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/10/23 07:16:36 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/10/23 07:16:36  scott
+#	Updated to check and correct rounding.
+#	Changes to ensure ALL inputs and reports round the same way.
+#	
+#	Revision 5.0  2001/06/19 08:19:00  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/03/23 01:54:48  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to add sleep delay - did not work with LS10-GUI
+#	Updated to adjust screen to look better with LS10-GUI
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	Updated to ensure "0xff" is used instead of "~" for end of range.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table inex
+	field inex_hhbr_hash
+	field inex_line_no
+	field inex_desc
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_cus_ord_ref
+	field sohr_dt_raised
+	field sohr_dt_required
+	field sohr_exch_rate
+	field sohr_tax_code
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_hhum_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_serial_no
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_sale_price
+	field soln_item_levy
+	field soln_dis_pc
+	field soln_tax_pc
+	field soln_gst_pc
+	field soln_item_desc
+	field soln_due_date
+	field soln_bonus_flag
+	field soln_status
+	field soln_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_curr_code
+	field cumr_tax_code
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_sale_unit
+	field inmr_tax_amount
+	field inmr_outer_size
+end
+

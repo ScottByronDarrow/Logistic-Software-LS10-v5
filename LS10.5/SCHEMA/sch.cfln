@@ -1,0 +1,41 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cfln,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cfln)
+|  Schema Desc  : (Carrier file line item records. )
+|----------------------------------------------------------------------
+| $Log: sch.cfln,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cfln	
+
+field	cfln_cfhh_hash			type	long		index	dups
+field	cfln_area_code			type	char	2
+field	cfln_carr_code			type	char	4
+field	cfln_cost_kg			type	double
+field	cfln_stat_flag			type	char	1	
+field 	cfln_id_no				type	composite
+			cfln_cfhh_hash,
+			cfln_area_code 							index 	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cfln_cfhh_hash		-	Carrier line item link to cfhr.
+	cfln_area_code		-	Line area code.
+	cfln_carr_code		-	Line Carrier Code.
+	cfln_cost_kg		-	Cost per Kg for Area.
+	cfln_stat_flag		-	Spare status flag.
+}

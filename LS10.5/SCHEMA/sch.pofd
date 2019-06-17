@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pofd,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pofd)
+|  Schema Desc  : (Forward Exchange Contract Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.pofd,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:10  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:41  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pofd	
+
+field	pofd_co_no			type	char	2
+field	pofd_contract			type	char	10
+field	pofd_id_no			type	composite
+		pofd_co_no,
+		pofd_contract					index	dups
+field	pofd_alloc_type			type	char	1
+field	pofd_alloc_no			type	char	5
+field	pofd_alloc_amt			type	double
+field	pofd_pay_date			type	edate
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pofd_co_no		-	Company number.
+	pofd_contract		-	Contract Number.
+	pofd_alloc_type		-	Allocation Type.
+	pofd_alloc_no		-	Allocation No.
+	pofd_alloc_amt		-	Allocation Amount.
+	pofd_pay_date		-	Payment Date.
+}

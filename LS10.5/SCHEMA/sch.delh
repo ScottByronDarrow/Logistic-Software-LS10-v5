@@ -1,0 +1,47 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.delh,v 5.1 2001/08/14 02:47:50 scott Exp $
+|  Schema Name  : (sch.delh)
+|  Schema Desc  : (Delete control header file)
+|----------------------------------------------------------------------
+| $Log: sch.delh,v $
+| Revision 5.1  2001/08/14 02:47:50  scott
+| Updated for new delete wizard
+|
+|=====================================================================}
+file delh
+
+field	delh_co_no				type	char	2
+field	delh_code				type	char	20
+field	delh_key_struct			type	int
+field	delh_delh_hash			type	serial
+field	delh_desc_1				type	char	60
+field	delh_desc_2				type	char	60
+field	delh_purge_days			type	int
+field	delh_reference			type	char	20
+field	delh_spare_fg1			type	int
+field	delh_spare_fg2			type	int
+field	delh_spare_fg3			type	int
+field	delh_id_no				type	composite
+			delh_co_no,
+			delh_code										index	primary
+end
+{
+              =====================================
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              =====================================
+	delh_co_no			-	Company Number
+	delh_code			-	Delete code
+	delh_key_struct		-	Key structure 
+							1		=	Standard keys for days entry
+							2-(x)	=	Special keys for other stuff
+	delh_delh_hash		-	Unique serial hash
+	delh_desc_1			-	Description part one.
+	delh_desc_2			-	Description part two.
+	delh_purge_days		-	Number of purge days.
+	delh_reference		-	Reference used when purge program require a char
+	delh_spare_fg1		-	Spare flag 1
+	delh_spare_fg2		-	Spare flag 2
+	delh_spare_fg3		-	Spare flag 3
+}

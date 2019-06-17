@@ -1,0 +1,40 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sasr,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sasr)
+|  Schema Desc  : (Sales Analysis Sub Ranges of Categories. )
+|----------------------------------------------------------------------
+| $Log: sch.sasr,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:20  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sasr
+
+field	sasr_co_no			type	char	2	index	dups
+field	sasr_start_cat			type	char	11
+field	sasr_end_cat			type	char	11
+field	sasr_id_no			type	composite
+		sasr_co_no,
+		sasr_start_cat,
+		sasr_end_cat					index	dups
+field	sasr_stat_flag			type	char	2
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sasr_co_no		-	Company number.
+	sasr_start_cat		-	Sub-range start category.
+	sasr_end_cat		-	Sub-range end category.
+	sasr_stat_flag		-	Spare status flag.
+}

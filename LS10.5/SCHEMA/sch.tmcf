@@ -1,0 +1,66 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmcf,v 5.0 2001/06/19 10:17:32 cha Exp $
+|  Schema Name  : (sch.tmcf)
+|  Schema Desc  : (Tele-Marketing Campaign file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmcf,v $
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:33  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:50  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmcf
+
+field	tmcf_co_no			type	char	2
+field	tmcf_campaign_no		type	int
+field	tmcf_hhcf_hash			type	serial		index
+field	tmcf_id_no			type	composite 
+		tmcf_co_no,
+		tmcf_campaign_no				index	primary
+field	tmcf_c_name1			type	char	40
+field	tmcf_c_name2			type	char	40
+field	tmcf_c_obj1			type	char	50
+field	tmcf_c_obj2			type	char	50
+field	tmcf_c_obj3			type	char	50
+field	tmcf_c_obj4			type	char	50
+field	tmcf_c_obj5			type	char	50
+field	tmcf_c_manager			type	char	30
+field	tmcf_start_date			type	edate
+field	tmcf_end_date			type	edate
+field	tmcf_bg_incalls			type	int
+field	tmcf_bg_insales			type	double
+field	tmcf_bg_invalue			type	double
+field	tmcf_bg_outcalls		type	int
+field	tmcf_bg_outsales		type	double
+field	tmcf_bg_outvalue		type	double
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tmcf_co_no		-	Company number.
+	tmcf_campaign_no	-	Campaign number.
+	tmcf_c_name		-	Campaign name. 
+	tmcf_c_obj1		-	Campaign objective part 1.
+	tmcf_c_obj2		-	Campaign objective part 2.
+	tmcf_c_obj3		-	Campaign objective part 3.
+	tmcf_c_obj4		-	Campaign objective part 4.
+	tmcf_c_obj5		-	Campaign objective part 5.
+	tmcf_c_manager		-	Campaign manager.
+	tmcf_start_date		-	Campaign start date.
+	tmcf_end_date		-	Campaign end date.
+	tmcf_bg_incalls		-	Budget in calls.
+	tmcf_bg_insales		-	Budget in sales.
+	tmcf_bg_invalue		-	Budget in value.
+	tmcf_bg_outcalls	-	Budget out calls.
+	tmcf_bg_outsales	-	Budget out sales.
+	tmcf_bg_outvalue	-	Budget out value.
+}

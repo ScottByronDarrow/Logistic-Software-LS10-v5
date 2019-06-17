@@ -1,0 +1,24 @@
+LogisticSoftware System Checking Functions (PSCF)
+psl_admin
+Administration Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Stock In-Balance    -> Check Only. <a> (1,1)
+sk_bal_fix~LPNO~C~
+Stock In-Balance    -> Check & Repair. <a> (1,1)
+lp_chain~warning "UPDATE STOCK FILES TO FIX IN-BALANCE"~sk_bal_fix LPNO U~
+Stock Fifo Shortage -> Check Only. <a> (1,1)
+sk_fifo_chk~LPNO~C~
+Stock Fifo Shortage -> Check & Repair. <a> (1,1)
+chain~warning "UPDATE FIFO record shortages."~sk_fifo_chk LPNO U~
+Delete unused FIFO/LIFO records. <a> (1,1)
+chain~warning "DELETE UNUSED FIFO RECORDS"~sk_fifo_del~
+B/Order/Committed/On-Order/QC Integrity check. <a> (1,1)
+so_check~
+Full B/Order/Committed/On-Order/QC recalculation. <a> (1,1)
+chain~warning "FULL B/ORDER/COMMITTED/ON-ORDER/QC RECALCULATION"~so_allskcalc~qc_recalc~
+Delete Real-Time Committal Records. <a> (1,1)
+lp_chain~warning "DELETE REAL-TIME COMMITTAL RECORDS"~so_cmmt_del LPNO~
+LogisticSoftware Dead Lock looker. <ERROR> (1,1)
+lock_look~
+((
+))

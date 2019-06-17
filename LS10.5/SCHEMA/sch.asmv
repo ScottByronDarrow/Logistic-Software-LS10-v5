@@ -1,0 +1,73 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.asmv,v 5.0 2001/06/19 10:17:08 cha Exp $
+|  Schema Name  : (sch.asmv)
+|  Schema Desc  : (Asset Movement File )
+|----------------------------------------------------------------------
+| $Log: sch.asmv,v $
+| Revision 5.0  2001/06/19 10:17:08  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:22  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file asmv
+
+field	asmv_hhar_hash 				type	long
+field	asmv_line_no				type	int	
+field	asmv_hham_hash 				type	serial					index
+field	asmv_report_no				type	long					index	dups
+field   asmv_move_code				type	char	4
+field	asmv_move_desc    			type	char	40
+field	asmv_serial_no				type	char	25      		
+field   asmv_source_type			type    char    1
+field   asmv_dest_type				type    char    1
+field	asmv_from_crdt 				type	long
+field	asmv_to_crdt     			type	long
+field	asmv_from_hhcu 				type	long
+field	asmv_to_hhcu     			type	long
+field	asmv_from_somh  			type	long		
+field	asmv_to_somh				type    long     
+field	asmv_move_date				type	edate
+field	asmv_vol_commit				type	long
+field	asmv_id_no     				type	composite
+			asmv_hhar_hash,
+			asmv_line_no											index
+field	asmv_id_no2    				type	composite
+			asmv_hhar_hash,
+			asmv_to_hhcu											index	dups
+field	asmv_id_no3    				type	composite
+			asmv_report_no,
+			asmv_move_date											index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		asmv_hhar_hash 		_	Asset Master ID Number
+     	asmv_line_no		- 	Line Sequence Number
+     	asmv_hham_hash		-	Asset Movement ID Number
+     	asmv_report_no		-	Asset Movement Report Number
+     	asmv_move_desc		-	Asset Movement Description 
+		asmv_source_type    -   Type of Source
+		asmv_dest_type      -   Type of Destination
+								 C - Customer
+								 O - Sales Office
+								 S - Supplier
+     	asmv_from_crdt 		-	Moved From Creditor
+     	asmv_to_crdt 		-	Moved To Creditor
+     	asmv_from_somh 		-	Moved From Sales Office
+     	asmv_to_somh 		-	Moved To Sales Office
+     	asmv_from_hhcu 		-	Moved From Customer
+     	asmv_from_br 		-	Moved From Branch
+     	asmv_to_hhcu 		-	Moved To Customer
+     	asmv_to_br 			-	Moved To Branch
+     	asmv_move_date 		-	Movement Date
+     	asmv_vol_commit		-	Volume Committed
+}

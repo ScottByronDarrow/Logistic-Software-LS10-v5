@@ -1,0 +1,70 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:20:30 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:20:30  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/05/31 10:01:20  scott
+#	Updated to ensure works order is check before delete is allowed
+#	
+#	Revision 4.0  2001/03/09 02:41:47  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:22:56  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 09:13:45  gerry
+#	Forced Revision No Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/07/13 23:36:39  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table sohr
+	field sohr_hhso_hash
+	field sohr_order_no
+	field sohr_dt_raised
+	field sohr_status
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhsl_hash
+	field soln_status
+	field soln_stat_flag
+end
+
+table trhr
+	field trhr_trip_name
+	field trhr_del_date
+	field trhr_hhtr_hash
+	field trhr_status
+end
+
+table trln
+	field trln_hhtr_hash
+	field trln_hhco_hash
+	field trln_hhln_hash
+end
+
+table pcwo
+	field pcwo_hhbr_hash      
+	field pcwo_order_status   
+	field pcwo_hhsl_hash      
+end

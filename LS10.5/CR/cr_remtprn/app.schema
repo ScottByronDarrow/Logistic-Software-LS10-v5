@@ -1,0 +1,112 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/07 07:03:30 kaarlo Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/07 07:03:30  kaarlo
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_crd_date
+end
+
+table comr
+	field comr_co_no
+	field comr_co_name
+	field comr_co_short_name
+	field comr_co_adr1
+	field comr_co_adr2
+	field comr_co_adr3
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_stat_flag
+end
+
+table strm
+	field strm_co_no
+	field strm_mesg_type
+	field strm_mesg_tx1
+	field strm_mesg_tx2
+	field strm_mesg_tx3
+	field strm_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_acc_type
+	field sumr_debtor_no
+	field sumr_adr1
+	field sumr_adr2
+	field sumr_adr3
+	field sumr_adr4
+	field sumr_curr_code
+	field sumr_ctry_code
+	field sumr_pay_terms
+	field sumr_disc
+	field sumr_mtd_exp
+	field sumr_ytd_exp
+	field sumr_bo_curr
+	field sumr_bo_per1
+	field sumr_bo_per2
+	field sumr_bo_per3
+	field sumr_stat_flag
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_hhsi_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_narrative
+	field suin_date_of_inv
+	field suin_date_posted
+	field suin_pay_date
+	field suin_gst
+	field suin_amt
+	field suin_cus_po_no
+	field suin_approved
+	field suin_stat_flag
+end
+
+table suhd
+	field suhd_hhsu_hash
+	field suhd_pid
+	field suhd_cheq_no
+	field suhd_hhsp_hash
+	field suhd_narrative
+	field suhd_date_payment
+	field suhd_date_post
+	field suhd_tot_amt_paid
+	field suhd_disc_taken
+	field suhd_pay_type
+	field suhd_rem_prt
+	field suhd_stat_flag
+end
+
+table sudt
+	field sudt_hhsp_hash
+	field sudt_hhsi_hash
+	field sudt_amt_paid_inv
+	field sudt_stat_flag
+end
+

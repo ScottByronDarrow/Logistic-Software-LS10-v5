@@ -1,0 +1,81 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/07 10:18:34 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/07 10:18:34  scott
+#	Updated to bring version number to 5.0
+#	
+#	Revision 1.2  2002/05/02 01:34:59  scott
+#	.
+#	
+#	Revision 1.1  2002/05/02 01:31:00  scott
+#	New program for archiving
+#	
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+end
+
+table arpohr
+	field arpohr_co_no
+	field arpohr_br_no
+	field arpohr_type
+	field arpohr_hhsu_hash
+	field arpohr_pur_ord_no
+	field arpohr_hhpo_hash
+	field arpohr_date_raised
+	field arpohr_status
+	field arpohr_stat_flag
+end
+
+table arpoln
+	field arpoln_hhpo_hash
+	field arpoln_line_no
+	field arpoln_hhbr_hash
+	field arpoln_hhum_hash
+	field arpoln_serial_no
+	field arpoln_qty_ord
+	field arpoln_qty_rec
+	field arpoln_land_cst
+	field arpoln_due_date
+	field arpoln_pur_status
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_acc_type
+	field sumr_curr_code
+	field sumr_ctry_code
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_alpha_code
+	field inmr_description
+	field inmr_serial_item
+	field inmr_outer_size
+	field inmr_std_uom
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+

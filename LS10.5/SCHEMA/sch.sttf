@@ -1,0 +1,66 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sttf,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.sttf)
+|  Schema Desc  : (Stock Take Transaction File. )
+|----------------------------------------------------------------------
+| $Log: sch.sttf,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:48  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sttf 
+
+field	sttf_hhwh_hash			type	long
+field	sttf_location			type	char	10
+field	sttf_exp_date			type	edate
+field	sttf_lot_no				type	char	7
+field	sttf_slot_no			type	char	7
+field	sttf_lot_expiry			type	edate
+field	sttf_qty				type	float
+field	sttf_hhum_hash			type	long
+field	sttf_page_no			type	long
+field	sttf_stat_flag			type	char	1
+field	sttf_id_no				type	composite
+			sttf_hhwh_hash,
+			sttf_location								index	dups
+field	sttf_id_no2				type	composite
+			sttf_hhwh_hash,
+			sttf_location,
+			sttf_exp_date								index	dups
+field	sttf_id_no3			type	composite
+			sttf_hhwh_hash,
+			sttf_hhum_hash,
+			sttf_location,
+			sttf_lot_no									index	dups
+field	sttf_id_no4			type	composite
+			sttf_hhwh_hash,
+			sttf_hhum_hash,
+			sttf_location,
+			sttf_lot_no,
+			sttf_exp_date								index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sttf_hhwh_hash		-	link to incc ( incc_hhwh_hash )
+	sttf_location		-	Location number.
+	sttf_exp_date		-	Expiry date.
+	sttf_lot_no			-	Lot number.
+	sttf_slot_no		-	Supplier lot number.
+	sttf_lot_expiry		-	Lot expiry
+	sttf_qty			-	Quantity.
+	sttf_hhum_hash		-	Unit of measure.
+	sttf_page_no		-	Page number.
+	sttf_stat_flag		-	Status flag.
+}

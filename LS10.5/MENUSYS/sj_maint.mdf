@@ -1,0 +1,28 @@
+Service Job Maintenance Menu (SJMT)
+job_maint_help
+Service Job Master Menu. <a> (1,2)
+menu MENUSYS/sj_master.mdf
+Add / Change Service Employees <a> (1,1)
+sj_srmaint~
+Add / Change Labour Rates <a> (1,1)
+sj_lrmaint~
+Add / Change Vehicle Rates <a> (1,2)
+sj_vhmaint~
+Control File Maintenance <a> (1,1)
+sj_crmaint~
+Spare Parts Maintenance <a> (1,1)
+sj_spmaint~
+Create & Price Invoices <a> (1,2)
+sj_inv_prc~
+Purge Service Invoice Summary File <a> (1,1)
+sj_purge.i~sj_ispurge~Purge Service Invoice Summary File~
+Purge Service Orders File <a> (1,1)
+sj_purge.i~sj_purge~Purge Service Orders File~
+Purge Labour Details File <a> (1,1)
+sj_purge.i~sj_ldpurge~Purge Labour Details File~
+((
+quadrant(22,6)
+quadrant(47,8)
+box(14,3,50,15)
+line(15,5,49)
+))

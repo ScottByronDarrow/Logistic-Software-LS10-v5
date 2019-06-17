@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.gvpi,v 5.0 2001/06/19 10:17:14 cha Exp $
+|  Schema Name  : (sch.gvpi)
+|  Schema Desc  : (GVision Process Information )
+|----------------------------------------------------------------------
+| $Log: sch.gvpi,v $
+| Revision 5.0  2001/06/19 10:17:14  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:46  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file gvpi 
+
+field	gvpi_pid			type	long		index	primary
+field	gvpi_user_name		type	char	20	index	dups
+field	gvpi_term_slot		type	int
+field	gvpi_ip_address		type	char	20
+field	gvpi_program_name	type	char	40
+field	gvpi_program_args	type	char	100
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	gvpi_pid			-	PID of SelSrvD process
+	gvpi_user_name		-	User name from client
+	gvpi_term_slot		-	TERM_SLOT on server used by SelSrvD
+	gvpi_ip_address		-	IP Address from client
+	gvpi_program_name	-	Program name being run on client
+	gvpi_program_args	-	Args passed to program being run on client
+}

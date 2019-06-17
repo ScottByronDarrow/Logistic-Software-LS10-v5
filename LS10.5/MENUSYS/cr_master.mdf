@@ -1,0 +1,38 @@
+Supplier Master Menu (APMR)
+creditors
+Accounting Menu. <a> (1,2)
+menu MENUSYS/main_acct.mdf
+Supplier Status Display. <a> (1,1)
+po_ss_disp~
+Display Supplier Transactions. <a> (1,2)
+cr_trandsp~
+Supplier Maintenance Menu. <a> (1,1)
+menu MENUSYS/cr_maint.mdf
+Cash Disbursements Menu. <a> (1,1)
+menu MENUSYS/cr_cashpay.mdf
+Supplier Reports Menu. <a> (1,2)
+menu MENUSYS/cr_reports.mdf
+Enter/Code Supplier Invoices. <a> (1,1)
+lp_chain~cr_im_inp I PID~cr_ictogl PID LPNO~cr_percalc PID~
+Enter/Code Supplier C/Notes. <a> (1,1)
+lp_chain~cr_im_inp C PID~cr_ictogl PID LPNO~cr_percalc PID~
+Enter Supplier Journals. <a> (1,1)
+lp_chain~cr_journlmc PID LPNO~cr_percalc PID~
+Adjust Invoice Exchange Rates. <a> (2,1)
+lp_chain~cr_icexch LPNO PID~
+Adjust Invoice Due Dates. <a> (2,2)
+cr_payadj~
+Automatic Invoice Approval Update. <a> (2,1)
+lp_chain~warning "Automatic Invoice Approval Update."~cr_im_upd LPNO~
+Manual Invoice Approval entry. <a> (2,2)
+lp_chain~warning "Manual Invoice Approval entry."~cr_im_sel LPNO~
+Supplier Letters >> <a> (2,1)
+pmenu MENUSYS/SUB_MENU/cr_letter.mdf
+Supplier Labels >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/cr_labels.mdf
+((
+quadrant(6,6)
+quadrant(42,8)
+box(1,3,76,15)
+line(2,5,75)
+))

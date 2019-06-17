@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inpt,v 5.0 2001/06/19 10:17:19 cha Exp $
+|  Schema Name  : (sch.inpt)
+|  Schema Desc  : (Price Book Title File. )
+|----------------------------------------------------------------------
+| $Log: sch.inpt,v $
+| Revision 5.0  2001/06/19 10:17:19  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:57  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:31  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inpt
+
+field	inpt_hhpr_hash			type	long
+field	inpt_line_no			type	int
+field	inpt_id_no			type	composite
+						inpt_hhpr_hash,
+						inpt_line_no	index	primary
+field	inpt_format			type	char	1
+field	inpt_title			type	char	96
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inpt_hhpr_hash		-       Link to inps ( inps_hhpr_hash )
+	inpt_line_no		-	Unique Sequence number.
+	inpt_format		-	format = C(entred.
+                                                 E(xpanded.
+                                                 B(oth - Expanded & Centred.
+                                                 N(o format - Print as is.
+	inpt_title		-	Title page "title"
+}
+

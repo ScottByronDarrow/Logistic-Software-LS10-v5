@@ -1,0 +1,28 @@
+Miscellaneous Maintenance - Inventory. (SUB)
+misc_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Maintain Product Categories. <a> (1,1)
+excfmaint~
+Maintain Location Master. <a> (1,1)
+sk_locminp~
+Maintain Write-off-Codes. <a> (1,1)
+sk_womaint~
+Maintain Units-of-Measure. <a> (1,1)
+sk_uom_mnt~
+Maintain Item Units-of-Measure. <a> (1,1)
+sk_item_uom~
+Maintain Active Status Codes. <a> (1,1)
+sk_act_mnt~
+Maintain Base Indent Items. <a> (1,1)
+sk_inin_inp~
+Maintain Extra Inventory Desc. <a> (1,1)
+sk_xdes_inp~I~
+Maintain Inventory Defaults. <a> (1,1)
+psl_default~I~
+((
+quadrant(25,6)
+quadrant(45,6)
+box(12,3,52,12)
+line(13,5,51)
+))

@@ -1,0 +1,33 @@
+DelSambaLocks.sh	-	Removes locks created by some old versions of Samba.
+Halt_Queue.sh		-	Halts an EaseSpool queue, use unknown
+LS10-GUI-start.sh	-	Starts LS10-GUI
+LS10-GUI-status.sh	-	Provides a status of LS10-GUI
+LS10-GUI-stop.sh	-	Stops LS10-GUI
+LS10-start.sh		-	Starts LS10
+LS10-stop.sh		-	Stops LS10
+PSL_mailnotify		-	Mail to read notify, old mail system (psl_mail)
+SANE.sh				-	Sets terminal into a sane mode.
+checkBG.sh			-	Checks if LS10 background processes running.
+checkLS10-GUI.sh	-	Checks if LS10-GUI background running.
+chk_files.sh		-	Check database files (performs bcheck)
+cm_post.sh			-	Post contract general ledger information
+cobrwh_list			-	Defines companies used for night scripts (see night.sh)
+day.sh				-	Day, night, weekly, monthly night processing.
+eprint.sh			-	Print an ease spool job
+monthly.sh			-	See night.sh
+night.sh			-	See night.sh
+night_repts.sh		-	Holds report that are produces by night.sh
+perm_day.sh			-	Holds report that are produces by day.sh
+perm_month.sh 		-	Holds report that are produces by month.sh
+perm_night.sh 		-	Holds report that are produces by night.sh
+perm_day.sh			-	Holds report that are produces by night.sh
+rebuild.sh			-	Script that performs automatic rebuild of database.
+run_eod				-	End of day processing used by on-line system
+shutdown.sh			-	Script to perform shutdown
+startCalypso.sh		-	Start script for Calypso POS
+stopCalypso.sh		-	Stop script for Calypso POS
+stopease.sh			-	Script Script for EaseSpool
+updmdf.sh			-	Script to generate base menu security.
+weekly.sh			-	See night.sh
+whatit.sh			-	Generates versions information for programs.
+whereiz.sh			-	Finds files.

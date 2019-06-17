@@ -1,0 +1,60 @@
+table ithr
+field ithr_co_no          
+field ithr_type           
+field ithr_del_no         
+field ithr_hhit_hash      
+field ithr_iss_sdate      
+field ithr_iss_date       
+field ithr_rec_date       
+field ithr_tran_ref       
+field ithr_printed        
+field ithr_stat_flag      
+end
+
+table itln
+field itln_itff_hash      
+field itln_hhit_hash      
+field itln_line_no        
+field itln_hhbr_hash      
+field itln_r_hhbr_hash    
+field itln_i_hhcc_hash    
+field itln_r_hhcc_hash    
+field itln_serial_no      
+field itln_qty_order      
+field itln_qty_border     
+field itln_qty_rec        
+field itln_cost           
+field itln_duty           
+field itln_stock          
+field itln_status         
+field itln_due_date       
+field itln_full_supply    
+field itln_stat_flag      
+end
+
+table itff
+field itff_itff_hash      
+field itff_fifo_date      
+field itff_fifo_cost      
+field itff_act_cost       
+field itff_fifo_qty       
+field itff_gr_number      
+field itff_stat_flag      
+end
+
+table insf
+field insf_hhbr_hash      
+field insf_status         
+field insf_serial_no      
+field insf_stat_flag      
+end
+
+table ccmr
+field ccmr_co_no          
+field ccmr_est_no         
+field ccmr_cc_no          
+field ccmr_hhcc_hash      
+field ccmr_name           
+field ccmr_acronym        
+field ccmr_stat_flag      
+end

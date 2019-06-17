@@ -1,0 +1,38 @@
+Purchase Order Processing Menu (POPO)
+po_master_help
+Purchase Order Master Menu. <a> (1,2)
+menu MENUSYS/po_master.mdf
+Add / Maintain Purchase Order. <a> (1,1)
+po_cinput~NNYYN~
+Add / Maintain Purchase Returns. <a> (1,1)
+po_credit~NNY~
+Approve Purchase orders. <a> (1,2)
+po_app_inp~
+Add / Maintain Shipments. <a> (1,1)
+po_sh_inpt~
+Cost Shipment(s). <a> (1,2)
+po_csh_inpt~
+Input Goods Receipts. <a> (1,1)
+po_receipt~LPNO~
+Despatch Goods Returns. <a> (1,2)
+po_issue~LPNO~
+Update Receipts / Returns to Stock. <a> (1,2)
+lp_chain~gl_po_cons LPNO R R N~po_stkupd LPNO R N~po_so_rel LPNO U X N~
+Input Final Costings. <a> (2,2)
+lp_chain~po_rec_cst~po_costupd LPNO~gl_po_cons LPNO A C N~
+Update Transactions to G/L. <a> (2,2)
+lp_chain~po_gl_up~gl_format 11 LPNO~
+Pro-Forma Costing Report. <a> (2,1)
+po_intrans~
+Pro-Forma Pre-receipt Report. <a> (2,2)
+po_recprt~
+Reprint Goods Receipt Audit. <a> (2,2)
+lp_chain~po_stkupd LPNO U N~
+P/Order Assignment Menu >> <a> (2,1)
+pmenu MENUSYS/SUB_MENU/po_ass.mdf
+((
+quadrant(6,6)
+quadrant(47,8)
+box(1,3,76,15)
+line(2,5,75)
+))

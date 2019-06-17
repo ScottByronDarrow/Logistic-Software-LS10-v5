@@ -1,0 +1,38 @@
+SALES AND MARKETING MENU (SAMK)
+sa_market
+MARKETING MENU <a> (1,2)
+menu MENUSYS/main_mark.mdf
+Maint. Sales Type file. <a> (1,1)
+ex_miscinp~SAST~
+Maint. Sales Position file. <a> (1,1)
+ex_miscinp~SASP~
+Maint. Sales Call Activity code. <a> (1,1)
+ex_miscinp~SACA~
+Maint. Sales Group code. <a> (1,2)
+ex_miscinp~SASG~
+Maint. Merchandiser Agency File. <a> (1,1)
+ex_miscinp~EXMA~
+Maint. Merchandiser Master File. <a> (1,2)
+db_exmm_mnt~
+Maint. Substitute Products. <a> (1,1)
+sk_incs_mnt~
+Maint. Market Supply Status. <a> (1,1)
+ex_miscinp~EXMS~
+Maint. Market Information. <a> (1,1)
+db_exmh_mnt~
+Maint. Salesperson Expenses. <a> (2,1)
+db_saem_mnt~
+Maint. Sales Calls. <a> (2,1)
+db_sacm_mnt~
+Maint. Salesperson Commissions. <a> (2,2)
+sa_com_alloc~
+Display Sales Commissions. <a> (2,2)
+sa_comm_rep~
+Update Sales Commissions. <a> (2,2)
+sa_comm_upd~
+((
+quadrant(6,6)
+quadrant(45,8)
+box(1,3,76,15)
+line(2,5,75)
+))

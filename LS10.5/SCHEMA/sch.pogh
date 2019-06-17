@@ -1,0 +1,86 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pogh,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pogh)
+|  Schema Desc  : (Goods received header file. )
+|----------------------------------------------------------------------
+| $Log: sch.pogh,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:11  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.3  2001/02/19 03:58:25  scott
+| Added pogh_pid to allow records to be unique.
+|
+| Revision 3.2  2001/01/25 06:55:41  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pogh	
+
+field	pogh_co_no				type	char	2
+field	pogh_br_no				type	char	2
+field	pogh_hhsu_hash			type	long
+field	pogh_hhsh_hash			type	long
+field	pogh_hhpo_hash			type	long
+field	pogh_hhds_hash			type	long
+field	pogh_gr_no				type	char	15
+field	pogh_pur_ord_no			type	char	15
+field	pogh_hhgr_hash			type	serial				index
+field	pogh_date_raised		type	edate
+field	pogh_exch_rate			type	double
+field	pogh_cust_rate			type	double
+field	pogh_rec_by				type	char	1
+field	pogh_cst_by				type	char	1
+field	pogh_pur_status			type	char	1
+field	pogh_gl_status			type	char	1
+field	pogh_drop_ship			type	char	1
+field	pogh_pid				type	int
+field	pogh_dd_id				type	composite
+			pogh_co_no,
+			pogh_hhds_hash 									index	dups
+field	pogh_sh_id				type	composite
+			pogh_co_no,
+			pogh_hhsh_hash 									index	dups
+field	pogh_po_id				type	composite
+			pogh_co_no,
+			pogh_pur_ord_no 								index	dups
+field	pogh_id_no				type	composite
+			pogh_co_no,
+			pogh_hhsu_hash,
+		pogh_gr_no											index	primary
+field	pogh_id_no2				type	composite
+			pogh_co_no,
+			pogh_gr_no										index	dups
+field	pogh_up_id				type	composite
+			pogh_co_no,
+			pogh_br_no,
+			pogh_gr_no,
+			pogh_hhsu_hash									index
+field	pogh_pid_id				type	composite
+			pogh_co_no,
+			pogh_pid 										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pogh_co_no			-	Company Number.
+	pogh_br_no			-	Branch Number.
+	pogh_hhsu_hash		-	Link to Supplier master file (sumr_hhsu_hash)
+	pogh_hhsh_hash		-	Link to Shipment master file (posh_hhsh_hash)
+	pogh_hhpo_hash		-	Link to Purchase order file  (pohr_hhpo_hash)
+	pogh_gr_no			-	Goods Receipt number.
+	pogh_hhgr_hash		-	Goods receipt unique serial hash.
+	pogh_pur_ord_no		-	Purchase order number.
+	pogh_date_raised	-	Date raised.
+	pogh_exch_rate		-	Exchange Rate.
+	pogh_cust_rate		-	Customs Exchange rate.
+	pogh_pur_status		-	Purchase status.
+	pogh_gl_status		-	G/Ledger Status.
+	pogh_drop_ship		-   To Indicate whether drop shipment or not "Y" or "N"
+}

@@ -1,0 +1,40 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.iudc,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.iudc)
+|  Schema Desc  : (Inventory User Defined Specification Type file )
+|----------------------------------------------------------------------
+| $Log: sch.iudc,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:59  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:34  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	iudc
+
+field	iudc_co_no				type	char	2
+field	iudc_spec_no			type	int
+field	iudc_code				type	char	2
+field	iudc_desc       		type	char	40
+field	iudc_id_no				type	comp
+			iudc_co_no,
+			iudc_spec_no,
+			iudc_code									index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	iudc_co_no				-	Company Number
+	iudc_spec_no			-	User Defined Specification number
+	iudc_code				-	User Defined Code
+	iudc_desc				-	User Defined Code Description
+}

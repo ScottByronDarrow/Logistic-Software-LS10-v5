@@ -1,0 +1,22 @@
+Miscellaneous Purchase/Receipts Menu. (SUB)
+sub_menu
+Exit to Stock Adjustments menu. <a> (1,1)
+menu MENUSYS/sk_adj.mdf
+Input Stock Purchases.   (Normal) <a> (1,1)
+lp_chain~sk_misc_ir LPNO G P~
+Input Stock Receipts.    (Normal) <a> (1,1)
+lp_chain~sk_misc_ir LPNO G R~
+Input Stock Issues.      (Normal) <a> (1,1)
+lp_chain~sk_misc_ir LPNO G I~
+Input Stock Adjustments. (Normal) <a> (1,1)
+lp_chain~sk_misc_ir LPNO G A~
+Input Stock Purchases.   (Internal) <a> (1,1)
+lp_chain~sk_misc_gl LPNO G P~
+Input Stock Receipts.    (Internal) <a> (1,1)
+lp_chain~sk_misc_gl LPNO G R~
+Input Stock Issues.      (Internal) <a> (1,1)
+lp_chain~sk_misc_gl LPNO G I~
+Input Stock Adjustments. (Internal) <a> (1,1)
+lp_chain~sk_misc_gl LPNO G A~
+((
+))

@@ -1,0 +1,57 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:22:10 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:22:10  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/03/28 00:30:35  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to add missing ML calls.
+#	Updated to adjust screen to look better with LS10-GUI
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table cumr
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+end
+
+table tslh
+	field tslh_let_code
+	field tslh_let_desc
+	field tslh_hhlh_hash
+end
+
+table tslb
+	field tslb_co_no
+	field tslb_operator
+	field tslb_hhlb_hash
+	field tslb_hhcu_hash
+	field tslb_hhlh_hash
+	field tslb_date_sent
+	field tslb_time_sent
+	field tslb_label_prt
+	field tslb_stat_flag
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_op_name
+end
+

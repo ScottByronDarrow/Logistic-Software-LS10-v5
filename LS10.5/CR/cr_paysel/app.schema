@@ -1,0 +1,92 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/07 01:42:53 kaarlo Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/07 01:42:53  kaarlo
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_crd_date
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_nx_voucher_no
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_pay_terms
+	field sumr_hold_payment
+	field sumr_mtd_exp
+	field sumr_ytd_exp
+	field sumr_bo_curr
+	field sumr_bo_per1
+	field sumr_bo_per2
+	field sumr_bo_per3
+	field sumr_stat_flag
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+	field pocr_ex2_factor
+	field pocr_ex3_factor
+	field pocr_ex4_factor
+	field pocr_ex5_factor
+	field pocr_ex6_factor
+	field pocr_ex7_factor
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_hhsi_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_narrative
+	field suin_date_of_inv
+	field suin_date_posted
+	field suin_pay_date
+	field suin_gst
+	field suin_amt
+	field suin_pay_amt
+	field suin_amt_paid
+	field suin_hold_reason
+	field suin_cus_po_no
+	field suin_currency
+	field suin_exch_rate
+	field suin_er_fixed
+	field suin_destin
+	field suin_approved
+	field suin_stat_flag
+end
+
+table comr
+	field comr_co_no
+	field comr_pay_bover
+	field comr_pay_freq
+	field comr_stat_flag
+end
+

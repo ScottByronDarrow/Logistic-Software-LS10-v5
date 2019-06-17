@@ -1,0 +1,66 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inwd,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.inwd)
+|  Schema Desc  : (Stock Inventory Warehouse supply detail record. )
+|----------------------------------------------------------------------
+| $Log: sch.inwd,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:58  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:33  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inwd
+
+field	inwd_inws_hash			type	long
+field	inwd_hhcc_hash			type	long				index	dups
+field	inwd_hhbr_hash			type	long		
+field	inwd_hhcf_hash			type	long		
+field	inwd_sup_priority		type	char	1		
+field	inwd_km					type	float
+field	inwd_dflt_lead			type	char	1
+field	inwd_sea_time			type	float
+field	inwd_air_time			type	float
+field	inwd_lnd_time			type	float
+field	inwd_upft_pc			type	float
+field	inwd_upft_amt			type	money
+field	inwd_demand				type	char	1
+field	inwd_id_no				type	composite
+			inwd_inws_hash,
+			inwd_hhbr_hash,
+			inwd_hhcf_hash,
+			inwd_hhcc_hash									index	primary
+field	inwd_id_no2				type	composite
+			inwd_hhbr_hash,
+			inwd_hhcf_hash,
+			inwd_sup_priority,
+			inwd_hhcc_hash									index	dups
+field	inwd_id_no3				type	composite
+			inwd_hhcc_hash,
+			inwd_hhbr_hash,
+			inwd_hhcf_hash									index	dups
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inwd_inws_hash		-	Link to Supply Warehouse master file.
+	inwd_hhcc_hash		-	Warehouse Cost Centre master file (ccmr)
+	inwd_hhcf_hash		-	See header inws
+	inwd_km				-	Km to warehouse from master.
+	inwd_dflt_lead		-	Default lead time type
+	inwd_sea_time		-	Sea lead times
+	inwd_air_time		-	Air lead times
+	inwd_lnd_time		-	Land lead times
+	inwd_upft_pc		-	Uplift percent
+	inwd_upft_amt		-	Uplift amount.
+	inwd_demand			-	Demand updated Y/N
+}

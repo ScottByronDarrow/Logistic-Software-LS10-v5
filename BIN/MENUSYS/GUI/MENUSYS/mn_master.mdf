@@ -1,0 +1,36 @@
+Menu Maintenance (MEMR)
+menumaint
+Miscellaneous Menu. <a> (1,2)
+menu MENUSYS/admin.mdf
+Maintain / Create Menus  (normal). <ERROR> (1,1)
+mn_menumaint~normal~
+Maintain / Create Menus  (superuser). <ERROR> (1,2)
+mn_menumaint~
+Maintain Security Access Codes. <a> (1,2)
+mn_acdmaint~
+Print Security Access Codes. <a> (1,1)
+mn_acdprint~LPNO~
+Print Menu Access Details By Menu. <ERROR> (1,1)
+mn_mnuprt~
+Print Menu Access Details By User. <ERROR> (1,2)
+mn_usrprt~
+Create Menu Runtime Files FROM Database. <ERROR> (1,1)
+chain~warning "CREATE MENU RUNTIME FILES FROM DATABASE"~mn_create~
+Store  Menu Runtime Files INTO Database. <ERROR> (1,2)
+chain~warning "Store menu runtime files INTO database."~mn_store~
+#Create ALL Menu Runtime Files From Database. <ERROR> (1,1)
+chain~warning "Create all menu runtime files FROM database."~mn_createall~
+Store  ALL Menu Runtime Files INTO Database. <ERROR> (1,1)
+chain~warning "Store All menu runtime files INTO database."~mn_storeall~
+((
+quadrant(17,4)
+quadrant(44,6)
+box(10,3,58,16)
+line(1,2,77)
+comment(" LS10 MENU SYSTEM MAINTENANCE ",22,1,1)
+HEADING_OFF
+TRAILER_ON
+FAST_OFF
+SUB_ON
+MENU_NAME_OFF
+))

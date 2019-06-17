@@ -1,0 +1,41 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.dbindexes,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.dbindexes)
+|  Schema Desc  : (LS10 Database Index linkage info)
+|----------------------------------------------------------------------
+| $Log: sch.dbindexes,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:30  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	dbindexes
+
+field	dbi_filename				type	char	15		index	dups
+field	dbi_desc					type	char	60
+field	dbi_field					type	char	25
+field	dbi_linkto					type	char	25
+field	dbi_linkto_file				type	char	15
+field	dbi_linkto_desc				type	char	60
+field	dbi_serial					type	char	1
+field	dbi_id_no					type	composite
+			dbi_serial, 
+			dbi_filename									index	dups
+field	dbi_id_no2					type	composite
+			dbi_serial, 
+			dbi_linkto_file									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

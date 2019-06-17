@@ -1,0 +1,81 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:25:23 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:25:23  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/10/25 07:56:48  scott
+#	Updated to convert to app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_cc_no
+end
+
+table trve
+	field trve_co_no
+	field trve_br_no
+	field trve_ref
+	field trve_desc
+	field trve_hhve_hash
+end
+
+table trln
+	field trln_hhtr_hash
+	field trln_hhco_hash
+	field trln_hhln_hash
+end
+
+table trhr
+	field trhr_trip_name
+	field trhr_hhve_hash
+	field trhr_del_date
+	field trhr_hhtr_hash
+	field trhr_driver
+	field trhr_status
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_hhcu_hash
+	field cohr_hhco_hash
+	field cohr_status
+	field cohr_stat_flag
+	field cohr_hhtr_hash
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_dl_adr4
+	field cumr_dbt_acronym
+	field cumr_ho_dbt_hash
+end
+
+table skni
+	field skni_sknd_hash      
+	field skni_hhcl_hash      
+end
+table coln
+	field coln_hhcl_hash      
+	field coln_hhco_hash      
+	field coln_line_no        
+end

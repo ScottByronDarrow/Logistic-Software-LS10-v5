@@ -1,0 +1,96 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inei,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.inei)
+|  Schema Desc  : (Inventory Establishment/Branch Stock File. )
+|----------------------------------------------------------------------
+| $Log: sch.inei,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:53  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inei	
+
+field	inei_hhbr_hash			type	long		index	dups
+field	inei_est_no				type	char	2
+field	inei_hhis_hash			type	long		index	dups
+field	inei_avge_cost			type	double		
+field	inei_last_cost			type	double		
+field	inei_prev_cost			type	double		
+field	inei_date_lcost			type	edate		
+field	inei_lpur_qty			type	float		
+field	inei_min_stock			type	float		
+field	inei_max_stock			type	float		
+field	inei_safety_stock		type	float		
+field	inei_abc_code			type	char	1
+field	inei_abc_update			type	char	1
+field	inei_std_cost			type	double
+field	inei_std_batch			type	float
+field	inei_min_batch			type	float
+field	inei_max_batch			type	float
+field	inei_prd_multiple		type	float
+field	inei_hndl_class			type	char	4
+field	inei_hzrd_class			type	char	4
+field	inei_prod_class			type	char	4
+field	inei_expiry_prd1		type	int
+field	inei_expiry_prd2		type	int
+field	inei_expiry_prd3		type	int
+field	inei_dflt_bom			type	int
+field	inei_dflt_rtg			type 	int
+field	inei_eoq				type	float
+field	inei_last_bom			type	int
+field	inei_last_rtg			type	int
+field	inei_qa_status			type	char	1	
+field	inei_stat_flag			type	char	1	
+field	inei_id_no				type	comp		
+			inei_hhbr_hash,	
+			inei_est_no										index
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inei_hhbr_hash			- Link to inmr_hhbr_hash;
+	inei_est_no				- Current branch number.
+	inei_hhis_hash			- Link to inis_hhsi_hash.
+	inei_avge_cost			- Average Cost.
+	inei_last_cost			- Last cost.
+	inei_prev_cost			- Pervious Cost.
+	inei_date_lcost			- Last cost date.
+	inei_lpur_qty			- Last purchase quantity.
+	inei_min_stock			- Min Stock holding.
+	inei_max_stock			- Max Stock holding.
+	inei_safety_stock		- Safety Stock.
+	inei_abc_code			- ABC analysis Code.
+	inei_abc_update			- ABC Update flag (Y/N)
+	inei_std_cost			- Standard Cost Or Rebated Cost
+	inei_std_batch			- Standard Batch Size
+	inei_min_batch			- Minimum Batch Size
+	inei_max_batch			- Maximum Batch Size
+	inei_prd_multiple		- Production Multiple
+	inei_hndl_class			- Handling Class
+	inei_hzrd_class			- Hazard Class
+	inei_prod_class			- Production Class
+	inei_expiry_prd1		- Expiry Period (1st)
+	inei_expiry_prd2		- Expiry Period (2nd)
+	inei_expiry_prd3		- Expiry Period (3rd)
+	inei_dflt_bom			- Default BOM number.
+	inei_dflt_rtg			- Default Routing number.
+	inei_eoq				- Economic Order Quantity.
+	inei_last_bom			- Last BOM number used for std cost rollup calc.
+	inei_last_rtg			- Last RTG number used for std cost rollup calc.
+	inei_qa_status			- Quality Assurance Product.
+								If 1 Then product is a QA approved product.
+								If 0 Then product is not a QA approved product.
+	inei_stat_flag			- Status flag.
+}

@@ -1,0 +1,63 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.trhr,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.trhr)
+|  Schema Desc  : (Transport Header file. )
+|----------------------------------------------------------------------
+| $Log: sch.trhr,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:35  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:53  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	trhr	
+
+field	trhr_trip_name      type	char		12		index	
+field	trhr_hhve_hash      type	long				index	dups
+field	trhr_del_date       type	edate
+field	trhr_hhtr_hash      type	serial				index	
+field	trhr_driver         type	char		6		      
+field	trhr_rf_number		type	char		10		      
+field	trhr_act_date       type	edate
+field	trhr_act_time       type	long
+field	trhr_fr_chg       	type	money
+field	trhr_fr_zchg       	type	money
+field	trhr_status         type	char		1		      
+field 	trhr_id_no			type 	composite
+			trhr_hhve_hash,
+			trhr_del_date								index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+		trhr_trip_name			-	Trip Number.
+								-	Format 
+										Day Month
+										Month
+										Year
+										Hours
+										Min
+										Seconds
+		trhr_hhve_hash			-	Link to vehicle master (trve)
+		trhr_del_date 			-	Delivery Date.
+		trhr_hhtr_hash			-	Transport Serial Hash
+		trhr_driver 			-	Driver Code
+		trhr_rf_number			-	Return Form Number.
+		trhr_act_date			-	Actual Delivery Date.
+		trhr_act_time			-	Actual Delivery Time.
+		trhr_fr_chg 			-	Freight Charge	-	Vehicle.
+		trhr_fr_zchg 			-	Freight Charge	-	Zone.
+		trhr_status 			-	  D(elete)
+								OR  ' '(blank)
+}

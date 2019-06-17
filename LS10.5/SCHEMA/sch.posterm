@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.posterm,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.posterm)
+|  Schema Desc  : (POS terminal description )
+|----------------------------------------------------------------------
+| $Log: sch.posterm,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file posterm
+
+field 	 pos_no			type  	int					index primary 
+field	 ip_address		type  	char 		15
+field	 description	type	char		40
+field	 co_no			type	char		2
+field	 br_no			type	char		2
+field	 wh_no			type	char		2
+field	 last_user		type	char		14
+field	 last_logoff	type    edate		
+field	 last_login		type    edate   	
+end
+{
+
+
+
+
+}
+

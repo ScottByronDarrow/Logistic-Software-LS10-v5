@@ -1,0 +1,113 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:11:01 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:11:01  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:32:20  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:23:42  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_inv_date
+end
+
+table poso
+	field poso_hhpl_hash
+	field poso_hhsl_hash
+	field poso_hhcl_hash
+	field poso_itff_hash
+	field poso_qty_ord
+	field poso_qty
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_sale_unit
+	field inmr_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_stat_flag
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_status
+	field pohr_stat_flag
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhcc_hash
+	field poln_hhlc_hash
+	field poln_hhpl_hash
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_hhso_hash
+	field poln_due_date
+	field poln_pur_status
+	field poln_status
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhsl_hash
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_due_date
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+end
+

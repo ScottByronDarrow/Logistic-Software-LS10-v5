@@ -1,0 +1,47 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.mldb,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.mldb)
+|  Schema Desc  : (Screen generator field label text. )
+|----------------------------------------------------------------------
+| $Log: sch.mldb,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:00  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	mldb
+
+field	mldb_lu_prmpt 			type	char	120			index	dups
+field	mldb_text1				type	char	130	
+field	mldb_text2				type	char	130	
+field	mldb_text3				type	char	130
+field	mldb_text4				type	char	130	
+field	mldb_text5				type	char	130	
+field	mldb_pname				type	char	20	
+field	mldb_org_len			type	int
+field	mldb_hide				type	int
+
+end
+{
+
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	mldb_lu_prmpt		-	Internal Lookup prompt.
+	mldb_text1			-	language 1 label text (SYS_LANG = 0)
+	mldb_text2			-	language 2 label text (SYS_LANG = 1)
+	mldb_text3			-	language 3 label text (SYS_LANG = 2)
+	mldb_text4			-	language 4 label text (SYS_LANG = 3)
+	mldb_text5			-	language 5 label text (SYS_LANG = 4)
+	mldb_pname			-	Program name. 
+	mldb_org_len		-	Origional prompt length.
+	mldb_hide			-	1 = Hide , 0 = show
+}

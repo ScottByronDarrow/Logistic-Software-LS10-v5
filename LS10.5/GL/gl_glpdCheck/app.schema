@@ -1,0 +1,17 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:21:33 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:21:33  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/07/25 02:45:36  scott
+#	New LS10.5
+#	
+#
+table comr
+	field comr_co_no          
+	field comr_co_name        
+	field comr_co_short_name  
+end

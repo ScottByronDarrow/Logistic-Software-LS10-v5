@@ -1,0 +1,80 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ingu,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.ingu)
+|  Schema Desc  : (Global Price Update File )
+|----------------------------------------------------------------------
+| $Log: sch.ingu,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:53  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	ingu
+
+field	ingu_co_no				type	char	2
+field	ingu_br_no				type	char	2
+field	ingu_wh_no				type	char	2
+field	ingu_curr_code			type	char	3
+field	ingu_file_code			type	char	6
+field	ingu_file_desc			type	char	40
+field	ingu_price_type			type	int
+field	ingu_id_no				type	composite
+		ingu_co_no,
+		ingu_file_code,
+		ingu_price_type			index
+field	ingu_eff_date			type	date
+field	ingu_hhgu_hash			type	serial	index
+field	ingu_apply_to			type	char	1
+field	ingu_st_range			type	char	16
+field	ingu_end_range			type	char	16
+field	ingu_uplift				type	float
+field	ingu_rounding			type	char	1
+field	ingu_price_1			type	money
+field	ingu_sig_1				type	money
+field	ingu_price_2			type	money
+field	ingu_sig_2				type	money
+field	ingu_price_3			type	money
+field	ingu_sig_3				type	money
+field	ingu_price_4			type	money
+field	ingu_sig_4				type	money
+field	ingu_price_5			type	money
+field	ingu_sig_5				type	money
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+		ingu_co_no				-	Company  Number
+		ingu_br_no				-	Branch Number
+		ingu_wh_no				-	Warehouse Number
+		ingu_curr_code			-	Currency Code
+		ingu_file_code			-	This Records Name
+		ingu_file_desc			-	This Records Description
+		ingu_eff_date			-	Date That Prices Will Be Effective
+									As Compared With Inventory Module Date
+		ingu_hhgu_hash			-	Unique Hash
+		ingu_apply_to			-	S)elling Group 
+									B)uying Group 
+									P -	Supplier
+									I)tem
+		ingu_st_range			-	Apply To Range Type
+		ingu_end_range			-	Apply To Range Type
+		ingu_uplift				-	+/- percentage
+		ingu_rounding			-	U)p D)own N)earest
+		ingu_price_1			-	Up To Value, Expressed As nnn.nn
+		ingu_sig_1				-	Above Field To Be Rounded To eg. 000.05
+		.
+		.
+		.
+		ingu_price_5			-	Up To Value, Expressed As nnn.nn
+		ingu_sig_5				-	Above Field To Be Rounded To eg. 000.05
+}

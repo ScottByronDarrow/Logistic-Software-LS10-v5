@@ -1,0 +1,19 @@
+Online End of Day Menu (SUB)
+ol_eod
+Return to Online Main Menu. <a> (1,2)
+menu MENUSYS/ol_menu.mdf
+All End of Day reports. <ERROR> (1,2)
+lp_chain~run_eod CONO BRNO WHNO LPNO~
+Daily Sales Summary. <ERROR> (1,2)
+lp_chain~ol_eod LPNO YYYYYY~
+Sales Audit Trail. <a> (1,2)
+lp_chain~ol_audit LPNO B N~ol_audit LPNO B S~
+Part Transfer Report. <a> (1,2)
+lp_chain~sk_ir_aud LPNO I~sk_ir_aud LPNO R~
+Unmatched Part Transfer Report. <ERROR> (1,2)
+lp_chain~sk_ir_unmat LPNO I~sk_ir_unmat LPNO R~
+((
+quadrant(21,6)
+box(15,3,48,14)
+line(16,5,47)
+))

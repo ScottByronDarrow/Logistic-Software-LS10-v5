@@ -1,0 +1,276 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 22:56:10 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 22:56:10  scott
+#	RELEASE 5.0
+#	
+#	Revision 5.0  2001/06/19 08:02:00  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.2  2001/05/04 00:53:58  scott
+#	Updated app.schema on programs that used incf. Required incf_gr_number
+#	
+#	Revision 4.1  2001/04/23 10:42:43  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	Updated to remove usage of old include files.
+#	
+#
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_est_short       
+	field comm_cc_no         
+	field comm_cc_name       
+	field comm_cc_short       
+	field comm_inv_date        
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+table cmtr
+	field cmtr_hhhr_hash
+	field cmtr_hhcm_hash
+	field cmtr_hhbr_hash
+	field cmtr_qty
+	field cmtr_cost_price
+	field cmtr_sale_price
+	field cmtr_disc_pc
+	field cmtr_gst_pc
+	field cmtr_tax_pc
+	field cmtr_ser_no
+	field cmtr_date
+	field cmtr_time
+	field cmtr_stat_flag
+end
+
+table cumr
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_price_type
+	field cumr_class_type
+	field cumr_disc_code
+	field cumr_dbt_acronym
+	field cumr_sman_code
+end
+
+table cmcb
+	field cmcb_hhhr_hash
+	field cmcb_hhcm_hash
+	field cmcb_sum_cost
+	field cmcb_sum_qty
+	field cmcb_sum_value
+	field cmcb_budg_type
+	field cmcb_budg_cost
+	field cmcb_budg_qty
+	field cmcb_budg_value
+end
+
+table cmcm
+	field cmcm_co_no
+	field cmcm_ch_code
+	field cmcm_desc
+	field cmcm_hhcm_hash
+	field cmcm_hhum_hash
+	field cmcm_rep_conv
+	field cmcm_usr_ref1
+	field cmcm_usr_ref2
+	field cmcm_usr_ref3
+	field cmcm_usr_ref4
+	field cmcm_usr_ref5
+	field cmcm_dtl_lvl
+	field cmcm_hhbr_hash
+end
+
+table cmrd
+	field cmrd_cmrd_hash
+	field cmrd_hhrq_hash
+	field cmrd_line_no
+	field cmrd_hhcm_hash
+	field cmrd_hhbr_hash
+	field cmrd_hhcc_hash
+	field cmrd_hhum_hash
+	field cmrd_serial_no
+	field cmrd_location
+	field cmrd_qty_order
+	field cmrd_qty_border
+	field cmrd_qty_iss
+	field cmrd_cost
+	field cmrd_gsale_price
+	field cmrd_sale_price
+	field cmrd_disc_pc
+	field cmrd_due_date
+	field cmrd_item_desc
+	field cmrd_stat_flag
+end
+
+table cmrh
+	field cmrh_co_no
+	field cmrh_br_no
+	field cmrh_req_no
+	field cmrh_hhrq_hash
+	field cmrh_hhhr_hash
+	field cmrh_req_date
+	field cmrh_rqrd_date
+	field cmrh_iss_date
+	field cmrh_op_id
+	field cmrh_req_by
+	field cmrh_time_create
+	field cmrh_date_create
+	field cmrh_full_supply
+	field cmrh_printed
+	field cmrh_del_name
+	field cmrh_del_adr1
+	field cmrh_del_adr2
+	field cmrh_del_adr3
+	field cmrh_add_int1
+	field cmrh_add_int2
+	field cmrh_add_int3
+	field cmrh_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_lpno
+end
+
+table cmhr
+	field cmhr_co_no
+	field cmhr_br_no
+	field cmhr_cont_no
+	field cmhr_hhhr_hash
+	field cmhr_mast_hhhr
+	field cmhr_hhcu_hash
+	field cmhr_hhit_hash
+	field cmhr_cus_ref
+	field cmhr_contact
+	field cmhr_adr1
+	field cmhr_adr2
+	field cmhr_adr3
+	field cmhr_it_date
+	field cmhr_wip_date
+	field cmhr_st_date
+	field cmhr_due_date
+	field cmhr_end_date
+	field cmhr_hhjt_hash
+	field cmhr_wip_glacc
+	field cmhr_lab_glacc
+	field cmhr_o_h_glacc
+	field cmhr_sal_glacc
+	field cmhr_cog_glacc
+	field cmhr_var_glacc
+	field cmhr_int_glacc
+	field cmhr_wip_status
+	field cmhr_quote_type
+	field cmhr_progress
+	field cmhr_anni_day
+	field cmhr_quote_val
+	field cmhr_est_costs
+	field cmhr_est_prof
+	field cmhr_usr_ref1
+	field cmhr_usr_ref2
+	field cmhr_usr_ref3
+	field cmhr_usr_ref4
+	field cmhr_usr_ref5
+	field cmhr_internal
+	field cmhr_lab_rate
+	field cmhr_oh_rate
+	field cmhr_status
+	field cmhr_premise
+end
+
+table cmcd
+	field cmcd_hhhr_hash
+	field cmcd_line_no
+	field cmcd_text
+	field cmcd_stat_flag
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_stocking_unit
+	field incc_location
+	field incc_first_stocked
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_opening_stock
+	field incc_receipts
+	field incc_pur
+	field incc_issues
+	field incc_adj
+	field incc_sales
+	field incc_closing_stock
+	field incc_ytd_receipts
+	field incc_ytd_pur
+	field incc_ytd_issues
+	field incc_ytd_adj
+	field incc_ytd_sales
+	field incc_stat_flag
+end
+
+table inwu
+	field inwu_hhwh_hash
+	field inwu_hhum_hash
+	field inwu_opening_stock
+	field inwu_receipts
+	field inwu_pur
+	field inwu_issues
+	field inwu_adj
+	field inwu_sales
+	field inwu_closing_stock
+end
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_weight
+	field inmr_std_uom
+	field inmr_outer_size
+	field inmr_dec_pt
+	field inmr_on_hand
+	field inmr_bo_flag
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+

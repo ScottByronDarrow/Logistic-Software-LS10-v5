@@ -1,0 +1,22 @@
+Machine History Menu (MHMR)
+mh_reorder_hel
+Marketing Menu. <a> (1,2)
+menu MENUSYS/main_mark.mdf
+Machine History Maintenance. <a> (1,2)
+mh_drmaint~M~
+Display Machine History Details. <a> (1,2)
+mh_drmaint~D~
+Display / Print Machine Market Analysis. <a> (1,2)
+mh_mhmkt.i~mh_mktrep~Machine Market Analysis~
+Maintain Machine Specification Descriptions. <a> (1,2)
+mh_cfmaint~
+Maintain Machine Specification Types. <a> (1,2)
+mh_sdmaint~
+Purge Machine History Records. <a> (1,2)
+mh_purge.i~mh_purge~Purge Machine History Records~
+((
+quadrant(20,6)
+quadrant(45,6)
+box(13,3,53,15)
+line(14,5,52)
+))

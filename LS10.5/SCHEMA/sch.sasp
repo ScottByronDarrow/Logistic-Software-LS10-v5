@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sasp,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sasp)
+|  Schema Desc  : (Selling Position file. )
+|----------------------------------------------------------------------
+| $Log: sch.sasp,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:20  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sasp 
+
+field	sasp_co_no				type	char	2
+field	sasp_pos_code			type	char	2
+field	sasp_pos_desc			type	char	40
+field	sasp_id_no				type	composite
+			sasp_co_no,
+			sasp_pos_code									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sasp_co_no			-		Company Number.
+	sasp_pos_code		-		Sales position code.
+	sasp_pos_desc		-		Sales position description.
+}

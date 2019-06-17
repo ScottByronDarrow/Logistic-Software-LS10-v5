@@ -1,0 +1,37 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sjsc,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sjsc)
+|  Schema Desc  : (Service Job Service Cost Item File. )
+|----------------------------------------------------------------------
+| $Log: sch.sjsc,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:23  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sjsc 
+
+field	sjsc_co_no                   type	char	2	index	dups 
+field	sjsc_order_no                type	int     	index	dups
+field	sjsc_hhbr_hash               type	long    	index	dups 
+field	sjsc_item_desc               type	char	40
+field	sjsc_date                    type	edate  
+field	sjsc_qty                     type	int   
+field	sjsc_uom                     type	char	3
+field	sjsc_unit_cost               type	double 
+field	sjsc_unit_sell               type	double 
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

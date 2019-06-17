@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+#	$Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/license_it,v $
+#	$Revision: 4.1 $
+#
+#	Generic licensing script
+#
+#	$Log: license_it,v $
+#	Revision 4.1  2001/09/12 03:21:30  scott
+#	Updated from Scott machine - 12th Sep 2001
+#	
+#	Revision 4.0  2001/03/09 02:48:28  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.1  2001/01/12 07:19:40  scott
+#	New install system
+#	
+#
+
+LICENSE=$PROG_PATH/BIN/LICENSE
+RESELECT=$PROG_PATH/BIN/MENU/re_select
+
+$PROG_PATH/BIN/UTILS/lc_input
+if [ -f $LICENSE ]
+then
+	chmod 666 $LICENSE
+
+	TERM_SLOT=1; export TERM_SLOT
+	$RESELECT 1 1 1
+fi

@@ -1,0 +1,23 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/10/09 22:34:27 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/10/09 22:34:27  scott
+#	Updated from Scotts machine.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table cmws
+	field cmws_co_no
+	field cmws_wp_stat
+	field cmws_desc
+end
+

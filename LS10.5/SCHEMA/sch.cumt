@@ -1,0 +1,52 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cumt,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.cumt)
+|  Schema Desc  : (Customer Account Mode file. )
+|----------------------------------------------------------------------
+| $Log: sch.cumt,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file 	cumt
+
+field	cumt_co_no				type	char	2
+field	cumt_br_no				type	char	2
+field	cumt_acc_mode			type	integer
+field	cumt_mode_desc			type	char	40
+field	cumt_dflt_prd			type	char	3
+field	cumt_dflt_crd			type	money
+field	cumt_dflt_chq			type	money
+
+field	cumt_id_no				type	composite
+			cumt_co_no,
+			cumt_br_no,
+			cumt_acc_mode									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cumt_co_no			-	Company Number.
+	cumt_br_no			-	Branch Number.
+	cumt_acc_mode		-	Account Mode
+								1 = Cash				
+								2 = Normal Account.
+								3 = Temporary Credit.
+	cumt_mode_desc		-	Description of Account Mode.
+	cumt_dflt_prd		-	Default credit period.
+								"0" = Cash.				)
+								"20A" = Normal Credit.	) Examples.
+								"7" = Tempoary Credit.	)
+	cumt_dflt_crd		-	Default credit amount.
+	cumt_dflt_chq		-	Default cheque limit.
+}

@@ -1,0 +1,36 @@
+LRP - REORDER MENU (LRPR)
+lrp_help
+LRP - MASTER MENU <a> (1,2)
+menu MENUSYS/lrp_master.mdf
+Display  Reorder  Information. <a> (1,2)
+lrp_display~
+Supplier Reorder  Generation >>. <a> (1,1)
+pmenu MENUSYS/SUB_MENU/lrp_ord.mdf
+Supplier Reorder  Review. <a> (1,1)
+lrp_poinput~
+Supplier Proposed Purchase order(s) <a> (1,1)
+lrp_propose.i~Print Proposed Purchase order report~
+Supplier Purchase Order(s) Creation. <a> (1,1)
+lrp_pogen.i~
+Production Works Order(s) Creation. <a> (1,2)
+lrp_wogen.i~
+Warehouse Reorder  Generation. <a> (1,1)
+lrp_whrepl~Warehouse Replenishment Report~
+Warehouse Reorder  Review. <a> (1,1)
+lrp_trinput~
+Warehouse transfer Creation. <a> (1,2)
+lrp_trgen~LPNO~
+Delete Reorder work files. <a> (2,2)
+lrp_wk_del~
+LRP - Shortage Stock. <a> (2,2)
+lrp_future~
+LRP - Surplus Stock. <a> (2,2)
+lrp_surplus~
+LRP - Erratic Stock. <a> (2,2)
+lrp_erratic~Stock Erratic Demand Report.~
+((
+quadrant(6,6)
+quadrant(48,8)
+box(1,3,76,15)
+line(2,5,75)
+))

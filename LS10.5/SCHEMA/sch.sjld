@@ -1,0 +1,68 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sjld,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sjld)
+|  Schema Desc  : (Labour analysis detail file. )
+|----------------------------------------------------------------------
+| $Log: sch.sjld,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:23  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sjld
+
+field	sjld_co_no                   type	char	2
+field	sjld_est_no                  type	char	2
+field	sjld_dp_no                   type	char	2
+field	sjld_order_no                type	long		index	dups
+field	sjld_emp_code                type	char	10
+field	sjld_date                    type	edate
+field	sjld_veh_code                type	char	  3
+field	sjld_km                      type	float
+field	sjld_km_rate                 type	double
+field	sjld_dm                      type	float
+field	sjld_dm_rate                 type	double
+field	sjld_hm                      type	float
+field	sjld_hm_rate                 type	double
+field	sjld_mm                      type	float
+field	sjld_mm_rate                 type	double
+field	sjld_kk                      type	float
+field	sjld_kk_rate                 type	double
+field	sjld_time                    type	float
+field	sjld_time_half               type	float
+field	sjld_time_double             type	float
+field	sjld_tm_rate                 type	double
+field	sjld_oh_rate                 type	double 
+field	sjld_pr_rate                 type	double 
+field	sjld_id_no                   type	composite
+			sjld_co_no,
+			sjld_est_no,
+			sjld_dp_no,
+			sjld_order_no,
+			sjld_date 										index dups
+field	sjld_id_no_2                 type	composite
+			sjld_co_no,
+			sjld_est_no,
+			sjld_dp_no,
+			sjld_emp_code,
+			sjld_date,
+			sjld_order_no 									index dups
+field	sjld_id_no_3                 type	composite
+			sjld_co_no,
+			sjld_date,
+			sjld_est_no,
+			sjld_dp_no 										index dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

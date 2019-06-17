@@ -1,0 +1,51 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:22:26 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:22:26  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+end
+
+table saem
+	field saem_co_no
+	field saem_saem_hash
+	field saem_hhsf_hash
+	field saem_hhmr_hash
+end
+
+table saed
+	field saed_saem_hash
+	field saed_seq_no
+	field saed_dkt_no
+	field saed_dkt_desc
+	field saed_date
+	field saed_amt
+	field saed_refunded
+	field saed_gl_posted
+	field saed_gl_amt
+	field saed_stat_flag
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_hhsf_hash
+	field exsf_salesman
+end
+
+table cuin
+	field cuin_type
+	field cuin_inv_no
+	field cuin_date_of_inv
+end
+

@@ -1,0 +1,50 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cnch,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cnch)
+|  Schema Desc  : (Debtors Contract header file. )
+|----------------------------------------------------------------------
+| $Log: sch.cnch,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cnch	
+
+field	cnch_co_no				type	char	2	
+field	cnch_cont_no   			type	char	6	index	dups
+field	cnch_hhch_hash			type	serial		index
+field	cnch_desc				type	char	40
+field	cnch_contact			type	char	20
+field	cnch_date_wef 			type	edate
+field	cnch_date_rev			type	edate
+field	cnch_date_ren			type	edate
+field	cnch_date_exp			type	edate
+field	cnch_exch_type			type	char	1
+field	cnch_id_no				type	composite
+		cnch_co_no,	
+		cnch_cont_no									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		cnch_co_no		-	Company number.
+		cnch_cont_no   	-	Contract number.
+		cnch_hhch_hash	-	serial index
+		cnch_desc		-	Contract description.
+		cnch_contact	-	Contract contact name.
+		cnch_date_wef 	-	Date contract becomes effective.
+		cnch_date_rev	-	Date contract is due for review.
+		cnch_date_ren	-	Date contract is due for renewal.
+		cnch_date_exp	-	Date contract is due to expire.
+		cnch_exch_type	-	Fixed or Variable exchange.
+}	

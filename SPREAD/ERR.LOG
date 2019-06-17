@@ -1,0 +1,12 @@
+================================================================================
+Program  : $RCSfile: gl_select.c,v $
+User Name: scott
+Version  : @(#) - $Header: /usr/ver9.10/REPOSITORY/LS10/GL/gl_spread/gl_select.c,v 5.0 2001/06/19 08:06:55 robert Exp $
+Date     : Mon Jul 16 16:40:03 2001
+PROG_PATH: /usr/LS10.5
+DBPATH   : /usr/LS10.5/DATA
+Desc     : Error in tab_open during (ADD_TABNAME) (-1)
+Comments : internal error
+         : An unknown internal error has occurred
+         :  
+================================================================================

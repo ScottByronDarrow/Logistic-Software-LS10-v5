@@ -1,0 +1,46 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ryhr,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.ryhr)
+|  Schema Desc  : (Royalty Header File Record. )
+|----------------------------------------------------------------------
+| $Log: sch.ryhr,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:18  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:44  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file ryhr 
+
+field	ryhr_code			type	char	9
+field	ryhr_hhbr_hash			type	long		index	dups
+field	ryhr_hhry_hash			type	serial		index
+field	ryhr_id_no			type	comp
+		ryhr_code,
+		ryhr_hhbr_hash					index 	primary
+field	ryhr_id_no2			type	comp	
+		ryhr_hhbr_hash,
+		ryhr_code					index
+field	ryhr_basis			type	char	1
+field	ryhr_abs_amt			type	money
+field	ryhr_amt_extract		type	money
+field	ryhr_stat_flag			type	char	1 
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ryhr_hhbr_hash		-	Link to inmr. ( inmr_hhbr_hash )
+	ryhr_hhry_hash		-	Unique Serial.
+	ryhr_basis		-	Royalty Basis
+	ryhr_abs_amt		-	Absolute Amount.
+	ryhr_amt_extract	-	Amount to Extract .
+	ryhr_stat_flag		-	Status flag.
+}

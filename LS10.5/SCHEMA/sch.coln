@@ -1,0 +1,148 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.coln,v 5.2 2001/12/11 01:56:36 scott Exp $
+|  Schema Name  : (sch.coln)
+|  Schema Desc  : (Customer Order/Invoice/Credit Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.coln,v $
+| Revision 5.2  2001/12/11 01:56:36  scott
+| Updated to add sales order number to coln (used as reference when soln/sohr removed)
+| Updated to add link to works order file.
+| Updated archive files to match cohr/coln
+|
+| Revision 5.1  2001/08/07 00:07:41  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	coln
+
+field	coln_hhcl_hash      type	serial				index
+field	coln_hhco_hash      type	long
+field	coln_line_no        type	integer
+field	coln_hhbr_hash      type	long				index	dups
+field	coln_incc_hash      type	long
+field	coln_hhum_hash      type	long
+field	coln_hhsl_hash      type	long				index	dups
+field	coln_order_no		type	char	8
+field	coln_hhdl_hash      type	long
+field	coln_crd_type       type	char 1
+field	coln_serial_no      type	char 25
+field	coln_cont_status    type	integer
+field	coln_qty_org_ord	type	float
+field	coln_q_order        type	float
+field	coln_qty_del        type	float
+field	coln_qty_ret        type	float
+field	coln_q_backorder    type	float
+field	coln_gsale_price    type	money
+field	coln_sale_price     type	money
+field	coln_cost_price     type	money
+field	coln_item_levy     	type	money
+field	coln_disc_pc        type	float
+field	coln_reg_pc         type	float
+field	coln_disc_a         type	float
+field	coln_disc_b         type	float
+field	coln_disc_c         type	float
+field	coln_cumulative     type	integer
+field	coln_tax_pc         type	float
+field	coln_gst_pc         type	float
+field	coln_gross          type	money
+field	coln_freight        type	money
+field	coln_on_cost        type	money
+field	coln_amt_disc       type	money
+field	coln_amt_tax        type	money
+field	coln_amt_gst        type	money
+field	coln_erate_var      type	money
+field	coln_pack_size      type	char 5
+field	coln_sman_code      type	char 2
+field	coln_cus_ord_ref    type	char 20
+field	coln_org_ord_ref    type	char 20
+field	coln_o_xrate        type	float
+field	coln_n_xrate        type	float
+field	coln_item_desc      type	char 40
+field	coln_due_date       type	edate
+field	coln_status         type	char 1
+field	coln_bonus_flag     type	char 1
+field	coln_hide_flag      type	char 1
+field	coln_hhah_hash      type	long
+field	coln_price_type     type	char 1
+field	coln_stat_flag      type	char 1
+field	coln_hhwo_hash		type	long
+field	coln_id_no          type	composite
+			coln_hhco_hash,
+			coln_line_no									index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	coln_hhcl_hash			-	Unique serial hash used for sales order
+                                analysis.
+	coln_hhco_hash			-	Link to cohr_hhco_hash ( header )
+	coln_line_no			-	Line number.  
+	coln_hhbr_hash			-	Link to inmr_hhbr_hash ( inventory master )
+	coln_incc_hash			-	Link to ccmr_hhcc_hash ( Cost centre master )
+								Combination of hhbr_hash and incc_hash
+								enable a unique incc record to be read.
+	coln_hhum_hash			-	Link to inum_hhum_hash for Unit of Measure.
+	coln_hhsl_hash			-	Link to soln_hhsl_hash ( sales order line )
+	coln_order_no			-	User for reference only as soln may be deleted.
+	coln_hhdl_hash			-	Link to ddln_hhdl_hash ( direct delivery line )
+	coln_crd_type			-	Credit type as input from so_credit.
+	coln_serial_no			-	Serial number if applicable.
+	coln_cont_status		-	Contract status.
+									0 = No Contract applies.
+									1 = Contract applies no discounts.
+									2 = Contract applies, discounts allowed.
+	coln_q_order			-	Quantity supplied.
+	coln_q_backorder		-	Quantity Backordered.
+	coln_gsale_price		-	Gross sales price each before reg pc.
+	coln_sale_price			-	Nett sales price each after reg pc subtracted.
+	coln_cost_price			-	Cost price, update by stock update.
+	coln_disc_pc			-	Discount percent - Final Discount PerCent
+	coln_reg_pc				-	Regulatory percent.
+	coln_disc_a				-	Discount percent A.
+	coln_disc_b				-	Discount percent B.
+	coln_disc_c				-	Discount percent C.
+	coln_cumulative			-	Cumulative. 1 or TRUE Discounts are cumulative.
+	                 		-	            0 or FALSE	Discounts are absolute.
+	coln_tax_pc				-	Tax percent.
+	coln_gst_pc				-	Gst percent.
+	coln_gross				-	Gross amount. (coln_sale_price * coln_q_order)
+	coln_freight			-	Freight amount. 
+	coln_on_cost			-	On-Cost component of gross amount.            
+	coln_amt_disc			-	Discount amount - Final Amount Of Discount
+	coln_amt_tax			-	Tax amount.
+	coln_amt_gst			-	Gst amount.
+	coln_erate_var   		-	Eachange rate variation.
+	coln_pack_size			-	Pack Size.
+	coln_sman_code			-	Salesman code.
+	coln_cus_ord_ref		-	Customer order ref.
+	coln_o_xrate			-	Old exchange rate.
+	coln_n_xrate			-	New exchange rate.
+	coln_item_desc			-	Item description.
+	coln_due_date			-	Due date.
+	coln_status				-	Status. ( not used. )
+    coln_bonus_flag			- 	Bonus Item
+					  			Y  item is a bonus - no sales price
+								N  not a bonus item.
+    coln_hide_flag			- 	Hidden lines flag.
+					  			Y  item is hidden.
+								N  item is not hidden.
+    coln_hhah_hash			- 	Hash link to inah_hhah_hash
+	coln_price_type			-	Price Type
+	coln_stat_flag			-	Stat flag.  Status flages defined by user.
+	coln_hhwo_hash			-	Provides link to origional works order.
+									(pcwo_hhwo_hash)
+}

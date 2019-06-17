@@ -1,0 +1,1 @@
+char	*comm_rec;

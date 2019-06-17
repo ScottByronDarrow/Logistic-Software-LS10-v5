@@ -1,0 +1,120 @@
+#-----------------------------------------------------------
+# $Id: config.data,v 5.0 2002/05/08 01:44:54 scott Exp $
+# $Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/info/config.data,v $
+# 	Configuration file.
+#	This configuration file is divided into 3 sections.
+#	Section 1 deals with O/S specific stuff
+#	Section 2 deals with LS10 specifics
+#	Section 3 deals with esoteric minor LS10 matters
+#	Section 4 deals with Data required by base data install program.
+#
+# $Log: config.data,v $
+# Revision 5.0  2002/05/08 01:44:54  scott
+# CVS administration
+#
+# Revision 4.1  2001/09/12 03:21:32  scott
+# Updated from Scott machine - 12th Sep 2001
+#
+# Revision 4.0  2001/03/09 02:49:26  scott
+# LS10-4.0 New Release as at 10th March 2001
+#
+# Revision 1.3  2001/01/17 07:45:52  scott
+# Updated from testing
+#
+# Revision 1.2  2001/01/15 03:28:05  scott
+# Updated from testing
+#
+# New install system
+#
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+# 1. Operating Syetem Specific
+#-----------------------------------------------------------
+CONSOLE_TTY		/dev/tty0
+
+#-----------------------------------------------------------
+#	Location of standard binaries for inclusion in PATH
+#-----------------------------------------------------------
+STDBIN	/usr/local/bin:/bin:/etc:/usr/bin:/tcb/bin:/usr/local/samba/bin
+
+#-----------------------------------------------------------
+#	Base Path 
+#-----------------------------------------------------------
+BASE_PATH	/usr
+
+#-----------------------------------------------------------
+#	Location of Spooler binaries for inclusion in PATH
+#-----------------------------------------------------------
+SPOOLERDIR		/usr/Ease/bin
+LPDIR			/usr/Ease/EaseSpool
+PP_DIR			/usr/PilotPrint
+
+#-----------------------------------------------------------
+# Some base stuff LS10 requires
+#-----------------------------------------------------------
+PROG_PATH		/usr/LS10.5
+ENVIRON_NAME	BIN/LOGISTIC
+DBNAME			data
+OWNER			lsl
+GROUP			lsl
+
+#-----------------------------------------------------------
+#	Location of Database binaries for inclusion in PATH
+#-----------------------------------------------------------
+DATABASEBIN		/usr/informix7/bin
+
+#-----------------------------------------------------------
+#	Informix locations and setup
+#-----------------------------------------------------------
+INFORMIXDIR		/usr/informix7
+INFORMIXSERVER	local
+INFORMIXTERM	terminfo
+INFORMIXBIN		/usr/informix7/bin
+DBIF_TYPE		INFORMIXSE
+DBEDIT			vi
+SQLEXEC			sqlexec
+
+#-----------------------------------------------------------
+#	Oracle locations and setup
+#-----------------------------------------------------------
+ORACLEDIR		/usr/oracle
+ORACLE_HOME		/usr/oracle
+LOCK_DIR		/BIN/LOCK
+
+#-----------------------------------------------------------
+#	DB2 locations and setup
+#-----------------------------------------------------------
+DB2DIR			/usr/DB2
+
+#-----------------------------------------------------------
+#	Define the database used INFORMIX/ORACLE/DB2
+#-----------------------------------------------------------
+LS10_DB			INFORMIX
+
+#-----------------------------------------------------------
+#	Define date format 
+#-----------------------------------------------------------
+DBDATE			DMY4
+
+#-----------------------------------------------------------
+#	Valid values for MAIL_USED : psl_mail, mailx, mail, Mail, any MUA
+#-----------------------------------------------------------
+MAIL_USED		psl_mail
+
+#-----------------------------------------------------------
+# 3. Other esoteric stuff below this. Shouldn't be changed
+#-----------------------------------------------------------
+WP_USED			vi
+SPREAD_SHEET	2020
+SPREAD_EDIT		vi                                    
+ADJ_MONEY		0
+OUTRANGE_CHAR	0
+SYS_LANG		0
+
+#-----------------------------------------------------------
+# 4. Data required by base data install program (LS10_CreateBaseData).
+#-----------------------------------------------------------
+FISCAL_PRD		12
+BASE_CURR		USD
+ACC_MASK		XXXX-XXXX-XXXX-XXXX

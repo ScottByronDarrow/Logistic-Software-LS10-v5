@@ -1,0 +1,38 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:11:22 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:11:22  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:32:41  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/02/23 04:12:23  scott
+#	Updated as MAXLINES not large enough for all currencies (world wide)
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+	field pocr_ex2_factor
+	field pocr_ex3_factor
+	field pocr_ex4_factor
+	field pocr_ex5_factor
+	field pocr_ex6_factor
+	field pocr_ex7_factor
+	field pocr_ldate_up
+	field pocr_stat_flag
+end
+

@@ -1,0 +1,42 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.incs,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.incs)
+|  Schema Desc  : (Inventory Competitors Substitute file. )
+|----------------------------------------------------------------------
+| $Log: sch.incs,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:52  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	incs
+
+field	incs_co_no				type	char	2
+field	incs_incs_hash			type	serial				index 	primary
+field	incs_hhbr_hash			type	long
+field	incs_subs_code			type	char	16
+field	incs_subs_desc			type	char	40
+field	incs_id_no				type	composite
+			incs_co_no,
+			incs_hhbr_hash,
+			incs_subs_code									index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	incs_co_no			-		Company number.
+	incs_incs_hash		-		Substitute Unique ID.
+	incs_hhbr_hash		-		Item Number. ( Links record to inmr )
+	incs_subs_code		-		Substitute code
+	incs_subs_desc		-		Substitute code.
+}

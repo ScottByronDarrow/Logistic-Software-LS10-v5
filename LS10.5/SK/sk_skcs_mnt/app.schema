@@ -1,0 +1,37 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:17:42 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:17:42  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:38:57  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.2  2000/12/12 07:46:19  scott
+#	Updated after testing + includes update and delete ring menu options.
+#	
+#	Revision 1.1  2000/12/12 02:51:45  scott
+#	New Program
+#	
+#	Revision 1.1  2000/12/12 02:49:36  scott
+#	New Program to maintain container status codes.
+#	
+#
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+end
+
+table skcs
+	field skcs_co_no          
+	field skcs_code           
+	field skcs_desc           
+end
+table skcm
+	field skcm_co_no          
+	field skcm_stat_code      
+end

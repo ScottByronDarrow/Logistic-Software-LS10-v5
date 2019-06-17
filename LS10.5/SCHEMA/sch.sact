@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sact,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.sact)
+|  Schema Desc  : (Sales Anslysis Customer type file. )
+|----------------------------------------------------------------------
+| $Log: sch.sact,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:19  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sact
+
+field	sact_co_no			type	char	2
+field	sact_class_type			type	char	3
+field	sact_year_flag			type	char	1
+field	sact_id_no			type	comp
+		sact_co_no,
+		sact_class_type,
+		sact_year_flag					index	dups
+field	sact_val1			type	money
+field	sact_val2			type	money
+field	sact_val3			type	money
+field	sact_val4			type	money
+field	sact_val5			type	money
+field	sact_val6			type	money
+field	sact_val7			type	money
+field	sact_val8			type	money
+field	sact_val9			type	money
+field	sact_val10			type	money
+field	sact_val11			type	money
+field	sact_val12			type	money
+field	sact_stat_flag			type	char	1
+
+end

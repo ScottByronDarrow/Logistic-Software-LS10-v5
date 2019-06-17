@@ -1,0 +1,51 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:04:00 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:04:00  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:24:27  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:13:24  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/09/06 05:31:32  scott
+#	*** empty log message ***
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+end
+
+table cudi
+	field cudi_hhcu_hash
+	field cudi_del_no
+	field cudi_name
+	field cudi_adr1
+	field cudi_adr2
+	field cudi_adr3
+	field cudi_adr4
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+end
+

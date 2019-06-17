@@ -1,0 +1,73 @@
+#
+############################################
+#
+#	$Id: app.schema,v 1.1 2002/07/17 09:41:41 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 1.1  2002/07/17 09:41:41  scott
+#	.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_stat_flag
+end
+
+table rghr
+	field rghr_co_no
+	field rghr_br_no
+	field rghr_hhbr_hash
+	field rghr_alt_no
+	field rghr_hhgr_hash
+end
+
+table rgln
+	field rgln_hhgr_hash
+	field rgln_seq_no
+	field rgln_hhwc_hash
+	field rgln_hhrs_hash
+	field rgln_rate
+	field rgln_ovhd_var
+	field rgln_ovhd_fix
+	field rgln_qty_rsrc
+end
+
+table rgrs
+	field rgrs_hhrs_hash
+	field rgrs_co_no
+	field rgrs_br_no
+	field rgrs_code
+	field rgrs_desc
+	field rgrs_type
+	field rgrs_rate
+	field rgrs_ovhd_var
+	field rgrs_ovhd_fix
+	field rgrs_qty_avl
+end
+

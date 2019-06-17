@@ -1,0 +1,89 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.itln,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.itln)
+|  Schema Desc  : (Inventory Transfer Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.itln,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:59  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:34  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	itln
+
+field	itln_itff_hash			type	serial				index
+field	itln_hhit_hash			type	long
+field	itln_line_no			type	int
+field	itln_hhbr_hash			type	long				index 	dups
+field	itln_r_hhbr_hash		type	long				index 	dups
+field	itln_i_hhcc_hash		type	long
+field	itln_r_hhcc_hash		type	long
+field	itln_hhum_hash			type	long
+field	itln_tran_ref			type	char	16
+field	itln_serial_no			type	char	25
+field	itln_qty_order			type	float
+field	itln_qty_border			type	float
+field	itln_qty_rec			type	float
+field	itln_cost				type	double
+field	itln_duty				type	double
+field	itln_stock				type	char	1
+field	itln_status				type	char	1
+field	itln_due_date			type	edate
+field	itln_full_supply		type	char	1
+field	itln_item_desc			type	char	40
+field	itln_id_no				type	comp
+			itln_hhit_hash,
+			itln_line_no										index 	primary
+field	itln_id_no2				type	comp
+			itln_hhbr_hash,
+			itln_due_date										index 	dups
+field	itln_id_no3				type	comp
+			itln_hhbr_hash,
+			itln_r_hhcc_hash,
+			itln_status											index 	dups
+field	itln_stat_flag			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	itln_itff_hash		- Links to itff file to get back fifo records
+	itln_hhit_hash		- Links to ithr header file.
+	itln_line_no		- Line number seq.
+	itln_hhbr_hash		- Links to inmr.
+	itln_i_hhcc_hash	- Links to incc for iss warehouse.
+	itln_r_hhcc_hash	- Links to incc for rec warehouse.
+	itln_hhum_hash		- Links to inum.  
+	itln_tran_ref		- Transfer Ref at line item level.
+	itln_serial_no		- Serial Number for Serial Items.
+	itln_qty_order		- Quantity on order.
+	itln_qty_border		- Quantity on backorder.
+	itln_cost			- Cost transfered.
+	itln_duty			- Duty Cost for bond stores. 
+	itln_stock 			- Status
+							S(tock)
+							C(ustomer)
+	itln_status			- Status
+							B - Backorder	(Ord = 0        )
+							D - Delete	(Ord = Bord = 0	)
+							M - One-step	(Needs confirm	)
+							R - Request	(Needs confirm	)
+							T - In Transit
+							U - Two-step	(Needs confirm	)
+	itln_due_date		- Line due date.
+	itln_full_supply	- Y Entire transfer must be supplied in full
+							Therefore, no consolidation allowed
+						- L This line must be supplied in full
+						- N Partial release of this line is allowed
+	itln_item_desc      - Item description used for non stock items. 
+	itln_stat_flag		- Spare status flag.
+}

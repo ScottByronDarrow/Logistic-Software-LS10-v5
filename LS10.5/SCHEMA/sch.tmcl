@@ -1,0 +1,49 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmcl,v 5.1 2001/12/03 02:06:07 scott Exp $
+|  Schema Name  : (sch.tmcl)
+|  Schema Desc  : (Tele-Marketing Call line detail file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmcl,v $
+| Revision 5.1  2001/12/03 02:06:07  scott
+| Updated to add new fields for containers.
+|
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:33  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:50  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmcl
+
+field	tmcl_hhcl_hash			type	long
+field	tmcl_line_no			type	int
+field	tmcl_hhsh_hash			type	long
+field	tmcl_prmpt_no			type	int
+field	tmcl_rep_no				type	int
+field	tmcl_rep1_text			type	char	65
+field	tmcl_rep2_text			type	char	65
+field	tmcl_stat_flag			type	char	1
+field	tmcl_id_no				type	composite 
+			tmcl_hhcl_hash,
+			tmcl_line_no 							index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tmcl_hhcl_hash		-	Link to Call header file ( tmch )
+	tmcl_line_no		-	Line sequence number.
+	tmcl_hhsh_hash		-	Link to Script header.
+	tmcl_prmpt_no		-	Prompt number.
+	tmcl_rep_no			-	Replay number.
+	tmcl_rep1_text		-	Free text .
+	tmcl_rep2_text		-	Free text.
+	tmcl_stat_flag		-	Spare status flag.
+}

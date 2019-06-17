@@ -1,0 +1,63 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cusa,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.cusa)
+|  Schema Desc  : (Customer 24 Month Sales Analysis Record. )
+|----------------------------------------------------------------------
+| $Log: sch.cusa,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:30  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cusa
+
+field	cusa_hhcu_hash		type	long		index	dups
+field	cusa_year			type	char	1	index	dups
+field	cusa_val1			type	money
+field	cusa_val2			type	money
+field	cusa_val3			type	money
+field	cusa_val4			type	money
+field	cusa_val5			type	money
+field	cusa_val6			type	money
+field	cusa_val7			type	money
+field	cusa_val8			type	money
+field	cusa_val9			type	money
+field	cusa_val10			type	money
+field	cusa_val11			type	money
+field	cusa_val12			type	money
+field	cusa_val13			type	money
+field	cusa_stat_flag		type	char	1
+field	cusa_id_no			type	comp
+			cusa_hhcu_hash,
+			cusa_year					index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cusa_hhcu_hash		-	Customer Master file.
+	cusa_year		-	Year flag C(urrent) L(ast year).
+	cusa_val1		-	Value Per 1  jan.
+	cusa_val2		-	Value Per 2  feb.
+	cusa_val3		-	Value Per 3  mar.
+	cusa_val4		-	Value Per 4  apr.
+	cusa_val5		-	Value Per 5  may.
+	cusa_val6		-	Value Per 6  jun.
+	cusa_val7		-	Value Per 7  jul.
+	cusa_val8		-	Value Per 8  aug.
+	cusa_val9		-	Value Per 9  sep.
+	cusa_val10		-	Value Per 10 oct.
+	cusa_val11		-	Value Per 11 nov.
+	cusa_val12		-	Value Per 12 dec.
+	cusa_val13		-	Held Over Period.
+	cusa_stat_flag		-	Status flag.
+}

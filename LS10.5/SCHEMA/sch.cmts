@@ -1,0 +1,73 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmts,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cmts)
+|  Schema Desc  : (Contract Management Time Sheet Trans File )
+|----------------------------------------------------------------------
+| $Log: sch.cmts,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmts
+
+field	cmts_hhem_hash			type	long		index	dups
+field	cmts_date				type	edate
+field	cmts_hhhr_hash			type	long		index	dups
+field	cmts_hhcm_hash			type	long
+field	cmts_hheq_hash			type	long
+field	cmts_time_ord			type	float	
+field	cmts_time_hlf			type	float
+field	cmts_time_dbl			type	float
+field	cmts_units				type	float
+field	cmts_lab_cost			type	money
+field	cmts_oh_cost			type	money
+field	cmts_sale				type	money
+field	cmts_stat_flag			type	char	1
+field	cmts_id_no				type	composite
+			cmts_hhem_hash,
+			cmts_hhhr_hash,
+			cmts_hhcm_hash,
+			cmts_hheq_hash,
+			cmts_date								index	dups
+field	cmts_id_no2				type	composite
+			cmts_hhhr_hash,
+			cmts_hhcm_hash,
+			cmts_sale								index	dups
+field	cmts_id_no3				type	composite
+			cmts_hhhr_hash,
+			cmts_hhcm_hash,
+			cmts_date								index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmts_hhem_hash		-	Link to cmem (Employee Master File)
+	cmts_date			-	Date of T/S Entry
+	cmts_hhhr_hash		-	Link to cmhr (Contract Header)
+	cmts_hhcm_hash		-	Link to cmcm (Costhead Master)
+	cmts_hheq_hash		-	Link to cmeq (Equipment Master)
+	cmts_time_ord		-	Hours
+	cmts_time_hlf		-	Hours
+	cmts_time_dbl		-	Hours
+	cmts_units			-	As per cmeq_uom
+	cmts_lab_cost		-	Lab cost + lab_oh_pc
+	cmts_oh_cost		-	O/H cost + O/H_oh_pc
+	cmts_sale			-	Sale Unit Rate
+	cmts_stat_flag		-	'P' for Posted.
+
+	NOTES
+	=====
+	If time fields are 0.00 will prompt for Equip and units
+}

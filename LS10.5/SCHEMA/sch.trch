@@ -1,0 +1,67 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.trch,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.trch)
+|  Schema Desc  : (TRansport Carrier History File. 		 )
+|----------------------------------------------------------------------
+| $Log: sch.trch,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:35  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:53  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	trch	
+
+field	trch_co_no				type	char	2
+field	trch_br_no				type	char	2
+field	trch_wh_no				type	char	2
+field	trch_ref_no				type	char	8
+field	trch_date				type	edate
+field	trch_hhcu_hash			type	long
+field	trch_cons_no			type	char	16
+field	trch_carr_code			type	char	4
+field	trch_del_zone			type	char	6
+field	trch_no_cartons			type	int
+field	trch_no_kgs				type	float
+field	trch_est_frt_cst		type	double
+field	trch_act_frt_cst		type	double
+field	trch_cumr_chg			type	char	1
+field	trch_stat_flag			type	char	1	
+field	trch_id_no				type	comp
+			trch_hhcu_hash,
+			trch_ref_no,
+			trch_date									index	dups
+field	trch_id_no2				type	comp
+			trch_co_no,
+			trch_br_no,
+			trch_wh_no,
+			trch_date									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	trch_co_no			-	Company number.
+	trch_br_no			-	Branch number.
+	trch_wh_no			-	Warehouse number.
+	trch_ref_no			-	Ref number, i.e invoice / credit .
+	trch_date			-	Date of Carrier transaction.
+	trch_hhcu_hash		-	Link to customer master file. ( cumr )
+	trch_cons_no		-	Consignment number. 
+	trch_carr_code		-	Carrier Code.
+	trch_del_zone 		-	Delivery Zone.
+	trch_no_cartons		-	No of Cartons.
+	trch_no_kgs			-	No of Kgs.
+	trch_est_frt_cst	-	Estimated freight Cost.
+	trch_act_frt_cst	-	Actual freight Cost.
+	trch_cumr_chg		-	Customer charged. (Y/N)
+	trch_stat_flag		-	Spare status flag.
+}

@@ -1,0 +1,21 @@
+Bill Of Materials Reports Menu. (BOMPR)
+bom_help
+Manufacturing Master  Menu. <a> (1,2)
+menu MENUSYS/main_manf.mdf
+Print Material Specification. (Item) <a> (1,1)
+bm_muse_prt~Material Specification Report~I~
+Print Material Specification. (Group) <a> (1,2)
+bm_muse_prt~Material Specification Report~G~
+Print Where Used Report. (By Item) <a> (1,1)
+bm_wuse_prt~Where Used Report~I~
+Print Where Used Report. (By Group) <a> (1,2)
+bm_wuse_prt~Where Used Report~G~
+Print Undefined Bills. (By Item) <a> (1,1)
+bm_undefprt~I~
+Print Undefined Bills. (By Group) <a> (1,1)
+bm_undefprt~G~
+((
+quadrant(20,6)
+box(12,3,50,13)
+line(13,5,49)
+))

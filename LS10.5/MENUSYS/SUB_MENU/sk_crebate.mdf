@@ -1,0 +1,14 @@
+Customer Rebates Menu. (SUB)
+sk_cus_rebate
+Stock Pricing Menu. <a> (1,1)
+menu MENUSYS/sk_price.mdf
+Customer Rebate Detail Maintenance <a> (1,1)
+sk_creb_mnt~
+Customers Selling Group Assignment <a> (1,1)
+sk_cusreass~
+Customer Rebate Claim Report <a> (1,1)
+sk_cre_claim~Customer Claim Report~
+Customer Rebate Claim Reprint <a> (1,1)
+sk_cclaimrprt~
+((
+))

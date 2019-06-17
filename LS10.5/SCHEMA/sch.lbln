@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.lbln,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.lbln)
+|  Schema Desc  : (Label line descriptions )
+|----------------------------------------------------------------------
+| $Log: sch.lbln,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:59  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:34  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file    lbln
+
+field	lbln_filename			type	char	13
+field   lbln_line_no			type    int       
+field   lbln_field_no			type    int        
+field	lbln_id_no			type	composite
+		lbln_filename,
+		lbln_line_no,
+		lbln_field_no 					index
+field   lbln_field_name			type    char	18       
+field	lbln_fld_master			type	int
+field   lbln_field_size			type    int        
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	lbln_filename		-	Filename ( link to lbhr )
+	lbln_line_no		-	Line No.
+	lbln_field_no		-	Field No.
+	lbln_field_name		-	Field Name
+	lbln_fld_master		-	99 if Blank
+	lbln_field_size		-	Field Size
+}

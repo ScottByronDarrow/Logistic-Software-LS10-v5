@@ -1,0 +1,10 @@
+System Maintenance of LogisticSoftware Users (SUB)
+terminals
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Add Users to system. <ERROR> (1,1)
+su_chain~add_user~
+Maintain User Login Security. <ERROR> (1,1)
+su_chain~get_secure~
+((
+))

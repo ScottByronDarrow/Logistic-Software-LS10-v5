@@ -1,0 +1,73 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.2 2001/08/06 23:22:32 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.2  2001/08/06 23:22:32  scott
+#	RELEASE 5.0
+#	
+#	
+#
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_dbt_date        
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_class_type
+	field cumr_sman_code
+	field cumr_gl_ctrl_acct
+end
+
+table cuwk
+	field cuwk_co_no
+	field cuwk_est
+	field cuwk_inv_no
+	field cuwk_type
+	field cuwk_dbt_no
+	field cuwk_date_of_inv
+	field cuwk_post_date
+	field cuwk_exch_rate
+	field cuwk_disc
+	field cuwk_cus_po_no
+	field cuwk_tax
+	field cuwk_freight
+	field cuwk_insurance
+	field cuwk_other_cost1
+	field cuwk_other_cost2
+	field cuwk_other_cost3
+	field cuwk_dd_oncost
+	field cuwk_exch_var
+	field cuwk_sos
+	field cuwk_restock_fee
+	field cuwk_item_levy
+	field cuwk_gst
+	field cuwk_narrative
+	field cuwk_tot_loc
+	field cuwk_tot_fx
+	field cuwk_gl_levy
+	field cuwk_gl_control
+	field cuwk_gl_acc_no
+	field cuwk_period_no
+	field cuwk_loc_amt
+	field cuwk_fx_amt
+	field cuwk_currency
+	field cuwk_stat_flag
+end
+

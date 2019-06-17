@@ -1,0 +1,12 @@
+#ifndef SCHEMA
+#define SCHEMA
+
+	/* This file is auto-generated. Alter at your own risk */
+
+#ifdef CCMAIN
+
+#else
+
+#endif	/* CCMAIN */
+
+#endif	/* SCHEMA */

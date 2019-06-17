@@ -1,0 +1,30 @@
+Customers Adjustments Menu (ARAJ)
+db_master
+Customer Menu. <a> (1,2)
+menu MENUSYS/db_master.mdf
+Enter Customers Journals. <a> (1,2)
+lp_chain~db_journal PID LPNO~db_percalc PID~
+Enter Customers Invoices. <a> (1,2)
+chain~db_allinp I PID~db_percalc PID~
+Enter Customers Credits. <a> (1,2)
+chain~db_allinp C PID~db_percalc PID~
+Enter Bank Transfers. <a> (1,2)
+cr_bktrsfr~LPNO~
+Maintain Invoice Payment Terms. <a> (1,2)
+chain~db_pt_adj PID~db_percalc PID~
+Maintain Invoice Exch. Rates. <a> (2,2)
+lp_chain~db_icexch LPNO PID~
+Maintain Delivery Address file. <a> (2,2)
+db_cdelinp~
+Maintain Credit Control Notes. <a> (2,2)
+db_crd_ctrol~
+Maintain Customers Item Codes. <a> (2,2)
+db_sk_maint~
+Maintain Head-office Customers. <a> (2,2)
+db_ho_inpt~
+((
+quadrant(6,6)
+quadrant(45,8)
+box(1,3,76,14)
+line(2,5,75)
+))

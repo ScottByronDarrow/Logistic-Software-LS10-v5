@@ -1,0 +1,16 @@
+Consolidations Menu (GLCO)
+gl_help
+General Ledger Menu. <a> (1,2)
+menu MENUSYS/gl_master.mdf
+Display Accounts by Company. <a> (1,2)
+gl_coaccdsp~
+Company Consolidation. <a> (1,2)
+gl_comp_cs~
+Remove Consolidated Company. <a> (1,2)
+gl_del_ccomp~
+((
+quadrant(17,6)
+quadrant(10,8)
+box(10,3,58,10)
+line(11,5,57)
+))

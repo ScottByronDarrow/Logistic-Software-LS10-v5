@@ -1,0 +1,68 @@
+{======================================================================
+|  Copyright (C) 1998 - 2002 LogisticSoftware
+|======================================================================
+| $Id: sch.arpoln,v 5.0 2002/05/07 10:16:41 scott Exp $
+|  Schema Name  : (sch.arpoln)
+|  Schema Desc  : (Archiving Copy - Purchase order detail lines)
+|----------------------------------------------------------------------
+| $Log: sch.arpoln,v $
+| Revision 5.0  2002/05/07 10:16:41  scott
+| Updated to bring version number to 5.0
+|
+| Revision 1.1  2002/04/30 02:28:46  scott
+| Update for new Archive modifications;
+|
+|=====================================================================}
+file	arpoln	
+
+field	arpoln_hhpo_hash			type	long
+field	arpoln_line_no				type	int
+field	arpoln_hhbr_hash			type	long			
+field	arpoln_hhum_hash			type	long
+field	arpoln_hhcc_hash			type	long
+field	arpoln_hhlc_hash			type	long
+field	arpoln_hhpl_hash			type	long				index	primary
+field	arpoln_hhpl_orig			type	long				
+field	arpoln_exch_rate			type	double
+field	arpoln_serial_no			type	char	25
+field	arpoln_container			type	char	15
+field	arpoln_cus_ord_ref			type	char	20		
+field	arpoln_qty_ord				type	float
+field	arpoln_qty_rec				type	float
+field	arpoln_pack_qty				type	float
+field	arpoln_chg_wgt				type	float
+field	arpoln_gross_wgt			type	float
+field	arpoln_cu_metre				type	float
+field	arpoln_reg_pc				type	float
+field	arpoln_disc_a				type	float
+field	arpoln_disc_b				type	float
+field	arpoln_disc_c				type	float
+field	arpoln_cumulative			type	int
+field	arpoln_grs_fgn_cst			type	double
+field	arpoln_fob_fgn_cst			type	double
+field	arpoln_fob_nor_cst			type	double
+field	arpoln_frt_ins_cst			type	double
+field	arpoln_duty					type	double
+field	arpoln_licence				type	double
+field	arpoln_lcost_load			type	double
+field	arpoln_land_cst				type	double
+field	arpoln_cat_code				type	char	11
+field	arpoln_item_desc			type	char	40
+field	arpoln_ship_no				type	long
+field	arpoln_case_no				type	int
+field	arpoln_hhso_hash			type	long
+field	arpoln_due_date				type	edate
+field	arpoln_fwd_date				type	edate
+field	arpoln_pur_status			type	char	1
+field	arpoln_status 				type	char	1
+field	arpoln_stat_flag			type	char	1
+field	arpoln_id_no				type	composite
+			arpoln_hhpo_hash,
+			arpoln_line_no										index	dups
+end
+{
+              =====================================
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+              =====================================
+			  SEE POLN - THIS IS AN EXACT COPY FOR ARCHIVING
+}

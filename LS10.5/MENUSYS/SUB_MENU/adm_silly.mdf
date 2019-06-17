@@ -1,0 +1,16 @@
+Software Engineering Misc Programs Menu (SUB)
+misc_help
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Software Engineering TimeZone. <a> (1,1)
+psl_tz~
+Software Engineering Clock. <a> (1,1)
+psl_clock~
+Fireworks. <a> (1,1)
+fireworks~
+Random Picture. <a> (1,1)
+psl_dumb~
+Not so Random Picture. <a> (1,1)
+psl_silly~
+((
+))

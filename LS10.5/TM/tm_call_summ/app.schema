@@ -1,0 +1,68 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/08 06:29:39 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/08 06:29:39  scott
+#	Updated to rebuild to bring inline with standard.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table tmsh
+	field tmsh_co_no
+	field tmsh_script_no
+	field tmsh_hhsh_hash
+	field tmsh_n_prmpt_no
+	field tmsh_desc
+end
+
+table tmsl
+	field tmsl_hhsh_hash
+	field tmsl_prmpt_no
+	field tmsl_desc
+end
+
+table tmcf
+	field tmcf_co_no
+	field tmcf_campaign_no
+	field tmcf_hhcf_hash
+	field tmcf_c_name1
+	field tmcf_c_name2
+end
+
+table tmch
+	field tmch_co_no
+	field tmch_call_no
+	field tmch_call_date
+	field tmch_hhpm_hash
+	field tmch_hhcf_hash
+	field tmch_hhop_hash
+	field tmch_hhsh_hash
+	field tmch_hhcl_hash
+	field tmch_io_flag
+	field tmch_cus_ord_ref
+	field tmch_ord_value
+	field tmch_stat_flag
+end
+
+table tmcl
+	field tmcl_hhcl_hash
+	field tmcl_line_no
+	field tmcl_hhsh_hash
+	field tmcl_prmpt_no
+	field tmcl_rep_no
+	field tmcl_rep1_text
+	field tmcl_rep2_text
+	field tmcl_stat_flag
+end
+

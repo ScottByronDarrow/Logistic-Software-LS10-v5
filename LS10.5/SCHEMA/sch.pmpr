@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pmpr,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pmpr)
+|  Schema Desc  : (Project Monitoring Prospects File )
+|----------------------------------------------------------------------
+| $Log: sch.pmpr,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:08  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:40  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file 	pmpr
+
+field	pmpr_prospect_no		type	char	6			index	primary
+field	pmpr_name   			type	char	40
+field	pmpr_adr1				type	char	40
+field	pmpr_adr2				type	char	40
+field	pmpr_adr3				type	char	40
+field	pmpr_phone_no			type	char	15
+field	pmpr_fax_no				type	char	15
+field	pmpr_sman_code			type	char	2	
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pmpr_prospect_no	-	Prospect Number.
+	pmpr_name    		-	Prospect Name.
+	pmpr_dl_adr1		-	address part one.
+	pmpr_dl_adr2		-	address part two.
+	pmpr_dl_adr3		-	address part three.
+	pmpr_phone_no		-	Phone number.
+	pmpr_fax_no			-	Fax number.
+	pmpr_sman_code		-	Salesman Number.
+}

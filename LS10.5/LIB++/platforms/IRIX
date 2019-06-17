@@ -1,0 +1,9 @@
+#
+# IRIX 5.3
+#
+CC				=	gcc
+CDBG			=	-Wall -g
+CXX				=	g++
+C++DBG			=	-Wall -g
+
+CXXFLAGS		=	${C++FLAGS}

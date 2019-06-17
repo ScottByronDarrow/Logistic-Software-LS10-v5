@@ -1,0 +1,83 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.srcr,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.srcr)
+|  Schema Desc  : (SeaRch file for Creditor. )
+|----------------------------------------------------------------------
+| $Log: sch.srcr,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:48  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	srcr
+
+field	srcr_co_no				type	char	2
+field	srcr_br_no				type	char	2
+field	srcr_crd_no				type	char	6
+field	srcr_hhsu_hash			type	long				index	primary
+field	srcr_acronym			type	char	9			index	dups
+field	srcr_type_code			type	char	6	
+field	srcr_contact_name		type	char	20	
+field	srcr_name				type	char	40
+
+field	srcr_crd_id				type	composite
+			srcr_co_no,
+			srcr_crd_no										index	dups
+field	srcr_crd_id2			type	composite
+			srcr_co_no,
+			srcr_br_no,
+			srcr_crd_no										index	dups
+
+field	srcr_acr_id				type	composite
+			srcr_co_no,
+			srcr_acronym									index	dups
+field	srcr_acr_id2			type	composite
+			srcr_co_no,
+			srcr_br_no,
+			srcr_acronym									index	dups
+
+field	srcr_sal_id				type	composite
+			srcr_co_no,
+			srcr_type_code									index	dups
+field	srcr_sal_id2			type	composite
+			srcr_co_no,
+			srcr_br_no,
+			srcr_type_code									index	dups
+
+field	srcr_cnt_id				type	composite
+			srcr_co_no,
+			srcr_contact_name								index	dups
+field	srcr_cnt_id2			type	composite
+			srcr_co_no,
+			srcr_br_no,
+			srcr_contact_name								index	dups
+
+field	srcr_des_id				type	composite
+			srcr_co_no,
+			srcr_name										index	dups
+field	srcr_des_id2			type	composite
+			srcr_co_no,
+			srcr_br_no,
+			srcr_name										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	srcr_co_no			-	Company Number.
+	srcr_br_no			-	Branch Number.
+	srcr_crd_no			-	Creditor Number.
+	srcr_hhsu_hash		-	Link to Supplier master file.
+	srcr_acronym		-	Supplier acronym.
+	srcr_type_code		-	Supplier type.
+	srcr_contact_name	-	Contact name
+	srcr_name			-	Supplier name.
+}

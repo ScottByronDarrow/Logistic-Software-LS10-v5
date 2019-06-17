@@ -1,0 +1,24 @@
+Marketing Master Menu (MARK)
+main_help
+Master Menu. <a> (1,2)
+menu MENUSYS/main.mdf
+Tele-Marketing. <a> (1,2)
+menu MENUSYS/tm_master.mdf
+Sales and Marketing Menu. <a> (1,2)
+menu MENUSYS/sa_market.mdf
+Sales Analysis. <a> (1,2)
+menu MENUSYS/sa_master.mdf
+Machine History. <a> (1,2)
+menu MENUSYS/mh_master.mdf
+Price Book. <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_pr_book.mdf
+((
+quadrant(25,6)
+quadrant(45,6)
+box(18,3,40,13)
+line(19,5,39)
+HEADING_ON
+TRAILER_ON
+FAST_ON
+SUB_ON
+))

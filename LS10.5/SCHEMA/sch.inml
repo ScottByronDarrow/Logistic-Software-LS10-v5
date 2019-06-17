@@ -1,0 +1,54 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inml,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inml)
+|  Schema Desc  : (Inventory Month end Log file)
+|----------------------------------------------------------------------
+| $Log: sch.inml,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inml
+
+field	inml_hhwh_hash			type	long
+field	inml_mend_date			type	edate
+field	inml_opening_stock		type	float
+field	inml_receipts			type	float
+field	inml_pur				type	float
+field	inml_issues				type	float
+field	inml_adj				type	float
+field	inml_sales				type	float
+field	inml_stake				type	float
+field	inml_closing_stock		type	float
+field	inml_stat_flag			type	char	1
+field	inml_id_no				type	comp
+			inml_hhwh_hash,
+			inml_mend_date									index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	inml_hhwh_hash		-	Link to incc record.
+	inml_mend_date		-	Month end date.        
+	inml_opening_stock	-	Opening stock.
+	inml_receipts		-	Receipts. ( transfers in )
+	inml_pur			-	Purchases.
+	inml_issues			-	Issues.	  ( transfers out )
+	inml_adj			-	Stock Adjustments.
+	inml_sales			-	Stock Sales.
+	inml_stake			-	Stock take frozen value.
+	inml_closing_stock	-	Closing Stock.
+	inml_stat_flag		-	Spare status flag.
+}

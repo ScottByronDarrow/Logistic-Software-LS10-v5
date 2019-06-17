@@ -1,0 +1,54 @@
+#
+################################################################################
+#	
+#	$Id
+#	$Log
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_crd_date        
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table suhd
+	field suhd_hhsu_hash      
+	field suhd_pid            
+	field suhd_cheq_no        
+	field suhd_hhsp_hash      
+	field suhd_narrative      
+	field suhd_date_payment   
+	field suhd_date_post      
+	field suhd_tot_amt_paid   
+	field suhd_loc_amt_paid   
+	field suhd_disc_taken     
+	field suhd_loc_disc_take  
+	field suhd_exch_variance  
+	field suhd_bank_id        
+	field suhd_pay_type       
+	field suhd_stat_flag      
+end
+
+table sumr
+	field sumr_co_no          
+	field sumr_est_no         
+	field sumr_crd_no         
+	field sumr_hhsu_hash      
+	field sumr_crd_name       
+	field sumr_acronym        
+	field sumr_curr_code      
+	field sumr_ctry_code      
+	field sumr_pay_terms      
+	field sumr_mtd_exp        
+	field sumr_ytd_exp        
+	field sumr_bo_curr        
+	field sumr_bo_per1        
+	field sumr_bo_per2        
+	field sumr_bo_per3        
+	field sumr_stat_flag      
+end

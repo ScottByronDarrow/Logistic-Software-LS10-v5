@@ -1,0 +1,72 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.odlt,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.odlt)
+|  Schema Desc  : (Overdue Letter File. )
+|----------------------------------------------------------------------
+| $Log: sch.odlt,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:01  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file odlt 
+
+field	odlt_co_no 			type	char	2    	index	dups
+field	odlt_letter_no			type	char	1	index	dups
+field	odlt_id_no			type	comp	
+		odlt_co_no,
+		odlt_letter_no					index	primary
+field	odlt_sig_name			type	char	20	index	dups
+field	odlt_sig_title			type	char	20
+field	odlt_print_flag			type	char	1
+field	odlt_line1			type	char	64
+field	odlt_line2			type	char	64
+field	odlt_line3			type	char	64
+field	odlt_line4			type	char	64
+field	odlt_line5			type	char	64
+field	odlt_line6			type	char	64
+field	odlt_line7			type	char	64
+field	odlt_line8			type	char	64
+field	odlt_line9			type	char	64
+field	odlt_line10			type	char	64
+field	odlt_line11			type	char	64
+field	odlt_line12			type	char	64
+field	odlt_line13			type	char	64
+field	odlt_line14			type	char	64
+field	odlt_line15			type	char	64
+field	odlt_line16			type	char	64
+field	odlt_line17			type	char	64
+field	odlt_line18			type	char	64
+field	odlt_line19			type	char	64
+field	odlt_line20			type	char	64
+field	odlt_line21			type	char	64
+field	odlt_line22			type	char	64
+field	odlt_line23			type	char	64
+field	odlt_line24			type	char	64
+field	odlt_line25			type	char	64
+field	odlt_line26			type	char	64
+field	odlt_line27			type	char	64
+field	odlt_line28			type	char	64
+field	odlt_line29			type	char	64
+field	odlt_line30			type	char	64
+field	odlt_stat_flag			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	odlt_co_no 		-	Company number.
+	odlt_letter_no		-	Letter number.
+	odlt_sig_name		-	Signatory Name.
+	odlt_sig_title		-	Signatory title.
+	odlt_print_flag		-	Print Flag.
+	odlt_line(x)		-	Line 1-30.
+}

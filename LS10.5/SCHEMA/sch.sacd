@@ -1,0 +1,47 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sacd,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.sacd)
+|  Schema Desc  : (Sales Call Detail file. )
+|----------------------------------------------------------------------
+| $Log: sch.sacd,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:19  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sacd 
+
+field	sacd_sacm_hash			type	long
+field	sacd_seq_no				type	int
+field	sacd_hhcu_hash			type	long
+field	sacd_call_in			type	long
+field	sacd_call_out			type	long
+field	sacd_act_code			type	char	2
+field	sacd_remarks			type	char	40
+field	sacd_id_no				type	composite
+			sacd_sacm_hash,
+			sacd_seq_no											index
+field	sacd_id_no2				type	composite
+			sacd_hhcu_hash,
+			sacd_seq_no											index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sacd_sacm_hash		-	Links sales call detail record to call header (sacm)
+	sacd_seq_no			-	Sequence number.
+	sacd_hhcu_hash		-	Link to customer master file (cumr)
+	sacd_call_in		-	Time when call was started.
+	sacd_call_out		-	Time when call ended.
+	sacd_act_code		-	Sales call code from lookup on activity file(saca)
+	sacd_remarks		-	General remarks related to the call.
+}

@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inph,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inph)
+|  Schema Desc  : (Price Book Header File. )
+|----------------------------------------------------------------------
+| $Log: sch.inph,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:31  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inph
+
+field	inph_co_no			type	char	2
+field	inph_this_page			type	int
+field	inph_id_no			type	composite
+		inph_co_no,
+		inph_this_page					index
+field	inph_hhph_hash			type	serial		index	primary
+field	inph_blank_page			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inph_co_no		-	Company number.
+	inph_this_page		-	Price book page number.
+	inph_hhph_hash		-	Unique serial number.
+	inph_blank_page		-	Blank page Y(es N(o
+}

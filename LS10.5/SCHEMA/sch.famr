@@ -1,0 +1,105 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.famr,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.famr)
+|  Schema Desc  : (Fixed Assets Master Record. )
+|----------------------------------------------------------------------
+| $Log: sch.famr,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:39  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file famr
+
+field	famr_co_no                   	type  char 2
+field	famr_ass_group                  type  char 5 
+field	famr_ass_no                  	type  char 5 
+field	famr_famr_hash                 	type  serial
+field	famr_ass_desc1                	type  char 40
+field	famr_ass_desc2                	type  char 40
+field	famr_ass_desc3                	type  char 40
+field	famr_ass_desc4                	type  char 40
+field	famr_pur_date                	type  edate
+field	famr_ass_life                	type  char	7
+field	famr_cost_price              	type  money  
+field	famr_disp_date           		type  edate
+field	famr_disp_price              	type  money 
+field	famr_gl_crd_acc              	type  char 16
+field	famr_gl_dbt_acc              	type  char 16
+field	famr_gl_ass_acc              	type  char 16
+field	famr_f_y_rule                	type  char 1
+field	famr_f_y_amt                 	type  money 
+field	famr_dep_rule                	type  char 1
+field	famr_max_deprec              	type  money
+field	famr_priv_use_tax         		type  float
+field	famr_tax_open_val      			type  money
+field	famr_tax_dtype               	type  char 1
+field	famr_tax_pa_flag           		type  char	1
+field	famr_tax_d_pc	            	type  float
+field	famr_tax_d_amt	            	type  money
+field	famr_int_open_val        		type  money
+field	famr_int_dtype                	type  char 1
+field	famr_int_pa_flag           		type  char	1
+field	famr_int_d_pc             		type  float
+field	famr_int_d_amt             		type  money
+field	famr_gl_updated               	type  edate
+field	famr_stat_flag               	type  char 1
+field	famr_id_no                 		type  composite 
+			famr_co_no, 
+			famr_ass_group,
+			famr_ass_no 									index primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		famr_co_no				-		Company number.
+		famr_ass_group			-		Asset Group code.
+		famr_ass_no				-		Asset number
+		famr_ass_desc1			-		Asset description line 1
+		famr_ass_desc2			-		Asset description line 2
+		famr_ass_desc3			-		Asset description line 3
+		famr_ass_desc4			-		Asset description line 4
+		famr_pur_date			-		Asset purchase date.
+		famr_ass_life			-		Life of asset in years. YYY:MM
+		famr_cost_price			-		Asset cost price.
+		famr_disp_date			-		Asset disposal date.
+		famr_disp_price			-		Asset disposal price.
+		famr_gl_crd_acc			-		Depreciation Provision account.
+		famr_gl_dbt_acc			-		Depreciation Expense account.
+		famr_gl_ass_acc			-		Disposal clearing account.
+		famr_f_y_rule			-		First Year rule
+											F - Full year
+											H - Half year
+											M - Month
+											A - One specified amount.
+		famr_f_y_amt			-		First year amount.
+		famr_max_deprec			-		Maximum depreciation amount.
+		famr_priv_use_tax		-		Private usage percent.
+		famr_tax_open_val		-		Tax opening value.
+		famr_tax_dtype			-		Tax Depreciation type
+											CP - Cost price (straight line)
+											DV - Diminishing Value.
+		famr_tax_pa_flag		-		P = Calculated on percentage.
+										A = Calculated on amount based on
+											asset live / amount / rule
+		famr_tax_d_pc			-		Tax Depreciation percent.
+		famr_int_open_val		-		Internal Opening Value
+		famr_int_dtype			-		Internal depreciation type
+											CP - Cost price (straight line)
+											DV - Diminishing Value.
+		famr_int_pa_flag		-		P = Calculated on percentage.
+										A = Calculated on amount based on
+											asset live / amount / rule
+		famr_int_d_pc			-		Internal depreciation percent.
+		famr_gl_updated			-		Date General ledger was last posted to.
+		famr_stat_flag 			-		Spare status flag.
+}

@@ -1,0 +1,499 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.0 2001/06/19 08:07:29 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:07:29  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:28:37  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/25 07:36:52  scott
+#	Updated to remove names pipe stuff created in NZ and placed generation of
+#	works order within program
+#	
+#	Revision 3.0  2000/10/10 12:15:31  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:58:42  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.3  2000/07/03 21:16:46  johno
+#	Added functionality for pc_wogen to allow creation of works orders by
+#	piping parameters to an invokation of pc_womaint.
+#	
+#	Revision 1.2  2000/02/18 04:27:29  scott
+#	Updated to add inmr_outer_size
+#	
+#	Revision 1.1  2000/02/17 23:44:53  scott
+#	S/C LSANZ-16009  / LSDI-2532
+#	Updated to make use of environment PO_UOM_DEFAULT created for purchase order entry. Added app.schema while working on Service Call.
+#	
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_est_short       
+	field comm_cc_no          
+	field comm_cc_name          
+	field comm_cc_short          
+	field comm_inv_date       
+end
+
+table comr
+	field comr_co_no          
+	field comr_nx_po_no       
+	field comr_nx_po_no_fgn   
+	field comr_contingency    
+	field comr_po_sic1        
+	field comr_po_sic2        
+	field comr_po_sic3        
+end
+
+table ccmr
+	field ccmr_co_no          
+	field ccmr_est_no         
+	field ccmr_cc_no          
+	field ccmr_hhcc_hash      
+	field ccmr_nx_wo_num      
+	field ccmr_name          
+	field ccmr_acronym          
+end
+
+table esmr
+	field esmr_co_no          
+	field esmr_est_no         
+	field esmr_est_name         
+	field esmr_short_name
+	field esmr_nx_pur_ord_no  
+	field esmr_nx_pur_fgn     
+	field esmr_stat_flag      
+end
+
+table exsi
+	field exsi_co_no          
+	field exsi_inst_code      
+	field exsi_inst_text      
+	field exsi_stat_flag      
+end
+
+table ffwk
+	field ffwk_hhcc_hash      
+	field ffwk_hhbr_hash      
+	field ffwk_hhsu_hash      
+	field ffwk_hhpo_hash      
+	field ffwk_hhwo_hash
+	field ffwk_filename       
+	field ffwk_sort           
+	field ffwk_crd_no         
+	field ffwk_review_pd      
+	field ffwk_wks_demand     
+	field ffwk_sugg_qty       
+	field ffwk_order_qty      
+	field ffwk_stat_flag      
+	field ffwk_source
+end
+
+table inis
+	field inis_co_no          
+	field inis_br_no          
+	field inis_wh_no          
+	field inis_hhbr_hash      
+	field inis_hhsu_hash      
+	field inis_sup_part       
+	field inis_sup_priority   
+	field inis_hhis_hash      
+	field inis_fob_cost       
+	field inis_lcost_date     
+	field inis_duty           
+	field inis_licence        
+	field inis_sup_uom        
+	field inis_pur_conv       
+	field inis_min_order      
+	field inis_norm_order     
+	field inis_ord_multiple   
+	field inis_pallet_size    
+	field inis_lead_time      
+	field inis_sea_time       
+	field inis_air_time       
+	field inis_lnd_time       
+	field inis_dflt_lead      
+	field inis_weight         
+	field inis_volume         
+	field inis_stat_flag      
+end
+
+table inld
+	field inld_hhis_hash      
+	field inld_ord_date       
+	field inld_sup_date       
+end
+
+table inmr
+	field inmr_co_no          
+	field inmr_item_no        
+	field inmr_hhbr_hash      
+	field inmr_hhsi_hash      
+	field inmr_alpha_code
+	field inmr_supercession   
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class          
+	field inmr_category          
+	field inmr_description    
+	field inmr_description2
+	field inmr_sale_unit      
+	field inmr_buygrp         
+	field inmr_safety_stock   
+	field inmr_std_uom        
+	field inmr_alt_uom        
+	field inmr_dec_pt        
+	field inmr_outer_size        
+	field inmr_source
+	field inmr_dflt_bom
+	field inmr_dflt_rtg
+end
+
+table pocf
+	field pocf_co_no          
+	field pocf_code           
+	field pocf_description    
+	field pocf_load_type      
+	field pocf_freight_load   
+	field pocf_lead_time      
+	field pocf_last_update    
+end
+
+table pocr
+	field pocr_co_no          
+	field pocr_code           
+	field pocr_description    
+	field pocr_ex1_factor     
+end
+
+table podt
+	field podt_co_no          
+	field podt_code           
+	field podt_description    
+	field podt_duty_type      
+	field podt_im_duty        
+end
+
+table pohr
+	field pohr_co_no          
+	field pohr_br_no          
+	field pohr_type           
+	field pohr_hhsu_hash      
+	field pohr_pur_ord_no     
+	field pohr_hhpo_hash      
+	field pohr_hhsh_hash      
+	field pohr_hhdd_hash      
+	field pohr_date_raised    
+	field pohr_due_date       
+	field pohr_conf_date      
+	field pohr_contact        
+	field pohr_app_code       
+	field pohr_op_id          
+	field pohr_time_create    
+	field pohr_date_create    
+	field pohr_req_usr        
+	field pohr_reason         
+	field pohr_stdin1         
+	field pohr_stdin2         
+	field pohr_stdin3         
+	field pohr_delin1         
+	field pohr_delin2         
+	field pohr_delin3         
+	field pohr_ship1_no       
+	field pohr_ship2_no       
+	field pohr_ship3_no       
+	field pohr_curr_code      
+	field pohr_curr_rate      
+	field pohr_term_order     
+	field pohr_sup_term_pay   
+	field pohr_bnk_term_pay   
+	field pohr_pay_date       
+	field pohr_fgn_total      
+	field pohr_fgn_outstand   
+	field pohr_ship_method    
+	field pohr_drop_ship      
+	field pohr_status         
+	field pohr_stat_flag      
+	field pohr_sup_type       
+end
+
+table polh
+	field polh_co_no          
+	field polh_est_no         
+	field polh_lic_cate       
+	field polh_lic_no         
+	field polh_hhlc_hash      
+	field polh_ap_lic_rate    
+end
+
+table poln
+	field poln_hhpo_hash      
+	field poln_line_no        
+	field poln_hhbr_hash      
+	field poln_hhum_hash      
+	field poln_hhcc_hash      
+	field poln_hhlc_hash      
+	field poln_serial_no      
+	field poln_qty_ord        
+	field poln_qty_rec        
+	field poln_reg_pc         
+	field poln_disc_a         
+	field poln_disc_b         
+	field poln_disc_c         
+	field poln_cumulative     
+	field poln_grs_fgn_cst    
+	field poln_fob_fgn_cst    
+	field poln_fob_nor_cst    
+	field poln_frt_ins_cst    
+	field poln_duty           
+	field poln_licence        
+	field poln_lcost_load     
+	field poln_land_cst       
+	field poln_cat_code       
+	field poln_item_desc      
+	field poln_due_date       
+	field poln_pur_status     
+	field poln_status         
+	field poln_stat_flag      
+end
+
+table sumr
+	field sumr_co_no          
+	field sumr_est_no         
+	field sumr_crd_no         
+	field sumr_hhsu_hash      
+	field sumr_crd_name       
+	field sumr_cont_name      
+	field sumr_curr_code      
+	field sumr_ctry_code      
+	field sumr_pay_terms      
+	field sumr_sic1           
+	field sumr_sic2           
+	field sumr_sic3           
+	field sumr_ship_method    
+end
+
+table inum
+	field inum_uom_group      
+	field inum_hhum_hash      
+	field inum_uom            
+	field inum_desc           
+	field inum_cnv_fct        
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_ff_option
+	field incc_allow_repl
+	field incc_abc_code
+	field incc_abc_update
+	field incc_dflt_bom
+	field incc_dflt_rtg
+	field incc_acc_mlt
+end
+
+table bmms
+	field bmms_co_no
+	field bmms_hhbr_hash
+	field bmms_alt_no
+	field bmms_line_no
+	field bmms_cons
+	field bmms_mabr_hash
+	field bmms_uom
+	field bmms_matl_qty
+	field bmms_matl_wst_pc
+	field bmms_instr_no
+	field bmms_iss_seq
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_std_batch
+	field inei_min_batch
+	field inei_max_batch
+	field inei_prd_multiple
+	field inei_hndl_class
+	field inei_hzrd_class
+	field inei_std_cost
+	field inei_dflt_bom
+	field inei_dflt_rtg
+	field inei_last_cost
+end
+
+table pcbp
+	field pcbp_hhgr_hash
+	field pcbp_seq_no
+	field pcbp_hhbr_hash
+	field pcbp_qty
+	field pcbp_act_qty_in
+	field pcbp_hhwo_hash
+end
+
+table pcln
+	field pcln_hhgr_hash
+	field pcln_seq_no
+	field pcln_hhwc_hash
+	field pcln_hhrs_hash
+	field pcln_rate
+	field pcln_ovhd_var
+	field pcln_ovhd_fix
+	field pcln_setup
+	field pcln_run
+	field pcln_clean
+	field pcln_qty_rsrc
+	field pcln_instr_no
+	field pcln_yld_clc
+	field pcln_can_split
+	field pcln_line_no
+	field pcln_amt_recptd
+	field pcln_act_qty_in
+	field pcln_hhwo_hash
+end
+
+table pcms
+	field pcms_co_no
+	field pcms_hhbr_hash
+	field pcms_alt_no
+	field pcms_line_no
+	field pcms_cons
+	field pcms_mabr_hash
+	field pcms_uom
+	field pcms_matl_qty
+	field pcms_matl_wst_pc
+	field pcms_instr_no
+	field pcms_iss_seq
+	field pcms_uniq_id
+	field pcms_act_qty_in
+	field pcms_qty_issued
+	field pcms_hhwo_hash
+end
+
+table pcwo
+	field pcwo_co_no
+	field pcwo_br_no
+	field pcwo_wh_no
+	field pcwo_req_br_no
+	field pcwo_req_wh_no
+	field pcwo_rec_br_no
+	field pcwo_rec_wh_no
+	field pcwo_order_no
+	field pcwo_hhwo_hash
+	field pcwo_reqd_date
+	field pcwo_rtg_seq
+	field pcwo_priority
+	field pcwo_op_id
+	field pcwo_create_time
+	field pcwo_create_date
+	field pcwo_mfg_date
+	field pcwo_hhbr_hash
+	field pcwo_bom_alt
+	field pcwo_rtg_alt
+	field pcwo_hhcc_hash
+	field pcwo_prod_qty
+	field pcwo_act_prod_qty
+	field pcwo_act_rej_qty
+	field pcwo_order_status
+	field pcwo_batch_no
+	field pcwo_stat_flag
+end
+
+table rgbp
+	field rgbp_hhgr_hash
+	field rgbp_seq_no
+	field rgbp_hhbr_hash
+	field rgbp_qty
+end
+
+table rghr
+	field rghr_co_no
+	field rghr_br_no
+	field rghr_hhbr_hash
+	field rghr_alt_no
+	field rghr_hhgr_hash
+end
+
+table rgln
+	field rgln_hhgr_hash
+	field rgln_seq_no
+	field rgln_hhwc_hash
+	field rgln_hhrs_hash
+	field rgln_rate
+	field rgln_ovhd_var
+	field rgln_ovhd_fix
+	field rgln_setup
+	field rgln_run
+	field rgln_clean
+	field rgln_qty_rsrc
+	field rgln_instr_no
+	field rgln_yld_clc
+	field rgln_can_split
+end
+
+table insp
+	field insp_hhsu_hash      
+	field insp_hhbr_hash      
+	field insp_qty_brk1       
+	field insp_qty_brk2       
+	field insp_qty_brk3       
+	field insp_qty_brk4       
+	field insp_qty_brk5       
+	field insp_price1         
+	field insp_price2         
+	field insp_price3         
+	field insp_price4         
+	field insp_price5         
+end
+
+table suds
+	field suds_hhsu_hash      
+	field suds_buy_group      
+	field suds_reg_pc         
+	field suds_qty_brk1       
+	field suds_qty_brk2       
+	field suds_qty_brk3       
+	field suds_qty_brk4       
+	field suds_qty_brk5       
+	field suds_qty_brk6       
+	field suds_disca_pc1      
+	field suds_disca_pc2      
+	field suds_disca_pc3      
+	field suds_disca_pc4      
+	field suds_disca_pc5      
+	field suds_disca_pc6      
+	field suds_discb_pc1      
+	field suds_discb_pc2      
+	field suds_discb_pc3      
+	field suds_discb_pc4      
+	field suds_discb_pc5      
+	field suds_discb_pc6      
+	field suds_discc_pc1      
+	field suds_discc_pc2      
+	field suds_discc_pc3      
+	field suds_discc_pc4      
+	field suds_discc_pc5      
+	field suds_discc_pc6      
+	field suds_cumulative     
+	field suds_anticipated    
+end

@@ -1,0 +1,32 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/12 05:15:10 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/12 05:15:10  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table qabs
+	field qabs_co_no
+	field qabs_buygrp
+	field qabs_line_no
+	field qabs_desc
+	field qabs_stat_flag
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+end
+

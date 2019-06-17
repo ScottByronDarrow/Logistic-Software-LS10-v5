@@ -1,0 +1,7 @@
+#
+# IRIX 5.3
+#
+CXX				=	g++
+LD				=	g++
+CXXDBG			=	-Wall -g
+LDFLAGS			=	-g

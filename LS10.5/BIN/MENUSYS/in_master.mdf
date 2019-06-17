@@ -1,0 +1,34 @@
+Direct Invoicing Menu (INMR)
+invoices_help
+Sales Menu <a> (1,2)
+menu MENUSYS/main_sale.mdf
+Direct Invoices. <a> (1,1)
+so_invoice~N~X~I~so_invoice.s~
+Display Invoices. <a> (1,2)
+so_invdisp~N~7~I~so_invoice.s~
+Direct Credits. <a> (1,1)
+so_credit~N~X~so_credit.s~
+Display Credits. <a> (1,2)
+so_crddisp~N~7~so_credit.s~
+Customer Collection Notes. <a> (1,2)
+pmenu MENUSYS/SUB_MENU/so_ccn.mdf
+Printing & Posting Menu. <a> (1,2)
+menu MENUSYS/in_report.mdf
+Maintain Invoice Ship details. <a> (2,2)
+so_sdmaint~I~4~4~
+Print Invoice Audit (ALL). <a> (2,1)
+lp_chain~warning "PRINT INVOICE AUDIT (ALL)"~so_audit LPNO B "ALL  "~
+Print Invoice Audit (By Batch). <a> (2,2)
+lp_chain~warning "PRINT  INVOICE  AUDIT"~so_audit.i~
+Missing Invoice Maintenance. <a> (2,1)
+so_mimaint~
+Missing Invoice Report. <a> (2,2)
+so_miss_inv~LPNO~
+Display Unposted Invoices/Credits. <a> (2,2)
+so_batch_chk~7X6543210~
+((
+quadrant(7,6)
+quadrant(42,8)
+box(1,3,76,14)
+line(2,5,75)
+))

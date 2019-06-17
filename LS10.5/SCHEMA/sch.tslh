@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tslh,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.tslh)
+|  Schema Desc  : (Tele-Sales Letter Header file. )
+|----------------------------------------------------------------------
+| $Log: sch.tslh,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:37  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tslh
+
+field	tslh_co_no			type	char	2
+field	tslh_let_code			type	char	10
+field	tslh_let_desc			type	char	40
+field	tslh_hhlh_hash			type	serial		index	
+field	tslh_lett_type			type	char	1
+field	tslh_id_no			type	composite
+		tslh_co_no,
+		tslh_let_code					index	primary
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tslh_co_no		-	Company number.
+	tslh_let_code		-	Letter code.
+	tslh_let_desc		-	Letter desc.
+	tslh_hhlh_hash		-	Unique Serial field.
+	tslh_lett_type		-	N - Normal mailer.
+					F - Follow Up mailer - letter history is
+					    stored in tsls.
+					L - Label Format Definition.
+}

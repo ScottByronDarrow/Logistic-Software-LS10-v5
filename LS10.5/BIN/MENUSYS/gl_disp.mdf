@@ -1,0 +1,22 @@
+Account Displays (GLDS)
+gl_help
+General Ledger Menu. <a> (1,2)
+menu MENUSYS/gl_master.mdf
+Display Individual Accounts. <a> (1,2)
+gl_accdsp~
+Display/Print Accounts Transactions. <a> (1,2)
+gl_tranlst~
+Display/Print Summary Account Listing. <a> (1,2)
+gl_acclst~
+Display/Print General Ledger trial balance. <a> (1,2)
+gl_allrept~
+Display Accounts by Company. <a> (1,2)
+gl_coaccdsp~
+Display/Print Chart of Accounts. <a> (1,1)
+gl_chartdsp~
+((
+quadrant(17,6)
+quadrant(10,8)
+box(10,3,58,15)
+line(11,5,57)
+))

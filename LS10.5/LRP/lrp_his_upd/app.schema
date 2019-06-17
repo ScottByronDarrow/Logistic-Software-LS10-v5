@@ -1,0 +1,106 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:07:24 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:07:24  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:28:33  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/24 01:20:36  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_inv_date
+end
+
+table ffhs
+	field ffhs_hhbr_hash
+	field ffhs_hhcc_hash
+	field ffhs_per1
+	field ffhs_per2
+	field ffhs_per3
+	field ffhs_per4
+	field ffhs_per5
+	field ffhs_per6
+	field ffhs_per7
+	field ffhs_per8
+	field ffhs_per9
+	field ffhs_per10
+	field ffhs_per11
+	field ffhs_per12
+	field ffhs_per13
+	field ffhs_per14
+	field ffhs_per15
+	field ffhs_per16
+	field ffhs_per17
+	field ffhs_per18
+	field ffhs_per19
+	field ffhs_per20
+	field ffhs_per21
+	field ffhs_per22
+	field ffhs_per23
+	field ffhs_per24
+end
+
+table ffdm
+	field ffdm_hhbr_hash
+	field ffdm_hhcc_hash
+	field ffdm_date
+	field ffdm_type
+	field ffdm_qty
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_c_1
+	field incc_c_2
+	field incc_c_3
+	field incc_c_4
+	field incc_c_5
+	field incc_c_6
+	field incc_c_7
+	field incc_c_8
+	field incc_c_9
+	field incc_c_10
+	field incc_c_11
+	field incc_c_12
+	field incc_stat_flag
+end
+
+table intr
+	field intr_co_no
+	field intr_br_no
+	field intr_hhbr_hash
+	field intr_hhcc_hash
+	field intr_type
+	field intr_date
+	field intr_qty
+end
+

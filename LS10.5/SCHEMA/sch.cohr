@@ -1,0 +1,251 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cohr,v 5.2 2001/12/11 01:56:36 scott Exp $
+|  Schema Name  : (sch.cohr)
+|  Schema Desc  : (Customer P-slip/ Invoice/Credit Header File. )
+|----------------------------------------------------------------------
+| $Log: sch.cohr,v $
+| Revision 5.2  2001/12/11 01:56:36  scott
+| Updated to add sales order number to coln (used as reference when soln/sohr removed)
+| Updated to add link to works order file.
+| Updated archive files to match cohr/coln
+|
+| Revision 5.1  2001/08/07 00:07:41  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cohr
+field	cohr_co_no          type	char	2
+field	cohr_br_no          type	char	2
+field	cohr_dp_no          type	char	2
+field	cohr_inv_no         type	char	8
+field	cohr_app_inv_no     type	char	8			index	dups
+field	cohr_hhcu_hash      type	long				index	dups
+field	cohr_chg_hhcu_hash	type	long				index	dups
+field	cohr_type           type	char	1
+field	cohr_cont_no        type	char	6
+field	cohr_drop_ship      type	char	1
+field	cohr_hhds_hash      type	long				index	dups
+field	cohr_cus_ord_ref    type	char	20
+field	cohr_chg_ord_ref    type	char	20
+field	cohr_ord_ref        type	char	16
+field	cohr_grn_no        	type	char	20
+field	cohr_cons_no        type	char	16
+field	cohr_del_zone  	    type	char	6
+field	cohr_del_req  	    type	char	1
+field	cohr_del_date  	    type	edate
+field	cohr_asm_req  	    type	char	1
+field	cohr_asm_date  	    type	edate
+field	cohr_asm_hash  	    type	long
+field	cohr_s_timeslot	    type	char	1
+field	cohr_e_timeslot	    type	char	1
+field	cohr_carr_code      type	char	4
+field	cohr_carr_area      type	char	2
+field	cohr_no_cartons     type	integer
+field	cohr_wgt_per_ctn    type	double
+field	cohr_no_kgs         type	float
+field	cohr_hhso_hash      type	long
+field	cohr_hhco_hash      type	serial			index
+field	cohr_frei_req       type	char	1
+field	cohr_date_raised    type	edate
+field	cohr_date_required  type	edate
+field	cohr_tax_code       type	char	1
+field	cohr_tax_no         type	char	15
+field	cohr_area_code      type	char	2
+field	cohr_sale_code      type	char	2
+field	cohr_op_id          type	char	14
+field	cohr_time_create    type	char	5
+field	cohr_date_create    type	edate
+field	cohr_gross          type	money
+field	cohr_freight        type	money
+field	cohr_insurance      type	money
+field	cohr_other_cost_1   type	money
+field	cohr_other_cost_2   type	money
+field	cohr_other_cost_3   type	money
+field	cohr_tax            type	money
+field	cohr_gst            type	money
+field	cohr_disc           type	money
+field	cohr_deposit        type	money
+field	cohr_ex_disc        type	money
+field	cohr_erate_var      type	money
+field	cohr_sos            type	money
+field	cohr_item_levy      type	money
+field	cohr_exch_rate      type	double
+field	cohr_fix_exch       type	char	1
+field	cohr_batch_no       type	char	5			index	dups
+field	cohr_dl_name        type	char	40
+field	cohr_dl_add1        type	char	40
+field	cohr_dl_add2        type	char	40
+field	cohr_dl_add3        type	char	40
+field	cohr_din_1          type	char	60
+field	cohr_din_2          type	char	60
+field	cohr_din_3          type	char	60
+field	cohr_pay_type       type	char	1
+field	cohr_pay_terms      type	char	40
+field	cohr_sell_terms     type	char	3
+field	cohr_ins_det        type	char	30
+field	cohr_pri_type       type	char	1
+field	cohr_pri_break      type	char	1
+field	cohr_ord_type       type	char	1
+field	cohr_prt_price      type	char	1
+field	cohr_status         type	char	1
+field	cohr_stat_flag      type	char	1
+field	cohr_ps_print       type	char	1
+field	cohr_ps_print_no    type	int
+field	cohr_inv_print      type	char	1
+field	cohr_ccn_print      type	char	1
+field	cohr_printing       type	char	1
+field	cohr_hhtr_hash      type	long					index	dups
+field	cohr_load_flag      type	char	1
+field	cohr_wrmr_hash      type	long
+field   cohr_pos_inv_no     type    char	 10
+field   cohr_pos_tran_type  type    int
+field	cohr_id_no          type	composite
+			cohr_co_no,
+			cohr_br_no,
+			cohr_hhcu_hash,
+			cohr_inv_no,
+			cohr_type											index
+field	cohr_id_no2         type	composite
+			cohr_co_no,
+			cohr_br_no,
+			cohr_type,
+			cohr_inv_no											index
+field	cohr_id_no3         type	composite
+			cohr_co_no,
+			cohr_br_no,
+			cohr_type,
+			cohr_inv_print,
+			cohr_inv_no											index
+field	cohr_id_no4         type	composite
+			cohr_co_no,
+			cohr_br_no,
+			cohr_type,
+			cohr_ps_print,
+			cohr_inv_no											index
+field	cohr_id_no5         type	composite
+			cohr_co_no,
+			cohr_br_no,
+			cohr_type,
+			cohr_date_raised,
+			cohr_dp_no,
+			cohr_inv_no											index
+field	cohr_id_no6         type	composite
+			cohr_co_no,
+			cohr_br_no,
+			cohr_dp_no,
+			cohr_date_raised,
+			cohr_type											index	dups
+field	cohr_up_id          type	composite
+			cohr_co_no,
+			cohr_br_no,
+			cohr_type,
+			cohr_stat_flag										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cohr_co_no			-	Company Number.
+	cohr_br_no			-	Branch Number.
+	cohr_dp_no			-	Department number.
+	cohr_inv_no			-	Invoice number.
+	cohr_app_inv_no		-	Applied to Invoice Number.
+	cohr_hhcu_hash		-	Link to customer master file ( cumr )
+	cohr_chg_hhcu_hash	-	Link to customer master file (cumr) for charge to
+	cohr_type			-	Transaction Type
+								P(acking slip)
+								I(invoice)
+								C(redit)
+								S(tanding Invoices)
+	cohr_cont_no		-   Contract Number as entered in SOP
+	cohr_drop_ship		-   To indicate whether this is a drop shipment
+							or not "Y" or "N"
+	cohr_hhds_hash		-	Link to direct delivery shipment file ( ddsh )
+	cohr_cus_ord_ref	-	Customer Order Ref.
+	cohr_chg_ord_ref	-	Charge to Customer Order Ref.
+	cohr_ord_ref		-	Order Ref.
+	cohr_cons_no		-	Consignment number.
+	cohr_del_zone		-	Delivery Zone. (See trzm file)
+	cohr_del_req  	    -	Delivery required. (Yes/No)
+	cohr_del_date		-	Delivery date.
+	cohr_asm_req  	    -	Assemby required. (Yes/No)
+	cohr_asm_date  	    -	Assembly date.
+	cohr_asm_hash      	-	Same as cohr_hhtr_hash.
+						-	Required as delivery and assembly may occure on 
+						-	different loadings.
+	cohr_s_timeslot		-	Delivery start time slot (See trzt file)
+	cohr_e_timeslot		-	Delivery start time slot (See trzt file)
+	cohr_carr_code		-	Carrier Code.
+	cohr_carr_area		-	Carrier Area Code.
+	cohr_no_cartons		-	Number of Cartons.
+	cohr_no_kgs			-	Number of Kgs.
+	cohr_hhso_hash		-	Link to origional Sales order.
+	cohr_hhco_hash		-	Unique serial hash for cohr.
+	cohr_frei_req		-	Freight Required Flag. Y(es) / N(o).
+	cohr_date_raised	-	Date Raised.
+	cohr_date_required	-	Date Required.
+	cohr_tax_code		-	Tax Code.
+								A - Tax Exempt.
+								B - Tax Your Care.
+								C - Taxable.
+								D - Taxed at Absolute amount.
+	cohr_tax_no			-	Tax Number.
+	cohr_area_code		-	Area Code. ( Lookup on exaf ).
+	cohr_sale_code		- 	Salesman Code. ( Lookup on exsf ).
+	cohr_op_id			-	Operator ID.
+	cohr_time_create	-	Time Created.
+	cohr_date_create	-	Date Created.
+	cohr_gross			-	Gross Value.
+	cohr_freight		-	Freight Amount.
+	cohr_insurance		-	Insurance Amount.
+	cohr_other_cost_1	-	Other Cost 1.
+	cohr_other_cost_2	-	Other Cost 2.
+	cohr_other_cost_3	-	Other Cost 3.
+	cohr_tax			-	Tax Amount.
+	cohr_gst			-	GST Amount.
+	cohr_disc			-	Discount Amount.
+	cohr_deposit		-	Deposit.
+	cohr_ex_disc		-	Extra Discount Amount.
+	cohr_erate_var		-	Exchange rate variation Amount.
+	cohr_sos			-	Small Order Surcharge Amount.
+	cohr_exch_rate		-	Exchange Rate
+	cohr_fix_exch		-	Fixed exchange rate flag. Y(es) / N(o).
+	cohr_batch_no		-	Batch number.
+	cohr_dl_name		-	Delivery Name.
+	cohr_dl_add1		-	Delivery Address Part 1.
+	cohr_dl_add2		-	Delivery Address Part 2.
+	cohr_dl_add3		-	Delivery Address Part 3.
+	cohr_din_1			-	Delivery instructions Part 1.
+	cohr_din_2			-	Delivery instructions Part 2.
+	cohr_din_3			-	Delivery instructions Part 3.
+	cohr_pay_type		-	Specically used for On-line invoicing
+							C	- Cash
+							R	- Credit card
+							F	- Finance company
+							H	- Charge
+	cohr_pay_terms		-	Payment Terms.
+	cohr_sell_terms		-	Sell Terms.
+	cohr_ins_det		-	Insurance Details.
+	cohr_pri_type		-	Price Type. 1-5 from inmr_priceX.
+	cohr_pri_break		-	Price Break. ( Not Used )
+	cohr_ord_type		-	Order Type. D(omestic) E(xport).
+	cohr_prt_price		-	Print Pricing Details. Y(es) N(o)
+	cohr_status			-	Status flag. ( Not Used ).
+	cohr_stat_flag		-	Posting flag.
+	cohr_ps_print		-	Packing slip printed. Y(es) N(o).
+	cohr_inv_print		-	Invoice printed. Y(es) N(o).
+	cohr_ccn_print		-	Customer collection note printed. Y(es) N(o).
+	cohr_printing		-	Y - Printing, Other - Not printing.
+}

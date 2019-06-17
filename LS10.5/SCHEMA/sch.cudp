@@ -1,0 +1,62 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cudp,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cudp)
+|  Schema Desc  : (Department Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.cudp,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:28  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file cudp 
+
+field	cudp_co_no			type	char	2	index	dups
+field	cudp_br_no			type	char	2
+field	cudp_dp_no			type	char	2
+field	cudp_dp_name		type	char	40
+field	cudp_dp_short		type	char	15
+field	cudp_location		type	char	40
+field	cudp_csh_pref		type	char	2
+field	cudp_chg_pref		type	char	2
+field	cudp_crd_pref		type	char	2
+field	cudp_man_pref		type	char	2
+field	cudp_nx_chg_no 		type	long
+field	cudp_nx_csh_no		type	long
+field	cudp_nx_crd_no		type	long
+field	cudp_nx_man_no		type	long
+field	cudp_nx_sav_no		type	long
+field	cudp_stat_flag		type	char	1
+field	cudp_id_no			type	comp
+			cudp_co_no,
+			cudp_br_no,
+			cudp_dp_no					index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cudp_co_no			-	Company number.
+	cudp_br_no			-	Branch Number. 
+	cudp_dp_no			-	Department Number.
+	cudp_dp_name		-	Department name.
+	cudp_dp_short		-	Department short name.
+	cudp_location		-	Location of Department ( Text only )
+	cudp_csh_pref		-	Cash invoices prefix.
+	cudp_chg_pref		-	Charge invoice prefix
+	cudp_crd_pref		-	Credit note prefix
+	cudp_man_pref		-	Manual Invoice prefix
+	cudp_nx_chg_inv		-	Next charge invoice no
+	cudp_nx_csh_no		-	Next Cash invoice no
+	cudp_nx_crd_no		-	Next Credit note No.
+	cudp_nx_man_no		-	Next Manual Invoice No.
+	cudp_stat_flag		-	Spare status flag.
+}

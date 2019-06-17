@@ -1,0 +1,64 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.arpcwo,v 5.0 2002/05/07 10:16:40 scott Exp $
+|  Schema Name  : (sch.arpcwo)
+|  Schema Desc  : (Archive copy of Production Control Works Order File
+|----------------------------------------------------------------------
+| $Log: sch.arpcwo,v $
+| Revision 5.0  2002/05/07 10:16:40  scott
+| Updated to bring version number to 5.0
+|
+| Revision 1.3  2002/05/07 02:49:35  scott
+| Updates for new archiving system
+|
+| Revision 1.2  2002/05/02 04:26:49  scott
+| Added index
+|
+| Revision 1.1  2002/04/29 07:48:47  scott
+| Update for new Archive modifications;
+|
+|=====================================================================}
+file	arpcwo	
+
+field	arpcwo_co_no			type	char	2
+field	arpcwo_br_no			type	char	2
+field	arpcwo_wh_no			type	char	2
+field	arpcwo_order_no			type	char	7
+field	arpcwo_req_br_no		type	char	2
+field	arpcwo_req_wh_no		type	char	2
+field	arpcwo_rec_br_no		type	char	2
+field	arpcwo_rec_wh_no		type	char	2
+field	arpcwo_hhwo_hash		type	long				index	dups
+field	arpcwo_reqd_date		type	edate
+field	arpcwo_rtg_seq			type	integer
+field	arpcwo_priority			type	integer
+field	arpcwo_op_id			type	char	14
+field	arpcwo_create_time		type	char	5
+field	arpcwo_create_date		type	edate
+field	arpcwo_mfg_date			type	edate	
+field	arpcwo_hhbr_hash		type	long			
+field	arpcwo_bom_alt			type	int
+field	arpcwo_rtg_alt			type	int
+field	arpcwo_hhcc_hash		type	long
+field	arpcwo_prod_qty			type	float
+field	arpcwo_act_prod_q  		type	float
+field	arpcwo_act_rej_q  		type	float
+field	arpcwo_order_stat  		type	char	1
+field	arpcwo_batch_no			type	char	10
+field	arpcwo_hhsl_hash		type	long		index	dups
+field	arpcwo_stat_flag		type	char	1
+field	arpcwo_id_no			type	composite
+			arpcwo_co_no,
+			arpcwo_br_no,
+			arpcwo_wh_no,
+			arpcwo_order_no							index	
+end
+
+{
+
+			=====================================
+			| LOGISTIC SCHEMA COMMENTS SECTION. |
+			=====================================
+			SEE PCWO FOR DETAILS.
+}

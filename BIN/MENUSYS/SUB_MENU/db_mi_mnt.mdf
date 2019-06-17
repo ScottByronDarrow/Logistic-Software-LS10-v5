@@ -1,0 +1,24 @@
+Customers Maintenance Menu (SUB)
+db_help
+Customers Maintenance Menu. <a> (1,1)
+menu MENUSYS/db_maint.mdf
+Maintain Delivery Address file. <a> (1,1)
+db_cdelinp~
+Maintain Credit Control Notes. <a> (1,1)
+db_crd_ctrol~
+Maintain Currency details. <a> (1,1)
+po_mnt_inp~C~
+Maintain Country / Freight details. <a> (1,1)
+po_mnt_inp~F~
+Maintain Statement Messages. <a> (1,1)
+db_stmtinp~S~
+Maintain Head-office Customers. <a> (1,1)
+db_ho_inpt~
+Maintain Default Discounts. <a> (1,1)
+db_exdisinp~
+Maintain Setup Defaults. <a> (1,1)
+psl_default~C~
+Maintain Customer Specific Item Codes. <a> (1,1)
+db_sk_maint~
+((
+))

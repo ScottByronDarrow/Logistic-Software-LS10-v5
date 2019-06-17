@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glsh,v 5.0 2001/06/19 10:17:14 cha Exp $
+|  Schema Name  : (sch.glsh)
+|  Schema Desc  : (General ledger Spread Table Header. )
+|----------------------------------------------------------------------
+| $Log: sch.glsh,v $
+| Revision 5.0  2001/06/19 10:17:14  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:45  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	glsh
+
+field	glsh_co_no				type	char	2
+field	glsh_code				type	char	6
+field	glsh_hhsh_hash			type	serial
+field	glsh_desc				type	char	25
+field	glsh_mod_date			type	edate
+field	glsh_stat_flag			type	char	1
+field	glsh_id_no				type	composite
+			glsh_co_no,
+			glsh_code									index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glsh_co_no			-	Company number.
+	glsh_code			-	Spread Header Code.
+	glsh_hhsh_hash		-	Unique Serial Hash.
+	glsh_desc			-	Spread Table description.
+	glsh_mod_date		- 	Date last modified.
+	glsh_stat_flag		-	Spare status flag.
+}

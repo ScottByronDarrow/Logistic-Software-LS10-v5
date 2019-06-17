@@ -1,0 +1,16 @@
+Miscellaneous Maintenance - Suppliers. (SUB)
+misc_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Maintain Currency Details. <a> (1,1)
+po_mnt_inp~C~
+Maintain Country / Freight File. <a> (1,1)
+po_mnt_inp~F~
+Maintain Supplier Type File. <a> (1,1)
+po_mnt_inp~T~
+Maintain Remittance Message. <a> (1,1)
+db_stmtinp~R~
+Maintain Special instruction file. <a> (1,1)
+ex_miscinp~EXSI~
+((
+))

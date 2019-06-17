@@ -1,0 +1,68 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.suid,v 5.1 2001/07/25 01:15:52 scott Exp $
+|  Schema Name  : (sch.suid)
+|  Schema Desc  : (Creditors Invoice / Credit Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.suid,v $
+| Revision 5.1  2001/07/25 01:15:52  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:49  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	suid
+
+field	suid_hhsi_hash			type	long
+field	suid_line_no			type	int
+field	suid_pf_type			type	char	1
+field	suid_pf_ref				type	char	15
+field	suid_ct_type			type	int
+field	suid_gr_no				type	char	15
+field	suid_hhgr_hash			type	long
+field	suid_po_no				type	char	15
+field	suid_hhpo_hash			type	long
+field	suid_hhsh_hash			type	long
+field	suid_gl_acc_no			type	char	16	
+field	suid_period_amt			type	money
+field	suid_narrative			type	char	20
+field	suid_user_ref			type	char	15
+field	suid_ch_code			type	char	4
+field	suid_margin				type	money
+field	suid_stat_flag			type	char	1
+field	suid_id_no				type	comp
+			suid_hhsi_hash,
+			suid_line_no									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	suid_hhsi_hash		-	Link to invoice file ( suin ).
+	suid_line_no		-	Line sequence number.
+	suid_pf_type		-	Purchase reF type. 
+ 								N(one), 		P(urchase), 
+								S(hipment) , 	G(oods Receipt)
+	suid_pf_ref			-	Purchase reFerence.
+	suid_ct_type		-	Costing Type. ( 0 - 9 )
+	suid_gr_no			-	Goods Receipt number.
+	suid_hhgr_hash		-	Goods Receipt hash.
+	suid_po_no			-	Purchase order Number.
+	suid_hhpo_hash		-	Link to Purchase order ( pohr ).
+	suid_hhsh_hash		-	Link to Shipment       ( posh ).
+	suid_gl_acc_no		-	General Ledger Account	(glmr)
+	suid_period_amt		-	General Ledger Period.
+	suid_narrative		-	Narrative for G/L. 
+	suid_user_ref		-	User Ref for G/L
+	suid_stat_flag		-	Spare status flag.
+}

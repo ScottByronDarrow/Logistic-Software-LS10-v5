@@ -1,0 +1,51 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:51:29 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:51:29  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_est_no
+	field comm_cc_no
+	field comm_inv_date
+end
+
+table inls
+	field inls_co_no
+	field inls_est_no
+	field inls_date
+	field inls_hhbr_hash
+	field inls_hhcc_hash
+	field inls_hhcu_hash
+	field inls_area_code
+	field inls_sale_code
+	field inls_qty
+	field inls_value
+	field inls_cost
+	field inls_res_code
+	field inls_res_desc
+	field inls_status
+end
+
+table exls
+	field exls_co_no
+	field exls_code
+	field exls_description
+	field exls_demand_ok
+end
+
+table ffdm
+	field ffdm_hhbr_hash
+	field ffdm_hhcc_hash
+	field ffdm_date
+	field ffdm_type
+	field ffdm_qty
+end
+

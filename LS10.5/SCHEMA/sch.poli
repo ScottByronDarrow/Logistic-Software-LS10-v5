@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.poli,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.poli)
+|  Schema Desc  : (Purchase order Line details )
+|----------------------------------------------------------------------
+| $Log: sch.poli,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:15  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	poli	
+
+field	poli_hhpl_hash      type	long	index
+field	poli_cont_date      type	edate
+field	poli_comment        type	char 24
+field	poli_ship_date      type	edate
+field	poli_eta_date       type	edate
+field	poli_inst_code      type	integer
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	poli_hhpl_hash      	-	Link to purchase order line.
+	poli_cont_date      	-	Contact Date.
+	poli_comment        	-	Comment
+	poli_ship_date      	-	Shipment Date.
+	poli_eta_date       	-	Eta Date
+	poli_inst_code      	-	Instruction code.
+}	

@@ -1,0 +1,20 @@
+# This file holds the Valid Mail Options
+# Available To Nominated Mail Users
+# User   Options
+#
+scott	ALL
+root	ALL
+psl		ALL
+manuel	ALL
+ronnel	ALL
+edge	ALL
+#
+# VALID OPTIONS :
+#
+# ALL		Unrestricted
+# REPLY		Can REPLY to mail
+# FORWARD	Can FORWARD mail
+# SEND		Can SEND mail
+# UTILS		Can use mail utilities menu
+# SUB_MENU	Can SUB_MENU from read mail option
+#

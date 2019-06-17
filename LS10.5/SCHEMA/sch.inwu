@@ -1,0 +1,51 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inwu,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.inwu)
+|  Schema Desc  : (Warehouse UOM stock balance file. )
+|----------------------------------------------------------------------
+| $Log: sch.inwu,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:58  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:33  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inwu
+
+field	inwu_hhwh_hash			type	long
+field	inwu_hhum_hash			type	long
+field	inwu_opening_stock		type	float
+field	inwu_receipts			type	float
+field	inwu_pur				type	float
+field	inwu_issues				type	float
+field	inwu_adj				type	float
+field	inwu_sales				type	float
+field	inwu_stake				type	float
+field	inwu_stake_calc			type	float
+field	inwu_closing_stock		type	float
+field	inwu_id_no				type	composite
+			inwu_hhwh_hash,
+			inwu_hhum_hash									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		inwu_hhwh_hash				-	Link to Warehouse record (incc)
+		inwu_hhum_hash				-	Link to UOM file (inum)
+		inwu_opening_stock			-	Opening Stock.
+		inwu_receipts				-	Receipts.
+		inwu_pur					-	Purchases.
+		inwu_issues					-	Issues.
+		inwu_adj					-	Adjustments.
+		inwu_sales					-	Sales.
+		inwu_stake					-	Stock Take.
+		inwu_closing_stock			-	Closing Stock.
+}

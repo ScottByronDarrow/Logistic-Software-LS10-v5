@@ -1,0 +1,25 @@
+Stocktake Menu (STMR)
+sk_stake
+Stock Master Menu. <a> (1,2)
+menu MENUSYS/sk_master.mdf
+Stock-Take Selection Functions. >> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/sk_st_frz.mdf
+Stock-Take Sheet Printing Functions. >> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/sk_st_sht.mdf
+Stock-Take Count Input Functions. >> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/sk_st_cnt.mdf
+Stock-Take Valuation Menu. <a> (1,1)
+menu MENUSYS/sk_st_val.mdf
+Stock-Take Variation Functions. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_st_var.mdf
+Delete System Stock Take. <a> (1,2)
+lp_chain~warning "Delete system stock take"~sk_st_del~
+Update Stock Take Figures. <a> (1,1)
+lp_chain~warning "Update Stock Take Figures"~sk_nst_up~
+Update Serial Item Stock Take Figures. <a> (1,1)
+lp_chain~warning "Update Serial item Stock Take Figures"~sk_st_sup LPNO~
+((
+quadrant(22,6)
+box(14,3,50,14)
+line(15,5,49)
+))

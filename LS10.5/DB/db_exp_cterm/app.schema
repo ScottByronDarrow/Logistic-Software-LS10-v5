@@ -1,0 +1,54 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:04:33 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:04:33  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:25:04  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:13:46  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/09/06 05:32:29  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_curr_code
+	field cumr_crd_prd
+	field cumr_stop_credit
+	field cumr_date_stop
+	field cumr_total_days_sc
+	field cumr_credit_limit
+	field cumr_pay_method
+	field cumr_cash_flag
+	field cumr_ca_no
+	field cumr_crd_expiry
+end
+

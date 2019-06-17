@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sokd,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.sokd)
+|  Schema Desc  : (Phantom kit details for packing slips + invoices) )
+|----------------------------------------------------------------------
+| $Log: sch.sokd,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sokd	
+
+field	sokd_co_no			type	char	2
+field	sokd_type			type	char	1
+field	sokd_hhbr_hash			type	long
+field	sokd_line_no			type	integer	
+field	sokd_id_no			type	composite
+		sokd_co_no,
+		sokd_type,
+		sokd_hhbr_hash,
+		sokd_line_no					index	primary
+field	sokd_text			type	char	60	
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sokd_co_no		-	Company number.
+	sokd_type		-	P(acking slip details )
+	sokd_hhbr_hash		-	I(nvoice Details )
+	sokd_line_no		-	Sequence line number.
+	sokd_text		-	Description text.
+}

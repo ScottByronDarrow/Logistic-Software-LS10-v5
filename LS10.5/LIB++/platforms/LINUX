@@ -1,0 +1,12 @@
+#
+# LINUX 2.2.13 Slackware
+#
+CC				=	gcc
+CDBG			=	-Wall -g
+C++				=	g++
+C++DBG			=	-Wall -g
+
+#
+#	Include rules to build C++ sources
+#
+include ${BASE_PATH}/${VERSION}/CONFIG/Rules.c++

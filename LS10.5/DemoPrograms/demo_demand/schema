@@ -1,0 +1,82 @@
+#ifndef SCHEMA
+#define SCHEMA
+
+	/* This file is auto-generated. Alter at your own risk */
+
+#ifdef CCMAIN
+/* table comm */
+const char *comm = "comm";
+
+struct dbview comm_list [] =
+{
+	{"comm_term"},
+	{"comm_co_no"},
+	{"comm_co_name"},
+	{"comm_est_no"},
+	{"comm_est_name"},
+	{"comm_cc_no"},
+	{"comm_inv_date"}
+};
+
+#define COMM_NO_FIELDS 7
+
+/* table ffdm */
+const char *ffdm = "ffdm";
+
+struct dbview ffdm_list [] =
+{
+	{"ffdm_hhbr_hash"},
+	{"ffdm_hhcc_hash"},
+	{"ffdm_date"},
+	{"ffdm_type"},
+	{"ffdm_qty"}
+};
+
+#define FFDM_NO_FIELDS 5
+
+/* table incc */
+const char *incc = "incc";
+
+struct dbview incc_list [] =
+{
+	{"incc_hhcc_hash"},
+	{"incc_hhbr_hash"}
+};
+
+#define INCC_NO_FIELDS 2
+
+
+#else
+
+#endif	/* CCMAIN */
+
+/* Record structure for comm table */
+struct commRecord
+{
+	int	term;
+	char	co_no [3];
+	char	co_name [41];
+	char	est_no [3];
+	char	est_name [41];
+	char	cc_no [3];
+	Date	inv_date;
+};
+
+/* Record structure for ffdm table */
+struct ffdmRecord
+{
+	long	hhbr_hash;
+	long	hhcc_hash;
+	Date	date;
+	char	type [2];
+	float	qty;
+};
+
+/* Record structure for incc table */
+struct inccRecord
+{
+	long	hhcc_hash;
+	long	hhbr_hash;
+};
+
+#endif	/* SCHEMA */

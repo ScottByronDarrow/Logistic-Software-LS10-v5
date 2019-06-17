@@ -1,0 +1,92 @@
+#
+#	Permission settings, using setperms (which must be run as root)
+#
+#
+
+
+#
+#	Settings for most files.
+owner=lsl
+group=lsl
+default-dir-perm=775
+default-file-perm=660
+
+
+#
+#	Exceptions to the rule
+#
+#	This uses regular-expressions, not shell-wildcards
+#
+
+#
+# C++ build
+#
+#Pattern					Mode		User	Comment
+CONFIG/make/builddest		770
+
+#
+# Data directory
+#
+#Pattern					Mode		User	Comment
+DATA						775
+DATA\/.*\.dbs				775
+DATA\/data.dbs\/.*\			666					# data has to writable to all
+
+INSTALL						775
+INSTALL\/.*					770
+INSTALL\/bin\/.*			770
+#
+#	setuid programs
+#
+#Pattern					Mode		User	Comment
+BIN\/UTILS\/pinform			4770		root	# useful
+BIN\/UTILS\/bg_ctrl			4770		root	# required
+BIN\/UTILS\/message			4770		root	# required
+BIN\/UTILS\/psl_su_id		4770		root	# required
+BIN\/UTILS\/su_chain		4770		root	# required
+BIN\/LS10-GUI\/PwdSrvD		4770		root	# useful
+BIN\/LS10-GUI\/SelSrvD		4770		root	# useful
+
+#
+#	Std binaries
+#
+#Pattern					Mode		User	Comment
+BIN\/lc_demo				770
+BIN\/[A-Z]{2}\/.*			770
+BIN\/MENU\/.*				770
+BIN\/LRP\/.*				770
+BIN\/POS\/.*				770
+BIN\/MISC\/.*				770
+BIN\/SCRIPT\/.*				770
+BIN\/UTILS/.*				770
+BIN\/WEB\/.*				770
+BIN\/MENUSYS\/.*\.mdf		660
+BIN\/MENUSYS\/TERM\/.*		660
+BIN\/MENUSYS\/PRINT\/.*		660
+BIN\/MENUSYS\/TERM\/.*\.CVS		770
+BIN\/MENUSYS\/PRINT\/.*\.CVS	770
+BIN\/MENUSYS\/GUI\/MENUSYS\/SUB_MENU\/.*\.mdf		660
+BIN\/MENUSYS\/GUI\/MENUSYS\/.*\.mdf		660
+BIN\/MENUSYS\/SUB_MENU\/.*\.mdf		660
+
+#
+#	User specific
+
+#Pattern					Mode		User	Comment
+USER\/[^/]+\/BIN\/.*		770
+USER\/.*\/DATA				775
+USER\/.*\/DATA\/.*\.dbs		775
+USER\/.*\/data.dbs\/.*\		666					# data has to writable to all
+
+#
+#	Developers
+#
+#Pattern					Mode		User	Comment
+.*,v						440
+.*\/s\..*					440					# hangover SCCS files
+*.exe						770					# hangover SCCS files
+
+#
+#	Std system stuff
+#
+lost.found										# don't touch system stuff

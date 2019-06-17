@@ -1,0 +1,7 @@
+#
+#  Printer Entry For NECp3 printer.
+#
+NEP3|Nec P3 printer|This is a printer entry:\
+	:TF=\014:XN=\EE:XF=\EF:I1=:I2=:\
+	:P0=\E?0:P2=\E?3:UN=\EC:UF=\ED:F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\EI:EX=4:

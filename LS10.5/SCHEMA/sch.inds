@@ -1,0 +1,99 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inds,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.inds)
+|  Schema Desc  : (Customer Discount Subranges File. )
+|----------------------------------------------------------------------
+| $Log: sch.inds,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:52  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+
+file inds 
+
+field	inds_co_no				type	char	2
+field	inds_br_no				type	char	2
+field	inds_hhcu_hash			type	long			index 	dups
+field	inds_price_type			type	int
+field	inds_category			type	char	11
+field	inds_sel_group			type	char	6
+field	inds_cust_type			type	char	3
+field	inds_hhbr_hash			type	long			index	dups
+field	inds_hhcc_hash			type	long
+
+field	inds_id_no				type	composite
+		inds_co_no,
+		inds_br_no,
+		inds_hhcc_hash,
+		inds_hhcu_hash,
+		inds_cust_type,
+		inds_hhbr_hash,
+		inds_category,
+		inds_sel_group			index 	dups 
+
+field	inds_id_no2			type	composite
+		inds_co_no,
+		inds_br_no,
+		inds_hhcc_hash,
+		inds_price_type,
+		inds_hhbr_hash,
+		inds_category,
+		inds_sel_group			index	dups
+
+field	inds_disc_by			type	char	1
+field	inds_qty_brk1			type	double
+field	inds_qty_brk2			type	double
+field	inds_qty_brk3			type	double
+field	inds_qty_brk4			type	double
+field	inds_qty_brk5			type	double
+field	inds_qty_brk6			type	double
+
+field	inds_disca_pc1			type	float
+field	inds_disca_pc2			type	float
+field	inds_disca_pc3			type	float
+field	inds_disca_pc4			type	float
+field	inds_disca_pc5			type	float
+field	inds_disca_pc6			type	float
+
+field	inds_discb_pc1			type 	float
+field	inds_discb_pc2			type 	float
+field	inds_discb_pc3			type 	float
+field	inds_discb_pc4			type 	float
+field	inds_discb_pc5			type 	float
+field	inds_discb_pc6			type 	float
+
+field	inds_discc_pc1			type 	float
+field	inds_discc_pc2			type 	float
+field	inds_discc_pc3			type 	float
+field	inds_discc_pc4			type 	float
+field	inds_discc_pc5			type 	float
+field	inds_discc_pc6			type 	float
+
+field	inds_cum_disc			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inds_co_no			-	Company number.
+	inds_hhcu_hash		-	Link to cumr ( cumr_hhcu_hash )
+	inds_category		-	Category number. ( ex excf )
+	inds_cust_type		-	Customer type. ( ex excl )
+	inds_hhbr_hash		-	Link to inmr ( inmr_hhbr_hash )
+	inds_hhcc_hash		-	Link to ccmr ( ccmr_hhcc_hash )
+	inds_disc_by 		-	Discount By V)alue or Q)uantity
+	inds_qty_brkx		-	Quantity break 1-6
+	inds_discx_pc		-	Discount / Dollar percent/amount 1-6.
+
+	NOTE : Even though these indices are dups they are expected to be unique
+}

@@ -1,0 +1,63 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.mect,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.mect)
+|  Schema Desc  : (Month End Information File Record. )
+|----------------------------------------------------------------------
+| $Log: sch.mect,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:00  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file mect 
+
+field	mect_co_no			type	char	2  
+field	mect_br_no			type	char	2 
+field	mect_module_type		type	char	2
+field	mect_status			type	integer
+field	mect_id_no			type	composite
+		mect_co_no,
+		mect_br_no,
+		mect_module_type				index dups 
+field	mect_id_no2			type	composite
+		mect_co_no,
+		mect_module_type				index dups 
+field	mect_start_time			type	char	5
+field	mect_end_time			type	char	5
+field	mect_closed_mth			type	int
+field	mect_txt_file			type	char	30
+field	mect_prog_stat			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	mect_co_no		-	Company number.
+	mect_br_no		-	Branch number.
+	mect_module_type	-	Module Type.
+						DB	-	Debtors.
+						CR	-	Creditors.
+						SK	-	Stock.
+						GL	-	G/Ledger.
+						PA	-	Payroll.
+	mect_status		-	0 - Not Active.
+					1 - Open
+					2 - To close
+					3 - Closing
+					4 - Closed
+					5 - Error
+	mect_start_time		-	Start time.
+	mect_end_time		-	End Time.
+	mect_closed_mth		-	Close Month.
+	mect_txt_file		-	Text file to run.
+	mect_prog_stat		-	Status flag.
+}

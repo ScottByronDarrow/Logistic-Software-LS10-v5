@@ -1,0 +1,49 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sokt,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.sokt)
+|  Schema Desc  : (Sales Order kitting file. )
+|----------------------------------------------------------------------
+| $Log: sch.sokt,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sokt	
+
+field	sokt_co_no			type	char	2
+field	sokt_hhbr_hash			type	long		index	dups
+field	sokt_line_no			type	int
+field	sokt_id_no			type	comp
+		sokt_co_no,
+		sokt_hhbr_hash,
+		sokt_line_no					index	primary
+field	sokt_mabr_hash			type	long		index	dups
+field	sokt_id_no_2			type	comp
+		sokt_co_no,
+		sokt_mabr_hash,
+		sokt_hhbr_hash					index	dups
+field	sokt_matl_qty			type	float
+field	sokt_due_date			type	edate
+field	sokt_bonus			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sokt_co_no		-	Company number.
+	sokt_hhbr_hash		-	Link to inmr ( inmr_hhbr_hash )
+	sokt_line_no		-	Line Sequence number.
+	sokt_mabr_hash		-	Link to inmr ( inmr_hhbr_hash )
+	sokt_matl_qty		-	Material Quantity.
+	sokt_due_date		-	Due Date.
+	sokt_bonus		-	Y if item is a bonus item, else N.
+}

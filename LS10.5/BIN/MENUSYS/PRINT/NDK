@@ -1,0 +1,7 @@
+#
+#  Printer Entry For NDK Printstar 5010 printer.
+#
+NDK|NDK Printstar 5010 Printer|This is a printer entry:\
+	:TF=\014:XN=\E@B1:XF=\E@B0:I1=:I2=:\
+	:P0= :P2= :UN=\E@E1:UF=\E@E0:F1=\E@A0:F2=\E@A1:\
+	:SN=\E@C1:SF=\E@C0:EX=2:

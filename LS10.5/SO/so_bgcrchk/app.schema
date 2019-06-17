@@ -1,0 +1,76 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/07 10:22:24 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/07 10:22:24  scott
+#	Updated to bring version number to 5.0
+#	
+#	Revision 1.1  2001/10/23 07:18:44  scott
+#	Updated to check and correct rounding.
+#	Changes to ensure ALL inputs and reports round the same way.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+end
+
+table comr
+	field comr_co_no
+	field comr_pay_terms
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_sch_ord
+	field sohr_full_supply
+	field sohr_status
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_sale_price
+	field soln_dis_pc
+	field soln_bonus_flag
+	field soln_status
+	field soln_stat_flag
+end
+
+table cumr
+	field cumr_hhcu_hash
+	field cumr_stop_credit
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_crd_flag
+	field cumr_ord_value
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_od_flag
+	field cumr_stat_flag
+end
+
+table inmr
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_outer_size
+	field inmr_stat_flag
+end
+

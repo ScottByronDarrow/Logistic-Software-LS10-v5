@@ -1,0 +1,138 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:12:35 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:12:35  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:33:49  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:31  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+end
+
+table qchr
+	field qchr_co_no
+	field qchr_br_no
+	field qchr_wh_no
+	field qchr_qc_centre
+	field qchr_hhbr_hash
+	field qchr_hhum_hash
+	field qchr_inlo_hash
+	field qchr_hhqc_hash
+	field qchr_origin_qty
+	field qchr_receipt_dt
+	field qchr_exp_rel_dt
+	field qchr_rel_qty
+	field qchr_rej_qty
+	field qchr_serial_no
+	field qchr_hhsu_hash
+	field qchr_ref_1
+	field qchr_ref_2
+	field qchr_shipment
+	field qchr_next_seq
+	field qchr_source_type
+end
+
+table qcln
+	field qcln_hhqc_hash
+	field qcln_line_no
+	field qcln_emp_code
+	field qcln_release_dt
+	field qcln_rel_qty
+	field qcln_rej_qty
+	field qcln_wof_acc
+	field qcln_stk_wof_acc
+	field qcln_cost
+	field qcln_reason
+	field qcln_inlo_hash
+	field qcln_remarks
+	field qcln_coa
+	field qcln_reassay_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_quick_code
+	field inmr_description
+	field inmr_category
+	field inmr_class
+	field inmr_lot_ctrl
+	field inmr_qc_reqd
+	field inmr_costing_flag
+	field inmr_outer_size
+end
+
+table qcmr
+	field qcmr_co_no
+	field qcmr_br_no
+	field qcmr_centre
+	field qcmr_description
+end
+
+table prmr
+	field prmr_co_no
+	field prmr_br_no
+	field prmr_code
+	field prmr_name
+end
+
+table exwo
+	field exwo_co_no
+	field exwo_code
+	field exwo_description
+end
+
+table sumr
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+end
+
+table inlo
+	field inlo_inlo_hash
+	field inlo_hhwh_hash
+	field inlo_hhum_hash
+	field inlo_location
+	field inlo_loc_type
+	field inlo_lot_no
+	field inlo_slot_no
+	field inlo_expiry_date
+	field inlo_uom
+	field inlo_cnv_fct
+	field inlo_rec_qty
+	field inlo_qty
+	field inlo_no_hits
+	field inlo_no_picks
+	field inlo_op_id
+	field inlo_time_create
+	field inlo_date_upd
+	field inlo_date_create
+end
+

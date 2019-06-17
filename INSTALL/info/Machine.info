@@ -1,0 +1,28 @@
+#
+#	$Id: Machine.info,v 5.0 2002/05/08 01:44:52 scott Exp $
+#
+#	Machine dependant information required for installation
+#
+#	Empty lines or lines beginning with '#' are ignored.
+#	Each line is seperated into 4 columns seperated by ':'
+#
+# $Log: Machine.info,v $
+# Revision 5.0  2002/05/08 01:44:52  scott
+# CVS administration
+#
+# Revision 4.1  2001/03/09 08:22:56  scott
+# Updated to make changes for \c and machine info file.
+#
+# Revision 4.0  2001/03/09 02:49:26  scott
+# LS10-4.0 New Release as at 10th March 2001
+#
+# Revision 1.1  2001/01/12 07:20:35  scott
+# New install system
+#
+#
+#	Fields are
+#	<machine>:<cdrom device>:<shutdown rc(s)>:<startup rc(s)>
+i386:/dev/cd0:/etc/rc0.d:/etc/rc2.d
+i486:/dev/cd0:/etc/rc0.d:/etc/rc2.d
+i586:/dev/cd0:/etc/rc0.d:/etc/rc2.d
+linix:/dev/cd0:/etc/rc.d/rc0.d:/etc/rc.d/rc2.d,/etc/rc.d/rc5.d

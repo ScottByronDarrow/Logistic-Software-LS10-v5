@@ -1,0 +1,153 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/12/01 04:48:14 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/12/01 04:48:14  scott
+#	SC0053 - Platinum Logistics LS10.5.2.2002-12-01
+#	
+#	Revision 5.0  2001/06/19 08:11:32  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:32:50  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:23:51  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_gst_rate
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_closing_stock
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table incf
+	field incf_hhwh_hash
+	field incf_hhcf_hash
+	field incf_fifo_date
+	field incf_fifo_cost
+	field incf_act_cost
+	field incf_fifo_qty
+	field incf_gr_number
+	field incf_stat_flag
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_avge_cost
+	field inei_last_cost
+end
+
+table inmr
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_category
+	field inmr_costing_flag
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_std_uom
+end
+
+table inpr
+	field inpr_hhbr_hash
+	field inpr_price_type
+	field inpr_br_no
+	field inpr_wh_no
+	field inpr_curr_code
+	field inpr_area_code
+	field inpr_cust_type
+	field inpr_hhgu_hash
+	field inpr_price_by
+	field inpr_qty_brk1
+	field inpr_qty_brk2
+	field inpr_qty_brk3
+	field inpr_qty_brk4
+	field inpr_qty_brk5
+	field inpr_qty_brk6
+	field inpr_qty_brk7
+	field inpr_qty_brk8
+	field inpr_qty_brk9
+	field inpr_base
+	field inpr_price1
+	field inpr_price2
+	field inpr_price3
+	field inpr_price4
+	field inpr_price5
+	field inpr_price6
+	field inpr_price7
+	field inpr_price8
+	field inpr_price9
+end
+
+table insf
+	field insf_hhsf_hash
+	field insf_hhwh_hash
+	field insf_status
+	field insf_serial_no
+	field insf_est_cost
+	field insf_act_cost
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_date_raised
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhum_hash
+	field poln_hhcc_hash
+	field poln_hhpl_hash
+	field poln_qty_ord
+	field poln_fob_fgn_cst
+	field poln_land_cst
+	field poln_item_desc
+end
+
+table posh
+	field posh_co_no
+	field posh_hhsh_hash
+	field posh_csm_no
+	field posh_curr_code
+	field posh_ex_rate
+	field posh_vessel
+end
+
+table posl
+	field posl_co_no
+	field posl_hhsh_hash
+	field posl_hhpl_hash
+	field posl_ship_qty
+	field posl_sup_price
+end
+

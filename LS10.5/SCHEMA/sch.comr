@@ -1,0 +1,170 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.comr,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.comr)
+|  Schema Desc  : (Company Master File Base Record. )
+|----------------------------------------------------------------------
+| $Log: sch.comr,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	comr
+
+field	comr_co_no				type	char	2	index
+field	comr_co_name			type	char	40
+field	comr_co_short_name		type	char	15
+field	comr_co_adr1			type	char	40
+field	comr_co_adr2			type	char	40
+field	comr_co_adr3			type	char	40
+field	comr_master_br			type	char	2
+field	comr_module_inst		type	char	20
+field	comr_fiscal				type	integer
+field	comr_dbt_date			type	edate
+field	comr_crd_date			type	edate
+field	comr_inv_date			type	edate
+field	comr_payroll_date		type	edate
+field	comr_gl_date			type	edate
+field	comr_stmt_date			type	edate
+field	comr_date_stmt_prn		type	edate
+field	comr_yend_date			type	edate
+field	comr_status_flags		type	char	5
+field	comr_nx_ct_no			type	long
+field	comr_nx_ct_tno			type	long
+field	comr_nx_inv_no			type	long
+field	comr_nx_crd_no			type	long
+field	comr_nx_po_no			type	long
+field	comr_nx_po_no_fgn		type	long
+field	comr_nx_pc_no			type	long
+field	comr_nx_gr_no			type	long
+field	comr_nx_pac_no			type	long
+field	comr_nx_del_no			type	long
+field	comr_nx_chq_no			type	long
+field	comr_ls_chq_no			type	long
+field	comr_nx_job_no			type	long
+field	comr_nx_requis_no		type	long
+field	comr_nx_rec_no			type	long
+field	comr_prospect_no		type	char	6
+field	comr_nx_call_no			type	long
+field	comr_nx_trip_no			type	long
+field	comr_ship_no			type	long
+field	comr_od_per1			type	integer
+field	comr_od_per2			type	integer
+field	comr_od_per3			type	integer
+field	comr_od_per4			type	integer
+field	comr_closed_period		type	integer
+field	comr_pay_bover			type	integer
+field	comr_pay_freq			type	integer
+field	comr_gst_rate			type	float
+field	comr_gst_ird_no			type	char	15
+field	comr_int_rate			type	float
+field	comr_restock_pc			type	float
+field	comr_price1_desc		type	char	15
+field	comr_price2_desc		type	char	15
+field	comr_price3_desc		type	char	15
+field	comr_price4_desc		type	char	15
+field	comr_price5_desc		type	char	15
+field	comr_price6_desc		type	char	15
+field	comr_price7_desc		type	char	15
+field	comr_price8_desc		type	char	15
+field	comr_price9_desc		type	char	15
+field	comr_contingency		type	double
+field	comr_sur_amt			type	money
+field	comr_sur_cof			type	money
+field	comr_frt_min_amt		type	money
+field	comr_frt_mweight		type	float
+field	comr_pay_terms			type	integer
+field	comr_fin_susp			type	long
+field	comr_nfn_susp			type	long
+field	comr_pl_app_acc			type	long
+field	comr_po_sic1			type	integer
+field	comr_po_sic2			type	integer
+field	comr_po_sic3			type	integer
+field	comr_env_name			type	char	60
+field	comr_stat_flag			type	char	1
+field	comr_base_curr			type	char	3
+field	comr_consolidate		type	integer
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	comr_co_no			- Company Number.
+	comr_co_name		- Company Name.
+	comr_co_short_name	- Company Short name.
+	comr_co_adr1		- Company Address part one.
+	comr_co_adr2		- Company Address part two.
+	comr_co_adr3		- Company Address part three.
+	comr_module_inst	- Modules installed.
+	comr_fiscal			- Fiscal year end.
+	comr_dbt_date		- Current Debtors Module Date.
+	comr_crd_date		- Current Creditors Module Date.
+	comr_inv_date		- Current Inventory Module Date.
+	comr_payroll_date	- Current Payroll Module Date.
+	comr_gl_date		- Current General ledger Module Date.
+	comr_stmt_date		- Last Statement Date.
+	comr_date_stmt_prn	- Date Statement printed (if 00/00/00 stmt not
+				  		  printed sinc month end.)
+	comr_yend_date		- General Ledger year end date.
+	comr_status_flags	- Status flags for modules. ( Not Used Now )
+	comr_nx_ct_no		- Next Contract Number (CT module.)	
+	comr_nx_ct_tno		- Next Temporary Contract Number (CT module)
+	comr_nx_inv_no		- Next Company invoice number
+	comr_nx_crd_no		- Next Company credit note number
+	comr_nx_po_no		- Next Company purchase order number
+	comr_nx_pc_no		- Next Company purchase Credit number
+	comr_nx_gr_no		- Next Company goods receipt number
+	comr_nx_pac_no		- Next Company packing slip number
+	comr_nx_del_no		- Next Company delevery docket number
+	comr_nx_chq_no		- Next Company cheque number
+	comr_ls_chq_no		- Last Company cheque number
+	comr_nx_job_no		- Next Company Job number
+	comr_nx_reqis_no	- Next Company Requisition number
+	comr_nx_rec_no		- Next Company Receipt number
+	comr_ship_no		- Next Company Shipment number	
+	comr_prospect_no	- Next Prospect Number.
+	comr_nx_call_no		- Next Company Telemarketing Call Number
+	comr_nx_trip_no		- Next Vehicle trip number.
+	comr_od_per1		- Overdue period 1	( NOT USED )
+	comr_od_per2		- Overdue period 2	( NOT USED )
+	comr_od_per3		- Overdue period 3	( NOT USED )
+	comr_od_per4		- Overdue period 4	( NOT USED )
+	comr_closed_period	- Closed Period.	( NOT USED )
+	comr_pay_bover		- Pays cheques over.
+	comr_pay_freq		- Payment frequency.
+	comr_gst_rate		- Company GST rate.
+	comr_gst_ird_no		- Company IRD number.
+	comr_int_rate		- Company default interest charge rate.
+	comr_restock_pc		- Restocking Fee.
+	comr_price1_desc	- Inventory price 1 description.
+	comr_price2_desc	- Inventory price 2 description.
+	comr_price3_desc	- Inventory price 3 description.
+	comr_price4_desc	- Inventory price 4 description.
+	comr_price5_desc	- Inventory price 5 description.
+	comr_price6_desc	- Inventory price 6 description.
+	comr_price7_desc	- Inventory price 7 description.
+	comr_price8_desc	- Inventory price 8 description.
+	comr_price9_desc	- Inventory price 9 description.
+	comr_contingency	- Not now used.
+	comr_sur_amt		- Surcharge default amoumt.
+	comr_sur_cof		- Surcharge Cutoff amoumt.
+	comr_frt_min_amt	- Minimum freight amount.
+	comr_frt_mweight	- Minumum Freight Weight.
+	comr_pay_terms		- Payment terms.
+	comr_fin_susp		- Financial G/L Suspense account
+	comr_nfn_susp		- Non-Financial G/L Suspense account
+	comr_pl_app_acc		- P & L Appropriation Account.
+	comr_po_sic1-3		- Purchase order default special instructions.
+	comr_env_name		- Holds Environment Variables Filename
+	comr_base_curr		- Base Currency for Company.
+	comr_consolidate	- True if this is the consilidated company.
+	comr_stat_flag		- Status flag.
+}

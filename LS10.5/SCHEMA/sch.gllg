@@ -1,0 +1,47 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.gllg,v 5.0 2001/06/19 10:17:13 cha Exp $
+|  Schema Name  : (sch.gllg)
+|  Schema Desc  : (General Ledger Log file. )
+|----------------------------------------------------------------------
+| $Log: sch.gllg,v $
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:43  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	gllg
+
+field	gllg_co_no				type	char	2
+field	gllg_est_no				type	char	2
+field	gllg_jnl_type			type	char	2
+field	gllg_pid				type	int
+field	gllg_desc				type	char	40
+field	gllg_mod_date			type	edate
+field	gllg_stat_flag			type	char	1
+field	gllg_id_no				type	composite
+			gllg_co_no,
+			gllg_est_no,
+			gllg_pid,
+			gllg_jnl_type					index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	gllg_co_no			-	Company number.
+	gllg_est_no			-	Branch / Establishment.
+	gllg_jnl_type		-	Journal Type	( ex gljc ).
+	gllg_pid			-	PID of running process.
+	gllg_desc			-	Log Description.
+	gllg_mod_date		-	Date Last Modified.
+	gllg_stat_flag		-	Spare status flag.
+}

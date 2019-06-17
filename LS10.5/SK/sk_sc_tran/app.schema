@@ -1,0 +1,358 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:31 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:31  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/04/06 06:42:51  scott
+#	Updated to use standard functions for FindFifo and FifoValue.
+#	
+#	Revision 4.0  2001/03/09 02:38:47  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:37  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_inv_date
+end
+
+table comr
+	field comr_co_no
+	field comr_co_name
+	field comr_co_short_name
+	field comr_co_adr1
+	field comr_co_adr2
+	field comr_co_adr3
+	field comr_nx_del_no
+	field comr_frt_min_amt
+	field comr_frt_mweight
+	field comr_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_acronym
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_abc_code
+	field inmr_abc_update
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_weight
+	field inmr_std_uom
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_bo_flag
+	field inmr_dec_pt
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_stocking_unit
+	field incc_location
+	field incc_ff_option
+	field incc_ff_method
+	field incc_allow_repl
+	field incc_abc_code
+	field incc_abc_update
+	field incc_first_stocked
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_opening_stock
+	field incc_receipts
+	field incc_pur
+	field incc_issues
+	field incc_adj
+	field incc_sales
+	field incc_closing_stock
+	field incc_ytd_receipts
+	field incc_ytd_pur
+	field incc_ytd_issues
+	field incc_ytd_adj
+	field incc_ytd_sales
+	field incc_qc_qty
+	field incc_stat_flag
+end
+
+table ffdm
+	field ffdm_hhbr_hash
+	field ffdm_hhcc_hash
+	field ffdm_date
+	field ffdm_type
+	field ffdm_qty
+end
+
+table inwd
+	field inwd_inws_hash
+	field inwd_hhcc_hash
+	field inwd_hhbr_hash
+	field inwd_hhcf_hash
+	field inwd_sup_priority
+	field inwd_km
+	field inwd_dflt_lead
+	field inwd_sea_time
+	field inwd_air_time
+	field inwd_lnd_time
+	field inwd_upft_pc
+	field inwd_upft_amt
+	field inwd_demand
+end
+
+table inwu
+	field inwu_hhwh_hash
+	field inwu_hhum_hash
+	field inwu_opening_stock
+	field inwu_receipts
+	field inwu_pur
+	field inwu_issues
+	field inwu_adj
+	field inwu_sales
+	field inwu_closing_stock
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+	field esmr_adr1
+	field esmr_adr2
+	field esmr_adr3
+	field esmr_area_code
+end
+
+table itgl
+	field itgl_co_no
+	field itgl_br_no
+	field itgl_sort
+	field itgl_i_co_no
+	field itgl_i_br_no
+	field itgl_r_co_no
+	field itgl_r_br_no
+	field itgl_type
+	field itgl_ic_trans
+	field itgl_hhbr_hash
+	field itgl_hhcc_hash
+	field itgl_tran_date
+	field itgl_post_date
+	field itgl_period_no
+	field itgl_tran_type
+	field itgl_sys_ref
+	field itgl_narr
+	field itgl_user_ref
+	field itgl_jnl_type
+	field itgl_amount
+	field itgl_stat_flag
+end
+
+table ithr
+	field ithr_co_no
+	field ithr_type
+	field ithr_del_no
+	field ithr_hhit_hash
+	field ithr_iss_sdate
+	field ithr_iss_date
+	field ithr_rec_date
+	field ithr_tran_ref
+	field ithr_op_id
+	field ithr_time_create
+	field ithr_date_create
+	field ithr_del_zone
+	field ithr_del_req
+	field ithr_del_date
+	field ithr_s_timeslot
+	field ithr_e_timeslot
+	field ithr_cons_no
+	field ithr_carr_code
+	field ithr_carr_area
+	field ithr_no_cartons
+	field ithr_frt_cost
+	field ithr_no_kgs
+	field ithr_frt_req
+	field ithr_full_supply
+	field ithr_printed
+	field ithr_hhtr_hash
+	field ithr_stat_flag
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+	field itln_i_hhcc_hash
+	field itln_r_hhcc_hash
+	field itln_hhum_hash
+	field itln_tran_ref
+	field itln_serial_no
+	field itln_qty_order
+	field itln_qty_border
+	field itln_qty_rec
+	field itln_cost
+	field itln_duty
+	field itln_stock
+	field itln_status
+	field itln_due_date
+	field itln_full_supply
+	field itln_item_desc
+	field itln_stat_flag
+end
+table trsh
+	field trsh_trzm_hash
+	field trsh_del_date
+	field trsh_sdel_slot
+	field trsh_edel_slot
+	field trsh_hhit_hash
+end
+
+table trch
+	field trch_co_no
+	field trch_br_no
+	field trch_wh_no
+	field trch_ref_no
+	field trch_date
+	field trch_hhcu_hash
+	field trch_cons_no
+	field trch_carr_code
+	field trch_del_zone
+	field trch_no_cartons
+	field trch_no_kgs
+	field trch_est_frt_cst
+	field trch_act_frt_cst
+	field trch_cumr_chg
+	field trch_stat_flag
+end
+
+table trzm
+	field trzm_co_no
+	field trzm_br_no
+	field trzm_del_zone
+	field trzm_desc
+	field trzm_dflt_chg
+	field trzm_chg_kg
+	field trzm_trzm_hash
+end
+
+table trcm
+	field trcm_co_no
+	field trcm_br_no
+	field trcm_carr_code
+	field trcm_trcm_hash
+	field trcm_carr_desc
+	field trcm_carr_name
+	field trcm_carr_addr1
+	field trcm_carr_addr2
+	field trcm_carr_addr3
+	field trcm_carr_addr4
+	field trcm_min_wgt
+	field trcm_max_wgt
+	field trcm_min_vol
+	field trcm_max_vol
+	field trcm_bonded
+	field trcm_phone
+	field trcm_fax_no
+	field trcm_contact_name
+	field trcm_cont_start
+	field trcm_cont_end
+	field trcm_comment
+	field trcm_markup_pc
+	field trcm_day_charge
+	field trcm_wky_charge
+	field trcm_mth_charge
+	field trcm_stat_flag
+end
+
+table trcl
+	field trcl_trcm_hash
+	field trcl_trzm_hash
+	field trcl_cost_kg
+	field trcl_stat_flag
+end
+
+table coln
+	field coln_hhbr_hash
+	field coln_serial_no
+end
+
+table soln
+	field soln_hhbr_hash
+	field soln_serial_no
+end
+
+table sokt
+	field sokt_co_no
+	field sokt_hhbr_hash
+	field sokt_line_no
+	field sokt_mabr_hash
+	field sokt_matl_qty
+	field sokt_due_date
+end
+
+table excf
+	field excf_co_no          
+	field excf_cat_no         
+	field excf_hhcf_hash      
+	field excf_ex_rate        
+	field excf_cat_desc       
+	field excf_max_disc       
+	field excf_min_marg       
+	field excf_ol_min_marg    
+	field excf_ol_max_marg    
+	field excf_gp_mkup        
+	field excf_item_alloc     
+	field excf_no_trans       
+	field excf_no_days        
+	field excf_review_prd     
+	field excf_cont_drugs     
+	field excf_ib_marg        
+	field excf_stat_flag      
+end

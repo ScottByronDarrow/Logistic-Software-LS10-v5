@@ -1,0 +1,173 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:18:57 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:18:57  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/05/01 09:48:14  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to adjust screen to look better with LS10-GUI
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+
+table ccmr
+	field ccmr_co_no          
+	field ccmr_est_no         
+	field ccmr_cc_no          
+	field ccmr_hhcc_hash      
+	field ccmr_stat_flag      
+end
+
+table inmr
+	field inmr_co_no          
+	field inmr_item_no        
+	field inmr_hhbr_hash      
+	field inmr_costing_flag   
+	field inmr_std_uom        
+	field inmr_stat_flag      
+end
+
+table inmu
+	field inmu_co_no          
+	field inmu_br_no          
+	field inmu_year           
+	field inmu_period         
+	field inmu_stat_flag      
+end
+
+table ffdm
+	field ffdm_hhbr_hash      
+	field ffdm_hhcc_hash      
+	field ffdm_date           
+	field ffdm_type           
+	field ffdm_qty            
+end
+
+table inmb
+	field inmb_co_no          
+	field inmb_hhbr_hash      
+	field inmb_hhcc_hash      
+	field inmb_date           
+	field inmb_opening_bal    
+	field inmb_avge_cost      
+	field inmb_prev_cost      
+	field inmb_last_cost      
+	field inmb_std_cost       
+	field inmb_latest_fifo    
+	field inmb_insuf_trx      
+end
+table inwu
+	field inwu_hhwh_hash      
+	field inwu_hhum_hash      
+	field inwu_opening_stock  
+	field inwu_receipts       
+	field inwu_pur            
+	field inwu_issues         
+	field inwu_adj            
+	field inwu_sales          
+	field inwu_closing_stock  
+end
+
+table inme
+	field inme_hhwh_hash      
+	field inme_opening_stock  
+	field inme_receipts       
+	field inme_pur            
+	field inme_issues         
+	field inme_adj            
+	field inme_sales          
+	field inme_stake          
+	field inme_closing_stock  
+	field inme_qty            
+	field inme_value          
+	field inme_profit         
+	field inme_stat_flag      
+end
+
+table inml
+	field inml_hhwh_hash      
+	field inml_mend_date      
+	field inml_opening_stock  
+	field inml_receipts       
+	field inml_pur            
+	field inml_issues         
+	field inml_adj            
+	field inml_sales          
+	field inml_stake          
+	field inml_closing_stock  
+	field inml_stat_flag      
+end
+table incc
+	field incc_hhcc_hash      
+	field incc_hhbr_hash      
+	field incc_hhwh_hash      
+	field incc_sort           
+	field incc_wks_demand    
+	field incc_pwks_demand    
+	field incc_opening_stock  
+	field incc_receipts       
+	field incc_pur            
+	field incc_issues         
+	field incc_adj            
+	field incc_sales          
+	field incc_stake          
+	field incc_closing_stock  
+	field incc_wo_qty_anti    
+	field incc_ytd_receipts   
+	field incc_ytd_pur        
+	field incc_ytd_issues     
+	field incc_ytd_adj        
+	field incc_ytd_sales      
+	field incc_c_1            
+	field incc_c_2            
+	field incc_c_3            
+	field incc_c_4            
+	field incc_c_5            
+	field incc_c_6            
+	field incc_c_7            
+	field incc_c_8            
+	field incc_c_9            
+	field incc_c_10           
+	field incc_c_11           
+	field incc_c_12           
+	field incc_c_val_1        
+	field incc_c_val_2        
+	field incc_c_val_3        
+	field incc_c_val_4        
+	field incc_c_val_5        
+	field incc_c_val_6        
+	field incc_c_val_7        
+	field incc_c_val_8        
+	field incc_c_val_9        
+	field incc_c_val_10       
+	field incc_c_val_11       
+	field incc_c_val_12       
+	field incc_c_prf_1        
+	field incc_c_prf_2        
+	field incc_c_prf_3        
+	field incc_c_prf_4        
+	field incc_c_prf_5        
+	field incc_c_prf_6        
+	field incc_c_prf_7        
+	field incc_c_prf_8        
+	field incc_c_prf_9        
+	field incc_c_prf_10       
+	field incc_c_prf_11       
+	field incc_c_prf_12       
+	field incc_stat_flag      
+	field incc_os_date       
+	field incc_os_ldate       
+end
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+#field comm_co_short       
+	field comm_est_no         
+	field comm_est_name       
+	field comm_inv_date       
+	field comm_fiscal         
+end

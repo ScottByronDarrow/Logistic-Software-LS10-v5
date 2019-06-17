@@ -1,0 +1,37 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cucr,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cucr)
+|  Schema Desc  : (Customer Credit Return Description File)
+|----------------------------------------------------------------------
+| $Log: sch.cucr,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:28  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file cucr 
+
+field	cucr_co_no			type	char	2
+field	cucr_code			type	char	1
+field	cucr_desc			type	char	16
+field	cucr_id_no			type	composite
+			cucr_co_no,
+			cucr_code									index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cucr_co_no		-	Company number.
+	cucr_code		-	Credit Return code.
+	cucr_desc		-	Credit Return description.
+}

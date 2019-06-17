@@ -1,0 +1,28 @@
+Purchase Order Reports Menu (POPR)
+po_reports
+Purchase Order Master Menu. <a> (1,2)
+menu MENUSYS/po_master.mdf
+Print Single Purchase Order <a> (1,1)
+po_poprint.i~LPNO~
+Print Single Purchase Order Costing <a> (1,2)
+po_cstprn~LPNO~
+Print Purchase Order(s) by Category. <a> (1,1)
+sk_group.i~po_bycatprt~Purchase Orders By Category~ ~
+Print Purchase Order(s) by Item. <a> (1,1)
+po_byitemprt~
+Print Purchase Order(s) by Supplier. <a> (1,2)
+po_bysuprt~
+Print Delivery Performance by Supplier. <a> (1,1)
+po_sup_perf~
+Print Cost of Sale Exceptions. <a> (1,1)
+po_varprt~LPNO~X~
+Print Inventory Costing Variance. <a> (1,1)
+po_varprt~LPNO~V~
+Print Actual/Estimate Cost Variance. <a> (1,2)
+po_varprt~LPNO~E~
+((
+quadrant(20,6)
+quadrant(48,8)
+box(14,3,50,15)
+line(15,5,49)
+))

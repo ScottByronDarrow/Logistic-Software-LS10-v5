@@ -1,0 +1,61 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inls,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inls)
+|  Schema Desc  : (Inventory Lost Sales File. )
+|----------------------------------------------------------------------
+| $Log: sch.inls,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:55  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file inls
+
+field	inls_co_no			type	char	2
+field	inls_est_no			type	char	2
+field	inls_id_no			type	composite
+ 		inls_co_no,
+		inls_est_no					index	dups
+field	inls_date			type	edate
+field	inls_hhbr_hash			type	long		index	dups
+field	inls_hhcc_hash			type	long
+field	inls_id_no2			type	composite
+		inls_co_no,
+		inls_hhbr_hash					index	dups
+field	inls_hhcu_hash			type	long
+field	inls_area_code			type	char	2
+field	inls_sale_code			type	char	2
+field	inls_qty			type	float
+field	inls_value			type	money
+field	inls_cost			type	money
+field	inls_res_code			type	char	2
+field	inls_res_desc			type	char	60
+field	inls_status			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inls_co_no		-	Company number.
+	inls_est_no		-	Establishment / Branch number.
+	inls_date		-	Date of lost sale.
+	inls_hhbr_hash		-	Link to inmr ( inmr_hhbr_hash )
+	inls_hhcc_hash		- 	Link to ccmr ( ccmr_hhcc_hash )
+	inls_hhcu_hash		- 	Link to cumr ( cumr_hhcu_hash )
+	inls_area_code		-	Area code ( ex exaf )
+	inls_sale_code		-	Sale code ( ex exsf )
+	inls_qty		-	Quantity of lost sale. 
+	inls_value		-	Value of lost sale.
+	inls_cost		-	Cost of lost sale.
+	inls_res_code		-	Lost sale reason code.
+	inls_res_desc		-	Lost sale reason description.
+	inls_status		-	Lost sale status.
+}

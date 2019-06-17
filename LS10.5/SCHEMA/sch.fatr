@@ -1,0 +1,68 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.fatr,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.fatr)
+|  Schema Desc  : (Fixed Asset Transactions file. )
+|----------------------------------------------------------------------
+| $Log: sch.fatr,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:39  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file fatr
+
+field	fatr_co_no					type	char	2
+field	fatr_group					type	char	5
+field	fatr_group_desc				type	char	40
+field	fatr_dep_rule				type	char	1
+field	fatr_nxt_asset				type	long
+field	fatr_ass_life				type	char	7
+field	fatr_max_depr				type	money
+field	fatr_tax_dtype				type	char	1
+field	fatr_tax_pa_flag       		type	char	1
+field	fatr_int_dtype				type	char	1
+field	fatr_int_pa_flag       		type	char	1
+field	fatr_stat_flag				type	char	1
+field	fatr_id_no					type	composite
+			fatr_co_no,
+			fatr_group									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		fatr_co_no				-		Company number.
+		fatr_group				-		Group code.
+		fatr_group_desc			-		Group description.
+		fatr_group_fyr			-		First Year rule
+											F - Full year
+											H - Half year
+											M - Month
+											A - One specified amount.
+		fatr_max_deprec			-		Maximum depreciation amount.
+		fatr_int_dtype			-		Internal depreciation type
+											CP - Cost price (straight line)
+											DV - Diminishing Value.
+		fatr_int_pa_flag		-		P = Calculated on percentage.
+										A = Calculated on amount based on
+											asset live / amount / rule
+		fatr_int_d_pc			-		Internal depreciation percent.
+		fatr_int_amt			-		Internal depreciation amount.
+		fatr_tax_dtype			-		Tax depreciation type
+											CP - Cost price (straight line)
+											DV - Diminishing Value.
+		fatr_tax_pa_flag		-		P = Calculated on percentage.
+										A = Calculated on amount based on
+											asset live / amount / rule
+		fatr_tax_d_pc			-		Tax depreciation percent.
+		fatr_tax_amt			-		Tax depreciation amount.
+		fatr_stat_flag 			-		Spare status flag.
+}

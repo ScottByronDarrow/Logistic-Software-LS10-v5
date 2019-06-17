@@ -1,0 +1,30 @@
+Sales Analysis Menu (SAMR)
+sa_master
+Marketing Menu <a> (1,2)
+menu MENUSYS/main_mark.mdf
+Sales Analysis (Budget) <a> (1,1)
+sa_allrep.i~sa_allprep~
+Sales Analysis (Normal) <a> (1,2)
+sa_allrep.i~sa_allrep~
+Detailed Displays. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sa_df_dsp.mdf
+Detailed Reports. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sa_df_rep.mdf
+12 Month Reports. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sa_12month.mdf
+Top X Analysis Reports. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sa_top.mdf
+Customer Two Year Analysis. <a> (2,2)
+lp_chain~warning " CUSTOMER ANALYSIS (TWO YEAR)"~db_sa_cust LPNO~
+Maintain Subranges. <a> (2,1)
+sa_srmaint~
+Maintain Budgets. <a> (2,2)
+sa_bgmaint.i~sa_bgmaint~
+Sales Analysis Adjustment. <a> (2,2)
+sa_dfadj~LPNO~
+((
+quadrant(10,6)
+quadrant(45,8)
+box(5,3,68,13)
+line(6,5,67)
+))

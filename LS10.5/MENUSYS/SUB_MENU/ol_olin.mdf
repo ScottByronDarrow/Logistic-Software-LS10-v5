@@ -1,0 +1,21 @@
+Online Invoice/Credit Entry Menu (SUB)
+olmenu_help
+Return to On-line Main Menu. <a> (1,2)
+menu MENUSYS/ol_menu.mdf
+Display Sales (Cash / Charge). <a> (1,1)
+srcheck~CONO~BRNO~ol_invdisp~N~X~O~ol_invoice.s~
+Display Credit Note/ Cash Refund. <a> (1,2)
+srcheck~CONO~BRNO~ol_invdisp~N~X~R~ol_invoice.s~
+Sales (Cash / Charge). <a> (1,1)
+srcheck~CONO~BRNO~ol_invoice~N~X~O~ol_invoice.s~LPNO~
+Credit Note/ Cash Refund. <a> (1,2)
+srcheck~CONO~BRNO~ol_invoice~N~X~R~ol_invoice.s~LPNO~
+Manual Sales (Cash / Charge). <a> (1,1)
+srcheck~CONO~BRNO~ol_docket~Y~X~O~ol_invoice.s~
+Manual Credit Note/ Cash Refund. <a> (1,2)
+srcheck~CONO~BRNO~ol_docket~Y~X~R~ol_invoice.s~
+((
+quadrant(20,6)
+box(14,3,48,12)
+line(15,5,47)
+))

@@ -1,0 +1,97 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:12:42 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:12:42  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/05/02 08:57:11  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_cc_no
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table qtln
+	field qtln_hhqt_hash
+	field qtln_line_no
+end
+
+table qtlp
+	field qtlp_hhqt_hash
+	field qtlp_line_no
+	field qtlp_hhlh_hash
+end
+
+table qthr
+	field qthr_co_no
+	field qthr_br_no
+	field qthr_quote_no
+	field qthr_quote_src
+	field qthr_cont_no
+	field qthr_hhcu_hash
+	field qthr_hhqt_hash
+	field qthr_enq_ref
+	field qthr_op_id
+	field qthr_time_create
+	field qthr_date_create
+	field qthr_expire_date
+	field qthr_dt_fst_call
+	field qthr_dt_lst_call
+	field qthr_dt_follow_up
+	field qthr_dt_quote
+	field qthr_no_calls
+	field qthr_carr_code
+	field qthr_carr_area
+	field qthr_no_kgs
+	field qthr_pri_type
+	field qthr_sman_code
+	field qthr_sell_terms
+	field qthr_pay_term
+	field qthr_freight
+	field qthr_sos
+	field qthr_exch_rate
+	field qthr_fix_exch
+	field qthr_cont_name
+	field qthr_cont_phone
+	field qthr_pos_code
+	field qthr_del_name
+	field qthr_del_add1
+	field qthr_del_add2
+	field qthr_del_add3
+	field qthr_del_add4
+	field qthr_comm1
+	field qthr_comm2
+	field qthr_comm3
+	field qthr_salute
+	field qthr_status
+	field qthr_stat_flag
+	field qthr_place_ord
+	field qthr_reas_code
+	field qthr_reas_desc
+	field qthr_comp_code
+	field qthr_comp_name
+	field qthr_dbt_name
+	field qthr_del_date
+	field qthr_misc_charge1
+	field qthr_misc_charge2
+	field qthr_misc_charge3
+	field qthr_qt_value
+	field qthr_qt_profit_cur
+	field qthr_qt_profit_pc
+	field qthr_prt_name
+	field timestamp
+end
+

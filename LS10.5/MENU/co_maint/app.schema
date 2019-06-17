@@ -1,0 +1,79 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.1 2001/08/06 23:32:10 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:32:10  scott
+#	RELEASE 5.0
+#	
+#	
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_cc_no          
+	field comm_cc_name        
+	field comm_stat_flag      
+end
+
+table comr
+	field comr_co_no          
+	field comr_co_name        
+	field comr_co_short_name  
+	field comr_co_adr1        
+	field comr_co_adr2        
+	field comr_co_adr3        
+	field comr_master_br        
+	field comr_module_inst    
+	field comr_fiscal         
+	field comr_stmt_date      
+	field comr_yend_date      
+	field comr_closed_period  
+	field comr_pay_bover      
+	field comr_pay_freq       
+	field comr_gst_rate       
+	field comr_gst_ird_no     
+	field comr_int_rate       
+	field comr_restock_pc     
+	field comr_price1_desc    
+	field comr_price2_desc    
+	field comr_price3_desc    
+	field comr_price4_desc    
+	field comr_price5_desc    
+	field comr_price6_desc    
+	field comr_price7_desc    
+	field comr_price8_desc    
+	field comr_price9_desc    
+	field comr_contingency    
+	field comr_sur_amt        
+	field comr_sur_cof        
+	field comr_frt_min_amt    
+	field comr_frt_mweight    
+	field comr_pay_terms      
+	field comr_fin_susp       
+	field comr_nfn_susp       
+	field comr_pl_app_acc     
+	field comr_po_sic1        
+	field comr_po_sic2        
+	field comr_po_sic3        
+	field comr_env_name       
+	field comr_stat_flag      
+	field comr_base_curr      
+	field comr_consolidate    
+end
+
+table exsi
+	field exsi_co_no          
+	field exsi_inst_code      
+	field exsi_inst_text      
+	field exsi_stat_flag      
+end
+
+table esmr
+	field esmr_co_no          
+	field esmr_est_no         
+	field esmr_est_name       
+end

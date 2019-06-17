@@ -1,0 +1,15 @@
+Internal Fixed Asset (FAIN)
+fainternal_help
+Fixed Asset Menu <a> (1,2)
+menu MENUSYS/fa_master.mdf
+Display Depreciation Schedule. <a> (1,2)
+fa_depdisp~I~
+Print Depreciation Schedule. <a> (1,2)
+fa_depprt~I~
+Print Fixes Asset Register. <a> (1,2)
+fa_regprt~I~
+((
+quadrant(25,6)
+box(1,3,76,14)
+line(2,5,75)
+))

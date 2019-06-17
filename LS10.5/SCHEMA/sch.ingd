@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ingd,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.ingd)
+|  Schema Desc  : (Inventory Grading Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.ingd,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:53  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	ingd
+
+field	ingd_co_no			type	char	2
+field	ingd_grade			type	char	1
+field	ingd_id_no			type	comp
+		ingd_co_no,
+		ingd_grade					index
+field	ingd_writedown			type	float
+field	ingd_stat_flag			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ingd_co_no			- Company number.
+	ingd_grade			- Inventory Grade.
+	ingd_writedown			- Writedown perentage.
+	ingd_stat_flag			- Spare status flag.
+}

@@ -1,0 +1,10 @@
+MISC TRANSPORT MASTER FILES (SUB)
+so_help
+Transport Module <a> (1,1)
+menu MENUSYS/so_transp.mdf
+Maintain Vehicle Master. <a> (1,1)
+tr_vehimaint~
+Maintain Trucker Master. <a> (1,1)
+tr_maint~
+((
+))

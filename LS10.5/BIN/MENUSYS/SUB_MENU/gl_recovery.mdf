@@ -1,0 +1,12 @@
+GENERAL LEDGER RECOVERY CODES (SUB)
+gl_recovery
+General Ledger Interface Menu. <a> (1,1)
+menu MENUSYS/gl_iface.mdf
+Add / Maintain Recovery Codes. <a> (1,1)
+gl_reccode_mnt~
+Allocate Recovery Codes. <a> (1,1)
+gl_rc_alloc~
+Display/Print Recovery Codes. <a> (1,1)
+gl_rc_dsp~
+((
+))

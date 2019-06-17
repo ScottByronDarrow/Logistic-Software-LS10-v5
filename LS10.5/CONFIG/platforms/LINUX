@@ -1,0 +1,18 @@
+#
+# LINUX 2.2.13 Slackware
+#
+C++			=	g++
+LD				=	g++
+CXXDBG			=	-Wall -g
+LDFLAGS			=	-O -s
+
+
+#
+#	Resolution quirks
+#
+QUIRKSLIB		=	-lncurses -lcrypt -lDSOXtraLS10.5
+
+#
+#	Include rules to build C++ sources
+#
+include ${BASE_PATH}/${VERSION}/CONFIG/Rules.c++

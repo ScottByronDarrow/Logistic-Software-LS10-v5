@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+#
+
+. ./LogisticVars
+
+echo "Building Database"
+script=`pwd`/info/newdb
+subst -f $1 $script.sql
+cd $DBPATH
+dbaccess -qcr $script << !! > /dev/null 2>&1
+
+!!

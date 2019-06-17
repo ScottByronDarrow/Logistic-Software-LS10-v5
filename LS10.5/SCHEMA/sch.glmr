@@ -1,0 +1,81 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glmr,v 5.1 2001/08/20 23:34:16 scott Exp $
+|  Schema Name  : (sch.glmr)
+|  Schema Desc  : (General Ledger Master File - Account Header)
+|----------------------------------------------------------------------
+| $Log: sch.glmr,v $
+| Revision 5.1  2001/08/20 23:34:16  scott
+| Updated for development related to bullet proofing
+|
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:43  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	glmr
+
+field	glmr_co_no				type	char    2    
+field	glmr_acc_no				type	char	16   
+field	glmr_curr_code			type	char	3
+field	glmr_desc				type	char	25   
+field	glmr_class1				type	char    1    
+field	glmr_class2				type	char    1    
+field	glmr_class3				type	char    1     
+field	glmr_hhca_hash			type	long          
+field	glmr_hhmr_hash			type	serial 				index  
+field	glmr_parent_cnt			type	int           
+field	glmr_child_cnt			type	int           
+field	glmr_mod_date			type	edate         
+field	glmr_system_acc			type	char	1
+field	glmr_stat_flag			type	char    1
+field	glmr_id_no				type	composite
+			glmr_co_no,
+			glmr_acc_no										index	primary
+field	glmr_id_no2				type	composite
+			glmr_co_no,
+			glmr_class1,
+			glmr_acc_no										index
+field	glmr_id_no3				type	composite
+			glmr_co_no,
+			glmr_acc_no,
+			glmr_curr_code									index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glmr_co_no			-	Company Number.
+	glmr_acc_no			-	Account number.
+	glmr_curr_code		-	Account Currency.
+	glmr_desc			-	General ledger description.
+	glmr_class			-	Account Class
+					  		(F)inancial
+					  		(N)on-financial
+	glmr_class2			-	Account Finacial class.
+                                          (A)sset
+                                          (L)iability
+                                          (I)ncome
+                                          (E)xpense
+                                          (F) Non-financial.
+	glmr_class3			Account Posting Class.
+					  					  (S)ummary
+                                          (P)osting
+                                          (C)ontrol
+	glmr_hhca_hash		-	Link to chart of accounts. ( glca )
+	glmr_hhmr_hash		-	Account Unique Serial hash.
+	glmr_parent_cnt		-	Count of parent accounts.
+	glmr_child_cnt		-	Count of child accounts.
+	glmr_mod_date		-	Date last modified.
+	glmr_system_acc		-	S(ystem) or machine generated posting account
+							M(anually) posted account.
+	glmr_stat_flag		-	Spare status flag.
+}

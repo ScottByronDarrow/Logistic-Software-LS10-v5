@@ -1,0 +1,84 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.trcm,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.trcm)
+|  Schema Desc  : (TRansport Carrier Master File. 		 )
+|----------------------------------------------------------------------
+| $Log: sch.trcm,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:35  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:53  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	trcm	
+
+field	trcm_co_no				type	char	2
+field	trcm_br_no				type	char	2
+field	trcm_carr_code			type	char	4
+field	trcm_trcm_hash			type	serial					index
+field	trcm_carr_desc			type	char	40
+field	trcm_carr_name			type	char	40
+field	trcm_carr_addr1			type	char	40
+field	trcm_carr_addr2			type	char	40
+field	trcm_carr_addr3			type	char	40
+field	trcm_carr_addr4			type	char	40
+field	trcm_min_wgt			type	float
+field	trcm_max_wgt			type	float
+field	trcm_min_vol			type	float
+field	trcm_max_vol			type	float
+field	trcm_bonded				type	char	1
+field	trcm_phone				type	char	15
+field	trcm_fax_no				type	char	15
+field	trcm_contact_name		type	char	20
+field	trcm_cont_start			type	long	
+field	trcm_cont_end			type	long	
+field	trcm_comment			type	char	60
+field	trcm_markup_pc			type	float
+field	trcm_day_charge			type	double
+field	trcm_wky_charge			type	double
+field	trcm_mth_charge			type	double
+field	trcm_stat_flag			type	char	1	
+field	trcm_id_no				type	comp
+			trcm_co_no,
+			trcm_br_no,
+			trcm_carr_code								index	primary
+field	trcm_id_no2				type	comp
+			trcm_co_no,
+			trcm_carr_code								index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		trcm_co_no			-	Company number.
+		trcm_br_no			-	Branch number.
+		trcm_carr_code		-	Carrier Code .
+		trcm_cfhh_hash		-	Unique Carrier file hash.
+		trcm_carr_desc		-	Carrier Description.
+		trcm_carr_name		-	Carrier Name
+		trcm_carr_addr1-4	-	Carrier Address
+		trcm_min_wgt		-	Minimum weight in kg's
+		trcm_max_wgt		-	Maximum weight in kg's
+		trcm_min_vol		-	Minimum Volume.
+		trcm_max_vol		-	Maximum Volume.
+		trcm_bonded			-	Bonded Carrier. Y/N
+		trcm_phone			-	Carrier Phone Number.
+		trcm_fax_no			-	Carrier fax number.
+		trcm_contact_name	-	Carrier contact name.
+		trcm_comment		-	Carrier comment
+		trcm_cont_start		-	Contract Start Date
+		trcm_cont_end		-	Contract End Date
+		trcm_markup_pc		-	Carrier Markup percent.
+		trcm_day_charge		- 	Carrier Charge per Day
+		trcm_wky_charge		- 	Carrier Charge per Week
+		trcm_mth_charge		- 	Carrier Charge per Month
+		trcm_stat_flag		-	Spare status flag.
+}

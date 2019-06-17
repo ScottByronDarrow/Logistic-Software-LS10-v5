@@ -1,0 +1,96 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:01:20 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:01:20  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 01:46:13  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:11:46  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:36:47  gerry
+#	Force Revision No Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/07/10 09:34:56  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table bmin
+	field bmin_co_no
+	field bmin_hhbr_hash
+	field bmin_alt_no
+	field bmin_line_no
+	field bmin_tline
+	field bmin_text
+end
+
+table bmms
+	field bmms_co_no
+	field bmms_hhbr_hash
+	field bmms_alt_no
+	field bmms_line_no
+	field bmms_cons
+	field bmms_mabr_hash
+	field bmms_uom
+	field bmms_matl_qty
+	field bmms_matl_wst_pc
+	field bmms_instr_no
+	field bmms_iss_seq
+end
+
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_std_batch
+	field inei_min_batch
+	field inei_max_batch
+	field inei_std_cost
+	field inei_dflt_bom
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_description2
+	field inmr_quick_code
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_scrap_pc
+	field inmr_stat_flag
+	field inmr_dflt_bom
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+

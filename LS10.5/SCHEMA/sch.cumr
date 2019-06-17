@@ -1,0 +1,247 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cumr,v 5.2 2001/10/23 08:23:19 scott Exp $
+|  Schema Name  : (sch.cumr)
+|  Schema Desc  : (Customer Master File Base Record. )
+|----------------------------------------------------------------------
+| $Log: sch.cumr,v $
+| Revision 5.2  2001/10/23 08:23:19  scott
+| Added back id_no6 until single report can be re-writen.
+|
+| Revision 5.1  2001/08/23 11:47:47  scott
+| Updated from scotts machine
+|
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file cumr
+
+field	cumr_co_no				type	char	2		index	dups
+field	cumr_est_no				type	char	2
+field	cumr_department			type	char	2
+field	cumr_dbt_no				type	char	6
+field	cumr_hhcu_hash			type	serial			index
+field	cumr_dbt_name			type	char	40
+field	cumr_dbt_acronym		type	char	9
+field	cumr_acc_type			type	char	1
+field	cumr_stmt_type			type	char	1
+field	cumr_class_type			type	char	3
+field	cumr_cont_type			type	char	3
+field	cumr_buy_grp			type	char	3
+field	cumr_curr_code			type	char	3
+field	cumr_ctry_code			type	char	3
+field	cumr_price_type			type	char	1
+field	cumr_payment_flag		type	integer
+field	cumr_int_flag			type	char	1
+field	cumr_bo_flag			type	char	1
+field	cumr_bo_cons			type	char	1
+field	cumr_bo_days			type	int
+field	cumr_po_flag			type	char	1
+field	cumr_sur_flag			type	char	1
+field	cumr_ch_adr1			type	char	40
+field	cumr_ch_adr2			type	char	40
+field	cumr_ch_adr3			type	char	40
+field	cumr_ch_adr4			type	char	40
+field	cumr_dl_adr1			type	char	40
+field	cumr_dl_adr2			type	char	40
+field	cumr_dl_adr3			type	char	40
+field	cumr_dl_adr4			type	char	40
+field	cumr_contact_name		type	char	20
+field	cumr_contact2_name		type	char	20
+field	cumr_contact3_name		type	char	20
+field	cumr_spec_note1			type	char	40
+field	cumr_spec_note2			type	char	40
+field	cumr_phone_no			type	char	15
+field	cumr_fax_no				type	char	15
+field	cumr_telex				type	char	10
+field	cumr_post_code			type	char	10
+field	cumr_stop_credit		type	char	1
+field	cumr_date_stop			type	edate
+field	cumr_total_days_sc		type	int
+field	cumr_credit_limit		type	money	
+field	cumr_crd_ext			type	int
+field	cumr_crd_prd			type	char	3
+field	cumr_chq_prd			type	char	2
+field	cumr_crd_flag			type	char	1
+field	cumr_credit_ref			type	char	20
+field	cumr_bank_code			type	char	3
+field	cumr_branch_code		type	char	20
+field	cumr_area_code			type	char	2	
+field	cumr_del_zone 			type	char	6	
+field	cumr_sman_code			type	char	2	
+field	cumr_merchant			type	long
+field	cumr_roy_type			type	char	3	
+field	cumr_disc_code			type	char	1
+field	cumr_tax_code			type	char	1
+field	cumr_tax_no				type	char	15
+field	cumr_ch_to_ho_flg		type	char	1
+field	cumr_ho_dbt_hash		type	long			index	dups
+field	cumr_hhsu_hash			type	long
+field	cumr_cat_sa_flag		type	char	1
+field	cumr_stmnt_flg			type	char	1
+field	cumr_freight_chg		type	char	1
+field	cumr_restock_fee		type	char	1
+field	cumr_nett_pri_prt		type	char	1
+field	cumr_reprint_inv		type	char	1
+field	cumr_cus_gl_type		type	int
+field	cumr_cash_credit		type	char	1
+field	cumr_inst_fg1			type	integer	
+field	cumr_inst_fg2			type	integer
+field	cumr_inst_fg3			type	integer	
+field	cumr_gl_ctrl_acct		type	char	16 
+field	cumr_pay_method			type	char	1 
+field	cumr_bk_name			type	char	20	   
+field	cumr_bk_branch			type	char	20	   
+field	cumr_bk_code			type	char	15	   
+field	cumr_bk_acct_no			type	char	15	   
+field	cumr_date_open			type	edate
+field	cumr_date_lastinv		type	edate
+field	cumr_date_lastpay		type	edate
+field	cumr_amt_lastpay		type	money
+field	cumr_mtd_sales			type	money
+field	cumr_ytd_sales			type	money
+field	cumr_ord_value			type	money
+field	cumr_bo_current			type	money
+field	cumr_bo_per1			type	money
+field	cumr_bo_per2			type	money
+field	cumr_bo_per3			type	money	
+field	cumr_bo_per4			type	money	
+field	cumr_bo_fwd				type	money	
+field	cumr_od_flag			type	int	
+field	cumr_stat_flag			type	char	1
+field	cumr_item_codes			type	char	1
+field	cumr_mail_label			type	char	1
+field	cumr_letter     		type	char	1
+field	cumr_cash_flag     		type	char	1
+field	cumr_ca_no				type	char	10
+field	cumr_crd_expiry			type	edate
+field	cumr_id_no				type	composite
+			cumr_co_no,
+			cumr_est_no,
+			cumr_dbt_no										index	primary
+field	cumr_id_no2				type	comp
+			cumr_co_no,
+			cumr_est_no,
+			cumr_dbt_acronym								index	dups
+field	cumr_id_no3				type	comp
+			cumr_co_no,
+			cumr_dbt_no										index	dups
+field	cumr_id_no4				type	comp
+			cumr_co_no,
+			cumr_dbt_acronym								index	dups
+field	cumr_id_no6				type	comp
+			cumr_co_no,
+			cumr_est_no,
+			cumr_curr_code,
+			cumr_dbt_no										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cumr_co_no			-	Company number.
+	cumr_est_no			-	Branch number.
+	cumr_department		-	Department number.
+	cumr_dbt_no			-	Debtors number.
+	cumr_hhcu_hash		-	Serial hash for customer. 
+	cumr_dbt_name		-	Debtors Name.
+	cumr_dbt_acronym	-	Debtors Acronym.
+	cumr_acc_type		-	Account Type.
+	cumr_stmt_type		-	Statement type O(pen item) B(alance b/f)
+	cumr_cont_type		-	Contract Type. 
+	cumr_buy_grp		-	Customer buying group.
+	cumr_curr_code		-	Currency Code.
+	cumr_ctry_code		-	Country Code.
+	cumr_class_type		-	Customer class type	-> excl
+	cumr_price_type		-	Customer pricing type	1-5
+	cumr_payment_flag	-	Customer Payment flag System maintained.
+	cumr_int_flag		-	Interest charged Y/N
+	cumr_bo_flag		-	Backorders allowed Y/N
+	cumr_bo_cons		-	Consolidated orders allowed Y/N
+	cumr_bo_days		-	Number of days backorder allowed on file
+	cumr_po_flag		-	Purchase order required Y/N
+	cumr_sur_flag		-	Customer Surcharge flag Y/N
+	cumr_ch_adr1		-	Customer address part one.
+	cumr_ch_adr2		-	Customer address part two.
+	cumr_ch_adr3		-	Customer address part three.
+	cumr_ch_adr4		-	Customer address part four.
+	cumr_dl_adr1		-	Customer delivery address part one.
+	cumr_dl_adr2		-	Customer delivery address part two.
+	cumr_dl_adr3		-	Customer delivery address part three.
+	cumr_dl_adr4		-	Customer delivery address part four.
+	cumr_contact_name	-	Debtors contact name.
+	cumr_phone_no		-	Debtors Phone number.
+	cumr_fax_no			-	Debtors Fax number.
+	cumr_telex			-	Debtors Telex number.
+	cumr_post_code		-	Debtors postal code.
+	cumr_stop_credit	-	Debtor on stop credit Y/N
+	cumr_date_stop		-	Day debtor placed on stop credit.
+	cumr_total_days_sc	-	Total number of days on stop credit.
+	cumr_credit_limit	-	Credit limit.
+	cumr_crd_prd		-	Credit period.
+	cumr_crd_flag		-	Credit Flag. Y = Ignore credit checks.
+	cumr_credit_ref		-	Credit Referance.
+	cumr_bank_code		-	Debtors Bank Code.
+	cumr_branch_code	-	Debtors Bank/branch code.
+	cumr_area_code		-	Debtors Area Code.
+	cumr_sman_code		-	Debtors Salesman Code.
+	cumr_roy_type		-	Debtors Royalty Type.
+	cumr_disc_code		-	Debtors default discount code. A-Z
+	cumr_tax_code		-	Debtors tax code. A,B,C,D
+	cumr_tax_no			-	Debtors Tax number.
+	cumr_ch_to_ho_flg	-	Debtors charge to head office.
+	cumr_ho_dbt_hash	-	Debtors head office hash.
+	cumr_cat_sa_flag	-	NOT USED.
+	cumr_stmnt_flg		-	Statement flag Y/N
+	cumr_freight_chg	-	Freight Charged. Y/N
+	cumr_restock_fee	-	Re Stocking fee charged Y/N
+	cumr_nett_pri_prt	- 	Nett prices printed on P/S, Inv etc. Y/N
+	cumr_reprint_inv	-	Reprint combined inv/ps at despatch
+                                        confirmation time. (Y/N).
+	cumr_cus_gl_type	-	1 = Domestic.
+							2 = Internal.
+							3 = Export.
+	cumr_cash_credit	-	' ' = normal
+						-	'C' = Cash
+						-	'R' = cRedit Card.
+	cumr_inst_fg1		-	Special instruction code 1
+	cumr_inst_fg2		-	Special instruction code 2
+	cumr_inst_fg3		-	Special instruction code 3
+	cumr_gl_ctrl_acct	-	Control Account for Debtor.
+	cumr_pay_method		-	Payment Method
+	cumr_bk_name		-	Bank name
+	cumr_bk_branch		-	Bank branch
+	cumr_bk_code		-	Bank Code
+	cumr_bk_acct_no		-	Bank Account
+	cumr_date_open		-	Date Opened.
+	cumr_date_lastinv	-	Date last invoiced.
+	cumr_date_lastpay	-	Date of last payment.
+	cumr_amt_lastpay	-	Amount of last payment.
+	cumr_mtd_sales		-	Month to date sales.
+	cumr_ytd_sales		-	Year to date sales.
+	cumr_ord_value		-	Total value of current orders.
+	cumr_bo_current		-	Total balance current.
+	cumr_bo_per1		-	Total balance Overdue 1.
+	cumr_bo_per2		-	Total balance Overdue 2.
+	cumr_bo_per3		-	Total balance Overdue 3.
+	cumr_bo_per4		-	Overdue balance 4
+	cumr_bo_fwd			-	Forward Balance.
+	cumr_od_flag		-	Calculated on true ageing, 0=ok 1-x
+							= outside period by x months.
+	cumr_stat_flag		-	Status flag.
+	cumr_item_codes		-	Flag indicating whether debtor uses debtor
+							specific item codes.
+	cumr_mail_label		-	Print mailing labels. (Y/N).
+	cumr_letter    		-	Print customer letters. (Y/N).
+	cumr_ca_no		    -	Credit Account Number.
+	cumr_crd_expiry	    -	Credit Expiry Date
+}

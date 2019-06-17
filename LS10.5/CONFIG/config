@@ -1,0 +1,30 @@
+#	Configuration parameters for Makefiles
+#
+##############################################
+
+include ${BASE_PATH}/${VERSION}/CONFIG/platforms/${MACH_TYPE}
+include ${BASE_PATH}/${VERSION}/CONFIG/dbs/${DBIF_TYPE}
+
+
+###############################################################################
+# These should be set by Environment, but may be hard-set here
+#
+#MACH_TYPE		=	uncomment machine section
+#CXXDBG			=	uncomment machine section
+#INFORMIXDIR	=	/usr/informix7
+
+###############################################################################
+#
+#	Nothing below this line should be changed for configuration
+#
+SHELL			=	/bin/sh
+RELBASE			=	${BASE_PATH}/${VERSION}/${LIBBASE}
+
+INC++			=	-I${RELBASE}/INC++ ${APPINC}
+DEF++			=	-D${MACH_TYPE} -D_G_NO_NRV
+C++FLAGS		=	${CXXDBG} ${INC++} ${DEF++} ${APPDEF}
+
+LIBPATH			=	-L${RELBASE}/LIB++
+LIBS			=	-lbase++ ${DBASELIB} ${APPLIB} ${QUIRKSLIB}
+
+CLIBS			=	${LIB}

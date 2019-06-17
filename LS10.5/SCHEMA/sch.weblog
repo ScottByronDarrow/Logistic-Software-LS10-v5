@@ -1,0 +1,40 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.weblog,v 5.0 2001/06/19 10:17:35 cha Exp $
+|  Schema Name  : (sch.weblog)
+|  Schema Desc  : (Web log table)
+|----------------------------------------------------------------------
+| $Log: sch.weblog,v $
+| Revision 5.0  2001/06/19 10:17:35  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:37  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:56  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file    weblog	
+field   weblog_ip             type  char 50     index dups  
+field	weblog_co_no          type	char 2
+field	weblog_br_no          type	char 2
+field	weblog_dp_no          type	char 2
+field	cumr_hhcu_hash        type	long		
+field   inmr_hhbr_hash        type  long 
+field   weblog_date           type  edate
+field   weblog_time           type  char  5 
+field   weblog_admin	      type  int
+field   weblog_email		  type  char 50
+field	weblog_order 		  type  char 8 
+field   weblog_continue		  type  int
+field	weblog_laskey		  type  char 20
+field   weblog_id			  type composite
+		weblog_ip,
+		weblog_email		  index primary
+
+end
+{
+}

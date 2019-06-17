@@ -1,0 +1,69 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:07:19 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:07:19  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:28:26  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/23 22:30:32  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_dbt_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_sale_unit
+	field inmr_quick_code
+	field inmr_outer_size
+	field inmr_bo_flag
+	field inmr_bo_release
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_sort
+	field incc_ff_method
+	field incc_wks_demand
+	field incc_pwks_demand
+	field incc_committed
+	field incc_forward
+	field incc_closing_stock
+	field incc_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_acronym
+	field ccmr_lrp_ok
+end
+

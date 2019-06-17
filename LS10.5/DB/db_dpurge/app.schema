@@ -1,0 +1,84 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.0 2002/05/08 01:19:12 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:19:12  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/08/14 03:03:48  scott
+#	Updated for new delete wizard
+#	
+#	Revision 5.0  2001/06/19 08:04:28  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:24:55  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:13:44  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:52:27  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/06/09 05:06:05  scott
+#	Added new app.schema
+#	
+#
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_dbt_date
+end
+
+table cudt
+	field cudt_hhcp_hash
+	field cudt_hhci_hash
+	field cudt_amt_paid_inv
+	field cudt_loc_paid_inv
+	field cudt_stat_flag
+end
+
+table cuhd
+	field cuhd_hhcu_hash
+	field cuhd_receipt_no
+	field cuhd_type
+	field cuhd_hhcp_hash
+	field cuhd_date_payment
+	field cuhd_date_posted
+	field cuhd_tot_amt_paid
+	field cuhd_loc_amt_paid
+	field cuhd_disc_given
+	field cuhd_stat_flag
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_hhci_hash
+	field cuin_type
+	field cuin_est
+	field cuin_inv_no
+	field cuin_date_of_inv
+	field cuin_date_posted
+	field cuin_disc
+	field cuin_amt
+	field cuin_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_stmt_type
+	field cumr_ho_dbt_hash
+end
+

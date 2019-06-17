@@ -1,0 +1,32 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.weborder,v 5.0 2001/06/19 10:17:35 cha Exp $
+|  Schema Name  : (sch.weborder)
+|  Schema Desc  : (Web Orders)
+|----------------------------------------------------------------------
+| $Log: sch.weborder,v $
+| Revision 5.0  2001/06/19 10:17:35  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:37  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:56  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	weborder
+
+field	word_ip			    type char 50    index dups 
+field	word_line_no		type	int
+field   word_item			type char 16 
+field   word_desc			type char 40
+field   word_unit			type char 4
+field   word_qty		    type float
+field   word_price		    type money
+field   word_disc			type money
+end
+{
+}

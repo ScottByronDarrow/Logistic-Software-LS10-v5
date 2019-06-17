@@ -1,0 +1,38 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/14 06:07:15 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/14 06:07:15  scott
+#	Updated to convert to app.schema
+#	Updated to clean code.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_dbt_date
+	field comm_crd_date
+	field comm_inv_date
+	field comm_payroll_date
+	field comm_gl_date
+end
+
+table tmof
+	field tmof_co_no
+	field tmof_o_code
+	field tmof_o_desc
+	field tmof_stat_flag
+end
+
+table tmpf
+	field tmpf_co_no
+	field tmpf_pos_code
+	field tmpf_pos_desc
+	field tmpf_stat_flag
+end
+

@@ -1,0 +1,86 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.suph,v 5.0 2001/06/19 10:17:32 cha Exp $
+|  Schema Name  : (sch.suph)
+|  Schema Desc  : (Stock Supplier Purchase history file. )
+|----------------------------------------------------------------------
+| $Log: sch.suph,v $
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:32  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:49  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	suph
+
+field	suph_br_no			type	char	2
+field	suph_hhbr_hash		type	long			index	dups
+field	suph_hhum_hash		type	long
+field	suph_hhcc_hash		type	long
+field	suph_hhsu_hash		type	long
+field	suph_ord_date		type	date
+field	suph_due_date		type	date
+field	suph_ord_qty		type	float
+field	suph_rec_date		type	date
+field	suph_rec_qty		type	float
+field	suph_net_cost		type	double
+field	suph_land_cost		type	double
+field	suph_status			type	char	1
+field	suph_ship_method	type	char	1
+field	suph_drop_ship		type	char	1
+field	suph_ship_no		type	long
+field	suph_csm_no			type	char	12
+field	suph_grn_no			type	char	15
+field	suph_po_no			type	char	15
+field	suph_id_no			type	composite
+			suph_br_no,
+			suph_hhbr_hash,
+			suph_hhcc_hash,
+			suph_hhsu_hash							index	dups
+field	suph_id_no2			type	composite
+			suph_hhsu_hash,
+			suph_status								index	dups
+field	suph_id_no3			type	composite
+			suph_hhsu_hash,
+			suph_ship_no,
+			suph_po_no,
+			suph_grn_no								index	dups
+field	suph_id_no4									type	composite
+			suph_hhsu_hash,
+			suph_br_no,
+			suph_ship_no,
+			suph_po_no,
+			suph_grn_no,
+			suph_rec_date,
+			suph_ord_date,
+			suph_due_date							index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	suph_br_no			- Branch number.
+	suph_hhbr_hash		- Link to inmr using inmr_hhbr_hash.
+	suph_hhum_hash		- Link to inum using inum_hhum_hash.
+	suph_hhcc_hash		- Link to ccmr using ccmr_hhcc_hash.
+	suph_hhsu_hash		- Link to sumr using sumr_hhsu_hash.
+	suph_ord_date		- Date of Order.
+	suph_ord_qty		- Quantity ordered.
+	suph_rec_date		- Date of receipt.
+	suph_rec_qty		- Quantity of receipt.
+	suph_net_cost		- Net Cost. (Foreign Currency)
+	suph_land_cost		- Landed Cost.(Local Currency)
+	suph_status 	    - A(ctive).
+				 	    - U(pdated).
+	suph_ship_method	- S(EA) or A(IR) or L(and)
+	suph_drop_ship		- Y = Direct Delivery.
+	suph_ship_no	    - Shipment Number.
+	suph_grn_no	        - Goods Receipt No.
+	suph_po_no	        - Purchase order No.
+}

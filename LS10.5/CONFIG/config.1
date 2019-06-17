@@ -1,0 +1,43 @@
+#
+#	Configuration parameters for Makefiles
+#
+##############################################
+
+include ${BASE_PATH}/${VERSION}/CONFIG/platforms/${MACH_TYPE}
+
+###############################################################################
+#
+# Libraries used
+#
+
+# Informix
+DBASELIB		=	-lisam
+
+###############################################################################
+# These should be set by Environment, but may be hard-set here
+#
+#MACH_TYPE		=	uncomment machine section
+#CXXDBG			=	uncomment machine section
+#INFORMIXDIR	=	/usr/informix7
+
+###############################################################################
+#
+#	Nothing below this line should be changed for configuration
+#
+SHELL			=	/bin/sh
+RELBASE			=	${BASE_PATH}/${VERSION}/${LIBBASE}
+
+INC++			=	-I${RELBASE}/INC++
+DEF++			=	-D${MACH_TYPE}
+C++FLAGS		=	${CXXDBG} ${INC++} ${DEF++} ${APPDEF} ${APPINC}
+
+LIBPATH			=	-L${RELBASE}/LIB++ -L${INFORMIXDIR}/lib
+LIBS			=	-lbase++ ${DBASELIB} ${APPLIB} ${QUIRKSLIB}
+
+INC				=	-I${INFORMIXDIR}/include -I${RELBASE}/INCLUDE
+CFLAGS			=	${CDBG} ${INC} ${DEF++} ${APPDEF} ${APPINC}
+
+CLIBPATH		=	-L${RELBASE}/LIB -L${INFORMIXDIR}/lib
+CLIBS			=	-lscrgen${VERSION} \
+					-lbase${VERSION} -ldbif${VERSION} -lbase${VERSION} \
+					${DBASELIB} -lm ${APPLIB} ${QUIRKSLIB}

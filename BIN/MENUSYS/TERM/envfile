@@ -1,0 +1,13 @@
+FN17	sk_alldisp	Stock status Display.
+FN18	sk_whdisp	Stock Warehouse Display
+FN19	sk_serdisp	Stock Serial Item Display
+FN20	sk_loc_dsp	Stock Location Display
+FN21	so_stkdisp	Orders By item Display.
+FN22	po_stkdisp	Purchase Orders By Item Display.
+FN23	so_cc_disp~M~	Customer Status display
+FN24	so_cusdisp	Display Customer Orders.
+FN25	so_cus_ser	Customer Services Display.
+FN26	sk_pri_enq	Customer Price Enquiry.
+FN27	po_ss_disp	Supplier Status
+FN28	po_supdisp	Supplier PO Display.
+FN29	po_sup_enq	Supplier Purchase History Display

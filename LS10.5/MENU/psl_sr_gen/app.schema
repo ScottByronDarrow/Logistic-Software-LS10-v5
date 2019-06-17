@@ -1,0 +1,111 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.0 2001/06/19 08:08:59 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:08:59  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:30:16  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:16:23  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 09:00:33  gerry
+#	Forced Revision No Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/06/08 08:06:03  scott
+#	Checked in new app.schema files.
+#	
+#	
+#
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_stat_flag
+end
+
+table srdb
+	field srdb_co_no
+	field srdb_br_no
+	field srdb_dbt_no
+	field srdb_hhcu_hash
+	field srdb_acronym
+	field srdb_sman_code
+	field srdb_contact_name
+	field srdb_name
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_contact_name
+	field cumr_sman_code
+end
+
+table inmr
+	field inmr_co_no          
+	field inmr_item_no        
+	field inmr_hhbr_hash      
+	field inmr_alpha_code     
+	field inmr_maker_no       
+	field inmr_alternate      
+	field inmr_barcode        
+	field inmr_class          
+	field inmr_description    
+	field inmr_category       
+	field inmr_source       
+	field inmr_sellgrp        
+	field inmr_buygrp         
+	field inmr_qc_reqd         
+	field inmr_active_status  
+end
+
+table srcr
+	field srcr_co_no
+	field srcr_br_no
+	field srcr_crd_no
+	field srcr_hhsu_hash
+	field srcr_acronym
+	field srcr_type_code
+	field srcr_contact_name
+	field srcr_name
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_cont_name
+	field sumr_type_code
+end
+
+table srsk
+	field srsk_co_no          
+	field srsk_hhbr_hash      
+	field srsk_item_no        
+	field srsk_class          
+	field srsk_category       
+	field srsk_active_status  
+	field srsk_alpha_code     
+	field srsk_alternate      
+	field srsk_barcode        
+	field srsk_maker_no       
+	field srsk_description    
+	field srsk_source         
+	field srsk_sellgrp        
+	field srsk_buygrp         
+	field srsk_spare          
+	field srsk_qc_reqd        
+end

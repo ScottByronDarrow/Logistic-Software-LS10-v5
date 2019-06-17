@@ -1,0 +1,27 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmct,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.tmct)
+|  Schema Desc  : (Tele-Marketing ConTrol file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmct,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:33  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:50  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmct
+
+field	tmct_co_no			type	char	2	index	primary
+field	tmct_so_iface			type	char	1
+field	tmct_db_iface			type	char	1
+field	tmct_sk_iface			type	char	1
+field	tmct_n_script_no		type	int
+end

@@ -1,0 +1,42 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/06 03:43:19 kaarlo Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/06 03:43:19  kaarlo
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_acronym
+	field sumr_stat_flag
+end
+
+table srcr
+	field srcr_co_no
+	field srcr_br_no
+	field srcr_crd_no
+	field srcr_hhsu_hash
+	field srcr_acronym
+	field srcr_type_code
+	field srcr_contact_name
+	field srcr_name
+end
+
+table inis
+	field inis_hhsu_hash
+	field inis_hhis_hash
+end
+
+table inld
+	field inld_hhis_hash
+	field inld_ord_date
+	field inld_sup_date
+end
+

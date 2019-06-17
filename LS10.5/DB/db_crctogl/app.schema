@@ -1,0 +1,65 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:08 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:08  scott
+#	Update - LS10.5
+#	
+#	Revision 5.0  2001/06/19 08:04:22  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:24:50  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:13:41  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/09/06 02:05:17  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_dbt_date        
+	field comm_gl_date        
+	field comm_fiscal         
+	field comm_gst_rate         
+end
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_branch_name
+	field crbk_bank_no
+	field crbk_curr_code
+	field crbk_gl_bank_chg
+	field crbk_gl_bank_acct
+	field crbk_gl_exch_var
+	field crbk_gl_bill_rec
+	field crbk_gl_fwd_rec
+	field crbk_clear_fee
+	field crbk_stat_flag
+end
+
+table bldt
+	field bldt_hhcp_hash
+	field bldt_posted_gl
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_class_type
+	field cumr_sman_code
+	field cumr_tax_code
+	field cumr_gl_ctrl_acct
+end
+

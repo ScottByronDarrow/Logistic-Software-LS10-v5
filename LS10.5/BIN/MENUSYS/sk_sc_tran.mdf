@@ -1,0 +1,34 @@
+Stock Transfers Menu (SKTR)
+sk_trans
+Distribution Master Menu <a> (1,2)
+menu MENUSYS/main_dist.mdf
+Enter Stock Transfers. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_sc_inp.mdf
+Consolidate Two-step Issues. <a> (1,2)
+lp_chain~sk_ir_post PID B~
+Transfer Despatch Confirmation. <a> (1,2)
+lp_chain~sk_sc_tran LPNO PID IC sk_trnprt.p N~
+Transfer Request Confirmation. <a> (1,2)
+lp_chain~sk_sc_tran LPNO PID RC sk_trnprt.p N~
+Display Selective Transfers. <a> (1,2)
+lp_chain~sk_sc_tran 0 PID TD sk_trnprt.p N~
+Enter Transfer Receipts. <a> (1,2)
+lp_chain~sk_sc_tran 0 PID RE sk_trnprt.p N~
+Transfer Reports Menu. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_sc_prn.mdf
+Transfer Display. <a> (2,2)
+sk_ir_disp~
+Transfer Backorders Display. <a> (2,2)
+so_br_boprt~D~
+Delete B/O & Two-step Trans. <a> (2,2)
+sk_ir_del~LPNO~B~
+Selective B/O Release. <a> (2,2)
+so_usr_trel~
+Post Transfers to G/L. <a> (2,1)
+sk_ir_glup~LPNO~C~
+((
+box(1,3,76,15)
+line(2,5,75)
+quadrant(6,6)
+quadrant(46,8)
+))

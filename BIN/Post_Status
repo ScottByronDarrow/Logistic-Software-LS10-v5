@@ -1,0 +1,9 @@
+P	Proforma Invoice
+X7	Invoice/Credit/CCN not yet posted.
+6	Invoice/Credit flagged for posting
+4	Invoice/Credit posted to Stock (phase 1 of 5)
+3	Invoice/Credit posted to Account Receivable (phase 2 of 5)
+2	Invoice/Credit posted to Sales Analysis (phase 3 of 5)
+1	Invoice/Credit posted to Machine History (phase 4 of 5)
+0	Invoice/Credit posted to Commissions (phase 5 of 5)
+9D	Invoice/Credit posting COMPLETE.

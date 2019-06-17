@@ -1,0 +1,18 @@
+LOGISTIC REQUIREMENTS PLANNING MENU (LRPMR)
+lrp_help
+DISTRIBUTION MENU <a> (1,2)
+menu MENUSYS/main_dist.mdf
+Logistic Requirements Planning - SUPPLY <a> (1,2)
+menu MENUSYS/lrp_supply.mdf
+Logistic Requirements Planning - DEMAND <a> (1,2)
+menu MENUSYS/lrp_demand.mdf
+Logistic Requirements Planning - REORDER <a> (1,2)
+menu MENUSYS/lrp_rorder.mdf
+Logistic Requirements Planning - ENVIRONMENTS <a> (1,2)
+lrp_envinp~
+((
+quadrant(18,6)
+quadrant(48,7)
+box(12,3,52,11)
+line(13,5,51)
+))

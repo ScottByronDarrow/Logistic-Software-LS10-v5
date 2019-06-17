@@ -1,0 +1,10 @@
+Telemarketing Reports Menu (SUB)
+tm_report
+Telemarketing Master Menu. <a|telemktg> (1,2)
+menu MENUSYS/tm_master.mdf
+Print Lead Allocations. <a|telemktg> (1,2)
+tm_allc_prt~Print Lead Allocations~
+Print Rep Lead Sheet. <a|telemktg> (1,2)
+tm_ld_sheet~Print Sales Rep Lead Sheet~
+((
+))

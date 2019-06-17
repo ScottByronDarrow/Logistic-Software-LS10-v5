@@ -1,0 +1,7 @@
+#
+# SCO Openserver 5 using g++
+#
+CC				=	gcc
+CDBG			=	-Wall -g -fpic
+C++C			=	g++
+C++DBG			=	-Wall -g -fpic

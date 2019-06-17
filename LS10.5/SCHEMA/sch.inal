@@ -1,0 +1,59 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inal,v 5.2 2001/07/25 01:15:51 scott Exp $
+|  Schema Name  : (sch.inal)
+|  Schema Desc  : (Advertising Levy file. )
+|----------------------------------------------------------------------
+| $Log: sch.inal,v $
+| Revision 5.2  2001/07/25 01:15:51  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:14  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.2  2001/05/21 00:48:38  scott
+| Updated to add new features, required currency being added to file.
+|
+| Revision 4.1  2001/04/19 10:25:50  cha
+| Added inal_percent
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file inal 
+
+field	inal_hhbr_hash			type	long
+field	inal_br_no				type	char	2
+field	inal_curr_code			type	char	3
+field	inal_date_from			type	edate
+field	inal_date_to			type	edate
+field	inal_value				type	double
+field	inal_percent			type	float
+field	inal_stat_flag			type	char	1
+field	inal_id_no				type	composite	
+			inal_br_no,
+			inal_curr_code,
+			inal_hhbr_hash,	
+			inal_date_from									index	dups
+field	inal_id_no2				type	composite	
+			inal_br_no,
+			inal_hhbr_hash,	
+			inal_date_from,
+			inal_curr_code									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inal_hhbr_hash		-	Link to inventory master file (inmr)
+	inal_br_no			-	Branch number.
+	inal_curr_code		-	Currency Code.
+	inal_date_from		-	Date From.   
+	inal_date_to		-	Date To.
+	inal_value			-	Value.
+	inal_percent		-	Percent.
+	inal_stat_flag		-	Status flag.
+}

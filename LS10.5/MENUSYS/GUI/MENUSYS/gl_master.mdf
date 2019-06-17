@@ -1,0 +1,22 @@
+General Ledger Menu (GLMR)
+gl_help
+Accounting Menu. <a> (1,2)
+menu MENUSYS/main_acct.mdf
+Account Displays. <a> (1,2)
+menu MENUSYS/gl_disp.mdf
+General Ledger Journals & Posting Menu. <a> (1,1)
+menu MENUSYS/gl_journal.mdf
+General Ledger Consolidation Menu. <a> (1,1)
+menu MENUSYS/gl_consol.mdf
+General Ledger Maintenance Menu. <a> (1,1)
+menu MENUSYS/gl_maint.mdf
+General Ledger Interface Menu. <a> (1,1)
+menu MENUSYS/gl_iface.mdf
+General Ledger Integrity Menu. <a> (1,2)
+menu MENUSYS/gl_check.mdf
+((
+quadrant(17,6)
+quadrant(10,8)
+box(10,3,58,15)
+line(11,5,57)
+))

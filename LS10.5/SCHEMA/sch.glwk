@@ -1,0 +1,89 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glwk,v 5.1 2001/07/25 01:15:51 scott Exp $
+|  Schema Name  : (sch.glwk)
+|  Schema Desc  : (General Ledger Transactions Work File. )
+|----------------------------------------------------------------------
+| $Log: sch.glwk,v $
+| Revision 5.1  2001/07/25 01:15:51  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:14  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:46  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	glwk
+
+field	glwk_acc_no				type	char	16
+field	glwk_co_no				type	char	2
+field	glwk_est_no				type	char	2
+field	glwk_acronym			type	char	9
+field	glwk_name				type	char	30
+field	glwk_chq_inv_no			type	char	15
+field	glwk_ci_amt				type	money
+field	glwk_o1_amt				type	money
+field	glwk_o2_amt				type	money
+field	glwk_o3_amt				type	money
+field	glwk_o4_amt				type	money
+field	glwk_hhgl_hash			type	long				index	dups
+field	glwk_tran_type			type	char	2
+field	glwk_sys_ref			type	char	10
+field	glwk_batch_no			type	char	10
+field	glwk_tran_date			type	edate
+field	glwk_period_no			type	char	2
+field	glwk_post_date			type	edate
+field	glwk_narrative			type	char	20
+field	glwk_alt_desc1			type	char	20
+field	glwk_alt_desc2			type	char	20
+field	glwk_alt_desc3			type	char	20
+field	glwk_user_ref			type	char	15
+field	glwk_amount				type	money
+field	glwk_loc_amount			type	money
+field	glwk_jnl_type			type	char	1
+field	glwk_currency 			type	char	3
+field	glwk_exch_rate			type	double     
+field	glwk_stat_flag			type	char	1
+field	glwk_run_no				type	char	10
+field	glwk_id_no				type	composite
+			glwk_tran_type,
+			glwk_sys_ref									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glwk_acc_no			-	General Ledger Account Number.
+	glwk_co_no			-	Company Number.
+	glwk_est_no			-	Branch / Establishment No.
+	glwk_acronym		-	Acronym.
+	glwk_name			-	Name.
+	glwk_chq_inv_no		-	Cheque/Invoice No.
+	glwk_ci_amt			-	Total Amount.
+	glwk_o1_amt			-	Other 1.
+	glwk_o2_amt			-	Other 2.
+	glwk_o3_amt			-	Other 3.
+	glwk_o4_amt			-	Other 4.
+	glwk_hhgl_hash		-	Link gl Master file	( glmr ).
+	glwk_tran_type		-	Transaction type	( ex gljc )
+	glwk_sys_ref		-	System Ref. ( starts with terminal # )
+	glwk_tran_date		-	Transaction Date.
+	glwk_period_no		-	Period No.
+	glwk_post_date		-	Post Date.
+	glwk_narrative		-	Narrative.
+	glwk_user_ref		-	User Ref.
+	glwk_amount			-	Amount.
+	glwk_loc_amount		-	Amount of transaction after conversion to local.
+	glwk_jnl_type		-	Journal Type.
+	glwk_currency 	    -	Currency code of orig. amount
+	glwk_exch_rate		-   Exchange rate for the currency.	
+	glwk_stat_flag		-	Status Flag. 
+}

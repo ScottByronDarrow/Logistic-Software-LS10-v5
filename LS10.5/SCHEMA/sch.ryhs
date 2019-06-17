@@ -1,0 +1,46 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ryhs,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.ryhs)
+|  Schema Desc  : (Royalty History File. )
+|----------------------------------------------------------------------
+| $Log: sch.ryhs,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:19  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:44  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file ryhs 
+
+field  ryhs_co_no                   type  char 2
+field  ryhs_hhry_hash               type  long
+field  ryhs_publish                 type  char 4
+field  ryhs_roy_pc                  type  float
+field  ryhs_roy_basis               type  char 1
+field  ryhs_id_no                   type  comp 
+					 ryhs_co_no,
+					 ryhs_hhry_hash,
+					 ryhs_publish,
+					 ryhs_roy_pc,
+					 ryhs_roy_basis	  index  primary
+field  ryhs_mtd_qty                 type  float
+field  ryhs_mtd_gross               type  money
+field  ryhs_mtd_nett                type  money
+field  ryhs_mtd_roy                 type  money
+field  ryhs_ytd_qty                 type  float
+field  ryhs_ytd_gross               type  money
+field  ryhs_ytd_nett                type  money
+field  ryhs_ytd_roy                 type  money
+field  ryhs_htd_qty                 type  float
+field  ryhs_htd_gross               type  money
+field  ryhs_htd_nett                type  money
+field  ryhs_htd_roy                 type  money
+
+end

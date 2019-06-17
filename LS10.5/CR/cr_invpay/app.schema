@@ -1,0 +1,51 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/06 09:23:00 kaarlo Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/06 09:23:00  kaarlo
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_crd_date
+	field comm_gl_date
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_hhsi_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_date_of_inv
+	field suin_date_posted
+	field suin_pay_date
+	field suin_gst
+	field suin_amt
+	field suin_pay_amt
+	field suin_amt_paid
+	field suin_hold_reason
+	field suin_currency
+	field suin_exch_rate
+	field suin_er_fixed
+	field suin_approved
+	field suin_stat_flag
+end
+

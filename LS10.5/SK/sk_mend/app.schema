@@ -1,0 +1,33 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/12 01:22:26 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/12 01:22:26  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table mect
+	field mect_co_no
+	field mect_br_no
+	field mect_module_type
+	field mect_status
+	field mect_start_time
+	field mect_end_time
+	field mect_closed_mth
+	field mect_txt_file
+	field mect_prog_stat
+end
+

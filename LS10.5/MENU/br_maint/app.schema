@@ -1,0 +1,100 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:07:58 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:07:58  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:29:17  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/03/02 00:58:50  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_gl_date
+	field comm_fiscal
+end
+
+table comr
+	field comr_co_no
+	field comr_co_name
+	field comr_co_short_name
+	field comr_co_adr1
+	field comr_co_adr2
+	field comr_co_adr3
+	field comr_dbt_date
+	field comr_crd_date
+	field comr_inv_date
+	field comr_payroll_date
+	field comr_gl_date
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+	field esmr_adr1
+	field esmr_adr2
+	field esmr_adr3
+	field esmr_area_code
+	field esmr_dflt_bank
+	field esmr_dbt_date
+	field esmr_chg_pref
+	field esmr_csh_pref
+	field esmr_crd_pref
+	field esmr_man_pref
+	field esmr_nx_sav_inv
+	field esmr_nx_csh_inv
+	field esmr_nx_inv_no
+	field esmr_nx_man_no
+	field esmr_nx_crd_nte_no
+	field esmr_stat_flag
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_abc_code
+	field inmr_abc_update
+	field inmr_min_quan
+	field inmr_max_quan
+	field inmr_safety_stock
+	field inmr_stat_flag
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_min_stock
+	field inei_max_stock
+	field inei_safety_stock
+	field inei_abc_code
+	field inei_abc_update
+	field inei_std_batch
+	field inei_stat_flag
+end
+
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_bank_name
+end
+

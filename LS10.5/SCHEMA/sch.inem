@@ -1,0 +1,69 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inem,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.inem)
+|  Schema Desc  : (Inventory Establishment/Branch Manufacturing )
+|----------------------------------------------------------------------
+| $Log: sch.inem,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:53  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inem	
+
+field	inem_hhbr_hash			type	long
+field	inem_est_no				type	char	2
+field	inem_res_type			type	char	1
+field	inem_id_no				type	composite
+		inem_hhbr_hash,	
+		inem_est_no,
+		inem_res_type			index
+field	inem_setup_std_dir		type	double
+field	inem_setup_std_fix		type	double
+field	inem_setup_act_dir		type	double
+field	inem_setup_act_fix		type	double
+field	inem_run_std_dir		type	double
+field	inem_run_std_fix		type	double
+field	inem_run_act_dir		type	double
+field	inem_run_act_fix		type	double
+field	inem_clean_std_dir		type	double
+field	inem_clean_std_fix		type	double
+field	inem_clean_act_dir		type	double
+field	inem_clean_act_fix		type	double
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inem_hhbr_hash			-	link to inmr
+	inem_est_no				-	branch number
+	inem_res_type			-	resource type
+								-	Ma(T)erial
+								-	(L)abour
+								-	(M)achine
+								-	(Q)C-Check
+								-	(S)pecial
+								-	(O)ther
+	inem_setup_std_dir		-	STD direct setup cost (used for material direct)
+	inem_setup_std_fix		-	STD fixed setup cost
+	inem_setup_act_dir		-	ACT direct setup cost (used for material direct)
+	inem_setup_act_fix		-	ACT fixed setup cost
+	inem_run_std_dir		-	STD direct run cost
+	inem_run_std_fix		-	STD fixed run cost
+	inem_run_act_dir		-	ACT direct run cost
+	inem_run_act_fix		-	ACT fixed run cost
+	inem_clean_std_dir		-	STD direct clean cost
+	inem_clean_std_fix		-	STD fixed clean cost
+	inem_clean_act_dir		-	ACT direct clean cost
+	inem_clean_act_fix		-	ACT fixed clean cost
+}

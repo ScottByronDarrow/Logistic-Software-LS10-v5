@@ -1,0 +1,12 @@
+POS Monitoring and Maintenance (POSS)
+pos_master
+Sales Menu <a> (1,4)
+menu MENUSYS/main_sale.mdf
+POS Monitoring <a> (1,4)
+pos_monitor~
+POS Terminal Maintenance <a> (1,4)
+pos_term_mnt~
+Setup Information <a> (1,4)
+pos_setup.x~
+((
+))

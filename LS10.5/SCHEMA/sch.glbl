@@ -1,0 +1,102 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glbl,v 5.3 2001/10/11 09:05:32 scott Exp $
+|  Schema Name  : (sch.glbl)
+|  Schema Desc  : (General Ledger batch control line item file. )
+|----------------------------------------------------------------------
+| $Log: sch.glbl,v $
+| Revision 5.3  2001/10/11 09:05:32  scott
+| Update to remove unused index.
+|
+| Revision 5.2  2001/10/11 08:30:38  scott
+| Updated to add indexs to fix problem with deletions on glbl
+|
+| Revision 5.1  2001/07/25 01:15:51  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.1  2001/06/18 10:08:10  scott
+| Updated to add new index on glbl_acc_no for intergity check program
+|
+| Revision 4.0  2001/03/09 01:00:41  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	glbl
+
+field	glbl_hhbh_hash			type	long
+field	glbl_line_no			type	integer
+field	glbl_acc_no				type	char	16			index	dups
+field	glbl_acronym			type	char	9
+field	glbl_name				type	char	30
+field	glbl_chq_inv_no			type	char	15
+field	glbl_ci_amt				type	money
+field	glbl_o1_amt				type	money
+field	glbl_o2_amt				type	money
+field	glbl_o3_amt				type	money
+field	glbl_o4_amt				type	money
+field	glbl_hhgl_hash			type	long
+field	glbl_tran_type			type	char	2
+field	glbl_sys_ref			type	char	10
+field	glbl_batch_no			type	char	10
+field	glbl_tran_date			type	edate
+field	glbl_period_no			type	char	2
+field	glbl_narrative			type	char	20
+field	glbl_alt_desc1			type	char	20
+field	glbl_alt_desc2			type	char	20
+field	glbl_alt_desc3			type	char	20
+field	glbl_user_ref			type	char	15
+field	glbl_fx_amt				type	money
+field	glbl_local_amt			type	money
+field	glbl_dc_flag			type	char	1
+field	glbl_currency			type	char	3
+field	glbl_exch_rate			type	double
+field	glbl_stat_flag			type	char	1
+field	glbl_id_no				type	composite
+			glbl_hhbh_hash,
+			glbl_line_no		index	primary
+field	glbl_id_no2				type	composite
+			glbl_hhbh_hash,
+			glbl_dc_flag,
+			glbl_tran_date,
+			glbl_acc_no,
+			glbl_currency,
+			glbl_local_amt,
+			glbl_line_no								index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glbl_hhbh_hash  	- hash to glbh
+	glbl_line_no   		- Line no.
+	glbl_acc_no			- Posting account
+	glbl_acronym		- dbt_no			(glwk only)
+	glbl_name			- Name				(glwk only)
+	glbl_chq_inv_no		- Invoice Number	(glwk only)
+	glbl_ci_amt			-                   (glwk only)
+	glbl_o1_amt			-                   (glwk only)
+	glbl_o2_amt			-                   (glwk only)
+	glbl_o3_amt			-                   (glwk only)
+	glbl_o4_amt			-                   (glwk only)
+	glbl_hhgl_hash		- Posting account hash
+	glbl_tran_type      - Journal type (ex gljc)
+	glbl_sys_ref		-                   (glwk only)
+	glbl_tran_date		- Transaction date
+	glbl_period_no		- month of transaction date
+	glbl_narrative      - Narrative
+	glbl_user_ref       - User reference
+	glbl_fx_amt         - Amount
+	glbl_local_amt		- Local amount
+	glbl_dc_flag        - Debit/Credit flag
+	glbl_currency       - Currency
+	glbl_exch_rate  	- Currency rate
+	glbl_stat_flag      - Stat flag
+}

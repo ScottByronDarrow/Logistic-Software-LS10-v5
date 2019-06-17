@@ -1,0 +1,151 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/06/21 03:07:44 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/06/21 03:07:44  scott
+#	Updated to add SetSortArray () for new LS10-GUI screen features
+#	
+#
+#
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+
+table asmt
+	field asmt_co_no
+	field asmt_type_code
+	field asmt_desc
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+end
+
+table asmr
+	field asmr_co_no
+	field asmr_br_no
+	field asmr_ass_group
+	field asmr_ass_no
+	field asmr_serial_no
+	field asmr_type
+	field asmr_brand
+	field asmr_pur_date
+	field asmr_hhas_hash
+	field asmr_desc
+	field asmr_spec1_code
+	field asmr_spec2_code
+	field asmr_crd_no
+	field asmr_capacity
+	field asmr_status_code
+	field asmr_products
+	field asmr_hham_hash
+end
+
+table famr
+	field famr_co_no
+	field famr_ass_group
+	field famr_ass_no
+	field famr_famr_hash
+	field famr_ass_desc1
+	field famr_ass_desc2
+	field famr_ass_desc3
+	field famr_ass_desc4
+	field famr_pur_date
+	field famr_ass_life
+	field famr_cost_price
+	field famr_disp_date
+	field famr_disp_price
+	field famr_gl_crd_acc
+	field famr_gl_dbt_acc
+	field famr_gl_ass_acc
+	field famr_f_y_rule
+	field famr_f_y_amt
+	field famr_dep_rule
+	field famr_max_deprec
+	field famr_priv_use_tax
+	field famr_tax_open_val
+	field famr_tax_dtype
+	field famr_tax_pa_flag
+	field famr_tax_d_pc
+	field famr_tax_d_amt
+	field famr_int_open_val
+	field famr_int_dtype
+	field famr_int_pa_flag
+	field famr_int_d_pc
+	field famr_int_d_amt
+	field famr_gl_updated
+	field famr_stat_flag
+end
+
+table fatr
+	field fatr_co_no
+	field fatr_group
+	field fatr_group_desc
+	field fatr_dep_rule
+	field fatr_nxt_asset
+	field fatr_ass_life
+	field fatr_max_depr
+	field fatr_tax_dtype
+	field fatr_tax_pa_flag
+	field fatr_int_dtype
+	field fatr_int_pa_flag
+	field fatr_stat_flag
+end
+
+table asbr
+	field asbr_co_no
+	field asbr_brand_code
+	field asbr_brand_desc
+end
+
+table asst
+	field asst_co_no
+	field asst_ser_code
+	field asst_ser_desc
+end
+
+table asdt
+	field asdt_hhar_hash
+	field asdt_line_no
+	field asdt_ser_date
+	field asdt_ser_type
+	field asdt_remarks
+end
+
+table asmv
+	field asmv_hhar_hash
+	field asmv_line_no
+	field asmv_hham_hash
+	field asmv_report_no
+	field asmv_move_code
+	field asmv_move_desc
+	field asmv_serial_no
+	field asmv_source_type
+	field asmv_dest_type
+	field asmv_from_crdt
+	field asmv_to_crdt
+	field asmv_from_hhcu
+	field asmv_to_hhcu
+	field asmv_move_date
+	field asmv_vol_commit
+end
+

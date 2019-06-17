@@ -1,0 +1,67 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcat,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pcat)
+|  Schema Desc  : (Production Control Actual Times File. )
+|----------------------------------------------------------------------
+| $Log: sch.pcat,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:01  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcat	
+
+field	pcat_date			type	edate
+field	pcat_hhmr_hash			type	long
+field	pcat_hhrs_hash			type	long
+field	pcat_hhwo_hash			type	long		index	dups
+field	pcat_seq_no			type	integer
+field	pcat_hhwc_hash			type	long
+field	pcat_start_time			type	long
+field	pcat_setup			type	long
+field	pcat_run			type	long
+field	pcat_clean			type	long
+field	pcat_comment			type	char	40
+field	pcat_stat_flag			type	char	1
+
+field	pcat_id_no			type	composite
+		pcat_date,			
+		pcat_hhmr_hash,		
+		pcat_hhrs_hash,		
+		pcat_hhwo_hash,
+		pcat_seq_no			index	dups
+
+field	pcat_id_no2			type	composite
+		pcat_date,
+		pcat_hhmr_hash,
+		pcat_hhwo_hash,
+		pcat_seq_no,
+		pcat_hhrs_hash		index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pcat_date			- Date of allocated time.
+	pcat_hhmr_hash			- Link -> prmr.
+	pcat_hhrs_hash			- Link -> rgrs.
+	pcat_hhwo_hash			- Link -> pcwo.
+	pcat_rtg_seq			- Sequence time is allocated to.
+	pcat_hhwc_hash			- Link -> pcwc.
+	pcat_start_time			- Time use of resource started.
+	pcat_setup			- Duration of resource use for setup.
+	pcat_run			- Duration of resource use for run.
+	pcat_clean			- Duration of resource use for clean.
+	pcat_comment			- Resource Use Comment.
+	pcat_stat_flag			- Spare stat_flag.
+}

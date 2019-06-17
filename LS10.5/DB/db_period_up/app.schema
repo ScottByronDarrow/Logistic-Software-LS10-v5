@@ -1,0 +1,89 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.0 2001/06/19 08:05:18 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:05:18  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:25:44  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:14:11  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:52:56  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.2  1999/12/17 06:56:31  scott
+#	Updated as general cleanup and add app.schema
+#	Updated to check cudt equals cuhd, if not update cuhd.
+#	
+#	Revision 1.1  1999/12/16 05:17:33  scott
+#	Added app.schema
+#	
+#	
+#
+table comm
+field comm_term           
+field comm_co_no          
+field comm_co_name        
+field comm_est_no         
+field comm_dbt_date       
+field comm_pay_terms      
+end
+
+table cuin
+field cuin_hhcu_hash      
+field cuin_hhci_hash      
+field cuin_type           
+field cuin_est            
+field cuin_inv_no         
+field cuin_date_of_inv    
+field cuin_date_posted    
+field cuin_pay_terms      
+field cuin_due_date       
+field cuin_disc           
+field cuin_amt            
+field cuin_stat_flag      
+end
+
+table cuhd
+field cuhd_hhcu_hash      
+field cuhd_receipt_no     
+field cuhd_hhcp_hash      
+field cuhd_date_payment   
+field cuhd_date_posted    
+field cuhd_tot_amt_paid   
+field cuhd_loc_amt_paid   
+field cuhd_disc_given     
+field cuhd_loc_disc_give     
+field cuhd_exch_variance     
+end
+
+table cudt
+field cudt_hhcp_hash      
+field cudt_hhci_hash      
+field cudt_amt_paid_inv   
+field cudt_loc_paid_inv   
+field cudt_exch_variatio   
+end
+
+table cumr
+field cumr_co_no          
+field cumr_est_no         
+field cumr_dbt_no         
+field cumr_hhcu_hash      
+field cumr_dbt_acronym    
+field cumr_ho_dbt_hash    
+field cumr_crd_ext     
+field cumr_bo_current     
+field cumr_bo_per1     
+field cumr_bo_per2     
+field cumr_bo_per3     
+field cumr_bo_per4     
+field cumr_bo_fwd     
+field cumr_od_flag     
+end
+

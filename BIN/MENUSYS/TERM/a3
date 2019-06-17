@@ -1,0 +1,30 @@
+#
+#  Termcap for Altos III terminal
+#
+a3|alt3|altos3|Altos III:\
+	:cd=\E[J:ce=\E[K:\
+	:cl=\E[;H\E[2J:\
+	:dc=\E[P:dl=\E[M:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[7m:se=\E[0m:\
+	:us=\E[9p:ue=\E[0p:\
+	:bx=MLNKYYJOXWUVBPR :\
+	:rv=\E[7m:re=\E[0m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(0:ge=\E(B:\
+	:fl=\E[7m:fe=\E[0m:\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:co#80:\
+	:cc=\E[>5h:cb=\E[>5l:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:\
+	:HP=^AP^M:IC=\E[@:IL=\E[L:DC=\E[P:DL=\E[M:\
+	:k0=^A@^M:k1=^AA^M:k2=^AB^M:k3=^AC^M:\
+	:k4=^AD^M:k5=^AE^M:k6=^AF^M:k7=^AG^M:\
+	:k8=^AH^M:k9=^AI^M:kA=^AJ^M:kB=^AK^M:\
+	:kC=^AL^M:kD=^AM^M:kE=^AN^M:kF=^AO^M:\
+	:c0=^A`^M:c1=^Aa^M:c2=^Ab^M:c3=^Ac^M:\
+	:c4=^Ad^M:c5=^Ae^M:c6=^Af^M:c7=^Ag^M:\
+	:c8=^Ah^M:c9=^Ai^M:cA=^Aj^M:cB=^Ak^M:\
+	:cC=^Al^M:cD=^Am^M:cE=^An^M:cF=^Ao^M:

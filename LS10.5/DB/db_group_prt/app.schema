@@ -1,0 +1,87 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:04:40 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:04:40  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:25:09  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:13:49  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/09/06 05:33:33  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_dbt_date
+end
+
+table comr
+	field comr_co_no
+	field comr_stmt_date
+	field comr_stat_flag
+end
+
+table cudt
+	field cudt_hhcp_hash
+	field cudt_hhci_hash
+	field cudt_amt_paid_inv
+	field cudt_stat_flag
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_hhci_hash
+	field cuin_type
+	field cuin_est
+	field cuin_dp
+	field cuin_inv_no
+	field cuin_narrative
+	field cuin_date_of_inv
+	field cuin_date_posted
+	field cuin_pay_terms
+	field cuin_due_date
+	field cuin_disc
+	field cuin_amt
+	field cuin_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_acc_type
+	field cumr_stmt_type
+	field cumr_class_type
+	field cumr_cont_type
+	field cumr_ho_dbt_hash
+	field cumr_stmnt_flg
+	field cumr_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_stmt_date
+	field esmr_stat_flag
+end
+

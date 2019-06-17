@@ -1,0 +1,42 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.trcg,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.trcg)
+|  Schema Desc  : (Transport cargo file record.		 )
+|----------------------------------------------------------------------
+| $Log: sch.trcg,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:35  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:53  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	trcg	
+
+field	trcg_trln_hash			type	long
+field	trcg_line_no			type	int
+field	trcg_load_type			type	char	1
+field	trcg_hhbr_hash			type	long		index	dups
+field	trcg_hhcl_hash			type	long		index	dups
+field	trcg_itff_hash			type	long		index	dups
+field	trcg_id_no				type	comp
+			trcg_trln_hash,
+			trcg_line_no							index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		trcg_trln_hash		-	Link to (trln_hhln_hash odd but true)
+		trcg_line_no		-	Line number (same as coln_line_no)
+		trcg_load_type		-	D(elivery) R(eturn) T(ransfer)
+		trcg_hhbr_hash		-	Link to item master (inmr_hhbr_hash)
+		trcg_hhcl_hash		-	Link to invoice/credit/PS line (coln_hhcl_hash)
+		trcg_itff_hash		-	Link to transfer line (itln_itff_hash)
+}

@@ -1,0 +1,45 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:19:37 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:19:37  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/11/06 03:05:26  scott
+#	Converted to app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_short
+end
+
+table ddhr
+	field ddhr_co_no
+	field ddhr_br_no
+	field ddhr_order_no
+	field ddhr_hhcu_hash
+	field ddhr_hhdd_hash
+end
+
+table ddln
+	field ddln_hhdd_hash
+	field ddln_line_no
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+end
+

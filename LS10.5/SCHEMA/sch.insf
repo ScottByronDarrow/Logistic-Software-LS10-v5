@@ -1,0 +1,122 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.insf,v 5.0 2001/06/19 10:17:19 cha Exp $
+|  Schema Name  : (sch.insf)
+|  Schema Desc  : (Inventory Serial Number File. )
+|----------------------------------------------------------------------
+| $Log: sch.insf,v $
+| Revision 5.0  2001/06/19 10:17:19  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:57  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:32  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file insf
+
+field	insf_hhsf_hash			type	long				index	dups
+field	insf_hhbr_hash			type	long
+field	insf_hhwh_hash			type	long      			index	dups
+field	insf_status				type	char	1    
+field	insf_receipted			type	char	1
+field	insf_serial_no			type	char	25   
+field	insf_chasis_no			type	char	20
+field	insf_date_in			type	edate     
+field	insf_date_out			type	edate     
+field	insf_hhcu_hash			type	long      
+field	insf_location			type	char	10   
+field	insf_exch_rate			type	double    
+field	insf_fob_fgn_cst		type	double    
+field	insf_fob_nor_cst		type	double    
+field	insf_frt_ins_cst		type	double    
+field	insf_duty				type	double    
+field	insf_licence			type	double    
+field	insf_lcost_load			type	double    
+field	insf_land_cst			type	double    
+field	insf_other_cst			type	double    
+field	insf_istore_cost		type	double    
+field	insf_prep_cost			type	double    
+field	insf_exch_var			type	double    
+field	insf_est_cost			type	double    
+field	insf_act_cost			type	double    
+field	insf_po_number			type	char	15    
+field	insf_gr_number			type	char	15    
+field	insf_invoice_no			type	char	8   
+field	insf_hhsu_hash			type	long      
+field	insf_crd_invoice		type	char	15   
+field	insf_final_costing		type	char	1    
+field	insf_stock_take			type	char	1    
+field   insf_pd_rate            type    double
+field   insf_paid_cost          type    double
+field   insf_des_flag           type    char    1
+field	insf_stat_flag			type	char	1    
+field	insf_id_no				type	composite 
+			insf_hhwh_hash, 
+			insf_status, 
+			insf_serial_no										index
+field	insf_id_no2				type	composite 
+			insf_hhwh_hash,
+			insf_serial_no										index
+field	insf_id_no3				type	composite 
+			insf_serial_no,
+			insf_hhwh_hash,
+			insf_status											index
+field	insf_hhbr_id			type	composite 
+			insf_hhbr_hash, 
+			insf_status, 
+			insf_serial_no										index 	dups
+field	insf_sup_id				type	composite 
+			insf_hhsu_hash,
+			insf_crd_invoice 									index 	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	insf_hhsf_hash		-	Currently not used.
+	insf_hhbr_hash		-	Link to inmr ( inmr_hhbr_hash )
+	insf_hhwh_hash		-	Link to incc ( incc_hhwh_hash )
+	insf_status		-	Status :
+						F(ree
+						S(old
+						C(ommitted
+						T(ransit
+	insf_receipted		-	Receipted into stock Y(es / N(o
+	insf_serial_no		-	Serial number.
+	insf_chasis_no		-	Chasis number.
+	insf_date_in		-	Date in.
+	insf_date_out		-	Date out.
+	insf_hhcu_hash		-	Link to cumr ( cumr_hhcu_hash )
+	insf_location		-	Location of serial number.
+	insf_exch_rate		-	Exchange rate.
+	insf_fob_fgn_cst	-	FOB foreign cost.
+	insf_fob_nor_cst	-	FOB Normal cost.
+	insf_frt_ins_cst	-	FOB freight / Insurance cost.
+	insf_duty			-	Duty.
+	insf_licence		-	Licence.
+	insf_lcost_load		-	Landed cost loading.
+	insf_land_cst		-	Lander cost.
+	insf_other_cst		-	Other cost.
+	insf_istore_cost	-	Into store cost.
+	insf_prep_cost		-	Preparation cost.
+	insf_exch_var		-	Exchange rate variation.
+	insf_est_cost		-	Estimated cost.
+	insf_act_cost		-	Actual cost.
+	insf_po_number		-	Purchase order number.
+	insf_gr_number		-	Goods receipts number.
+	insf_invoice_no		-	Creditors Invoice number.
+	insf_hhsu_hash		-	Link to hhsu ( sumr_hhsu_hash )
+	insf_crd_invoice	-	Creditors invoice number.
+	insf_final_costing	-	Final costing Y(es) N(o).
+	insf_stock_take		-	Stock take Y(es) N(o).
+	insf_pd_rate		-	600 Machinery
+	insf_paid_cost		-	600 Machinery
+	insf_des_flag 		-	600 Machinery
+	insf_stat_flag		-	Status flag.
+}

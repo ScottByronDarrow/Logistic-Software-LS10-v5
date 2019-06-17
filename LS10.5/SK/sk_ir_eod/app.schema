@@ -1,0 +1,71 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:16:03 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:16:03  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:37:24  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/02/06 10:07:41  scott
+#	Updated to deal with length change in the following fields
+#	intr_ref1 from 10 to 15 characters
+#	intr_ref2 from 10 to 15 characters
+#	inaf_ref1 from 10 to 15 characters
+#	inaf_ref2 from 10 to 15 characters
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_supercession
+	field inmr_class
+	field inmr_description
+	field inmr_stat_flag
+end
+
+table inaf
+	field inaf_co_no
+	field inaf_br_no
+	field inaf_wh_no
+	field inaf_sys_date
+	field inaf_hhbr_hash
+	field inaf_hhcc_hash
+	field inaf_type
+	field inaf_date
+	field inaf_batch_no
+	field inaf_ref1
+	field inaf_ref2
+	field inaf_qty
+	field inaf_cost_price
+	field inaf_sale_price
+	field inaf_stat_flag
+end
+

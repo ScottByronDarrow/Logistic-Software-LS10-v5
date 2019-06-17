@@ -1,0 +1,38 @@
+Service Job Master Menu (SJMR)
+job_master
+Service Menu <a> (1,2)
+menu MENUSYS/main_serv.mdf
+Select Department. <a> (1,2)
+dp_select~D~
+Add / Change Service Jobs <a> (1,1)
+sj_hrmaint~
+Add / Change Service Job Details <a> (1,1)
+sj_sdmaint~
+Add / Change External Purchases <a> (1,1)
+sj_dcmaint~
+Add / Change Time Card Details <a> (1,2)
+sj_ldmaint~
+Prebill Invoices Maintenance <a> (1,1)
+sj_prebill~
+Release Invoice for Service Job <a> (1,1)
+sj_inv.rel~LPNO~
+Service Job Credits Maintenance <a> (1,1)
+sj_credits~
+Service Job Status <a> (2,1)
+sj_stat.i~sj_statrep~Print/Display Service Job Status~
+Service Job Costs Sheet <a> (2,2)
+sj_cstrp.i~
+Close/Re-open Service Job <a> (2,1)
+sj_hrclose~
+Release/Cancel Held Ser/Job <a> (2,2)
+sj_hr.rel~
+Service Reports Menu <a> (2,1)
+menu MENUSYS/sj_reports.mdf
+Service Maintenance Menu <a> (2,1)
+menu MENUSYS/sj_maint.mdf
+((
+quadrant(8,6)
+quadrant(47,8)
+box(2,3,74,14)
+line(3,5,73)
+))

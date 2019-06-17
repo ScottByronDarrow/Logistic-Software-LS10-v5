@@ -1,0 +1,7 @@
+#
+#  Printer Entry For Seikosha printer.
+#
+BP|Seikosha BP-5420A printer|This is a printer entry:\
+	:TF=\014:XN=\016:XF=\024:I1=:I2=:\
+	:P0=\EP:P2=\EM:UN=\E-\001:UF=\E-\000:F1=:F2=:\
+	:EX=2:

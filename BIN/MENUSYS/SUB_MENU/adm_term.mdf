@@ -1,0 +1,10 @@
+System Maintenance of Terminals (SUB)
+terminals
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Maintain Terminals. <a> (1,1)
+chain~warning "Maintain Terminals"~tcap_maint~
+Test Terminal. <a> (1,1)
+tcap_test~
+((
+))

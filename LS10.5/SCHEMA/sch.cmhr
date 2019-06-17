@@ -1,0 +1,119 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmhr,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cmhr)
+|  Schema Desc  : (cmhr - Contract Management Header File. )
+|----------------------------------------------------------------------
+| $Log: sch.cmhr,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmhr
+
+field	cmhr_co_no				type	char	2
+field	cmhr_br_no				type	char	2
+field	cmhr_cont_no			type	char	6
+field	cmhr_hhhr_hash			type	serial		index
+field	cmhr_mast_hhhr			type	long		index 	dups
+field	cmhr_hhcu_hash			type	long
+field	cmhr_hhit_hash			type	long
+field	cmhr_cus_ref			type	char	20
+field	cmhr_contact			type	char	40
+field	cmhr_adr1				type	char	40
+field	cmhr_adr2				type	char	40
+field	cmhr_adr3				type	char	40
+field	cmhr_it_date			type	edate
+field	cmhr_wip_date			type	edate
+field	cmhr_st_date			type	edate
+field	cmhr_due_date			type	edate
+field	cmhr_end_date			type	edate
+field	cmhr_hhjt_hash			type	long
+field	cmhr_wip_glacc			type	char	16
+field	cmhr_lab_glacc			type	char	16
+field	cmhr_o_h_glacc			type	char	16
+field	cmhr_sal_glacc			type	char	16
+field	cmhr_cog_glacc			type	char	16
+field	cmhr_var_glacc			type	char	16
+field	cmhr_int_glacc			type	char	16
+field	cmhr_wip_status			type	char	4
+field	cmhr_quote_type			type	char	1
+field	cmhr_progress			type	char	1
+field	cmhr_anni_day			type	char	2
+field	cmhr_quote_val			type	money
+field	cmhr_est_costs			type	money
+field	cmhr_est_prof			type	float	
+field	cmhr_usr_ref1			type	char	4
+field	cmhr_usr_ref2			type	char	4
+field	cmhr_usr_ref3			type	char	4
+field	cmhr_usr_ref4			type	char	4
+field	cmhr_usr_ref5			type	char	4
+field	cmhr_internal			type	char	1
+field	cmhr_lab_rate			type	money
+field	cmhr_oh_rate			type	money
+field	cmhr_status				type	char	1
+field	cmhr_premise			type	char	20
+field	cmhr_id_no				type	composite
+			cmhr_co_no,
+			cmhr_cont_no								index	dups
+field	cmhr_id_no2				type	composite
+			cmhr_co_no,
+			cmhr_br_no,
+			cmhr_cont_no								index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmhr_co_no			-	Company Number
+	cmhr_br_no			-	Branch Number
+	cmhr_cont_no		-	Contract Number
+	cmhr_hhhr_hash		-	Unique Hash
+	cmhr_mast_hhhr		-	Link to Master Contract
+	cmhr_hhcu_hash		- 	Customers Hash
+	cmhr_hhit_hash		- 	Link to cmit (Issue to)
+	cmhr_cus_ref		-	Customer Order Reference
+	cmhr_contact		-	Customer Contact
+	cmhr_adr[3]			-	Delivery Address
+	cmhr_it_date		-	Date Issued To Current Issued To Person
+	cmhr_st_date		-	Contract Start Date
+	cmhr_due_date		-	Contract Due Date
+	cmhr_end_date		-	Contract Finish Date
+	cmhr_hhjt_hash		-	Job Type Hash
+	cmhr_wip_glacc		-	WIP GL Account
+	cmhr_lab_glacc		-	Labour GL Account
+	cmhr_o_h_glacc		-	O/H GL Account
+	cmhr_sal_glacc		-	Sales GL Account
+	cmhr_cog_glacc		-	COG GL Account
+	cmhr_var_glacc		-	Variance GL Account
+	cmhr_int_glacc		-	Internal GL Account
+	cmhr_wip_date		-	Date WIP Status Set
+	cmhr_wip_status		-	User Definable.
+	cmhr_quote_type		-	F)ixed or V)ariable
+	cmhr_progress		-	Y)es N)o
+	cmhr_anni_day		-	Day on which Progress Billing is Done.
+	cmhr_quote_val		-	This is Entered if Fixed Quote Type
+	cmhr_est_costs		-	Estimated Costs
+	cmhr_est_prof		-	Estimated Profit
+	cmhr_usr_ref[5]		-	Five User Defined References
+	cmhr_internal		-	I)nternal / E)xternal Customer
+	cmhr_lab_rate		-	Override Labour Rate
+	cmhr_oh_rate		-	Override O/H Rate
+	cmhr_status			-	Job Status 
+							O)pen 
+							C)losed 
+							B)illing 
+							H)istory 
+							X) credit held
+
+	cmhr_premise		-	NOT USED AT PRESENT
+}

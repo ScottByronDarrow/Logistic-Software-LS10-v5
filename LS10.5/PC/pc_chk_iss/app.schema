@@ -1,0 +1,117 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/07 04:52:11 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/07 04:52:11  scott
+#	Updated to convert to app.schema
+#	Updated to replace fgets with scanf
+#	Updated to clean code and remove disk write with memory sort.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table inmr
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_lot_ctrl
+	field inmr_dec_pt
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_hzrd_class
+end
+
+table inum
+	field inum_hhum_hash
+	field inum_uom
+end
+
+table pchc
+	field pchc_co_no
+	field pchc_type
+	field pchc_class
+	field pchc_desc
+end
+
+table pcms
+	field pcms_hhbr_hash
+	field pcms_mabr_hash
+	field pcms_uom
+	field pcms_matl_qty
+	field pcms_matl_wst_pc
+	field pcms_iss_seq
+	field pcms_uniq_id
+	field pcms_qty_issued
+	field pcms_act_qty_in
+	field pcms_hhwo_hash
+end
+
+table pcwo
+	field pcwo_co_no
+	field pcwo_br_no
+	field pcwo_order_no
+	field pcwo_hhwo_hash
+	field pcwo_rtg_seq
+	field pcwo_hhbr_hash
+	field pcwo_rtg_alt
+	field pcwo_hhcc_hash
+	field pcwo_prod_qty
+	field pcwo_order_status
+	field pcwo_batch_no
+end
+
+table rghr
+	field rghr_co_no
+	field rghr_br_no
+	field rghr_hhbr_hash
+	field rghr_alt_no
+	field rghr_hhgr_hash
+	field rghr_print_all
+end
+
+table rgln
+	field rgln_hhgr_hash
+	field rgln_seq_no
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+end
+
+table inlo
+	field inlo_inlo_hash
+	field inlo_hhwh_hash
+	field inlo_hhum_hash
+	field inlo_location
+	field inlo_loc_type
+	field inlo_lot_no
+	field inlo_slot_no
+	field inlo_expiry_date
+	field inlo_uom
+	field inlo_cnv_fct
+	field inlo_rec_qty
+	field inlo_qty
+	field inlo_no_hits
+	field inlo_no_picks
+	field inlo_op_id
+	field inlo_time_create
+	field inlo_date_upd
+	field inlo_date_create
+end
+

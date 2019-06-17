@@ -1,0 +1,12 @@
+Telemarketing Letters Menu (SUB)
+tm_letter
+Telemarketing Master Menu. <a|telemktg> (1,2)
+menu MENUSYS/tm_master.mdf
+Maintenance Of Telemarketing Letters. <a|telemktg> (1,2)
+tm_lett_mnt~
+Print Telemarketing Letters. <a|telemktg> (1,2)
+tm_lett_prt~LPNO~
+Maintain Response Criteria For Letters. <a|telemktg> (1,2)
+tm_resp_crit~
+((
+))

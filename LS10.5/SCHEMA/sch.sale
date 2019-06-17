@@ -1,0 +1,70 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sale,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sale)
+|  Schema Desc  : (Sales Analysis By Customer/Category/Salesman. )
+|----------------------------------------------------------------------
+| $Log: sch.sale,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:20  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sale
+
+field	sale_key            type	char 8
+field	sale_category       type	char 11			index	dups
+field	sale_sman           type	char 2			index	dups
+field	sale_area           type	char 2			index	dups
+field	sale_ctype          type	char 3			index	dups
+field	sale_dbt_no         type	char 6
+field	sale_year_flag      type	char 1
+field	sale_period         type	char 2
+field	sale_units          type	double
+field	sale_gross          type	money
+field	sale_cost_sale      type	money
+field	sale_disc           type	money
+field	sale_id_no          type	composite
+			sale_key,
+			sale_category,
+			sale_sman,
+			sale_area,
+			sale_ctype,
+			sale_dbt_no,
+			sale_year_flag,
+			sale_period									index
+field	sale_id_no_2        type	composite
+			sale_dbt_no,
+			sale_category								index	dups
+field	sale_id_no_3        type	composite
+			sale_key,
+			sale_area,
+			sale_category								index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sale_key		-	Sales key
+                                                    brno   wh_no  
+                                             Key = xx xx xx xx 
+                                                  cono   dp_no 
+	sale_category		-	Category Code	( ex excf )
+	sale_sman		-	Salesman code	( ex exsf )
+	sale_area		-	Area Code	( ex exaf )
+	sale_ctype		-	Customer type	( ex excl )
+	sale_dbt_no		-	Debtor number	( ex cumr )
+	sale_year_flag		-	Year flag	C(urrent, L(ast year
+	sale_period		-	Period. ( 01 = Jan ) ( 12 = Dec )
+	sale_units		-	Sales Quantity.
+	sale_gross		-	Gross Value ( each )
+	sale_cost_sale		-	Cost ( each )
+	sale_disc		-	Discount ( each )
+}

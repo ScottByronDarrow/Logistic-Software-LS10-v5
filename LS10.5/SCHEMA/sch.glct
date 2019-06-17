@@ -1,0 +1,54 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glct,v 5.0 2001/06/19 10:17:13 cha Exp $
+|  Schema Name  : (sch.glct)
+|  Schema Desc  : (General ledger control record. )
+|----------------------------------------------------------------------
+| $Log: sch.glct,v $
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:42  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	glct
+
+field	glct_format				type	char	31
+field	glct_fiscal				type	int
+field	glct_history			type	int
+field	glct_link_max			type	int
+field	glct_ptype				type	char	1
+field	glct_max_budg			type	int
+field	glct_nxt_budg			type	int
+field	glct_mod_date			type	edate		index	primary
+field	glct_stat_flag			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glct_format		- 	holds format for account number.
+
+                                            e.g. xx-xxxx-xxx-xx
+                                              or BR-CCxx-xxx-xx
+                                                 would put env vars in
+                                            	 code prior to entry.
+	glct_fiscal		-	End month of fiscal year.
+	glct_history	-	No. of years history held. 
+	glct_link_max	- 	No. of statistical links allowed.
+	glct_ptype		- 	Period type :
+						(C)alendar.
+						(4) Week month.
+						(F)ort-nightly
+	glct_max_budg	-	Maximium no of budgets allowed on system.
+	glct_nxt_budg	- 	Next budget no to be allocated.
+	glct_mod_date	-	Last modification date.
+	glct_stat_flag	-	Spare status flag.
+}

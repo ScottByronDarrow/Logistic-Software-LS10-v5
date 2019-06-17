@@ -1,0 +1,40 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmjd,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cmjd)
+|  Schema Desc  : (Contract Management Job Type Details File )
+|----------------------------------------------------------------------
+| $Log: sch.cmjd,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmjd
+
+field	cmjd_hhjt_hash			type	long
+field	cmjd_line_no			type	int
+field	cmjd_hhcm_hash			type	long
+field	cmjd_dtl_lvl			type	char 1
+field	cmjd_id_no				type	composite
+			cmjd_hhjt_hash,
+			cmjd_line_no								index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmjd_hhjt_hash		-	Link to cmjt (Job Type Header)
+	cmjd_line_no		-	Line Number
+	cmjd_hhcm_hash		-	Link to cmcm (Costhead Master)
+	cmjd_dtl_lvl		-	Detail Level For Capture in coln
+}

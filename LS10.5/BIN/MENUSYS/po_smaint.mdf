@@ -1,0 +1,24 @@
+Purchase Order Supplier Maintenance Menu (POSM)
+po_reports
+Purchase Order Master Menu. <a> (1,2)
+menu MENUSYS/po_master.mdf
+Maintain Supplier Details. <a> (1,2)
+sk_sumaint~C~
+Supplier Price Updates. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/po_supdate.mdf
+Print X-Ref By by Supplier. <a> (1,1)
+po_inis_sup~
+Print X-Ref by Product Group. <a> (1,2)
+chain~sk_group.i "po_inis_prd" "Inventory Supplier XRef By Product Group" " "~
+Missing Inv/Supplier Records. <a> (1,1)
+sk_group.i~ff_noinis~Missing Inventory Supplier Records~ ~
+Missing Global Inv/Supplier Records. <a> (1,2)
+sk_group.i~ff_any_inis~Missing Inventory Supplier Records~ ~
+Print Superceeded Inv/Supplier Records. <a> (1,1)
+sk_group.i~ff_ssinis~Superceeded Inventory Supplier Records~ ~
+((
+quadrant(18,6)
+quadrant(48,7)
+box(10,3,58,15)
+line(11,5,57)
+))

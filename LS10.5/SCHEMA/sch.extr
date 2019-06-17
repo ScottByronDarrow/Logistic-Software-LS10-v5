@@ -1,0 +1,55 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.extr,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.extr)
+|  Schema Desc  : (External Tax Return Audit file.		 )
+|----------------------------------------------------------------------
+| $Log: sch.extr,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:39  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file extr 
+
+field	extr_co_no			type	char 	2 
+field	extr_jnl_type		type	char	2
+field	extr_gl_per			type	char	2
+field	extr_run_no			type	long
+field	extr_int_no			type	char	8
+field	extr_ref_no			type	char	15
+field	extr_date			type	edate
+field	extr_sal_val		type	double
+field	extr_gst_val		type	double
+field	extr_stat_flag		type	char	1
+field	extr_id_no			type	comp
+			extr_co_no,
+			extr_jnl_type,
+			extr_gl_per,
+			extr_run_no,
+			extr_ref_no,
+			extr_int_no										index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	extr_co_no			-	Company number.
+	extr_jnl_type		-	Journal type.
+	extr_gl_per			-	General ledger period.
+	extr_run_no			-	G/L run number.
+	extr_int_no			-	Internal ref no ( dbt/crd no )
+	extr_ref_no			-	Invoice/credit no.
+	extr_date			-	Transaction date.
+	extr_sal_val		-	Sales value.
+	extr_gst_val		-	Gst value.
+	extr_stat_flag		-	Status flag.
+}

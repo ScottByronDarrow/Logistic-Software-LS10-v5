@@ -1,0 +1,18 @@
+#
+# .tcshrc	-- Commands executed by the C-shell each time it runs
+#
+
+if ($?prompt) then
+	set autolist listlinks
+	set history=200			# save last 20 commands
+	set prompt="%m-%c,%t%# "
+
+	alias	h	history
+	alias	ls	ls-F
+	alias	ll	ls -al
+
+	bindkey -v
+	bindkey "\177" backward-kill-line
+
+	source /usr/ver.etc/etc/csh.rc
+endif

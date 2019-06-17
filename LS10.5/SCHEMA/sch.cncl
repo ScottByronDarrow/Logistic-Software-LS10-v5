@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cncl,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cncl)
+|  Schema Desc  : (Debtors/Contract Link File. )
+|----------------------------------------------------------------------
+| $Log: sch.cncl,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cncl	
+
+field	cncl_hhch_hash			type	long			index	dups
+field	cncl_hhcu_hash			type	long			index	dups
+field	cncl_id_no				type	composite
+			cncl_hhch_hash,
+			cncl_hhcu_hash								index	dups
+field	cncl_id_no2				type	composite
+			cncl_hhcu_hash,
+			cncl_hhch_hash								index	dups
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+			  cncl_hhch_hash	- link to cnch
+			  cncl_hhcu_hash	- link to cumr
+}

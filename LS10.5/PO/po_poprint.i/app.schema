@@ -1,0 +1,75 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:11:52 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:11:52  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:33:04  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:23:56  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_inv_date
+end
+
+table comr
+	field comr_co_no
+	field comr_co_name
+	field comr_co_adr1
+	field comr_co_adr2
+	field comr_co_adr3
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_type
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_date_raised
+	field pohr_due_date
+	field pohr_conf_date
+	field pohr_contact
+	field pohr_delin1
+	field pohr_delin2
+	field pohr_delin3
+	field pohr_ship1_no
+	field pohr_ship2_no
+	field pohr_ship3_no
+	field pohr_curr_code
+	field pohr_curr_rate
+	field pohr_term_order
+	field pohr_sup_term_pay
+	field pohr_pay_date
+	field pohr_status
+	field pohr_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_adr1
+	field sumr_adr2
+	field sumr_adr3
+end
+

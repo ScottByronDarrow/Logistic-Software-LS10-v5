@@ -1,0 +1,82 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcrq,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pcrq)
+|  Schema Desc  : (Production Control Resource Queue. )
+|----------------------------------------------------------------------
+| $Log: sch.pcrq,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:02  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:39  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcrq
+
+field	pcrq_hhrs_hash			type	long
+field	pcrq_qty_rsrc			type	int
+field	pcrq_hhwo_hash			type	long
+field	pcrq_prod_class			type	char	4
+field	pcrq_priority			type	int
+field	pcrq_seq_no			type	int
+field	pcrq_line_no			type	int
+field	pcrq_last_date			type	edate
+field	pcrq_last_time			type	long
+field	pcrq_est_date			type	edate
+field	pcrq_est_time			type	long
+field	pcrq_est_setup			type	long
+field	pcrq_est_run			type	long
+field	pcrq_est_clean			type	long
+field	pcrq_act_date			type	edate
+field	pcrq_act_time			type	long
+field	pcrq_act_setup			type	long
+field	pcrq_act_run			type	long
+field	pcrq_act_clean			type	long
+field	pcrq_can_split			type	char	1
+field	pcrq_firm_sched			type	char	1
+field	pcrq_stat_flag			type	char	1
+field	pcrq_id_no			type	comp
+		pcrq_hhrs_hash,
+		pcrq_est_date,
+		pcrq_est_time					index	dups
+field	pcrq_id_no2			type	comp
+		pcrq_hhwo_hash,
+		pcrq_seq_no,
+		pcrq_line_no					index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pcrq_hhrs_hash			- Link->rgrs
+	pcrq_qty_rsrc			- Number of this rsrc rqd. (Eg 4*Labour)
+	pcrq_hhwo_hash			- Link->pcwo
+	pcrq_priority			- Job priority (From W/O) (Highest=1)
+	pcrq_seq_no			- Routing sequence number
+	pcrq_line_no			- Unique Line Number Within Sequence.
+	pcrq_last_date			- Latest allowable start date
+	pcrq_last_time			- Latest allowable start time
+	pcrq_est_date			- Estimated start date
+	pcrq_est_time			- Estimated start time
+	pcrq_est_setup			- Estimated time requirement (setup)
+	pcrq_est_run			- Estimated time requirement (run)
+	pcrq_est_clean			- Estimated time requirement (clean)
+	pcrq_act_date			- Actual start date
+	pcrq_act_time			- Actual start time
+	pcrq_act_setup			- Actual time requirement (setup)
+	pcrq_act_run			- Actual time requirement (run)
+	pcrq_act_clean			- Actual time requirement (clean)
+	pcrq_can_split			- Y : This record IS 'splittable'
+					- N : This record ISN'T 'splittable'
+	pcrq_firm_sched			- Y/N
+	pcrq_stat_flag			- A : Sequence complete, use actuals
+					  E : Sequence incomplete, use estimates
+}

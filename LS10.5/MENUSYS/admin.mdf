@@ -1,0 +1,47 @@
+System Administrator Functions (ADMIN)
+admin_help
+LS10 Master Menu. <*|a> (1,2)
+menu MENUSYS/main.mdf
+Administrator Displays. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/adm_disp.mdf
+Maintain Terminals.    >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/adm_term.mdf
+Maintain Printers.     >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/adm_prnt.mdf
+Maintain Users.        >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/adm_user.mdf
+Maintain Mail System.  >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/mail.mdf
+Maintain Menu system. <a> (1,2)
+menu MENUSYS/mn_master.mdf
+Maintain Environment.  >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/adm_env.mdf
+Maintain Display Hot Keys. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/adm_hot.mdf
+Maintain Pop-up Sub Menus. <a> (2,2)
+chain~warning "Maintain Pop-up Sub Menus."~sub_maint L~
+Update Fast Access. <a> (2,2)
+fast_maint~
+Database File Editor. <a> (2,2)
+su_chain~ON~pinform~
+Update File Permissions. <a> (2,2)
+su_chain~SET.PERM.sh~
+System Integrity Checking. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/psl_admin.mdf
+Miscellaneous Deletes. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/adm_delete.mdf
+System Setup Functions. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/setup.mdf
+((
+line(1,2,77)
+quadrant(5,3)
+quadrant(44,5)
+box(37,3,1,16)
+quadrant(44,5)
+line(1,2,77)
+HEADING_OFF
+TRAILER_ON
+FAST_OFF
+SUB_ON
+MENU_NAME_ON
+))

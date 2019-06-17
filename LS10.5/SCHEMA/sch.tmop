@@ -1,0 +1,71 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmop,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.tmop)
+|  Schema Desc  : (Tele-Marketing OPerator file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmop,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:34  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:52  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmop
+
+field	tmop_co_no			type	char	2
+field	tmop_op_id			type	char	14
+field	tmop_hhop_hash			type	serial			index
+field	tmop_id_no			type	comp
+		tmop_co_no,
+		tmop_op_id					index	primary
+field	tmop_op_passwd			type	char	13
+field	tmop_pass_id			type	comp
+		tmop_co_no,
+		tmop_op_passwd					index	dups
+field	tmop_op_name			type	char	40
+field	tmop_short_id			type	char	2
+field	tmop_campaign_no		type	int
+field	tmop_unscripted			type	char	1
+field	tmop_in_scr_no			type	int
+field	tmop_out_scr_no			type	int
+field	tmop_curr_c_no			type	long
+field	tmop_curr_l_no			type	char	6
+field	tmop_curr_prmpt			type	int
+field	tmop_sman_code			type	char	2
+field	tmop_login_time			type	char	5
+field	tmop_cam_time			type	long
+field	tmop_stat_flag			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tmop_co_no		-	Company number.
+	tmop_op_id		-	Operator id. ( name )
+	tmop_op_passwd		-	Operator password.
+	tmop_op_name		-	Operator name.
+	tmop_short_id		-	Operator short id.
+	tmop_campaign_no	-	Campaign number.
+	tmop_unscripted		-	Unscipted Y/N
+	tmop_in_scr_no		-	In Script number.
+	tmop_out_scr_no		-	Out Script number.
+	tmop_curr_c_no		-	Current call number.
+	tmop_curr_l_no		-	Last lead number.
+	tmop_curr_prmpt		-	Current prompt number.
+	tmop_sman_code		-	Current salesman code.
+	tmop_login_time		-	Login time.
+	tmop_cam_time		-	Total hours on campaign.
+	tmop_stat_flag		-	Operator Status 
+						- S : Super (take calls from any
+						     lead)
+						- N : Normal (can only take
+					             calls from allocated leads)
+								
+}

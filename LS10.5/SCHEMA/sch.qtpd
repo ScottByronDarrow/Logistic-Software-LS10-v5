@@ -1,0 +1,69 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.qtpd,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.qtpd)
+|  Schema Desc  : (Quotation System Prospect Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.qtpd,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:18  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:44  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file qtpd 
+
+field	qtpd_hhph_hash			type	long
+field	qtpd_line_no			type	int
+field	qtpd_id_no				type	composite
+		qtpd_hhph_hash,
+		qtpd_line_no					index
+
+field	qtpd_hhbr_hash			type	long		index	dups
+field	qtpd_hhcc_hash			type	long	
+field	qtpd_serial_no			type	char	25
+field	qtpd_qty				type	float
+field	qtpd_gsale_price		type	money
+field	qtpd_sale_price			type	money
+field	qtpd_dis_pc				type	float
+field	qtpd_reg_pc				type	float
+field	qtpd_disc_a				type	float
+field	qtpd_disc_b				type	float
+field	qtpd_disc_c				type	float
+field	qtpd_cumulative			type	int
+field	qtpd_item_desc			type	char	40
+field	qtpd_stat_flag			type	char	1
+field	qtpd_cont_status		type	int
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	qtpd_hhph_hash		=	Quotation Header Link.
+	qtpd_line_no		=	Line Seq Number.
+	qtpd_hhbr_hash		=	Link to Inventory Master File.
+	qtpd_hhcc_hash		=  	Link to Warehouse Master File.
+	qtpd_serial_no		=	Link to Serial file.
+	qtpd_qty			=	Quantity.
+	qtpd_gsale_price	=	Gross Sale Price.
+	qtpd_sale_price		=	Sale Price.
+	qtpd_dis_pc			=	Discount percent.
+	qtpd_reg_pc			=	Regulatory percent.
+	qtpd_disc_a			=	Discount A.
+	qtpd_disc_b			=	Discount B.
+	qtpd_disc_c			=	Discount C.
+	qtpd_cumulative		=	Cumulative. 1 or TRUE    Discounts are cumulative
+	                   	=	            0 or FALSE   Discounts are absolute
+	qtpd_item_desc		=	Item Description.
+	qtpd_stat_flag		=	Stat flag.
+	qtpd_cont_status	=	Contract Status
+								0 - No contract applies
+								1 - Contract applies, no discounts.
+								2 - Contract applies, discounts allowed.
+}

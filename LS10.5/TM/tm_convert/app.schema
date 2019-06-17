@@ -1,0 +1,177 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/12 05:37:34 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/12 05:37:34  scott
+#	Updated to convert to app.schema
+#	Updated to clean up code
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dp_no
+	field comm_dbt_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+end
+
+table tmpm
+	field tmpm_co_no
+	field tmpm_br_no
+	field tmpm_pro_no
+	field tmpm_hhpm_hash
+	field tmpm_hhcu_hash
+	field tmpm_name
+	field tmpm_acronym
+	field tmpm_area_code
+	field tmpm_sman_code
+	field tmpm_b_sector
+	field tmpm_post_code
+	field tmpm_active_flg
+	field tmpm_cont_name1
+	field tmpm_cont_name2
+	field tmpm_cont_name3
+	field tmpm_cont_name4
+	field tmpm_cont_name5
+	field tmpm_cont_name6
+	field tmpm_cont_code1
+	field tmpm_cont_code2
+	field tmpm_cont_code3
+	field tmpm_cont_code4
+	field tmpm_cont_code5
+	field tmpm_cont_code6
+	field tmpm_mail1_adr
+	field tmpm_mail2_adr
+	field tmpm_mail3_adr
+	field tmpm_del1_adr
+	field tmpm_del2_adr
+	field tmpm_del3_adr
+	field tmpm_fax_no
+	field tmpm_phone_no
+	field tmpm_phone_freq
+	field tmpm_n_phone_date
+	field tmpm_n_phone_time
+	field tmpm_visit_freq
+	field tmpm_n_visit_date
+	field tmpm_n_visit_time
+	field tmpm_mail_flag
+	field tmpm_op_code
+	field tmpm_lst_op_code
+	field tmpm_call_bk_date
+	field tmpm_call_bk_time
+	field tmpm_call_no
+	field tmpm_lphone_date
+	field tmpm_origin
+	field tmpm_date_create
+	field tmpm_best_ph_time
+	field tmpm_delete_flag
+	field tmpm_tax_code
+	field tmpm_tax_no
+	field tmpm_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_acc_type
+	field cumr_stmt_type
+	field cumr_class_type
+	field cumr_cont_type
+	field cumr_price_type
+	field cumr_payment_flag
+	field cumr_int_flag
+	field cumr_bo_flag
+	field cumr_bo_cons
+	field cumr_bo_days
+	field cumr_po_flag
+	field cumr_sur_flag
+	field cumr_ch_adr1
+	field cumr_ch_adr2
+	field cumr_ch_adr3
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_contact_name
+	field cumr_phone_no
+	field cumr_fax_no
+	field cumr_telex
+	field cumr_post_code
+	field cumr_stop_credit
+	field cumr_date_stop
+	field cumr_total_days_sc
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_credit_ref
+	field cumr_bank_code
+	field cumr_branch_code
+	field cumr_area_code
+	field cumr_sman_code
+	field cumr_roy_type
+	field cumr_disc_code
+	field cumr_tax_code
+	field cumr_tax_no
+	field cumr_ch_to_ho_flg
+	field cumr_ho_dbt_hash
+	field cumr_cat_sa_flag
+	field cumr_stmnt_flg
+	field cumr_freight_chg
+	field cumr_restock_fee
+	field cumr_nett_pri_prt
+	field cumr_inst_fg1
+	field cumr_inst_fg2
+	field cumr_inst_fg3
+	field cumr_date_lastinv
+	field cumr_date_lastpay
+	field cumr_amt_lastpay
+	field cumr_mtd_sales
+	field cumr_ytd_sales
+	field cumr_ord_value
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_od_flag
+	field cumr_stat_flag
+end
+
+table cumd
+	field cumd_co_no
+	field cumd_est_no
+	field cumd_acc_type
+	field cumd_stmt_type
+	field cumd_price_type
+	field cumd_bo_flag
+	field cumd_bo_cons
+	field cumd_bo_days
+	field cumd_po_flag
+	field cumd_sur_flag
+	field cumd_stop_credit
+	field cumd_crd_prd
+	field cumd_roy_type
+	field cumd_disc_code
+	field cumd_tax_code
+	field cumd_ch_to_ho_flg
+	field cumd_stmnt_flg
+	field cumd_freight_chg
+	field cumd_restock_fee
+	field cumd_nett_pri_prt
+	field cumd_stat_flag
+end
+

@@ -1,0 +1,103 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/14 05:21:30 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/14 05:21:30  scott
+#	Updated to convert to app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+end
+
+table comr
+	field comr_co_no
+	field comr_prospect_no
+end
+
+table tmpm
+	field tmpm_co_no
+	field tmpm_br_no
+	field tmpm_pro_no
+	field tmpm_hhpm_hash
+	field tmpm_hhcu_hash
+	field tmpm_name
+	field tmpm_acronym
+	field tmpm_area_code
+	field tmpm_sman_code
+	field tmpm_b_sector
+	field tmpm_post_code
+	field tmpm_active_flg
+	field tmpm_cont_name1
+	field tmpm_cont_name2
+	field tmpm_cont_name3
+	field tmpm_cont_name4
+	field tmpm_cont_name5
+	field tmpm_cont_name6
+	field tmpm_cont_code1
+	field tmpm_cont_code2
+	field tmpm_cont_code3
+	field tmpm_cont_code4
+	field tmpm_cont_code5
+	field tmpm_cont_code6
+	field tmpm_mail1_adr
+	field tmpm_mail2_adr
+	field tmpm_mail3_adr
+	field tmpm_del1_adr
+	field tmpm_del2_adr
+	field tmpm_del3_adr
+	field tmpm_fax_no
+	field tmpm_phone_no
+	field tmpm_phone_freq
+	field tmpm_n_phone_date
+	field tmpm_n_phone_time
+	field tmpm_visit_freq
+	field tmpm_n_visit_date
+	field tmpm_n_visit_time
+	field tmpm_mail_flag
+	field tmpm_op_code
+	field tmpm_lst_op_code
+	field tmpm_call_bk_date
+	field tmpm_call_bk_time
+	field tmpm_call_no
+	field tmpm_lphone_date
+	field tmpm_origin
+	field tmpm_date_create
+	field tmpm_best_ph_time
+	field tmpm_delete_flag
+	field tmpm_tax_code
+	field tmpm_tax_no
+	field tmpm_stat_flag
+end
+
+table tmdf
+	field tmdf_co_no
+	field tmdf_type
+	field tmdf_fmt_name
+	field tmdf_fmt_desc
+	field tmdf_delimit
+	field tmdf_hhdf_hash
+end
+
+table tmdl
+	field tmdl_hhdf_hash
+	field tmdl_line_no
+	field tmdl_field_name
+	field tmdl_offset
+	field tmdl_length
+	field tmdl_default
+end
+

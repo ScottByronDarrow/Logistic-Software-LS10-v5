@@ -1,0 +1,94 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.comm,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.comm)
+|  Schema Desc  : (System Common File. )
+|----------------------------------------------------------------------
+| $Log: sch.comm,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	comm
+
+field	comm_term				type	integer		index	primary
+field	comm_co_no				type	char	2
+field	comm_co_name			type	char	40
+field	comm_co_short			type	char	15
+field	comm_est_no				type	char	2
+field	comm_est_name			type	char	40
+field	comm_est_short			type	char	15
+field	comm_cc_no				type	char	2
+field	comm_cc_name			type	char	40
+field	comm_cc_short			type	char	9
+field	comm_dp_no				type	char	2
+field	comm_dp_name			type	char	40
+field	comm_dp_short			type	char	15
+field	comm_dbt_date			type	edate
+field	comm_crd_date			type	edate
+field	comm_inv_date			type	edate
+field	comm_payroll_date		type	edate
+field	comm_gl_date			type	edate
+field	comm_closed_period		type	integer
+field	comm_fiscal				type	integer
+field	comm_gst_rate			type	float
+field	comm_price1_desc		type	char	15
+field	comm_price2_desc		type	char	15
+field	comm_price3_desc		type	char	15
+field	comm_price4_desc		type	char	15
+field	comm_price5_desc		type	char	15
+field	comm_price6_desc		type	char	15
+field	comm_price7_desc		type	char	15
+field	comm_price8_desc		type	char	15
+field	comm_price9_desc		type	char	15
+field	comm_pay_terms			type	integer
+field	comm_env_name			type	char    60
+field	comm_stat_flag			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	comm_term			-	Terminal Number. 
+	comm_co_no			-	Company number.
+	comm_co_name		-	Company Name.
+	comm_co_short		-	Company Short Name.
+	comm_est_no			-	Establishment / Branch number.
+	comm_est_name		-	Establishment / Branch name.
+	comm_est_short		-	Establishment / Branch Short name.
+	comm_cc_no			-	Cost centre / Warehouse Number.
+	comm_cc_name		-	Cost centre / Warehouse Name.
+	comm_cc_short		-	Cost centre / Warehouse Short Name.
+	comm_dp_no			-	Department number.
+	comm_dp_name		-	Department Name.
+	comm_dp_short		-	Department Short Name.
+	comm_dbt_date		-	Current Debtors Module Date.
+	comm_crd_date		-	Current Creditors Module Date.
+	comm_inv_date		-	Current Inventory Module Date.
+	comm_payroll_date	-	Current Payroll Module Date.
+	comm_gl_date		-	Current General Ledger Module Date.
+	comm_closed_period	-	Current Closed Period ( Not now used )
+	comm_fiscal			-	Current Fiscal Period.
+	comm_gst_rate		-	Current G.S.T Percent.
+	comm_price1_desc	-	Description for Inventory price 1
+	comm_price2_desc	-	Description for Inventory price 2
+	comm_price3_desc	-	Description for Inventory price 3
+	comm_price4_desc	-	Description for Inventory price 4
+	comm_price5_desc	-	Description for Inventory price 5
+	comm_price6_desc	-	Description for Inventory price 6
+	comm_price7_desc	-	Description for Inventory price 7
+	comm_price8_desc	-	Description for Inventory price 8
+	comm_price9_desc	-	Description for Inventory price 9
+	comm_pay_terms		-	Current Payment Terms ( Old Debtors )
+	comm_env_name		- 	Holds Environment Variables Filename
+	comm_stat_flag		-	Spare Status flag.
+}

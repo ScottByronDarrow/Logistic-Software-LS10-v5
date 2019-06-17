@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.prvr,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.prvr)
+|  Schema Desc  : (PayRoll Valid Resources file. )
+|----------------------------------------------------------------------
+| $Log: sch.prvr,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	prvr
+
+field	prvr_hhmr_hash			type	long
+field	prvr_hhrs_hash			type	long
+field	prvr_id_no			type	composite
+		prvr_hhmr_hash,
+		prvr_hhrs_hash					index
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	prvr_hhmr_hash			- Link->prmr
+	prvr_hhrs_hash			- Link->rgrs
+}

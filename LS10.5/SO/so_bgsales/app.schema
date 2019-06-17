@@ -1,0 +1,100 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/07 10:22:37 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/07 10:22:37  scott
+#	Updated to bring version number to 5.0
+#	
+#	Revision 1.1  2001/10/23 07:18:45  scott
+#	Updated to check and correct rounding.
+#	Changes to ensure ALL inputs and reports round the same way.
+#	
+#
+#
+
+table sobg
+	field sobg_co_no
+	field sobg_br_no
+	field sobg_type
+	field sobg_lpno
+	field sobg_hash
+end
+
+table bpro
+	field bpro_co_no
+	field bpro_br_no
+	field bpro_program
+	field bpro_hash
+	field bpro_pid
+end
+
+table sosa
+	field sosa_co_no
+	field sosa_br_no
+	field sosa_date
+	field sosa_type
+	field sosa_hhsa_hash
+	field sosa_hhbr_hash
+	field sosa_hhcu_hash
+	field sosa_sman_no
+	field sosa_qty
+	field sosa_value
+	field sosa_cost
+	field sosa_disc
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_exch_rate
+	field sohr_dt_raised
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_hhcu_hash
+	field cohr_hhco_hash
+	field cohr_date_raised
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhsl_hash
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_sale_price
+	field soln_dis_pc
+	field soln_sman_code
+	field soln_due_date
+	field soln_bonus_flag
+end
+
+table coln
+	field coln_hhcl_hash
+	field coln_hhco_hash
+	field coln_hhbr_hash
+	field coln_incc_hash
+	field coln_q_order
+	field coln_q_backorder
+	field coln_sale_price
+	field coln_cost_price
+	field coln_disc_pc
+	field coln_gross
+	field coln_amt_disc
+	field coln_sman_code
+	field coln_due_date
+	field coln_bonus_flag
+end
+
+table cumr
+	field cumr_hhcu_hash
+	field cumr_curr_code
+end
+

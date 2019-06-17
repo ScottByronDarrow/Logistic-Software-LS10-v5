@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inex,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.inex)
+|  Schema Desc  : (Inventory EXtra description file. )
+|----------------------------------------------------------------------
+| $Log: sch.inex,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:53  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+
+file	inex 
+
+field	inex_hhbr_hash				type	long
+field	inex_line_no				type	int
+field	inex_id_no				type	composite
+		inex_hhbr_hash,
+		inex_line_no					index	dups
+field	inex_desc				type	char	40
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inex_hhbr_hash		-	Link to Inventory master file (inmr)
+	inex_line_no		-	Line Sequence No.
+	inex_desc		-	Inventory extra description.
+}

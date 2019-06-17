@@ -1,0 +1,14 @@
+Sales Analysis Top 50 Reports. (SUB)
+sa_reports
+Sales Analysis Menu. <a> (1,1)
+menu MENUSYS/sa_master.mdf
+Print Top 50 Customer for All Customers. <a> (1,1)
+db_top_fif~Top 50 Sales Analysis By Customer~N~
+Print Top 50 Customer for Selective Area. <a> (1,1)
+db_top_fif~Top 50 Sales Analysis By Area~A~
+Print Top 50 Customer By Selective Customer Type. <a> (1,1)
+db_top_fif~Top 50 Sales Analysis By Customer Type~C~
+Print Top 50 Product Analysis. <a> (1,1)
+sk_top_fif~LPNO~
+((
+))

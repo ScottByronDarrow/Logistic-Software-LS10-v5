@@ -1,0 +1,68 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/07 10:23:53 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/07 10:23:53  scott
+#	Updated to bring version number to 5.0
+#	
+#	Revision 1.1  2001/10/23 07:18:46  scott
+#	Updated to check and correct rounding.
+#	Changes to ensure ALL inputs and reports round the same way.
+#	
+#
+#
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_inv_no
+	field sohr_cus_ord_ref
+	field sohr_op_id
+	field sohr_dt_raised
+	field sohr_sman_code
+	field sohr_status
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_sale_price
+	field soln_cost_price
+	field soln_dis_pc
+	field soln_gst_pc
+	field soln_cus_ord_ref
+	field soln_pri_or
+	field soln_dis_or
+	field soln_item_desc
+	field soln_status
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_outer_size
+end
+
+table cumr
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_cc_no
+end
+

@@ -1,0 +1,35 @@
+#
+#	Basic setup for Pinnacle applications using C++
+#
+#	Single target
+#
+######################################################
+include ${BASE_PATH}/${VERSION}/CONFIG/config
+
+#
+#
+#
+OBJS			=	${SRCS:.C=.o}
+
+#
+#	Common rules
+#
+TARGET			=	${DESTDIR}/${APP}
+
+all:	${TARGET}
+
+${TARGET}:	schema depend ${OBJS}
+	${LD} ${LDFLAGS} -o $@ ${OBJS} ${RLDFLAGS} ${LIBPATH} ${LIBS}
+
+clean:
+	cp /dev/null depend
+	-touch -t 199001010000 depend
+	-rm -f ${TARGET} *.o schema
+
+depend:	${SRCS}
+	w4 ${INC++} ${DEF++} ${SRCS} > $@
+
+schema:	app.schema
+	appschema ${APPSFLAGS} -o $@ app.schema
+
+include depend

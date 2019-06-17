@@ -1,0 +1,16 @@
+Stock Transfers Input Menu (SUB)
+sk_trans
+Stock Transfers Master Menu. <a> (1,1)
+menu MENUSYS/sk_sc_tran.mdf
+Enter Remote Issues. <a> (1,1)
+lp_chain~sk_sc_tran LPNO PID RI sk_sc_tran.p N~
+Enter Direct Issues. <a> (1,1)
+lp_chain~sk_sc_tran LPNO PID ID sk_sc_tran.p N~
+Enter One-step Issues. <a> (1,1)
+lp_chain~sk_sc_tran LPNO PID IO sk_sc_tran.p N~
+Enter Two-step Issues. <a> (1,1)
+lp_chain~sk_sc_tran 0 PID IT sk_sc_tran.p N~
+Enter Request for Transfer. <a> (1,1)
+lp_chain~sk_sc_tran LPNO PID IR sk_sc_tran.p N~
+((
+))

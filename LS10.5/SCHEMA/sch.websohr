@@ -1,0 +1,171 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.websohr,v 5.0 2001/06/19 10:17:35 cha Exp $
+|  Schema Name  : (sch.websohr)
+|  Schema Desc  : (Web Sales order Header)
+|----------------------------------------------------------------------
+| $Log: sch.websohr,v $
+| Revision 5.0  2001/06/19 10:17:35  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:38  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:56  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	websohr	
+
+field	wsohr_co_no				type	char	2
+field	wsohr_br_no				type	char	2
+field	wsohr_dp_no				type	char	2
+field	wsohr_order_no			type	char	8
+field	wsohr_cont_no			type	char	6
+field	wsohr_hhcu_hash			type	long				index	dups
+field	wsohr_hhso_hash			type	serial				index	primary
+field	wsohr_inv_no  	        type	char	8
+field	wsohr_cus_ord_ref		type	char	20
+field	wsohr_op_id				type	char	14
+field	wsohr_time_create		type	char	5
+field	wsohr_date_create		type	edate
+field	wsohr_cons_no			type	char	16
+field	wsohr_carr_code			type	char	4
+field	wsohr_carr_area			type	char	2
+field	wsohr_no_cartons		type	int
+field	wsohr_no_kgs			type	float
+field	wsohr_sch_ord			type	char	1		
+field	wsohr_ord_type			type	char	1
+field	wsohr_pri_type			type	char	1	
+field	wsohr_frei_req			type	char	1	
+field	wsohr_dt_raised			type	edate
+field	wsohr_dt_required		type	edate
+field	wsohr_tax_code			type	char	1
+field	wsohr_tax_no			type	char	15
+field	wsohr_area_code			type	char	2
+field	wsohr_sman_code			type	char	2
+field	wsohr_sell_terms		type	char	3
+field	wsohr_pay_term			type	char	40
+field	wsohr_freight			type	money
+field	wsohr_insurance			type	money
+field	wsohr_ins_det			type	char	30
+field	wsohr_other_cost_1		type	money
+field	wsohr_other_cost_2		type	money
+field	wsohr_other_cost_3		type	money
+field	wsohr_deposit			type	money
+field	wsohr_discount			type	money
+field	wsohr_exch_rate			type	double
+field	wsohr_fix_exch			type	char	1
+field	wsohr_batch_no			type	char	5
+field	wsohr_cont_name			type	char	20
+field	wsohr_cont_phone		type	char	15
+field	wsohr_del_name			type	char	40
+field	wsohr_del_add1			type	char	40
+field	wsohr_del_add2			type	char	40
+field	wsohr_del_add3			type	char	40
+field	wsohr_din_1				type	char	60
+field	wsohr_din_2				type	char	60
+field	wsohr_din_3				type	char	60
+field	wsohr_new				type	char	1
+field	wsohr_prt_price			type	char	1
+field	wsohr_full_supply		type	char	1
+field	wsohr_two_step			type	char	1
+field	wsohr_status			type	char	1
+field	wsohr_stat_flag			type	char	1
+field	wsohr_id_no				type	composite
+			wsohr_co_no,
+			wsohr_br_no,
+			wsohr_hhcu_hash,
+			wsohr_order_no										index
+field	wsohr_id_no2				type	composite
+			wsohr_co_no,
+			wsohr_br_no,
+			wsohr_order_no										index
+field	wsohr_id_no3				type	composite
+			wsohr_co_no,
+			wsohr_br_no,
+			wsohr_status,
+			wsohr_hhcu_hash,
+			wsohr_hhso_hash										index 	dups
+field	wsohr_id_no4				type	composite
+			wsohr_co_no,
+			wsohr_br_no,
+			wsohr_sch_ord,
+			wsohr_hhcu_hash										index	dups
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sohr_co_no 			- 	Company Number.
+	sohr_br_no			- 	Branch Number.
+	sohr_dp_no			- 	Department Number.
+	sohr_order_no		- 	Sales Order No.
+	sohr_cont_no		- 	Contract No.
+	sohr_hhcu_hash		- 	Link to Customer Master file. ( cumr ).
+	sohr_hhso_hash		- 	Order Hash Linking in order Details.
+	sohr_inv_no			- 	Invoice / Packing slip Allocated to .
+	sohr_cus_ord_ref	- 	Customer Order Reference.
+	sohr_op_id			-	Operator ID.
+	sohr_time_create	-	Time Created.
+	sohr_date_create	-	Date Created.
+	sohr_cons_no		- 	Consignment Number.
+	sohr_carr_code		-	Carrier Code.
+	sohr_carr_area		-	Carrier Area Code.
+	sohr_no_cartons		-	Number of cartons.
+	sohr_no_kgs			-	Number of Kgs.
+	sohr_sch_ord       	- 	Scheduled Order flag (Y/N).        
+	sohr_ord_type      	- 	Order Type D(omestic) E(xport)     
+	sohr_pri_type      	- 	Price Type (Selling price 1-5)
+	sohr_frei_req      	- 	Freight Required. Y(es) N(o).
+	sohr_dt_raised     	- 	Date order raised.
+	sohr_dt_required   	- 	Date order required.
+	sohr_tax_code		-	Tax Code.
+							A - Tax Exempt.
+							B - Tax Your Care.
+							C - Taxable.
+							D - Taxed at Absolute amount.
+	sohr_tax_no			-	Tax Number.
+	sohr_area_code		-	Area Code. ( Lookup on exaf ).
+	sohr_sman_code		- 	Salesman Code. ( Lookup on exsf ).
+	sohr_sel_term       - 	Selling Terms.
+	sohr_pay_term       - 	Payment Terms.
+	sohr_freight  		- 	Freight Amount.
+	sohr_insurance 		- 	Insurance Amount.
+	sohr_ins_det        - 	Insurance Details.
+	sohr_other_cost_1 	- 	Other Costs 1.
+	sohr_other_cost_2 	- 	Other Costs 2.
+	sohr_other_cost_3 	- 	Other Costs 3.
+	sohr_deposit 		- 	Deposit Amount.
+	sohr_discount 		- 	Discount Amount. (Not line discount)
+	sohr_exch_rate		-	Exchange Rate.
+	sohr_fix_exch      	-	Fixed Exchange Rate ( Y(es) N(o) )
+	sohr_batch_no      	- 	Batch Number. 
+	sohr_cont_name		-	Contact name for order
+	sohr_cont_phone		-	Contact phone number
+	sohr_del_name      	-	Deliver to Name.
+	sohr_del_add1      	- 	Deliver to Address 1.
+	sohr_del_add2      	- 	Deliver to Address 2.
+	sohr_del_add3      	- 	Deliver to Address 3.
+	sohr_din_1			- 	Delivery Instruction Line 1
+	sohr_din_2			- 	Delivery Instruction Line 2
+	sohr_din_3			- 	Delivery Instruction Line 3
+	sohr_new			- 	New Sales order. Y(es) N(o).
+	sohr_prt_price		- 	Print Prices. Y(es) N(o).
+	sohr_full_suppl    	- 	Y if Order must be supplied in full.
+	sohr_two_step    	- 	Y if two step order
+	sohr_ps_print      	- 	Packing Slip Printed Flag
+	sohr_status.       	- 	Status Flag
+			            	 R(eleased Order)
+				   		 	 P(acking Slip)
+							 M(anual Release Order)
+							 F(orward Order)
+							 B(ack order)
+							 C(redit check order)
+							 O(ver Margin)
+							 H(eld Order)
+	sohr_stat_flag     	- 	Status Flag
+}

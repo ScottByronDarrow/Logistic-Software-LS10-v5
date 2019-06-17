@@ -1,0 +1,24 @@
+Cash Management Menu (CMCR)
+gl_help
+Accounting Master Menu. <a> (1,2)
+menu MENUSYS/main_acct.mdf
+Maintain Bank Details. <a> (1,1)
+cr_bk_inpt~
+Maintain System Bank Transactions. <a> (1,1)
+ca_bk_tran~
+Delete System Bank Transaction. <a> (1,1)
+ca_bk_deltran~
+Reconcile System Transactions. <a> (1,1)
+ca_bk_rec~
+System Bank Transaction Enquiry. <a> (1,1)
+ca_tran_enq~
+Reconciliation Report. <a> (1,1)
+ca_recon_rep~
+Cash Flow Enquiry. <a> (1,1)
+ca_flow_enq~
+((
+quadrant(17,6)
+quadrant(10,8)
+box(10,3,58,12)
+line(11,5,57)
+))

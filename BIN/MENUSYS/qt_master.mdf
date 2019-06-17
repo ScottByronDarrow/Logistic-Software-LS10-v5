@@ -1,0 +1,32 @@
+Quotations Master Menu (QTMR)
+qt_master
+Sale Menu. <a> (1,2)
+menu MENUSYS/main_sale.mdf
+Quotation Enquiry Display. <a> (1,2)
+qt_inq_disp~
+Enquiry Report List <a> (1,2)
+qt_enqy_prt~
+Add/Maintain Standard Paragraphs. <a> (1,2)
+qt_para_inp~
+Display/Print Standard Paragraphs. <a> (1,2)
+qt_para_disp~
+Add/Maintain Quotations. <a> (1,2)
+qt_quote~qt_quote.s~ ~
+Maintain Printed Quote. <a> (1,1)
+psl_rep_edit~/usr/LS10.5/BIN/PRT~
+Maintain Quotation Status. <a> (2,2)
+qt_statmaint~qt_statmaint.s~
+Maintain Reason Code. <a> (2,2)
+qt_lqmaint~
+Maintain Competitor File. <a> (2,2)
+qt_lcmaint~
+Print Quotes. <a> (2,2)
+qt_prt_quote~LPNO~
+Delete  Old Quotation . <a> (2,2)
+qt_del_quote~
+((
+quadrant(7,6)
+quadrant(46,8)
+box(2,3,74,15)
+line(3,5,73)
+))

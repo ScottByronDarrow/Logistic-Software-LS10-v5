@@ -1,0 +1,222 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/07 10:24:40 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/07 10:24:40  scott
+#	Updated to bring version number to 5.0
+#	
+#	Revision 1.1  2001/11/08 10:26:11  scott
+#	added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_short
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_app_inv_no
+	field cohr_hhcu_hash
+	field cohr_chg_hhcu_hash
+	field cohr_type
+	field cohr_cont_no
+	field cohr_drop_ship
+	field cohr_hhds_hash
+	field cohr_cus_ord_ref
+	field cohr_chg_ord_ref
+	field cohr_ord_ref
+	field cohr_grn_no
+	field cohr_cons_no
+	field cohr_del_zone
+	field cohr_del_req
+	field cohr_del_date
+	field cohr_asm_req
+	field cohr_asm_date
+	field cohr_asm_hash
+	field cohr_s_timeslot
+	field cohr_e_timeslot
+	field cohr_carr_code
+	field cohr_carr_area
+	field cohr_no_cartons
+	field cohr_wgt_per_ctn
+	field cohr_no_kgs
+	field cohr_hhso_hash
+	field cohr_hhco_hash
+	field cohr_frei_req
+	field cohr_date_raised
+	field cohr_date_required
+	field cohr_tax_code
+	field cohr_tax_no
+	field cohr_area_code
+	field cohr_sale_code
+	field cohr_op_id
+	field cohr_time_create
+	field cohr_date_create
+	field cohr_gross
+	field cohr_freight
+	field cohr_insurance
+	field cohr_other_cost_1
+	field cohr_other_cost_2
+	field cohr_other_cost_3
+	field cohr_tax
+	field cohr_gst
+	field cohr_disc
+	field cohr_deposit
+	field cohr_ex_disc
+	field cohr_erate_var
+	field cohr_sos
+	field cohr_exch_rate
+	field cohr_fix_exch
+	field cohr_batch_no
+	field cohr_dl_name
+	field cohr_dl_add1
+	field cohr_dl_add2
+	field cohr_dl_add3
+	field cohr_din_1
+	field cohr_din_2
+	field cohr_din_3
+	field cohr_pay_type
+	field cohr_pay_terms
+	field cohr_sell_terms
+	field cohr_ins_det
+	field cohr_pri_type
+	field cohr_pri_break
+	field cohr_ord_type
+	field cohr_prt_price
+	field cohr_status
+	field cohr_stat_flag
+	field cohr_ps_print
+	field cohr_ps_print_no
+	field cohr_inv_print
+	field cohr_ccn_print
+	field cohr_printing
+	field cohr_hhtr_hash
+	field cohr_load_flag
+	field cohr_wrmr_hash
+	field cohr_pos_inv_no
+	field cohr_pos_tran_type
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_tax_code
+	field cumr_item_codes
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_dp_no
+	field sohr_order_no
+	field sohr_cont_no
+	field sohr_hhcu_hash
+	field sohr_chg_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_inv_no
+	field sohr_cus_ord_ref
+	field sohr_chg_ord_ref
+	field sohr_op_id
+	field sohr_time_create
+	field sohr_date_create
+	field sohr_cons_no
+	field sohr_del_zone
+	field sohr_del_req
+	field sohr_del_date
+	field sohr_asm_req
+	field sohr_asm_date
+	field sohr_s_timeslot
+	field sohr_e_timeslot
+	field sohr_carr_code
+	field sohr_carr_area
+	field sohr_no_cartons
+	field sohr_no_kgs
+	field sohr_sch_ord
+	field sohr_ord_type
+	field sohr_pri_type
+	field sohr_frei_req
+	field sohr_dt_raised
+	field sohr_dt_required
+	field sohr_tax_code
+	field sohr_tax_no
+	field sohr_area_code
+	field sohr_sman_code
+	field sohr_sell_terms
+	field sohr_pay_term
+	field sohr_freight
+	field sohr_insurance
+	field sohr_ins_det
+	field sohr_other_cost_1
+	field sohr_other_cost_2
+	field sohr_other_cost_3
+	field sohr_deposit
+	field sohr_discount
+	field sohr_exch_rate
+	field sohr_fix_exch
+	field sohr_batch_no
+	field sohr_cont_name
+	field sohr_cont_phone
+	field sohr_del_name
+	field sohr_del_add1
+	field sohr_del_add2
+	field sohr_del_add3
+	field sohr_din_1
+	field sohr_din_2
+	field sohr_din_3
+	field sohr_new
+	field sohr_prt_price
+	field sohr_full_supply
+	field sohr_two_step
+	field sohr_status
+	field sohr_stat_flag
+end
+
+table sosf
+	field sosf_hhco_hash
+	field sosf_hhso_hash
+	field sosf_hhcu_hash
+	field sosf_cus_ord_ref
+	field sosf_cons_no
+	field sosf_carr_code
+	field sosf_del_zone
+	field sosf_ocre_op_id
+	field sosf_ocre_time
+	field sosf_ocre_date
+	field sosf_pcre_op_id
+	field sosf_pcre_time
+	field sosf_pcre_date
+	field sosf_oprn_op_id
+	field sosf_oprn_time
+	field sosf_oprn_date
+	field sosf_pprn_op_id
+	field sosf_pprn_time
+	field sosf_pprn_date
+	field sosf_pprn_times
+	field sosf_iprn_op_id
+	field sosf_iprn_time
+	field sosf_iprn_date
+	field sosf_iprn_times
+	field sosf_odes_op_id
+	field sosf_odes_time
+	field sosf_odes_date
+	field sosf_odel_op_id
+	field sosf_odel_time
+	field sosf_odel_date
+end
+

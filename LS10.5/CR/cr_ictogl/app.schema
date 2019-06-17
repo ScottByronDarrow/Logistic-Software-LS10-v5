@@ -1,0 +1,73 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:26 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:26  scott
+#	RELEASE 5.0
+#	
+#	Revision 5.0  2001/06/19 08:03:12  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:23:42  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:12:49  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:40:50  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  1999/11/10 08:42:29  scott
+#	Added app.schema
+#	
+#	
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+table sumr
+	field sumr_co_no          
+	field sumr_est_no         
+	field sumr_crd_no         
+	field sumr_hhsu_hash      
+	field sumr_crd_name       
+	field sumr_acronym        
+	field sumr_acc_type       
+	field sumr_debtor_no      
+	field sumr_adr1           
+	field sumr_adr2           
+	field sumr_adr3           
+	field sumr_adr4           
+	field sumr_cont_name      
+	field sumr_curr_code      
+	field sumr_ctry_code      
+	field sumr_pay_terms      
+	field sumr_disc           
+	field sumr_sic1           
+	field sumr_sic2           
+	field sumr_sic3           
+	field sumr_gl_ctrl_acct   
+	field sumr_hold_payment   
+	field sumr_fax_no         
+	field sumr_pay_method     
+	field sumr_bank           
+	field sumr_bank_branch    
+	field sumr_bank_code      
+	field sumr_bank_acct_no   
+	field sumr_date_opened    
+	field sumr_stat_flag      
+end

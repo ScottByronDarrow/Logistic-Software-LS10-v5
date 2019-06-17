@@ -1,0 +1,97 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.qtln,v 5.1 2001/08/07 00:07:42 scott Exp $
+|  Schema Name  : (sch.qtln)
+|  Schema Desc  : (Quotation detail lines. )
+|----------------------------------------------------------------------
+| $Log: sch.qtln,v $
+| Revision 5.1  2001/08/07 00:07:42  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:18  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:44  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file qtln 
+
+field	qtln_hhqt_hash			type	long				index	dups
+field	qtln_line_no			type	int
+field	qtln_hhbr_hash			type	long				index	dups
+field	qtln_hhcc_hash			type	long				index	dups
+field	qtln_hhum_hash			type	long
+field	qtln_serial_no			type	char	25
+field	qtln_qty				type	float
+field	qtln_gsale_price		type	money
+field	qtln_sale_price			type	money
+field	qtln_cost_price			type	money
+field	qtln_item_levy			type	money
+field	qtln_disc_pc			type	float
+field	qtln_reg_pc				type	float
+field	qtln_disc_a				type	float
+field	qtln_disc_b				type	float
+field	qtln_disc_c				type	float
+field	qtln_tax_pc				type	float
+field	qtln_gst_pc				type	float
+field	qtln_cumulative			type	int
+field	qtln_pri_or				type	char	1
+field	qtln_dis_or				type	char	1
+field	qtln_item_desc			type	char	40
+field	qtln_uom				type	char	4
+field	qtln_qty_avail			type	float
+field	qtln_exp_date			type	edate
+field	qtln_stat_flag			type	char	1
+field	qtln_cont_status		type	int
+field	qtln_st_flag			type	char	1
+field	qtln_alt_flag			type	char	1
+field	qtln_id_no				type	composite
+			qtln_hhqt_hash,
+			qtln_line_no										index 
+field	qtln_id_no_2			type	composite
+			qtln_hhbr_hash,
+			qtln_hhqt_hash										index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	qtln_hhqt_hash			-	Link to quotation header file (qthr)
+	qtln_line_no			-	Line number.
+	qtln_hhbr_hash			-	Link to Item master file. (inmr)
+	qtln_hhcc_hash			-	Link to Cost Centre / W/house master (ccmr)
+	qtln_hhum_hash			-	Link to Unit of Measure file (inum)        
+	qtln_serial_no			-	Serial Number.
+	qtln_qty				-	Quantity.
+	qtln_gsale_price		-   Sale Price ( Gross before Reg percent )
+    qtln_sale_price 		- 	Sale Price ( Nett  after  reg percent )
+    qtln_cost_price 		- 	Cost Price (each)
+	qtln_gsale_price		-	Gross Sales price.
+	qtln_disc_pc			-	Discount Percent.
+	qtln_reg_pc				-	Regulatory Percent.
+	qtln_disc_a				-	Discount A.
+	qtln_disc_b				-	Discount B.
+	qtln_disc_c				-	Discount C.
+	qtln_cumulative			-	Cumulative - 0 or FALSE  Discounts are absolute
+	                              	   	 - 1 or TRUE   Discounts are cumulative
+	qtln_tax_pc				-	Tax Percent.
+	qtln_gst_pc				-	Gst Percent.
+	qtln_pri_or				-	Price Overide.
+	qtln_dis_or				-	Discount Overide.
+	qtln_item_desc			-	Item Description.
+	qtln_exp_date			-	Expiry date.
+	qtln_stat_flag			-	Status.
+	qtln_cont_status		-	Contract status.
+								0 = No contract applies
+								1 = Contract applies, no discounts
+								2 = Contract applies, discounts allowed
+	qtln_st_flag			-	Sub Total Indictor.
+	qtln_alt_flag			-	Alternate item flag.
+}

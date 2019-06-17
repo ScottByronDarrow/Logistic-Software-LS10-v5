@@ -1,0 +1,67 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cfhs,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cfhs)
+|  Schema Desc  : (Carrier History file. )
+|----------------------------------------------------------------------
+| $Log: sch.cfhs,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cfhs	
+
+field	cfhs_co_no				type	char	2
+field	cfhs_br_no				type	char	2
+field	cfhs_wh_no				type	char	2
+field	cfhs_ref_no				type	char	8
+field	cfhs_date				type	edate
+field	cfhs_hhcu_hash			type	long
+field	cfhs_cons_no			type	char	16
+field	cfhs_carr_code			type	char	4
+field	cfhs_area_code			type	char	2
+field	cfhs_no_cartons			type	int
+field	cfhs_no_kgs				type	float
+field	cfhs_est_frt_cst		type	double
+field	cfhs_act_frt_cst		type	double
+field	cfhs_cumr_chg			type	char	1
+field	cfhs_stat_flag			type	char	1	
+field	cfhs_id_no				type	comp
+			cfhs_hhcu_hash,
+			cfhs_ref_no,
+			cfhs_date									index	dups
+field	cfhs_id_no2				type	comp
+			cfhs_co_no,
+			cfhs_br_no,
+			cfhs_wh_no,
+			cfhs_date									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cfhs_co_no			-	Company number.
+	cfhs_br_no			-	Branch number.
+	cfhs_wh_no			-	Warehouse number.
+	cfhs_ref_no			-	Ref number, i.e invoice / credit .
+	cfhs_date			-	Date of Carrier transaction.
+	cfhs_hhcu_hash		-	Link to customer master file. ( cumr )
+	cfhs_cons_no		-	Consignment number. 
+	cfhs_carr_code		-	Carrier Code.
+	cfhs_area_code		-	Area Code.
+	cfhs_no_cartons		-	No of Cartons.
+	cfhs_no_kgs			-	No of Kgs.
+	cfhs_est_frt_cst	-	Estimated freight Cost.
+	cfhs_act_frt_cst	-	Actual freight Cost.
+	cfhs_cumr_chg		-	Customer charged. (Y/N)
+	cfhs_stat_flag		-	Spare status flag.
+}

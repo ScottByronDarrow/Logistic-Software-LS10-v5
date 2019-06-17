@@ -1,0 +1,57 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 22:56:21 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 22:56:21  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table cmjt
+	field cmjt_co_no
+	field cmjt_br_no
+	field cmjt_job_type
+	field cmjt_hhjt_hash
+	field cmjt_desc
+	field cmjt_wip_glacc
+	field cmjt_lab_glacc
+	field cmjt_o_h_glacc
+	field cmjt_sal_glacc
+	field cmjt_cog_glacc
+	field cmjt_var_glacc
+	field cmjt_int_glacc
+end
+
+table cmjd
+	field cmjd_hhjt_hash
+	field cmjd_line_no
+	field cmjd_hhcm_hash
+	field cmjd_dtl_lvl
+end
+
+table cmcm
+	field cmcm_co_no
+	field cmcm_ch_code
+	field cmcm_desc
+	field cmcm_hhcm_hash
+	field cmcm_hhum_hash
+	field cmcm_usr_ref1
+	field cmcm_usr_ref2
+	field cmcm_usr_ref3
+	field cmcm_usr_ref4
+	field cmcm_usr_ref5
+	field cmcm_dtl_lvl
+	field cmcm_hhbr_hash
+end
+

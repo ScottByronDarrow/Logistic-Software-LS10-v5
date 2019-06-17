@@ -1,0 +1,122 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcwo,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pcwo)
+|  Schema Desc  : (Production Control Works Order File. )
+|----------------------------------------------------------------------
+| $Log: sch.pcwo,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.1  2001/05/31 10:12:23  scott
+| Updated to add index to pcwo_hhsl_hash
+|
+| Revision 4.0  2001/03/09 01:01:03  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/03/06 07:26:25  scott
+| Updates 3.0
+|
+| Revision 3.1  2001/01/25 06:55:39  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcwo	
+
+field	pcwo_co_no			type	char	2
+field	pcwo_br_no			type	char	2
+field	pcwo_wh_no			type	char	2
+field	pcwo_order_no		type	char	7
+field	pcwo_req_br_no		type	char	2
+field	pcwo_req_wh_no		type	char	2
+field	pcwo_rec_br_no		type	char	2
+field	pcwo_rec_wh_no		type	char	2
+field	pcwo_hhwo_hash		type	serial			index	primary
+field	pcwo_reqd_date		type	edate
+field	pcwo_rtg_seq		type	integer
+field	pcwo_priority		type	integer
+field	pcwo_op_id			type	char	14
+field	pcwo_create_time	type	char	5
+field	pcwo_create_date	type	edate
+field	pcwo_mfg_date		type	edate	
+field	pcwo_hhbr_hash		type	long			index	dups
+field	pcwo_bom_alt		type	int
+field	pcwo_rtg_alt		type	int
+field	pcwo_hhcc_hash		type	long
+field	pcwo_prod_qty		type	float
+field	pcwo_act_prod_qty	type	float
+field	pcwo_act_rej_qty	type	float
+field	pcwo_order_status	type	char	1
+field	pcwo_batch_no		type	char	10
+field	pcwo_hhsl_hash		type	long			index	dups
+field	pcwo_stat_flag		type	char	1
+field	pcwo_id_no			type	composite
+			pcwo_co_no,
+			pcwo_br_no,
+			pcwo_wh_no,
+			pcwo_order_no							index	
+field	pcwo_id_no2			type	composite
+			pcwo_co_no,
+			pcwo_br_no,
+			pcwo_wh_no,
+			pcwo_order_status,
+			pcwo_reqd_date,
+			pcwo_priority							index	dups
+field	pcwo_id_no3			type	composite
+			pcwo_co_no,
+			pcwo_br_no,
+			pcwo_wh_no,
+			pcwo_batch_no							index	dups
+field	pcwo_id_no4			type	composite
+			pcwo_co_no,
+			pcwo_br_no,
+			pcwo_wh_no,
+			pcwo_hhbr_hash,
+			pcwo_reqd_date							index	dups
+field	pcwo_id_date		type	composite
+			pcwo_hhbr_hash,
+			pcwo_reqd_date							index	dups
+
+end
+
+{
+
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pcwo_co_no				- Manufacturing Company
+	pcwo_br_no				- Manufacturing Branch
+	pcwo_wh_no				- Manufacturing Warehouse
+	pcwo_req_br_no			- Requesting Branch
+	pcwo_req_wh_no			- Requesting Warehouse
+	pcwo_rec_br_no			- Receiving Branch
+	pcwo_rec_wh_no			- Receiving Warehouse
+	pcwo_order_no			- Works Order Number
+	pcwo_hhwo_hash			- Unique hash for this W/Order
+	pcwo_reqd_date			- Required Date
+	pcwo_rtg_seq			- Last completed routing sequence no
+	pcwo_priority			- Used to 'bias' scheduling
+	pcwo_op_id				- Operator ID
+	pcwo_create_time		- Time of W/Order creation
+	pcwo_create_date		- Date of W/Order creation
+	pcwo_mfg_date			- Date to start production
+	pcwo_hhbr_hash			- What we are producing (Link->inmr)
+	pcwo_bom_alt			- BOM alternate number
+	pcwo_rtg_alt			- Routing alternate number
+	pcwo_hhcc_hash			- Used to specify which incc record.
+	pcwo_prod_qty			- Intended amount to produce
+	pcwo_act_prod_qty		- Actual amount produced
+	pcwo_act_rej_qty		- Actual amount rejected
+	pcwo_order_status		- 	P : Planned
+					  			F : Firm Planned
+					  			I : Issuing
+					  			A : Allocated
+					  			R : Released
+					  			C : Closing
+					  			Z : Closed (or Completed)
+					  			D : Deleted
+	pcwo_hhsl_hash			- Link to sales order line
+	pcwo_stat_flag			- To keep SBD Happy (TvB)
+}

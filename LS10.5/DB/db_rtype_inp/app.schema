@@ -1,0 +1,24 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/26 06:35:14 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/26 06:35:14  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table dbry
+	field dbry_co_no
+	field dbry_cr_type
+	field dbry_desc
+	field dbry_stat_flag
+end
+

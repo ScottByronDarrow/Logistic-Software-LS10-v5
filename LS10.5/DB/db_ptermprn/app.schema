@@ -1,0 +1,90 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/04 07:47:31 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/04 07:47:31  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_ho_hash
+	field cuin_hhci_hash
+	field cuin_est
+	field cuin_dp
+	field cuin_inv_no
+	field cuin_date_of_inv
+	field cuin_pay_terms
+	field cuin_due_date
+	field cuin_currency
+	field cuin_exch_rate
+	field cuin_er_fixed
+	field cuin_disc
+	field cuin_amt
+	field cuin_stat_flag
+end
+
+table cuhd
+	field cuhd_hhcu_hash
+	field cuhd_hhcp_hash
+end
+
+table cudt
+	field cudt_hhcp_hash
+	field cudt_hhci_hash
+	field cudt_amt_paid_inv
+	field cudt_loc_paid_inv
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_curr_code
+	field cumr_payment_flag
+	field cumr_credit_limit
+	field cumr_ho_dbt_hash
+	field cumr_date_lastpay
+	field cumr_amt_lastpay
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_stat_flag
+end
+
+table cucc
+	field cucc_hhcu_hash
+	field cucc_record_no
+	field cucc_con_person
+	field cucc_comment
+	field cucc_cont_date
+	field cucc_hold_flag
+	field cucc_hold_ref
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_stat_flag
+end
+

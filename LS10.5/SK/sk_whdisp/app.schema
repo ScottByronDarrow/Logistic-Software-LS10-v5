@@ -1,0 +1,168 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.2 2002/12/01 04:48:18 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.2  2002/12/01 04:48:18  scott
+#	SC0053 - Platinum Logistics LS10.5.2.2002-12-01
+#	
+#	Revision 5.1  2001/07/25 02:19:40  scott
+#	Update - LS10.5
+#	
+#	Revision 4.2  2001/05/04 01:33:47  scott
+#	Updated to add incf_gr_number as required by standard function
+#	
+#	Revision 4.1  2001/03/22 05:38:53  scott
+#	Updated to add app.schema - removes code related to tables from program and
+#	allows for better quality contol.
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+#
+#
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_acronym
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+	field comm_fiscal
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_stocking_unit
+	field incc_location
+	field incc_ff_option
+	field incc_ff_method
+	field incc_allow_repl
+	field incc_abc_code
+	field incc_abc_update
+	field incc_first_stocked
+	field incc_wks_demand
+	field incc_safety_stock
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_opening_stock
+	field incc_receipts
+	field incc_pur
+	field incc_issues
+	field incc_adj
+	field incc_sales
+	field incc_stake
+	field incc_closing_stock
+	field incc_ytd_receipts
+	field incc_ytd_pur
+	field incc_ytd_issues
+	field incc_ytd_adj
+	field incc_ytd_sales
+	field incc_c_1
+	field incc_c_2
+	field incc_c_3
+	field incc_c_4
+	field incc_c_5
+	field incc_c_6
+	field incc_c_7
+	field incc_c_8
+	field incc_c_9
+	field incc_c_10
+	field incc_c_11
+	field incc_c_12
+	field incc_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_abc_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_uom_cfactor
+	field inmr_pack_size
+	field inmr_outer_size
+	field inmr_ex_code
+	field inmr_on_hand
+	field inmr_on_order
+	field inmr_committed
+	field inmr_backorder
+	field inmr_forward
+	field inmr_dec_pt
+	field inmr_bo_flag
+	field inmr_bo_release
+	field inmr_disc_pc
+	field inmr_tax_pc
+	field inmr_tax_amount
+	field inmr_gst_pc
+	field inmr_min_quan
+	field inmr_max_quan
+	field inmr_safety_stock
+	field inmr_stat_flag
+end
+
+table inpr
+	field inpr_hhbr_hash
+	field inpr_price_type
+	field inpr_br_no
+	field inpr_wh_no
+	field inpr_curr_code
+	field inpr_area_code
+	field inpr_cust_type
+	field inpr_hhgu_hash
+	field inpr_price_by
+	field inpr_qty_brk1
+	field inpr_qty_brk2
+	field inpr_qty_brk3
+	field inpr_qty_brk4
+	field inpr_qty_brk5
+	field inpr_qty_brk6
+	field inpr_qty_brk7
+	field inpr_qty_brk8
+	field inpr_qty_brk9
+	field inpr_base
+	field inpr_price1
+	field inpr_price2
+	field inpr_price3
+	field inpr_price4
+	field inpr_price5
+	field inpr_price6
+	field inpr_price7
+	field inpr_price8
+	field inpr_price9
+end

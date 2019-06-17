@@ -1,0 +1,48 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/14 08:31:28 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/14 08:31:28  scott
+#	Updated to add app.schema
+#	General clean
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_hhop_hash
+	field tmop_op_name
+	field tmop_campaign_no
+	field tmop_curr_c_no
+	field tmop_curr_l_no
+	field tmop_curr_prmpt
+	field tmop_login_time
+	field tmop_cam_time
+end
+
+table tmoh
+	field tmoh_hhcf_hash
+	field tmoh_hhop_hash
+	field tmoh_campgn_time
+end
+
+table tmcf
+	field tmcf_co_no
+	field tmcf_campaign_no
+	field tmcf_hhcf_hash
+	field tmcf_c_name1
+	field tmcf_c_name2
+end
+

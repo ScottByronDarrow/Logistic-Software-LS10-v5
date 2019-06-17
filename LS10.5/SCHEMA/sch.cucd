@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cucd,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cucd)
+|  Schema Desc  : (Debtors Letter of Credit Draw Off Record. )
+|----------------------------------------------------------------------
+| $Log: sch.cucd,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:28  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cucd
+
+field	cucd_hhch_hash			type	long
+field	cucd_rec_date			type	edate
+field	cucd_hhcp_hash			type	long 			index
+field	cucd_amount				type	money
+field	cucd_stat_flag			type	char	1
+field	cucd_id_no				type	composite
+			cucd_hhch_hash,
+			cucd_rec_date								index	dups
+field	cucd_id_no2				type	composite
+			cucd_hhch_hash,
+			cucd_hhcp_hash								index
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cucd_hhch_hash		-	Link to Letter Of Credit Header (cuch).
+	cucd_rec_date		-	Receipt date.
+	cucd_hhcp_hash		-	Link to paymeny header. (cuhd). 
+	cucd_amount			-	Draw off amount. 
+	cucd_stat_flag		-	Spare status flag.
+}

@@ -1,0 +1,135 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.0 2002/05/07 10:21:40 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/07 10:21:40  scott
+#	Updated to bring version number to 5.0
+#	
+#	Revision 1.1  2001/12/11 02:42:57  scott
+#	Archive Invoice Print.
+#	
+#	Revision 5.1  2001/08/06 23:51:07  scott
+#	RELEASE 5.0
+#	
+#
+table	cumr
+	field	cumr_hhcu_hash
+	field	cumr_dbt_no
+	field	cumr_dbt_name
+	field	cumr_nett_pri_prt
+	field	cumr_curr_code
+	field	cumr_ch_adr1
+	field	cumr_ch_adr2
+	field	cumr_ch_adr3
+	field	cumr_ch_adr4
+end
+
+table	inla
+	field	inla_hhcl_hash
+	field	inla_inlo_hash
+end
+
+table	inmr
+	field	inmr_hhbr_hash
+	field	inmr_item_no
+	field	inmr_description
+	field	inmr_class
+	field	inmr_std_uom
+	field	inmr_outer_size
+end
+
+	#
+	#	Invoice & lines
+	#
+table	arhr
+	field	arhr_co_no
+	field	arhr_br_no
+	field	arhr_hhco_hash
+	field	arhr_hhcu_hash
+	field	arhr_hhso_hash
+	field	arhr_type
+	field	arhr_cus_ord_ref
+	field	arhr_gross
+	field	arhr_disc
+	field	arhr_gst
+	field	arhr_tax
+	field	arhr_freight
+	field	arhr_insurance
+	field	arhr_other_cost_1
+	field	arhr_other_cost_2
+	field	arhr_other_cost_3
+	field	arhr_sos
+	field	arhr_item_levy
+	field	arhr_ex_disc
+	field	arhr_deposit
+	field	arhr_inv_no
+	field	arhr_inv_print
+	field	arhr_ps_print
+	field	arhr_ps_print_no
+	field	arhr_printing
+	field	arhr_cons_no
+	field	arhr_app_inv_no
+	field	arhr_pay_terms
+	field	arhr_dl_name
+	field	arhr_dl_add1
+	field	arhr_dl_add2
+	field	arhr_dl_add3
+	field	arhr_prt_price
+	field	arhr_din_1
+	field	arhr_din_2
+	field	arhr_din_3
+end
+
+table	arln
+	field	arln_hhco_hash
+	field	arln_hhcl_hash
+	field	arln_line_no
+	field	arln_hhsl_hash
+	field	arln_hhbr_hash
+	field	arln_hhum_hash
+	field	arln_incc_hash
+	field	arln_pack_size
+	field	arln_cus_ord_ref
+	field	arln_q_order
+	field	arln_q_backorder
+	field	arln_sale_price
+	field	arln_gsale_price
+	field	arln_cost_price
+	field	arln_item_levy
+	field	arln_gross
+	field	arln_amt_disc
+	field	arln_disc_pc
+	field	arln_item_desc
+	field	arln_amt_gst
+	field	arln_amt_tax
+end
+
+table	sohr
+	field	sohr_hhso_hash
+	field	sohr_order_no
+	field	sohr_dt_raised
+end
+
+table   inlo	
+	field   inlo_inlo_hash	
+	field	inlo_location
+end
+
+table   inum	
+	field   inum_hhum_hash	
+	field	inum_uom
+end
+
+table	comr
+	field	comr_co_no
+	field	comr_inv_date
+end
+
+table	sons
+	field	sons_hhco_hash
+	field	sons_hhcl_hash
+	field	sons_hhsl_hash
+	field	sons_line_no
+	field	sons_desc
+end

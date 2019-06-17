@@ -1,0 +1,26 @@
+SUB MENU (SUB)
+sub_menu
+Exit <*>
+logout~
+System Menu. <*>
+smenu~
+Select Company. <a|b|c|susana|demo>
+all_select~C~
+Select Branch. <a|b|c|susana|demo>
+all_select~B~
+Select Warehouse. <a|b|c|susana|demo>
+all_select~W~
+Select Department <a|b|c|susana|demo>
+dp_select~D~
+Pinnacle Mail. <*>
+psl_mail~
+Pinnacle Scratch Pad. <*>
+psl_s_pad~LOGNAME~
+Display Night Processing. <a|b|c|susana|demo>
+night_dsp~
+Reprint Save Files. <a|susana|demo>
+psl_prt_save~LPNO~
+Spooler. <a|b|c|z|susana|demo>
+chain~ON~lpctl~
+Stock Display <a|susana|demo>
+sk_alldisp~

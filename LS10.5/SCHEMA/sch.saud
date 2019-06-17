@@ -1,0 +1,83 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.saud,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.saud)
+|  Schema Desc  : (Sales Analysis Detail file By for UD spec. )
+|----------------------------------------------------------------------
+| $Log: sch.saud,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:22  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	saud
+field	saud_co_no          type	char 	2
+field	saud_year           type	char 	1
+field	saud_spec_no        type	int
+field	saud_code        	type	char	2
+field	saud_qty_per1       type	float
+field	saud_qty_per2       type	float
+field	saud_qty_per3       type	float
+field	saud_qty_per4       type	float
+field	saud_qty_per5       type	float
+field	saud_qty_per6       type	float
+field	saud_qty_per7       type	float
+field	saud_qty_per8       type	float
+field	saud_qty_per9       type	float
+field	saud_qty_per10      type	float
+field	saud_qty_per11      type	float
+field	saud_qty_per12      type	float
+field	saud_qty_per13      type	float
+field	saud_sal_per1       type	double
+field	saud_sal_per2       type	double
+field	saud_sal_per3       type	double
+field	saud_sal_per4       type	double
+field	saud_sal_per5       type	double
+field	saud_sal_per6       type	double
+field	saud_sal_per7       type	double
+field	saud_sal_per8       type	double
+field	saud_sal_per9       type	double
+field	saud_sal_per10      type	double
+field	saud_sal_per11      type	double
+field	saud_sal_per12      type	double
+field	saud_sal_per13      type	double
+field	saud_cst_per1       type	double
+field	saud_cst_per2       type	double
+field	saud_cst_per3       type	double
+field	saud_cst_per4       type	double
+field	saud_cst_per5       type	double
+field	saud_cst_per6       type	double
+field	saud_cst_per7       type	double
+field	saud_cst_per8       type	double
+field	saud_cst_per9       type	double
+field	saud_cst_per10      type	double
+field	saud_cst_per11      type	double
+field	saud_cst_per12      type	double
+field	saud_cst_per13      type	double
+field	saud_id_no          type	composite
+			saud_co_no,
+			saud_year,
+			saud_spec_no,
+			saud_code									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	saud_co_no			- Company number.
+	saud_year			- Year flag,
+							C-urrent, L-ast year.
+							c-urrent (Bonus), l-ast year (Bonus)
+	saud_spec_no		- Link to iudc.
+	saud_code			- Link to iudc/iuds.
+	saud_qty_per(1-12)	- Qty sold.
+	saud_sal_per(1-12)	- Sales value ( each ) sold.
+	saud_cst_per(1-12)	- Cost value  ( each ) sold.
+}

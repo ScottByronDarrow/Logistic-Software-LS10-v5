@@ -1,0 +1,109 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:44 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:44  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_gl_date
+	field comm_fiscal
+end
+
+table comr
+	field comr_co_no
+	field comr_co_name
+	field comr_co_short_name
+	field comr_co_adr1
+	field comr_co_adr2
+	field comr_co_adr3
+	field comr_module_inst
+	field comr_fiscal
+	field comr_dbt_date
+	field comr_crd_date
+	field comr_inv_date
+	field comr_payroll_date
+	field comr_gl_date
+	field comr_stmt_date
+	field comr_date_stmt_prn
+	field comr_yend_date
+	field comr_status_flags
+	field comr_nx_inv_no
+	field comr_nx_crd_no
+	field comr_nx_po_no
+	field comr_nx_gr_no
+	field comr_nx_pac_no
+	field comr_nx_del_no
+	field comr_nx_chq_no
+	field comr_ls_chq_no
+	field comr_nx_job_no
+	field comr_nx_requis_no
+	field comr_nx_rec_no
+	field comr_prospect_no
+	field comr_nx_call_no
+	field comr_ship_no
+	field comr_od_per1
+	field comr_od_per2
+	field comr_od_per3
+	field comr_od_per4
+	field comr_closed_period
+	field comr_pay_bover
+	field comr_pay_freq
+	field comr_gst_rate
+	field comr_gst_ird_no
+	field comr_int_rate
+	field comr_restock_pc
+	field comr_price1_desc
+	field comr_price2_desc
+	field comr_price3_desc
+	field comr_price4_desc
+	field comr_price5_desc
+	field comr_price6_desc
+	field comr_price7_desc
+	field comr_price8_desc
+	field comr_price9_desc
+	field comr_contingency
+	field comr_sur_amt
+	field comr_sur_cof
+	field comr_frt_min_amt
+	field comr_frt_mweight
+	field comr_pay_terms
+	field comr_fin_susp
+	field comr_nfn_susp
+	field comr_pl_app_acc
+	field comr_po_sic1
+	field comr_po_sic2
+	field comr_po_sic3
+	field comr_env_name
+	field comr_stat_flag
+	field comr_base_curr
+	field comr_consolidate
+end
+
+table glsh
+	field glsh_co_no
+	field glsh_code
+	field glsh_hhsh_hash
+	field glsh_desc
+	field glsh_mod_date
+	field glsh_stat_flag
+end
+
+table glsd
+	field glsd_hhsh_hash
+	field glsd_prd_no
+	field glsd_action
+	field glsd_amount
+	field glsd_desc
+	field glsd_stat_flag
+end
+

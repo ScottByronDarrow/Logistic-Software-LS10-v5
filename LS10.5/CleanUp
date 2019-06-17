@@ -1,0 +1,30 @@
+#!/bin/sh
+BASE_PATH=/usr
+VERSIONS="LS10.5"
+
+for v in $VERSIONS
+do
+	cd $BASE_PATH/$v
+	for d in ?? ??? ???? ?????
+	do
+		if [ -d $d ]
+		then
+			cd $BASE_PATH/$v/$d
+			pwd
+			echo "Removing .o files"
+			rm -f */*.o >/dev/null
+			echo "Removing schema files"
+			rm -f */schema >/dev/null
+			echo "Removing errors files"
+			rm -f */errors >/dev/null
+			rm -f */Errors >/dev/null
+			echo "Removing grep files"
+			rm -f */grep.* >/dev/null
+			echo "Removing dependancies"
+			rm -f */depend >/dev/null
+			rm -f walk
+			rm -f */walk
+			cd $BASE_PATH/$v
+		fi
+	done
+done

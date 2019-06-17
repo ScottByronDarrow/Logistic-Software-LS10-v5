@@ -1,0 +1,19 @@
+Stock-Take Variation Menu (SKVA)
+sk_stake
+Stock Take Master Menu. <a> (1,2)
+menu MENUSYS/sk_st_mst.mdf
+Print Stock-Take Variation By Item. <a> (1,1)
+sk_nst_sel~sk_nst_varpr~I~
+Print Stock-Take Variation By Group. <a> (1,1)
+sk_nst_sel~sk_nst_varpr~G~
+Print Stock-Take Variation By Location. <a> (1,2)
+sk_nst_sel~sk_nst_varpr~L~
+Print Serial Item Variation By Item. <a> (1,1)
+sk_nst_sel~sk_st_svarpr~I~
+Print Serial Item Variation By Group. <a> (1,1)
+sk_nst_sel~sk_st_svarpr~G~
+((
+quadrant(16,6)
+box(10,3,56,11)
+line(11,5,55)
+))

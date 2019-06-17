@@ -1,0 +1,91 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/06/05 06:05:40 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/06/05 06:05:40  scott
+#		{1, LIN, "mfgBrNo",	 2, 18, CHARTYPE,
+#			"AA", "          ",
+#			" ", comm_rec.est_no, "Mfg Branch  :", "Manufacturing Branch.",
+#			NE, NO,  JUSTRIGHT, "", "", local_rec.mfgBrNo},
+#		{1, LIN, "mfgBrName",	 2, 25, CHARTYPE,
+#			"UUUUUUUUUUUUUUU", "          ",
+#			" ", "", "", "",
+#			NA, NO,  JUSTLEFT, "", "", local_rec.mfgBrName},
+#		{1, LIN, "mfgWhNo",	 2, 75, CHARTYPE,
+#			"AA", "          ",
+#			" ", comm_rec.cc_no, "Mfg Warehouse:", "Manufacturing Warehouse.",
+#			NE, NO,  JUSTRIGHT, "", "", local_rec.mfgWhNo},
+#		{1, LIN, "mfgWhName",	 2, 82, CHARTYPE,
+#			"UUUUUUUUU", "          ",
+#			" ", "", "", "",
+#			NA, NO,  JUSTLEFT, "", "", local_rec.mfgWhName},
+#		{1, LIN, "orderNumber",	 3, 18, CHARTYPE,
+#			"UUUUUUU", "          ",
+#			" ", " ", "Order Number:", " ",
+#			NO, NO,  JUSTLEFT, "", "", local_rec.orderNumber},
+#	
+#	Revision 1.1  2002/06/05 04:05:24  scott
+#	First Release
+#	
+#
+#
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+end
+
+table arpcwo
+	field arpcwo_co_no
+	field arpcwo_br_no
+	field arpcwo_wh_no
+	field arpcwo_order_no
+	field arpcwo_reqd_date
+	field arpcwo_priority
+	field arpcwo_hhbr_hash
+	field arpcwo_hhcc_hash
+	field arpcwo_prod_qty
+	field arpcwo_act_prod_q
+	field arpcwo_act_rej_q
+	field arpcwo_order_stat
+	field arpcwo_batch_no
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_nx_wo_num
+	field ccmr_name
+	field ccmr_acronym
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+end
+
+table inmr
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_dec_pt
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_std_batch
+end
+

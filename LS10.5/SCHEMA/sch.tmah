@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmah,v 5.0 2001/06/19 10:17:32 cha Exp $
+|  Schema Name  : (sch.tmah)
+|  Schema Desc  : (Tele-Marketing lead Allocation header file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmah,v $
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:33  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:50  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmah
+
+field	tmah_co_no			type	char	2	index 	dups
+field	tmah_hhcf_hash			type	long
+field	tmah_hhop_hash			type	long
+field	tmah_hhla_hash			type	serial		index	
+field	tmah_id_no			type	composite 
+		tmah_hhcf_hash,
+		tmah_hhop_hash					index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tmah_co_no		-	Company Number.
+	tmah_hhcf_hash		-	Link to Campaign file. ( tmcf )
+	tmah_hhop_hash		-	Link to Operator file. ( tmop )
+	tmah_hhla_hash		-	Unique serial hash to tmah.
+}

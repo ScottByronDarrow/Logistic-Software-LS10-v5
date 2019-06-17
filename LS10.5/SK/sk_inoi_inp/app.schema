@@ -1,0 +1,92 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:09 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:09  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_weight
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_bo_flag
+	field inmr_bo_release
+	field inmr_sellgrp
+	field inmr_disc_pc
+	field inmr_gst_pc
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_outer_size
+	field inmr_stat_flag
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_expiry_prd1
+	field inei_expiry_prd2
+	field inei_expiry_prd3
+	field inei_stat_flag
+end
+
+table cuit
+	field cuit_hhcu_hash
+	field cuit_hhbr_hash
+	field cuit_item_no
+	field cuit_item_desc
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_sman_code
+	field cumr_item_codes
+end
+
+table inoi
+	field inoi_hhcu_hash
+	field inoi_hhbr_hash
+	field inoi_stake_date
+	field inoi_tot_disp
+	field inoi_tot_store
+	field inoi_item_exp
+	field inoi_lst_pullout
+end
+

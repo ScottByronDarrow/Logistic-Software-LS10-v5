@@ -1,0 +1,4 @@
+gcc -c -I$INFORMIXDIR/incl -I$INFORMIXDIR/incl/public -I$PROG_PATH/INCLUDE -o dbif.o dbif.c
+esql -static -o conn2 dbif.o $INFORMIXDIR/lib/dmi/libdmi.a
+
+

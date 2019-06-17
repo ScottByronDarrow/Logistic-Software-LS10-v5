@@ -1,0 +1,38 @@
+Production Control Master Menu. (PCTMR)
+pct_help
+Manufacturing Menu <a> (1,2)
+menu MENUSYS/main_manf.mdf
+Works Order Creation/Maintenance. <a> (1,1)
+pc_womaint~LPNO~
+Confirm Planned Orders. <a> (1,1)
+pc_stat_mnt~0~P~
+Print Works Order/Job Sheet. <a> (1,1)
+pc_woprint~"Works Order / Job Sheet"~
+Released W/O Qty & Date Maintenance. <a> (1,2)
+pc_relmaint~
+Alloc. Resource to Confirmed orders. <a> (1,2)
+lp_chain~pc_stat_mnt LPNO F~
+Manual Release of Works Orders. <a> (1,2)
+lp_chain~pc_stat_mnt LPNO A~
+Issue  Materials to Works Orders. <a> (1,1)
+lp_chain~pc_issue LPNO G~
+Return Materials From Works Orders. <a> (1,2)
+lp_chain~pc_return LPNO G~
+Production Sequence Update. <a> (2,2)
+lp_chain~pc_seq_upd LPNO~
+Receipting From Production. <a> (2,2)
+lp_chain~pc_receipt LPNO G~
+Production Control Reports. <a> (2,2)
+menu MENUSYS/pct_report.mdf
+Employee Timesheets Menu. <a> (2,2)
+pmenu MENUSYS/SUB_MENU/pct_time.mdf
+Update Production To G/L. <a> (2,2)
+lp_chain~pc_glcons LPNO~gl_format 19 LPNO~
+Works Order Deletion. <a> (2,2)
+pc_wodel~LPNO~
+((
+quadrant(6,6)
+quadrant(48,8)
+box(1,3,76,15)
+line(2,5,75)
+))

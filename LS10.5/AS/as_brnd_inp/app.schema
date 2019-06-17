@@ -1,0 +1,12 @@
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table asbr
+	field asbr_co_no
+	field asbr_brand_code
+	field asbr_brand_desc
+end
+

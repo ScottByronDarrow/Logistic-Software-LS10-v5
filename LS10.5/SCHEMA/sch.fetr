@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.fetr,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.fetr)
+|  Schema Desc  : (Forward Exchange Transaction File. )
+|----------------------------------------------------------------------
+| $Log: sch.fetr,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:40  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file fetr 
+
+field	fetr_hhfe_hash			type	long				index	dups
+field	fetr_index_by			type	char	1
+field	fetr_index_hash			type	long
+field	fetr_hhcp_hash			type	long				index	dups
+field	fetr_id_no				type	comp
+                                       	fetr_index_by,
+                                       	fetr_index_hash,
+										fetr_hhcp_hash		index primary
+field	fetr_value				type	money
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		fetr_hhfe_hash		: Link to Forward Exchange Header File (fehr).
+		fetr_index_by		: Indicates type of index_hash
+							  C - Cust. Invoice   (cuin_hhci_hash)
+							  S - Supp. Invoice   (suin_hhsi_hash)
+		fetr_index_hash		: Link to appropriate Header File (from index_by).
+		fetr_hhcp_hash		: Link to Customer Cash Receipt Header File (cuhd).
+		fetr_value			type	money
+}

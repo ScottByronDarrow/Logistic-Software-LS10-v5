@@ -1,0 +1,124 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:18:39 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:18:39  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/05/04 01:33:32  scott
+#	Updated to add incf_gr_number as required by standard function
+#	
+#	Revision 4.0  2001/03/09 02:36:12  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:32  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_acronym
+end
+
+table inim
+	field inim_co_no
+	field inim_est_no
+	field inim_cc_no
+	field inim_movement
+	field inim_a_class
+	field inim_b_class
+	field inim_c_class
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_abc_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_abc_update
+	field inmr_dec_pt
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_location
+	field incc_abc_code
+	field incc_abc_update
+	field incc_first_stocked
+	field incc_wks_demand
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_opening_stock
+	field incc_receipts
+	field incc_pur
+	field incc_issues
+	field incc_adj
+	field incc_sales
+	field incc_closing_stock
+	field incc_c_1
+	field incc_c_2
+	field incc_c_3
+	field incc_c_4
+	field incc_c_5
+	field incc_c_6
+	field incc_c_7
+	field incc_c_8
+	field incc_c_9
+	field incc_c_10
+	field incc_c_11
+	field incc_c_12
+	field incc_c_val_1
+	field incc_c_val_2
+	field incc_c_val_3
+	field incc_c_val_4
+	field incc_c_val_5
+	field incc_c_val_6
+	field incc_c_val_7
+	field incc_c_val_8
+	field incc_c_val_9
+	field incc_c_val_10
+	field incc_c_val_11
+	field incc_c_val_12
+	field incc_c_prf_1
+	field incc_c_prf_2
+	field incc_c_prf_3
+	field incc_c_prf_4
+	field incc_c_prf_5
+	field incc_c_prf_6
+	field incc_c_prf_7
+	field incc_c_prf_8
+	field incc_c_prf_9
+	field incc_c_prf_10
+	field incc_c_prf_11
+	field incc_c_prf_12
+end

@@ -1,0 +1,85 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/07 10:23:21 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/07 10:23:21  scott
+#	Updated to bring version number to 5.0
+#	
+#	Revision 1.2  2001/10/05 02:52:07  cha
+#	This program has to be changed to cater for new
+#	allocation type defined for goods returns.
+#	
+#	Revision 1.1  2001/08/20 23:45:59  scott
+#	Updated for development related to bullet proofing
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inmr
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+end
+
+table soic
+	field soic_pid
+	field soic_line
+	field soic_hhbr_hash
+	field soic_hhcc_hash
+	field soic_qty
+	field soic_program
+	field soic_op_id
+	field soic_time_create
+	field soic_date_create
+	field soic_status
+end
+
+table inla
+	field inla_inlo_hash
+	field inla_pid
+	field inla_line_no
+	field inla_hhcl_hash
+	field inla_hhsl_hash
+	field inla_cmrd_hash
+	field inla_itff_hash
+	field inla_pcms_hash
+	field inla_hhgl_hash
+	field inla_qty_alloc
+	field inla_qty_proc
+end
+
+table soln
+	field soln_hhsl_hash
+end
+
+table coln
+	field coln_hhcl_hash
+	field coln_hhco_hash
+end
+
+table cohr
+	field cohr_type
+	field cohr_hhco_hash
+	field cohr_stat_flag
+end
+
+table pogl
+	field pogl_hhgl_hash      
+end

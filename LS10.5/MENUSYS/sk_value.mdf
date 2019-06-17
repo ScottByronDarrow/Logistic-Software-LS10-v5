@@ -1,0 +1,26 @@
+Stock Valuation Master Menu (SKVMR)
+sk_val
+Stock Reports Menu. <a> (1,2)
+menu MENUSYS/sk_report.mdf
+Stock Valuation ( FIFO/LIFO ). >> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/sk_fifoval.mdf
+Stock Valuation ( SERIAL ITEMS ). >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_serval.mdf
+Summary  Stock Valuation By Company. <a> (1,1)
+sk_group.i~sk_covalue~Company Summary Valuation Report~ ~
+Detailed Stock Valuation By Company. <a> (1,2)
+sk_group.i~sk_fcovalue~Company Detailed Valuation Report~ ~
+Summary  Stock Valuation By Branch. <a> (1,1)
+chain~sk_group.i "sk_bsvalue" "DETAIL STOCK VALUATION" " " " "~
+Detailed Stock Valuation By Branch. <a> (1,2)
+chain~sk_group.i "sk_bdvalue" "DETAIL STOCK VALUATION" " " " "~
+Summary  Stock Valuation By Warehouse. <a> (1,1)
+chain~sk_group.i "sk_csvalue" "DETAIL STOCK VALUATION" " " " "~
+Detailed Stock Valuation By Warehouse. <a> (1,1)
+chain~sk_group.i "sk_cdvalue" "DETAIL STOCK VALUATION" " " " "~
+((
+quadrant(20,6)
+quadrant(45,6)
+box(14,3,50,15)
+line(15,5,49)
+))

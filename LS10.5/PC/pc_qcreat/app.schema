@@ -1,0 +1,96 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/07 05:53:27 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/07 05:53:27  scott
+#	Updated to add app.schema
+#	Updated to clean code
+#	Updated to remove gets and replace with scanf
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_std_batch
+	field inei_min_batch
+	field inei_max_batch
+	field inei_prd_multiple
+	field inei_hndl_class
+	field inei_hzrd_class
+	field inei_prod_class
+end
+
+table pcln
+	field pcln_seq_no
+	field pcln_hhwc_hash
+	field pcln_hhrs_hash
+	field pcln_rate
+	field pcln_setup
+	field pcln_run
+	field pcln_clean
+	field pcln_qty_rsrc
+	field pcln_instr_no
+	field pcln_yld_clc
+	field pcln_can_split
+	field pcln_line_no
+	field pcln_act_qty_in
+	field pcln_hhwo_hash
+end
+
+table pcrq
+	field pcrq_hhrs_hash
+	field pcrq_qty_rsrc
+	field pcrq_hhwo_hash
+	field pcrq_prod_class
+	field pcrq_priority
+	field pcrq_seq_no
+	field pcrq_line_no
+	field pcrq_last_date
+	field pcrq_last_time
+	field pcrq_est_date
+	field pcrq_est_time
+	field pcrq_est_setup
+	field pcrq_est_run
+	field pcrq_est_clean
+	field pcrq_act_date
+	field pcrq_act_time
+	field pcrq_act_setup
+	field pcrq_act_run
+	field pcrq_act_clean
+	field pcrq_can_split
+	field pcrq_firm_sched
+	field pcrq_stat_flag
+end
+
+table pcwo
+	field pcwo_co_no
+	field pcwo_br_no
+	field pcwo_order_no
+	field pcwo_hhwo_hash
+	field pcwo_reqd_date
+	field pcwo_rtg_seq
+	field pcwo_priority
+	field pcwo_create_date
+	field pcwo_mfg_date
+	field pcwo_hhbr_hash
+	field pcwo_hhcc_hash
+	field pcwo_prod_qty
+	field pcwo_act_prod_qty
+	field pcwo_act_rej_qty
+	field pcwo_order_status
+	field pcwo_stat_flag
+end
+

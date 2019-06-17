@@ -1,0 +1,32 @@
+Transport Management Menu. (TRMR)
+so_help
+Distribution Master Menu. <a> (1,2)
+menu MENUSYS/main_dist.mdf
+Manual Transport P/Slip Confirm. <a> (1,1)
+so_des_conf~X~T~so_des_conf.s~LPNO~
+Auto.  Transport P/Slip Confirm. <a> (1,2)
+so_ades_conf~X~T~LPNO~
+Transport Schedule Maintenance <a> (1,2)
+tr_trsh_mnt~
+Allocate Deliveries to Container. <a> (1,1)
+tr_load_cont~
+Allocate Deliveries to vehicle. <a> (1,2)
+tr_manage~T~
+Print Allocated P/Slips. <a> (1,1)
+tr_delsheet~
+Print Load Order Manifest. <a> (1,1)
+tr_load_rpt~
+Manual Delivery Confirmation. <a> (2,1)
+tr_del_conf~
+Auto.  Delivery Confirmation. <a> (2,2)
+tr_adel_conf~
+Transport Control Files. <a> (2,2)
+menu MENUSYS/tr_maint.mdf
+Display Freight Charges. <a> (2,2)
+tr_trch_dsp~
+((
+quadrant(6,6)
+quadrant(46,8)
+box(1,3,76,14)
+line(2,5,75)
+))

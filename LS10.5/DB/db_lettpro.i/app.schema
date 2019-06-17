@@ -1,0 +1,33 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/04 00:09:24 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/04 00:09:24  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_crd_date
+	field comm_inv_date
+	field comm_payroll_date
+	field comm_gl_date
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+end
+

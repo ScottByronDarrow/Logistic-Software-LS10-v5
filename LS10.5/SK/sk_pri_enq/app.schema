@@ -1,0 +1,281 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/11/28 04:09:48 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/11/28 04:09:48  scott
+#	SC0053 - Platinum Logistics - LS10.5.2 2002-11-28
+#	Updated for changes in pricing - See S/C for Details
+#	
+#	Revision 5.0  2001/06/19 08:17:01  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:38:23  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:36  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_dbt_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_acronym
+end
+
+table cuit
+	field cuit_hhcu_hash
+	field cuit_hhbr_hash
+	field cuit_item_no
+	field cuit_item_desc
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_acronym
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_ho_dbt_hash
+	field cumr_dbt_name
+	field cumr_ch_adr1
+	field cumr_ch_adr2
+	field cumr_ch_adr3
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_dl_adr4
+	field cumr_contact_name
+	field cumr_area_code
+	field cumr_item_codes
+	field cumr_curr_code
+	field cumr_class_type
+	field cumr_price_type
+	field cumr_disc_code
+end
+
+table cudi
+	field cudi_hhcu_hash
+	field cudi_del_no
+	field cudi_name
+	field cudi_adr1
+	field cudi_adr2
+	field cudi_adr3
+	field cudi_adr4
+end
+
+table cnch
+	field cnch_co_no
+	field cnch_cont_no
+	field cnch_hhch_hash
+	field cnch_desc
+	field cnch_contact
+	field cnch_date_wef
+	field cnch_date_exp
+	field cnch_exch_type
+end
+
+table cncl
+	field cncl_hhch_hash
+	field cncl_hhcu_hash
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_closing_stock
+	field incc_qc_qty
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_abc_code
+	field inmr_abc_update
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_sellgrp
+	field inmr_buygrp
+	field inmr_disc_pc
+	field inmr_gst_pc
+	field inmr_std_uom
+	field inmr_uom_cfactor
+	field inmr_outer_size
+	field inmr_tax_pc
+	field inmr_stat_flag
+end
+
+table ithr
+	field ithr_co_no
+	field ithr_type
+	field ithr_del_no
+	field ithr_hhit_hash
+	field ithr_iss_date
+	field ithr_rec_date
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+	field itln_i_hhcc_hash
+	field itln_r_hhcc_hash
+	field itln_hhum_hash
+	field itln_serial_no
+	field itln_qty_order
+	field itln_qty_border
+	field itln_qty_rec
+	field itln_cost
+	field itln_stock
+	field itln_status
+	field itln_due_date
+end
+
+table pcwo
+	field pcwo_co_no
+	field pcwo_br_no
+	field pcwo_order_no
+	field pcwo_hhwo_hash
+	field pcwo_reqd_date
+	field pcwo_rtg_seq
+	field pcwo_priority
+	field pcwo_create_date
+	field pcwo_mfg_date
+	field pcwo_hhbr_hash
+	field pcwo_bom_alt
+	field pcwo_rtg_alt
+	field pcwo_hhcc_hash
+	field pcwo_prod_qty
+	field pcwo_act_prod_qty
+	field pcwo_act_rej_qty
+	field pcwo_order_status
+	field pcwo_stat_flag
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_type
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_date_raised
+	field pohr_due_date
+	field pohr_contact
+	field pohr_delin1
+	field pohr_delin2
+	field pohr_delin3
+	field pohr_curr_code
+	field pohr_curr_rate
+	field pohr_fgn_total
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhum_hash
+	field poln_hhcc_hash
+	field poln_hhpl_hash
+	field poln_exch_rate
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_land_cst
+	field poln_ship_no
+	field poln_due_date
+	field poln_pur_status
+end
+
+table posh
+	field posh_co_no
+	field posh_hhsh_hash
+	field posh_ship_depart
+	field posh_ship_arrive
+	field posh_csm_no
+	field posh_curr_code
+	field posh_ex_rate
+	field posh_ship_method
+	field posh_vessel
+	field posh_port
+	field posh_destination
+	field posh_status
+end
+
+table sumr
+	field sumr_crd_no
+	field sumr_crd_name
+	field sumr_hhsu_hash
+	field sumr_acronym
+	field sumr_curr_code
+end
+
+table exaf
+	field exaf_co_no          
+	field exaf_area_code      
+	field exaf_area           
+end

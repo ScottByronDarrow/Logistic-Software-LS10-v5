@@ -1,0 +1,25 @@
+#! /bin/sh
+#
+#	Accepts 1+ args and prepends the first argument + / to
+#	any following arguments
+#
+#	eg
+#		$0 /usr a b c
+#	gives:
+#		/usr/a /usr/b /usr/c
+#
+
+if [ $# -lt 2 ]
+then
+	exit 1
+fi
+
+BASE=$1
+shift
+
+while [ -n "$*" ]
+do
+	echo -n "${BASE}/${1} "
+	shift
+done
+echo

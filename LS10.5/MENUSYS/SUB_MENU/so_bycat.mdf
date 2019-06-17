@@ -1,0 +1,16 @@
+SOP - Orders by Category. (SUB)
+so_help
+Sales Order Reports Menu. <a> (1,1)
+menu MENUSYS/so_reports.mdf
+Print All Orders By Category. <a> (1,1)
+so_bycatprt~ ~
+Print Backorder By Category. <a> (1,1)
+so_bycatprt~B~
+Print Forward-Orders By Category. <a> (1,1)
+so_bycatprt~F~
+Print Held-Orders By Category. <a> (1,1)
+so_bycatprt~H~
+Print New/Unconsolidated-Order By Category. <a> (1,1)
+so_bycatprt~M~
+((
+))

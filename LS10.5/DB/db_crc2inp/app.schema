@@ -1,0 +1,87 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:02 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:02  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_gl_date
+end
+
+table comr
+	field comr_co_no
+	field comr_nx_rec_no
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_dflt_bank
+	field esmr_dbt_date
+	field esmr_stat_flag
+end
+
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_bank_name
+	field crbk_branch_name
+	field crbk_acct_name
+	field crbk_bank_no
+	field crbk_bank_acct_no
+	field crbk_curr_code
+	field crbk_clear_fee
+	field crbk_stat_flag
+end
+
+table bkcr
+	field bkcr_co_no
+	field bkcr_bank_id
+	field bkcr_curr_code
+	field bkcr_description
+	field bkcr_ex1_factor
+	field bkcr_stat_flag
+end
+
+table blhd
+	field blhd_co_no
+	field blhd_bank_id
+	field blhd_hhbl_hash
+	field blhd_nx_lodge_no
+	field blhd_stat_flag
+end
+
+table bldt
+	field bldt_hhbl_hash
+	field bldt_lodge_no
+	field bldt_rec_type
+	field bldt_lodge_date
+	field bldt_lodge_time
+	field bldt_hhcu_hash
+	field bldt_dbt_name
+	field bldt_bank_code
+	field bldt_branch_code
+	field bldt_hhcp_hash
+	field bldt_sundry_rec
+	field bldt_bank_chg
+	field bldt_amount
+	field bldt_chq_fees
+	field bldt_bk_lcl_exch
+	field bldt_due_date
+	field bldt_posted_gl
+	field bldt_presented
+	field bldt_reconcile
+	field bldt_stat_flag
+end
+

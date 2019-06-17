@@ -1,0 +1,62 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:22:25 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:22:25  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+end
+
+table sacm
+	field sacm_co_no
+	field sacm_sacm_hash
+	field sacm_hhsf_hash
+	field sacm_date
+	field sacm_st_km
+	field sacm_ed_km
+end
+
+table sacd
+	field sacd_sacm_hash
+	field sacd_seq_no
+	field sacd_hhcu_hash
+	field sacd_call_in
+	field sacd_call_out
+	field sacd_act_code
+	field sacd_remarks
+end
+
+table saca
+	field saca_co_no
+	field saca_code
+	field saca_desc
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_hhsf_hash
+	field exsf_salesman
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_sman_code
+	field cumr_item_codes
+end
+

@@ -1,0 +1,36 @@
+LRP - SUPPLY MENU (LRPS)
+lrp_help
+LRP - SUPPLY MASTER MENU <a> (1,2)
+menu MENUSYS/lrp_master.mdf
+External Supplier By Company. <a> (1,1)
+sk_sumaint~C~
+External Supplier By Branch. <a> (1,1)
+sk_sumaint~B~
+External Supplier By Warehouse. <a> (1,2)
+sk_sumaint~W~
+External Supplier Pricing.>> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/lrp_sprice.mdf
+External Supplier Discounting.>> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/lrp_sdisc.mdf
+External Supplier Rebates.>> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/lrp_srbate.mdf
+External Lead Dates. <a> (1,2)
+lrp_ldmaint~
+Logistic Supplier SQL Update. <a> (2,2)
+sk_inis_mup~LPNO~
+Internal Supply Warehouses. <a> (2,2)
+lrp_inws_inp~
+Print Cross-Ref By Supplier. <a> (2,1)
+po_inis_sup~
+Print Cross-Ref By Group. <a> (2,2)
+lp_chain~sk_group.i "po_inis_prd" "Inventory Supplier XRef By Product Group" " "~
+Print Missing Supply Records. <a> (2,1)
+sk_group.i~lrp_noinis~Missing Inventory Supplier Records~ ~
+Print Superceeded Records. <a> (2,1)
+sk_group.i~lrp_ssinis~Superceeded Inventory Supplier Records~ ~
+((
+quadrant(6,6)
+quadrant(46,8)
+box(1,3,76,14)
+line(2,5,75)
+))

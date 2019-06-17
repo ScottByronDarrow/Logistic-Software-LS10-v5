@@ -1,0 +1,53 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ddgd,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.ddgd)
+|  Schema Desc  : (Direct Delivery On-Cost Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.ddgd,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:31  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	ddgd	
+
+field	ddgd_co_no				type	char	2
+field	ddgd_hhds_hash			type	long		index dups
+field	ddgd_line_no			type	int
+field	ddgd_category			type	char	20
+field	ddgd_allocation			type	char	1
+field	ddgd_currency			type	char	3
+field	ddgd_fgn_value			type	money
+field	ddgd_exch_rate			type	double
+field	ddgd_loc_value			type	money
+field	ddgd_id_no				type	composite
+			ddgd_co_no,
+			ddgd_hhds_hash,
+			ddgd_line_no							index		primary
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ddgd_co_no 			- 	Company Number.
+	ddgd_hhds_hash		- 	Link to Direct Delivery Shipment file. (ddsh).
+	ddgd_line_no		- 	Line No.
+	ddgd_category		- 	Cost Category.
+	ddgd_allocation		-	Spread.
+							D - Dollar.
+							W - Weight.
+							V - Volume.
+	ddgd_currency		-	Cost Currency.
+	ddgd_fgn_value		-	Cost in cost currency.
+	ddgd_exch_rate		-	Exchange Rate.
+	ddgd_fgn_value		-	Cost in local currency.
+}

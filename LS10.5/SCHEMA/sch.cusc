@@ -1,0 +1,74 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cusc,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.cusc)
+|  Schema Desc  : (Customers Salesman Commission file. )
+|----------------------------------------------------------------------
+| $Log: sch.cusc,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:30  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cusc	
+
+field	cusc_hhsf_hash 			type	long
+field	cusc_alloc_type 		type	int
+field	cusc_sellgrp 			type	char	6
+field	cusc_category 			type	char	11
+field	cusc_spec_no 			type	int
+field	cusc_ud_code 			type	char	2
+field	cusc_hhbr_hash 			type	long
+field	cusc_com_type			type	char	1   
+field	cusc_com_pc				type	float
+field	cusc_com_min			type	money
+field	cusc_sman_com			type	float
+field	cusc_lev1_com			type	float
+field	cusc_lev2_com			type	float
+field	cusc_lev3_com			type	float
+field	cusc_lev4_com			type	float
+field	cusc_id_no				type	composite
+			cusc_hhsf_hash,
+			cusc_alloc_type										index	dups
+field	cusc_id_no2				type	composite
+			cusc_hhsf_hash,
+			cusc_sellgrp,
+			cusc_category,
+			cusc_spec_no,
+			cusc_ud_code,
+			cusc_hhbr_hash										index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cusc_hhsf_hash		- 	link to exsf_hhsf_hash
+	cusc_alloc_type		-	1 = Allocation by selling group.
+							2 = Allocation by category.
+							3 = Allocation by item group.
+							4 = Allocation by UD code.
+							5 = Allocation by Item number.
+	cusc_sellgrp		-	Selling Group.
+	cusc_category 		-	Category.
+	cusc_ud_code		-	User Defined Code.
+	cusc_hhbr_hash		-	Item Hash.
+	cusc_com_type		-	Commission type.
+								W = Commission paid per Kg. (weight).
+								G = Commission paid as a % of gross.
+								N = Commission paid as a % of nett.
+								M = Commission paid as a % of margin.
+	cusc_com_pc			-	Commission percentage is based on the above.
+	cusc_com_min		-	Min commission amount.
+	cusc_sman_com		- 	Commission rate related to a salesman.
+	cusc_lev1_com		-	Commission rate related to a Level 1 sale.
+	cusc_lev2_com		-	Commission rate related to a Level 2 sale.
+	cusc_lev3_com		-	Commission rate related to a Level 3 sale.
+	cusc_lev4_com		-	Commission rate related to a Level 4 sale.
+}				

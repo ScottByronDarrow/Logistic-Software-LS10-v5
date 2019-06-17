@@ -1,0 +1,50 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcid,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pcid)
+|  Schema Desc  : (Process Control Instruction Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.pcid,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:02  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:38  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcid	
+
+field	pcid_co_no			type	char	2
+field	pcid_hhbr_hash			type	long
+field	pcid_hhwc_hash			type	long
+field	pcid_instr_no			type	integer	
+field	pcid_version			type	integer	
+field	pcid_line_no			type	integer	
+field	pcid_id_no			type	composite
+		pcid_co_no,
+		pcid_hhbr_hash,
+		pcid_hhwc_hash,
+		pcid_instr_no,
+		pcid_version,
+		pcid_line_no					index	primary
+field	pcid_text			type	char	60
+
+end
+{
+
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pcid_co_no			- Company number
+	pcid_hhbr_hash			- Link => inmr
+	pcid_hhwc_hash			- Link => pcwc
+	pcid_instr_no			- Instruction number
+	pcid_line_no			- Line number (Within this instruction)
+	pcid_version			- Version number
+	pcid_text			- Free format text
+}

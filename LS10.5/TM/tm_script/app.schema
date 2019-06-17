@@ -1,0 +1,57 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/12 07:38:20 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/12 07:38:20  scott
+#	Updated to add app.schema
+#	Updated to clean code.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table tmsh
+	field tmsh_co_no
+	field tmsh_script_no
+	field tmsh_hhsh_hash
+	field tmsh_desc
+end
+
+table tmsl
+	field tmsl_hhsh_hash
+	field tmsl_prmpt_no
+	field tmsl_desc
+	field tmsl_text1
+	field tmsl_text2
+	field tmsl_text3
+	field tmsl_text4
+	field tmsl_text5
+	field tmsl_text6
+	field tmsl_text7
+	field tmsl_rep1_desc
+	field tmsl_rep2_desc
+	field tmsl_rep3_desc
+	field tmsl_rep4_desc
+	field tmsl_rep5_desc
+	field tmsl_rep6_desc
+	field tmsl_rep7_desc
+	field tmsl_rep8_desc
+	field tmsl_rep1_goto
+	field tmsl_rep2_goto
+	field tmsl_rep3_goto
+	field tmsl_rep4_goto
+	field tmsl_rep5_goto
+	field tmsl_rep6_goto
+	field tmsl_rep7_goto
+	field tmsl_rep8_goto
+	field tmsl_stat_flag
+end
+

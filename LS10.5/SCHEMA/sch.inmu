@@ -1,0 +1,98 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inmu,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inmu)
+|  Schema Desc  : (Inventory Movements File. )
+|----------------------------------------------------------------------
+| $Log: sch.inmu,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inmu
+
+field	inmu_co_no			type	char	2			index	dups
+field	inmu_br_no			type	char	2			index	dups
+field	inmu_wh_no			type	char	2			index	dups
+field	inmu_class			type	char	1			index	dups
+field	inmu_category		type	char	11			index	dups
+field	inmu_year			type	char	1
+field	inmu_period			type	char	2
+field	inmu_id_no			type	comp
+			inmu_co_no,
+			inmu_br_no,
+			inmu_wh_no,
+			inmu_class,
+			inmu_category,
+			inmu_year,
+			inmu_period									index	primary
+field	inmu_id_no2			type	comp
+			inmu_co_no,
+			inmu_year,
+			inmu_period									index	dups
+field	inmu_id_no3			type	comp
+			inmu_co_no,
+			inmu_br_no,
+			inmu_year,
+			inmu_period									index	dups
+field	inmu_trin_dly			type	money
+field	inmu_trin_mty			type	money
+field	inmu_trin_qty			type	float
+field	inmu_trout_dly			type	money
+field	inmu_trout_mty			type	money
+field	inmu_trout_qty			type	float
+field	inmu_pur_dly			type	money
+field	inmu_pur_mty			type	money
+field	inmu_pur_qty			type	float
+field	inmu_sal_dly			type	money
+field	inmu_sal_mty			type	money
+field	inmu_sal_qty			type	float
+field	inmu_icst_dly			type	money
+field	inmu_icst_mty			type	money
+field	inmu_crd_dly			type	money
+field	inmu_crd_mty			type	money
+field	inmu_crd_qty			type	float
+field	inmu_ccst_dly			type	money
+field	inmu_ccst_mty			type	money
+field	inmu_stat_flag			type	char 1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inmu_co_no			-	Company Number.
+	inmu_br_no			-	Branch Number.
+	inmu_wh_no			-	Warehouse Number.
+	inmu_class			-	Item class.
+	inmu_category		-	Item Category. ( ex excf )
+	inmu_year			-	Year. C(urrent) L(ast) 
+	inmu_period			-	Period 01-12 where 01 = Jan /  12 = Dec.
+	inmu_trin_dly		-	Daily transfers in $ value.
+	inmu_trin_mty		-	Monthly Transfers in $value.
+	inmu_trin_qty		-	Transters in Quantity.
+	inmu_trout_dly		-	Daily transfers out $ value.
+	inmu_trout_mty		-	Monthly transfers out $ value.
+	inmu_trout_qty		-	Transfers out quantity.
+	inmu_pur_dly		-	Daily Purchases $ value.
+	inmu_pur_mty		-	Monthly Purchases $ value.
+	inmu_pur_qty		-	Purchase Quantity.
+	inmu_sal_dly		-	Daily Invoices $ value.
+	inmu_sal_mty		-	Monthly Invoices $value.
+	inmu_sal_qty		-	Invoice Quantity.
+	inmu_icst_dly		-	Daily Invoice Cost of sale $value.
+	inmu_icst_mty		-	Monthly Invoices cost of sale $value.
+	inmu_crd_dly		-	Daily Credits $value.
+	inmu_crd_mty		-	Monthly Credits $value.
+	inmu_crd_qty		-	Credit Quantity.
+	inmu_ccst_dly		-	Daily Credits cost of sale $value.
+	inmu_ccst_mty		-	Monthly Credits cost of sale $value.
+	inmu_stat_flag		-	Spare stat flag.
+}

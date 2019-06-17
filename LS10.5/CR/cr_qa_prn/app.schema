@@ -1,0 +1,49 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/07 05:44:40 kaarlo Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/07 05:44:40  kaarlo
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_adr1
+	field sumr_adr2
+	field sumr_adr3
+	field sumr_adr4
+	field sumr_qa_status
+	field sumr_qa_expiry
+end
+
+table qamr
+	field qamr_co_no
+	field qamr_br_no
+	field qamr_qa_status
+	field qamr_qa_desc
+	field qamr_stat_flag
+end
+
+table qasd
+	field qasd_hhsu_hash
+	field qasd_line_no
+	field qasd_desc
+	field qasd_stat_flag
+end
+

@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+#	$Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/demo_license,v $
+#	$Revision: 4.2 $
+#
+$PROG_PATH/BIN/lc_demo

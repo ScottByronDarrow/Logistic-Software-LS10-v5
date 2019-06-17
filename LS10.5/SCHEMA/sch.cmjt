@@ -1,0 +1,58 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmjt,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cmjt)
+|  Schema Desc  : (Contract Management Job Type Master File )
+|----------------------------------------------------------------------
+| $Log: sch.cmjt,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmjt
+
+field	cmjt_co_no				type	char	2
+field	cmjt_br_no				type	char	2
+field	cmjt_job_type			type	char	4
+field	cmjt_hhjt_hash			type	serial				index
+field	cmjt_desc				type	char	30
+field	cmjt_wip_glacc			type	char	16
+field	cmjt_lab_glacc			type	char	16
+field	cmjt_o_h_glacc			type	char	16
+field	cmjt_sal_glacc			type	char	16
+field	cmjt_cog_glacc			type	char	16
+field	cmjt_var_glacc			type	char	16
+field	cmjt_int_glacc			type	char	16
+field	cmjt_id_no				type	composite
+			cmjt_co_no,
+			cmjt_br_no,
+			cmjt_job_type									index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmjt_co_no			-	Company Number
+	cmjt_br_no			-	Branch Number
+	cmjt_dp_no			-	Department Number
+	cmjt_job_type		-	Job Type Code
+	cmjt_hhjt_hash		-	Unique Hash
+	cmjt_desc			-	Job Type Description
+	cmjt_wip_glacc		-	WIP GL Account
+	cmjt_lab_glacc		-	Labour GL Account
+	cmjt_o_h_glacc		-	O/H GL Account
+	cmjt_sal_glacc		-	Sales GL Account
+	cmjt_cog_glacc		-	COG GL Account
+	cmjt_var_glacc		-	Variance GL Account
+	cmjt_int_glacc		-	Internal GL Account
+}

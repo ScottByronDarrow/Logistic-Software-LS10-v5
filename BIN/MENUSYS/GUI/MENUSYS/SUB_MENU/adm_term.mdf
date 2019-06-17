@@ -1,0 +1,12 @@
+System Maintenance of Terminals (SUB)
+terminals
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Maintain Terminals. <ERROR> (1,1)
+chain~warning "Maintain Terminals"~tcap_maint~
+Test Terminal. <ERROR> (1,1)
+tcap_test~
+Assign Devices to Terminals. <ERROR> (1,1)
+tmap_mnt~tty~
+((
+))

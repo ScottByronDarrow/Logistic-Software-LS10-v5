@@ -1,0 +1,93 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:16 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:16  scott
+#	RELEASE 5.0
+#	
+#	Revision 5.0  2001/06/19 08:02:54  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:23:23  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:12:39  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:40:39  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  1999/11/10 06:20:50  scott
+#	Added app.schema
+#	
+#	
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_crd_date       
+	field comr_base_curr      
+end
+
+table suhp
+	field suhp_co_no  
+	field suhp_hhsq_hash
+	field suhp_cheq_no  
+	field suhp_hhsp_hash 
+	field suhp_payee_name
+	field suhp_payee_acr 
+	field suhp_narrative 
+	field suhp_date_payment
+	field suhp_date_post  
+	field suhp_tot_amt_paid 
+	field suhp_loc_amt_paid
+	field suhp_disc_taken 
+	field suhp_loc_disc_take 
+	field suhp_bank_id
+	field suhp_pay_type
+	field suhp_stat_flag
+end
+
+table suht
+	field suht_hhsq_hash      
+	field suht_est_no         
+	field suht_est_amt_paid   
+	field suht_est_loc_amt    
+	field suht_stat_flag      
+end
+
+table crbk
+	field crbk_co_no          
+	field crbk_bank_id        
+	field crbk_bank_name      
+	field crbk_branch_name    
+	field crbk_acct_name      
+	field crbk_bank_no        
+	field crbk_bank_acct_no   
+	field crbk_curr_code      
+	field crbk_gl_bank_acct   
+	field crbk_stat_flag      
+end
+
+table wfbc
+	field wfbc_co_no          
+	field wfbc_work_file      
+	field wfbc_system         
+	field wfbc_pid_no         
+	field wfbc_date_create    
+	field wfbc_batch_tot_1    
+	field wfbc_stat_flag      
+end
+

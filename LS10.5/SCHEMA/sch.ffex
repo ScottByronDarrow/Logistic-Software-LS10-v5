@@ -1,0 +1,55 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ffex,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.ffex)
+|  Schema Desc  : (Focus forecasting exception file. )
+|----------------------------------------------------------------------
+| $Log: sch.ffex,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:40  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	ffex
+
+field	ffex_hhbr_hash			type	long	index	dups
+field	ffex_hhcc_hash			type	long
+field	ffex_year				type	integer
+field	ffex_type				type	char 1
+field	ffex_id_no				type	comp
+			ffex_hhbr_hash,
+			ffex_hhcc_hash,
+			ffex_year,
+			ffex_type			index	primary
+field	ffex_per1				type	float
+field	ffex_per2				type	float
+field	ffex_per3				type	float
+field	ffex_per4				type	float
+field	ffex_per5				type	float
+field	ffex_per6				type	float
+field	ffex_per7				type	float
+field	ffex_per8				type	float
+field	ffex_per9				type	float
+field	ffex_per10				type	float
+field	ffex_per11				type	float
+field	ffex_per12				type	float
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ffex_hhbr_hash			Link to inmr
+	ffex_hhcc_hash			and incc
+	ffex_year			Year of exception
+	ffex_type			F - Forced forecast
+					X - eXception info.
+	ffex_per[1-12]			Period values
+}

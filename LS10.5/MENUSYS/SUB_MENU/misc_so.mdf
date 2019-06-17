@@ -1,0 +1,26 @@
+Miscellaneous Maintenance - Sales. (SUB)
+misc_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Maintain Salesman Codes. <a> (1,1)
+ex_miscinp~EXSF~
+Maintain Area Codes. <a> (1,1)
+ex_miscinp~EXAF~
+Maintain Lost Sales Codes. <a> (1,1)
+so_lsmaint~
+Maintain Credit Reason Codes. <a> (1,1)
+so_cucr_inp~
+Maintain Default Discounts. <a> (1,1)
+db_exdisinp~
+Maintain Carrier / Area Control file. <a> (1,1)
+so_cf_inp~
+Maintain Buying  Group Codes <a> (1,1)
+sk_buygrp~N~
+Maintain Selling Group Codes <a> (1,1)
+sk_sellgrp~N~
+Maintain Vehicle Master. <a> (1,1)
+tr_vehimaint~
+Maintain Trucker Master. <a> (1,1)
+tr_maint~
+((
+))

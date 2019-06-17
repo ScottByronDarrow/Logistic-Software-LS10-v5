@@ -1,0 +1,18 @@
+Miscellaneous Maintenance - Finance. (SUB)
+misc_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Maintain Page Numbers. <a> (1,1)
+co_page~
+Maintain G/L Journal Page Numbers. <a> (1,1)
+gl_jnlpage~
+Maintain Bank Details. <a> (1,2)
+db_bk_inpt~
+Maintain Currency details. <a> (1,1)
+po_mnt_inp~C~
+Maintain Statement Messages. <a> (1,1)
+db_stmtinp~S~
+Maintain Remittance Messages. <a> (1,1)
+db_stmtinp~R~
+((
+))

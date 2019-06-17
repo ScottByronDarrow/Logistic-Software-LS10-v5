@@ -1,0 +1,94 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ccmr,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.ccmr)
+|  Schema Desc  : (Cost Centre/Warehouse Master File Record. )
+|----------------------------------------------------------------------
+| $Log: sch.ccmr,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file ccmr
+
+field	ccmr_co_no			type	char	2	index	dups
+field	ccmr_est_no			type	char	2	index	dups
+field	ccmr_cc_no			type	char	2	index	dups
+field	ccmr_hhcc_hash		type	serial		index
+field	ccmr_hhlo_hash		type	long
+field	ccmr_master_wh		type	char	1
+field	ccmr_only_loc		type	char	10
+field	ccmr_sman_no		type	char	2
+field	ccmr_name			type	char	40
+field	ccmr_acronym		type	char	9
+field	ccmr_whse_add1		type	char	40
+field	ccmr_whse_add2		type	char	40
+field	ccmr_whse_add3		type	char	40
+field	ccmr_whse_add4		type	char	40
+field	ccmr_type			type	char	2
+field	ccmr_sal_ok			type	char	1
+field	ccmr_pur_ok			type	char	1
+field	ccmr_issues_ok		type	char	1
+field	ccmr_receipts		type	char	1
+field	ccmr_reports_ok		type	char	1
+field	ccmr_lrp_ok			type	char	1
+field	ccmr_lpno			type	int
+field	ccmr_nx_wo_num		type	long
+field	ccmr_stat_flag		type	char	1
+field	ccmr_id_no			type	composite
+			ccmr_co_no,
+			ccmr_est_no,
+			ccmr_cc_no								index	primary
+field	ccmr_id_no2			type	comp
+			ccmr_co_no,
+			ccmr_est_no,
+			ccmr_master_wh							index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ccmr_co_no		-	Company Number.
+	ccmr_est_no		-	Branch / Establishment number.
+	ccmr_cc_no		-	Warehouse / Cost Centre number.
+	ccmr_hhcc_hash	-	Unique Warehouse/Cost centre hash.
+	ccmr_hhlo_hash	-	Link to Default Location record.
+						(ex inlo)
+	ccmr_master_wh	-	Master Warehouse/Cost centre.
+						Y(es) or N(o)
+	ccmr_sman_no	-	Default Salesman ( ex exsf )
+	ccmr_name		-	Warehouse / Cost centre name.
+	ccmr_acronym	-	Warehouse / Cost centre Acronym.
+	ccmr_whse_add1	-	Warehouse Address #1
+	ccmr_whse_add2	-	Warehouse Address #2
+	ccmr_whse_add3	-	Warehouse Address #3
+	ccmr_whse_add4	-	Warehouse Address #4
+	ccmr_type		-	Warehouse / Cost centre Type.
+						MR = Master.
+	ccmr_sal_ok		-	Sales from Warehouse / Cost centre
+						Y(es) N(o).
+	ccmr_pur_ok		-	Purchases into Warehouse / Cost Centre
+						Y(es) N(o).
+	ccmr_issues_ok	-	Issues from Warehouse / Cost Centre
+						Y(es) N(o).
+	ccmr_receipts	-	Receipts into Warehouse / Cost Centre
+						Y(es) N(o).
+	ccmr_reports_ok	-	Reports Produced from Warehouse / 
+						Cost Centre. Y(es) N(o)
+	ccmr_lrp_ok		-	LRP performed on this warehouse.
+						Y(es) N(o)
+	ccmr_lpno		-	Printer number for packing slips  
+						produced by alternate supply (so_input)
+	ccmr_nx_wo_num	-	Next works order number.
+	ccmr_stat_flag	-	Spare Status flag.
+}

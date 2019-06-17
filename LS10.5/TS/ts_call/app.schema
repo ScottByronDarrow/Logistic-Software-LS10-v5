@@ -1,0 +1,454 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:22:01 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:22:01  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/04/03 10:23:50  scott
+#	Basically a TOTAL REWRITE to work with LS10-GUI
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to add sleep delay - did not work with LS10-GUI
+#	Updated to adjust screen to look better with LS10-GUI
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_dbt_date
+	field comm_gst_rate
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+	field comm_fiscal
+end
+
+table cnch
+	field cnch_co_no
+	field cnch_cont_no
+	field cnch_hhch_hash
+	field cnch_desc
+	field cnch_contact
+	field cnch_date_wef
+	field cnch_date_rev
+	field cnch_date_ren
+	field cnch_date_exp
+	field cnch_exch_type
+end
+
+table cncl
+	field cncl_hhch_hash
+	field cncl_hhcu_hash
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_nx_order_no
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_class_type
+	field cumr_curr_code
+	field cumr_price_type
+	field cumr_bo_flag
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_phone_no
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_crd_flag
+	field cumr_area_code
+	field cumr_sman_code
+	field cumr_disc_code
+	field cumr_tax_code
+	field cumr_tax_no
+	field cumr_ho_dbt_hash
+	field cumr_inst_fg1
+	field cumr_inst_fg2
+	field cumr_inst_fg3
+	field cumr_date_lastinv
+	field cumr_mtd_sales
+	field cumr_ytd_sales
+	field cumr_ord_value
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_od_flag
+end
+
+table cudp
+	field cudp_co_no
+	field cudp_br_no
+	field cudp_dp_no
+	field cudp_dp_name
+	field cudp_dp_short
+end
+
+table tspm
+	field tspm_hhcu_hash
+	field tspm_cont_name1
+	field tspm_cont_name2
+	field tspm_phone_freq
+	field tspm_n_phone_date
+	field tspm_n_phone_time
+	field tspm_n_visit_date
+	field tspm_n_visit_time
+	field tspm_mail_flag
+	field tspm_op_code
+	field tspm_lst_op_code
+	field tspm_lphone_date
+	field tspm_lst_ord
+	field tspm_best_ph_time
+	field tspm_sales_per
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_weight
+	field inmr_outer_size
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_bo_flag
+	field inmr_bo_release
+	field inmr_sellgrp
+	field inmr_disc_pc
+	field inmr_tax_pc
+	field inmr_tax_amount
+	field inmr_gst_pc
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_qc_reqd
+	field inmr_stat_flag
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_avge_cost
+	field inei_last_cost
+	field inei_stat_flag
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_first_stocked
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_closing_stock
+	field incc_qc_qty
+	field incc_qc_time
+	field incc_qc_centre
+	field incc_stat_flag
+end
+
+table tsci
+	field tsci_hhbr_hash
+	field tsci_line_no
+	field tsci_mabr_hash
+	field tsci_comment
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_dp_no
+	field sohr_order_no
+	field sohr_cont_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_inv_no
+	field sohr_cus_ord_ref
+	field sohr_op_id
+	field sohr_time_create
+	field sohr_date_create
+	field sohr_cons_no
+	field sohr_no_cartons
+	field sohr_no_kgs
+	field sohr_ord_type
+	field sohr_pri_type
+	field sohr_frei_req
+	field sohr_dt_raised
+	field sohr_dt_required
+	field sohr_tax_code
+	field sohr_tax_no
+	field sohr_area_code
+	field sohr_sman_code
+	field sohr_sell_terms
+	field sohr_pay_term
+	field sohr_freight
+	field sohr_insurance
+	field sohr_ins_det
+	field sohr_other_cost_1
+	field sohr_other_cost_2
+	field sohr_other_cost_3
+	field sohr_deposit
+	field sohr_discount
+	field sohr_fix_exch
+	field sohr_batch_no
+	field sohr_del_name
+	field sohr_del_add1
+	field sohr_del_add2
+	field sohr_del_add3
+	field sohr_din_1
+	field sohr_din_2
+	field sohr_din_3
+	field sohr_new
+	field sohr_prt_price
+	field sohr_full_supply
+	field sohr_status
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhum_hash
+	field soln_hhsl_hash
+	field soln_cont_status
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_gsale_price
+	field soln_sale_price
+	field soln_cost_price
+	field soln_dis_pc
+	field soln_reg_pc
+	field soln_disc_a
+	field soln_disc_b
+	field soln_disc_c
+	field soln_cumulative
+	field soln_tax_pc
+	field soln_gst_pc
+	field soln_o_xrate
+	field soln_n_xrate
+	field soln_pack_size
+	field soln_sman_code
+	field soln_cus_ord_ref
+	field soln_pri_or
+	field soln_dis_or
+	field soln_item_desc
+	field soln_due_date
+	field soln_bonus_flag
+	field soln_status
+	field soln_stat_flag
+end
+
+table soic
+	field soic_pid
+	field soic_line
+	field soic_hhbr_hash
+	field soic_hhcc_hash
+	field soic_qty
+	field soic_program
+	field soic_op_id
+	field soic_time_create
+	field soic_date_create
+	field soic_status
+end
+
+table poln
+	field poln_hhbr_hash
+	field poln_hhcc_hash
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_due_date
+end
+
+table sokt
+	field sokt_co_no
+	field sokt_hhbr_hash
+	field sokt_line_no
+	field sokt_mabr_hash
+	field sokt_matl_qty
+	field sokt_due_date
+	field sokt_bonus
+end
+
+table cusa
+	field cusa_hhcu_hash
+	field cusa_year
+	field cusa_val1
+	field cusa_val2
+	field cusa_val3
+	field cusa_val4
+	field cusa_val5
+	field cusa_val6
+	field cusa_val7
+	field cusa_val8
+	field cusa_val9
+	field cusa_val10
+	field cusa_val11
+	field cusa_val12
+	field cusa_stat_flag
+end
+
+table cush
+	field cush_hhcu_hash
+	field cush_line_no
+	field cush_item_no
+	field cush_item_qty
+	field cush_item_price
+	field cush_item_disc
+	field cush_pur_date
+end
+
+table sadf
+	field sadf_year
+	field sadf_hhbr_hash
+	field sadf_hhcu_hash
+	field sadf_qty_per1
+	field sadf_qty_per2
+	field sadf_qty_per3
+	field sadf_qty_per4
+	field sadf_qty_per5
+	field sadf_qty_per6
+	field sadf_qty_per7
+	field sadf_qty_per8
+	field sadf_qty_per9
+	field sadf_qty_per10
+	field sadf_qty_per11
+	field sadf_qty_per12
+end
+
+table tshs
+	field tshs_hhcu_hash
+	field tshs_hhbr_hash
+	field tshs_date
+	field tshs_qty
+end
+
+table cucc
+	field cucc_hhcu_hash
+	field cucc_record_no
+	field cucc_con_person
+	field cucc_comment
+	field cucc_cont_date
+	field cucc_hold_flag
+	field cucc_hold_ref
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_hhop_hash
+end
+
+table tsal
+	field tsal_hhop_hash
+	field tsal_line_no
+	field tsal_hhcu_hash
+	field tsal_hhlh_hash
+end
+
+table tslh
+	field tslh_co_no
+	field tslh_let_code
+	field tslh_let_desc
+	field tslh_hhlh_hash
+	field tslh_lett_type
+end
+
+table tsls
+	field tsls_hhlh_hash
+	field tsls_hhcu_hash
+	field tsls_date_sent
+	field tsls_date_called
+	field tsls_time_called
+end
+
+table tsxd
+	field tsxd_hhcu_hash
+	field tsxd_type
+	field tsxd_line_no
+	field tsxd_desc
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+end
+
+table exsi
+	field exsi_co_no
+	field exsi_inst_code
+	field exsi_inst_text
+end
+
+table tsbc
+	field tsbc_co_no
+	field tsbc_brand
+	field tsbc_brand_desc
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+

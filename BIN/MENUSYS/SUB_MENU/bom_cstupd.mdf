@@ -1,0 +1,10 @@
+Bill of Materials Cost Update Menu. (SUB)
+bom_help
+Bill of Materials Miscellaneous Menu. <a> (1,2)
+menu MENUSYS/bom_misc.mdf
+Last Cost Update For Mfg Items Using Latest Cost. (By Item) <a> (1,1)
+sk_costupd~Last Cost Update~I~
+Last Cost Update For Mfg Items Using Latest Cost. (By Group) <a> (1,2)
+sk_costupd~Last Cost Update~G~
+((
+))

@@ -1,0 +1,81 @@
+.B2
+.L132
+.PI12
+.EAVC GROUP OF COMPANIES
+.EBUDGET ANALYSIS
+.DATE For the Month Ended
+.B2
+"--------------------------------------------------------------------------------------------------------------------------------"
+@60"CURRENT MONTH" @105"YEAR-TO-DATE"
+@15"PARTICULARS" @45"ACTUAL" @60"BUDGET" @75"VARIANCE" @90"ACTUAL" @105"BUDGET" @120"VARIANCE"
+"--------------------------------------------------------------------------------------------------------------------------------"
+"REVENUES"
+A=0
+@3#4001010000000000 @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+@3#4001020000000000TO#4001500000000000 @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+NETREVENUES=A
+A=0
+"NET REVENUES" $NETREVENUES @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+"COST OF SALES"
+A=0
+@3#5001010000000000TO#5001030000000000 @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+COS=A
+"COST OF SALES" $COS @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+GRPROFIT=NETREVENUES-COS
+A=0
+"GROSS PROFIT" $GRPROFIT @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+"OPERATING EXPENSES"
+@3"MARKETING EXPENSES"
+A=0
+@5#6001010001000000TO#6001010099000000 @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+MEXP=A
+@7"TOTAL MARKETING EXPENSES" $MEXP @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+@3"ADMINISTRATIVE EXPENSES"
+A=0
+@5#6002010001000000TO#6002010017000000 @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+ADMEXP=A
+@7"TOTAL ADMIN EXPENSES" $ADMEXP @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+OPE=MEXP+ADMEXP
+"TOTAL OPERATING EXP" $OPE @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+INCFROPE=GRPROFIT-OPE
+A=0
+"INCOME FROM OPERATIONS" $INCFROPE @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+.B2
+.EAVC GROUP OF COMPANIES
+.EBUDGET ANALYSIS
+.DATE For the Month Ended
+.B2
+"--------------------------------------------------------------------------------------------------------------------------------"
+@60"CURRENT MONTH" @105"YEAR-TO-DATE"
+@15"PARTICULARS" @45"ACTUAL" @60"BUDGET" @75"VARIANCE" @90"ACTUAL" @105"BUDGET" @120"VARIANCE"
+"--------------------------------------------------------------------------------------------------------------------------------"
+"OTHER INCOME"
+A=0
+@3#7001010000000000TO#7001990000000000 @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+OTHINC=A
+@5"TOTAL OTHER INCOME" $OTHINC @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+"OTHER EXPENSES"
+A=0
+OTHEXP=A
+@3#8001010000000000TO#8009980000000000 @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+@5"TOTAL OTHER EXPENSES" $OTHEXP @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+NI=INCFROPE+OTHINC-OTHEXP
+A=0
+"NET INCOME" $NI @44 $1 @59 $5 @74 $9 @89 $2 @104 $6 @119 $10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

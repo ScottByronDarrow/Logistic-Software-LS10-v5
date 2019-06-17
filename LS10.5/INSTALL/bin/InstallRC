@@ -1,0 +1,71 @@
+#!/bin/sh
+#
+#	$Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/bin/InstallRC,v $
+#	$Revision: 4.1 $
+#
+#	Install startup scripts in machine startup directories
+#
+#	$Log: InstallRC,v $
+#	Revision 4.1  2001/09/12 03:21:31  scott
+#	Updated from Scott machine - 12th Sep 2001
+#	
+#	Revision 4.0  2001/03/09 02:48:30  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.2  2001/01/16 10:25:50  scott
+#	Updated from testing
+#	
+#	Revision 1.1  2001/01/12 07:20:31  scott
+#	New install system
+#	
+#
+. ./InstallShellVars
+
+RCINFO=$1
+RC0NAME=K99LS10Services
+RC2NAME=S99LS10Services
+
+if [ $# != 3 ]
+then
+	echo Usage : $0 rc rc0.d rc2.d
+	exit 1
+fi
+
+echo Installing RC scripts
+
+#
+#	The rc0.d and rc2.d should be a comma-seperated list of directories
+#	into which the startup scripts should be placed
+#
+PutRC ()
+{
+	#
+	#	Expects
+	#	$1	= Directory list
+	#	$2	= Name
+
+	DIRS="`echo $1 | sed 's/,/ /g'`"
+	for d in $DIRS
+	do
+		if [ -d $d ]
+		then
+			if [ -z "$ORIG" ]
+			then
+				#
+				#	Copy over rc template to directory
+				ORIG=$d/$2
+
+				cp $RCINFO $ORIG
+				subst -f $CONFIG $ORIG
+
+			else
+				rm -f $d/$2
+				ln $ORIG $d/$2
+			fi
+		fi
+	done
+}
+
+ORIG=""
+PutRC $2 $RC0NAME	#	Handle rc0.d (shutdown directories) first
+PutRC $3 $RC2NAME	#	Handle rc2.d (startup directories)

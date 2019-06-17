@@ -1,0 +1,75 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inla,v 5.1 2001/10/05 02:07:49 cha Exp $
+|  Schema Name  : (sch.inla)
+|  Schema Desc  : (Inventory Allocation Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.inla,v $
+| Revision 5.1  2001/10/05 02:07:49  cha
+| Added field inla_hhgl_hash (links to pogl_hhgl_hash)
+| Added index inla_hhgl_id (inla_hhgl_hash, inla_inlo_hash)
+|
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:54  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inla
+
+field	inla_inlo_hash			type	long
+field	inla_pid				type	long				index	dups
+field	inla_line_no			type	int
+field	inla_hhcl_hash			type	long
+field	inla_hhsl_hash			type	long
+field	inla_cmrd_hash			type	long
+field	inla_itff_hash			type	long
+field	inla_pcms_hash			type	long
+field	inla_hhgl_hash			type	long
+field	inla_qty_alloc			type	float
+field	inla_qty_proc			type	float
+field	inla_id_no   			type	comp
+			inla_inlo_hash,
+			inla_pid,
+			inla_line_no									index	dups
+field	inla_hhcl_id   			type	comp
+			inla_hhcl_hash,
+			inla_inlo_hash									index	dups
+field	inla_hhsl_id			type	comp
+			inla_hhsl_hash,
+			inla_inlo_hash									index	dups
+field	inla_cmrd_id			type	comp
+			inla_cmrd_hash,
+			inla_inlo_hash									index	dups
+field	inla_itff_id			type	comp
+			inla_itff_hash,
+			inla_inlo_hash									index	dups
+field	inla_pcms_id			type	comp
+			inla_pcms_hash,
+			inla_inlo_hash									index	dups
+field	inla_hhgl_id			type	comp
+			inla_hhgl_hash,
+			inla_inlo_hash									index	dups
+end
+{
+
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		inla_inlo_hash			-	Link to location file.
+		inla_pid				-	Process ID.
+		inla_hhcl_hash			-	Link to coln file.		(coln_hhcl_hash)
+		inla_hhsl_hash			-	Link to soln file.		(soln_hhsl_hash)
+		inla_cmrd_hash			-	Link to contract file. 	(cmrd_cmrd_hash)
+		inla_itff_hash			-	Link to transfer file.	(itff_itff_hash)
+		inla_pcms_hash			-	Link to Manufacturing.  (psms_psms_hash)
+		inla_hhgl_hash			-	Link to Goods receipt.  (pogl_hhgl_hash)
+		inla_qty_alloc			-	Quantity allocated.
+}
+

@@ -1,0 +1,131 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:12:34 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:12:34  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:33:47  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:30  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_sale_unit
+	field inmr_std_uom
+	field inmr_dec_pt
+	field inmr_qc_reqd
+	field inmr_qc_qty
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_qc_qty
+	field incc_closing_stock
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_qc_centre
+	field incc_qc_time
+	field incc_qc_location
+	field incc_location
+end
+
+table qcmr
+	field qcmr_co_no
+	field qcmr_br_no
+	field qcmr_centre
+	field qcmr_description
+end
+
+table qchr
+	field qchr_co_no
+	field qchr_br_no
+	field qchr_wh_no
+	field qchr_qc_centre
+	field qchr_hhbr_hash
+	field qchr_hhum_hash
+	field qchr_inlo_hash
+	field qchr_hhqc_hash
+	field qchr_origin_qty
+	field qchr_receipt_dt
+	field qchr_exp_rel_dt
+	field qchr_rel_qty
+	field qchr_rej_qty
+	field qchr_serial_no
+	field qchr_hhsu_hash
+	field qchr_ref_1
+	field qchr_ref_2
+	field qchr_shipment
+	field qchr_next_seq
+	field qchr_source_type
+end
+
+table insf
+	field insf_hhwh_hash
+	field insf_status
+	field insf_serial_no
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table inlo
+	field inlo_inlo_hash      
+	field inlo_hhwh_hash      
+	field inlo_hhum_hash      
+	field inlo_location       
+	field inlo_loc_type       
+end
+
+table lomr
+	field lomr_hhcc_hash      
+	field lomr_location       
+	field lomr_loc_type       
+end

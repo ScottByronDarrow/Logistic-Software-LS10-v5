@@ -1,0 +1,110 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:12:08 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:12:08  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/11/05 01:41:18  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_inv_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+end
+
+table inpr
+	field inpr_hhgu_hash
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+	field ingp_sell_reg_pc
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_name
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+end
+
+table ingu
+	field ingu_co_no
+	field ingu_br_no
+	field ingu_wh_no
+	field ingu_curr_code
+	field ingu_file_code
+	field ingu_file_desc
+	field ingu_price_type
+	field ingu_eff_date
+	field ingu_hhgu_hash
+	field ingu_apply_to
+	field ingu_st_range
+	field ingu_end_range
+	field ingu_uplift
+	field ingu_rounding
+	field ingu_price_1
+	field ingu_price_2
+	field ingu_price_3
+	field ingu_price_4
+	field ingu_price_5
+	field ingu_sig_1
+	field ingu_sig_2
+	field ingu_sig_3
+	field ingu_sig_4
+	field ingu_sig_5
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_crd_name
+	field sumr_acronym
+end
+

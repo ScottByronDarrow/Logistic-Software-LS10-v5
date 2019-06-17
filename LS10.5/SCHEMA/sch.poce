@@ -1,0 +1,46 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.poce,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.poce)
+|  Schema Desc  : (Range offer selection lines. )
+|----------------------------------------------------------------------
+| $Log: sch.poce,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:09  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:40  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	poce	
+
+field	poce_bu_code			type	char	5
+field	poce_bu_type			type	char	3
+field	poce_csm_no				type	char	12
+field	poce_csml_no			type	char	4
+field	poce_rec_qty			type	double
+field	poce_exp_qty			type	double
+field	poce_rec_uom			type	char	2
+field	poce_rec_date			type	char	10
+field   poce_id_no              type    composite
+            poce_csm_no,
+            poce_csml_no                                        index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	poce_bu_code			-	Business unit creating consignment
+	poce_bu_type			-	Business type creating consignment
+	poce_csm_no 			-	Consignment Number
+	poce_csml_no			-	Consignment Line Number
+	poce_rec_qty			-	Actual Receipt Quantity
+	poce_exp_qty			-	Expected Receipt Quantity
+	poce_rec_uom			-	Receipt Unit of Measure
+}	

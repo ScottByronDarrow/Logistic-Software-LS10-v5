@@ -1,0 +1,51 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inwo,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.inwo)
+|  Schema Desc  : (Inventory Write-Off file. )
+|----------------------------------------------------------------------
+| $Log: sch.inwo,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:58  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:33  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inwo
+
+field	inwo_hhwo_hash			type	serial		index	primary
+field	inwo_code			type	char	2	index	dups
+field	inwo_hhcc_hash			type	long
+field	inwo_hhbr_hash			type	long
+field	inwo_narrative			type	char	20
+field	inwo_date			type	edate		index	dups
+field	inwo_hhmr_hash			type	long
+field	inwo_quantity			type	float
+field	inwo_cost_price			type	double
+field	inwo_sale_price			type	double
+field	inwo_stat_flag			type	char	1
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inwo_hhwo_hash			- Unique W/Off number
+	inwo_code			- Reason code => exwo
+	inwo_hhcc_hash			- Warehouse
+	inwo_hhbr_hash			- Item
+	inwo_narrative			- User text
+	inwo_date			- Date of W/Off
+	inwo_hhmr_hash			- Link => glmr (Dflt = exwo)
+	inwo_quantity			- Qty Written Off
+	inwo_cost_price			- Cost (Each)
+	inwo_sale_price			- Sale (Each)
+	inwo_stat_flag			- ??
+}

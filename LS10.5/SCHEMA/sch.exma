@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.exma,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.exma)
+|  Schema Desc  : (External Merchandiser Agency File. )
+|----------------------------------------------------------------------
+| $Log: sch.exma,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:32  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file exma 
+
+field	exma_co_no				type	char	2
+field	exma_code				type	char	2
+field	exma_desc				type	char	40
+field	exma_id_no				type	composite
+			exma_co_no,
+			exma_code									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	exma_co_no			-	Company Number.
+	exma_code			-	Agency Code.
+	exma_desc			-	Agency Code Description.
+}

@@ -1,0 +1,44 @@
+Customers Reports (ARPR)
+db_report
+Customers Menu. <a> (1,2)
+menu MENUSYS/db_master.mdf
+Print Summary Ageing. <a> (1,1)
+db_lageing.i~S~
+Print Detailed Ageing. <a> (1,1)
+db_lageing.i~D~
+Print Extended Ageing. <a> (1,2)
+db_lageing.i~E~
+Print Customers Control Report. <a> (1,1)
+lp_chain~warning "PRINT  DEBTORS  CONTROL  REPORT"~db_cont_prt LPNO~
+Print Overdue Invoice Report. <a> (1,1)
+db_ptermprn~
+Print Collection Report. <a> (1,1)
+db_colrpt~
+Credit Limit review Report. <a> (1,1)
+db_exp_cterm~
+Credit Information Report. <a> (1,2)
+db_cl_prt~
+Print Customers Listings. <a> (1,2)
+db_lists.i~
+Print Statements by Number. <a> (2,1)
+db_stmtprn.i~LPNO~N~
+Print Statements by Acronym. <a> (2,2)
+db_stmtprn.i~LPNO~A~
+Print Late Notices. <a> (2,2)
+db_lettpro.i~/usr/ver9/LETTERS~
+Print Customers Groups. <a> (2,1)
+db_group_prt~
+Print Head-Office Details. <a> (2,1)
+lp_chain~warning "PRINT  HEAD-OFFICE  DETAILS"~db_ho_prn LPNO~
+Customers Trans. <a> (2,1)
+db_tranpr~LPNO~
+Customers Specific Item Codes. <a> (2,2)
+db_sk_prt~
+User Specified Customers. <ERROR> (2,1)
+std_report~C~
+((
+quadrant(6,6)
+quadrant(48,8)
+box(1,3,76,15)
+line(2,5,75)
+))

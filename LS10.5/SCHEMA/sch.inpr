@@ -1,0 +1,90 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inpr,v 5.1 2002/12/01 04:46:48 scott Exp $
+|  Schema Name  : (sch.inpr)
+|  Schema Desc  : (Inventory Price File. )
+|----------------------------------------------------------------------
+| $Log: sch.inpr,v $
+| Revision 5.1  2002/12/01 04:46:48  scott
+| Updated for area in pricing file.
+|
+| Revision 5.0  2001/06/19 10:17:19  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:57  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:31  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inpr
+
+field	inpr_hhbr_hash			type	long				index 	dups
+field	inpr_price_type			type	int
+field	inpr_br_no				type	char	2
+field	inpr_wh_no				type	char	2
+field	inpr_curr_code			type	char	3
+field	inpr_area_code			type	char	2
+field	inpr_cust_type			type	char	3
+field	inpr_hhgu_hash			type	long				index 	dups
+field	inpr_price_by			type	char	1
+field	inpr_qty_brk1			type	double
+field	inpr_qty_brk2			type	double
+field	inpr_qty_brk3			type	double
+field	inpr_qty_brk4			type	double
+field	inpr_qty_brk5			type	double
+field	inpr_qty_brk6			type	double
+field	inpr_qty_brk7			type	double
+field	inpr_qty_brk8			type	double
+field	inpr_qty_brk9			type	double
+field	inpr_base				type	money
+field	inpr_price1				type	money
+field	inpr_price2				type	money
+field	inpr_price3				type	money
+field	inpr_price4				type	money
+field	inpr_price5				type	money
+field	inpr_price6				type	money
+field	inpr_price7				type	money
+field	inpr_price8				type	money
+field	inpr_price9				type	money
+field	inpr_id_no				type	composite	
+			inpr_hhgu_hash,
+			inpr_hhbr_hash,
+			inpr_price_type,
+			inpr_br_no,
+			inpr_wh_no,	
+			inpr_curr_code,
+			inpr_area_code,
+			inpr_cust_type										index	
+field	inpr_id_no2				type	composite	
+			inpr_price_type,
+			inpr_hhbr_hash										index	dups
+end
+{
+              =====================================
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+              =====================================
+	inpr_hhbr_hash			-	Link to inventory item. (hhbr)
+	inpr_price_type			- 	Price Type.
+	inpr_br_no				-	Branch number.
+	inpr_wh_no				-	Warehouse number.
+	inpr_curr_code			-	Currency code for prices.
+	inpr_area_code			-	Area Code
+	inpr_cust_type			-	Customer Type
+	inpr_price_by			-	Qty breaks by V(alue) or Q(uantity).
+	inpr_qty_brk1 - 9		-	Quantity break 1 - 9.
+	inpr_base				-	Base price.
+	inpr_price1				-	Qty_brk 1 Price.
+	inpr_price2				-	Qty_brk 2 Price.
+	inpr_price3				-	Qty_brk 3 Price.
+	inpr_price4				-	Qty_brk 4 Price.
+	inpr_price5				-	Qty_brk 5 Price.
+	inpr_price6				-	Qty_brk 6 Price.
+	inpr_price7				-	Qty_brk 7 Price.
+	inpr_price8				-	Qty_brk 8 Price.
+	inpr_price9				-	Qty_brk 9 Price.
+	inpr_hhgu_hash			-	Link to Global Update Header (ingu).
+}

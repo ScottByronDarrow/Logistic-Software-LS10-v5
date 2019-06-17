@@ -1,0 +1,30 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware                         |
+|=====================================================================|
+|  Schema Name  : (sch.glna) 
+|  Schema Desc  : (General ledger narrative)
+|                 (Links to gltr for more descriptive gl)
+|---------------------------------------------------------------------|
+| $Id: sch.glna,v 5.1 2001/07/25 01:16:29 scott Exp $
+| $Log: sch.glna,v $
+| Revision 5.1  2001/07/25 01:16:29  scott
+| Updated for LS10.5
+|
+======================================================================}
+file glna
+
+field	glna_gltr_hash			type	long
+field	glna_line_no			type	int
+field	glna_narrative			type	char	20
+field	glna_id_no				type	composite 
+			glna_gltr_hash,
+			glna_line_no										index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glna_gltr_hash		-	Link to gltr ( gltr_gltr_hash )
+	glna_line_no		-	Narrative line number.
+	glna_narrative		-	Narrative for the gl transaction.
+}

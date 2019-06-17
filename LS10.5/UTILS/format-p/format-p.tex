@@ -1,0 +1,574 @@
+%	$Id: format-p.tex,v 5.0 2001/06/19 08:22:47 robert Exp $
+%
+%	Documentation for format-p
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	$Log: format-p.tex,v $
+%	Revision 5.0  2001/06/19 08:22:47  robert
+%	LS10-5.0 New Release as of 19 JUNE 2001
+%	
+%	Revision 4.0  2001/03/09 02:43:47  scott
+%	LS10-4.0 New Release as at 10th March 2001
+%	
+%	Revision 3.1  2000/11/10 05:01:11  scott
+%	Updated to allow for local printing.
+%	
+%	Revision 3.0  2000/10/10 12:24:13  gerry
+%	Revision No. 3 Start
+%	<after Rel-10102000>
+%	
+%	Revision 2.0  2000/07/15 09:15:12  gerry
+%	Forced Revision No Start 2.0 Rel-15072000
+%	
+%	Revision 1.1.1.1  1999/07/15 00:19:15  jonc
+%	Adopted from Pinnacle V10
+%	
+%	Revision 1.9  1999/04/22 22:25:02  jonc
+%	Begin section form application interface. Still needs more work.
+%	
+%	Revision 1.8  1998/08/11 02:48:17  jonc
+%	Minor editing changes.
+%	
+%	Revision 1.7  1998/07/22 22:31:04  jonc
+%	Minor formatting change.
+%
+%	Revision 1.6  1998/07/22 22:16:30  jonc
+%	Moved pitch setting to layout-file.
+%
+%	Revision 1.5  1998/07/20 03:55:03  jonc
+%	Took `pformat' out of the process chain.
+%
+%	Revision 1.4  1998/07/09 22:51:51  jonc
+%	Added support for %reset directive.
+%
+%	Revision 1.3  1998/07/01 03:55:05  jonc
+%	Rehashed versioning style and document date.
+%
+%	Revision 1.2  1998/06/30 00:56:08  jonc
+%	Added %directive feature.
+%
+%	Revision 1.1  1998/06/29 21:20:35  jonc
+%	First cut.
+%
+
+%
+% Preamble
+\documentclass[a4paper,twoside]{article}
+
+\usepackage{alltt}
+
+\title
+{
+	Format-P \\
+	\small{Document $ $Revision: 5.0 $ $}
+}
+
+\author{Jonathan Chen}
+
+\date
+{
+	\small{$ $Date: 2001/06/19 08:22:47 $ $ GMT}
+}
+
+%
+% Actual document
+\begin{document}
+
+\maketitle							% generate a title page
+
+\section{Overview}
+
+\texttt{format-p} is my latest attempt at a generic text formatter
+that is intended to replace \texttt{pformat}. \texttt{format-p} utilises
+the same configuration files as \texttt{pformat} to determine the printer
+output queue and
+generate escape codes for pitch changes; so any changes to the system
+for \texttt{pformat} will also affect \texttt{format-p} as well.
+
+\texttt{format-p} uses a layout
+file to determine how to present the output. With information provided
+from an input stream (generally \emph{standard-input}), it sets up and
+substitutes \emph{value-registers} defined within the layout file.
+
+\texttt{format-p} divides a page up into 3 sections: The Page-Header, the Body
+and the Page-Trailer. As it prints out each Body section (per detail
+line), it checks to see whether additional page structures such as the
+Page Header and Page Trailer need to be generated.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Layout File}
+
+The layout file consists of named blocks of information enclosed
+within braces `\{' and `\}'.
+
+	\begin{quote}
+		\begin{alltt}
+		block-name
+		\{
+		\}
+		\end{alltt}
+	\end{quote}
+
+Case is significant throughout the layout file. Lines not enclosed within
+a block that begin with `\texttt{\#}' are comment lines. All text
+within a block is significant.
+
+\texttt{format-p} will store all blocks for possible use; but the ones
+listed in
+the following section are the default blocks that \texttt{format-p}
+will use when generating output.  No blocks are required, but if you want
+something to appear you have to define a known block.
+
+Value-registers may be included in all blocks except for the \emph{options}
+block.  A value-register will be substituted during run-time with the most
+current value read from the input stream. The value-register
+specification is:
+
+	\begin{quote}
+		\texttt{.valueregistername[:[-]width.precision]}
+	\end{quote}
+
+The width and precision specifiers are optional. If the width is
+negative, the result will be right justified. The precision specifier
+is only effective for fields which have a `.' in them; and is intended
+for numeric fields. If you use a
+precision specifier for a pure text field, you may not end up with
+what you want.
+
+\texttt{format-p} defines only one value-register -- \textsf{pageno}. All other
+value-registers are defined from the Input Stream.
+
+\subsection{The options block}
+
+	The \emph{options} block provides general setup information about the
+	layout of the output page. It is the only layout-block that cannot
+	contain value-registers.
+
+	Each entry in the options-block is of the form:
+
+	\begin{quote}
+		\texttt{optionkeyword = value}
+	\end{quote}
+
+	The following option keywords are interpreted:
+
+		\begin{description}
+
+			\item[pitch]
+				This directs \texttt{format-p} to use the specified pitch.
+				Currently only 10 or 12 pitch is supported, for backward
+				compatibility with \texttt{pformat}. If this is
+				undefined, no printer sequences
+				will be generated to alter the current pitch settings
+				of the printer.
+
+			\item[pagelength]
+				The length of a page.
+
+			\item[pageheader-start]
+				The line on the page of which the \emph{pageheader} block
+				will start printing on.
+
+			\item[body-start]
+				The line on the page which the \emph{body} block will
+				begin printing on.
+
+			\item[body-end]
+				The last line on the page of which the \emph{body}
+				block will print on.
+
+			\item[pagetrailer-start]
+				The line on the page of which the \emph{pagetrailer} block
+				will start printing on.
+
+		\end{description}
+
+	None of the numbers are required (if \textbf{pagelength} is zero,
+	a free form output will result); but if you stuff up the line
+	numbering, it's your own fault.
+
+\subsection{The report-header block}
+
+	The \emph{report-header} block is only printed once per run. If
+	defined, it will be the first block printed.
+
+\subsection{The report-trailer block}
+
+	The \emph{report-trailer} block is only printed once per run. If
+	defined, it will be the last block printed.
+
+\subsection{The page-header block}
+
+	The \emph{page-header} block is printed once per page. If defined,
+	it will be the first block printed on a page (bar the
+	\emph{report-header} block). If \textbf{pageheader-start} has been
+	defined, the block will begin printing on that line.
+
+\subsection{The page-trailer block}
+
+	The \emph{page-trailer} block is printed once per page. If defined,
+	it will be printed after the body section on a page.
+	If \textbf{pagetrailer-start} has been
+	defined, the block will begin printing on that line.
+
+\subsection{The page-trailer-last block}
+
+	If defined, the \emph{page-trailer-last} block will only be
+	printed on the very last page of output. If not the
+	\emph{page-trailer} block will be used instead.
+	If \textbf{pagetrailer-start} has been
+	defined, the block will begin printing on that line.
+
+\subsection{The body-header block}
+
+	If defined, the \emph{body-header} block will only be printed once
+	per run on the body of the page, prior to any \emph{body} detail
+	lines.
+
+\subsection{The body-trailer block}
+
+	If defined, the \emph{body-trailer} block will only be printed once
+	per run in the body of the page; after all \emph{body} detail
+	lines have been generated.
+
+\subsection{The body block}
+
+	The \emph{body} block is generally intended to print (repeated) detail
+	lines. The block will only print within the area defined by
+	\textbf{body-start} and \textbf{body-end} in the \emph{options}
+	block.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Input stream}
+
+\texttt{format-p} determines the output environment and run-time data by
+reading in values from standard-input. The Input Stream may be a
+file which may be handed to \texttt{format-p} with:
+
+	\begin{quote}
+		\texttt{format-p < inputfile}
+	\end{quote}
+
+Alternatively, application code may hand its output to
+\texttt{format-p} by using \texttt{popen(3)}.
+
+	\begin{quote}
+		\begin{alltt}
+
+		FILE *	fmt = popen ("format-p", "w");
+
+		fprintf (fmt, "#options\(\backslash\)n");
+		fprintf (fmt, "lpno=%d\(\backslash\)n", lpno);
+		...
+
+		fprintf (fmt, "#data\(\backslash\)n");
+		fprintf (fmt, "%s=%s\(\backslash\)n", key, value);
+		..
+		\end{alltt}
+	\end{quote}
+
+The information read is divided
+into 2 sections, \emph{options} and \emph{data}. Generally all lines
+read in both sections from are of the form:
+
+	\begin{quote}
+		\texttt{keyword=value}
+	\end{quote}
+
+All whitespace is significant, so make sure that the keyword doesn't
+contain any -- otherwise its value will never be printed.
+
+\subsection{The options section}
+
+	The options section determines the output environment for
+	\texttt{format-p}.
+	Generally, this means setting the output destination and possibly
+	the output queue.
+	\texttt{format-p} will start interpreting options when it
+	sees:
+
+		\begin{quote}
+			\texttt{\#options}
+		\end{quote}
+
+	The following keywords are recognised:
+
+		\begin{description}
+			\item[output]
+				Specifies the file to which the output is to go to.
+
+				If the first character of the string is `\texttt{|}', then
+				the text following will be treated as a filter program.
+				Any executable
+				capable of reading from standard input may be used.
+
+				If undefined, the internal formatter will be used.
+
+			\item[lpno]
+				Mandatory if \textbf{output} is undefined. This directs
+				\texttt{format-p} to use the specifed printer number.
+
+			\item[file]
+				Mandatory. This specifies the layout file to use.
+
+		\end{description}
+
+\subsection{The data section}
+
+	Aside \textsf{pageno}, \texttt{format-p} holds no value-registers
+	initially.
+	These are defined as \texttt{format-p} reads in
+	the data section from standard
+	input. \texttt{format-p} will enter into data mode when it sees:
+
+		\begin{quote}
+			\texttt{\#data}
+		\end{quote}
+
+	Any information read from then on will update
+	\texttt{format-p}'s value-registers.
+	When \texttt{format-p} sees a blank line, it will then print the
+	\emph{body} block once using the most current values of its
+	value-registers. If an undefined value-register is used within
+	the layout file, an empty string is substituted.
+
+	If during data mode \texttt{format-p} encounters a keyword that
+	begins with `\texttt{\%}', \texttt{format-p} will interpret this
+	to be a \emph{directive}. There are 2 classes of directives. The
+	directive
+
+		\begin{quote}
+			\texttt{\%reset}
+		\end{quote}
+
+	will reset \texttt{format-p}. All value-registers are cleared, 
+	\textsf{pageno} is reset to 1, and all layout-bodies reset to
+	default.
+
+	The other class of directives instructs \texttt{format-p} to change
+	the layout-block matching the
+	keyword with the layout-block specified with the value. eg:
+
+		\begin{quote}
+			\texttt{\%body=cocl-body}
+		\end{quote}
+
+	will direct \texttt{format-p} to use the layout-block
+	\emph{cocl-body} to replace the default \emph{body} layout-block.
+	To revert back to using the default \emph{body} layout-block,
+	either of the following directives may be issued:
+
+		\begin{quote}
+			\begin{alltt}
+				%body=body
+				%body=
+				%body
+			\end{alltt}
+		\end{quote}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Application Interfaces}
+
+	There are 2 application language interfaces provided to interact with
+	\texttt{format-p}: C and C++. Any others will be greatly welcome.
+
+\subsection{C Interface}
+
+	The C interface requires the following header files in your
+	application code.
+
+		\begin{quote}
+			\begin{alltt}
+			#include    <stdio.h>
+			#include    <FormatP.h>
+			\end{alltt}
+		\end{quote}
+
+	All interaction with \texttt{format-p} should begin with a call to
+	\texttt{FormatPOpen()} or \texttt{FormatPOpenLpNo()}. The former
+	will allow you to direct \texttt{format-p} output to a file or a
+	pipe; the latter will direct \texttt{format-p} output to a printer.
+	These functions will initiate a session to a concurrent
+	\texttt{format-p} process which you can submit information to.
+
+	\texttt{FormatPClose()} will close your session once
+	you're done with it.
+
+	Data submissions to a \texttt{format-p} session may be done with
+	the \texttt{FormatPSubmit()} functions. \texttt{FormatPSubmitTable()},
+	in particular, will submit a table's current column-information to
+	\texttt{format-p}. eg:
+
+		\begin{quote}
+			\begin{alltt}
+
+			FILE *  formatp = FormatPOpen ("layout", "/dev/null", NULL);
+
+			if (cc = find_hash (cumr, &cumr_rec, EQUAL, "r", hhcu_hash))
+			    file_err (cumr, cc, PNAME);
+
+			FormatPSubmitTable (formatp, cumr); /* submit column values */
+			FormatPClose (formatp);
+
+			\end{alltt}
+		\end{quote}
+
+	You may also change the default \emph{page-header},
+	\emph{page-trailer} and \emph{body} blocks with
+	\texttt{FormatPPageHeader()}, \texttt{FormatPPageTrailer()} and
+	\texttt{FormatPBody()} functions respectively. If a NULL value is
+	given as a alternative block, the default will be used.
+
+\subsection{C++ Interface}
+
+	The C++ interface requires the following header file in your
+	application code.
+
+		\begin{quote}
+			\begin{alltt}
+			#include    <FormatP.h>
+			\end{alltt}
+		\end{quote}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Example Layout File}
+
+Here's an example of the layout file with all the blocks defined.
+
+\begin{alltt}
+#   $Id: format-p.tex,v 5.0 2001/06/19 08:22:47 robert Exp $
+#
+#   Aside from the option block, all blocks may have a entries
+#   consisting of straight text and value-registers.
+#
+#   A value-register has the form:
+#
+#       .identifier[:format-spec]
+#
+#   The optional format-spec consists of [-]length.precision.
+#   The optional `-' #  denotes left-justification.
+#   eg:
+#
+#       .cumr_dbt_name
+#       .cumr_est_no:-2
+#       .cohr_no_kgs:-3.1
+#
+#   are all valid value-register specifications
+#
+#   A reserved value-register `.pageno' is defined by the layout
+#   program, and will substitute for the current page.
+#
+options
+\{
+    pitch = 10
+    pagelength = 66
+
+    pageheader-start = 5
+    body-start = 20
+    body-end = 40
+    pagetrailer-start = 50
+\}
+
+report-header
+\{
+\}
+
+report-trailer
+\{
+\}
+
+page-header
+\{
+                                   Page No: .pageno
+
+         .cumr_dl_adr1
+         .cumr_dl_adr2
+         .cumr_dl_adr3
+         .cumr_dl_adr4
+\}
+
+page-trailer
+\{
+       Continued
+\}
+
+page-trailer-last
+\{
+    Total: .eval_quote_nett_total
+\}
+
+body-header
+\{
+\}
+
+body-trailer
+\{
+\}
+
+body
+\{
+    .inmr_description:30  .coln_disc_pc:-6.2  .eval_line_nett_value:-10.2
+\}
+
+cocl-body
+\{
+    .cocl_comment
+\}
+
+\end{alltt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Input Stream Example}
+
+Here's an example of an Input Stream that \texttt{format-p}
+expects to see. This example will use the internal formatter
+to generate its output.
+
+\begin{alltt}
+#options
+lpno=1
+file=/tmp/layout
+#data
+cumr_dl_adr1=Logistic Software
+cumr_dl_adr2=Suite 2205B West Tower
+cumr_dl_adr3=PSE Centre
+cumr_dl_adr4=Ortigas Centre
+inmr_description=None
+coln_disc_pc=10
+eval_line_nett_value=200.1
+
+inmr_description=Oranges
+coln_disc_pc=0
+eval_line_nett_value=150
+
+%body=cocl-body
+cocl_comment=High quality Californian oranges.
+
+cocl_comment=Sweeter and juicier than you can imagine.
+
+%body=
+inmr_description=Pears
+coln_disc_pc=20
+eval_line_nett_value=10.50
+eval_quote_nett_total=300
+\end{alltt}
+
+The same Input Stream may be altered slightly to generate a fax, with
+only minor changes to the \emph{options} section. The \emph{data} section
+left unchanged.
+
+\begin{alltt}
+#options
+output=|sendfax -d 4159088
+file=/tmp/layout
+\end{alltt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Further extensions}
+
+\texttt{format-p} could possibly define
+the character sequences to alter pitch sizes, enable
+expanded printing, et al. This could be done by defining
+additional value-registers for use within the layout file.
+
+\end{document}

@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sjvh,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sjvh)
+|  Schema Desc  : (Service job Vehicle File. )
+|----------------------------------------------------------------------
+| $Log: sch.sjvh,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sjvh
+
+field	sjvh_co_no                   type	char	2
+field	sjvh_est_no                  type	char	2
+field	sjvh_code                    type	char	3
+field	sjvh_vehicle                 type	char	20
+field	sjvh_rate                    type	double
+field	sjvh_id_no                   type	composite
+			sjvh_co_no,
+			sjvh_est_no,
+			sjvh_code					index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

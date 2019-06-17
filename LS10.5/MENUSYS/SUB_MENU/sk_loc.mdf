@@ -1,0 +1,12 @@
+Stock Location Reports (SUB)
+sk_mast
+Stock Master Menu. <a> (1,2)
+menu MENUSYS/sk_report.mdf
+Print Stock Location Master. <a> (2,1)
+sk_locmprt~LPNO~
+Print Stock by Item Group by Location. <a> (2,2)
+chain~sk_group.i "sk_locprn" "Stock report by Item Group / Location." " "~
+Print Stock by Location master by Item. <a> (2,2)
+sk_locmprn~
+((
+))

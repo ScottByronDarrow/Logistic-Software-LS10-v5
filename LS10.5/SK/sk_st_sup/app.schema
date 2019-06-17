@@ -1,0 +1,128 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:34 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:34  scott
+#	Update - LS10.5
+#	
+#	Revision 5.0  2001/06/19 08:17:52  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:39:08  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/02/06 10:07:49  scott
+#	Updated to deal with length change in the following fields
+#	intr_ref1 from 10 to 15 characters
+#	intr_ref2 from 10 to 15 characters
+#	inaf_ref1 from 10 to 15 characters
+#	inaf_ref2 from 10 to 15 characters
+#	
+#
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_est_short       
+	field comm_cc_no         
+	field comm_cc_name       
+	field comm_cc_short       
+	field comm_gl_date        
+	field comm_inv_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_abc_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_std_uom
+	field inmr_stat_flag
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_opening_stock
+	field incc_receipts
+	field incc_pur
+	field incc_issues
+	field incc_adj
+	field incc_sales
+	field incc_stake
+	field incc_closing_stock
+	field incc_ytd_adj
+	field incc_stat_flag
+end
+
+table stts
+	field stts_hhwh_hash
+	field stts_serial_no
+	field stts_cost
+	field stts_location
+	field stts_status
+	field stts_counted
+	field stts_stat_flag
+end
+
+table intr
+	field intr_co_no
+	field intr_br_no
+	field intr_hhbr_hash
+	field intr_hhcc_hash
+	field intr_hhum_hash
+	field intr_type
+	field intr_date
+	field intr_batch_no
+	field intr_ref1
+	field intr_ref2
+	field intr_qty
+	field intr_cost_price
+	field intr_sale_price
+	field intr_stat_flag
+end
+
+table soln
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_serial_no
+end
+
+table coln
+	field coln_hhbr_hash
+	field coln_incc_hash
+	field coln_serial_no
+end
+

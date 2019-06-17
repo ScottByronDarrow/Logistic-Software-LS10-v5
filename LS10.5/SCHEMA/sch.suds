@@ -1,0 +1,91 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.suds,v 5.0 2001/06/19 10:17:32 cha Exp $
+|  Schema Name  : (sch.suds)
+|  Schema Desc  : (Supplier Discount Price File. )
+|----------------------------------------------------------------------
+| $Log: sch.suds,v $
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:49  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	suds
+
+field	suds_hhsu_hash			type 	long
+field	suds_buy_group			type	char	6
+field	suds_id_no				type	composite
+			suds_hhsu_hash,
+			suds_buy_group								index	primary
+field	suds_reg_pc				type	float
+field	suds_qty_brk1			type	float
+field	suds_qty_brk2			type	float
+field	suds_qty_brk3			type	float
+field	suds_qty_brk4			type	float
+field	suds_qty_brk5			type	float
+field	suds_qty_brk6			type	float
+field	suds_disca_pc1			type	float
+field	suds_disca_pc2			type	float
+field	suds_disca_pc3			type	float
+field	suds_disca_pc4			type	float
+field	suds_disca_pc5			type	float
+field	suds_disca_pc6			type	float
+field	suds_discb_pc1			type	float
+field	suds_discb_pc2			type	float
+field	suds_discb_pc3			type	float
+field	suds_discb_pc4			type	float
+field	suds_discb_pc5			type	float
+field	suds_discb_pc6			type	float
+field	suds_discc_pc1			type	float
+field	suds_discc_pc2			type	float
+field	suds_discc_pc3			type	float
+field	suds_discc_pc4			type	float
+field	suds_discc_pc5			type	float
+field	suds_discc_pc6			type	float
+field	suds_cumulative			type	char	1
+field	suds_anticipated		type 	float
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	suds_hhsu_hash		- 	Link to sumr_hhsu_hash
+	suds_buy_group		-	Buying group from ingp
+	suds_reg_pc			-	Regulatory percentage.
+	suds_qty_brk1		-	Quantity required for discount % 1.
+	suds_qty_brk2		-	Quantity required for discount % 2.
+	suds_qty_brk3		-	Quantity required for discount % 3.
+	suds_qty_brk4		-	Quantity required for discount % 4.
+	suds_qty_brk5		-	Quantity required for discount % 5.
+	suds_qty_brk6		-	Quantity required for discount % 6.
+	suds_disca_pc1		-	Discount A, percentage 1.
+	suds_disca_pc2		-	Discount A, percentage 2.
+	suds_disca_pc3		-	Discount A, percentage 3.
+	suds_disca_pc4		-	Discount A, percentage 4.
+	suds_disca_pc5		-	Discount A, percentage 5.
+	suds_disca_pc6		-	Discount A, percentage 6.
+	suds_discb_pc1		-	Discount B, percentage 1.
+	suds_discb_pc2		-	Discount B, percentage 2.
+	suds_discb_pc3		-	Discount B, percentage 3.
+	suds_discb_pc4		-	Discount B, percentage 4.
+	suds_discb_pc5		-	Discount B, percentage 5.
+	suds_discb_pc6		-	Discount B, percentage 6.
+	suds_discc_pc1		-	Discount C, percentage 1.
+	suds_discc_pc2		-	Discount C, percentage 2.
+	suds_discc_pc3		-	Discount C, percentage 3.
+	suds_discc_pc4		-	Discount C, percentage 4.
+	suds_discc_pc5		-	Discount C, percentage 5.
+	suds_discc_pc6		-	Discount C, percentage 6.
+	suds_cumulative		-	Apply discounts cumulatively? (Y/N).
+	suds_anticipated	- 	Anticipated discount. (To be used for 
+							calculation of standard price).
+}
+

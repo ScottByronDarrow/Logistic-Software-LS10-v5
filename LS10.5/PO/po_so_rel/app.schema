@@ -1,0 +1,255 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:12:14 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:12:14  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:33:26  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.2  2001/02/15 09:40:57  scott
+#	Updated to add special running mode using PID for XML execution
+#	
+#	Revision 3.1  2000/11/20 07:24:27  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table sohr
+	field sohr_hhso_hash
+	field sohr_order_no
+	field sohr_hhcu_hash
+	field sohr_new
+	field sohr_status
+	field sohr_stat_flag
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhum_hash
+	field soln_hhsl_hash
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_due_date
+	field soln_status
+	field soln_stat_flag
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_inv_no
+	field cohr_batch_no
+	field cohr_hhcu_hash
+	field cohr_drop_ship
+	field cohr_hhco_hash
+	field cohr_stat_flag
+	field cohr_inv_print
+end
+
+table coln
+	field coln_hhcl_hash
+	field coln_hhco_hash
+	field coln_hhbr_hash
+	field coln_incc_hash
+	field coln_hhum_hash
+	field coln_hhsl_hash
+	field coln_q_order
+	field coln_cost_price
+	field coln_gross
+	field coln_amt_disc
+	field coln_erate_var
+	field coln_stat_flag
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_type
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_drop_ship
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_hhpl_hash
+end
+
+table inex
+	field inex_hhbr_hash
+	field inex_line_no
+	field inex_desc
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_supercession
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_costing_flag
+	field inmr_serial_item
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_ex_code
+	field inmr_on_hand
+	field inmr_std_uom
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table intr
+	field intr_co_no
+	field intr_br_no
+	field intr_hhbr_hash
+	field intr_hhcc_hash
+	field intr_hhum_hash
+	field intr_type
+	field intr_date
+	field intr_batch_no
+	field intr_ref1
+	field intr_ref2
+	field intr_qty
+	field intr_cost_price
+	field intr_sale_price
+	field intr_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_acronym
+end
+
+table pogh
+	field pogh_co_no
+	field pogh_br_no
+	field pogh_hhsu_hash
+	field pogh_hhsh_hash
+	field pogh_gr_no
+	field pogh_hhgr_hash
+	field pogh_date_raised
+	field pogh_exch_rate
+	field pogh_pur_status
+	field pogh_drop_ship
+	field pogh_pid
+end
+
+table pogl
+	field pogl_hhgr_hash
+	field pogl_line_no
+	field pogl_hhgl_hash
+	field pogl_hhbr_hash
+	field pogl_hhum_hash
+	field pogl_hhcc_hash
+	field pogl_hhpl_hash
+	field pogl_hhlc_hash
+	field pogl_po_number
+	field pogl_serial_no
+	field pogl_location
+	field pogl_lot_no
+	field pogl_slot_no
+	field pogl_exp_date
+	field pogl_qty_ord
+	field pogl_qty_rec
+	field pogl_qty_left
+	field pogl_land_cst
+	field pogl_act_cst
+	field pogl_fob_fgn_cst
+	field pogl_fob_nor_cst
+	field pogl_frt_ins_cst
+	field pogl_lcost_load
+	field pogl_duty
+	field pogl_duty_pc
+	field pogl_licence
+	field pogl_cat_code
+	field pogl_item_desc
+	field pogl_rec_date
+	field pogl_auto_cost
+	field pogl_pur_status
+	field pogl_gl_status
+	field pogl_stat_flag
+end
+
+table poso
+	field poso_hhpl_hash
+	field poso_hhsl_hash
+	field poso_itff_hash
+	field poso_hhcl_hash
+	field poso_qty_ord
+	field poso_qty
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_stat_flag
+end
+
+table sumr
+	field sumr_crd_no
+	field sumr_hhsu_hash
+end
+
+table ithr
+	field ithr_co_no
+	field ithr_type
+	field ithr_del_no
+	field ithr_hhit_hash
+	field ithr_printed
+	field ithr_stat_flag
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+	field itln_i_hhcc_hash
+	field itln_r_hhcc_hash
+	field itln_qty_order
+	field itln_qty_border
+	field itln_qty_rec
+	field itln_cost
+	field itln_stock
+	field itln_status
+	field itln_stat_flag
+end
+

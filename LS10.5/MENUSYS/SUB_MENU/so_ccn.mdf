@@ -1,0 +1,16 @@
+Customer Collection Note Menu (SUB)
+ccn_help
+Invoice Master Menu <a> (1,1)
+menu MENUSYS/in_master.mdf
+Collection Note Entry. <a> (1,1)
+so_ccn_inp~N~7~so_ccn_inp.s~
+Display Collection Notes. <a> (1,1)
+so_ccn_dsp~N~7~so_ccn_inp.s~
+Print Customer Collection Notes. <a> (1,1)
+lp_chain~warning " PRINT   CCN's"~so_invprnt.i LPNO N N~
+Reprint Customer Collection Notes. <a> (1,1)
+so_invprnt.i~LPNO~Y~N~
+Confirm Delivery of Customer Collection Notes. <a> (1,1)
+so_ccn_conf~N~7~so_ccn_inp.s~
+((
+))

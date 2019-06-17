@@ -1,0 +1,94 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:18:13 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:18:13  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_dbt_date
+	field comm_crd_date
+	field comm_inv_date
+	field comm_payroll_date
+	field comm_gl_date
+	field comm_closed_period
+	field comm_fiscal
+	field comm_gst_rate
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+	field comm_pay_terms
+	field comm_env_name
+	field comm_stat_flag
+end
+
+table comr
+	field comr_co_no
+	field comr_co_name
+	field comr_co_short_name
+	field comr_master_br
+	field comr_fiscal
+	field comr_dbt_date
+	field comr_crd_date
+	field comr_inv_date
+	field comr_payroll_date
+	field comr_gl_date
+	field comr_closed_period
+	field comr_gst_rate
+	field comr_int_rate
+	field comr_price1_desc
+	field comr_price2_desc
+	field comr_price3_desc
+	field comr_price4_desc
+	field comr_price5_desc
+	field comr_price6_desc
+	field comr_price7_desc
+	field comr_price8_desc
+	field comr_price9_desc
+	field comr_pay_terms
+	field comr_env_name
+	field comr_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+	field esmr_dbt_date
+	field esmr_crd_date
+	field esmr_inv_date
+	field esmr_pay_date
+	field esmr_gl_date
+	field esmr_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_stat_flag
+end
+

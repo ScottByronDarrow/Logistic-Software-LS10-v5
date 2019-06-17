@@ -1,0 +1,20 @@
+Customer Pricing Maintenance. (SUB)
+sk_cus_prce
+Stock New Pricing Menu. <a> (1,2)
+menu MENUSYS/sk_price.mdf
+Customer Pricing Maintenance By Customer Type /Area /Item <a> (1,1)
+sk_sell_pr~L~LPNO~
+Customer Pricing Mass Quantity Break Setup <a> (1,1)
+sk_cusqtyb~
+Customer Pricing Mass Quantity Break Setup Printout <a> (1,1)
+sk_cuqbrep~xxx~
+Customer Pricing Mass Quantity Break Update <a> (1,1)
+sk_cqtyupd~
+Customer Global Price File Creation <a> (1,1)
+sk_globmnt~
+Customer Global Price Update & Print <a> (1,1)
+lp_chain~sk_globupd LPNO~
+Customer Future/Global Pricing Adjustments <a> (1,1)
+sk_sell_pr~F~LPNO~
+((
+))

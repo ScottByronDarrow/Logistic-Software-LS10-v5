@@ -1,0 +1,48 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cbbs,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cbbs)
+|  Schema Desc  : (Bank Statement File. 				 )
+|----------------------------------------------------------------------
+| $Log: sch.cbbs,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cbbs
+
+field	cbbs_co_no			type	char	2
+field	cbbs_bank_id		type	char	5
+field	cbbs_period			type	char	7			
+field	cbbs_end_period		type	edate	
+field	cbbs_st_bal			type	money		
+field	cbbs_end_bal		type	money		
+field	cbbs_stat			type	char	1		
+field	cbbs_id_no			type	comp
+			cbbs_co_no,
+			cbbs_bank_id,
+			cbbs_end_period							index
+	
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cbbs_co_no			-	Company Number.
+	cbbs_bank_id		-	Bank Code.
+	cbbs_period			-	Start Period.	
+	cbbs_end_period		-	End Period Date.	
+	cbbs_st_bal			-	Start Balance.
+	cbbs_end_bal		-	End Balance.
+	cbbs_stat			-	Status.
+
+}

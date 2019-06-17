@@ -1,0 +1,58 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:18:04 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:18:04  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/04/28 04:10:36  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	Updated for changes to insp schema to change money fields to double to allow
+#	for four digit price.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+	field ingp_sell_reg_pc
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+
+table insp
+	field insp_hhsu_hash
+	field insp_hhbr_hash
+	field insp_qty_brk1
+	field insp_qty_brk2
+	field insp_qty_brk3
+	field insp_qty_brk4
+	field insp_qty_brk5
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_hhbr_hash
+	field inmr_buygrp
+end
+

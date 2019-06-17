@@ -1,0 +1,70 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/09/19 00:38:24 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/09/19 00:38:24  scott
+#	General cleanup while looking at code.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_crd_date
+end
+
+table famr
+	field famr_co_no
+	field famr_ass_group
+	field famr_ass_no
+	field famr_famr_hash
+	field famr_ass_desc1
+	field famr_ass_desc2
+	field famr_ass_desc3
+	field famr_ass_desc4
+	field famr_pur_date
+	field famr_ass_life
+	field famr_cost_price
+	field famr_disp_date
+	field famr_disp_price
+	field famr_dep_rule
+	field famr_tax_open_val
+	field famr_tax_dtype
+	field famr_tax_pa_flag
+	field famr_tax_d_pc
+	field famr_tax_d_amt
+	field famr_int_open_val
+	field famr_int_dtype
+	field famr_int_pa_flag
+	field famr_int_d_pc
+	field famr_int_d_amt
+	field famr_stat_flag
+end
+
+table fagl
+	field fagl_famr_hash
+	field fagl_posted
+	field fagl_tran_date
+	field fagl_dep_rule
+	field fagl_int_amt
+	field fagl_tax_amt
+	field fagl_stat_flag
+end
+
+table fatr
+	field fatr_co_no
+	field fatr_group
+	field fatr_group_desc
+	field fatr_stat_flag
+end
+

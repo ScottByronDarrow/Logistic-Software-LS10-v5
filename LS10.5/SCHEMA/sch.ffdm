@@ -1,0 +1,56 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ffdm,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.ffdm)
+|  Schema Desc  : (Daily Demand History File)
+|----------------------------------------------------------------------
+| $Log: sch.ffdm,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:40  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file ffdm 
+
+field	ffdm_hhbr_hash		type	long
+field	ffdm_hhcc_hash		type	long	index dups
+field	ffdm_date			type	edate
+field	ffdm_type			type	char	1
+field	ffdm_qty			type	float
+field	ffdm_id_no			type	composite
+			ffdm_hhbr_hash,
+			ffdm_type,
+			ffdm_date									index	dups
+field	ffdm_id_no2			type	composite
+			ffdm_hhbr_hash,
+			ffdm_hhcc_hash,
+			ffdm_type,
+			ffdm_date									index	primary
+field	ffdm_id_no3			type	composite
+			ffdm_hhbr_hash,
+			ffdm_hhcc_hash,
+			ffdm_date									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ffdm_hhbr_hash	-	Link to inmr_hhbr_hash (Inventory master file)
+	ffdm_hhcc_hash	-	Link to ccmr_hhcc_hash (Cost Center/Warehouse Master)
+							ffdm_hhbr_hash + ffdm_hhcc_hash = incc_hhwh_hash
+	ffdm_date		-	Demand date
+	ffdm_type		-	1 = Sales
+						2 = Future known demand
+						3 = Exceptions
+						4 = Transfers issued 
+						5 = Lost Sales
+	ffdm_qty		-	Total quantity for date/hhwh/type combination
+						Can be negative 
+}

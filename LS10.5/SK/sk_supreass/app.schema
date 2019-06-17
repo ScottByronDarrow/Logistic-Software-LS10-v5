@@ -1,0 +1,59 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:12:31 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:12:31  scott
+#	CVS administration
+#	
+#	Revision 1.1  2002/02/26 05:00:01  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+	field ingp_sell_reg_pc
+end
+
+table inrb
+	field inrb_link_hash
+	field inrb_reb_flag
+	field inrb_reb_code
+	field inrb_cycle
+	field inrb_description
+	field inrb_basis
+	field inrb_reb_type
+	field inrb_start_date
+	field inrb_end_date
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+
+table sura
+	field sura_hhsu_hash
+	field sura_buygrp
+	field sura_rebate
+end
+

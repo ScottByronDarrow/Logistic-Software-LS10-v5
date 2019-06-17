@@ -1,0 +1,33 @@
+*|so_cc_disp|1|<Credit Control Details.>|Y|Display Credit Control Screen.|
+*|so_cc_disp|2|<Master File Details.>|Y|Display Customers Master File.|
+*|so_cc_disp|3|<Transactions.>|Y|Display Customer Invoice Ledger.|
+*|so_cc_disp|4|<Invoice Trans.>|Y|Display Customers Invoices.|
+*|so_cc_disp|5|<Groups.>|Y|Display Customer Grouping.|
+*|so_cc_disp|6|<Cheques.>|Y|Display Customers Full Ledger (Cheques).|
+*|so_cc_disp|7|<Cheque Details.>|Y|Display Cheque Exchange rate details.|
+*|so_cc_disp|8|<Cheque History.>|Y|Cheque History.|
+*|so_cc_disp|9|<Invoice D-D.>|Y|Display Direct Delivery Invoices.|
+*|so_cc_disp|10|<B/Orders.>|Y|Display Customer Backorders.|
+*|so_cc_disp|11|<Orders.>|Y|Display Customer Orders.|
+*|so_cc_disp|12|<D-D Orders.>|Y|Display Direct Delivery Orders.|
+*|so_cc_disp|13|<CCN's>|Y|Customer Collection Notes.|
+*|so_cc_disp|14|<Note Pad.>|Y|Display Customer Note Pad.|
+*|so_cc_disp|15|<Add to Note Pad.>|Y|Add/Maintain Customer Note Pad.|
+*|so_cc_disp|16|<Delivery Address (s).>|Y|Delivery Addresses.|
+*|so_cc_disp|17|<Specific Customer Pricing.>|Y|Display Customers Specific Prices. or|
+*|so_cc_disp|18|<Last Customer Pricing.>|Y|Display Last Customers Prices. or|
+*|so_cc_disp|19|<Graph-This/Last year>|Y|Graphical Display of This years versus last years sales value.|
+*|so_cc_disp|20|<Graph-Payments/Invoice.>|Y|Graphical Display of Payments/Invoice.|
+*|so_cc_disp|21|<Sales History>|Y|Display Sales History.|
+*|so_cc_disp|22|<Sales Analysis>|Y|Display Sales Analysis.|
+*|so_cc_disp|23|<Market Info.>|Y|Display Market Information.|
+*|so_cc_disp|24|<Merchandiser Info.>|Y|Display Merchandiser Information.|
+*|so_cc_disp|25|<Rep Calls.>|Y|Display Rep Call information.|
+*|so_cc_disp|26|<Telesales Info>|Y|Telesales Contact Information|
+*|so_cc_disp|27|<Telesales Complaints>|Y|Maintain Telesales Complaints|
+*|so_cc_disp|28|<Telesales Notes>|Y|Maintain Telesales Notes|
+*|so_cc_disp|29|<Telesales Last Call Notes>|Y|Maintain Telesales Last Call Notes|
+*|so_cc_disp|30|<Telesales Next Call Notes>|Y|Maintain Telesales Next Call Notes|
+*|so_cc_disp|31|<Total Screen.>|Y|Display Customer totals.|
+*|so_cc_disp|32|<Switch Local/Foreign values.>|Y|Switch between display in local or foreign currency|
+*|so_cc_disp|33|<Switch Inv/Due Date Ageing>|Y|Switch between Invoice/Due Date Ageing.|

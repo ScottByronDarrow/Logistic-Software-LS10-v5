@@ -1,0 +1,14 @@
+Supplier Rebates Menu. (SUB)
+sk_cus_rebate
+Stock Pricing Menu. <a> (1,1)
+menu MENUSYS/sk_price.mdf
+Supplier Rebate Detail Maintenance <a> (1,1)
+sk_sreb_mnt~ <a>
+Supplier Buying Group Assignment <a> (1,1)
+sk_supreass~ <a>
+Supplier Rebate Claim Report <a> (1,1)
+sk_sre_claim~Supplier Claim Report~
+Supplier Rebate Claim Reprint <a> (1,1)
+sk_sclaimrprt~ <a>
+((
+))

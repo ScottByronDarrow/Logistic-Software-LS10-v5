@@ -1,0 +1,22 @@
+#
+#	Configuration file for library Makefile
+#
+SHELL			=	/bin/sh
+
+################################################################################
+#
+#	General config
+#
+LIBMAIN			=	libbase++.a
+
+################################################################################
+#	INFORMIX versions
+#
+INFORMIXVN		=	7
+INFORMIXDIR		=	/usr/informix${INFORMIXVN}
+INFORMIXDIR		=	/usr/informix7
+
+################################################################################
+#
+#	Machine dependancies
+include	../platforms/${MACH_TYPE}

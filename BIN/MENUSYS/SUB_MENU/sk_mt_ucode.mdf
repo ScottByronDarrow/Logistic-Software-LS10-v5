@@ -1,0 +1,16 @@
+Miscellaneous User Defined Code Maintenance. (SUB)
+sk_misc_code
+Stock Maintenance menu. <a> (1,1)
+menu MENUSYS/sk_maint.mdf
+Maintain User Specific Types. <a> (1,1)
+sk_ius_maint~T~
+Maintain User Specific Codes. <a> (1,1)
+sk_ius_maint~C~
+Allocate Categories / Items to User Specific Codes. <a> (1,2)
+sk_ius_maint~I~
+Maintain Item Specific Codes. <a> (1,1)
+sk_inmr_usr~C~
+Input Data for Item/User specific Codes. <a> (1,1)
+sk_inmr_usr~I~
+((
+))

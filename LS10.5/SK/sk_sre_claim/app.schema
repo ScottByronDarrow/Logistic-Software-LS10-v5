@@ -1,0 +1,97 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:17:44 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:17:44  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:38:59  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:38  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table inrb
+	field inrb_reb_flag
+	field inrb_link_hash
+	field inrb_reb_code
+	field inrb_cycle
+	field inrb_description
+	field inrb_basis
+	field inrb_reb_type
+	field inrb_start_date
+	field inrb_end_date
+	field inrb_reb_qty1
+	field inrb_reb_qty2
+	field inrb_reb_qty3
+	field inrb_reb_qty4
+	field inrb_reb_qty5
+	field inrb_reb_qty6
+	field inrb_reb_val1
+	field inrb_reb_val2
+	field inrb_reb_val3
+	field inrb_reb_val4
+	field inrb_reb_val5
+	field inrb_reb_val6
+	field inrb_ant_reb_pc
+	field inrb_la_cycle_rep
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_ex1_factor
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+	field inmr_buygrp
+	field inmr_weight
+end
+
+table suph
+	field suph_br_no
+	field suph_hhbr_hash
+	field suph_hhcc_hash
+	field suph_hhsu_hash
+	field suph_rec_date
+	field suph_rec_qty
+	field suph_net_cost
+	field suph_land_cost
+	field suph_grn_no
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+
+table sura
+	field sura_hhsu_hash
+	field sura_buygrp
+	field sura_rebate
+end
+

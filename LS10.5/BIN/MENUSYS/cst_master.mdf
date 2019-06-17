@@ -1,0 +1,27 @@
+Costing and Lead Time Menu. (CSTMR)
+cst_help
+Manufacturing Menu <a> (1,2)
+menu MENUSYS/main_manf.mdf
+STD Cost Update For Raw Materials. (By Item) <a> (1,1)
+sk_stdcost~Standard Cost Update~I~
+STD Cost Update For Raw Materials. (By Group) <a> (1,1)
+sk_stdcost~Standard Cost Update~G~
+Last Cost Update For Mfg Items Using Latest Cost. (By Item) <a> (1,1)
+sk_costupd~Last Cost Update~I~
+Last Cost Update For Mfg Items Using Latest Cost. (By Group) <a> (1,1)
+sk_costupd~Last Cost Update~G~
+Standard Cost Rollup Simulation. <a> (1,1)
+sk_rollsim~
+Standard Cost Rollup Calculation Update. <a> (1,1)
+sk_rollup~
+Standard Cost Rollup Print. <a> (1,1)
+sk_rollprt~
+Accumulative Lead Time Calculation Update. <a> (1,1)
+sk_acc_lt~
+Accumulative Lead Time Simulation Print/Display. <a> (1,1)
+sk_acc_prt~
+((
+quadrant(11,7)
+line(6,6,67)
+box(5,4,68,13)
+))

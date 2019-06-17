@@ -1,0 +1,32 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/07 10:05:38 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/07 10:05:38  scott
+#	Updated to ensure version numbers on new programs are correct.
+#	
+#	Revision 1.1  2001/10/15 07:12:15  cha
+#	New program for display and printing of Audit files.
+#	
+#
+#
+#
+
+
+table comm
+    field comm_term
+    field comm_co_no
+    field comm_co_name
+    field comm_est_no
+    field comm_est_name
+    field comm_cc_no
+    field comm_cc_name
+end
+
+table ccmr
+    field ccmr_co_no
+    field ccmr_est_no
+    field ccmr_cc_no
+    field ccmr_hhcc_hash
+end

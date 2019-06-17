@@ -1,0 +1,126 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.esmr,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.esmr)
+|  Schema Desc  : (Establishment/Branch Master File Record. )
+|----------------------------------------------------------------------
+| $Log: sch.esmr,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:31  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file esmr 
+
+field	esmr_co_no				type	char	2	index dups
+field	esmr_est_no				type	char	2	index dups
+field	esmr_est_name			type	char	40
+field	esmr_short_name			type	char	15
+field	esmr_adr1				type	char	40
+field	esmr_adr2				type	char	40
+field	esmr_adr3				type	char	40
+field	esmr_area_code			type	char	2
+field	esmr_dbt_date			type	edate
+field	esmr_crd_date			type	edate
+field	esmr_inv_date			type	edate
+field	esmr_pay_date			type	edate
+field	esmr_gl_date			type	edate
+field	esmr_stmt_date			type	edate
+field	esmr_date_stmt_prn		type	edate
+field	esmr_status_flags		type	char	5
+field	esmr_dflt_bank			type	char	5
+field	esmr_chg_pref			type	char	2
+field	esmr_csh_pref			type	char	2
+field	esmr_crd_pref			type	char	2
+field	esmr_man_pref			type	char	2
+field	esmr_nx_sav_inv			type	long
+field	esmr_nx_csh_inv			type	long
+field	esmr_nx_csh_crd			type	long
+field	esmr_nx_inv_no			type	long 
+field	esmr_nx_man_no			type	long 
+field	esmr_nx_request_no		type	long
+field	esmr_nx_slip_no			type	long
+field	esmr_nx_crd_nte_no		type	long
+field	esmr_nx_ccn_no			type	long
+field	esmr_sales_acc			type	char	6
+field	esmr_nx_pur_ord_no		type	long
+field	esmr_nx_pur_fgn			type	long
+field	esmr_nx_pur_crd_no		type	long
+field	esmr_nx_gr_no			type	long
+field	esmr_nx_pack_no			type	long
+field	esmr_nx_del_dck_no		type	long      
+field	esmr_nx_order_no		type	long
+field	esmr_nx_requis_no		type	long
+field	esmr_nx_cheq_no			type	long
+field	esmr_ls_cheq_no			type	long
+field	esmr_nx_job_no			type	long
+field	esmr_nx_dd_order		type	long
+field	esmr_nx_csh_trn_no		type	long
+field   esmr_nx_voucher_no		type	long 
+field	esmr_online				type	integer
+field	esmr_stat_flag			type	char	1
+field	esmr_id_no				type	comp
+		esmr_co_no,
+		esmr_est_no 								index primary 
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	esmr_co_no			-	Company number.
+	esmr_est_no			-	Branch / Establishment number.
+	esmr_est_name		-	Branch / Establishment Name.
+	esmr_short_name		-	Branch / Establishment Short Name.
+	esmr_adr1			-	Branch / Establishment Address Part 1.
+	esmr_adr2			-	Branch / Establishment Address Part 2.
+	esmr_adr3			-	Branch / Establishment Address Part 3.
+	esmr_area_code		-	Defualt Area Code ( ex exaf ).
+	esmr_dbt_date		-	Current Debtors module date at branch.
+	esmr_crd_date		-	Current Creditors module date at branch.
+	esmr_inv_date		-	Current Inventory module date at branch.
+	esmr_pay_date		-	Current Payroll module date at branch.
+	esmr_gl_date		-	Current G/Ledger module date at branch.
+	esmr_stmt_date		-	Current Last Statement date at branch.
+	esmr_date_stmt_prn	-	Last date statement printed (if 00/00/00
+						-	then stmts not printed since month end).
+	esmr_status_flags	-	Branch status flags. ( Not Used )
+	esmr_dflt_bank		-	Default bank for multi-currency.   
+	esmr_chg_pref		-	Charge invoice Prefix for Online System.
+	esmr_csh_pref		-	Cash invoice Prefix for Online System.
+	esmr_nx_sav_inv		-	Next saved invoice number.
+							On-line system only.
+	esmr_nx_csh_inv		-	Next saved cash invoice number.
+							On-line system only.
+	esmr_nx_csh_crd		-	Next saved cash credit number.
+							On-line system only.
+	esmr_nx_inv_no		-	Next invoice number.
+	esmr_nx_request_no	-	Next Request number.
+	esmr_nx_slip_no		-	Next slip number.
+	esmr_nx_crd_nte_no	-	Next credit note number.
+	esmr_nx_ccn_no		-	Next Customer Colection note number.
+	esmr_sales_acc		-	Branch cash sales account.
+	esmr_nx_pur_ord_no	-	Next Purchase order number.
+	esmr_nx_pur_crd_no	-	Next Purchase Credit number.
+	esmr_nx_gr_no		-	Next Goods Receipt number.
+	esmr_nx_pack_no		-	Next Packing Slip number.
+	esmr_nx_del_dck_no	-	Next Delivery Docket number.
+	esmr_nx_order_no	-	Next Order number.
+	esmr_nx_cheq_no		-	Next Cheque number.
+	esmr_ls_cheq_no		-	Last Cheque number.
+	esmr_nx_job_no		-	Next Job number.
+	esmr_nx_dd_order	-	Next Direct Delivery order number.
+	esmr_nx_csh_tran_no	-	Next Cash Transaction Number.	
+	esmr_nx_voucher_no  -	Next Voucher.
+	esmr_online			-	Branch On-line.
+							1 = Yes.
+							0 = No.
+	esmr_stat_flag		-	Spare Status flag.
+}

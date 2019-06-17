@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.qamr,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.qamr)
+|  Schema Desc  : (Quality Assurance Master file. )
+|----------------------------------------------------------------------
+| $Log: sch.qamr,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:17  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	qamr
+
+field	qamr_co_no				type	char	2 
+field	qamr_br_no				type	char	2 
+field	qamr_qa_status			type	char	1 
+field	qamr_qa_desc			type	char	60 
+field	qamr_stat_flag			type	char	1 
+field	qamr_id_no				type	comp 
+			qamr_co_no, 
+			qamr_br_no,
+			qamr_qa_status		 							index
+end
+
+{
+
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		qamr_co_no			- Company number.
+		qamr_br_no			- Branch number.
+		qamr_qa_status		- QA status code.
+		qamr_qa_desc		- QA Description.
+		qamr_stat_flag		- Spare status flag.
+}

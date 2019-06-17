@@ -1,0 +1,296 @@
+#=====================================================================
+#|  Copyright (C) 1999 - 2000 LogisticSoftware                         
+#|====================================================================
+#| $Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/info/csh.rc,v $
+#| $Id: csh.rc,v 5.0 2002/05/08 01:44:56 scott Exp $
+#---------------------------------------------------------------------
+#| $Log: csh.rc,v $
+#| Revision 5.0  2002/05/08 01:44:56  scott
+#| CVS administration
+#|
+#| Revision 4.2  2001/09/12 03:21:32  scott
+#| Updated from Scott machine - 12th Sep 2001
+#|
+#| Revision 4.1  2001/08/07 00:08:30  scott
+#| RELEASE 5.0
+#|
+#| Revision 4.0  2001/03/09 02:49:26  scott
+#| LS10-4.0 New Release as at 10th March 2001
+#|
+#| Revision 1.3  2001/01/24 06:59:26  scott
+#| Updated as variable CSHRC should have been defined as info/csh.rc instead of
+#| info/tcshrc
+#|
+#| Revision 1.2  2001/01/18 02:38:42  scott
+#| Updated to add required code for case if ORACLE not defined.
+#|
+#| Revision 1.1  2001/01/17 07:45:21  scott
+#| Added to install script system
+#|
+#---------------------------------------------------------------------
+
+#---------------------------------------------------------------------
+# Command set - (read and write variables)
+#---------------------------------------------------------------------
+set	history=500
+
+#---------------------------------------------------------------------
+# All the following relates to options with the tcsh.
+#---------------------------------------------------------------------
+set autoexpand autocorrect autolist chase_symlinks
+set listlinks listjobs lineedit notify
+set correct=cmd
+set cdpath=(~ ~/work ~/src)
+set fignore=.o
+alias mail mail
+
+#---------------------------------------------------------------------
+# Command mesg - (permit or deny messages sent to a terminal) 
+#---------------------------------------------------------------------
+mesg y
+
+#---------------------------------------------------------------------
+# Set base path that LS10 is installed into.
+#---------------------------------------------------------------------
+###	=()<setenv	BASE_PATH	@<BASE_PATH>@>()=
+setenv	BASE_PATH	/usr
+
+#---------------------------------------------------------------------
+# Determine whether base environment has been set up
+#---------------------------------------------------------------------
+if (! $?MACH_TYPE) then
+
+	#---------------------------------------------------------------
+	# LS10 database type.
+	#---------------------------------------------------------------
+	###	=()<	setenv	LS10_DB	@<LS10_DB>@>()=
+	setenv	LS10_DB	INFORMIX
+
+	#---------------------------------------------------------------
+	# Define INFORMIX related stuff.
+	#---------------------------------------------------------------
+	if ($LS10_DB == "INFORMIX") then
+		###	=()<		setenv	INFORMIXDIR	@<INFORMIXDIR>@>()=
+		setenv	INFORMIXDIR	/usr/informix7
+
+		###	=()<		setenv	INFORMIXSERVER	@<INFORMIXSERVER>@>()=
+		setenv	INFORMIXSERVER	local
+
+		###	=()<		setenv	INFORMIXTERM	@<INFORMIXTERM>@>()=
+		setenv	INFORMIXTERM	terminfo
+
+		###	=()<		setenv	SQLEXEC	@<SQLEXEC>@>()=
+		setenv	SQLEXEC	sqlexec
+
+		###	=()<		setenv DBEDIT @<DBEDIT>@>()=
+		setenv DBEDIT vi
+	endif
+
+	#---------------------------------------------------------------
+	# Define ORACLE related stuff.
+	#---------------------------------------------------------------
+	if ($LS10_DB == "ORACLE") then
+		###	=()<		setenv	ORACLEDIR	@<ORACLEDIR>@>()=
+		setenv	ORACLEDIR	/usr/oracle
+
+		###	=()<		setenv	ORACLE_HOME	@<ORACLE_HOME>@>()=
+		setenv	ORACLE_HOME	/usr/oracle
+
+		###	=()<		setenv	LOCK_DIR	@<LOCK_DIR>@>()=
+		setenv	LOCK_DIR	/BIN/LOCK
+	endif
+
+	#---------------------------------------------------------------
+	# Define DB2 related stuff.
+	#---------------------------------------------------------------
+	if ($LS10_DB == "DB2") then
+		###	=()<		setenv	DB2DIR	@<DB2DIR>@>()=
+		setenv	DB2DIR	/usr/DB2
+	endif
+
+	###	=()<	setenv DBDATE @<DBDATE>@>()=
+	setenv DBDATE DMY4
+
+	#---------------------------------------------------------------------
+	# Basic PATH with local extensions
+	#---------------------------------------------------------------------
+	###	=()<	setenv	PATH :$HOME/bin:$BASE_PATH/ver.etc/bin:@<LPDIR>@:@<STDBIN>@:@<DATABASEBIN>@>()=
+	setenv	PATH :$HOME/bin:$BASE_PATH/ver.etc/bin:/usr/Ease/EaseSpool:/usr/local/bin:/bin:/etc:/usr/bin:/tcb/bin:/usr/local/samba/bin:/usr/informix7/bin
+	# Determine machine setup : MACH_TYPE, C_STD, C_LIB
+	#---------------------------------------------------------------------
+	eval `$BASE_PATH/ver.etc/bin/LogisticEnv -s`
+
+	#---------------------------------------------------------------------
+	# Set up environment
+	#---------------------------------------------------------------------
+	umask	002
+
+	#---------------------------------------------------------------------
+	# Standard Logistic variables.
+	#---------------------------------------------------------------------
+	setenv COPYRIGHT 	"Logistic Software Limited."
+	###	=()<	setenv MAIL_USED @<MAIL_USED>@>()=
+	setenv MAIL_USED psl_mail
+	###	=()<	setenv FILE_PERM "@<OWNER>@ @<GROUP>@ 660">()=
+	setenv FILE_PERM "lsl lsl 660"
+
+	#---------------------------------------------------------------------
+	# Spooler Config Environment Variables
+	#---------------------------------------------------------------------
+	###	=()<	setenv LPDIR @<LPDIR>@>()=
+	setenv LPDIR /usr/Ease/EaseSpool
+
+	###	=()<	if ("@<PP_DIR>@" != "") setenv PP_DIR @<PP_DIR>@>()=
+	if ("/usr/PilotPrint" != "") setenv PP_DIR /usr/PilotPrint
+
+	setenv basicpath "$PATH"
+endif
+
+#---------------------------------------------------------------------
+# Development specific stuff
+#---------------------------------------------------------------------
+alias	MakeEnvironment	"source $BASE_PATH/ver.etc/bin/MakeEnvironment"
+alias	cdsrc	"source $BASE_PATH/ver.etc/bin/cdsrc"
+alias	v8		"setenv VERSION 8; 		MakeEnvironment"
+alias	v9.9	"setenv VERSION 9.9; 	MakeEnvironment"
+alias	v9.10	"setenv VERSION 9.10; 	MakeEnvironment"
+alias	LS10.4	"setenv VERSION LS10.4; 	MakeEnvironment"
+alias	LS10.5	"setenv VERSION LS10.5; 	MakeEnvironment"
+alias	v9.10	"setenv VERSION 9.10; 	MakeEnvironment"
+alias	v10		"setenv VERSION 10; 	MakeEnvironment"
+alias	rm		"rm -i"
+
+if (! $?VERSION) then
+	setenv VERSION LS10.5
+	setenv CLIENT LSL
+endif
+
+MakeEnvironment
+
+#---------------------------------------------------------------------
+# Standard LS10 alias's. 
+#---------------------------------------------------------------------
+alias	h		history
+alias	bin		'cd $PROG_PATH/BIN; dirs'
+alias	ubin	'cd $CLIENTBASE/BIN; dirs'
+alias	data	'cd $DAT; dirs'
+alias	schema	'cd $SCH; dirs'
+alias	inc		'cd $PROG_PATH/$LIBBASE/INCLUDE; dirs'
+alias	lib		'cd $PROG_PATH/$LIBBASE/LIB; dirs'
+alias	lib+	'cd $PROG_PATH/$LIBBASE/LIB++; dirs'
+alias	menusys	'cd $PROG_PATH/BIN/MENUSYS; dirs'
+alias	dest	'setenv DESTDIR `pwd` ; echo $DESTDIR'
+alias	push	'set rd = `pwd`'
+alias	push1	'set rd1 = `pwd`'
+alias	push2	'set rd2 = `pwd`'
+alias	pop		'echo $rd  ; cd $rd'
+alias	pop1	'echo $rd1 ; cd $rd1'
+alias	pop2	'echo $rd2 ; cd $rd2'
+alias   pf		pinform
+alias	setdev	setenv LIBBASE dev-$LOGNAME
+alias	setrls	setenv LIBBASE rls
+
+alias	out.	"setenv DESTDIR ."
+alias	out..	"setenv DESTDIR .."
+if ($LS10_DB == "ORACLE") then
+	alias   oracle  "setenv ORACLE_HOME /usr/ENVISAGE/app/oracle/product/7.3.4"
+	alias   orabin  "cd $ORACLE_HOME/bin"
+endif
+
+#---------------------------------------------------------------------
+# Standard modules alias's
+#---------------------------------------------------------------------
+alias	Al		'set SRCDIR=AL;		cdsrc'
+alias	As		'set SRCDIR=AS;		cdsrc'
+alias	Bm		'set SRCDIR=BM;		cdsrc'
+alias	Ca		'set SRCDIR=CA;		cdsrc'
+alias	Cr		'set SRCDIR=CR;		cdsrc'
+alias	Cm		'set SRCDIR=CM;		cdsrc'
+alias	Ct		'set SRCDIR=CT;		cdsrc'
+alias	Db		'set SRCDIR=DB;		cdsrc'
+alias	Dd		'set SRCDIR=DD;		cdsrc'
+alias	Fa		'set SRCDIR=FA;		cdsrc'
+alias	Fe		'set SRCDIR=FE;		cdsrc'
+alias	Ff		'set SRCDIR=FF;		cdsrc'
+alias	Fix		'set SRCDIR=FIX;	cdsrc'
+alias	Fr		'set SRCDIR=FR;		cdsrc'
+alias	Gl		'set SRCDIR=GL;		cdsrc'
+alias	Me		'set SRCDIR=MENU;	cdsrc'
+alias	Mh		'set SRCDIR=MH;		cdsrc'
+alias	Misc	'set SRCDIR=MISC;	cdsrc'
+alias	Ol		'set SRCDIR=OL;		cdsrc'
+alias	Pc		'set SRCDIR=PC;		cdsrc'
+alias	Po		'set SRCDIR=PO;		cdsrc'
+alias	Ps		'set SRCDIR=PS;		cdsrc'
+alias	Qc		'set SRCDIR=QC;		cdsrc'
+alias	Qt		'set SRCDIR=QT;		cdsrc'
+alias	Rg		'set SRCDIR=RG;		cdsrc'
+alias	Sa		'set SRCDIR=SA;		cdsrc'
+alias	Sj		'set SRCDIR=SJ;		cdsrc'
+alias	Sk		'set SRCDIR=SK;		cdsrc'
+alias	So		'set SRCDIR=SO;		cdsrc'
+alias	Tm		'set SRCDIR=TM;		cdsrc'
+alias	Tr		'set SRCDIR=TR;		cdsrc'
+alias	Ts		'set SRCDIR=TS;		cdsrc'
+alias	Lrp		'set SRCDIR=LRP;	cdsrc'
+alias	Menu	'set SRCDIR=MENU;	cdsrc'
+alias	Utils	'set SRCDIR=UTILS;	cdsrc'
+alias	Xp		'set SRCDIR=XP;		cdsrc'
+
+#---------------------------------------------------------------------
+# Client specific modules alias's
+#---------------------------------------------------------------------
+alias	600			'setenv	CLIENT	600;		MakeEnvironment'
+alias	ail			'setenv	CLIENT	AIL;		MakeEnvironment'
+alias	amb			'setenv	CLIENT	AMB;		MakeEnvironment'
+alias	app			'setenv	CLIENT	APP;		MakeEnvironment'
+alias	as_live		'setenv	CLIENT	AS_LIVE;	MakeEnvironment'
+alias	ascent		'setenv	CLIENT	ASCENT;		MakeEnvironment'
+alias	asl			'setenv	CLIENT	ASL;		MakeEnvironment'
+alias	bfs			'setenv	CLIENT	BFS;		MakeEnvironment'
+alias	bt			'setenv	CLIENT	BT;			MakeEnvironment'
+alias	citic		'setenv	CLIENT	CITIC;		MakeEnvironment'
+alias	ctc_clean	'setenv	CLIENT	CTC_CLEAN;	MakeEnvironment'
+alias	demo		'setenv	CLIENT	DEMO;		MakeEnvironment'
+alias	dft			'setenv	CLIENT	DFT;		MakeEnvironment'
+alias	dml			'setenv	CLIENT	DML;		MakeEnvironment'
+alias	dms			'setenv	CLIENT	DMS;		MakeEnvironment'
+alias	dpa			'setenv	CLIENT	DPA;		MakeEnvironment'
+alias	dpl			'setenv	CLIENT	DPL;		MakeEnvironment'
+alias	fbl			'setenv	CLIENT	FBL;		MakeEnvironment'
+alias	fcs			'setenv	CLIENT	FCS;		MakeEnvironment'
+alias	fra			'setenv	CLIENT	FRA;		MakeEnvironment'
+alias	gms			'setenv	CLIENT	GMS;		MakeEnvironment'
+alias	groast		'setenv	CLIENT	GROAST;		MakeEnvironment'
+alias	hcd			'setenv	CLIENT	HCD;		MakeEnvironment'
+alias	hmq			'setenv	CLIENT	HMQ;		MakeEnvironment'
+alias	hsh			'setenv	CLIENT	HSH;		MakeEnvironment'
+alias	ied			'setenv	CLIENT	IED;		MakeEnvironment'
+alias	ikbj		'setenv	CLIENT	IKBJ;		MakeEnvironment'
+alias	ikgj		'setenv	CLIENT	IKGJ;		MakeEnvironment'
+alias	ikhk		'setenv	CLIENT	IKHK;		MakeEnvironment'
+alias	iksh		'setenv	CLIENT	IKSH;		MakeEnvironment'
+alias	isis		'setenv	CLIENT	ISIS;		MakeEnvironment'
+alias	its			'setenv	CLIENT	ITS;		MakeEnvironment'
+alias	lel			'setenv	CLIENT	LEL;		MakeEnvironment'
+alias	lkh			'setenv	CLIENT	LKH;		MakeEnvironment'
+alias	lslora		'setenv	CLIENT	LSLORA;		MakeEnvironment'
+alias	myl			'setenv	CLIENT	MYL;		MakeEnvironment'
+alias	oas			'setenv	CLIENT	OAS;		MakeEnvironment'
+alias	orientsh	'setenv	CLIENT	ORIENTSH;	MakeEnvironment'
+alias	pncl		'setenv	CLIENT	PNCL;		MakeEnvironment'
+alias	reed		'setenv	CLIENT	REED;		MakeEnvironment'
+alias	sairhk		'setenv	CLIENT	SAIRHK;		MakeEnvironment'
+alias	sairsg		'setenv	CLIENT	SAIRSG;		MakeEnvironment'
+alias	sairtw		'setenv	CLIENT	SAIRTW;		MakeEnvironment'
+alias	scratch		'setenv	CLIENT	SCRATCH;	MakeEnvironment'
+alias	smp			'setenv	CLIENT	SMP;		MakeEnvironment'
+alias	sprint		'setenv	CLIENT	SPRINT;		MakeEnvironment'
+alias	std			'setenv	CLIENT	LSL;		MakeEnvironment'
+alias	thong		'setenv	CLIENT	THONG;		MakeEnvironment'
+alias	vap			'setenv	CLIENT	VAP;		MakeEnvironment'
+
+#---------------------------------------------------------------------
+# Logistic default slot
+#---------------------------------------------------------------------
+setenv TERM_SLOT `set_tslot`

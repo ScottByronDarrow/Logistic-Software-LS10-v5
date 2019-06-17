@@ -1,0 +1,24 @@
+Stocktake Valuation Reports Menu (STVR)
+sk_val
+Stocktake Master Menu. <a> (1,2)
+menu MENUSYS/sk_st_mst.mdf
+Stock Take Valuation Menu ( FIFO/LIFO ). <a> (1,1)
+menu MENUSYS/sk_st_fifo.mdf
+Summary  Stock Valuation By Company. <a> (1,1)
+sk_nst_vsel~sk_covalue~G~
+Detailed Stock Valuation By Company. <a> (1,2)
+sk_nst_vsel~sk_fcovalue~G~
+Detailed Stock Valuation By Branch. <a> (1,1)
+sk_nst_vsel~sk_bdvalue~G~
+Summary  Stock Valuation By Branch. <a> (1,2)
+sk_nst_vsel~sk_bsvalue~G~
+Detailed Stock Valuation By Warehouse. <a> (1,1)
+sk_nst_vsel~sk_cdvalue~G~
+Summary  Stock Valuation By Warehouse. <a> (1,1)
+sk_nst_vsel~sk_csvalue~G~
+((
+quadrant(20,6)
+quadrant(45,6)
+box(14,3,50,14)
+line(15,5,49)
+))

@@ -1,0 +1,151 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:51:21 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:51:21  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table cncd
+	field cncd_hhch_hash
+	field cncd_line_no
+	field cncd_hhbr_hash
+	field cncd_hhcc_hash
+	field cncd_hhsu_hash
+	field cncd_hhcl_hash
+	field cncd_price
+	field cncd_curr_code
+	field cncd_disc_ok
+	field cncd_cost
+end
+
+table cnch
+	field cnch_co_no
+	field cnch_cont_no
+	field cnch_hhch_hash
+	field cnch_desc
+	field cnch_contact
+	field cnch_date_wef
+	field cnch_date_rev
+	field cnch_date_ren
+	field cnch_date_exp
+	field cnch_exch_type
+end
+
+table cnre
+	field cnre_co_no
+	field cnre_hhch_hash
+	field cnre_hhcu_hash
+	field cnre_hhbr_hash
+	field cnre_hhsu_hash
+	field cnre_qty_sold
+	field cnre_sup_cost
+	field cnre_std_cost
+	field cnre_inv_no
+	field cnre_inv_date
+	field cnre_status
+end
+
+table curh
+	field curh_hhbr_hash
+	field curh_hhcu_hash
+	field curh_ord_date
+	field curh_ord_qty
+	field curh_inv_no
+	field curh_line_cost
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_dbt_date
+	field comm_inv_date
+	field comm_gl_date
+	field comm_gst_rate
+end
+
+table comr
+	field comr_co_no
+	field comr_base_curr
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_hhcu_hash
+	field cohr_type
+	field cohr_hhco_hash
+	field cohr_date_raised
+	field cohr_date_required
+	field cohr_tax_code
+	field cohr_gross
+	field cohr_freight
+	field cohr_insurance
+	field cohr_other_cost_1
+	field cohr_other_cost_2
+	field cohr_other_cost_3
+	field cohr_tax
+	field cohr_gst
+	field cohr_disc
+	field cohr_deposit
+	field cohr_ex_disc
+	field cohr_erate_var
+	field cohr_sos
+	field cohr_item_levy
+	field cohr_exch_rate
+	field cohr_cont_no
+	field cohr_stat_flag
+	field cohr_drop_ship
+end
+
+table coln
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_hhbr_hash
+	field coln_incc_hash
+	field coln_crd_type
+	field coln_q_order
+	field coln_sale_price
+	field coln_cost_price
+	field coln_item_levy
+	field coln_gross
+	field coln_on_cost
+	field coln_amt_disc
+	field coln_amt_tax
+	field coln_amt_gst
+	field coln_erate_var
+	field coln_status
+	field coln_stat_flag
+	field coln_cont_status
+end
+
+table cumr
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_class_type
+	field cumr_sman_code
+	field cumr_curr_code
+	field cumr_stat_flag
+end
+
+table inmr
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_category
+	field inmr_outer_size
+end
+

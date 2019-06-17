@@ -1,0 +1,36 @@
+Bill Of Materials Maintenance Menu. (BOMMT)
+bom_help
+Manufacturing Master Menu. <a> (1,2)
+menu MENUSYS/main_manf.mdf
+BOM Maintenance. <a> (1,2)
+bm_maint~
+Delete Specification. <a> (1,1)
+bm_delete~
+Copy Specification. <a> (1,2)
+bm_copyprod~
+Maintain Master Instructions <a> (1,1)
+pc_mimaint~
+Maintain Hazard Warnings <a> (1,1)
+pc_hwmaint~
+Maintain Product Instructions. <a> (1,2)
+pc_idmaint~
+Maintain Class Exclusion File. <a> (1,2)
+bm_excl_inp~
+Maintain Hazard Classes. <a> (2,1)
+bm_haz_inp~Z~
+Maintain Handling Classes. <a> (2,2)
+bm_haz_inp~H~
+Maintain Units-of-Measure. <a> (2,2)
+bm_uom_mnt~
+Maintain Stock Write-Offs. <a> (2,2)
+sk_womaint~
+Material Substitution By Item <a> (2,2)
+bm_substmnt~I~
+Material Substitution by Group <a> (2,1)
+bm_substmnt~G~
+((
+box(1,3,76,15)
+quadrant(6,6)
+quadrant(45,8)
+line(2,5,75)
+))

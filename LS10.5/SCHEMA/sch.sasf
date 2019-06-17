@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sasf,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sasf)
+|  Schema Desc  : (Sales Anslysis Sales Man file. )
+|----------------------------------------------------------------------
+| $Log: sch.sasf,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:20  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sasf
+
+field	sasf_co_no			type	char	2
+field	sasf_sman_no			type	char	2
+field	sasf_year_flag			type	char	1
+field	sasf_id_no			type	comp
+		sasf_co_no,
+		sasf_sman_no,
+		sasf_year_flag					index	dups
+field	sasf_val1			type	money
+field	sasf_val2			type	money
+field	sasf_val3			type	money
+field	sasf_val4			type	money
+field	sasf_val5			type	money
+field	sasf_val6			type	money
+field	sasf_val7			type	money
+field	sasf_val8			type	money
+field	sasf_val9			type	money
+field	sasf_val10			type	money
+field	sasf_val11			type	money
+field	sasf_val12			type	money
+field	sasf_stat_flag			type	char	1
+
+end

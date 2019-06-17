@@ -1,0 +1,12 @@
+Stock Price Book Menu (SKPB)
+sk_price
+Marketing Master Menu <a> (1,1)
+menu MENUSYS/main_mark.mdf
+Maintain Price Book Pages. <ERROR> (1,1)
+sk_primaint~
+Maintain Price Book(s). <a> (1,1)
+sk_pricreat~
+Print Price Book(s). <a> (1,1)
+sk_priprt.i~
+((
+))

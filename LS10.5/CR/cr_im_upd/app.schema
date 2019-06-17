@@ -1,0 +1,218 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:28 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:28  scott
+#	RELEASE 5.0
+#	
+#	Revision 5.0  2001/06/19 08:03:15  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:23:44  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:22:07  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:28 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:28  scott
+#	RELEASE 5.0
+#	
+#
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_cc_no          
+	field comm_cc_name        
+	field comm_crd_date        
+	field comm_inv_date        
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_gl_ctrl_acct
+	field sumr_stat_flag
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_hhsi_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_narrative
+	field suin_date_of_inv
+	field suin_date_posted
+	field suin_pay_date
+	field suin_gl_date
+	field suin_gst
+	field suin_amt
+	field suin_pay_amt
+	field suin_amt_paid
+	field suin_hold_reason
+	field suin_cus_po_no
+	field suin_currency
+	field suin_exch_rate
+	field suin_er_fixed
+	field suin_destin
+	field suin_approved
+	field suin_rec_type
+	field suin_cst_type
+	field suin_doc_no
+	field suin_stat_flag
+end
+
+table pogh
+	field pogh_co_no
+	field pogh_br_no
+	field pogh_hhsu_hash
+	field pogh_hhsh_hash
+	field pogh_hhpo_hash
+	field pogh_hhds_hash
+	field pogh_gr_no
+	field pogh_pur_ord_no
+	field pogh_hhgr_hash
+	field pogh_date_raised
+	field pogh_exch_rate
+	field pogh_cust_rate
+	field pogh_rec_by
+	field pogh_cst_by
+	field pogh_pur_status
+	field pogh_gl_status
+	field pogh_drop_ship
+end
+
+table pogl
+	field pogl_hhgr_hash
+	field pogl_line_no
+	field pogl_hhbr_hash
+	field pogl_hhcc_hash
+	field pogl_hhpl_hash
+	field pogl_hhlc_hash
+	field pogl_po_number
+	field pogl_serial_no
+	field pogl_location
+	field pogl_lot_no
+	field pogl_slot_no
+	field pogl_exp_date
+	field pogl_qty_ord
+	field pogl_qty_rec
+	field pogl_qty_left
+	field pogl_land_cst
+	field pogl_act_cst
+	field pogl_fob_fgn_cst
+	field pogl_fob_nor_cst
+	field pogl_frt_ins_cst
+	field pogl_lcost_load
+	field pogl_duty
+	field pogl_duty_pc
+	field pogl_licence
+	field pogl_cat_code
+	field pogl_item_desc
+	field pogl_rec_date
+	field pogl_auto_cost
+	field pogl_pur_status
+	field pogl_gl_status
+	field pogl_stat_flag
+end
+
+table suid
+	field suid_hhsi_hash
+	field suid_line_no
+	field suid_pf_type
+	field suid_pf_ref
+	field suid_ct_type
+	field suid_gr_no
+	field suid_hhgr_hash
+	field suid_po_no
+	field suid_hhpo_hash
+	field suid_hhsh_hash
+	field suid_gl_acc_no
+	field suid_period_amt
+	field suid_narrative
+	field suid_user_ref
+	field suid_ch_code
+	field suid_margin
+	field suid_stat_flag
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_hhdd_hash
+	field pohr_drop_ship
+	field pohr_status
+	field pohr_stat_flag
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_hhpl_hash
+end
+
+table ddhr
+	field ddhr_hhdd_hash
+	field ddhr_stat_flag
+end
+
+table ddln
+	field ddln_hhdd_hash
+	field ddln_hhds_hash
+	field ddln_line_no
+	field ddln_hhsu_hash
+	field ddln_hhpl_hash
+	field ddln_stat_flag
+end
+
+table ddsh
+	field ddsh_hhdd_hash
+	field ddsh_hhsu_hash
+	field ddsh_ship_no
+	field ddsh_hhds_hash
+	field ddsh_due_date
+	field ddsh_stat_flag
+end
+
+table inmr
+	field inmr_hhbr_hash
+	field inmr_outer_size
+end
+
+table posh
+	field posh_co_no
+	field posh_hhsh_hash
+	field posh_ship_depart
+	field posh_ship_arrive
+	field posh_csm_no
+end
+

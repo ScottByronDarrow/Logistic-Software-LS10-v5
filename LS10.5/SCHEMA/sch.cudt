@@ -1,0 +1,49 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cudt,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.cudt)
+|  Schema Desc  : (Debtors Payments Detail Record. )
+|----------------------------------------------------------------------
+| $Log: sch.cudt,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cudt
+
+field	cudt_hhcp_hash			type	long		index	dups
+field	cudt_hhci_hash			type	long		index	dups
+field	cudt_hhdt_hash			type	serial		index	primary
+field	cudt_amt_paid_inv		type	money
+field	cudt_loc_paid_inv		type	money
+field	cudt_exch_variatio		type	money
+field	cudt_exch_rate			type	double
+field	cudt_stat_flag			type	char	1
+field	cudt_id_no				type	composite
+			cudt_hhcp_hash,
+			cudt_hhci_hash								index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cudt_hhcp_hash		-	Link to Cheque Header  ( cuhd )
+	cudt_hhcu_hash		-	Link to Customer maser ( cumr )
+	cudt_hhci_hash		-	Link to Invoice File   ( cuin )
+	cudt_hhdt_hash		-	Unique serial hash 
+	cudt_amt_paid_inv	- 	Payment Amount in O/S Currency.
+	cudt_loc_paid_inv	-	Payment Amount in Local Currency.
+	cudt_exch_variatio	-	Exchange Variation.
+	cudt_exch_rate	    -	Exchange Rate.
+	cudt_stat_flag		-	Spare Status flag.
+
+}

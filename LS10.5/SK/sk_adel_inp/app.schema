@@ -1,0 +1,116 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:18:44 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:18:44  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_stat_flag
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_opening_stock
+	field incc_receipts
+	field incc_pur
+	field incc_issues
+	field incc_adj
+	field incc_sales
+	field incc_stake
+	field incc_closing_stock
+	field incc_stat_flag
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table soln
+	field soln_hhbr_hash
+	field soln_stat_flag
+end
+
+table coln
+	field coln_hhco_hash
+	field coln_hhbr_hash
+	field coln_stat_flag
+end
+
+table cohr
+	field cohr_hhco_hash
+	field cohr_stat_flag
+end
+
+table pogl
+	field pogl_hhbr_hash
+	field pogl_hhcc_hash
+	field pogl_pur_status
+	field pogl_gl_status
+	field pogl_stat_flag
+end
+
+table poln
+	field poln_hhbr_hash
+	field poln_stat_flag
+end
+
+table itln
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_on_hand
+	field inmr_active_status
+	field inmr_stat_flag
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table inas
+	field inas_co_no
+	field inas_act_code
+	field inas_description
+end
+

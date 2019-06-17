@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inpl,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inpl)
+|  Schema Desc  : (Price Book Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.inpl,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:57  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:31  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inpl
+
+field	inpl_hhpr_hash			type	long
+field	inpl_line_no			type	int
+field	inpl_id_no			type	composite
+		inpl_hhpr_hash,
+		inpl_line_no					index	primary
+field	inpl_length			type	char	8
+field	inpl_hhbr_hash_1		type	long
+field	inpl_hhbr_hash_2		type	long
+field	inpl_hhbr_hash_3		type	long
+field	inpl_hhbr_hash_4		type	long
+field	inpl_hhbr_hash_5		type	long
+field	inpl_hhbr_hash_6		type	long
+field	inpl_hhbr_hash_7		type	long
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inpl_hhpr_hash		-	Link to inps ( inps_hhpr_hash )
+	inpl_line_no		-	Line number.
+	inpl_length		-	Line length.
+	inpl_hhbr_hash_(x)	-	Link to item(s) on inmr (inmr_hhbr_hash)
+}

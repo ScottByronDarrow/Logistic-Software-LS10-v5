@@ -1,0 +1,21 @@
+Quality Control Menu. (QCMR)
+qc_help
+Stock Master Menu. <a> (1,2)
+menu MENUSYS/sk_master.mdf
+QC Centre Maintenance <a> (1,2)
+qc_maint~
+QC Manual Entry <a> (1,2)
+qc_manual~LPNO~
+QC Release <a> (1,1)
+lp_chain~qc_relstk LPNO R~
+QC Release Maintenance <a> (1,2)
+lp_chain~qc_relstk LPNO M~
+Print Pre-Released/Released QC Items <a> (1,2)
+qc_print~
+Purge Fully Released QC Items <a> (1,2)
+qc_purge~
+((
+quadrant(20,6)
+line(16,5,44)
+box(15,3,45,14)
+))

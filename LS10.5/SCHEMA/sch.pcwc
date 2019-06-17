@@ -1,0 +1,32 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcwc,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pcwc)
+|  Schema Desc  : (Work Centre Code file. )
+|----------------------------------------------------------------------
+| $Log: sch.pcwc,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:03  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:39  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcwc
+
+field	pcwc_hhwc_hash			type	serial		index	primary
+field	pcwc_co_no			type	char	2
+field	pcwc_br_no			type	char	2
+field	pcwc_work_cntr			type	char	8
+field	pcwc_id_no			type	composite
+						pcwc_co_no,
+						pcwc_br_no,
+						pcwc_work_cntr	index	primary
+field	pcwc_name			type	char	40
+
+end

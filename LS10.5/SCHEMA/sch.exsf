@@ -1,0 +1,81 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.exsf,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.exsf)
+|  Schema Desc  : (Salesman Master file. )
+|----------------------------------------------------------------------
+| $Log: sch.exsf,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:38  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	exsf
+field	exsf_co_no          type	char 2				index	dups
+field	exsf_salesman_no    type	char 2				index	dups
+field	exsf_logname        type	char 14
+field	exsf_salesman       type	char 40
+field	exsf_hhsf_hash      type	serial				index
+field	exsf_sell_type      type	char 2
+field	exsf_sell_grp       type	char 2
+field	exsf_sell_pos       type	char 2
+field	exsf_area_code      type	char 2
+field	exsf_route_no       type	char 8
+field	exsf_carr_code      type	char 4
+field	exsf_up_sman1       type	long
+field	exsf_up_sman2       type	long
+field	exsf_up_sman3       type	long
+field	exsf_sale_stat      type	char 1
+field	exsf_com_status     type	char 1
+field	exsf_com_type       type	char 1
+field	exsf_com_pc         type	float
+field	exsf_com_min        type	money
+field	exsf_sman_com       type	float
+field	exsf_lev1_com       type	float
+field	exsf_lev2_com       type	float
+field	exsf_lev3_com       type	float
+field	exsf_lev4_com       type	float
+field	exsf_stat_flag      type	char 1
+field	exsf_update         type	char 1
+field	exsf_id_no          type	composite
+		exsf_co_no,
+		exsf_salesman_no								index
+field	exsf_id_no2         type	composite
+		exsf_co_no,
+		exsf_logname									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	exsf_co_no			-	Company number.
+	exsf_salesman_no	-	Salesman number.
+	exsf_logname		-	Used For Telemarketing .
+	exsf_salesman		-	Salesman description.
+	exsf_sell_type		-	Selling type code. Lookup on file (sast)
+	exsf_sell_grp		-	Selling group code. Lookup on file (sasg)
+	exsf_sell_pos		-	Selling position code. Lookup on file (sasp)
+	exsf_area_code		-	Salesman Area (Lookup on exaf).
+	exsf_com_type		-	Commishion type.
+								M = Margin.
+								W = Weight.
+	exsf_com_pc			-	Commishion percent.
+								IF ( exsf_com_type EQUALS 'M' )
+								THEN
+									exsf_com_pc EQUALS Percent
+								END
+								IF ( exsf_com_type EQUALS 'W' )
+								THEN
+									exsf_com_pc EQUALS Amount per Kg.
+								END
+									
+	exsf_com_min		-	Commishion min Amount.
+	exsf_stat_flag		-	S(uper) N(ormal)
+}

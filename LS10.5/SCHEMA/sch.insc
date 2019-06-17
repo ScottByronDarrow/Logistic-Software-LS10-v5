@@ -1,0 +1,50 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.insc,v 5.0 2001/06/19 10:17:19 cha Exp $
+|  Schema Name  : (sch.insc)
+|  Schema Desc  : (Inventory Stock Take Control File. )
+|----------------------------------------------------------------------
+| $Log: sch.insc,v $
+| Revision 5.0  2001/06/19 10:17:19  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:57  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:32  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file insc
+
+field	insc_hhcc_hash			type	long
+field	insc_stake_code			type	char	1
+field	insc_id_no			type	composite
+		insc_hhcc_hash,
+		insc_stake_code					index	primary
+field	insc_start_date			type	edate
+field	insc_start_time			type	char	5
+field	insc_frz_date			type	edate
+field	insc_frz_time			type	char	5
+field	insc_page_no			type	long
+field	insc_description		type	char	40
+field	insc_serial_take		type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	insc_hhcc_hash		-	Link to Warehouse master ( ccmr ).
+	insc_stake_code		-	Stock take code A-Z.
+	insc_start_date		-	Start date record Created.
+	insc_start_time		-	Start time record Created.
+	insc_frz_date		-	Start date stock frozen.
+	insc_frz_time		-	Start time stock frozen.
+	insc_page_no		-	Page number.
+	insc_description	-	Stock take description.
+	insc_serial_take	-	Y if stocktake code is a serial stocktake.
+	                	 	N otherwise. 
+}

@@ -1,0 +1,59 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.qcln,v 5.0 2001/06/19 10:17:24 cha Exp $
+|  Schema Name  : (sch.qcln)
+|  Schema Desc  : (Inventory QC Purchased Items Reveival File. )
+|----------------------------------------------------------------------
+| $Log: sch.qcln,v $
+| Revision 5.0  2001/06/19 10:17:24  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:17  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	qcln
+
+field	qcln_hhqc_hash			type	long
+field	qcln_line_no			type	int
+field	qcln_emp_code			type	char	8
+field	qcln_release_dt			type	edate
+field	qcln_rel_qty			type	float
+field	qcln_rej_qty			type	float
+field	qcln_wof_acc			type	char	16
+field	qcln_stk_wof_acc		type	char	16
+field	qcln_cost				type	money
+field	qcln_reason				type	char	2
+field	qcln_inlo_hash			type	long
+field	qcln_remarks			type	char	30
+field	qcln_coa				type	char	1
+field	qcln_reassay_date		type	edate
+field	qcln_id_no				type	composite
+			qcln_hhqc_hash,
+			qcln_line_no											index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	qcln_hhbr_hash			- Item Hash (link to inmr)
+	qcln_line_no			- Line Number To Make Index Unique
+	qcln_emp_code			- Employee Code (link to prmr)
+	qcln_release_dt			- Release Date
+	qcln_rel_qty			- Released Quantity
+	qcln_rej_qty			- Rejected Quantity
+	qcln_wof_acc			- Write-Off G/L Debit Account
+	qcln_stk_wof_acc		- Write-Off G/L Stock Credit Account
+	qcln_cost				- Write-Off Cost Per Unit
+	qcln_reason				- Reason For Rejection
+	qcln_inlo_hash			- Link to inlo record.
+	qcln_remarks			- Release Remarks
+	qcln_coa				- Certificate Of Analysis (Yes or No)
+	qcln_reassay_date		- Next Reassay Date
+}

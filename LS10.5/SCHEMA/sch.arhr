@@ -1,0 +1,202 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.arhr,v 5.2 2001/12/11 01:56:35 scott Exp $
+|  Schema Name  : (sch.arhr)
+|  Schema Desc  : (See file cohr - Exact copy for Archive)
+|----------------------------------------------------------------------
+| $Log: sch.arhr,v $
+| Revision 5.2  2001/12/11 01:56:35  scott
+| Updated to add sales order number to coln (used as reference when soln/sohr removed)
+| Updated to add link to works order file.
+| Updated archive files to match cohr/coln
+|
+|=====================================================================}
+file	arhr
+field	arhr_co_no          type	char	2
+field	arhr_br_no          type	char	2
+field	arhr_dp_no          type	char	2
+field	arhr_inv_no         type	char	8
+field	arhr_app_inv_no     type	char	8		
+field	arhr_hhcu_hash      type	long				index	dups
+field	arhr_chg_hhcu_hash	type	long		
+field	arhr_type           type	char	1
+field	arhr_cont_no        type	char	6
+field	arhr_drop_ship      type	char	1
+field	arhr_hhds_hash      type	long	
+field	arhr_cus_ord_ref    type	char	20
+field	arhr_chg_ord_ref    type	char	20
+field	arhr_ord_ref        type	char	16
+field	arhr_grn_no        	type	char	20
+field	arhr_cons_no        type	char	16
+field	arhr_del_zone  	    type	char	6
+field	arhr_del_req  	    type	char	1
+field	arhr_del_date  	    type	edate
+field	arhr_asm_req  	    type	char	1
+field	arhr_asm_date  	    type	edate
+field	arhr_asm_hash  	    type	long
+field	arhr_s_timeslot	    type	char	1
+field	arhr_e_timeslot	    type	char	1
+field	arhr_carr_code      type	char	4
+field	arhr_carr_area      type	char	2
+field	arhr_no_cartons     type	integer
+field	arhr_wgt_per_ctn    type	double
+field	arhr_no_kgs         type	float
+field	arhr_hhso_hash      type	long
+field	arhr_hhco_hash      type	long			index	primary
+field	arhr_frei_req       type	char	1
+field	arhr_date_raised    type	edate
+field	arhr_date_required  type	edate
+field	arhr_tax_code       type	char	1
+field	arhr_tax_no         type	char	15
+field	arhr_area_code      type	char	2
+field	arhr_sale_code      type	char	2
+field	arhr_op_id          type	char	14
+field	arhr_time_create    type	char	5
+field	arhr_date_create    type	edate
+field	arhr_gross          type	money
+field	arhr_freight        type	money
+field	arhr_insurance      type	money
+field	arhr_other_cost_1   type	money
+field	arhr_other_cost_2   type	money
+field	arhr_other_cost_3   type	money
+field	arhr_tax            type	money
+field	arhr_gst            type	money
+field	arhr_disc           type	money
+field	arhr_deposit        type	money
+field	arhr_ex_disc        type	money
+field	arhr_erate_var      type	money
+field	arhr_sos            type	money
+field	arhr_item_levy      type	money
+field	arhr_exch_rate      type	double
+field	arhr_fix_exch       type	char	1
+field	arhr_batch_no       type	char	5			
+field	arhr_dl_name        type	char	40
+field	arhr_dl_add1        type	char	40
+field	arhr_dl_add2        type	char	40
+field	arhr_dl_add3        type	char	40
+field	arhr_din_1          type	char	60
+field	arhr_din_2          type	char	60
+field	arhr_din_3          type	char	60
+field	arhr_pay_type       type	char	1
+field	arhr_pay_terms      type	char	40
+field	arhr_sell_terms     type	char	3
+field	arhr_ins_det        type	char	30
+field	arhr_pri_type       type	char	1
+field	arhr_pri_break      type	char	1
+field	arhr_ord_type       type	char	1
+field	arhr_prt_price      type	char	1
+field	arhr_status         type	char	1
+field	arhr_stat_flag      type	char	1
+field	arhr_ps_print       type	char	1
+field	arhr_ps_print_no    type	int
+field	arhr_inv_print      type	char	1
+field	arhr_ccn_print      type	char	1
+field	arhr_printing       type	char	1
+field	arhr_hhtr_hash      type	long			
+field	arhr_load_flag      type	char	1
+field	arhr_wrmr_hash      type	long
+field	arhr_id_no			type	composite
+			arhr_co_no,
+			arhr_br_no,
+			arhr_type,
+			arhr_inv_no											index
+field   arhr_pos_inv_no     type    char	 10
+field   arhr_pos_tran_type  type    int
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	arhr_co_no			-	Company Number.
+	arhr_br_no			-	Branch Number.
+	arhr_dp_no			-	Department number.
+	arhr_inv_no			-	Invoice number.
+	arhr_app_inv_no		-	Applied to Invoice Number.
+	arhr_hhcu_hash		-	Link to customer master file (cumr)
+	arhr_chg_hhcu_hash	-	Link to customer master file (cumr) for charge to
+	arhr_type			-	Transaction Type
+								P(acking slip)
+								I(invoice)
+								C(redit)
+								S(tanding Invoices)
+	arhr_cont_no		-   Contract Number as entered in SOP
+	arhr_drop_ship		-   To indicate whether this is a drop shipment
+							or not "Y" or "N"
+	arhr_hhds_hash		-	Link to direct delivery shipment file (ddsh)
+	arhr_cus_ord_ref	-	Customer Order Ref.
+	arhr_chg_ord_ref	-	Charge to Customer Order Ref.
+	arhr_ord_ref		-	Order Ref.
+	arhr_cons_no		-	Consignment number.
+	arhr_del_zone		-	Delivery Zone. (See trzm file)
+	arhr_del_req  	    -	Delivery required. (Yes/No)
+	arhr_del_date		-	Delivery date.
+	arhr_asm_req  	    -	Assemby required. (Yes/No)
+	arhr_asm_date  	    -	Assembly date.
+	arhr_asm_hash      	-	Same as arhr_hhtr_hash.
+						-	Required as delivery and assembly may occure on 
+						-	different loadings.
+	arhr_s_timeslot		-	Delivery start time slot (See trzt file)
+	arhr_e_timeslot		-	Delivery start time slot (See trzt file)
+	arhr_carr_code		-	Carrier Code.
+	arhr_carr_area		-	Carrier Area Code.
+	arhr_no_cartons		-	Number of Cartons.
+	arhr_no_kgs			-	Number of Kgs.
+	arhr_hhso_hash		-	Link to origional Sales order.
+	arhr_hhco_hash		-	Unique serial hash for arhr.
+	arhr_frei_req		-	Freight Required Flag. Y(es) / N(o).
+	arhr_date_raised	-	Date Raised.
+	arhr_date_required	-	Date Required.
+	arhr_tax_code		-	Tax Code.
+								A - Tax Exempt.
+								B - Tax Your Care.
+								C - Taxable.
+								D - Taxed at Absolute amount.
+	arhr_tax_no			-	Tax Number.
+	arhr_area_code		-	Area Code. (Lookup on exaf).
+	arhr_sale_code		- 	Salesman Code. (Lookup on exsf).
+	arhr_op_id			-	Operator ID.
+	arhr_time_create	-	Time Created.
+	arhr_date_create	-	Date Created.
+	arhr_gross			-	Gross Value.
+	arhr_freight		-	Freight Amount.
+	arhr_insurance		-	Insurance Amount.
+	arhr_other_cost_1	-	Other Cost 1.
+	arhr_other_cost_2	-	Other Cost 2.
+	arhr_other_cost_3	-	Other Cost 3.
+	arhr_tax			-	Tax Amount.
+	arhr_gst			-	GST Amount.
+	arhr_disc			-	Discount Amount.
+	arhr_deposit		-	Deposit.
+	arhr_ex_disc		-	Extra Discount Amount.
+	arhr_erate_var		-	Exchange rate variation Amount.
+	arhr_sos			-	Small Order Surcharge Amount.
+	arhr_exch_rate		-	Exchange Rate
+	arhr_fix_exch		-	Fixed exchange rate flag. Y(es) / N(o).
+	arhr_batch_no		-	Batch number.
+	arhr_dl_name		-	Delivery Name.
+	arhr_dl_add1		-	Delivery Address Part 1.
+	arhr_dl_add2		-	Delivery Address Part 2.
+	arhr_dl_add3		-	Delivery Address Part 3.
+	arhr_din_1			-	Delivery instructions Part 1.
+	arhr_din_2			-	Delivery instructions Part 2.
+	arhr_din_3			-	Delivery instructions Part 3.
+	arhr_pay_type		-	Specically used for On-line invoicing
+							C	- Cash
+							R	- Credit card
+							F	- Finance company
+							H	- Charge
+	arhr_pay_terms		-	Payment Terms.
+	arhr_sell_terms		-	Sell Terms.
+	arhr_ins_det		-	Insurance Details.
+	arhr_pri_type		-	Price Type. 1-5 from inmr_priceX.
+	arhr_pri_break		-	Price Break. (Not Used)
+	arhr_ord_type		-	Order Type. D(omestic) E(xport).
+	arhr_prt_price		-	Print Pricing Details. Y(es) N(o)
+	arhr_status			-	Status flag. (Not Used).
+	arhr_stat_flag		-	Posting flag.
+	arhr_ps_print		-	Packing slip printed. Y(es) N(o).
+	arhr_inv_print		-	Invoice printed. Y(es) N(o).
+	arhr_ccn_print		-	Customer collection note printed. Y(es) N(o).
+	arhr_printing		-	Y - Printing, Other - Not printing.
+}

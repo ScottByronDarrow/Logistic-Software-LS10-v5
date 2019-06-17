@@ -1,0 +1,142 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.qthr,v 5.0 2001/06/19 10:17:28 cha Exp $
+|  Schema Name  : (sch.qthr)
+|  Schema Desc  : (Quotation header file. )
+|----------------------------------------------------------------------
+| $Log: sch.qthr,v $
+| Revision 5.0  2001/06/19 10:17:28  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.1  2001/05/02 08:51:34  scott
+| Updated to add timestamp to file as it should exist.
+|
+| Revision 4.0  2001/03/09 01:01:17  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+
+file	qthr
+field	qthr_co_no			type	char	2
+field	qthr_br_no			type	char	2
+field	qthr_hhqt_hash		type	serial	index
+field	qthr_hhcu_hash		type	long	index	dups
+field	qthr_quote_no		type	char	8	index
+field	qthr_quote_src		type	char	2
+field	qthr_cont_no		type	char	6	index	dups
+field	qthr_enq_ref		type	char	20
+field	qthr_op_id			type	char	14
+field	qthr_time_create	type	char	5
+field	qthr_date_create	type	date
+field	qthr_expire_date	type	date
+field	qthr_dt_fst_call	type	date
+field	qthr_dt_lst_call	type	date
+field	qthr_dt_follow_up	type	date
+field	qthr_dt_quote		type	date
+field	qthr_no_calls		type	integer
+field	qthr_carr_code		type	char	4
+field	qthr_carr_area		type	char	2
+field	qthr_no_kgs			type	float
+field	qthr_pri_type		type	char	1
+field	qthr_sman_code		type	char	2
+field	qthr_sell_terms		type	char	3
+field	qthr_pay_term		type	char	40
+field	qthr_freight		type	money
+field	qthr_sos			type	char	1
+field	qthr_exch_rate		type	double
+field	qthr_fix_exch		type	char	1
+field	qthr_cont_name		type	char	20
+field	qthr_cont_phone		type	char	15
+field	qthr_pos_code		type	char	3
+field	qthr_del_name		type	char	40
+field	qthr_del_add1		type	char	40
+field	qthr_del_add2		type	char	40
+field	qthr_del_add3		type	char	40
+field	qthr_del_add4		type	char	40
+field	qthr_comm1			type	char	20
+field	qthr_comm2			type	char	20
+field	qthr_comm3			type	char	20
+field	qthr_salute			type	char	40
+field	qthr_status			type	char	2
+field	qthr_stat_flag		type	char	1
+field	qthr_place_ord		type	char	1
+field	qthr_reas_code		type	char	3
+field	qthr_reas_desc		type	char	30
+field	qthr_comp_code		type	char	3
+field	qthr_comp_name		type	char	30
+field	qthr_dbt_name		type	char	40
+field	qthr_del_date		type	date
+field	qthr_misc_charge1	type	money
+field	qthr_misc_charge2	type	money
+field	qthr_misc_charge3	type	money
+field	qthr_qt_value		type	money
+field	qthr_qt_profit_cur	type	money
+field	qthr_qt_profit_pc	type	float
+field	qthr_prt_name		type	char	15
+field	timestamp			type	long
+field	qthr_id_no			type	composite
+			qthr_co_no,
+			qthr_br_no,
+			qthr_hhcu_hash,
+			qthr_quote_no		index
+field	qthr_id_no2         type	composite
+			qthr_co_no,
+			qthr_br_no,
+			qthr_quote_no		index
+field	qthr_id_no3         type	composite
+			qthr_co_no,
+			qthr_br_no,
+			qthr_status,
+			qthr_hhcu_hash,
+			qthr_hhqt_hash		index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		qthr_co_no			-	Company Number.
+		qthr_br_no			-	Branch Number.
+		qthr_quote_no		-	Quotation Number.
+		qthr_quote_src		-	Quotation Source.	(link to qrsr)
+		qthr_cont_no		-	Contract Number.
+		qthr_hhcu_hash		-	Link to customer master file (cumr)
+		qthr_hhqt_hash		-	Unique serial hash for quote.
+		qthr_enq_ref		-	Quotation reference.
+		qthr_op_id			-	Operator id.
+		qthr_time_create	-	Time created.
+		qthr_date_create	-	Date Created.
+		qthr_expire_date	-	Expiry date
+		qthr_dt_fst_call	-	Date of First Call.
+		qthr_dt_lst_call	-	Date of Last Call.
+		qthr_dt_follow_up	-	Date of next Follow up.
+		qthr_dt_quote		-	Quotation Date.
+		qthr_no_calls		-	Number of Calls received.
+		qthr_carr_code		-	Carrier Code.
+		qthr_carr_area		-	Carrier Area.
+		qthr_no_kgs			-	Number of Kgs.
+		qthr_pri_type		-	Price Type.
+		qthr_sman_code		-	Salesman Code.
+		qthr_sell_terms		-	Sell Terms.
+		qthr_pay_term		-	Payment terms.
+		qthr_freight		-	Freight.
+		qthr_sos			-	Small order surcharge.
+		qthr_exch_rate		-	Exchange rate.
+		qthr_fix_exch		-	Fixed Exchange Rate ( Y(es) N(o) )
+		qthr_cont_name		-	Contact name
+		qthr_cont_phone		-	Contact phone
+		qthr_pos_code		-	Position code.
+		qthr_del_name		-	Delivery name
+		qthr_del_add1		-	Delivery address #1
+		qthr_del_add2		-	Delivery address #2
+		qthr_del_add3		-	Delivery address #3
+		qthr_comm1			-	Comment #1
+		qthr_comm2			-	Comment #2
+		qthr_comm3			-	Comment #3
+		qthr_salute			-	Quotation Salutation.
+		qthr_status			-	Quotation Status.
+}

@@ -1,0 +1,20 @@
+General Ledger Interface Menu (GLIF)
+gl_help
+General Ledger Menu. <a> (1,2)
+menu MENUSYS/gl_master.mdf
+Maintain G/L Security. <a> (1,2)
+gl_glus_inp~
+Maintain Interface Properties. <a> (1,2)
+gl_ariface~S~
+Maintain Interface Default Accounts. <a> (1,2)
+gl_ariface~C~
+Maintain General Ledger Interface. <a> (1,2)
+gl_ariface~I~
+Maintain Recovery Codes. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/gl_recovery.mdf
+((
+quadrant(21,6)
+quadrant(46,6)
+box(14,3,52,14)
+line(15,5,51)
+))

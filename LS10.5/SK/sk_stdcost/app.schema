@@ -1,0 +1,71 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:35 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:35  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_last_cost
+	field inei_std_cost
+	field inei_date_lcost
+	field inei_std_batch
+	field inei_min_batch
+	field inei_max_batch
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_class
+	field inmr_category
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_description2
+	field inmr_quick_code
+	field inmr_costing_flag
+	field inmr_source
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_scrap_pc
+	field inmr_stat_flag
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_hhcf_hash
+	field excf_ex_rate
+	field excf_cat_desc
+	field excf_max_disc
+	field excf_min_marg
+	field excf_gp_mkup
+	field excf_item_alloc
+	field excf_no_trans
+	field excf_no_days
+	field excf_review_prd
+	field excf_stat_flag
+end
+

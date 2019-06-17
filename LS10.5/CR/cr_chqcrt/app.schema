@@ -1,0 +1,127 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:13 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:13  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_crd_date
+	field comm_stat_flag
+end
+
+table comr
+	field comr_co_no
+	field comr_nx_chq_no
+	field comr_ls_chq_no
+	field comr_pay_bover
+	field comr_pay_freq
+	field comr_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_acc_type
+	field sumr_debtor_no
+	field sumr_adr1
+	field sumr_adr2
+	field sumr_adr3
+	field sumr_adr4
+	field sumr_cont_name
+	field sumr_curr_code
+	field sumr_ctry_code
+	field sumr_pay_terms
+	field sumr_disc
+	field sumr_hold_payment
+	field sumr_fax_no
+	field sumr_pay_method
+	field sumr_bank
+	field sumr_bank_branch
+	field sumr_bank_code
+	field sumr_bank_acct_no
+	field sumr_date_opened
+	field sumr_bo_curr
+	field sumr_bo_per1
+	field sumr_bo_per2
+	field sumr_bo_per3
+	field sumr_stat_flag
+end
+
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_bank_name
+	field crbk_branch_name
+	field crbk_adr1
+	field crbk_adr2
+	field crbk_adr3
+	field crbk_adr4
+	field crbk_acct_name
+	field crbk_bank_no
+	field crbk_bank_acct_no
+	field crbk_curr_code
+	field crbk_stat_flag
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_hhsi_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_date_of_inv
+	field suin_date_posted
+	field suin_pay_date
+	field suin_gst
+	field suin_amt
+	field suin_pay_amt
+	field suin_amt_paid
+	field suin_currency
+	field suin_exch_rate
+	field suin_er_fixed
+	field suin_stat_flag
+end
+
+table suhd
+	field suhd_hhsu_hash
+	field suhd_pid
+	field suhd_cheq_no
+	field suhd_hhsp_hash
+	field suhd_narrative
+	field suhd_date_payment
+	field suhd_date_post
+	field suhd_tot_amt_paid
+	field suhd_loc_amt_paid
+	field suhd_disc_taken
+	field suhd_loc_disc_take
+	field suhd_exch_variance
+	field suhd_bank_id
+	field suhd_pay_type
+	field suhd_rem_prt
+	field suhd_stat_flag
+end
+
+table sudt
+	field sudt_hhsp_hash
+	field sudt_hhsi_hash
+	field sudt_amt_paid_inv
+	field sudt_loc_paid_inv
+	field sudt_exch_variatio
+	field sudt_exch_rate
+	field sudt_stat_flag
+end
+

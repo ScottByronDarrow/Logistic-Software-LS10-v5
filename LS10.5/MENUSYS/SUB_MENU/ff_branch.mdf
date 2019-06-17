@@ -1,0 +1,12 @@
+Focus Forecast By Branch (SUB)
+ff_reorder_hel
+Focus Forecasting Master Menu. <a> (1,1)
+menu MENUSYS/ff_master.mdf
+Print/Update Demand Forecast ( By Branch ). <a> (1,1)
+ff_demand.i~ff_bdemand~Print / Update Demand Forecast By Branch Report~
+Print Summary Demand Forecast  ( By Branch ). <a> (1,1)
+ff_dsummary~LPNO~
+Print/Generate Suggested Reorder Report ( By Branch ). <a> (1,1)
+ff_reorder.i~ff_breorder~Suggested Reorder By Branch Report~
+((
+))

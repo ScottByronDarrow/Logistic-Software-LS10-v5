@@ -1,0 +1,60 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sach,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.sach)
+|  Schema Desc  : (Sales commission Header file. )
+|----------------------------------------------------------------------
+| $Log: sch.sach,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:19  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sach 
+
+field	sach_sach_hash			type	serial				index	primary
+field	sach_hhsf_hash			type	long
+field	sach_hhcu_hash 			type	long
+field	sach_hhci_hash 			type	long				index	dups
+field	sach_hhsi_hash 			type	long				index	dups
+field	sach_inv_amt 			type	money
+field	sach_amt 				type	money
+field	sach_com_val 			type	money	
+field	sach_com_rate 			type	float	
+field	sach_sman_pos 			type	char	2	
+field	sach_sale_flag 			type	char	1	
+field	sach_status 			type	char	1	
+field	sach_id_no				type	composite
+			sach_hhsf_hash,
+			sach_hhcu_hash,
+			sach_hhci_hash									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sach_sach_hash		-	Unique serial ID generated when record added.
+	sach_hhsf_hash		-	Link to salesman master file (exsf).
+	sach_hhcu_hash 		-	Link to customer master file (cumr).
+	sach_hhci_hash 		-	Link to customer invoice file (cuin)
+	sach_hhsi_hash 		-	Link to supplier invoice file (suin)
+	sach_inv_amt		-	Invoice amount less discount but including taxes.
+	sach_amt			-	Invoice amount less discount excluding taxes.
+	sach_com_val		-	Commission to be applied to this transaction.
+	sach_com_rate		-	Commission rate of salesman at the time of 
+							this transaction
+	sach_sman_pos		-	Position of salesman at the time of this 
+							transaction.
+	sach_sale_flag		-	H = Sale was made as a Helper.
+	                        S = Sale was made as a Salesman.
+	sach_status			-	0 = To be processed.           
+						-	1 = Processed.
+						-	9 = To Delete.
+}

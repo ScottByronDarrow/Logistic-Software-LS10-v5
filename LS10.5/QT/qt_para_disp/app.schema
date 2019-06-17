@@ -1,0 +1,38 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:12:48 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:12:48  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/04/05 04:38:20  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to adjust screen to look better with LS10-GUI
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table qtlh
+	field qtlh_co_no
+	field qtlh_par_code
+	field qtlh_par_desc
+	field qtlh_hhlh_hash
+end
+
+table qtld
+	field qtld_hhlh_hash
+	field qtld_line_no
+	field qtld_desc
+end
+

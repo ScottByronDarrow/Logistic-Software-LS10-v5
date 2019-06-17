@@ -1,0 +1,55 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.xmle,v 5.2 2001/07/25 01:15:52 scott Exp $
+|  Schema Name  : (sch.xmle)
+|  Schema Desc  : (XML Error file.)      
+|----------------------------------------------------------------------
+| $Log: sch.xmle,v $
+| Revision 5.2  2001/07/25 01:15:52  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:35  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.1  2001/05/14 05:42:22  scott
+| Updated to add new file sch.xmle
+| Updated to add new fields to pcms
+|
+|=====================================================================}
+file	xmle
+
+field	xmle_program			type	char	20
+field	xmle_date_err			type	edate
+field	xmle_time_err			type	char	5
+field	xmle_user_name			type	char	14
+field	xmle_desc_1				type	char	60
+field	xmle_desc_2				type	char	60
+field	xmle_desc_3				type	char	60
+field	xmle_desc_4				type	char	60
+field	xmle_status				type	char    1
+field	xmle_stat_flag			type	char	1
+field	xmle_id_no				type	composite
+			xmle_program,
+			xmle_date_err,
+			xmle_time_err,
+			xmle_user_name								index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	xmle_program		-	Program Name
+	xmle_date			-	Error date
+	xmle_time			-	Error time
+	xmle_user			-	User
+	xmle_desc_1			-	Error Description #1
+	xmle_desc_2			-	Error Description #1
+	xmle_desc_3			-	Error Description #1
+	xmle_desc_4			-	Error Description #1
+	xmle_status			-	Status
+								N)ew
+								R(ead
+								D(elete
+	xmle_stat_flag		-	Spare status flag.
+}

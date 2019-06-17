@@ -1,0 +1,44 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/02/22 05:13:23 kaarlo Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/02/22 05:13:23  kaarlo
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+end
+
+table somc
+	field somc_co_no
+	field somc_br_no
+	field somc_active
+	field somc_start_seq
+	field somc_end_seq
+	field somc_stat_flag
+end
+
+table somi
+	field somi_co_no
+	field somi_br_no
+	field somi_inv_no
+end
+

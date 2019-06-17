@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.trzm,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.trzm)
+|  Schema Desc  : (TRansport Zone Maintenance.	 )
+|----------------------------------------------------------------------
+| $Log: sch.trzm,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:36  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	trzm
+
+field	trzm_co_no			type	char	2
+field	trzm_br_no			type	char	2
+field	trzm_del_zone		type	char	6
+field	trzm_desc			type	char	40
+field	trzm_dflt_chg		type	double
+field	trzm_chg_kg			type	double
+field	trzm_trzm_hash		type	serial					index
+field	trzm_id_no			type	composite
+			trzm_co_no,
+			trzm_br_no,
+			trzm_del_zone 									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	trzm_co_no			-	Company Number. 
+	trzm_br_no			-	Branch Number.
+	trzm_del_zone		-	Delivery Zone Code.
+	trzm_desc			-	Delivery Zone Description
+	trzm_dflt_chg		-	Default Delivery Zone Charge. (Per Trip)
+	trzm_chg_kg			-	Default Delivery Zone Charge. (Per Kg)
+	trzm_trzm_hash		-	Unique Serial Hash.
+}

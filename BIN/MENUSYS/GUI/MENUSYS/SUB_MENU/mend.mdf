@@ -1,0 +1,20 @@
+Month End Processing. (SUB)
+mend_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Close Module For End Of Month. <ERROR> (1,1)
+chain~warning "Month End Closes."~modsel~
+Print month check lists. <a> (1,1)
+mend_prt~LPNO~
+Generate Month End Processing Files. <a> (1,1)
+chain~warning "Month end processing scripts."~mend_gen~
+Display Status For Debtors Month End. <a> (1,1)
+mend_disp~DB~
+Display Status For Creditors Month End. <a> (1,1)
+mend_disp~CR~
+Display Status For Inventory Month End. <a> (1,1)
+mend_disp~SK~
+Display Status For General Ledger Month End. <a> (1,1)
+mend_disp~GL~
+((
+))

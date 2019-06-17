@@ -1,0 +1,171 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:18:15 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:18:15  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:39:33  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:40  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_inv_date
+end
+
+table comr
+	field comr_co_no
+	field comr_co_name
+	field comr_co_short_name
+	field comr_co_adr1
+	field comr_co_adr2
+	field comr_co_adr3
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+	field esmr_adr1
+	field esmr_adr2
+	field esmr_adr3
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_hhlo_hash
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_whse_add1
+	field ccmr_whse_add2
+	field ccmr_whse_add3
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_std_uom
+	field inmr_category
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_outer_size
+	field inmr_bo_flag
+	field inmr_dec_pt
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_location
+end
+
+table ithr
+	field ithr_co_no
+	field ithr_type
+	field ithr_del_no
+	field ithr_hhit_hash
+	field ithr_iss_sdate
+	field ithr_iss_date
+	field ithr_rec_date
+	field ithr_tran_ref
+	field ithr_op_id
+	field ithr_time_create
+	field ithr_date_create
+	field ithr_cons_no
+	field ithr_carr_code
+	field ithr_carr_area
+	field ithr_no_cartons
+	field ithr_frt_cost
+	field ithr_no_kgs
+	field ithr_full_supply
+	field ithr_printed
+	field ithr_stat_flag
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+	field itln_i_hhcc_hash
+	field itln_r_hhcc_hash
+	field itln_hhum_hash
+	field itln_serial_no
+	field itln_tran_ref
+	field itln_qty_order
+	field itln_qty_border
+	field itln_qty_rec
+	field itln_cost
+	field itln_duty
+	field itln_stock
+	field itln_status
+	field itln_due_date
+	field itln_item_desc
+	field itln_stat_flag
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table sokt
+	field sokt_co_no
+	field sokt_hhbr_hash
+	field sokt_line_no
+	field sokt_mabr_hash
+	field sokt_matl_qty
+	field sokt_due_date
+	field sokt_bonus
+end
+
+table sokd
+	field sokd_co_no
+	field sokd_type
+	field sokd_hhbr_hash
+	field sokd_line_no
+	field sokd_text
+end
+
+table itlo
+	field itlo_itff_hash      
+	field itlo_pr_line        
+	field itlo_line_no        
+	field itlo_location       
+	field itlo_i_uom          
+	field itlo_qty            
+	field itlo_l_cnv_fct      
+end

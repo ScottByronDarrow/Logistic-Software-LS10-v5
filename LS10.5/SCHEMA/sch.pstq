@@ -1,0 +1,71 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pstq,v 5.1 2002/05/07 02:49:36 scott Exp $
+|  Schema Name  : (sch.pstq)
+|  Schema Desc  : (Production Scheduling Temporary Queue. )
+|----------------------------------------------------------------------
+| $Log: sch.pstq,v $
+| Revision 5.1  2002/05/07 02:49:36  scott
+| Updates for new archiving system
+|
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:17  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pstq
+
+field	pstq_hhqm_hash			type	long
+field	pstq_hhrs_hash			type	long
+field	pstq_hhwo_hash			type	long			index	dups
+field	pstq_seq_no			type	int
+field	pstq_line_no			type	int
+field	pstq_st_date			type	edate
+field	pstq_st_time			type	long
+field	pstq_setup			type	long
+field	pstq_run			type	long
+field	pstq_clean			type	long
+field	pstq_can_split			type	char	1
+field	pstq_stat_flag			type	char	1
+
+field	pstq_id_no			type	comp
+		pstq_hhqm_hash,
+		pstq_hhrs_hash,
+		pstq_st_date,
+		pstq_st_time					index	dups
+
+field	pstq_id_no2			type	comp
+		pstq_hhqm_hash,
+		pstq_hhrs_hash,
+		pstq_hhwo_hash,
+		pstq_seq_no,
+		pstq_line_no					index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pstq_hhqm_hash			- Link->pcqm (Model Control File)
+	pstq_hhrs_hash			- Link->rgrs 
+	pstq_hhwo_hash			- Link->pcwo
+	pstq_seq_no			- Routing sequence number
+	pstq_line_no			- Unique Line Number Within Sequence.
+	pstq_st_date			- Start date
+	pstq_st_time			- Start time
+	pstq_setup			- Setup time
+	pstq_run			- Run time
+	pstq_clean			- Clean time
+	pstq_can_split			- Y : This record IS 'splittable'
+					- N : This record ISN'T 'splittable'
+	pstq_stat_flag			- A : Sequence complete, use actuals
+					  E : Sequence incomplete, use estimates
+}

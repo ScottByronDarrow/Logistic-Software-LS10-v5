@@ -1,0 +1,96 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/02/26 06:42:03 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/02/26 06:42:03  scott
+#	Updated to convert to app.schema + clean code.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_dbt_date
+	field comm_fiscal
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_area_code
+	field cumr_sman_code
+	field cumr_stat_flag
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_stat_flag
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+
+table sale
+	field sale_key
+	field sale_category
+	field sale_sman
+	field sale_area
+	field sale_ctype
+	field sale_dbt_no
+	field sale_year_flag
+	field sale_period
+	field sale_units
+	field sale_gross
+	field sale_cost_sale
+	field sale_disc
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+	field exsf_stat_flag
+end
+
+table cudp
+	field cudp_co_no
+	field cudp_br_no
+	field cudp_dp_no
+	field cudp_dp_name
+	field cudp_stat_flag
+end
+
+table sasr
+	field sasr_co_no
+	field sasr_start_cat
+	field sasr_end_cat
+	field sasr_stat_flag
+end
+

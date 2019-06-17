@@ -1,0 +1,10 @@
+SOP Forward Order Functions. (SUB)
+so_help
+Sales Order Master Menu. <a> (1,1)
+menu MENUSYS/so_master.mdf
+Fwd Order Release.(Selective) <a> (1,1)
+so_fwd_rel~M~
+Fwd Order Release (All Due). <a> (1,1)
+so_fwd_rel~D~
+((
+))

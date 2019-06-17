@@ -1,0 +1,67 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmsl,v 5.1 2001/12/03 02:06:07 scott Exp $
+|  Schema Name  : (sch.tmsl)
+|  Schema Desc  : (Tele-Marketing Script Line file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmsl,v $
+| Revision 5.1  2001/12/03 02:06:07  scott
+| Updated to add new fields for containers.
+|
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:34  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:53  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmsl
+
+field	tmsl_hhsh_hash			type	long
+field	tmsl_prmpt_no			type	int
+field	tmsl_desc				type	char	30
+field	tmsl_text1				type	char	72
+field	tmsl_text2				type	char	72
+field	tmsl_text3				type	char	72
+field	tmsl_text4				type	char	72
+field	tmsl_text5				type	char	72
+field	tmsl_text6				type	char	72
+field	tmsl_text7				type	char	72
+field	tmsl_rep1_desc			type	char	20
+field	tmsl_rep2_desc			type	char	20
+field	tmsl_rep3_desc			type	char	20
+field	tmsl_rep4_desc			type	char	20
+field	tmsl_rep5_desc			type	char	20
+field	tmsl_rep6_desc			type	char	20
+field	tmsl_rep7_desc			type	char	20
+field	tmsl_rep8_desc			type	char	20
+field	tmsl_rep1_goto			type	int
+field	tmsl_rep2_goto			type	int
+field	tmsl_rep3_goto			type	int
+field	tmsl_rep4_goto			type	int
+field	tmsl_rep5_goto			type	int
+field	tmsl_rep6_goto			type	int
+field	tmsl_rep7_goto			type	int
+field	tmsl_rep8_goto			type	int
+field	tmsl_stat_flag			type	char	1
+field	tmsl_id_no				type	composite
+			tmsl_hhsh_hash,
+			tmsl_prmpt_no								index	primary
+end
+{
+              -------------------------------------
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+              -------------------------------------
+	tmsl_hhsh_hash		-	Link to tmsh (Script header)
+	tmsl_prmpt_no		-	Prompt number.
+	tmsl_desc			-	Prompt description
+	tmsl_text(x)		-	Text lines 1 - 7.
+	tmsl_rep(x)_desc	-	Description of goto No(s) 1 - 8.
+	tmsl_rep(x)_goto	- 	Go to number.
+	tmsl_stat_flag		-	Spare status flag.
+}

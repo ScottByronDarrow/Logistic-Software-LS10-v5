@@ -1,0 +1,66 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glbh,v 5.1 2001/07/25 01:15:51 scott Exp $
+|  Schema Name  : (sch.glbh)
+|  Schema Desc  : (General Ledger batch control file header. )
+|----------------------------------------------------------------------
+| $Log: sch.glbh,v $
+| Revision 5.1  2001/07/25 01:15:51  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:13  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:41  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	glbh
+
+field	glbh_co_no			type	char	2
+field	glbh_br_no			type	char	2
+field	glbh_jnl_type		type	char	2
+field	glbh_batch_no		type	char	10
+field	glbh_hhbh_hash		type	serial					index
+field	glbh_user			type	char	8
+field	glbh_date			type	edate
+field	glbh_time			type	char	5
+field	glbh_stat_flag		type	char	1
+field	glbh_mth			type	integer
+field	glbh_other_module	type	integer
+field	glbh_id_no			type	composite
+			glbh_co_no,
+			glbh_br_no,
+			glbh_jnl_type,
+			glbh_batch_no									index
+field	glbh_id_no2			type	composite
+			glbh_co_no,
+			glbh_br_no,
+			glbh_batch_no									index	dups
+field	glbh_id_no3			type	composite
+			glbh_co_no,
+			glbh_jnl_type,
+			glbh_batch_no									index	dups
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glbh_co_no			- Company Number
+	glbh_br_no			- Branch Number
+	glbh_jnl_type		- Journal type (ex gljc)
+	glbh_batch_no		- Batch Number
+	glbh_hhbh_hash		- Serial
+	glbh_user			- User Login Name who create the batch
+	glbh_date			- Date create
+	glbh_time			- Time create
+	glbh_stat_flag		- Status flag (P = Posted)
+	glbh_mth			- Module month
+	glbh_other_module	- From other module?
+}

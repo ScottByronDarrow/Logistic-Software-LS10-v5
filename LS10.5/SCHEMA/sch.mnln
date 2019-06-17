@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.mnln,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.mnln)
+|  Schema Desc  : (Menu System Menu Line File )
+|----------------------------------------------------------------------
+| $Log: sch.mnln,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:01  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	mnln
+
+field	mnln_hhmn_hash			type	long
+field	mnln_hhln_hash			type	serial
+field	mnln_line_no			type	int
+field	mnln_id_no			type	comp
+		mnln_hhmn_hash,
+		mnln_line_no					index	primary
+field	mnln_description		type	char	60
+field	mnln_prog_call			type	char	160
+field	mnln_quad			type	int
+field	mnln_line_space			type	int
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	mnln_hhmn_hash		-	Link from mnhr file
+	mnln_hhln_hash		-	Unique hash.
+	mnln_line_no		-	Unique line number for this hash
+	mnln_description	-	On-screen description for this p/gram.
+	mnln_prog_call		-	Command-line called by this menu entry.
+	mnln_quad		-	Quadrant to use for this menu entry.
+	mnln_line_space		-	Line-spacing (1=Single, 2=double)
+}

@@ -1,0 +1,73 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.lrph,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.lrph)
+|  Schema Desc  : (LRP history file)
+|----------------------------------------------------------------------
+| $Log: sch.lrph,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:00  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:34  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file lrph 
+
+field	lrph_hhwh_hash		type	long		index	dups
+field	lrph_curr_sel		type	char	1
+field	lrph_prev_sel		type	char	1
+field	lrph_a_actual		type	float
+field	lrph_a_forecast		type	float
+field	lrph_a_wks_dem		type	float
+field	lrph_a_sqr_err		type	float
+field	lrph_a_pc_err		type	float
+field	lrph_b_actual		type	float
+field	lrph_b_forecast		type	float
+field	lrph_b_wks_dem		type	float
+field	lrph_b_sqr_err		type	float
+field	lrph_b_pc_err		type	float
+field	lrph_c_actual		type	float
+field	lrph_c_forecast		type	float
+field	lrph_c_wks_dem		type	float
+field	lrph_c_sqr_err		type	float
+field	lrph_c_pc_err		type	float
+field	lrph_d_actual		type	float
+field	lrph_d_forecast		type	float
+field	lrph_d_wks_dem		type	float
+field	lrph_d_sqr_err		type	float
+field	lrph_d_pc_err		type	float
+end
+{
+              =====================================
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              =====================================
+	lrph_hhwh_hash		-	Link to warehouse record (incc_hhwh_hash)
+	lrph_curr_sel		-	Current method selection.
+	lrph_prev_sel		-	Previous method selection 
+	lrph_a_actual		-	Method (A) actual
+	lrph_a_forecast		-	Method (A) forecast
+	lrph_a_wks_dem		-	Method (A) weeks demand
+	lrph_a_sqr_err		-	Method (A) square root error
+	lrph_a_pc_err		-	Method (A) percentage error
+	lrph_b_actual		-	Method (B) actual
+	lrph_b_forecast		-	Method (B) forecast
+	lrph_b_wks_dem		-	Method (B) weeks demand
+	lrph_b_sqr_err		-	Method (B) square root error
+	lrph_b_pc_err		-	Method (B) percentage error
+	lrph_c_actual		-	Method (C) actual
+	lrph_c_forecast		-	Method (C) forecast
+	lrph_c_wks_dem		-	Method (C) weeks demand
+	lrph_c_sqr_err		-	Method (C) square root error
+	lrph_c_pc_err		-	Method (C) percentage error
+	lrph_d_actual		-	Method (D) actual
+	lrph_d_forecast		-	Method (D) forecast
+	lrph_d_wks_dem		-	Method (D) weeks demand
+	lrph_d_sqr_err		-	Method (D) square root error
+	lrph_d_pc_err		-	Method (D) percentage error
+}

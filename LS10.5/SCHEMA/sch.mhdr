@@ -1,0 +1,97 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.mhdr,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.mhdr)
+|  Schema Desc  : (Machine History Detail Record File. )
+|----------------------------------------------------------------------
+| $Log: sch.mhdr,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:00  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file mhdr 
+
+field	mhdr_co_no				type	char 	2	index	dups
+field	mhdr_hhcc_hash			type	long
+field	mhdr_hhbr_hash			type	long		index	dups
+field	mhdr_serial_no			type	char 	25	index	dups
+field	mhdr_model_code			type	char	6	index	dups
+field	mhdr_prod_gp			type	char	12	index	dups
+field	mhdr_chasis_no			type	char	20
+field	mhdr_mfg_pur_date		type	edate
+field	mhdr_spec1				type	char	4
+field	mhdr_spec2				type	char	4
+field	mhdr_spec3				type	char	4
+field	mhdr_spec4				type	char	4
+field	mhdr_spec5				type	char	4
+field	mhdr_spec6				type	char	4
+field	mhdr_spec7				type	char	4
+field	mhdr_spec_det_1			type	char	60
+field	mhdr_spec_det_2			type	char	60
+field	mhdr_order_no			type	char	16
+field	mhdr_order_date			type	edate
+field	mhdr_sell_date			type	edate
+field	mhdr_hhcu_hash			type	long		index	dups
+field	mhdr_cust_type			type	char	3
+field	mhdr_cust_area			type	char	2
+field	mhdr_rep_no				type	char	2
+field	mhdr_inv_no				type	char	8
+field	mhdr_cost_nzd			type	money
+field	mhdr_val_nzd			type	money
+field	mhdr_war_no				type	char	6
+field	mhdr_war_exp			type	edate
+field	mhdr_war_cost			type	money
+field	mhdr_ex_war_cost		type	money
+field	mhdr_lst_ser_date		type	edate
+
+field	mhdr_serial_id			type	composite
+			mhdr_co_no,
+			mhdr_hhcc_hash,
+			mhdr_hhbr_hash,
+			mhdr_serial_no   									index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	mhdr_co_no		-	Company number.
+	mhdr_hhcc_hash		-	Link to ccmr ( ccmr_hhcc_hash )
+	mhdr_hhbr_hash		-	Link to inmr ( inmr_hhbr_hash )
+	mhdr_serial_no		-	Serial number. 
+	mhdr_model_code		-	Model Code.
+	mhdr_prod_gp		-	Product Group.
+	mhdr_chasis_no		-	Chasis number.
+	mhdr_mfg_pur_date	-	Manufacture Date.
+	mhdr_spec1		-	Specification #1
+	mhdr_spec2		-	Specification #2
+	mhdr_spec3		-	Specification #3
+	mhdr_spec4		-	Specification #4
+	mhdr_spec5		-	Specification #5
+	mhdr_spec6		-	Specification #6
+	mhdr_spec7		-	Specification #7
+	mhdr_spec_det_1		-	Specification Detail notes line #1
+	mhdr_spec_det_2		-	Specification Detail notes line #2
+	mhdr_order_no		-	Order number.
+	mhdr_order_date		-	Order Date.
+	mhdr_sell_date		-	Sale date.
+	mhdr_hhcu_hash		-	Link to cumr ( cumr_hhcu_hash )
+	mhdr_cust_type		-	Customer type.
+	mhdr_cust_area		-	Customer Area.
+	mhdr_rep_no		-	Rep number.
+	mhdr_inv_no		-	Invoice No.
+	mhdr_cost_nzd		-	Cost in local currency.
+	mhdr_val_nzd		-	Value in local currency.
+	mhdr_war_no		-	Warrenty number.
+	mhdr_war_exp		-	Warrenty Expiry Date.
+	mhdr_war_cost		-	Warrenty Cost.
+	mhdr_ex_war_cost	-	Warrenty Extention Cost.
+	mhdr_lst_ser_date	-	Last Service Date.
+}

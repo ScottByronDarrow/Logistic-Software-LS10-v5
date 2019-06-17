@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.opts,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.opts)
+|  Schema Desc  : (System options menu (used sk_alldisp etc))
+|----------------------------------------------------------------------
+| $Log: sch.opts,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:01  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file opts 
+
+field	opts_access_code		type	char	8
+field	opts_prog_name			type	char	14
+field	opts_option_no			type	int	
+field	opts_key				type	char	30
+field	opts_id_no				type	comp
+			opts_prog_name,
+			opts_access_code,
+			opts_option_no,
+			opts_key									index	dups
+field	opts_allowed			type	char	1
+field	opts_key_desc			type	char	60
+end
+{
+			  +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+			  +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		opts_access_code	-	User log name.
+		opts_prog_name		-	Program name.
+		opts_option_no		-	Seq number.
+		opts_key			-	Ring Menu keys.
+		opts_allowed		-	Y(es) option allowed, N(o) option not allowed.
+		opts_key_desc		-	Key Description.
+}

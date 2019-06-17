@@ -1,0 +1,11 @@
+#
+#   Oracle 7.3.4
+#
+
+CC 			=	gcc -Wall -DORA734
+
+DBIFLIB		=	-lora7dbif${VERSION}
+DBASELIB	=	-L${ORACLE_HOME}/lib -lclient -lsqlnet -lepc -lncr \
+				-lsqlnet -lcv6 -lcommon -lgeneric -lcore3 -lnlsrtl3 \
+				-lcore3 -lnlsrtl3 \
+				-L${INFORMIXDIR}/lib -lisam

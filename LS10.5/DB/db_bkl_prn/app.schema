@@ -1,0 +1,98 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/19 02:37:01 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/19 02:37:01  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_dbt_date
+end
+
+table blhd
+	field blhd_co_no
+	field blhd_bank_id
+	field blhd_hhbl_hash
+	field blhd_nx_lodge_no
+	field blhd_stat_flag
+end
+
+table bldt
+	field bldt_bldt_hash
+	field bldt_hhbl_hash
+	field bldt_lodge_no
+	field bldt_rec_type
+	field bldt_lodge_date
+	field bldt_lodge_time
+	field bldt_hhcu_hash
+	field bldt_dbt_name
+	field bldt_bank_code
+	field bldt_branch_code
+	field bldt_hhcp_hash
+	field bldt_sundry_rec
+	field bldt_bank_chg
+	field bldt_amount
+	field bldt_chq_fees
+	field bldt_bk_lcl_exch
+	field bldt_due_date
+	field bldt_posted_gl
+	field bldt_presented
+	field bldt_reconcile
+	field bldt_stat_flag
+end
+
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_bank_name
+	field crbk_curr_code
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+end
+
+table cuhd
+	field cuhd_hhcu_hash
+	field cuhd_receipt_no
+	field cuhd_type
+	field cuhd_bank_id
+	field cuhd_bank_amt
+	field cuhd_bank_exch
+	field cuhd_bank_chg
+	field cuhd_rec_type
+	field cuhd_alt_drawer
+	field cuhd_due_date
+	field cuhd_hhcp_hash
+	field cuhd_date_payment
+	field cuhd_date_posted
+	field cuhd_tot_amt_paid
+	field cuhd_loc_amt_paid
+	field cuhd_disc_given
+	field cuhd_loc_disc_give
+	field cuhd_exch_variance
+	field cuhd_lodge_flag
+	field cuhd_clear_fee
+	field cuhd_db_bank
+	field cuhd_db_branch
+	field cuhd_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_dflt_bank
+	field esmr_dbt_date
+	field esmr_stat_flag
+end
+

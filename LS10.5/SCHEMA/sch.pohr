@@ -1,0 +1,143 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pohr,v 5.1 2001/09/24 05:42:11 cha Exp $
+|  Schema Name  : (sch.pohr)
+|  Schema Desc  : (Purchase order header file. )
+|----------------------------------------------------------------------
+| $Log: sch.pohr,v $
+| Revision 5.1  2001/09/24 05:42:11  cha
+| Check in for Scott because of the changes
+| required to Number Plates.
+|
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:15  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:41  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pohr	
+
+field	pohr_co_no				type	char	2		index	dups
+field	pohr_br_no				type	char	2	
+field	pohr_type				type	char	1	
+field	pohr_hhsu_hash			type	long			index	dups
+field	pohr_pur_ord_no			type	char	15		index	dups
+field	pohr_hhpo_hash			type	serial			index
+field	pohr_hhsh_hash			type	long
+field	pohr_hhdd_hash			type	long			index	dups
+field	pohr_date_raised		type	edate
+field	pohr_due_date			type	edate
+field	pohr_conf_date			type	edate
+field	pohr_contact			type	char	40
+field	pohr_app_code			type	char	15
+field	pohr_op_id				type	char	14
+field	pohr_time_create		type	char	5
+field	pohr_date_create		type	edate
+field	pohr_req_usr			type	char	40
+field	pohr_reason				type	char	40
+field	pohr_stdin1				type	char	60
+field	pohr_stdin2				type	char	60
+field	pohr_stdin3				type	char	60
+field	pohr_delin1				type	char	60
+field	pohr_delin2				type	char	60
+field	pohr_delin3				type	char	60
+field	pohr_ship1_no			type	long
+field	pohr_ship2_no			type	long
+field	pohr_ship3_no			type	long
+field	pohr_curr_code			type	char	3
+field	pohr_curr_rate			type	double
+field	pohr_term_order			type	char	20
+field	pohr_sup_term_pay		type	char	30
+field	pohr_bnk_term_pay		type	char	30
+field	pohr_pay_date			type	edate
+field	pohr_fgn_total			type	double
+field	pohr_fgn_outstand		type	double
+field	pohr_ship_method		type	char	1
+field	pohr_drop_ship  		type	char	1
+field	pohr_status				type	char	1
+field	pohr_stat_flag			type	char	1	
+field	pohr_sup_type			type	char	1	
+field	pohr_id_no				type	composite
+			pohr_co_no,	
+			pohr_br_no,	
+			pohr_type,	
+			pohr_hhsu_hash,
+			pohr_pur_ord_no									index	primary
+field	pohr_id_no2				type	composite
+			pohr_co_no,	
+			pohr_br_no,	
+			pohr_pur_ord_no									index	dups
+field	pohr_id_no3				type	composite
+			pohr_co_no,	
+			pohr_pur_ord_no									index	dups
+field	pohr_id_no4				type	composite
+			pohr_co_no,	
+			pohr_br_no,	
+			pohr_type,	
+			pohr_hhdd_hash,
+			pohr_pur_ord_no									index	dups
+field	pohr_up_id				type	composite
+			pohr_co_no,	
+			pohr_br_no,	
+			pohr_status										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pohr_co_no			-	Company number.
+	pohr_br_no			-	Branch number.
+	pohr_type			-	Type of P/O. O(rder (Will be 'S' one day)
+	pohr_hhsu_hash		-	Link to Supplier ( sumr_hhsu_hash )
+	pohr_pur_ord_no		-	Purchase order number.
+	pohr_hhpo_hash		-	Unique purchase order hash.
+	pohr_hhsh_hash		-	Link to Shipment ( posh_hhsh_hash )
+						*** Now at line item level.
+	pohr_hhdd_hash		-	Link to Direct Delivery order (ddhr_hhdd_hash)
+	pohr_date_raised	-	Date Raised.
+	pohr_due_date		-	Due Date.
+	pohr_conf_date		-	Confirmation Date.
+	pohr_contact		-	Contact Name.
+	pohr_req_usr		-	User who requested change.
+	pohr_reason			-	Reason for change.
+	pohr_stdin1			-	Standard instruction part 1.
+	pohr_stdin2			-	                          2.
+	pohr_stdin3			-	                          3.
+	pohr_delin1			-	Delivery instruction Part 1
+	pohr_delin2			-	                          2
+	pohr_delin3			-	                          3
+	pohr_ship1_no		-	Shipment number 1   :
+	pohr_ship2_no		-	                2   : not used now
+	pohr_ship3_no		-	                3   : see poln_ship_no
+	pohr_curr_code		-	Currency Code.
+	pohr_curr_rate		-	Currency Rate.
+	pohr_term_order		-	Terms of Order.
+	pohr_sup_term_pay	-	Supplier Payment Terms.
+	pohr_bnk_term_pay	-	Bank Payment terms.
+	pohr_pay_date		-	Payment date.
+	pohr_fgn_total		-	Total FGN Dollars. ( Not now used )
+	pohr_fgn_outstand	-	Total FGN Oustanding ( Not now used )
+	pohr_ship_method	-	Shipment Method :
+								S - Sea.
+								A - Air.
+								L - Land.
+	pohr_drop_ship  	-	To indicate whether this is a drop shipment or
+							not "Y" or " "
+	pohr_status			-	Purchase order status :
+								U - Unapproved.
+								D - Deleted / Closed.
+								O - Open
+								C - Closed.
+								R - Goods Received.
+								r - Goods Over Received.
+	pohr_stat_flag		-	Spare status flag.
+	pohr_sup_type		-	Supplier's Currency Type.
+							F - foreign
+							L - ocal.
+}	

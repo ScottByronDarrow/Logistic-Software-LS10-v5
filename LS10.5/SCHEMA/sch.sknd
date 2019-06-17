@@ -1,0 +1,76 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sknd,v 5.2 2001/09/24 05:42:14 cha Exp $
+|  Schema Name  : (sch.sknd)
+|  Schema Desc  : (Goods receipts number plate Lines )
+|----------------------------------------------------------------------
+| $Log: sch.sknd,v $
+| Revision 5.2  2001/09/24 05:42:14  cha
+| Check in for Scott because of the changes
+| required to Number Plates.
+|
+| Revision 5.1  2001/08/23 11:47:53  scott
+| Updated from scotts machine
+|
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.9  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sknd	
+
+field	sknd_sknd_hash			type	serial			index	primary			
+field	sknd_sknh_hash			type	long			
+field	sknd_line_no			type	int			
+field	sknd_hhbr_hash			type	long			index	dups	
+field	sknd_hhum_hash			type	long
+field	sknd_hhcc_hash			type	long
+field	sknd_hhsu_hash			type	long			index	dups
+field	sknd_hhcu_hash			type	long			index	dups
+field	sknd_hhve_hash			type	long		
+field	sknd_hhpl_hash			type	long			index	dups
+field	sknd_cus_ord_ref		type	char	20
+field	sknd_serial_no			type	char	25
+field	sknd_qty_rec			type	float
+field	sknd_qty_return			type	float
+field	sknd_land_cst			type	double
+field	sknd_lstat_chg			type	char	1
+field	sknd_status				type	char	1
+field	sknd_edi				type	char	1
+field	sknd_id_no				type	composite
+			sknd_sknh_hash,
+			sknd_line_no 									index	
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sknd_sknd_hash		-	Unique Serial Hash
+	sknd_sknh_hash		-	Link to number plate header
+	sknd_line_no		-	Line sequence number
+	sknd_hhbr_hash		-	Link to intentory master (inmr_hhbr_hash)
+	sknd_hhum_hash		-	Link to unit of measure file (inum_hhum_hash)
+	sknd_hhcc_hash		-	Link to warehouse masker file	(ccmr_hhcc_hash)
+	sknd_hhsu_hash		-	Link to customer master file	(cumr_hhcu_hash)
+	sknd_hhcu_hash		-	Link to supplier master file	(sumr_hhsu_hash)
+	sknd_hhve_hash		-	Link to Vehicle master file.	(trve_hhve_hash)
+	sknd_hhpl_hash		-	Link to Purchase order line.	(poln_hhpl_hash)
+	sknd_serial_no		-	Serial Number
+	sknd_qty_rec		-	Quantity Received
+	sknd_land_cst		-	Landed Cost
+	sknd_lstat_chg		-	Location status change flag.
+							'0' or ' ' = as per receited.
+							'1' = status of location changed.
+	sknd_status			-	'R'eceipted, 
+							'I'ssued, 
+							To 'D'elete (this implies is has been issued)
+	sknd_edi			-	'0' = not processed
+							'1' = processed
+}

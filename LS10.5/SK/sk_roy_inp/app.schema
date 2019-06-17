@@ -1,0 +1,90 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:30 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:30  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+end
+
+table dbry
+	field dbry_co_no
+	field dbry_cr_type
+	field dbry_desc
+	field dbry_stat_flag
+end
+
+table rymr
+	field rymr_co_no
+	field rymr_code
+	field rymr_desc
+	field rymr_qty1
+	field rymr_qty2
+	field rymr_qty3
+	field rymr_qty4
+	field rymr_qty5
+	field rymr_qty6
+	field rymr_pc1
+	field rymr_pc2
+	field rymr_pc3
+	field rymr_pc4
+	field rymr_pc5
+	field rymr_pc6
+	field rymr_stat_flag
+end
+
+table ryhr
+	field ryhr_code
+	field ryhr_hhbr_hash
+	field ryhr_hhry_hash
+	field ryhr_basis
+	field ryhr_abs_amt
+	field ryhr_amt_extract
+	field ryhr_stat_flag
+end
+
+table ryln
+	field ryln_hhry_hash
+	field ryln_hhsu_hash
+	field ryln_roy_pc
+	field ryln_e_hhgl_hash
+	field ryln_t_rate
+	field ryln_t_hhgl_hash
+	field ryln_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+	field inmr_abc_code
+	field inmr_serial_item
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_ctry_code
+end
+

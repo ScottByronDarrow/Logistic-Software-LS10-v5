@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cuit,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.cuit)
+|  Schema Desc  : (Customer Specific Inventory Item File. )
+|----------------------------------------------------------------------
+| $Log: sch.cuit,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file cuit
+
+field	cuit_hhcu_hash			type	long			index	dups
+field	cuit_hhbr_hash			type	long
+field	cuit_item_no			type	char	16
+field	cuit_item_desc			type	char	40
+field	cuit_id_no				type	comp
+			cuit_hhcu_hash,
+			cuit_hhbr_hash								index
+
+field	cuit_id_no2				type	comp
+			cuit_hhcu_hash,
+			cuit_item_no								index
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cuit_hhcu_hash		-	Link to Customer master file ( cumr )
+	cuit_hhbr_hash		-	Link to Inventory master file ( inmr )
+	cuit_item_no		-	Customer specific item number.
+	cuit_item_desc		-	Customer specific item description.         
+}

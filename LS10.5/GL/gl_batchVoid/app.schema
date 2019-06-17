@@ -1,0 +1,32 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:20:59 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:20:59  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/08/08 07:28:52  scott
+#	New program to process void transactions
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_gl_date
+	field comm_fiscal
+end
+
+table glsj
+	field glsj_hhbh_hash
+	field glsj_from_dt
+	field glsj_to_dt
+	field glsj_dt_apply
+	field glsj_dt_posted
+end
+

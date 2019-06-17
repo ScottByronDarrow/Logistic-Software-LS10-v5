@@ -1,0 +1,114 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pogl,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pogl)
+|  Schema Desc  : (Goods received Line File. )
+|----------------------------------------------------------------------
+| $Log: sch.pogl,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:11  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.3  2001/01/25 06:55:41  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pogl
+
+field	pogl_hhgr_hash			type	long
+field	pogl_line_no			type	int
+field	pogl_hhgl_hash			type	serial					index
+field	pogl_hhbr_hash			type	long					index	dups
+field	pogl_hhum_hash			type	long
+field	pogl_hhcc_hash			type	long
+field	pogl_hhpl_hash			type	long					index	dups
+field	pogl_hhlc_hash			type	long
+field	pogl_hhve_hash			type	long
+field	pogl_po_number			type	char	15
+field	pogl_container			type	char	15
+field	pogl_cus_ord_ref		type	char	20
+field	pogl_serial_no			type	char	25
+field	pogl_location			type	char	10
+field	pogl_lot_no				type	char	7
+field	pogl_slot_no			type	char	7
+field	pogl_exp_date			type	edate
+field	pogl_qty_ord			type	float
+field	pogl_qty_rec			type	float
+field	pogl_qty_left			type	float
+field	pogl_pack_qty			type	float
+field	pogl_chg_wgt			type	float
+field	pogl_gross_wgt			type	float
+field	pogl_cu_metre			type	float
+field	pogl_land_cst			type	double
+field	pogl_act_cst			type	double
+field	pogl_fob_fgn_cst		type	double
+field	pogl_fob_nor_cst		type	double
+field	pogl_frt_ins_cst		type	double
+field	pogl_lcost_load			type	double
+field	pogl_duty				type	double
+field	pogl_duty_pc			type	float
+field	pogl_licence			type	double
+field	pogl_cat_code			type	char	11
+field	pogl_item_desc			type	char	40
+field	pogl_rec_date			type	edate
+field	pogl_auto_cost			type	int
+field	pogl_pur_status			type	char	1
+field	pogl_gl_status			type	char	1
+field	pogl_stat_flag			type	char	1
+field	pogl_id_no				type	composite
+			pogl_hhgr_hash,
+			pogl_line_no										index	dups
+field	pogl_id_no2				type	composite
+			pogl_hhgr_hash,
+			pogl_hhpl_hash,
+			pogl_pur_status										index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pogl_hhgr_hash		-	Link to Goods Receipt header	( pogh )
+	pogl_line_no		-	Unique gr/line number.
+	pogl_hhgl_hash		-	Unique serial hash. 
+	pogl_hhbr_hash		-	Link to Inventory master file.	( inmr )
+	pogl_hhcc_hash		-	Link to Warehouse master file.	( ccmr )
+	pogl_hhpl_hash		-	Link to P/order line file.	( poln )
+	pogl_hhlc_hash		-	Link to Licence  master file.	( polc )
+	pogl_po_number		-	Purchase order number.
+	pogl_container		-	Container Number.
+	pogl_cus_ord_ref	-	Customer Order Reference (used for 3pl)
+	pogl_serial_no		-	Serial Number.
+	pogl_location		-	Location.
+	pogl_lot_no			-	Lot Number.
+	pogl_slot_no		-	Supplier Lot number.
+	pogl_exp_date		-	Expiry Date.
+	pogl_qty_ord		-	Quantity ordered.
+	pogl_qty_rec		-	Quantity received.
+	pogl_qty_left		-	Quantity left.
+	pogl_pack_qty		-	Pack Quantity
+	pogl_chg_wgt		-	Charge Weight
+	pogl_gross_wgt		-	Gross Weight
+	pogl_cu_metre		-	Cubic Metres 
+	pogl_land_cst		-	Landed Cost.
+	pogl_act_cst		-	Actual Cost.
+	pogl_fob_fgn_cst	-	FOB FGN Cost.
+	pogl_fob_nor_cst	-	FOB LOC Cost
+	pogl_frt_ins_cst	-	Freight + Insurance Cost.
+	pogl_lcost_load		-	Landed Cost loading.
+	pogl_duty			-	Duty Amount.
+	pogl_duty_pc		-	Duty Percent.
+	pogl_licence		-	Licence Amount.
+	pogl_cat_code		-	Category Code.
+	pogl_item_desc		-	Item Description.
+	pogl_rec_date		-	Receive Date.
+	pogl_auto_cost		-	Non zero if auto costing has been performed on line.
+	pogl_pur_status		-	Purchase Status.
+	pogl_gl_status		-	Gl Purchase Status.
+	pogl_stat_flag		-	Spare Status flag.
+}

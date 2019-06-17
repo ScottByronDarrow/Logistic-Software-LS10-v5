@@ -1,0 +1,244 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:11:17 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:11:17  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:32:36  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:23:48  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table exsi
+	field exsi_co_no
+	field exsi_inst_code
+	field exsi_inst_text
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_part
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_fob_cost
+	field inis_lcost_date
+	field inis_duty
+	field inis_licence
+	field inis_sup_uom
+	field inis_pur_conv
+	field inis_min_order
+	field inis_norm_order
+	field inis_ord_multiple
+	field inis_pallet_size
+	field inis_lead_time
+	field inis_sea_time
+	field inis_air_time
+	field inis_lnd_time
+	field inis_dflt_lead
+	field inis_weight
+	field inis_volume
+	field inis_stat_flag
+end
+
+table posh
+	field posh_co_no
+	field posh_hhsh_hash
+	field posh_ship_depart
+	field posh_ship_arrive
+	field posh_csm_no
+	field posh_curr_code
+	field posh_ex_rate
+	field posh_ship_method
+	field posh_vessel
+	field posh_port
+	field posh_destination
+	field posh_doc_rec
+	field posh_doc_agent
+	field posh_neg_bol
+	field posh_bol_no
+	field posh_costing_date
+	field posh_status
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_cont_name
+	field sumr_curr_code
+	field sumr_ctry_code
+	field sumr_sic1
+	field sumr_sic2
+	field sumr_sic3
+	field sumr_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_weight
+	field inmr_outer_size
+	field inmr_duty
+	field inmr_licence
+	field inmr_stat_flag
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_type
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_hhsh_hash
+	field pohr_hhdd_hash
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhcc_hash
+	field poln_hhlc_hash
+	field poln_hhpl_hash
+	field poln_exch_rate
+	field poln_serial_no
+	field poln_fob_fgn_cst
+	field poln_fob_nor_cst
+	field poln_frt_ins_cst
+	field poln_duty
+	field poln_licence
+	field poln_lcost_load
+	field poln_land_cst
+	field poln_stat_flag
+end
+
+table posl
+	field posl_co_no
+	field posl_hhsh_hash
+	field posl_hhpl_hash
+	field posl_hhpo_hash
+	field posl_ship_qty
+	field posl_sup_price
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+end
+
+table polh
+	field polh_co_no
+	field polh_est_no
+	field polh_lic_cate
+	field polh_lic_no
+	field polh_hhlc_hash
+	field polh_ap_lic_rate
+end
+
+table podt
+	field podt_co_no
+	field podt_code
+	field podt_description
+	field podt_duty_type
+	field podt_im_duty
+end
+
+table pocf
+	field pocf_co_no
+	field pocf_code
+	field pocf_description
+end
+
+table pogd
+	field pogd_co_no
+	field pogd_hhgr_hash
+	field pogd_hhsh_hash
+	field pogd_hhpo_hash
+	field pogd_line_no
+	field pogd_category
+	field pogd_hhsu_hash
+	field pogd_invoice
+	field pogd_currency
+	field pogd_foreign
+	field pogd_exch_rate
+	field pogd_nz_value
+	field pogd_allocation
+	field pogd_cost_edit
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_inv_no
+	field suin_gst
+	field suin_amt
+	field suin_currency
+	field suin_exch_rate
+	field suin_approved
+end
+
+table insf
+	field insf_hhsf_hash
+	field insf_hhwh_hash
+	field insf_status
+	field insf_serial_no
+	field insf_location
+	field insf_exch_rate
+	field insf_fob_fgn_cst
+	field insf_fob_nor_cst
+	field insf_frt_ins_cst
+	field insf_duty
+	field insf_licence
+	field insf_lcost_load
+	field insf_land_cst
+	field insf_other_cst
+	field insf_istore_cost
+	field insf_prep_cost
+	field insf_exch_var
+	field insf_est_cost
+	field insf_act_cost
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+end
+

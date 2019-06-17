@@ -1,0 +1,16 @@
+System Maintenance of Environment Variables (SUB)
+terminals
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Maintain Environment variables. (EACH) <a> (1,1)
+env_maint~
+Maintain Environment variables. (ALL) <a> (1,1)
+set_environ~
+Print Environment variables. <a> (1,1)
+env_print~LPNO~
+Display Environment variables. <a> (1,1)
+dsp_environ~
+Updated Search Indexes. <a> (1,1)
+psl_sr_gen~
+((
+))

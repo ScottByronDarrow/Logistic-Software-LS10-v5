@@ -1,0 +1,28 @@
+Sales Order Release Functions. (SOREL)
+so_help
+Sales Order Master Menu. <a> (1,2)
+menu MENUSYS/so_master.mdf
+Single Sales Order Release. <a> (1,2)
+so_man_rel~M~R~LPNO~
+B/O Release By Item. <a> (1,1)
+so_usr_rel~
+B/O Transfer Release By Item. <a> (1,2)
+so_usr_trel~
+Selective B/O Release By Item. <a> (1,1)
+so_autorel~M~S~
+Automatic Release By Item. <a> (1,2)
+lp_chain~warning "AUTO  BACKORDER  RELEASE"~so_autorel A S~
+Selective Forward Order Release. <a> (1,1)
+so_fwd_rel~M~
+Forward Order Release (All Due). <a> (1,2)
+so_fwd_rel~D~
+Scheduled Order Release (Sing) <a> (2,1)
+lp_chain~so_sch_rel S LPNO~
+Scheduled Order Release (Mult) <a> (2,1)
+lp_chain~so_sch_rel M LPNO~
+((
+quadrant(7,6)
+quadrant(44,8)
+box(2,3,74,15)
+line(3,5,72)
+))

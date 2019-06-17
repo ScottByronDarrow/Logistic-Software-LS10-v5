@@ -1,0 +1,22 @@
+Distribution Master Menu (DIST)
+main_help
+Master Menu <a> (1,2)
+menu MENUSYS/main.mdf
+Inventory Control <a> (1,2)
+menu MENUSYS/sk_master.mdf
+Purchase Control <a> (1,2)
+menu MENUSYS/po_master.mdf
+Direct Deliveries <a> (1,2)
+menu MENUSYS/ds_process.mdf
+L.R.P. Control <a> (2,2)
+menu MENUSYS/lrp_master.mdf
+Warehouse Transfer Control <a> (2,2)
+menu MENUSYS/sk_sc_tran.mdf
+Transport Management Menu. <a> (2,2)
+menu MENUSYS/tr_master.mdf
+((
+quadrant(11,6)
+quadrant(45,8)
+box(5,3,68,10)
+line(6,5,67)
+))

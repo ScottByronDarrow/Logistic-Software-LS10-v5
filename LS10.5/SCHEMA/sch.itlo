@@ -1,0 +1,58 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.itlo,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.itlo)
+|  Schema Desc  : (Inventory Location File for transfers. )
+|----------------------------------------------------------------------
+| $Log: sch.itlo,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:59  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.3  2001/01/25 06:55:34  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file itlo 
+
+field	itlo_itff_hash			type	long
+field	itlo_pr_line			type	int
+field	itlo_line_no			type	int
+field	itlo_hhwh_hash			type	long			
+field	itlo_sknd_hash			type	long			
+field	itlo_hhum_hash			type	long
+field	itlo_hhcc_hash			type	long
+field	itlo_inlo_hash			type	long
+field	itlo_location			type	char	10	
+field	itlo_loc_type			type	char	1		
+field	itlo_loc_status			type	char	1		
+field	itlo_lot_no				type	char	7
+field	itlo_slot_no			type	char	7
+field	itlo_expiry_date		type	edate
+field	itlo_pack_qty			type	float
+field	itlo_chg_wgt			type	float
+field	itlo_gross_wgt			type	float
+field	itlo_cu_metre			type	float
+field	itlo_date_create		type	edate
+field	itlo_l_uom				type	char	4
+field	itlo_i_uom				type	char	4
+field	itlo_qty_avail			type	float
+field	itlo_qty				type	float
+field	itlo_l_cnv_fct			type	float
+field	itlo_i_cnv_fct			type	float
+field	itlo_id_no				type	comp	
+			itlo_itff_hash,
+			itlo_pr_line,
+			itlo_line_no					index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+			  SEE INLO FOR DETAILS
+}
+

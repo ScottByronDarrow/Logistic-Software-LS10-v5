@@ -1,0 +1,84 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.ifdg,v 5.0 2001/06/19 10:17:14 cha Exp $
+|  Schema Name  : (sch.ifdg)
+|  Schema Desc  : (Debtors / General Ledger Interface File. )
+|----------------------------------------------------------------------
+| $Log: sch.ifdg,v $
+| Revision 5.0  2001/06/19 10:17:14  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:46  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	ifdg
+
+field	ifdg_co_no				type	char	2
+field	ifdg_br_no				type	char	2
+field	ifdg_type				type	char	1
+field	ifdg_inv_no				type	char	8
+field	ifdg_dbt_no				type	char	6
+field	ifdg_date_inv			type	edate
+field	ifdg_pay_terms			type	char	3
+field	ifdg_narrative			type	char	20
+field	ifdg_batch_ref			type	char	5
+field	ifdg_amt_inv			type	money
+field	ifdg_amt_disc			type	money
+field	ifdg_amt_tax			type	money
+field	ifdg_amt_gst			type	money
+field	ifdg_amt_freight		type	money
+field	ifdg_gl_acc_no			type	char	16
+field	ifdg_stat_flag			type	char	1
+field	ifdg_id_no				type	composite
+			ifdg_co_no,
+			ifdg_br_no,
+			ifdg_type,
+			ifdg_inv_no					index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	ifdg_co_no			- Company No.
+				          This is held as " 1" to "99".
+	ifdg_br_no			- Branch number.
+				          This is held as " 1" to "99".
+	ifdg_inv_no			- Invoice Number.
+				          This is in user define format.
+	ifdg_type			- Transaction Type.
+				          This must be I(nvoice) or C(redit).
+	ifdg_dbt_no			- Debtor Number.
+				          Must be a valid debtors in cumr.
+	ifdg_date_of_inv	- Date of Invoice.
+				          Must be a valid date and >= current
+                                          debtors module.
+	ifdg_pay_terms		- Debtors Payment Terms. 
+					  Must be valid payment terms.
+	ifdg_narrative		- Narrative.
+	ifdg_batch_ref		- User Defined batch no.
+	ifdg_amt_inv		- Invoice / Credit Amount.
+	ifdg_amt_disc		- Discount Amount.
+	ifdg_amt_tax		- Tax Amount.
+	ifdg_amt_gst		- Gst Amount.
+	ifdg_amt_freight	- Freight Amount.
+	ifdg_gl_acc_no		- General Ledger Account No.
+				    Must be a valid G/L Account in glmr.
+	ifdg_stat_flag		- Status Flag.
+
+	Debtors Ledger Posting = 
+
+		cuin_amt  = ifgl_amt_inv + ifgl_amt_disc.
+		cuin_disc = ifgl_amt_disc.
+
+		ifgl_amt_inv include tax, gst and freight and discount.
+
+       Posting program that posts data from this file is db_iface. 
+       Data can be created directly into this file or loaded into this
+}

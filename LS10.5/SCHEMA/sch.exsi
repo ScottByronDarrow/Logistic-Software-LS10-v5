@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.exsi,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.exsi)
+|  Schema Desc  : (External Special Instructions File. )
+|----------------------------------------------------------------------
+| $Log: sch.exsi,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:38  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file exsi
+
+field	exsi_co_no				type	char	2		index	dups
+field	exsi_inst_code			type	integer			index	dups
+field	exsi_inst_text			type	char	60
+field	exsi_stat_flag			type	char	1
+field	exsi_id_no				type	comp
+		exsi_co_no,
+		exsi_inst_code									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	exsi_co_no		- 	Company number.
+	exsi_inst_code		-	Instruction code.
+	exsi_inst_text		-	Instruction Description.
+	exsi_stat_flag		- 	Spare Status flag.
+}

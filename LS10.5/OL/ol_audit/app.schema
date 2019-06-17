@@ -1,0 +1,119 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:18:16 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:18:16  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/04/23 10:44:26  scott
+#	Updated to add app.schema - removes code related to tables from program as it
+#	allows for better quality contol.
+#	Updated to perform routine maintenance to ensure standards are maintained.
+#	Updated to remove usage of old include files
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_gst_rate
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_sales_acc
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_stat_flag
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_app_inv_no
+	field cohr_hhcu_hash
+	field cohr_type
+	field cohr_cus_ord_ref
+	field cohr_ord_ref
+	field cohr_hhso_hash
+	field cohr_hhco_hash
+	field cohr_date_raised
+	field cohr_tax_code
+	field cohr_sale_code
+	field cohr_op_id
+	field cohr_gross
+	field cohr_freight
+	field cohr_insurance
+	field cohr_other_cost_1
+	field cohr_other_cost_2
+	field cohr_other_cost_3
+	field cohr_tax
+	field cohr_gst
+	field cohr_disc
+	field cohr_deposit
+	field cohr_ex_disc
+	field cohr_erate_var
+	field cohr_sos
+	field cohr_batch_no
+	field cohr_dl_name
+	field cohr_status
+	field cohr_stat_flag
+	field cohr_inv_print
+end
+
+table coln
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_hhbr_hash
+	field coln_incc_hash
+	field coln_serial_no
+	field coln_q_order
+	field coln_q_backorder
+	field coln_sale_price
+	field coln_cost_price
+	field coln_disc_pc
+	field coln_tax_pc
+	field coln_gst_pc
+	field coln_gross
+	field coln_amt_disc
+	field coln_amt_tax
+	field coln_amt_gst
+	field coln_item_desc
+	field coln_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_supercession
+	field inmr_costing_flag
+	field inmr_outer_size
+	field inmr_dec_pt
+	field inmr_stat_flag
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_closing_stock
+	field incc_stat_flag
+end
+

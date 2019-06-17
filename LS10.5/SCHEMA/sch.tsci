@@ -1,0 +1,42 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tsci,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.tsci)
+|  Schema Desc  : (Telesales Complimentary Item File )
+|----------------------------------------------------------------------
+| $Log: sch.tsci,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:36  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	tsci	
+
+field	tsci_hhbr_hash			type	long		index	dups
+field	tsci_line_no			type	int
+field	tsci_mabr_hash			type	long		index	dups
+field	tsci_comment			type	char	40
+field	tsci_stat_flag			type	char	1
+
+field	tsci_id_no			type	comp
+		tsci_hhbr_hash,
+		tsci_line_no					index	primary
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tsci_hhbr_hash			- Destination product
+	tsci_line_no			- Added for 'uniqueness'
+	tsci_mabr_hash			- Complimentary product.         
+	tsci_comment			- Comment On Complimentary Product
+	tsci_stat_flag			- Spare stat_flag                 
+}

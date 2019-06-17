@@ -1,0 +1,28 @@
+Stock Pricing Menu (SKPI)
+sk_pric
+Stock Master Menu. <a> (1,2)
+menu MENUSYS/sk_master.mdf
+Price And Delivery Enquiry <a> (1,1)
+sk_pri_enq~
+Promotional Price Enquiry <a> (1,2)
+so_pri_dsp~
+Customer Pricing Maintenance (Standard) >> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/sk_cus_prce.mdf
+Customer Pricing Maintenance (Promotional) >> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/sk_cus_prom.mdf
+Customer Discount Maintenance >> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/sk_cus_disc.mdf
+Customer Rebate Maintenance >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_crebate.mdf
+Supplier Pricing Maintenance >> <a> (1,1)
+pmenu MENUSYS/SUB_MENU/sk_sup_prce.mdf
+Supplier Discount Maintenance <a> (1,1)
+sk_sup_disc~
+Supplier Rebate Maintenance >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_srebate.mdf
+((
+quadrant(18,6)
+quadrant(44,9)
+box(12,3,54,15)
+line(13,5,53)
+))

@@ -1,0 +1,22 @@
+Focus Forecast Order Processing Menu (FFMR)
+ff_reorder_hel
+Purchase Order Master Menu. <a> (1,2)
+menu MENUSYS/po_master.mdf
+Display Reorder Information. <a> (1,2)
+ff_display~
+Input Generated Order Quantities. <a> (1,2)
+ff_poinput~
+Print Proposed Purchase Orders. <a> (1,1)
+ff_propose.i~Print Proposed Purchase Orders Report~
+Generate Purchases Orders. <a> (1,1)
+ff_pogen.i~
+Print Warehouse Replenishment report. <a> (1,1)
+ff_whrepl~Warehouse Replenishment Report~
+Maintain Future Demand. <a> (1,1)
+ff_fut_inp~
+((
+quadrant(20,6)
+quadrant(48,8)
+box(14,3,50,15)
+line(15,5,49)
+))

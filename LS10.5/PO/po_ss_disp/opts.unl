@@ -1,0 +1,12 @@
+*|po_ss_disp|1|<Supplier Status.>|Y|Display Supplier Status Screen. [ S ]|
+*|po_ss_disp|2|<Master File Details.>|Y|Display Supplier Master File. [ M ]|
+*|po_ss_disp|3|<Total Screen.>|Y|Display Supplier totals. [ T ]|
+*|po_ss_disp|4|<Invoices.>|Y|Display Supplier Invoices. [ I ]|
+*|po_ss_disp|5|<Cheques.>|Y|Display Supplier Cheques. [ C ]|
+*|po_ss_disp|6|<Cheque Exch. Details.>|Y|Display Cheque Exchange rate details. [ C ]|
+*|po_ss_disp|7|<Purchase Orders.>|Y|Display Purchase Orders. [ P ]|
+*|po_ss_disp|8|<Note Pad.>|Y|Maintain Supplier Note Pad. [ N ]|
+*|po_ss_disp|9|<Supplier Pricing.>|Y|Display Supplier Pricing. [ S ]|
+*|po_ss_disp|10|<Supplier Discounting.>|Y|Display Supplier Discounting. [ D ]|
+*|po_ss_disp|11|<P/O A&A info.>|Y|Display P/O Author / Approval details. [ P ]|
+*|po_ss_disp|12|<QA info.>|Y|Display QA Infrmation. [ Q ]|

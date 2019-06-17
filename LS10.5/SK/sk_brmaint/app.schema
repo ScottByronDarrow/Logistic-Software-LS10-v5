@@ -1,0 +1,96 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/10 06:10:45 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/10 06:10:45  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_inv_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_description2
+	field inmr_quick_code
+	field inmr_source
+	field inmr_std_uom
+	field inmr_outer_size
+	field inmr_dec_pt
+	field inmr_dflt_bom
+	field inmr_dflt_rtg
+	field inmr_eoq
+	field inmr_stat_flag
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_hhis_hash
+	field inei_avge_cost
+	field inei_last_cost
+	field inei_prev_cost
+	field inei_date_lcost
+	field inei_lpur_qty
+	field inei_min_stock
+	field inei_max_stock
+	field inei_safety_stock
+	field inei_abc_code
+	field inei_abc_update
+	field inei_std_cost
+	field inei_std_batch
+	field inei_min_batch
+	field inei_max_batch
+	field inei_prd_multiple
+	field inei_hndl_class
+	field inei_hzrd_class
+	field inei_prod_class
+	field inei_expiry_prd1
+	field inei_expiry_prd2
+	field inei_expiry_prd3
+	field inei_dflt_bom
+	field inei_dflt_rtg
+	field inei_eoq
+	field inei_last_bom
+	field inei_last_rtg
+	field inei_stat_flag
+end
+
+table pchc
+	field pchc_co_no
+	field pchc_type
+	field pchc_class
+	field pchc_desc
+end
+
+table pcpx
+	field pcpx_co_no
+	field pcpx_class
+	field pcpx_excl_class
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+

@@ -1,0 +1,18 @@
+Return of Investment Report Menu. (SUB)
+sub_menu
+Stock Reports menu. <a> (1,1)
+menu MENUSYS/sk_report.mdf
+Summary Report At Company Level <a> (1,2)
+sk_group.i~sk_rofi_summ~Return Of Investment Report~ ~C~
+Detailed Report At Company Level <a> (1,2)
+sk_group.i~sk_rofi~Return Of Investment Report~ ~C~
+Summary Report At Branch Level <a> (1,1)
+sk_group.i~sk_rofi_summ~Return Of Investment Report~ ~B~
+Detailed Report At Branch Level <a> (1,2)
+sk_group.i~sk_rofi~Return Of Investment Report~ ~B~
+Summary Report At Warehouse Level <a> (1,1)
+sk_group.i~sk_rofi_summ~Return Of Investment Report~ ~W~
+Detailed Report At Warehouse Level <a> (1,2)
+sk_group.i~sk_rofi~Return Of Investment Report~ ~W~
+((
+))

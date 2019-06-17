@@ -1,0 +1,65 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pocr,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pocr)
+|  Schema Desc  : (Currency File Record. )
+|----------------------------------------------------------------------
+| $Log: sch.pocr,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:10  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:41  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pocr	
+
+field	pocr_co_no				type	char	2	
+field	pocr_code				type	char	3	
+field	pocr_description		type	char	40	
+field	pocr_prime_unit			type	char	15	
+field	pocr_sub_unit			type	char	15	
+field	pocr_ex1_factor			type	double
+field	pocr_ex2_factor			type	double
+field	pocr_ex3_factor			type	double
+field	pocr_ex4_factor			type	double
+field	pocr_ex5_factor			type	double
+field	pocr_ex6_factor			type	double
+field	pocr_ex7_factor			type	double
+field	pocr_ldate_up			type	edate
+field	pocr_gl_ctrl_acct		type	char	16
+field	pocr_gl_exch_var		type	char	16
+field	pocr_stat_flag			type	char	1	
+field	pocr_operator			type	char	1
+field	pocr_id_no				type	composite
+			pocr_co_no,
+			pocr_code										index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pocr_co_no		-	Company Number.
+	pocr_code		-	Currency Code. 
+	pocr_description	-	Currency Description.
+	pocr_prime_unit		-	Description of prime currency unit (eg DOLLARS)
+	pocr_sub_unit		-	Description of currency sub-unit (eg CENTS)
+	pocr_ex1_factor		-	Exchange rate Current.
+	pocr_ex2_factor		-	Exchange rate + 1 month.
+	pocr_ex3_factor		-	Exchange rate + 2 month.
+	pocr_ex4_factor		-	Exchange rate + 3 month.
+	pocr_ex5_factor		-	Exchange rate + 4 month.
+	pocr_ex6_factor		-	Exchange rate + 5 month.
+	pocr_ex7_factor		-	Exchange rate + 6 month.
+	pocr_ldate_up		-	Date last updated.
+	pocr_gl_ctrl_acct	-	General Ledger Control Accout.
+	pocr_gl_exch_var	-	G/Ledger Exchange Variation Account.
+	pocr_stat_flag		-	Spare status flag.
+	pocr_operator		-	Operator to calculate currency - / or *
+}

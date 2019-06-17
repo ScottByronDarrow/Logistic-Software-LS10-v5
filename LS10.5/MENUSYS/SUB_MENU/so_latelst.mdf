@@ -1,0 +1,16 @@
+SOP - Customer Late List Options. (SUB)
+so_help
+Sales Order Reports Menu. <a> (1,1)
+menu MENUSYS/so_reports.mdf
+Print Customer late list. ( ALL ORDERS ) <a> (1,1)
+so_select.i~so_lstprt~"Customer Late List : All Orders"~S~ ~
+Print Customer late list. ( BACKORDER ) <a> (1,1)
+so_select.i~so_lstprt~"Customer Late List : Backorders"~S~B~
+Print Customer late list. ( FORWARD-ORDERS ) <a> (1,1)
+so_select.i~so_lstprt~"Customer Late List : Forward Orders"~S~F~
+Print Customer late list. ( HELD-ORDERS ) <a> (1,1)
+so_select.i~so_lstprt~"Customer Late List : Held Orders"~S~H~
+Print Customer late list. ( NEW/UNCONSOLIDATED-ORDER ) <a> (1,1)
+so_select.i~so_lstprt~"Customer Late List : New Orders"~S~M~
+((
+))

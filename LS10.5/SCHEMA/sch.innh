@@ -1,0 +1,46 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.innh,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.innh)
+|  Schema Desc  : (Inventory Note Pad Header Record. )
+|----------------------------------------------------------------------
+| $Log: sch.innh,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:31  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file innh
+
+field	innh_co_no			type	char	2
+field	innh_hhbr_hash			type	long
+field	innh_id_no			type	comp
+		innh_co_no,
+		innh_hhbr_hash					index	dups
+field	innh_hhwh_hash			type	long
+field	innh_hhnh_hash			type	serial
+field	innh_serial_no			type	char	25	index	dups
+field	innh_id_no2			type	comp
+		innh_hhbr_hash,
+		innh_serial_no					index
+field	innh_stat_flag			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	innh_co_no		-	Company number.
+	innh_hhbr_hash		-	Link to inmr ( inmr_hhbr_hash )
+	innh_hhwh_hash		-	Link to incc ( incc_hhwh_hash )
+	innh_hhnh_hash		-	Unique serial Hash. 
+	innh_serial_no		-	Serial number ( ex insf )
+	innh_stat_flag		-	Spare staus flag.
+}

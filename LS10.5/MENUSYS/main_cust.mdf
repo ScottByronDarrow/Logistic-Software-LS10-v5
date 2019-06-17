@@ -1,0 +1,35 @@
+Customer Service Menu. (CSMR)
+db_labels
+Main Menu <a|*|custsrvc> (1,2)
+menu MENUSYS/main.mdf
+Re-Print Packing Slip. <a|*|custserv|custman|pinnacle|custsrvc> (1,2)
+so_picklist~
+Display Sales Order Details <a|*|custserv|custman|pinnacle|custsrvc> (1,2)
+so_display~R~so_display.s~
+Pickup Order Despatch Confirmation. <a|*|custserv|custman|pinnacle|custsrvc> (1,2)
+so_des_conf~X~I~so_des_conf.s~LPNO~
+Article Price Enquiry. <a|*|custserv|custman|pinnacle|custsrvc> (1,2)
+sk_pri_enq~
+Restricted Stock Status Display. <a|*|custserv|custman|pinnacle|custsrvc> (1,2)
+sk_resdisp~
+Display Completed Sales Transaction. <a|*|custserv|custman|pinnacle|custsrvc> (1,2)
+so_invdisp~N~7~I~so_invoice.s~
+DDS Sales Order Release Menu. <a|*|custserv|custman|pinnacle|custsrvc> (2,2)
+menu MENUSYS/so_release.mdf
+Display Sales Order Status <a|*|custserv|custman|pinnacle|custsrvc> (2,2)
+so_sts_disp
+Sales Order Displays >> <a|*|custsrvc> (2,2)
+pmenu MENUSYS/SUB_MENU/cust_dist.mdf
+Maintain Sales Order (Testing). <a|*> (2,2)
+so_ik_maint~M~so_maint.s
+((
+quadrant(6,6)
+quadrant(46,6)
+box(1,3,76,15)
+line(2,5,75)
+HEADING_ON
+TRAILER_ON
+FAST_ON
+SUB_ON
+MENU_NAME_ON
+))

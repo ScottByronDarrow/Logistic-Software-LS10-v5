@@ -1,0 +1,65 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.poca,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.poca)
+|  Schema Desc  : (Purchase Order Costing Audit File. )
+|----------------------------------------------------------------------
+| $Log: sch.poca,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:09  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:40  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	poca	
+
+field	poca_co_no			type	char	2	
+field	poca_br_no			type	char	2	
+field	poca_type			type	char	1	
+field	poca_item_cat		type	char	11	
+field	poca_item_no		type	char	16	
+field	poca_gr_no			type	char	15
+field	poca_line_no		type	int
+field	poca_item_desc		type	char	40	
+field	poca_po_no			type	char	15
+field	poca_est_cst		type	double
+field	poca_act_cst		type	double
+field	poca_date_print		type	edate
+field	poca_status			type	char	1
+field	poca_id_no			type	composite
+			poca_co_no,
+			poca_br_no,
+			poca_type,
+			poca_item_cat,
+			poca_item_no,
+			poca_gr_no,
+			poca_line_no					index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	poca_co_no		-	Company number.
+	poca_br_no		-	Branch number.
+	poca_type		-	Type :
+							V - costing variance (> 10%)
+							X - cost of sale exceptions
+							C - actual/estimated cost variance
+	poca_item_cat	-	Item Category.
+	poca_item_no	-	Item Number.
+	poca_gr_no		-	Goods receipt number.
+	poca_line_no	-	Line number.
+	poca_item_desc	-	Item description.
+	poca_po_no		-	Purchase order no.
+	poca_est_cst	-	Estimated cost.
+	poca_act_cst	-	Actual Cost 
+	poca_date_print	-	Date printed.
+	poca_status		-	Status.
+}

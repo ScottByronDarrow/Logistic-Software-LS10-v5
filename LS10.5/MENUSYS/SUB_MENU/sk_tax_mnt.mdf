@@ -1,0 +1,12 @@
+Inventory Tax Functions Menu (SUB)
+sk_taxmnt
+Stock Maintenance Menu. <a> (1,1)
+menu MENUSYS/sk_maint.mdf
+Maintain Inventory Tax Codes. <a> (1,1)
+sk_tax_mnt~
+Update Inventory Tax Percentages By Item. <a> (1,1)
+lp_chain~sk_tax_upd LPNO I~
+Update Inventory Tax Percentages By Category. <a> (1,1)
+lp_chain~sk_tax_upd LPNO C~
+((
+))

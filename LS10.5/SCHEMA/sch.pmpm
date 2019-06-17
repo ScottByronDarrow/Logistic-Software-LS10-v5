@@ -1,0 +1,60 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pmpm,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pmpm)
+|  Schema Desc  : (Project Monitoring Project Master file. )
+|----------------------------------------------------------------------
+| $Log: sch.pmpm,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:08  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:40  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pmpm
+	
+field	pmpm_proj_no			type	char	8	index
+field	pmpm_title				type	char	40
+field	pmpm_date_entrd			type	edate
+field	pmpm_date_start			type	edate
+field	pmpm_date_end			type	edate
+field	pmpm_consultant			type	char	40
+field	pmpm_contact_name		type	char	20
+field	pmpm_dl_adr1			type	char	40
+field	pmpm_dl_adr2			type	char	40
+field	pmpm_dl_adr3			type	char	40
+field	pmpm_phone_no			type	char	15
+field	pmpm_fax_no				type	char	15
+field	pmpm_mtrl_cost			type	money
+field	pmpm_status				type	char 1
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		pmpm_proj_no		-		Project Reference Number.
+		pmpm_title			-		Project Title.
+		pmpm_date_entrd		-		Project Date 
+		pmpm_date_start		-		Project start date.
+		pmpm_date_end		-		Project end date.
+		pmpm_consultant		-		Main Consultant.
+		pmpm_contact_name	-		Contact Name.
+		pmpm_dl_adr1		-		Address part 1
+		pmpm_dl_adr2		-		Address part 2
+		pmpm_dl_adr3		-		Address part 3
+		pmpm_phone_no		-		Phone Number.
+		pmpm_fax_no			-		Fax Number.
+		pmpm_mtrl_cost		-		Estimated material costs.
+		pmpm_status			-		Project Status.
+										P(ending)
+										A(ctive)
+										W(on)
+										L(ost)
+}

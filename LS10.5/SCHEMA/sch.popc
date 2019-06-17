@@ -1,0 +1,74 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.popc,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.popc)
+|  Schema Desc  : (Purchase order / Creditors interface. )
+|----------------------------------------------------------------------
+| $Log: sch.popc,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	popc	
+
+field	popc_co_no				type	char	2	
+field	popc_hhsi_hash			type	long
+field	popc_line_no			type	int
+field	popc_hhpc_hash			type	serial		index	primary
+field	popc_hhgr_hash			type	long
+field	popc_gr_no				type	char	15
+field	popc_hhpo_hash			type	long
+field	popc_po_no				type	char	15
+field	popc_hhsh_hash			type	long
+field	popc_cat_no				type	int
+field	popc_category			type	char	20	
+field	popc_hhsu_hash			type	long
+field	popc_invoice			type	char	15	
+field	popc_currency			type	char	3
+field	popc_fgn_val			type	double
+field	popc_exch_rate			type	double
+field	popc_loc_val			type	double
+field	popc_id_no				type	composite
+			popc_hhsi_hash,
+			popc_line_no								index	dups
+field	popc_gr_id				type	composite
+			popc_co_no,
+			popc_hhgr_hash								index	dups
+field	popc_po_id				type	composite
+			popc_co_no,
+			popc_hhpo_hash								index	dups
+field	popc_sh_id				type	composite
+			popc_co_no,
+			popc_hhsh_hash								index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	popc_co_no			-	Company number.
+	popc_hhsi_hash		-	Link to suin_hhsi_hash
+	popc_line_no		-	Line number.
+	popc_hhgr_hash		-	Link to Goods Receipt file (pogh_hhgr_hash)
+	popc_gr_no			-	Goods receipt number.
+	popc_hhpo_hash		-	Link to Purchase order file (pohr_hhpo_hash)
+	popc_po_no			-	Purchase order number.
+	popc_hhsh_hash		-	Link to Goods Receipt file  (posh_hhsh_hash)
+	popc_hhpo_hash		-	Link to Purchase order file (popo_hhpo_hash)
+	popc_cat_no			-	Category number.
+	popc_category		-	Category Description.
+	popc_hhsu_hash		-	Link to Supplier file (sumr_hhsu_hash)
+	popc_invoice		-	Invoice Number.
+	popc_currency		-	Currency Code.
+	popc_fgn_val		-	Foreign Currency code.
+	popc_exch_rate		-	Exchange rate.
+	popc_loc_val		-	Local Value.
+}

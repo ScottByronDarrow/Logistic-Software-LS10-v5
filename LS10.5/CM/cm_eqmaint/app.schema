@@ -1,0 +1,46 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/01/10 09:02:10 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/01/10 09:02:10  scott
+#	Updated as first phase of contract management cleanup on it's way to becoming
+#	useable for 3PL.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_dp_no
+	field comm_dp_name
+	field comm_inv_date
+end
+
+table cmeq
+	field cmeq_co_no
+	field cmeq_eq_name
+	field cmeq_hheq_hash
+	field cmeq_desc
+	field cmeq_serial
+	field cmeq_dop
+	field cmeq_cop
+	field cmeq_inum_hash
+	field cmeq_rate
+	field cmeq_cost
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+

@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcsf,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pcsf)
+|  Schema Desc  : (Production Control Serial Tracking File. )
+|----------------------------------------------------------------------
+| $Log: sch.pcsf,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:03  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:39  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcsf	
+
+field	pcsf_hhwo_hash			type	long	
+field	pcsf_uniq_id			type	int
+field	pcsf_line_no			type	int
+field	pcsf_serial_no			type	char	25
+field	pcsf_location			type	char	10
+field	pcsf_id_no			type	composite
+		pcsf_hhwo_hash,
+		pcsf_uniq_id,
+		pcsf_line_no					index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pcsf_hhwo_hash			- Link to W/Order (pcwo)
+	pcsf_uniq_id			- UNIQUE id number.
+	pcsf_line_no			- Makes index unique.
+	pcsf_serial_no			- Item serial number.
+	pcsf_location			- Item location.
+}

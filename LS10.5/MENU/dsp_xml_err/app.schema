@@ -1,0 +1,27 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:08:16 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:08:16  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 1.1  2001/05/14 05:45:46  scott
+#	New program to display XML errors.
+#	
+#
+#
+
+table xmle
+	field xmle_program
+	field xmle_date_err
+	field xmle_time_err
+	field xmle_user_name
+	field xmle_desc_1
+	field xmle_desc_2
+	field xmle_desc_3
+	field xmle_desc_4
+	field xmle_status
+	field xmle_stat_flag
+end
+

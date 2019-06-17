@@ -1,0 +1,36 @@
+Miscellaneous Maintenance - Customers. (ARSET)
+misc_help
+Miscellaneous Menu. <a> (1,2)
+menu MENUSYS/misc.mdf
+Maintain Customer Defaults. <a> (1,2)
+psl_default~C~
+Maintain Department Master. <a> (1,2)
+dp_maint~
+Maintain Customer Types. <a> (1,1)
+ex_miscinp~EXCL~
+Maintain Contract Types. <a> (1,1)
+ex_miscinp~EXCT~
+Maintain Position Types. <a> (1,2)
+tm_orig_mnt~P~
+Maintain Cheque Types. <a> (1,2)
+ex_miscinp~CURT~
+Maintain Delivery Address(s). <a> (1,2)
+db_cdelinp~
+Maintain Bank Details. <a> (2,2)
+db_bk_inpt~C~
+Maintain Currency Details. <a> (2,2)
+po_mnt_inp~C~
+Maintain Country / Freight file. <a> (2,2)
+po_mnt_inp~F~
+Maintain Default Discounts. <a> (2,2)
+db_exdisinp~
+Maintain Statement Messages. <a> (2,2)
+db_stmtinp~S~
+Maintain Special instruction(s). <a> (2,2)
+ex_miscinp~EXSI~
+((
+quadrant(6,6)
+quadrant(42,8)
+box(1,3,76,15)
+line(2,5,75)
+))

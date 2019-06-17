@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tmdf,v 5.0 2001/06/19 10:17:33 cha Exp $
+|  Schema Name  : (sch.tmdf)
+|  Schema Desc  : (Tele-Marketing Prospect Master file. )
+|----------------------------------------------------------------------
+| $Log: sch.tmdf,v $
+| Revision 5.0  2001/06/19 10:17:33  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:33  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:50  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tmdf
+
+field	tmdf_co_no			type	char	2
+field	tmdf_type			type	char	1
+field	tmdf_fmt_name			type	char	10
+field	tmdf_fmt_desc			type	char	40
+field	tmdf_delimit			type	char	1
+field	tmdf_hhdf_hash			type	serial		index	
+field	tmdf_id_no			type	composite
+		tmdf_co_no,
+		tmdf_type,
+		tmdf_fmt_name					index 	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	tmdf_co_no		-	Company number.
+	tmdf_type		-	Type - (D)elimited / (F)ixed
+	tmdf_fmt_name		-	Default Format name
+	tmdf_delimit		-	Delimiter
+	tmdf_fmt_desc		-	Format description
+	tmdf_hhdf_hash		-	Serial field.
+}

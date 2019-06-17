@@ -1,0 +1,63 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inws,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.inws)
+|  Schema Desc  : (Inventory Warehouse Supply record. )
+|----------------------------------------------------------------------
+| $Log: sch.inws,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:58  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:33  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inws
+field	inws_hhbr_hash      type	long				index	dups
+field	inws_hhcf_hash      type	long	
+field	inws_hhcc_hash      type	long	
+field	inws_inws_hash      type	serial				index
+field	inws_sup_priority   type	char 1
+field	inws_min_order      type	float
+field	inws_norm_order     type	float
+field	inws_ord_multiple   type	float
+field	inws_pallet_size    type	float
+field	inws_weight         type	float
+field	inws_volume         type	float
+field	inws_upft_pc        type	float
+field	inws_upft_amt       type	money
+field	inws_stat_flag      type	char 1
+field	inws_id_no          type	composite
+			inws_hhbr_hash,
+			inws_hhcf_hash,
+			inws_hhcc_hash								index	dups
+field	inws_id_no2         type	composite
+			inws_hhbr_hash,
+			inws_hhcf_hash,
+			inws_sup_priority,
+			inws_hhcc_hash								index	primary
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inws_hhbr_hash		-	Link to item master file (inmr)
+	inws_hhcf_hash 		-	Link to Category Master file  (excf)
+	inws_hhcc_hash 		-	Link to warehouse master file (incc)
+	inws_inws_hash		-	Unique Serial record
+	inws_sup_priority	-	Supply prioriry
+	inws_min_order		-	Min order quantity
+	inws_norm_order		-	Normal order quantity
+	inws_ord_multiple	-	Order multiple
+	inws_pallet_size	-	Pallet size
+	inws_weight			-	Weight
+	inws_volume			-	Volume
+	inws_upft_pc		-	Uplift Percent.
+	inws_upft_amt		-	Uplift amount.
+}

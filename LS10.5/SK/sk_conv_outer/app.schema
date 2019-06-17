@@ -1,0 +1,168 @@
+table inaf
+	field inaf_co_no          
+	field inaf_br_no          
+	field inaf_wh_no          
+	field inaf_sys_date       
+	field inaf_hhbr_hash      
+	field inaf_ref1           
+	field inaf_cost_price     
+	field inaf_sale_price     
+end
+table incf
+	field incf_hhwh_hash      
+	field incf_fifo_cost      
+	field incf_act_cost       
+	field incf_fob_nor_cst    
+	field incf_frt_ins_cst    
+	field incf_duty           
+	field incf_licence        
+	field incf_lcost_load     
+	field incf_land_cst       
+end
+table inei
+	field inei_hhbr_hash      
+	field inei_avge_cost      
+	field inei_last_cost      
+	field inei_prev_cost      
+	field inei_std_cost       
+end
+table intr
+	field intr_hhbr_hash      
+	field intr_cost_price     
+	field intr_sale_price     
+end
+table poca
+	field poca_co_no          
+	field poca_br_no          
+	field poca_type           
+	field poca_item_cat       
+	field poca_item_no        
+	field poca_gr_no          
+	field poca_line_no        
+	field poca_est_cst        
+	field poca_act_cst        
+end
+pogl_hhbr_hash
+table pogl
+	field pogl_hhbr_hash      
+	field pogl_land_cst       
+	field pogl_act_cst        
+	field pogl_fob_fgn_cst    
+	field pogl_fob_nor_cst    
+	field pogl_frt_ins_cst    
+	field pogl_lcost_load     
+	field pogl_duty           
+	field pogl_licence        
+end
+table poln
+	field poln_hhbr_hash      
+	field poln_grs_fgn_cst    
+	field poln_fob_fgn_cst    
+	field poln_fob_nor_cst    
+	field poln_frt_ins_cst    
+	field poln_duty           
+	field poln_licence        
+	field poln_lcost_load     
+	field poln_land_cst       
+end
+table suph
+	field suph_hhbr_hash      
+	field suph_net_cost       
+	field suph_land_cost      
+end
+table incc
+	field incc_hhcc_hash      
+	field incc_hhbr_hash      
+	field incc_hhwh_hash      
+end
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short       
+	field comm_est_no         
+	field comm_est_name       
+	field comm_est_short      
+	field comm_cc_no          
+	field comm_cc_name        
+	field comm_cc_short       
+end
+table inmr
+	field inmr_co_no          
+	field inmr_item_no        
+	field inmr_hhbr_hash      
+	field inmr_outer_size      
+end
+
+table soln
+	field soln_hhbr_hash
+	field soln_gsale_price
+	field soln_sale_price
+	field soln_cost_price
+end
+table coln
+	field coln_hhbr_hash
+	field coln_gsale_price
+	field coln_sale_price
+	field coln_cost_price
+end
+table inpr
+	field inpr_hhbr_hash
+	field inpr_base
+	field inpr_price1
+	field inpr_price2
+	field inpr_price3
+	field inpr_price4
+	field inpr_price5
+	field inpr_price6
+	field inpr_price7
+	field inpr_price8
+	field inpr_price9
+end
+table arln
+	field arln_hhbr_hash
+	field arln_gsale_price
+	field arln_sale_price
+	field arln_cost_price
+end
+table cmrd
+	field cmrd_hhbr_hash
+	field cmrd_cost
+	field cmrd_gsale_price
+	field cmrd_sale_price
+end
+table cmtr
+	field cmtr_hhhr_hash
+	field cmtr_hhbr_hash
+	field cmtr_cost_price
+	field cmtr_sale_price
+end
+table ddln
+	field ddln_hhbr_hash
+	field ddln_gsale_price
+	field ddln_sale_price
+	field ddln_cost_price
+end
+table qtln
+	field qtln_hhbr_hash
+	field qtln_gsale_price
+	field qtln_sale_price
+	field qtln_cost_price
+end
+table qtpd
+	field qtpd_hhbr_hash
+	field qtpd_gsale_price
+	field qtpd_sale_price
+end
+table incp
+	field incp_hhbr_hash
+	field incp_price1
+	field incp_price2
+	field incp_price3
+	field incp_price4
+	field incp_price5
+	field incp_price6
+	field incp_price7
+	field incp_price8
+	field incp_price9
+end

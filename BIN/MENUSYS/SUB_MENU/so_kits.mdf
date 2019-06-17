@@ -1,0 +1,18 @@
+SOP - Kitting Menu (SUB)
+so_help
+Sales Order Master Menu. <a> (1,1)
+menu MENUSYS/so_master.mdf
+Display SOP Kits. <a> (1,1)
+so_kt_dsp~
+Print   SOP Kits. <a> (1,1)
+so_kt_prt~Print   SOP Kits.~
+Maintain Standard Kits. <a> (1,1)
+so_kt_inp~K~
+Maintain Phantom  Kits. <a> (1,1)
+so_kt_inp~B~
+Maintain Phantom P/slip  Details. <a> (1,1)
+so_kt_pdesc~
+Maintain Phantom Invoice Details. <a> (1,1)
+so_kt_idesc~
+((
+))

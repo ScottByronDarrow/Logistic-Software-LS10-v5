@@ -1,0 +1,107 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inis,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inis)
+|  Schema Desc  : (Stock Inventory Supplier Record. )
+|----------------------------------------------------------------------
+| $Log: sch.inis,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:54  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inis 
+
+field	inis_co_no			type	char	2
+field	inis_br_no			type	char	2
+field	inis_wh_no			type	char	2
+field	inis_hhbr_hash		type	long			index	dups
+field	inis_hhsu_hash		type	long			index	dups
+field	inis_sup_part		type	char	16
+field	inis_sup_priority	type	char	2
+field	inis_hhis_hash		type	serial			index
+field	inis_fob_cost		type	double
+field	inis_lcost_date		type	edate
+field	inis_duty			type	char	2
+field	inis_licence		type	char	2
+field	inis_sup_uom		type	long
+field	inis_pur_conv		type	float
+field	inis_min_order		type	float
+field	inis_norm_order		type	float
+field	inis_ord_multiple	type	float
+field	inis_pallet_size	type	float
+field	inis_lead_time		type	float
+field	inis_sea_time		type	float
+field	inis_air_time		type	float
+field	inis_lnd_time		type	float
+field	inis_dflt_lead		type	char	1
+field	inis_weight			type	float
+field	inis_volume			type	float
+field	inis_stat_flag		type	char	1
+field	inis_id_no			type	composite
+			inis_hhbr_hash,
+			inis_hhsu_hash,
+			inis_co_no,
+			inis_br_no,
+			inis_wh_no								index	dups
+field	inis_id_no2			type	composite
+			inis_hhbr_hash,
+			inis_sup_priority,
+			inis_co_no,
+			inis_br_no,
+			inis_wh_no								index	dups
+field	inis_id_no3			type	composite
+			inis_hhsu_hash,
+			inis_hhbr_hash,
+			inis_co_no,
+			inis_br_no,
+			inis_wh_no								index	dups
+field	inis_id_no4			type	composite
+			inis_hhsu_hash,
+			inis_sup_part,
+			inis_co_no,
+			inis_br_no,
+			inis_wh_no								index	dups
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inis_co_no			-	Company Number.
+	inis_br_no			-	Branch Number.
+	inis_wh_no			-	Warehouse Number.
+	inis_hhbr_hash		-	Link to Inventory master file ( inmr ).
+	inis_hhsu_hash		-	Link to Supplier Master file  ( sumr ).
+	inis_sup_part		-	Suppliers Part Number.
+	inis_sup_priority	-	Supplier Priority. 
+								C(1-9)	Company priority 1-9
+								B(1-9)	Branch priority 1-9
+								W(1-9)	Warehouse priority 1-9
+	inis_hhis_hash		-	Unique serial hash.
+	inis_fob_cost		-	Fob Cost
+	inis_lcost_date		-	Last cost date
+	inis_duty			-	Duty Code.
+	inis_licence		-	Licence Code.
+	inis_sup_uom		-	Supplier Unit Of Measure.
+	inis_pur_conv		-	Supplier Conversion 
+	inis_min_order		-	Min order quantity
+	inis_norm_order		-	Normal order quantity
+	inis_ord_multiple	-	Order Multiple.
+	inis_pallet_size	-	Pallet Size.
+	inis_lead_time		-	Lead time
+	inis_sea_time		-	Sea Lead time
+	inis_air_time		-	Air Lead time
+	inis_lnd_time		-	Land Lead time
+	inis_dflt_lead		-	Default Lead type.
+	inis_weight			-	Weight
+	inis_volume			-	Volume
+	inis_stat_flag		-	Spare status flag
+}

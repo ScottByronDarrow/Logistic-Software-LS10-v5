@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcli,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pcli)
+|  Schema Desc  : (Labour Item File. )
+|----------------------------------------------------------------------
+| $Log: sch.pcli,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:02  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:38  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcli	
+
+field	pcli_co_no			type	char	2
+field	pcli_code_no			type	char	10
+field	pcli_id_no			type	composite
+		pcli_co_no,
+		pcli_code_no					index	primary
+field	pcli_code_desc			type	char	35
+field	pcli_type			type	char	1
+field	pcli_rate			type	money
+field	pcli_dept_no			type	char	2
+field	pcli_hhli_hash			type	serial		index
+field	pcli_id_no2			type	composite
+		pcli_co_no,
+		pcli_hhli_hash					index
+
+end

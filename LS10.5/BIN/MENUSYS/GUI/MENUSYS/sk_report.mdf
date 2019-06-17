@@ -1,0 +1,34 @@
+Stock Reports Menu (SKPR)
+sk_rep
+Stock Menu. <a> (1,2)
+menu MENUSYS/sk_master.mdf
+Stock Valuations Menu. <a> (1,2)
+menu MENUSYS/sk_value.mdf
+Stock Exceptions Reports. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_except.mdf
+Price List Reports. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_ctr_pr.mdf
+Print/Update ABC Codes. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_abc.mdf
+Print Supercession/Alt Items. <a> (1,2)
+BACK~sk_superprn~LPNO~
+Print Controlled Drugs Report. <a> (1,2)
+sk_cdrg_inp~Controlled Drugs Report.~123456789D~
+Stock Location Reports. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_loc.mdf
+Print Top Items Report. <a> (2,2)
+sk_top_fif~"Top Items Report"~
+Stock Movements Reports. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_move.mdf
+Return Of Investment Reports. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_rofi.mdf
+User Specified Stock Reports. <ERROR> (2,2)
+std_report~I~
+Miscellaneous Reports. >> <a> (2,2)
+pmenu MENUSYS/SUB_MENU/sk_rp_misc.mdf
+((
+quadrant(7,6)
+quadrant(43,8)
+box(1,3,76,15)
+line(2,5,75)
+))

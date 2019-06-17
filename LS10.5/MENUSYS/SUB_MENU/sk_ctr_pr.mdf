@@ -1,0 +1,18 @@
+Price Lists Menu. (SUB)
+sub_menu
+Stock Reports menu. <a> (1,1)
+menu MENUSYS/sk_report.mdf
+Retail Price List (Normal). <a> (1,1)
+sk_group.i~sk_mr_npri~Retail Price List (Normal)~ ~
+Retail Price List (Serial Items). <a> (1,1)
+sk_group.i~sk_mr_spri~Retail Price List (Serial)~ ~
+Counter Price List By Branch. <a> (1,1)
+sk_group.i~sk_ctrprilst~BRANCH COUNTER PRICE LIST~B~
+Counter Price List By Warehouse. <a> (1,1)
+sk_group.i~sk_ctrprilst~WAREHOUSE COUNTER PRICE LIST~W~
+Master  Price List By Branch. <a> (1,1)
+sk_group.i~sk_mstprilst~BRANCH MASTER PRICE LIST~B~
+Master  Price List By Warehouse. <a> (1,1)
+sk_group.i~sk_mstprilst~WAREHOUSE MASTER PRICE LIST~W~
+((
+))

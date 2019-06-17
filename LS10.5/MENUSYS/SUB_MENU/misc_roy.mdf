@@ -1,0 +1,16 @@
+Royalty Maintenance (SUB)
+misc_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Maintain Customer Royalty Class. <a> (1,1)
+db_rtype_inp~
+Maintain Royalties. <a> (1,1)
+so_roy_inp~
+Assign Products to Royalties. <a> (1,1)
+sk_roy_inp~
+Print Royalty Report By Title/Publisher. <a> (1,1)
+so_roy_prt~1~1~P~
+Print Royalty Report By Author. <a> (1,1)
+so_roy_prt~1~1~A~
+((
+))

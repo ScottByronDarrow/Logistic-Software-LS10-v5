@@ -1,0 +1,90 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/09 04:17:31 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/09 04:17:31  scott
+#	/*
+#	 * Search Number Plate Header.
+#	 */
+#	void
+#	SrchSknh (
+#		char    *keyValue)
+#	{
+#		int		recordFound	=	FALSE;
+#	    _work_open (15,0,40);
+#	    save_rec ("#Number Plate   ", "#Number Plate description.");
+#	
+#		/*
+#		 * Flush record buffer first
+#		 */
+#		memset (&sknh_rec, 0, sizeof (sknh_rec));
+#	
+#		strcpy (sknh_rec.co_no, comm_rec.co_no);
+#		strcpy (sknh_rec.br_no, comm_rec.est_no);
+#	    sprintf (sknh_rec.plate_no, "%15.15s", keyValue);
+#	    for (cc = find_rec (sknh, &sknh_rec,  GTEQ,"r");
+#			 !cc && !strcmp (sknh_rec.co_no, comm_rec.co_no)
+#			  && !strcmp (sknh_rec.br_no, comm_rec.est_no)
+#			  && !strncmp (sknh_rec.plate_no, keyValue, strlen (clip (keyValue)));
+#	         cc = find_rec (sknh, &sknh_rec,  NEXT, "r"))
+#	    {
+#			recordFound	=	FALSE;
+#			sknd_rec.sknh_hash	= sknh_rec.sknh_hash;
+#			sknd_rec.line_no	= 0;
+#			cc = find_rec (sknd, &sknd_rec, GTEQ, "r");
+#			while (!cc && sknd_rec.sknh_hash == sknh_rec.sknh_hash)
+#			{
+#				if (sknd_rec.status [0] != 'D')
+#				{
+#					recordFound	=	TRUE;
+#					break;
+#				}
+#				cc = find_rec (sknd, &sknd_rec, NEXT, "r");
+#			}
+#			if (recordFound)
+#			{
+#	        	cc = save_rec (sknh_rec.plate_no, sknh_rec.lab_note1);
+#	        	if (cc)
+#	            	break;
+#			}
+#	    }
+#	    cc = disp_srch ();
+#	    work_close ();
+#	    if (cc)
+#	        return;
+#	
+#		strcpy (sknh_rec.co_no, comm_rec.co_no);
+#		strcpy (sknh_rec.br_no, comm_rec.est_no);
+#	    sprintf (sknh_rec.plate_no, "%15.15s", temp_str);
+#	    cc = find_rec (sknh, &sknh_rec,  COMPARISON, "r");
+#	    if (cc)
+#	       file_err (cc, (char *)sknh, "DBFIND");
+#	}
+#	
+#	Revision 1.1  2002/05/09 04:17:11  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_dbt_date
+	field comm_crd_date
+	field comm_inv_date
+	field comm_payroll_date
+	field comm_gl_date
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+

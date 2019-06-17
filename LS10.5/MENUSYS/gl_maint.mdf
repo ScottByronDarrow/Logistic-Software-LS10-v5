@@ -1,0 +1,30 @@
+General Ledger Maintenance Menu (GLMT)
+gl_help
+General Ledger Menu. <a> (1,2)
+menu MENUSYS/gl_master.mdf
+Maintain Account Descriptions. <a> (1,1)
+gl_chartinp~
+Maintain General Ledger Accounts. <a> (1,1)
+gl_accinp~
+Maintain G/L Transaction Narrative. <a> (1,1)
+gl_trn_mnt~
+Maintain G/L Journal Page Numbers. <a> (1,1)
+gl_jnlpage~
+Maintain G/L Exchange Rate. <a> (1,1)
+co_curr~
+Maintain Budgets. <a> (1,1)
+gl_budginp~
+Maintain Budgets by Dollar Values. <a> (1,1)
+gl_altbdg~
+General ledger Company to Company Copy. <a> (1,1)
+gl_cpcoco~
+Delete General Ledger Accounts. <a> (1,1)
+gl_accdel~
+G/L Year End Close. <a> (1,1)
+lp_chain~warning "General Ledger Year End Close."~gl_yend LPNO~
+((
+quadrant(21,6)
+quadrant(46,6)
+box(15,3,47,15)
+line(16,5,46)
+))

@@ -1,0 +1,98 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:36:48 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:36:48  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_supercession
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_on_order
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+end
+
+table insf
+	field insf_hhsf_hash
+	field insf_hhwh_hash
+	field insf_status
+	field insf_serial_no
+	field insf_exch_rate
+	field insf_exch_var
+	field insf_est_cost
+	field insf_act_cost
+	field insf_hhsu_hash
+	field insf_crd_invoice
+	field insf_final_costing
+	field insf_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_narrative
+	field suin_gst
+	field suin_amt
+	field suin_pay_amt
+	field suin_amt_paid
+	field suin_cus_po_no
+	field suin_currency
+	field suin_exch_rate
+	field suin_er_fixed
+	field suin_destin
+	field suin_approved
+	field suin_stat_flag
+end
+

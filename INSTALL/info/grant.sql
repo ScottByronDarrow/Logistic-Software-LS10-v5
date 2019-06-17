@@ -1,0 +1,1 @@
+grant dba to public;

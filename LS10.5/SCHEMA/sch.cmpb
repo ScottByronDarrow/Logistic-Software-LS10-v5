@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmpb,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cmpb)
+|  Schema Desc  : (Contract Management Progress Billing File )
+|----------------------------------------------------------------------
+| $Log: sch.cmpb,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmpb
+
+field	cmpb_hhhr_hash		type	long		index dups
+field	cmpb_date			type	edate
+field	cmpb_inv_date		type	edate
+field	cmpb_amount			type	money
+field	cmpb_amt_rem		type	money
+field	cmpb_hhco_hash		type	long		index
+field	cmpb_id_no			type	composite
+			cmpb_hhhr_hash,
+			cmpb_inv_date						index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		cmpb_hhhr_hash		- Link to cmhr
+		cmpb_date			- Date of Invoice
+		cmpb_inv_date		- Date invoiced upto
+		cmpb_amount			- Amount of Invoice
+		cmpb_amt_rem		- NOT USED
+		cmpb_hhco_hash		- Link to cohr
+}

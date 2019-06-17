@@ -1,0 +1,74 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/04 00:47:44 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/04 00:47:44  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_acc_type
+	field cumr_class_type
+	field cumr_curr_code
+	field cumr_price_type
+	field cumr_payment_flag
+	field cumr_po_flag
+	field cumr_ch_adr1
+	field cumr_ch_adr2
+	field cumr_ch_adr3
+	field cumr_ch_adr4
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_contact_name
+	field cumr_contact2_name
+	field cumr_contact3_name
+	field cumr_spec_note1
+	field cumr_spec_note2
+	field cumr_phone_no
+	field cumr_fax_no
+	field cumr_stop_credit
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_chq_prd
+	field cumr_crd_flag
+	field cumr_credit_ref
+	field cumr_bank_code
+	field cumr_branch_code
+	field cumr_area_code
+	field cumr_sman_code
+	field cumr_stat_flag
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+

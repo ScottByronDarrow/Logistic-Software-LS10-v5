@@ -1,0 +1,50 @@
+#
+#	Configuration parameters for Makefiles
+#
+##############################################
+
+include ${BASE_PATH}/${VERSION}/CONFIG/platforms/${MACH_TYPE}
+
+###############################################################################
+#
+# Libraries used
+#
+
+# Informix
+DBASELIB		=	-L${INFORMIXDIR}/lib -lisam
+
+# ORACLE
+#DBASELIB		=	-L${ORACLE_HOME}/lib \
+#-lclient -lsqlnet -lepc -lncr -lsqlnet \
+#-lcv6 -lcommon -lgeneric \
+#-lcore3 -lnlsrtl3 -lcore3 -lnlsrtl3 \
+#-L${INFORMIXDIR}/lib -lisam
+
+###############################################################################
+# These should be set by Environment, but may be hard-set here
+#
+#MACH_TYPE		=	uncomment machine section
+#CXXDBG			=	uncomment machine section
+#INFORMIXDIR	=	/usr/informix7
+
+###############################################################################
+#
+#	Nothing below this line should be changed for configuration
+#
+SHELL			=	/bin/sh
+RELBASE			=	${BASE_PATH}/${VERSION}/${LIBBASE}
+
+INC++			=	-I${RELBASE}/INC++ ${APPINC}
+DEF++			=	-D${MACH_TYPE}
+C++FLAGS		=	${CXXDBG} ${INC++} ${DEF++} ${APPDEF}
+
+LIBPATH			=	-L${RELBASE}/LIB++
+LIBS			=	-lbase++ ${DBASELIB} ${APPLIB} ${QUIRKSLIB}
+
+INC				=	-I${INFORMIXDIR}/include -I${RELBASE}/INCLUDE ${APPINC}
+CFLAGS			=	${CDBG} ${INC} ${DEF++} ${APPDEF}
+
+CLIBPATH		=	-L${RELBASE}/LIB
+CLIBS			=	-lscrgen${VERSION} \
+					-lbase${VERSION} -ldbif${VERSION} -lbase${VERSION} \
+					${DBASELIB} ${APPLIB} -lm ${QUIRKSLIB}

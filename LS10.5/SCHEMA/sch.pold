@@ -1,0 +1,49 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pold,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.pold)
+|  Schema Desc  : (Purchase Order Licence Detail Maintenance )
+|----------------------------------------------------------------------
+| $Log: sch.pold,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:15  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pold	
+
+field	pold_co_no				type	char	2	
+field	pold_hhlc_hash			type	long	
+field	pold_hhpo_hash			type	long	
+field	pold_po_line_no			type	int	
+field	pold_order_no			type	char	15	
+field	pold_hhbr_hash			type	long	
+field	pold_est_value			type	double	
+field	pold_act_value			type	double	
+field	pold_id_no				type	composite
+			pold_co_no,
+			pold_hhlc_hash									index	dups
+field	pold_id_no2				type	composite
+			pold_hhpo_hash,
+			pold_po_line_no									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pold_co_no		-	Company number.
+	pold_hhlc_hash		-	Link to polh ( polh_hhlc_hash )
+	pold_hhpo_hash		-	Link to pohr ( pohr_hhpo_hash )
+	pold_po_line_no		-	Purchase order lines.
+	pold_order_no		-	Purchase order no.
+	pold_hhbr_hash		-	Link to inmr ( inmr_hhbr_hash )
+	pold_est_value		-	Estimated value. 
+	pold_act_value		-	Actual value.
+}

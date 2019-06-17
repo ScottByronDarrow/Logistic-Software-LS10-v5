@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.saca,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.saca)
+|  Schema Desc  : (Sales Call Activity file. )
+|----------------------------------------------------------------------
+| $Log: sch.saca,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:19  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:45  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file saca 
+
+field	saca_co_no				type	char	2
+field	saca_code				type	char	2
+field	saca_desc				type	char	40
+field	saca_id_no				type	composite
+			saca_co_no,
+			saca_code											index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	saca_co_no			-	Company number.
+	saca_code			-	User defined sales call activity code.
+	saca_desc			-	Description for sales call activity code.
+}

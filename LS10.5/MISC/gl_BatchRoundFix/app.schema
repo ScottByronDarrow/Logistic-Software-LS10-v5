@@ -1,0 +1,66 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:22:11 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:22:11  scott
+#	CVS administration
+#	
+#	Revision 1.1  2001/06/22 06:27:48  scott
+#	New program
+#	
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_inv_date
+end
+
+table glbh
+	field glbh_co_no          
+	field glbh_br_no          
+	field glbh_jnl_type       
+	field glbh_batch_no       
+	field glbh_hhbh_hash      
+	field glbh_user           
+	field glbh_date           
+	field glbh_time           
+	field glbh_stat_flag      
+	field glbh_mth            
+	field glbh_other_module   
+end
+
+table glbl
+	field glbl_hhbh_hash      
+	field glbl_line_no        
+	field glbl_acc_no         
+	field glbl_acronym        
+	field glbl_name           
+	field glbl_chq_inv_no     
+	field glbl_ci_amt         
+	field glbl_o1_amt         
+	field glbl_o2_amt         
+	field glbl_o3_amt         
+	field glbl_o4_amt         
+	field glbl_hhgl_hash      
+	field glbl_tran_type      
+	field glbl_sys_ref        
+	field glbl_tran_date      
+	field glbl_period_no      
+	field glbl_narrative      
+	field glbl_user_ref       
+	field glbl_fx_amt         
+	field glbl_local_amt      
+	field glbl_dc_flag        
+	field glbl_currency       
+	field glbl_exch_rate      
+	field glbl_stat_flag      
+end

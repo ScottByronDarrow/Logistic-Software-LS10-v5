@@ -1,0 +1,105 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:17:37 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:17:37  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:38:53  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:37  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_inv_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_stat_flag
+end
+
+table insf
+	field insf_hhsf_hash
+	field insf_hhbr_hash
+	field insf_hhwh_hash
+	field insf_status
+	field insf_receipted
+	field insf_serial_no
+	field insf_chasis_no
+	field insf_date_in
+	field insf_date_out
+	field insf_hhcu_hash
+	field insf_location
+	field insf_exch_rate
+	field insf_fob_fgn_cst
+	field insf_fob_nor_cst
+	field insf_frt_ins_cst
+	field insf_duty
+	field insf_licence
+	field insf_lcost_load
+	field insf_land_cst
+	field insf_other_cst
+	field insf_istore_cost
+	field insf_prep_cost
+	field insf_exch_var
+	field insf_est_cost
+	field insf_act_cost
+	field insf_po_number
+	field insf_gr_number
+	field insf_invoice_no
+	field insf_hhsu_hash
+	field insf_crd_invoice
+	field insf_final_costing
+	field insf_stock_take
+	field insf_pd_rate
+	field insf_paid_cost
+	field insf_des_flag
+	field insf_stat_flag
+end
+

@@ -1,0 +1,63 @@
+#ifndef	_osdeps_h
+#define	_osdeps_h
+/*	$Id: osdeps.h,v 5.0 2002/05/08 01:50:44 scott Exp $
+ *
+ *	O/S dependancies
+ *
+ *******************************************************************************
+ *	$Log: osdeps.h,v $
+ *	Revision 5.0  2002/05/08 01:50:44  scott
+ *	CVS administration
+ *	
+ *	Revision 4.0  2001/03/09 01:02:11  scott
+ *	LS10-4.0 New Release as at 10th March 2001
+ *	
+ *	Revision 3.1  2000/11/10 04:06:43  scott
+ *	Updated to clean code while working in format-p
+ *	
+ *	Revision 3.0  2000/10/12 13:39:02  gerry
+ *	Revision No. 3 Start
+ *	<after Rel-10102000>
+ *	
+ *	Revision 1.3  2000/08/16 03:22:17  gerry
+ *	Added SunOS support
+ *	
+ *	Revision 1.2  1999/11/23 02:42:32  nz
+ *	DPL15154	Add platformes for _AIX
+ *	
+ *	Revision 1.1.1.1  1999/07/14 23:58:50  jonc
+ *	Initial C++ sources (adopted minimally from V10)
+ *	
+ *	Revision 1.1.1.1  1998/01/22 00:58:28  jonc
+ *	Version 10 start
+ *
+ *	Revision 2.3  1996/06/12 23:35:55  jonc
+ *	Added support for Digital Unix (OSF/1)
+ *
+ */
+
+#if		defined (SCO)
+
+#	if	!defined (__GNUG__)
+#		include	<bool.h>			// to overcome CC lack
+#	endif	//!__GNUG__
+
+#elif	defined (OSF1)
+
+#	if	!defined (__GNUG__)
+	/*
+	 *	Need to overcome cxx lack of bool types
+	 */
+#		define		UNSIGNED_BOOL	// uncomment if ncurses is used
+#		include	<bool.h>
+#	endif	//!__GNUG__
+
+#elif	defined (IRIX) || defined (FREEBSD) || defined (_AIX) || defined (LINUX) || defined (SunOS)
+/*
+ *	Everything's cool
+ */
+#else
+#error	"System type not known"
+#endif
+
+#endif	//_osdeps_h

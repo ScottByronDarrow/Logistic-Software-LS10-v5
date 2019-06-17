@@ -1,0 +1,35 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:55 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:55  scott
+#	Update - LS10.5
+#	
+#	Revision 5.0  2001/06/19 08:06:47  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/06/14 04:30:05  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_gl_date
+	field comm_fiscal
+end
+
+table glsj
+	field glsj_hhbh_hash
+	field glsj_from_dt
+	field glsj_to_dt
+	field glsj_dt_apply
+	field glsj_dt_posted
+end
+

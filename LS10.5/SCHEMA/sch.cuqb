@@ -1,0 +1,63 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cuqb,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.cuqb)
+|  Schema Desc  : (Customer Quantity Break Default file. )
+|----------------------------------------------------------------------
+| $Log: sch.cuqb,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:30  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:25  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cuqb 
+
+field	cuqb_co_no				type	char	2
+field	cuqb_buygrp				type	char	6	
+field	cuqb_sellgrp			type	char	6
+field	cuqb_category 			type	char	11
+field	cuqb_price_type			type	int
+field	cuqb_qty_brk1			type 	float
+field	cuqb_qty_brk2			type 	float
+field	cuqb_qty_brk3			type 	float
+field	cuqb_qty_brk4			type 	float
+field	cuqb_qty_brk5			type 	float
+field	cuqb_qty_brk6			type 	float
+field	cuqb_qty_brk7			type 	float
+field	cuqb_qty_brk8			type 	float
+field	cuqb_qty_brk9			type 	float
+field	cuqb_update_flag		type	char	1
+field	cuqb_id_buygrp			type	composite
+		cuqb_co_no,
+		cuqb_price_type,
+		cuqb_buygrp					index	dups
+field	cuqb_id_sellgrp			type	composite
+		cuqb_co_no,
+		cuqb_price_type,
+		cuqb_sellgrp					index	dups
+field	cuqb_id_cat				type	composite
+		cuqb_co_no,
+		cuqb_price_type,
+		cuqb_category					index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cuqb_co_no				-   Company Number.
+	cuqb_buy_group			-	Set Qty breaks by buying group.  )
+	cuqb_sel_group			-	Set Qty breaks by selling group. ) Mutually
+	cuqb_category 			-	Set Qty breaks by item category. ) exclusive.
+	cuqb_qty_brk1 - 9		- 	Quantity breaks 1 - 9.
+	cuqb_update_flag		-	'N' Update not yet actioned.
+								'Y' Update has been actioned.
+
+	NOTES - Even though these indexes are dups, they are expected to be unique
+}

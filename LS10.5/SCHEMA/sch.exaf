@@ -1,0 +1,40 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.exaf,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.exaf)
+|  Schema Desc  : (External Area file. )
+|----------------------------------------------------------------------
+| $Log: sch.exaf,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:32  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:26  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file exaf 
+
+field	exaf_co_no				type	char	2		index	dups
+field	exaf_area_code			type	char	2		index	dups
+field	exaf_area				type	char	40
+field	exaf_rate				type	money
+field	exaf_stat_flag			type	char	1
+field	exaf_id_no				type	composite
+			exaf_co_no,
+			exaf_area_code								index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	exaf_co_no		-	Company Number
+	exaf_area_code		-	Area Code
+	exaf_area     		-	Area Description
+	exaf_rate     		-	Area Rate ( Used for Carrier's )
+	exaf_stat_flag 		-	Status flags.
+}

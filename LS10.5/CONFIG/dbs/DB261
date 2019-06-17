@@ -1,0 +1,6 @@
+#
+#   DB2UDB 6.1
+#
+DBIFLIB		=	-ldb2dbif${VERSION}
+DBASELIB	=	-L${DB2DIR}/lib -ldb2 \
+				-L${INFORMIXDIR}/lib -lisam

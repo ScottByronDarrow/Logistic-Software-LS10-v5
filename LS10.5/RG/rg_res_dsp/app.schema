@@ -1,0 +1,35 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:39:43 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:39:43  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table rgrs
+	field rgrs_hhrs_hash
+	field rgrs_co_no
+	field rgrs_br_no
+	field rgrs_code
+	field rgrs_desc
+	field rgrs_type
+	field rgrs_type_name
+	field rgrs_cost_type
+	field rgrs_rate
+	field rgrs_ovhd_var
+	field rgrs_ovhd_fix
+end
+

@@ -1,0 +1,16 @@
+Employee Timesheets Menu. (SUB)
+sub_menu
+Exit to Production Control Master Menu. <a> (1,1)
+menu MENUSYS/pct_master.mdf
+Maintain Employee Masterfile. <a> (1,2)
+pc_empmnt~
+Enter Timesheets for Resources. <a> (1,1)
+pc_tsinpt~
+Display/Print Timesheet Audit Trial. <a> (1,1)
+pc_tsprnt~
+Update Timesheets to Prodn. <a> (1,1)
+pc_time_upd~LPNO~
+Timesheets Purge. <a> (1,1)
+pc_tspurge~
+((
+))

@@ -1,0 +1,90 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/12/12 03:24:45 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/12/12 03:24:45  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_inv_date
+	field comm_gst_rate
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_stat_flag
+end
+
+table inas
+	field inas_co_no
+	field inas_act_code
+	field inas_description
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_item_alloc
+	field excf_stat_flag
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+	field ingp_sell_reg_pc
+end
+
+table inin
+	field inin_co_no
+	field inin_item_no
+	field inin_next_indent
+	field inin_class
+	field inin_category
+	field inin_serial_item
+	field inin_abc_code
+	field inin_abc_update
+	field inin_ff_option
+	field inin_ff_method
+	field inin_allow_repl
+	field inin_reorder
+	field inin_active_status
+	field inin_costing_flag
+	field inin_gst_pc
+	field inin_tax_pc
+	field inin_tax_amount
+	field inin_lot_ctrl
+	field inin_sale_unit
+	field inin_pack_size
+	field inin_dec_pt
+	field inin_std_uom
+	field inin_alt_uom
+	field inin_source
+	field inin_uom_cfactor
+	field inin_outer_size
+	field inin_sellgrp
+	field inin_buygrp
+	field inin_qc_reqd
+	field inin_qc_time
+	field inin_stat_flag
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+

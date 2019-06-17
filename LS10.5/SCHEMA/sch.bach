@@ -1,0 +1,59 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.bach,v 5.0 2001/06/19 10:17:08 cha Exp $
+|  Schema Name  : (sch.bach)
+|  Schema Desc  : (System Batch Control file. )
+|----------------------------------------------------------------------
+| $Log: sch.bach,v $
+| Revision 5.0  2001/06/19 10:17:08  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:22  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	bach
+
+field	bach_co_no			type	char	2
+field	bach_br_no			type	char	2
+field	bach_type			type	char	2
+field	bach_run_no			type	long
+field	bach_batch_no		type	char	5
+field	bach_id_no			type	comp
+			bach_co_no,
+			bach_type,
+			bach_run_no,
+			bach_batch_no								index	dups
+field	bach_id_no2			type	comp
+			bach_co_no,
+			bach_br_no,
+			bach_type,
+			bach_run_no,
+			bach_batch_no								index	primary
+field	bach_date			type	edate
+field	bach_amount			type	money
+field	bach_pid			type	int
+field	bach_stat_flag		type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	bach_co_no		-	Company number.
+	bach_br_no		-	Branch number.
+	bach_type		-	Transaction type
+					" 4" Invoices.
+					" 5" Credits.
+	bach_run_no		-	Invoice / credit run number.
+	bach_batch_no		-	Batch number.
+	bach_date		-	Date.
+	bach_amount		-	Batch number.
+	bach_pid		-	Pid of run.
+	bach_stat_flag		-	Status flag.
+}

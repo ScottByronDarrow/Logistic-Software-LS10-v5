@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inim,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.inim)
+|  Schema Desc  : (Inventory Management abc cutoff defaults. )
+|----------------------------------------------------------------------
+| $Log: sch.inim,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:53  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file inim 
+
+field	inim_co_no			type	char	2
+field	inim_est_no			type	char	2
+field	inim_cc_no			type	char	2
+field	inim_id_no			type	comp
+		inim_co_no,
+		inim_est_no,
+		inim_cc_no					index	primary
+field	inim_movement			type	double
+field	inim_a_class			type	float
+field	inim_b_class			type	float
+field	inim_c_class			type	float
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inim_co_no		-	Company number.
+	inim_est_no		-	Branch / extablishment number.
+	inim_cc_no		-	Warehouse / cost centre number.
+	inim_movement		-	Min movement amount.
+	inim_a_class		-	Break point for ABC code A
+	inim_b_class		-	Break point for ABC code B
+	inim_c_class		-	Break point for ABC code C
+end

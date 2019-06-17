@@ -1,0 +1,44 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.udid,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.udid)
+|  Schema Desc  : (User Defines Inventory Master file. )
+|----------------------------------------------------------------------
+| $Log: sch.udid,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:37  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:55  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	udid
+
+field	udid_udih_hash			type	long
+field	udid_hhbr_hash			type	long
+field	udid_field_chr			type	char	40
+field	udid_field_int			type	int
+field	udid_field_flt			type	float
+field	udid_field_dbl			type	double
+field	udid_id_no				type	composite
+			udid_udih_hash,
+			udid_hhbr_hash								index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		udid_udih_hash		-	Link User Defined header file. (udih_udid_hash)
+		udid_hhbr_hash		-	Link to item master file. (inmr_hhbr_hash)
+		udid_field_chr		-	Holds values for character fields.
+		udid_field_int		-	Holds values for integer fields.
+		udid_field_flt		-	Holds values for float fields.
+		udid_field_dbl		-	Holds values for double/money fields.
+}

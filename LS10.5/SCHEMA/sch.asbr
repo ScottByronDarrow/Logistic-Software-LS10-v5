@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.asbr,v 5.0 2001/06/19 10:17:08 cha Exp $
+|  Schema Name  : (sch.asbr)
+|  Schema Desc  : (Asset Brand File )
+|----------------------------------------------------------------------
+| $Log: sch.asbr,v $
+| Revision 5.0  2001/06/19 10:17:08  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:21  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:21  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file asbr
+
+field	asbr_co_no					type	char	2	
+field	asbr_brand_code				type	char	8
+field	asbr_brand_desc  			type	char	40
+field	asbr_id_no					type	composite
+		asbr_co_no,
+		asbr_brand_code									index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+     	asbr_co_no			- 	Asset Company Number
+     	asbr_brand_code 	-	Asset Brand Code 
+     	asbr_brand_desc  	-	Asset Brand Description
+}

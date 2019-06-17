@@ -1,0 +1,197 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:18:12 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:18:12  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/05/04 00:58:46  scott
+#	Updated to add incf_number as required for standard function
+#	
+#	Revision 4.0  2001/03/09 02:28:59  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/30 03:43:22  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_master_wh
+	field ccmr_acronym
+	field ccmr_lrp_ok
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_inv_date
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_hhcf_hash
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table ffpr
+	field ffpr_category
+	field ffpr_hhbr_hash
+	field ffpr_br_no
+	field ffpr_review_prd
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_allow_repl
+	field incc_first_stocked
+	field incc_wks_demand
+	field incc_safety_stock
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_opening_stock
+	field incc_closing_stock
+end
+
+table inws
+	field inws_hhbr_hash
+	field inws_hhcf_hash
+	field inws_hhcc_hash
+	field inws_inws_hash
+	field inws_sup_priority
+	field inws_min_order
+	field inws_norm_order
+	field inws_ord_multiple
+	field inws_pallet_size
+	field inws_weight
+	field inws_volume
+	field inws_upft_pc
+	field inws_upft_amt
+	field inws_stat_flag
+end
+
+table inwd
+	field inwd_inws_hash
+	field inwd_hhcc_hash
+	field inwd_hhbr_hash
+	field inwd_hhcf_hash
+	field inwd_sup_priority
+	field inwd_km
+	field inwd_dflt_lead
+	field inwd_sea_time
+	field inwd_air_time
+	field inwd_lnd_time
+	field inwd_upft_pc
+	field inwd_upft_amt
+	field inwd_demand
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_supercession
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_on_order
+	field inmr_std_uom
+	field inmr_dec_pt
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+	field itln_i_hhcc_hash
+	field itln_r_hhcc_hash
+	field itln_hhum_hash
+	field itln_tran_ref
+	field itln_serial_no
+	field itln_qty_order
+	field itln_qty_border
+	field itln_qty_rec
+	field itln_cost
+	field itln_duty
+	field itln_stock
+	field itln_status
+	field itln_due_date
+	field itln_full_supply
+	field itln_item_desc
+	field itln_stat_flag
+end
+
+table pohr
+	field pohr_hhsu_hash
+	field pohr_hhpo_hash
+	field pohr_drop_ship
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhum_hash
+	field poln_hhcc_hash
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_due_date
+	field poln_stat_flag
+end
+
+table ffwk
+	field ffwk_hhcc_hash
+	field ffwk_hhbr_hash
+	field ffwk_hhsu_hash
+	field ffwk_hhpo_hash
+	field ffwk_hhit_hash
+	field ffwk_filename
+	field ffwk_sort
+	field ffwk_crd_no
+	field ffwk_r_hhcc_hash
+	field ffwk_review_pd
+	field ffwk_wks_demand
+	field ffwk_sugg_qty
+	field ffwk_order_qty
+	field ffwk_source
+	field ffwk_cons_1
+	field ffwk_cons_2
+	field ffwk_cons_3
+	field ffwk_cons_4
+	field ffwk_cons_5
+	field ffwk_cons_6
+	field ffwk_cons_7
+	field ffwk_cons_8
+	field ffwk_cons_9
+	field ffwk_cons_10
+	field ffwk_cons_11
+	field ffwk_cons_12
+	field ffwk_cost_price
+	field ffwk_uplift_amt
+	field ffwk_alt_supp
+	field ffwk_stat_flag
+end
+

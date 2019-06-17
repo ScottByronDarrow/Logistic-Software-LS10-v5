@@ -1,0 +1,18 @@
+:
+QUEUE="laserII"
+QUEUE="citoh"
+QUEUE="lp"
+LPR="lpr -N -s $QUEUE -c -t "
+UPRINT="/usr/UII/bin/uprint"
+S_PAGE="-S1"
+E_PAGE="-E9999"
+FORM="-f66"
+COPIES="-c1"
+while [ $# -gt 0 ]
+do
+	if [ -f $1 ]
+	then 
+		$UPRINT $COPIES $FORM $S_PAGE $E_PAGE -m0 -p $QUEUE $1 | $LPR $1
+	fi
+	shift
+done

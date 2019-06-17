@@ -1,0 +1,69 @@
+{======================================================================
+|  Copyright (C) 1998 - 2002 LogisticSoftware
+|======================================================================
+| $Id: sch.arsoln,v 5.0 2002/05/07 10:16:42 scott Exp $
+|  Schema Name  : (sch.arsoln)
+|  Schema Desc  : (Archive Copy - Sales Order Detail Lines File)
+|----------------------------------------------------------------------
+| $Log: sch.arsoln,v $
+| Revision 5.0  2002/05/07 10:16:42  scott
+| Updated to bring version number to 5.0
+|
+| Revision 1.2  2002/05/07 02:49:35  scott
+| Updates for new archiving system
+|
+| Revision 1.1  2002/04/29 07:48:47  scott
+| Update for new Archive modifications;
+|
+|=====================================================================}
+file	arsoln
+
+field	arsoln_hhso_hash			type	long
+field	arsoln_line_no				type	int
+field	arsoln_hhbr_hash			type	long
+field	arsoln_hhcc_hash			type	long	
+field	arsoln_hhum_hash			type	long	
+field	arsoln_hhsl_hash			type	long				index	dups
+field	arsoln_serial_no			type	char	25
+field	arsoln_cont_status			type	int
+field	arsoln_qty_order			type	float
+field	arsoln_qty_bord				type	float
+field	arsoln_qty_org_ord			type	float
+field	arsoln_gsale_price			type	money
+field	arsoln_sale_price			type	money
+field	arsoln_cost_price			type	money
+field	arsoln_item_levy			type	money
+field	arsoln_dis_pc				type	float
+field	arsoln_reg_pc				type	float
+field	arsoln_disc_a				type	float
+field	arsoln_disc_b				type	float
+field	arsoln_disc_c				type	float
+field	arsoln_cumulative			type	int
+field	arsoln_tax_pc				type	float
+field	arsoln_gst_pc				type	float
+field	arsoln_o_xrate				type	float
+field	arsoln_n_xrate				type	float
+field	arsoln_pack_size			type	char	5
+field	arsoln_sman_code			type	char	2
+field	arsoln_cus_ord_ref			type	char	20
+field	arsoln_pri_or				type	char	1
+field	arsoln_dis_or				type	char	1
+field	arsoln_item_desc			type	char	40
+field	arsoln_due_date				type	edate
+field	arsoln_del_no				type	integer
+field	arsoln_bonus_flag			type	char	1
+field	arsoln_hide_flag			type	char	1
+field	arsoln_hhah_hash			type	long
+field	arsoln_status				type	char	1
+field	arsoln_stat_flag			type	char	1
+field	arsoln_id_no				type	composite
+			arsoln_hhso_hash,
+			arsoln_line_no											index
+
+end
+{
+              =====================================
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+              =====================================
+			  SEE SOLN - ARCHIVE DUPLICATE
+}

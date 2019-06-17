@@ -1,0 +1,138 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.arln,v 5.3 2002/05/02 04:20:29 scott Exp $
+|  Schema Name  : (sch.arln)
+|  Schema Desc  : (See file coln - This is the archive version.)
+|----------------------------------------------------------------------
+| $Log: sch.arln,v $
+| Revision 5.3  2002/05/02 04:20:29  scott
+| Updated to remove as not required in archiving system
+|
+| Revision 5.2  2001/12/11 01:56:36  scott
+| Updated to add sales order number to coln (used as reference when soln/sohr removed)
+| Updated to add link to works order file.
+| Updated archive files to match cohr/coln
+|
+|=====================================================================}
+file	arln
+
+field	arln_hhcl_hash      type	long				index	dups
+field	arln_hhco_hash      type	long
+field	arln_line_no        type	integer
+field	arln_hhbr_hash      type	long				index	dups
+field	arln_incc_hash      type	long
+field	arln_hhum_hash      type	long
+field	arln_hhsl_hash      type	long				index	dups
+field	arln_order_no		type	char	8
+field	arln_hhdl_hash      type	long
+field	arln_crd_type       type	char 1
+field	arln_serial_no      type	char 25
+field	arln_cont_status    type	integer
+field	arln_qty_org_ord	type	float
+field	arln_q_order        type	float
+field	arln_qty_del        type	float
+field	arln_qty_ret        type	float
+field	arln_q_backorder    type	float
+field	arln_gsale_price    type	money
+field	arln_sale_price     type	money
+field	arln_cost_price     type	money
+field	arln_item_levy     	type	money
+field	arln_disc_pc        type	float
+field	arln_reg_pc         type	float
+field	arln_disc_a         type	float
+field	arln_disc_b         type	float
+field	arln_disc_c         type	float
+field	arln_cumulative     type	integer
+field	arln_tax_pc         type	float
+field	arln_gst_pc         type	float
+field	arln_gross          type	money
+field	arln_freight        type	money
+field	arln_on_cost        type	money
+field	arln_amt_disc       type	money
+field	arln_amt_tax        type	money
+field	arln_amt_gst        type	money
+field	arln_erate_var      type	money
+field	arln_pack_size      type	char 5
+field	arln_sman_code      type	char 2
+field	arln_cus_ord_ref    type	char 20
+field	arln_org_ord_ref    type	char 20
+field	arln_o_xrate        type	float
+field	arln_n_xrate        type	float
+field	arln_item_desc      type	char 40
+field	arln_due_date       type	edate
+field	arln_status         type	char 1
+field	arln_bonus_flag     type	char 1
+field	arln_hide_flag      type	char 1
+field	arln_hhah_hash      type	long
+field	arln_price_type     type	char 1
+field	arln_stat_flag      type	char 1
+field	arln_hhwo_hash		type	long
+field	arln_id_no          type	composite
+			arln_hhco_hash,
+			arln_line_no									index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+
+	arln_hhcl_hash			-	Unique serial hash used for sales order
+                                analysis.
+	arln_hhco_hash			-	Link to cohr_hhco_hash ( header )
+	arln_line_no			-	Line number.  
+	arln_hhbr_hash			-	Link to inmr_hhbr_hash ( inventory master )
+	arln_incc_hash			-	Link to ccmr_hhcc_hash ( Cost centre master )
+								Combination of hhbr_hash and incc_hash
+								enable a unique incc record to be read.
+	arln_hhum_hash			-	Link to inum_hhum_hash for Unit of Measure.
+	arln_hhsl_hash			-	Link to soln_hhsl_hash ( sales order line )
+	arln_order_no			-	User for reference only as soln may be deleted.
+	arln_hhdl_hash			-	Link to ddln_hhdl_hash ( direct delivery line )
+	arln_crd_type			-	Credit type as input from so_credit.
+	arln_serial_no			-	Serial number if applicable.
+	arln_cont_status		-	Contract status.
+									0 = No Contract applies.
+									1 = Contract applies no discounts.
+									2 = Contract applies, discounts allowed.
+	arln_q_order			-	Quantity supplied.
+	arln_q_backorder		-	Quantity Backordered.
+	arln_gsale_price		-	Gross sales price each before reg pc.
+	arln_sale_price			-	Nett sales price each after reg pc subtracted.
+	arln_cost_price			-	Cost price, update by stock update.
+	arln_disc_pc			-	Discount percent - Final Discount PerCent
+	arln_reg_pc				-	Regulatory percent.
+	arln_disc_a				-	Discount percent A.
+	arln_disc_b				-	Discount percent B.
+	arln_disc_c				-	Discount percent C.
+	arln_cumulative			-	Cumulative. 1 or TRUE Discounts are cumulative.
+	                 		-	            0 or FALSE	Discounts are absolute.
+	arln_tax_pc				-	Tax percent.
+	arln_gst_pc				-	Gst percent.
+	arln_gross				-	Gross amount. (coln_sale_price * coln_q_order)
+	arln_freight			-	Freight amount. 
+	arln_on_cost			-	On-Cost component of gross amount.            
+	arln_amt_disc			-	Discount amount - Final Amount Of Discount
+	arln_amt_tax			-	Tax amount.
+	arln_amt_gst			-	Gst amount.
+	arln_erate_var   		-	Eachange rate variation.
+	arln_pack_size			-	Pack Size.
+	arln_sman_code			-	Salesman code.
+	arln_cus_ord_ref		-	Customer order ref.
+	arln_o_xrate			-	Old exchange rate.
+	arln_n_xrate			-	New exchange rate.
+	arln_item_desc			-	Item description.
+	arln_due_date			-	Due date.
+	arln_status				-	Status. ( not used. )
+    arln_bonus_flag			- 	Bonus Item
+					  			Y  item is a bonus - no sales price
+								N  not a bonus item.
+    arln_hide_flag			- 	Hidden lines flag.
+					  			Y  item is hidden.
+								N  item is not hidden.
+    arln_hhah_hash			- 	Hash link to inah_hhah_hash
+	arln_price_type			-	Price Type
+	arln_stat_flag			-	Stat flag.  Status flages defined by user.
+	arln_hhwo_hash			-	Provides link to origional works order.
+									(pcwo_hhwo_hash)
+}

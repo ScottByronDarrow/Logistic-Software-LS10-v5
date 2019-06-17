@@ -1,0 +1,295 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:51:25 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:51:25  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_dbt_date
+end
+
+table sale
+	field sale_key
+	field sale_category
+	field sale_sman
+	field sale_area
+	field sale_ctype
+	field sale_dbt_no
+	field sale_year_flag
+	field sale_period
+	field sale_units
+	field sale_gross
+	field sale_cost_sale
+	field sale_disc
+end
+
+table cusa
+	field cusa_hhcu_hash
+	field cusa_year
+	field cusa_val1
+	field cusa_val2
+	field cusa_val3
+	field cusa_val4
+	field cusa_val5
+	field cusa_val6
+	field cusa_val7
+	field cusa_val8
+	field cusa_val9
+	field cusa_val10
+	field cusa_val11
+	field cusa_val12
+	field cusa_val13
+	field cusa_stat_flag
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_hhcu_hash
+	field cohr_type
+	field cohr_cont_no
+	field cohr_drop_ship
+	field cohr_hhco_hash
+	field cohr_date_raised
+	field cohr_tax_code
+	field cohr_area_code
+	field cohr_sale_code
+	field cohr_gross
+	field cohr_freight
+	field cohr_insurance
+	field cohr_other_cost_1
+	field cohr_other_cost_2
+	field cohr_other_cost_3
+	field cohr_tax
+	field cohr_gst
+	field cohr_disc
+	field cohr_deposit
+	field cohr_ex_disc
+	field cohr_erate_var
+	field cohr_exch_rate
+	field cohr_stat_flag
+end
+
+table coln
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_hhbr_hash
+	field coln_incc_hash
+	field coln_crd_type
+	field coln_serial_no
+	field coln_cont_status
+	field coln_q_order
+	field coln_q_backorder
+	field coln_sale_price
+	field coln_cost_price
+	field coln_disc_pc
+	field coln_gross
+	field coln_on_cost
+	field coln_amt_disc
+	field coln_erate_var
+	field coln_sman_code
+	field coln_item_desc
+	field coln_stat_flag
+end
+
+table cnch
+	field cnch_co_no
+	field cnch_cont_no
+	field cnch_hhch_hash
+	field cnch_exch_type
+end
+
+table cncd
+	field cncd_hhch_hash
+	field cncd_hhbr_hash
+	field cncd_hhcc_hash
+	field cncd_hhsu_hash
+	field cncd_curr_code
+	field cncd_cost
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_ex1_factor
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_class
+	field inmr_category
+	field inmr_outer_size
+	field inmr_stat_flag
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_hhcf_hash
+	field excf_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_curr_code
+	field cumr_class_type
+end
+
+table sumr
+	field sumr_hhsu_hash
+	field sumr_curr_code
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table sadf
+	field sadf_co_no
+	field sadf_br_no
+	field sadf_year
+	field sadf_hhbr_hash
+	field sadf_hhcu_hash
+	field sadf_qty_per1
+	field sadf_qty_per2
+	field sadf_qty_per3
+	field sadf_qty_per4
+	field sadf_qty_per5
+	field sadf_qty_per6
+	field sadf_qty_per7
+	field sadf_qty_per8
+	field sadf_qty_per9
+	field sadf_qty_per10
+	field sadf_qty_per11
+	field sadf_qty_per12
+	field sadf_qty_per13
+	field sadf_sal_per1
+	field sadf_sal_per2
+	field sadf_sal_per3
+	field sadf_sal_per4
+	field sadf_sal_per5
+	field sadf_sal_per6
+	field sadf_sal_per7
+	field sadf_sal_per8
+	field sadf_sal_per9
+	field sadf_sal_per10
+	field sadf_sal_per11
+	field sadf_sal_per12
+	field sadf_sal_per13
+	field sadf_cst_per1
+	field sadf_cst_per2
+	field sadf_cst_per3
+	field sadf_cst_per4
+	field sadf_cst_per5
+	field sadf_cst_per6
+	field sadf_cst_per7
+	field sadf_cst_per8
+	field sadf_cst_per9
+	field sadf_cst_per10
+	field sadf_cst_per11
+	field sadf_cst_per12
+	field sadf_cst_per13
+	field sadf_sman
+	field sadf_area
+end
+
+table cush
+	field cush_hhcu_hash
+	field cush_line_no
+	field cush_item_no
+	field cush_item_desc
+	field cush_item_qty
+	field cush_item_price
+	field cush_item_disc
+	field cush_pur_date
+end
+
+table tshs
+	field tshs_hhcu_hash
+	field tshs_hhbr_hash
+	field tshs_date
+	field tshs_qty
+	field tshs_sale_price
+	field tshs_disc
+	field tshs_cost_price
+	field tshs_stat_flag
+end
+
+table tspm
+	field tspm_hhcu_hash
+	field tspm_sales_per
+end
+
+table iudi
+	field iudi_hhcf_hash
+	field iudi_hhbr_hash
+	field iudi_spec_no
+	field iudi_code
+end
+
+table saud
+	field saud_co_no
+	field saud_spec_no
+	field saud_code
+	field saud_year
+	field saud_qty_per1
+	field saud_qty_per2
+	field saud_qty_per3
+	field saud_qty_per4
+	field saud_qty_per5
+	field saud_qty_per6
+	field saud_qty_per7
+	field saud_qty_per8
+	field saud_qty_per9
+	field saud_qty_per10
+	field saud_qty_per11
+	field saud_qty_per12
+	field saud_qty_per13
+	field saud_sal_per1
+	field saud_sal_per2
+	field saud_sal_per3
+	field saud_sal_per4
+	field saud_sal_per5
+	field saud_sal_per6
+	field saud_sal_per7
+	field saud_sal_per8
+	field saud_sal_per9
+	field saud_sal_per10
+	field saud_sal_per11
+	field saud_sal_per12
+	field saud_sal_per13
+	field saud_cst_per1
+	field saud_cst_per2
+	field saud_cst_per3
+	field saud_cst_per4
+	field saud_cst_per5
+	field saud_cst_per6
+	field saud_cst_per7
+	field saud_cst_per8
+	field saud_cst_per9
+	field saud_cst_per10
+	field saud_cst_per11
+	field saud_cst_per12
+	field saud_cst_per13
+end
+

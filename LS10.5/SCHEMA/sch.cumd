@@ -1,0 +1,74 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cumd,v 5.0 2001/06/19 10:17:11 cha Exp $
+|  Schema Name  : (sch.cumd)
+|  Schema Desc  : (Customer Master Defaults. )
+|----------------------------------------------------------------------
+| $Log: sch.cumd,v $
+| Revision 5.0  2001/06/19 10:17:11  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file cumd
+
+field	cumd_co_no			type	char	2	index	dups
+field	cumd_est_no			type	char	2
+field	cumd_acc_type			type	char	1
+field	cumd_stmt_type			type	char	1
+field	cumd_price_type			type	char	1
+field	cumd_bo_flag			type	char	1
+field	cumd_bo_cons			type	char	1
+field	cumd_bo_days			type	int
+field	cumd_po_flag			type	char	1
+field	cumd_sur_flag			type	char	1
+field	cumd_stop_credit		type	char	1
+field	cumd_crd_prd			type	char	3
+field	cumd_roy_type			type	char	3	
+field	cumd_disc_code			type	char	1
+field	cumd_tax_code			type	char	1
+field	cumd_ch_to_ho_flg		type	char	1
+field	cumd_stmnt_flg			type	char	1
+field	cumd_freight_chg		type	char	1
+field	cumd_restock_fee		type	char	1
+field	cumd_nett_pri_prt		type	char	1
+field	cumd_stat_flag			type	char	1
+field 	cumd_gl_ctrl_acct		type	char	16 
+field	cumd_id_no				type	composite
+			cumd_co_no,
+			cumd_est_no 					index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cumd_co_no		-	Company number.
+	cumd_est_no		-	Branch number.
+	cumd_acc_type		-	Account Type.  O(pen item) B(alance b/f)
+	cumd_stmt_type		-	Statement type O(pen item) B(alance b/f)
+	cumd_price_type		-	Customer pricing type	1-5
+	cumd_bo_flag		-	Backorders allowed Y/N
+	cumd_bo_cons		-	Consolidated orders allowed Y/N
+	cumd_bo_days		-	Number of days backorder allowed on file
+	cumd_po_flag		-	Purchase order required Y/N
+	cumd_sur_flag		-	Customer Surcharge flag Y/N
+	cumd_crd_prd		-	Credit period.
+	cumd_roy_type		-	Debtors Royalty Type.
+	cumd_disc_code		-	Debtors default discount code. A-Z
+	cumd_tax_code		-	Debtors tax code. A,B,C,D
+	cumd_ch_to_ho_flg	-	Debtors charge to head office.
+	cumd_stmnt_flg		-	Statement flag Y/N
+	cumd_freight_chg	-	Freight Charged. Y/N
+	cumd_restock_fee	-	Re Stocking fee charged Y/N
+	cumd_nett_pri_prt	- 	Nett prices printed on P/S, Inv etc. Y/N
+	cumd_stat_flag		-	Status flag.
+	cumd_gl_ctrl_acct	-	Control Account for Debtor.
+}

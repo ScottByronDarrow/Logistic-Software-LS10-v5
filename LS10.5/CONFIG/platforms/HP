@@ -1,0 +1,9 @@
+# Most HPUX platforms
+#
+CXX			=	g++
+LD			=	g++
+CXXDBG			=	-Wall -g
+CXXFLAGS		=	-Wall -g
+LDFLAGS			=	-O -s
+
+QUIRKSLIB		= -lm -lcma

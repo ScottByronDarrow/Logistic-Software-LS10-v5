@@ -1,0 +1,31 @@
+Logistic Software Master Menu (MAIN)
+main_help
+Accounting <a> (2,3)
+menu MENUSYS/main_acct.mdf
+Sales <a> (2,3)
+menu MENUSYS/main_sale.mdf
+Marketing <a> (2,3)
+menu MENUSYS/main_mark.mdf
+Distribution <a> (2,3)
+menu MENUSYS/main_dist.mdf
+Manufacturing <a> (3,3)
+menu MENUSYS/main_manf.mdf
+Administration <a> (3,3)
+menu MENUSYS/admin.mdf
+System Control <a> (3,3)
+menu MENUSYS/misc.mdf
+End of Processing <a> (3,3)
+chain~eoday~logout~
+((
+box(4,4,70,12)
+quadrant(12,5)
+quadrant(11,6)
+quadrant(46,6)
+quadrant(30,19)
+box(38,5,1,10)
+box(37,5,1,10)
+HEADING_ON
+TRAILER_ON
+FAST_ON
+SUB_ON
+))

@@ -1,0 +1,62 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pmpc,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pmpc)
+|  Schema Desc  : (Project-Contractor File )
+|----------------------------------------------------------------------
+| $Log: sch.pmpc,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:06  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:40  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file 	pmpc
+
+field	pmpc_proj_no   			type	char	8
+field	pmpc_cont_no			type	char	6			index	dups
+field	pmpc_type				type	char	1
+field	pmpc_parent_no 			type	char	6
+field	pmpc_area	 			type	char	2
+field	pmpc_mtrl_cost 			type	money
+field	pmpc_loyal_rat	 		type	float
+field	pmpc_ord_prob 	 		type	float
+field	pmpc_sman_code			type	char	2	
+field	pmpc_status				type	char	1
+field	pmpc_id_no				type	composite
+			pmpc_proj_no,
+			pmpc_cont_no									index	dups
+field	pmpc_id_no2				type	composite
+			pmpc_cont_no,
+			pmpc_parent_no                                  index   dups
+field	pmpc_id_no3				type	composite
+			pmpc_proj_no,
+			pmpc_cont_no,
+			pmpc_parent_no                                  index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pmpc_proj_no	 	-	Project Number. 
+	pmpc_cont_no		-	Validate from Customer or Prospect.
+	pmpc_type   		-	C)ustomer or P)rospect.
+	pmpc_area   		-	Contractor Area.
+	pmpc_sman_code		-	Salesman Number.
+	pmpc_sub_cont		-	Subcontractor Number.
+	pmpc_parent_no		-	Parent Contractor (0 if Main Contractor).
+	pmpc_mtrl_cost		-	Estimated Value of materials to be supplied.
+	pmpc_loyal_rat		-	Loyalty rating(%).
+	pmpc_ord_prob		-	Order Probability(%).
+	pmpc_status  		-	(A)ctive,
+						 	Contractor wo(N), 
+							Contractor lo(S)t,
+							Order (W)on,
+						 	Order (L)ost.
+}

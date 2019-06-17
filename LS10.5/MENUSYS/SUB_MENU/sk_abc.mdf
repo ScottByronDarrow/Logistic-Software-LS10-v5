@@ -1,0 +1,12 @@
+ABC Analysis Print/Update Menu. (SUB)
+sub_menu
+Stock Reports menu. <a> (1,1)
+menu MENUSYS/sk_report.mdf
+Print/Update ABC Stock Codes (Company) <a> (1,1)
+sk_abc_val~C~
+Print/Update ABC Stock Codes (Branch) <a> (1,1)
+sk_abc_val~B~
+Print/Update ABC Stock Codes (Warehouse) <a> (1,1)
+sk_abc_val~W~
+((
+))

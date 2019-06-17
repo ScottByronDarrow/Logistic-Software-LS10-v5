@@ -1,0 +1,12 @@
+#
+# DEC Alpha running OSF/1  using g++
+#
+CC				=	gcc
+CDBG			=	-Wall -g
+C++				=	g++
+C++DBG			=	-Wall -g
+
+#
+#	Include rules to build C++ sources
+#
+include ${BASE_PATH}/ver${VERSION}/CONFIG/Rules.c++

@@ -1,0 +1,51 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inpc,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inpc)
+|  Schema Desc  : (Price Book Column Headings File )
+|----------------------------------------------------------------------
+| $Log: sch.inpc,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:31  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inpc
+
+field	inpc_hhpr_hash			type	long
+field	inpc_col_no			type	int
+field	inpc_id_no			type	composite
+		inpc_hhpr_hash,
+		inpc_col_no					index	primary
+field	inpc_col_type			type	char	1
+field	inpc_width			type	int
+field	inpc_heading_1			type	char	45
+field	inpc_heading_2			type	char	45
+field	inpc_format			type	char	1
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inpc_hhpr_hash		-	Link to inps ( inps_hhpr_hash )
+	inpc_col_no		-	Unique hhpr_hash / column no.
+	inpc_col_type		-	I(tem, 		P(ack, 
+					L(ength, 	D(escription, 	
+					O(ther,		$ Price,
+					C(ost,		Q(uantity Break.
+	inpc_width		-	Column width.
+	inpc_heading_1		-	Column heading part one.
+	inpc_heading_2		-	Column heading part two.
+	inpc_format		-	Column format.
+						C(entre,	
+						L(eft justify
+						R(ight justify.
+}

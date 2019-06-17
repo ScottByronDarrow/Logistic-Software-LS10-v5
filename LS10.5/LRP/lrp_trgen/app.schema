@@ -1,0 +1,153 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:07:44 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:07:44  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:28:55  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/30 04:16:10  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_acronym
+end
+
+table comr
+	field comr_co_no
+	field comr_nx_del_no
+	field comr_contingency
+end
+
+table ffwk
+	field ffwk_hhcc_hash
+	field ffwk_hhbr_hash
+	field ffwk_hhsu_hash
+	field ffwk_hhpo_hash
+	field ffwk_hhit_hash
+	field ffwk_filename
+	field ffwk_sort
+	field ffwk_crd_no
+	field ffwk_r_hhcc_hash
+	field ffwk_review_pd
+	field ffwk_wks_demand
+	field ffwk_sugg_qty
+	field ffwk_order_qty
+	field ffwk_source
+	field ffwk_cons_1
+	field ffwk_cons_2
+	field ffwk_cons_3
+	field ffwk_cons_4
+	field ffwk_cons_5
+	field ffwk_cons_6
+	field ffwk_cons_7
+	field ffwk_cons_8
+	field ffwk_cons_9
+	field ffwk_cons_10
+	field ffwk_cons_11
+	field ffwk_cons_12
+	field ffwk_cost_price
+	field ffwk_uplift_amt
+	field ffwk_alt_supp
+	field ffwk_stat_flag
+end
+
+table ithr
+	field ithr_co_no
+	field ithr_type
+	field ithr_del_no
+	field ithr_hhit_hash
+	field ithr_iss_sdate
+	field ithr_iss_date
+	field ithr_rec_date
+	field ithr_tran_ref
+	field ithr_op_id
+	field ithr_time_create
+	field ithr_date_create
+	field ithr_cons_no
+	field ithr_carr_code
+	field ithr_carr_area
+	field ithr_no_cartons
+	field ithr_frt_cost
+	field ithr_no_kgs
+	field ithr_full_supply
+	field ithr_printed
+	field ithr_stat_flag
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+	field itln_i_hhcc_hash
+	field itln_r_hhcc_hash
+	field itln_hhum_hash
+	field itln_tran_ref
+	field itln_serial_no
+	field itln_qty_order
+	field itln_qty_border
+	field itln_qty_rec
+	field itln_cost
+	field itln_duty
+	field itln_stock
+	field itln_status
+	field itln_due_date
+	field itln_full_supply
+	field itln_item_desc
+	field itln_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_supercession
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_sale_unit
+	field inmr_sellgrp
+	field inmr_buygrp
+	field inmr_safety_stock
+	field inmr_std_uom
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_allow_repl
+	field incc_first_stocked
+	field incc_wks_demand
+	field incc_safety_stock
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_opening_stock
+	field incc_closing_stock
+end
+

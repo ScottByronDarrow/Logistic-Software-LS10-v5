@@ -1,0 +1,334 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/09 09:26:32 scott Exp $
+#	$Source: /usr/LS10/REPOSITORY/LS10.5/UTILS/LS10_CreateBaseData/app.schema,v $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/09 09:26:32  scott
+#	Updated to add FinishProgram () function
+#	
+#	Revision 5.0  2001/06/19 08:22:17  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:43:21  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.1  2001/01/15 02:32:01  scott
+#	New Program to create base data for database
+#	
+#	
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short       
+	field comm_est_no         
+	field comm_est_name       
+	field comm_est_short      
+	field comm_cc_no          
+	field comm_cc_name        
+	field comm_cc_short       
+	field comm_dp_no          
+	field comm_dp_name        
+	field comm_dp_short       
+	field comm_dbt_date       
+	field comm_crd_date       
+	field comm_inv_date       
+	field comm_payroll_date   
+	field comm_gl_date        
+	field comm_closed_period  
+	field comm_fiscal         
+	field comm_gst_rate       
+	field comm_price1_desc    
+	field comm_price2_desc    
+	field comm_price3_desc    
+	field comm_price4_desc    
+	field comm_price5_desc    
+	field comm_price6_desc    
+	field comm_price7_desc    
+	field comm_price8_desc    
+	field comm_price9_desc    
+	field comm_pay_terms      
+	field comm_env_name       
+	field comm_stat_flag      
+end
+
+table comr
+	field comr_co_no          
+	field comr_co_name        
+	field comr_co_short_name  
+	field comr_co_adr1        
+	field comr_co_adr2        
+	field comr_co_adr3        
+	field comr_master_br      
+	field comr_module_inst    
+	field comr_fiscal         
+	field comr_dbt_date       
+	field comr_crd_date       
+	field comr_inv_date       
+	field comr_payroll_date   
+	field comr_gl_date        
+	field comr_stmt_date      
+	field comr_date_stmt_prn  
+	field comr_yend_date      
+	field comr_status_flags   
+	field comr_nx_ct_no       
+	field comr_nx_ct_tno      
+	field comr_nx_inv_no      
+	field comr_nx_crd_no      
+	field comr_nx_po_no       
+	field comr_nx_po_no_fgn   
+	field comr_nx_pc_no       
+	field comr_nx_gr_no       
+	field comr_nx_pac_no      
+	field comr_nx_del_no      
+	field comr_nx_chq_no      
+	field comr_ls_chq_no      
+	field comr_nx_job_no      
+	field comr_nx_requis_no   
+	field comr_nx_rec_no      
+	field comr_prospect_no    
+	field comr_nx_call_no     
+	field comr_nx_trip_no     
+	field comr_ship_no        
+	field comr_od_per1        
+	field comr_od_per2        
+	field comr_od_per3        
+	field comr_od_per4        
+	field comr_closed_period  
+	field comr_pay_bover      
+	field comr_pay_freq       
+	field comr_gst_rate       
+	field comr_gst_ird_no     
+	field comr_int_rate       
+	field comr_restock_pc     
+	field comr_price1_desc    
+	field comr_price2_desc    
+	field comr_price3_desc    
+	field comr_price4_desc    
+	field comr_price5_desc    
+	field comr_price6_desc    
+	field comr_price7_desc    
+	field comr_price8_desc    
+	field comr_price9_desc    
+	field comr_contingency    
+	field comr_sur_amt        
+	field comr_sur_cof        
+	field comr_frt_min_amt    
+	field comr_frt_mweight    
+	field comr_pay_terms      
+	field comr_fin_susp       
+	field comr_nfn_susp       
+	field comr_pl_app_acc     
+	field comr_po_sic1        
+	field comr_po_sic2        
+	field comr_po_sic3        
+	field comr_env_name       
+	field comr_stat_flag      
+	field comr_base_curr      
+	field comr_consolidate    
+end
+
+table esmr
+	field esmr_co_no          
+	field esmr_est_no         
+	field esmr_est_name       
+	field esmr_short_name     
+	field esmr_adr1           
+	field esmr_adr2           
+	field esmr_adr3           
+	field esmr_area_code      
+	field esmr_dbt_date       
+	field esmr_crd_date       
+	field esmr_inv_date       
+	field esmr_pay_date       
+	field esmr_gl_date        
+	field esmr_stmt_date      
+	field esmr_date_stmt_prn  
+	field esmr_status_flags   
+	field esmr_dflt_bank      
+	field esmr_chg_pref       
+	field esmr_csh_pref       
+	field esmr_crd_pref       
+	field esmr_man_pref       
+	field esmr_nx_sav_inv     
+	field esmr_nx_csh_inv     
+	field esmr_nx_csh_crd     
+	field esmr_nx_inv_no      
+	field esmr_nx_man_no      
+	field esmr_nx_request_no  
+	field esmr_nx_slip_no     
+	field esmr_nx_crd_nte_no  
+	field esmr_nx_ccn_no      
+	field esmr_sales_acc      
+	field esmr_nx_pur_ord_no  
+	field esmr_nx_pur_fgn     
+	field esmr_nx_pur_crd_no  
+	field esmr_nx_gr_no       
+	field esmr_nx_pack_no     
+	field esmr_nx_del_dck_no  
+	field esmr_nx_order_no    
+	field esmr_nx_requis_no   
+	field esmr_nx_cheq_no     
+	field esmr_ls_cheq_no     
+	field esmr_nx_job_no      
+	field esmr_nx_dd_order    
+	field esmr_nx_csh_trn_no  
+	field esmr_nx_voucher_no  
+	field esmr_online         
+	field esmr_stat_flag      
+end
+
+table ccmr
+	field ccmr_co_no          
+	field ccmr_est_no         
+	field ccmr_cc_no          
+	field ccmr_hhcc_hash      
+	field ccmr_hhlo_hash      
+	field ccmr_master_wh      
+	field ccmr_only_loc       
+	field ccmr_sman_no        
+	field ccmr_name           
+	field ccmr_acronym        
+	field ccmr_whse_add1      
+	field ccmr_whse_add2      
+	field ccmr_whse_add3      
+	field ccmr_whse_add4      
+	field ccmr_type           
+	field ccmr_sal_ok         
+	field ccmr_pur_ok         
+	field ccmr_issues_ok      
+	field ccmr_receipts       
+	field ccmr_reports_ok     
+	field ccmr_lrp_ok         
+	field ccmr_lpno           
+	field ccmr_nx_wo_num      
+	field ccmr_stat_flag      
+end
+
+table cudp
+	field cudp_co_no          
+	field cudp_br_no          
+	field cudp_dp_no          
+	field cudp_dp_name        
+	field cudp_dp_short       
+	field cudp_location       
+	field cudp_csh_pref       
+	field cudp_chg_pref       
+	field cudp_crd_pref       
+	field cudp_man_pref       
+	field cudp_nx_chg_no      
+	field cudp_nx_csh_no      
+	field cudp_nx_crd_no      
+	field cudp_nx_man_no      
+	field cudp_nx_sav_no      
+	field cudp_stat_flag      
+end
+
+table pocf
+	field pocf_co_no          
+	field pocf_code           
+	field pocf_description    
+	field pocf_ldesc          
+	field pocf_load_type      
+	field pocf_freight_load   
+	field pocf_lead_time      
+	field pocf_last_update    
+end
+
+table pocr
+	field pocr_co_no          
+	field pocr_code           
+	field pocr_description    
+	field pocr_prime_unit     
+	field pocr_sub_unit       
+	field pocr_ex1_factor     
+	field pocr_ex2_factor     
+	field pocr_ex3_factor     
+	field pocr_ex4_factor     
+	field pocr_ex5_factor     
+	field pocr_ex6_factor     
+	field pocr_ex7_factor     
+	field pocr_ldate_up       
+	field pocr_gl_ctrl_acct   
+	field pocr_gl_exch_var    
+	field pocr_stat_flag      
+	field pocr_operator       
+end
+
+table glct
+	field glct_format         
+	field glct_fiscal         
+	field glct_history        
+	field glct_link_max       
+	field glct_ptype          
+	field glct_max_budg       
+	field glct_nxt_budg       
+	field glct_mod_date       
+	field glct_stat_flag      
+end
+
+table bpro
+	field bpro_co_no          
+	field bpro_br_no          
+	field bpro_program        
+	field bpro_hash           
+	field bpro_status         
+	field bpro_up_date        
+	field bpro_up_time        
+	field bpro_pid            
+	field bpro_lpno           
+	field bpro_parameters     
+	field bpro_stat_flag      
+end
+
+table opts
+	field opts_access_code    
+	field opts_prog_name      
+	field opts_option_no      
+	field opts_key            
+	field opts_allowed        
+	field opts_key_desc       
+end
+
+table gljc
+	field gljc_co_no          
+	field gljc_journ_type     
+	field gljc_run_no         
+	field gljc_jnl_desc       
+	field gljc_nxt_pge_no     
+	field gljc_tot_1          
+	field gljc_tot_2          
+	field gljc_tot_3          
+	field gljc_tot_4          
+	field gljc_tot_5          
+	field gljc_tot_6          
+	field gljc_stat_flag      
+	field gljc_rep_prog1      
+	field gljc_rep_prog2      
+end
+
+table glmr
+	field glmr_co_no          
+	field glmr_acc_no         
+	field glmr_curr_code      
+	field glmr_desc           
+	field glmr_class1         
+	field glmr_class2         
+	field glmr_class3         
+	field glmr_hhca_hash      
+	field glmr_hhmr_hash      
+	field glmr_parent_cnt     
+	field glmr_child_cnt      
+	field glmr_mod_date       
+	field glmr_stat_flag      
+end
+
+table inum
+	field inum_uom_group      
+	field inum_hhum_hash      
+	field inum_uom            
+	field inum_desc           
+	field inum_cnv_fct        
+end

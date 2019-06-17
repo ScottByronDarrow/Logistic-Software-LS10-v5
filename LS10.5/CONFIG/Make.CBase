@@ -1,0 +1,46 @@
+#
+#	Front end for using either Development or Release libraries
+#		- C programs
+#
+SHELL		=	/bin/sh
+MAKEONE		=	${BASE_PATH}/${VERSION}/CONFIG/make-c/Make.single
+MAKEMANY	=	${BASE_PATH}/${VERSION}/CONFIG/make-c/Make.many
+
+BUILDDEST	=	${BASE_PATH}/ver.etc/bin/builddest
+
+#
+#	Additions for documentation
+#
+.SUFFIXES:	.tex .dvi
+.tex.dvi:
+	latex $<
+
+#
+# Default rule
+#
+application:
+	@if [ ! -f depend ] ; \
+	then \
+		touch -t 199001010000 depend ; \
+	fi
+	@if [ ! -f app.schema ] ; \
+	then \
+		touch app.schema ; \
+	fi
+	@if [ -n "${ALTS}" ] ; \
+	then \
+		${MAKE} -f ${MAKEMANY} APP=${APP} SRCS="${SRCS}" \
+			APPSFLAGS="${APPSFLAGS}" \
+			APPINC="${APPINC}" APPDEF="${APPDEF}" APPLIB="${APPLIB}" \
+			ALTS="`${BUILDDEST} ${DESTDIR} ${ALTS}`" ; \
+	else \
+		${MAKE} -f ${MAKEONE}  APP=${APP} SRCS="${SRCS}" \
+			APPSFLAGS="${APPSFLAGS}" \
+			APPINC="${APPINC}" APPDEF="${APPDEF}" APPLIB="${APPLIB}" ; \
+	fi
+
+doc:	${APP}.dvi
+
+clean:
+	-rm -f *.o schema depend *.aux *.dvi *.log \
+		${DESTDIR}/${APP} `${BUILDDEST} ${DESTDIR} ${ALTS}`

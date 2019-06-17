@@ -1,0 +1,13 @@
+The extra library I've created here is simply to satisfy an external
+request for programs that do NOT already supply definitions for:
+	gljc_rec
+	gljc_no_fields
+	gljc_list
+	glwk_rec
+Since the library modules that reference these variables in libbase are not
+used if this library gets *included* (OK bad pun), I'm not defining much
+in the way of real storage
+
+Also, due to an existing *BUG* in the INFORMIX C-ISAM Library (libisam.a) that
+I converted into a DSO (libisam.so), I had to manually extract sort.o from it
+and retain it as a static object with libDSOXtra.a

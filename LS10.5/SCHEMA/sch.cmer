@@ -1,0 +1,73 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmer,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cmer)
+|  Schema Desc  : (Contract Management Employee Rates Master File )
+|----------------------------------------------------------------------
+| $Log: sch.cmer,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmer
+
+field	cmer_hhem_hash			type	long
+field	cmer_hhhr_hash			type	long
+field	cmer_hhcm_hash			type	long
+field	cmer_lab_rate			type	money
+field	cmer_lab_pc				type	float
+field	cmer_o_h_rate			type	money
+field	cmer_o_h_pc				type	float
+field	cmer_id_no				type	composite
+			cmer_hhem_hash,
+			cmer_hhhr_hash,
+			cmer_hhcm_hash								index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmer_hhem_hash		-	Link to hhem (Employee Master File)
+	cmer_hhhr_hash		-	Link to cmhr (Contract Header File)
+	cmer_hhcm_hash		-	Link to cmcm (Costhead Master File)
+	cmer_lab_rate		-	Override Labour Rate
+	cmer_lab_pc			-	Override Labour Percent Markup
+	cmer_o_h_rate		-	Override O/H Rate
+	cmer_o_h_pc			-	Override O/H Rate Percent Markup
+
+	NOTES
+	=====
+		With the hhhr_hash and hhcm_hash if the value is 0 then value
+	applies for all cmhr / cmcm records.
+	
+	e.g.	cmer_hhem_hash = 5
+		cmer_hhhr_hash = 0
+		cmer_hhcm_hash = 25
+		cmer_lab_rate  = 90.00
+
+	means :- for employee with a hash of 5
+		 for all contracts 
+		 for the costhead with a hash of 25
+		 the labour rate will be $90.00
+
+	FURTHER NOTES
+	======= =====
+		If no records exist for a certain employee then the rate
+	used will be off the cmem reocrd for that employee.
+
+	Other possiblilties are :-
+
+	emp/specific contract/specific costhead
+	emp/specific contract/all costheads
+	emp/all contracts/specific costhead
+}

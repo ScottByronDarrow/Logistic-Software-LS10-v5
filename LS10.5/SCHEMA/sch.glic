@@ -1,0 +1,51 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.glic,v 5.1 2001/07/25 01:15:51 scott Exp $
+|  Schema Name  : (sch.glic)
+|  Schema Desc  : (General Ledger Interface Code File. )
+|----------------------------------------------------------------------
+| $Log: sch.glic,v $
+| Revision 5.1  2001/07/25 01:15:51  scott
+| Updated for LS10.5
+|
+| Revision 4.0  2001/03/09 01:00:42  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file glic 
+
+field	glic_co_no				type	char	2
+field	glic_code				type	char	10
+field	glic_desc				type	char	40
+field	glic_acct_no			type	char	16
+field	glic_prmpt_desc			type	char	20
+field	glic_int_active			type	int
+field 	glic_cat_ok				type	int
+field 	glic_br_no_ok			type	int
+field 	glic_wh_no_ok			type	int
+field 	glic_class_ok			type	int
+field	glic_id_no				type	composite
+			glic_co_no,
+			glic_code									index	primary
+field	glic_id_no2				type	composite
+			glic_co_no,
+			glic_acct_no								index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	glic_co_no			-		Company Number.
+	glic_type			-		Interface Code.
+	glic_desc			-		Description of interface code.
+	glic_acct_no		-		Default Account Number.
+	glic_prmpt_desc		-		Default Prompt description.
+	glic_int_active			-	1 = Interface Active.
+	glic_cat_ok				-	1 = Category breakdown active. 0 = non-active
+	glic_class_ok			-	1 = Class/Sman breakdown active. 0 = non-active
+}

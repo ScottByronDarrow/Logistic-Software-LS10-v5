@@ -1,0 +1,71 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.suhd,v 5.1 2001/08/07 00:07:43 scott Exp $
+|  Schema Name  : (sch.suhd)
+|  Schema Desc  : (Creditors Payments - Header File)
+|----------------------------------------------------------------------
+| $Log: sch.suhd,v $
+| Revision 5.1  2001/08/07 00:07:43  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:28  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:49  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	suhd
+
+field	suhd_hhsu_hash		type	long			index	dups
+field	suhd_pid			type	long			index	dups
+field	suhd_cheq_no		type	char	15		index	dups
+field	suhd_hhsp_hash		type	serial			index
+field	suhd_narrative		type	char	20
+field	suhd_date_payment	type	edate
+field	suhd_date_post		type	edate
+field	suhd_tot_amt_paid	type	money
+field	suhd_loc_amt_paid	type	money
+field	suhd_disc_taken		type	money
+field	suhd_loc_disc_take	type	money
+field	suhd_exch_variance	type	money
+field	suhd_bank_id		type	char	5
+field	suhd_bank_amt 		type	money
+field	suhd_bank_exch 		type	double
+field	suhd_bank_chg  		type	money
+field	suhd_pay_type		type	char	1
+field	suhd_rem_prt		type	char	1
+field	suhd_clear_fee		type	money   
+field	suhd_stat_flag		type	char	1
+field	suhd_id_no			type	composite
+			suhd_hhsu_hash,
+			suhd_cheq_no									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	suhd_hhsu_hash		-	Link to Supplier master file.  ( sumr ).
+	suhd_pid			-	Unique PID used for Cheque printing.
+	suhd_cheq_no		-	Cheque Number.
+	suhd_hhsp_hash		-	Link to Cheque detail file.    ( sudt )
+	suhd_narrative		-	Cheque Narrative.
+	suhd_date_payment	-	Date of Payment.
+	suhd_date_post		-	Date Posted.
+	suhd_tot_amt_paid	-	Total amount of cheque in O/S currency.
+	suhd_loc_amt_paid	-	Total amount of cheque in LOC currency.
+	suhd_disc_taken		-	Discount taken in O/S Currency.
+	suhd_loc_disc_take	-	Discount taken in LOC Currency.
+	suhd_exch_variance	-	Exchange Variation.
+	suhd_bank_id		-	Bank ID.
+	suhd_pay_type		-	Pay Type.
+	suhd_rem_prt		-	Remmitenance printed.
+	suhd_stat_flag		-	Spare Status flag.
+}
+

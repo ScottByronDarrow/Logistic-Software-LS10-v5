@@ -1,0 +1,14 @@
+GENERAL LEDGER IMPORT / EXPORT BUDGETS MENU (SUB)
+sel_help
+General Ledger Menu. <a> (1,2)
+menu MENUSYS/gl_master.mdf
+Export GL Budgets <ERROR> (1,1)
+gl_bud_export~
+Import GL Budgets <ERROR> (1,1)
+gl_bud_import~
+((
+quadrant(7,6)
+quadrant(44,8)
+box(2,3,74,15)
+line(3,5,73)
+))

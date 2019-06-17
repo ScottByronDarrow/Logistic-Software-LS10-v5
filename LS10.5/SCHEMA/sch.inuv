@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inuv,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.inuv)
+|  Schema Desc  : (Item UOM/Volume Master File)
+|----------------------------------------------------------------------
+| $Log: sch.inuv,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:58  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:33  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inuv
+
+field	inuv_hhbr_hash			type	long		
+field	inuv_hhum_hash			type	long
+field	inuv_weight				type	float
+field	inuv_volume				type	float
+field	inuv_height				type	float
+field	inuv_width				type	float
+field	inuv_carton_flag		type	char	1
+field	inuv_id_no				type	comp
+			inuv_hhbr_hash,
+			inuv_hhum_hash									index	primary
+end
+{
+
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inuv_hhbr_hash		-		Link to Inventory master file (inmr)
+	inuv_hhum_hash		-		Link to Inventory UOM file (inum)
+	inuv_weight			-		Weight specific to Unit of Measure
+	inuv_volume			-		Volume specific to Unit of Measure
+	inuv_width			-		Width specific to Unit of Measure
+	inuv_height			-		Height specific to Unit of Measure
+	inuv_carton_flag	-		Used for Ben foods only.
+}

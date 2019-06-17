@@ -1,0 +1,21 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:01:39 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:01:39  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_crd_date
+end
+

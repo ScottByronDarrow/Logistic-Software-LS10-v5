@@ -1,0 +1,22 @@
+Telesales Master Menu (TSMR)
+ts_help
+Sales Menu <a|tsales> (1,2)
+menu MENUSYS/main_sale.mdf
+Make / Receive Calls <a|tsales> (1,2)
+ts_call~R~ts_call.s~ 1~LPNO~
+Miscellaneous Maintenances <a|tsales> (1,2)
+pmenu MENUSYS/SUB_MENU/ts_maint.mdf
+Activate Customer For Telesales <a|tsales> (1,2)
+ts_active~
+Tele-sales Lead Allocation. <a|tsales> (1,2)
+ts_ld_allc~
+Telesales Mailer Menu. <a|tsales> (1,2)
+menu MENUSYS/ts_mailer.mdf
+Telesales Reports Menu. <a|tsales> (1,1)
+menu MENUSYS/ts_report.mdf
+((
+quadrant(21,6)
+quadrant(46,8)
+box(14,3,50,15)
+line(15,5,49)
+))

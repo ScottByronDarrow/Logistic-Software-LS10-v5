@@ -1,0 +1,7 @@
+#
+# Most AIX platforms
+#
+C++C			=	g++
+LD				=	g++
+CXXDBG			=	-Wall -g
+LDFLAGS			=	-O -s

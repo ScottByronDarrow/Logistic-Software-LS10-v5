@@ -1,0 +1,17 @@
+Online Head Office Menu (SUB)
+hdof_help
+Return to On-line Main Menu. <a> (1,2)
+menu MENUSYS/ol_menu.mdf
+Display Branch Status. <ERROR> (1,1)
+chain~ol_ctrl~
+Maintain Security Records. <a> (1,2)
+chain~srmaint~
+Check Security Record. <ERROR> (1,2)
+chain~echo "\n\t\t\t\t**** TEST OK ****"~sleep 4~
+List Security Records. <a> (1,2)
+lp_chain~srlist LPNO~
+((
+quadrant(21,6)
+box(14,3,50,10)
+line(15,5,49)
+))

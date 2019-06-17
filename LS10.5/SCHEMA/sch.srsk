@@ -1,0 +1,86 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.srsk,v 5.0 2001/06/19 10:17:31 cha Exp $
+|  Schema Name  : (sch.srsk)
+|  Schema Desc  : (SeaRch file for Stock. )
+|----------------------------------------------------------------------
+| $Log: sch.srsk,v $
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:26  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:48  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	srsk
+
+field	srsk_co_no				type	char	2
+field	srsk_hhbr_hash			type	long				index	primary
+field	srsk_item_no			type	char	16
+field	srsk_class				type	char	1
+field	srsk_category  			type	char	11
+field	srsk_active_status		type	char	1
+field	srsk_alpha_code			type	char	16
+field	srsk_alternate			type	char	16
+field	srsk_barcode			type	char	16
+field	srsk_maker_no			type	char	16
+field	srsk_description		type	char	40
+field	srsk_source				type	char	2
+field	srsk_sellgrp			type	char	6
+field	srsk_buygrp				type	char	6
+field	srsk_spare				type	char	15
+field	srsk_qc_reqd			type	char	1
+
+field	srsk_itm_id				type	composite
+			srsk_co_no,
+			srsk_item_no									index	dups
+field	srsk_alp_id				type	composite
+			srsk_co_no,
+			srsk_alpha_code									index	dups
+field	srsk_alt_id				type	composite
+			srsk_co_no,
+			srsk_alternate									index	dups
+field	srsk_bar_id				type	composite
+			srsk_co_no,
+			srsk_barcode 									index	dups
+field	srsk_mak_id				type	composite
+			srsk_co_no,
+			srsk_maker_no									index	dups
+field	srsk_des_id				type	composite
+			srsk_co_no,
+			srsk_description								index	dups
+field	srsk_cat_id				type	composite
+			srsk_co_no,
+			srsk_category 									index	dups
+field	srsk_sel_id				type	composite
+			srsk_co_no,
+			srsk_sellgrp 									index	dups
+field	srsk_buy_id				type	composite
+			srsk_co_no,
+			srsk_buygrp 									index	dups
+field	srsk_spa_id				type	composite
+			srsk_co_no,
+			srsk_spare 										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	srsk_co_no			-	Company Number.
+	srsk_hhbr_hash		-	Link to Item master file.
+	srsk_item_no		-	Item Number.
+	srsk_alpha_code		-	Alpha Code.
+	srsk_alternate		-	Alternate No
+	srsk_barcode		-	Barcode No.
+	srsk_maker_no		-	Maker No.
+	srsk_description	-	Item Description.
+	srsk_source			-	Source
+	srsk_sellgrp		-	Selling Group
+	srsk_buygrp			-	Buying Group
+	srsk_spare			-	Spare or user specific
+}

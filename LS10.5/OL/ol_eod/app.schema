@@ -1,0 +1,77 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:09:47 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:09:47  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:30:59  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/02/05 09:18:40  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_sales_acc
+end
+
+table cudp
+	field cudp_co_no
+	field cudp_br_no
+	field cudp_dp_no
+	field cudp_dp_name
+end
+
+table cumr
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_hhcu_hash
+	field cohr_hhco_hash
+	field cohr_type
+	field cohr_date_raised
+	field cohr_gross
+	field cohr_freight
+	field cohr_tax
+	field cohr_gst
+	field cohr_disc
+	field cohr_inv_print
+	field cohr_stat_flag
+end
+
+table coln
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_hhbr_hash
+	field coln_gross
+	field coln_amt_disc
+	field coln_amt_tax
+end
+

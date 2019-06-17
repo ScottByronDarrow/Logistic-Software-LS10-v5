@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.arct,v 5.1 2002/05/07 02:49:35 scott Exp $
+|  Schema Name  : (sch.arct)
+|  Schema Desc  : (System Archive Control file)
+|----------------------------------------------------------------------
+| $Log: sch.arct,v $
+| Revision 5.1  2002/05/07 02:49:35  scott
+| Updates for new archiving system
+|
+|=====================================================================}
+file	arct
+
+field	arct_co_no				type	char	2
+field	arct_filename			type	char	20			
+field	arct_op_id          	type	char	14
+field	arct_time_create    	type	char	5
+field	arct_date_create    	type	edate
+field	arct_stat_flag			type	char	1
+field	arct_id_no				type	composite
+			arct_co_no,
+			arct_filename									index	primary
+
+end
+{
+              =====================================
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+              =====================================
+		arct_co_no				-	Company Number
+		arct_filename			-	Archive File Name
+		arct_op_id      		-	Operator ID
+		arct_time_create 		-	Time Created
+		arct_date_create 		-	Date Created.
+		arct_stat_flag			-	Spare status flag
+}

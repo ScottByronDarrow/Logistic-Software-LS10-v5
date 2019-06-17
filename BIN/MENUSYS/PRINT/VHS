@@ -1,0 +1,6 @@
+#
+#  Printer Entry For ND10 printer. P0 = 10' P2 = 17'
+#   VHS label printer for vidcom
+VHS|Star ND10|This is a printer entry:\
+	:TF=\014:XN=\EW1:XF=\EW0:UN=\E-1:UF=\E-0:\
+	:P0=\EP\022:P2=\EP\017:EX=2:

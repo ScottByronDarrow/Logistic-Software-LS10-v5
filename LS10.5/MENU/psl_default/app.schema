@@ -1,0 +1,149 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:32:34 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:32:34  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_inv_date
+	field comm_gst_rate
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+	field comm_stat_flag
+end
+
+table inmd
+	field inmd_co_no
+	field inmd_class
+	field inmd_abc_code
+	field inmd_grade
+	field inmd_abc_update
+	field inmd_lot_ctrl
+	field inmd_source
+	field inmd_costing_flag
+	field inmd_serial_item
+	field inmd_dec_pt
+	field inmd_bo_flag
+	field inmd_bo_release
+	field inmd_gst_pc
+	field inmd_min_quan
+	field inmd_max_quan
+	field inmd_safety_stock
+	field inmd_licence
+	field inmd_duty
+	field inmd_duty_amt
+	field inmd_std_uom
+	field inmd_std_duom
+	field inmd_alt_uom
+	field inmd_alt_duom
+	field inmd_uom_cfactor
+	field inmd_outer_uom
+	field inmd_outer_size
+	field inmd_tax_pc
+	field inmd_tax_amount
+	field inmd_schg_flag
+	field inmd_lot_expiry
+	field inmd_dflt_bom
+	field inmd_dflt_rtg
+	field inmd_eoq
+end
+
+table ingd
+	field ingd_co_no
+	field ingd_grade
+	field ingd_writedown
+	field ingd_stat_flag
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table cumd
+	field cumd_co_no
+	field cumd_est_no
+	field cumd_acc_type
+	field cumd_stmt_type
+	field cumd_price_type
+	field cumd_bo_flag
+	field cumd_bo_cons
+	field cumd_bo_days
+	field cumd_po_flag
+	field cumd_sur_flag
+	field cumd_stop_credit
+	field cumd_crd_prd
+	field cumd_roy_type
+	field cumd_disc_code
+	field cumd_tax_code
+	field cumd_ch_to_ho_flg
+	field cumd_stmnt_flg
+	field cumd_freight_chg
+	field cumd_restock_fee
+	field cumd_nett_pri_prt
+	field cumd_stat_flag
+	field cumd_gl_ctrl_acct
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_master_wh
+	field ccmr_stat_flag
+end
+
+table podt
+	field podt_co_no
+	field podt_code
+	field podt_description
+end
+
+table polh
+	field polh_co_no
+	field polh_est_no
+	field polh_lic_cate
+	field polh_lic_no
+	field polh_type
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_stat_flag
+end
+
+table exdf
+	field exdf_co_no
+	field exdf_code
+	field exdf_disc_pc
+end
+
+table dbry
+	field dbry_co_no
+	field dbry_cr_type
+	field dbry_desc
+	field dbry_stat_flag
+end
+

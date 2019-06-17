@@ -1,0 +1,18 @@
+Stock FIFO/LIFO Valuations Menu (SUB)
+sk_vfi
+Stock Valuation Reports Menu. <a> (1,1)
+menu MENUSYS/sk_value.mdf
+Detail  Fifo Stock Valuation. <a> (1,1)
+chain~sk_group.i "sk_prtfifo" "DETAILED FIFO STOCK VALUATION." " " " "~
+Summary Fifo Stock Ageing Report. <a> (1,1)
+chain~sk_group.i "sk_catage" "SUMMARY FIFO STOCK AGEING" " " " "~
+Detail  Fifo Stock Ageing Report. <a> (1,1)
+chain~sk_group.i "sk_age" "DETAIL FIFO STOCK AGEING" " " " "~
+Detail  Fifo Stock Ageing Report (Date Select). <a> (1,1)
+chain~sk_groupsel "sk_selage" "DETAIL FIFO STOCK AGEING (Date Select)"~
+Detail  Fifo Stock Ageing Report ( Dollar Values ). <a> (1,1)
+chain~sk_group.i "sk_age_pc" "DETAIL FIFO STOCK AGEING ( DOLLAR )" " " " "~
+Fifo Zero Cost Analysis Report. <a> (1,1)
+sk_prtffzero~LPNO~
+((
+))

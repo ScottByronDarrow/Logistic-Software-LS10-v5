@@ -1,0 +1,26 @@
+HMARGIN   .B5
+INV_HEAD                                                                                       ^AAAAAAAAAAAAAAAAAAAAAAA^
+INV_NO              ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^                                            ^AAAAAAAAA^
+CUST_NAME           ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^  ^AAAAAAAAAAAAAAAAAAAA^              ^DD/DD/DDDD^   ^DD/DD/DDDD^
+CUST_ADDR1          ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^  ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^
+CUST_ADDR2          ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^  ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^
+CUST_ADDR3          ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^  ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^
+SLIP_NO             Customer Order No: ^AAAAAAAAAAAAAAAA^                                           ^AAAAAA^      ^AAAAAA^
+MARGIN1   .B2
+MARGIN2   .B3
+MARGIN3   .B1
+MARGIN4   .B1
+MARGIN5   .B1
+MARGIN6   .B1
+INV_LINE        ^AAAAAAAAAA^ ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^      ^AAAAA^ ^AAAAA^   ^FFFF.FF^ ^FFFF.FF^ ^FFFFF.FF^  ^FFFFFFFFF.FF^
+INV_LINE1       ^AAAAAAAAAA^ ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^      ^AAAAA^ ^AAAAA^   ^FFFF.FF^ ^AAAAAAA^ ^FFFFF.FF^  ^FFFFFFFFF.FF^
+DESC            ^AAAAAAA^ ^AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA^         ^AAAAA^
+BO_LINE                 Backordered                                                                ^FFFF.FF^
+TOT_LINE                                                                                                      ^FFFFFFF.FF^
+FRT_TOT                 FREIGHT, INSURANCE & OTHER                                                            ^FFFFFFF.FF^
+OVER_TERM            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+VBLE_BLANK.B^I^
+CONT_SKIP1.B2
+CONTINUED                                                                                                       CONTINUED
+CONT_SKIP2.B0
+NEXT_PAGE .B4

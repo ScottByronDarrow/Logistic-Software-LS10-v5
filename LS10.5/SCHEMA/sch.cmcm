@@ -1,0 +1,51 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmcm,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cmcm)
+|  Schema Desc  : (Contract Management Costheads Master File )
+|----------------------------------------------------------------------
+| $Log: sch.cmcm,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmcm
+
+field	cmcm_co_no				type	char	2
+field	cmcm_ch_code			type	char	4
+field	cmcm_desc       		type	char	40
+field	cmcm_hhcm_hash			type 	serial			index
+field	cmcm_hhum_hash			type	long
+field	cmcm_rep_conv			type	float
+field	cmcm_usr_ref1			type	char	4
+field	cmcm_usr_ref2			type	char	4
+field	cmcm_usr_ref3			type	char	4
+field	cmcm_usr_ref4			type	char	4
+field	cmcm_usr_ref5			type	char	4
+field	cmcm_dtl_lvl			type	char	1
+field	cmcm_hhbr_hash			type	long
+field	cmcm_id_no				type	composite
+			cmcm_co_no,
+			cmcm_ch_code								index	primary
+
+end
+
+{
+	cmcm_co_no			-	Company Number
+	cmcm_ch_code		-	Costhead Code
+	cmcm_desc			-	Costhead Description
+	cmcm_hhcm_hash		-	Unique Hash
+	cmcm_hhum_hash		-	Link to inum (Inventory Unit of Measure)
+	cmcm_rep_conv		- 	Reporting Conversion Factor
+	cmcm_usr_ref[5]		-	Five User Defined References
+	cmcm_dtl_lvl		-	Detail Level For Capture to coln
+	cmcm_hhbr_hash		-	Link to N/S Item for Posting to coln
+}

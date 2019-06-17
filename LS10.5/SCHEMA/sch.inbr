@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inbr,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.inbr)
+|  Schema Desc  : (Inventory Brand Master File. )
+|----------------------------------------------------------------------
+| $Log: sch.inbr,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:49  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.3  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file inbr 
+
+field	inbr_co_no                   	type	char	2
+field	inbr_brand		            	type	char	11
+field	inbr_brand_desc       			type	char	40
+field	inbr_id_no                   	type	composite 
+			inbr_co_no, 
+			inbr_brand					index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inbr_co_no			-	Company number.
+	inbr_brand			-	Brand type Code.
+	inbr_brand_desc		- 	Brand type Description.
+}

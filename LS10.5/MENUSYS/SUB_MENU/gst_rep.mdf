@@ -1,0 +1,10 @@
+Gst Audit Reports Menu (SUB)
+gst_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Print Tax Audits. <a> (1,1)
+psl_gst_aud~
+Print Tax Return. <a> (1,1)
+psl_gst_ret~
+((
+))

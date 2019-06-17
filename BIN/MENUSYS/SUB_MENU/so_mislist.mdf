@@ -1,0 +1,10 @@
+Misc. Transport Listing (SUB)
+so_help
+Transport Module <a> (1,1)
+menu MENUSYS/so_transp.mdf
+Print Vehicle Master. <a> (1,1)
+tr_vehilist~
+Print Driver Master. <a> (1,1)
+tr_truck_list~
+((
+))

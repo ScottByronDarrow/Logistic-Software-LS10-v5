@@ -1,0 +1,17 @@
+Production Control Reporting Menu. (PCTPR)
+pct_help
+Production Control Master Menu. <a> (1,2)
+menu MENUSYS/pct_master.mdf
+Works Order Costing Report. <a> (1,2)
+pc_recprt~"Production Control Costing Report"~
+Works In Progress Report. <a> (1,2)
+pc_wiprpt~
+Display/Print Works Order Status. <a> (1,2)
+pc_wodisp~
+Display/Print Traceability of Lots. <a> (1,2)
+pc_trace~
+((
+quadrant(20,6)
+line(11,5,57)
+box(10,3,58,15)
+))

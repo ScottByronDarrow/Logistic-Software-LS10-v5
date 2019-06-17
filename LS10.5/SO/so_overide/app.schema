@@ -1,0 +1,118 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/11/28 04:09:51 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/11/28 04:09:51  scott
+#	SC0053 - Platinum Logistics - LS10.5.2 2002-11-28
+#	Updated for changes in pricing - See S/C for Details
+#	
+#	Revision 5.0  2001/06/19 08:20:11  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:41:27  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/03/06 09:26:09  scott
+#	Updated to allow -ve discounts to be processed.
+#	Problem with this was test on inmr_disc_pc should have been applied
+#	only when inmr_disc_pc had a value.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_dbt_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table cnch
+	field cnch_co_no
+	field cnch_cont_no
+	field cnch_hhch_hash
+	field cnch_exch_type
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_hhcu_hash
+	field cohr_type
+	field cohr_cont_no
+	field cohr_hhco_hash
+	field cohr_date_raised
+	field cohr_date_required
+	field cohr_area_code
+	field cohr_gross
+	field cohr_freight
+	field cohr_tax
+	field cohr_gst
+	field cohr_disc
+	field cohr_exch_rate
+	field cohr_stat_flag
+end
+
+table coln
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_hhbr_hash
+	field coln_incc_hash
+	field coln_q_order
+	field coln_q_backorder
+	field coln_sale_price
+	field coln_disc_pc
+	field coln_item_desc
+	field coln_stat_flag
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_class_type
+	field cumr_price_type
+	field cumr_credit_limit
+	field cumr_disc_code
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_curr_code
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_category
+	field inmr_outer_size
+	field inmr_sellgrp
+	field inmr_disc_pc
+end
+

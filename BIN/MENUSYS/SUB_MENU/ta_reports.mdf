@@ -1,0 +1,16 @@
+ASSETS REPORTS (SUB)
+smfi_ta_help
+TRADE ASSETS MENU <a> (1,2)
+menu MENUSYS/ta_master.mdf
+Print Trade Assets Acquisition Report <a> (1,1)
+as_acq_prn~
+Print Trade Assets Deployment Report <a> (1,1)
+as_dep_prn~
+Print Trade Assets Movement Report <a> (1,1)
+as_move_prn~
+Print Trade Assets Repair Report <a> (1,1)
+as_fix_prn~
+Print Trade Assets Yield Report <a> (1,1)
+as_yield_prn~
+((
+))

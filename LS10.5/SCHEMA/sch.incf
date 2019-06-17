@@ -1,0 +1,70 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.incf,v 5.1 2001/07/25 01:15:51 scott Exp $
+|  Schema Name  : (sch.incf)
+|  Schema Desc  : (Inventory cost file. (FIFO, LIFO). )
+|----------------------------------------------------------------------
+| $Log: sch.incf,v $
+| Revision 5.1  2001/07/25 01:15:51  scott
+| Updated for LS10.5
+|
+| Revision 4.1  2001/03/16 05:54:57  scott
+| Updated to remove OSH specific.
+|
+| Revision 4.0  2001/03/09 01:00:52  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	incf
+
+field	incf_hhwh_hash			type	long		index	dups
+field	incf_hhcf_hash			type	serial		index
+field	incf_fifo_date			type	edate
+field	incf_seq_no				type	int
+field	incf_fifo_cost			type	double
+field	incf_act_cost			type	double
+field	incf_fifo_qty			type	float
+field	incf_gr_number			type	char	15
+field	incf_fob_nor_cst		type	double
+field	incf_frt_ins_cst		type	double
+field	incf_duty				type	double
+field	incf_licence			type	double
+field	incf_lcost_load			type	double
+field	incf_land_cst			type	double
+field	incf_stat_flag			type	char	1
+field	incf_id_no				type	composite
+			incf_hhwh_hash,
+			incf_fifo_date							index	dups
+field	incf_seq_id				type	composite
+			incf_hhwh_hash,
+			incf_fifo_date,
+			incf_seq_no								index	dups
+field	incf_id_no_2			type	composite
+			incf_hhwh_hash,
+			incf_gr_number							index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	incf_hhwh_hash		-	Link to warehouse master file (incc)
+	incf_hhcf_hash		-	Unique fifo serial hash.
+	incf_fifo_date		-	Fifo/Lifo date.
+	incf_seq_no			-	Unique Sequence No.
+	incf_fifo_cost		-	Fifo/Lifo Cost. (Current)
+	incf_act_cost		-	Fifo/Lifo Cost. (Est/Actual)
+	incf_fifo_qty		-	Fifo/Lifo Quantity.
+	incf_gr_number		-	Goods Receipt number.
+	incf_fob_nor_cst	-	FOB COST( LOCAL )
+	incf_frt_ins_cst	-	FREIGHT & INSURANCE COST.
+	incf_duty			-	DUTY AMOUNT.
+	incf_licence		-	LICENCE AMOUNT.
+	incf_lcost_load		-	LANDED COST LOADING.
+	incf_land_cst		-	LANDED COST.
+	incf_stat_flag		-	Status flag.
+}

@@ -1,0 +1,22 @@
+Miscellaneous Stock Displays (SUB)
+sk_mast
+Stock Master Menu. <a> (1,1)
+menu MENUSYS/sk_master.mdf
+Display Product Alternates. <a> (1,1)
+sk_alt_dsp~
+Display Stock Warehouse Status. <a> (1,1)
+sk_whdisp~
+Serial Item Display. <a> (1,1)
+sk_serdisp~
+Serial Item Costing Display. <a> (1,1)
+sk_dseradj~
+Display / Print Expired Lots. <a> (1,1)
+sk_lexp_disp~
+Display Location Master. <a> (1,1)
+sk_locmdsp~
+Display Location Master Where Used. <a> (1,1)
+sk_loc_dsp~
+Display Number Plates. <a> (1,1)
+sk_np_disp~
+((
+))

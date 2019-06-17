@@ -1,0 +1,42 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sunt,v 5.1 2001/08/07 00:07:43 scott Exp $
+|  Schema Name  : (sch.sunt)
+|  Schema Desc  : (Supplier Notes File )
+|----------------------------------------------------------------------
+| $Log: sch.sunt,v $
+| Revision 5.1  2001/08/07 00:07:43  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:32  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:49  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	sunt
+
+field	sunt_hhsu_hash		type	long			index	dups
+field	sunt_line_no		type	integer
+field	sunt_text			type	char	60
+field	sunt_stat_flag		type	char	1
+field	sunt_id_no			type	composite
+			sunt_hhsu_hash,
+			sunt_line_no							index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	sunt_hhsu_hash		-	Link to Supplier master file.  ( sumr ).
+	sunt_line_no		-	Unique line number within hhsu_hash.
+	sunt_text		-	Text for notes.                     
+	sunt_stat_flag		-	Spare Status flag.
+}

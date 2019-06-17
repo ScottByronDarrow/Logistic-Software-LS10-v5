@@ -1,0 +1,21 @@
+CI351:\
+	:TF=\014:\
+	:XN=\E[6w:\
+	:XF=\E[2w:\
+	:I1=\E[0"z\E[?29l\E[1w:\
+	:I2=\E[0"z\E[1w:\
+	:P0=\E[1w:\
+	:P2=\E[2w:\
+	:us=\E[4m:\
+	:ue=\E[0m:\
+	:F1=:\
+	:F2=:\
+	:F3=:\
+	:SN=\EH:\
+	:SF=\EI:\
+	:EX=2:\
+	:so=\E[93h:\
+	:se=\E[93l:\
+	:go=\E(0:\
+	:ge=\E(B:\
+	:bx=lkmjxxqnwvtuaaa : 

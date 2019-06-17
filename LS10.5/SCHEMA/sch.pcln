@@ -1,0 +1,75 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pcln,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pcln)
+|  Schema Desc  : (Routing Line detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.pcln,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:02  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:38  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pcln	
+
+field	pcln_hhgr_hash			type	long
+field	pcln_seq_no			type	int
+field	pcln_hhwc_hash			type	long
+field	pcln_hhrs_hash			type	long
+field	pcln_rate			type	money
+field	pcln_ovhd_var			type	money
+field	pcln_ovhd_fix			type	money
+field	pcln_setup			type	long
+field	pcln_run			type	long
+field	pcln_clean			type	long
+field	pcln_qty_rsrc			type	int
+field	pcln_instr_no			type	int
+field	pcln_yld_clc			type	char	4
+field	pcln_can_split			type	char	1
+{
+	Fields above this point are identical to rgln... CHANGE BOTH!!!
+}
+field	pcln_line_no			type	int
+field	pcln_amt_recptd			type	money
+field	pcln_ovh_recptd			type	money
+field	pcln_act_qty_in			type	char	1
+field	pcln_hhwo_hash			type	long
+field	pcln_id_no			type	comp
+		pcln_hhwo_hash,
+		pcln_seq_no,
+		pcln_line_no					index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pcln_hhgr_hash			- Copied from header (rghr)
+	pcln_seq_no			- To specify which 'step'
+	pcln_hhwc_hash			- Link->pcwc (Word centre)
+	pcln_hhrs_hash			- Link->rgrs (Resources)
+	pcln_rate			- Rate
+	pcln_ovhd_var			- Variable overhead rate
+	pcln_ovhd_fix			- Fixed overhead amount
+	pcln_setup			- Time to setup (in hours)
+	pcln_run			- Time to run   (in hours)
+	pcln_clean			- Time to clean (in hours)
+	pcln_qty_rsrc			- Quantity of resource.
+	pcln_instr_no			- Instruction
+	pcln_yld_clc			- Link->rgyl (Yield Calcn. Name)
+	pcln_can_split			- Y: This record can be 'split'
+					- N: This record cant be 'split'
+	pcln_line_no			- Unique Line Number Within Sequence.
+	pcln_amt_recptd			- $ value recptd (Includes overhead).
+	pcln_ovh_recptd			- $ value recptd (Overhead ONLY).
+	pcln_act_qty_in			- Quantity has been 'accepted'
+	pcln_hhwo_hash			- Link->pcwo (W/Order)
+}

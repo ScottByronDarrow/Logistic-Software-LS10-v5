@@ -1,0 +1,65 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.qtph,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.qtph)
+|  Schema Desc  : (Quotation System Prospect Header File. )
+|----------------------------------------------------------------------
+| $Log: sch.qtph,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:18  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:44  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file qtph 
+
+field	qtph_co_no		type	char	2
+field	qtph_hhph_hash		type	serial			index 	primary
+field	qtph_id_no		type	composite
+		qtph_co_no,
+		qtph_hhph_hash					index
+
+field	qtph_hhcu_hash		type	long			index 	dups
+field	qtph_pros_type		type	char	2
+field	qtph_contact		type	char	20
+field	qtph_cont_no		type	char	6
+field	qtph_dt_sman		type	char	2
+field	qtph_dt_fst_call	type	edate
+field	qtph_dt_lst_call	type	edate
+field	qtph_dt_follow_up	type	edate
+field	qtph_dt_quote		type	edate
+field	qtph_no_calls		type	int
+field	qtph_sm_comm1		type	char	60
+field	qtph_sm_comm2		type	char	60
+field	qtph_cl_comm1		type	char	60
+field	qtph_cl_comm2		type	char	60
+field	qtph_stat_flag		type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	qtph_co_no		= Company Number
+	qtph_hhph_hash		= Prospect Serial Hash
+	qtph_hhcu_hash		= Customer master file linking hash
+	qtph_pros_type		= Prospect type
+	qtph_contact		= Prospect Contact
+	qtph_cont_no		= Customers contract number.
+	qtph_dt_sman		= Prospect Salesman
+	qtph_dt_fst_call	= Date of First Call
+	qtph_dt_lst_call	= Date of last Call
+	qtph_dt_follow_up	= Date of Follow up Call
+	qtph_dt_quote		= Date of Quotation
+	qtph_no_calls		= Number of Calls Made
+	qtph_sm_comm1		= Salesman Comments line 1
+	qtph_sm_comm2		= Salesman Comments line 2
+	qtph_cl_comm1		= Comments on Customer line 1
+	qtph_cl_comm2		= Comments on Customer line 2
+	qtph_stat_flag		= Normal Spare status flag.
+}

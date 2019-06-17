@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inpb,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inpb)
+|  Schema Desc  : (Price Book File )
+|----------------------------------------------------------------------
+| $Log: sch.inpb,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:31  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inpb
+
+field	inpb_co_no			type	char	2
+field	inpb_book			type	char	10
+field	inpb_id_no			type	composite
+		inpb_co_no,
+		inpb_book					index
+field	inpb_description		type	char	40
+field	inpb_hhpb_hash			type	serial		index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inpb_co_no		-	Company number.
+	inpb_book		-	Price book name.
+	inpb_description	-	Price book description.
+}

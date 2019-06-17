@@ -1,0 +1,75 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.potb,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.potb)
+|  Schema Desc  : (Trading Bill Details. )
+|----------------------------------------------------------------------
+| $Log: sch.potb,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	potb	
+
+field	potb_co_no			type	char	2
+field	potb_hhtb_hash			type	serial
+field	potb_id_no			type	composite
+		potb_co_no,
+		potb_hhtb_hash					index	primary
+field	potb_rcpt_no			type	char	2
+field	potb_date_acc			type	edate
+field	potb_hhsu_hash			type	long	
+field	potb_pur_ord_no1		type	char	5
+field	potb_pur_ord_no2		type	char	5
+field	potb_pur_ord_no3		type	char	5
+field	potb_pur_ord_no4		type	char	5
+field	potb_pur_ord_no5		type	char	5
+field	potb_ship_no			type	char	5
+field	potb_bank_ref			type	char	10
+field	potb_curr_code			type	char	3
+field	potb_supp_inv_amt		type	double
+field	potb_interest			type	double
+field	potb_rct_exch_rate		type	double
+field	potb_pmt_exch_rate		type	double
+field	potb_pmt_date			type	edate
+field	potb_status			type	char	1
+field	potb_purch_type			type	char	1
+field	potb_br_no			type	char	3
+field	potb_trading_bank		type	char	12
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	potb_co_no		-	Company number.
+	potb_hhtb_hash		-	Unique Serial hash.
+	potb_rcpt_no		-	Receipt Number.
+	potb_date_acc		-	Date of Account.
+	potb_hhsu_hash		-	Link to Supplier ( sumr_hhsu_hash )
+	potb_pur_ord_no1	-	Purchase order #1
+	potb_pur_ord_no2	-	Purchase order #2
+	potb_pur_ord_no3	-	Purchase order #3
+	potb_pur_ord_no4	-	Purchase order #4
+	potb_pur_ord_no5	-	Purchase order #5
+	potb_ship_no		-	Shipment No.
+	potb_bank_ref		-	Bank Ref.
+	potb_curr_code		-	Currency Code.
+	potb_supp_inv_amt	-	Supplier Invoice No.
+	potb_interest		-	Interest.
+	potb_rct_exch_rate	-	Exchange rate.
+	potb_pmt_exch_rate	-	Payment exchange rate.
+	potb_pmt_date		-	Payment payment date.
+	potb_status		-	Status.
+	potb_purch_type		-	Purchase type.
+	potb_br_no		-	Branch no.
+	potb_trading_bank	-	Trading Bank.
+}

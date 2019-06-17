@@ -1,0 +1,59 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.bmms,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.bmms)
+|  Schema Desc  : (BoM Material Specification File. )
+|----------------------------------------------------------------------
+| $Log: sch.bmms,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	bmms	
+
+field	bmms_co_no				type	char	2
+field	bmms_hhbr_hash			type	long			index	dups
+field	bmms_alt_no				type	int
+field	bmms_line_no			type	int
+field	bmms_cons				type	char	1
+field	bmms_mabr_hash			type	long			index	dups
+field	bmms_uom				type	long
+field	bmms_matl_qty			type	float
+field	bmms_matl_wst_pc		type	float
+field	bmms_instr_no			type	int
+field	bmms_iss_seq			type	int
+field	bmms_id_no				type	comp
+			bmms_co_no,
+			bmms_hhbr_hash,
+			bmms_alt_no,
+			bmms_line_no								index	primary
+field	bmms_id_no_2			type	comp
+			bmms_co_no,
+			bmms_mabr_hash,
+			bmms_hhbr_hash								index	dups
+end
+
+{
+			  +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+			  +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	bmms_co_no				- Company Number
+	bmms_hhbr_hash			- Destination product
+	bmms_line_no			- Added for 'uniqueness'
+	bmms_cons				- Consolidate this line with other bills
+	bmms_mabr_hash			- Source component/Raw material
+	bmms_uom				- UOM for source (Link => inud)
+	bmms_matl_qty			- Quantity of source required
+	bmms_matl_wst_pc		- Waste percentage
+	bmms_instr_no			- Instruction number
+	bmms_iss_seq			- Issue of stk must occur on OR before
+					  		  this routing sequence number
+}

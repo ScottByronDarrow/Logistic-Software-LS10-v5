@@ -1,0 +1,25 @@
+Resource Maintenance Menu. (RTGRM)
+rtg_help
+Manufacturing Master Menu. <a> (1,2)
+menu MENUSYS/main_manf.mdf
+Resource Maintenance. <a> (1,2)
+rg_resmnt~
+Resource Rate Update. <a> (1,1)
+rg_rateupd~
+Resource Calendar Bulk Generation. <a> (1,1)
+pc_blk_cal~
+Resource Calendar Maintenance. <a> (1,2)
+pc_cal_mnt~
+Resource Display by Code (Normal). <a> (1,1)
+rg_res_dsp~C~N~
+Resource Display by Code (Restricted). <a> (1,2)
+rg_res_dsp~C~R~
+Resource Display by Type (Normal). <a> (1,1)
+rg_res_dsp~T~N~
+Resource Display by Type (Restricted). <a> (1,2)
+rg_res_dsp~T~R~
+((
+quadrant(20,6)
+line(12,5,55)
+box(11,3,56,15)
+))

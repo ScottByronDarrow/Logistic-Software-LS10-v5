@@ -1,0 +1,121 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/05/02 01:36:56 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/05/02 01:36:56  scott
+#	Updated to add Archive functions
+#	
+#	Revision 5.0  2001/06/19 08:11:10  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:32:28  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:23:44  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_short
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_short
+	field comm_crd_date
+	field comm_gst_rate
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_ctry_code
+end
+
+table pohr
+	field pohr_co_no
+	field pohr_br_no
+	field pohr_type
+	field pohr_hhsu_hash
+	field pohr_pur_ord_no
+	field pohr_hhpo_hash
+	field pohr_date_raised
+	field pohr_due_date
+	field pohr_conf_date
+	field pohr_contact
+	field pohr_ship1_no
+	field pohr_ship2_no
+	field pohr_ship3_no
+	field pohr_curr_code
+	field pohr_term_order
+	field pohr_sup_term_pay
+	field pohr_bnk_term_pay
+	field pohr_pay_date
+	field pohr_status
+	field pohr_stat_flag
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_line_no
+	field poln_hhbr_hash
+	field poln_hhcc_hash
+	field poln_hhpl_hash
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_land_cst
+	field poln_item_desc
+	field poln_due_date
+	field poln_pur_status
+	field poln_stat_flag
+end
+
+table posd
+	field posd_hhpo_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_outer_size
+end
+
+table posl
+	field posl_hhsh_hash
+	field posl_hhpl_hash
+	field posl_hhpo_hash
+	field posl_ship_qty
+end
+
+table pogd
+	field pogd_co_no
+	field pogd_hhpo_hash
+	field pogd_line_no
+end
+
+table poli
+	field poli_hhpl_hash
+	field poli_cont_date
+	field poli_comment
+	field poli_ship_date
+	field poli_eta_date
+	field poli_inst_code
+end
+
+table pogl
+	field pogl_hhpl_hash      
+	field pogl_rec_date       
+end

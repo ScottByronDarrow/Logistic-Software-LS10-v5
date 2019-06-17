@@ -1,0 +1,60 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.soic,v 5.1 2001/12/07 00:54:57 scott Exp $
+|  Schema Name  : (sch.soic)
+|  Schema Desc  : (Real-Time Item Committal File. )
+|----------------------------------------------------------------------
+| $Log: sch.soic,v $
+| Revision 5.1  2001/12/07 00:54:57  scott
+| Updated to prevent errors on duplicate
+|
+| Revision 5.0  2001/06/19 10:17:31  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file soic 
+
+field	soic_pid  			type	long
+field	soic_line  			type	int
+field	soic_hhbr_hash  	type	long
+field	soic_hhcc_hash  	type	long
+field	soic_qty  			type	float
+field	soic_program  		type	char	20
+field	soic_op_id  		type	char	14
+field	soic_time_create  	type	long
+field	soic_date_create  	type	edate
+field	soic_status  		type	char	1
+field	soic_id_no 			type	composite
+			soic_status,
+			soic_pid,
+			soic_line								index	dups
+field	soic_id_no2 		type	composite
+			soic_status,
+			soic_hhbr_hash,
+			soic_hhcc_hash							index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	soic_pid			-	PID of program that added soic record
+	soic_line			-	Unique line number 
+	soic_hhbr_hash		-	Link to inventory master file (inmr)
+	soic_hhcc_hash		-	Link to warehouse master file (ccmr)
+	soic_qty			-	Quantity committed
+	soic_program		-	Program that added soic record
+	soic_op_id			-	Logname of operator running program
+	soic_time_create	-	Time soic record created
+	soic_date_create	-	Date soic record created
+	soic_status			-	A - Active
+							D - Delete
+}

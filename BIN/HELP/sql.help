@@ -1,0 +1,18 @@
+Imperatives
+	database "name", close database
+	begin, commit, rollback
+	desc
+	out
+	run
+	set, show
+	quit, exit
+
+SQL commands
+
+Editor commands
+	l [n]		list [line]
+	a [...]		append to current line
+	i [n]		insert after current or numbered line
+	d [n]		delete current or numbered lint
+	c /s1/s2/	replace s1 with s2
+	/		executes SQL buffer

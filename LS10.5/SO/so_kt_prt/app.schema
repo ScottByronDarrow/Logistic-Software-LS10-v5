@@ -1,0 +1,83 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:20:01 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:20:01  scott
+#	Update - LS10.5
+#	
+#	Revision 4.2  2001/05/04 01:32:44  scott
+#	Updated to add incf_gr_number as required by standard function
+#	
+#	Revision 4.1  2001/04/06 08:02:28  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_class
+	field inmr_costing_flag
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+	field inmr_dec_pt
+	field inmr_stat_flag
+end
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_closing_stock
+	field incc_stat_flag
+end
+
+table inex
+	field inex_hhbr_hash
+	field inex_line_no
+	field inex_desc
+end
+
+table sokt
+	field sokt_co_no
+	field sokt_hhbr_hash
+	field sokt_line_no
+	field sokt_mabr_hash
+	field sokt_matl_qty
+	field sokt_due_date
+	field sokt_bonus
+end
+
+table sokd
+	field sokd_co_no
+	field sokd_type
+	field sokd_hhbr_hash
+	field sokd_line_no
+	field sokd_text
+end
+

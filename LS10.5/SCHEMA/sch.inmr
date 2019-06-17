@@ -1,0 +1,213 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inmr,v 5.0 2001/06/19 10:17:16 cha Exp $
+|  Schema Name  : (sch.inmr)
+|  Schema Desc  : (Inventory Master File Base Record. )
+|----------------------------------------------------------------------
+| $Log: sch.inmr,v $
+| Revision 5.0  2001/06/19 10:17:16  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:56  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.3  2001/03/06 07:26:25  scott
+| Updates 3.0
+|
+| Revision 3.2  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inmr
+
+field	inmr_co_no				type	char	2			index	dups
+field	inmr_item_no			type	char	16
+field	inmr_hhbr_hash			type	serial				index	
+field	inmr_hhsi_hash			type	long				index	dups	
+field	inmr_alpha_code			type	char	16
+field	inmr_supercession		type	char	16
+field	inmr_maker_no			type	char	16
+field	inmr_alternate			type	char	16
+field	inmr_barcode			type	char	16
+field	inmr_commodity			type	char	14
+field	inmr_class				type	char	1	
+field	inmr_description		type	char	40
+field	inmr_description2		type	char	40
+field	inmr_category			type	char	11	
+field	inmr_quick_code			type	char	8
+field	inmr_abc_code			type	char	1
+field	inmr_reorder			type	char	1
+field	inmr_grade				type	char	1
+field	inmr_abc_update			type	char	1
+field	inmr_serial_item		type	char	1
+field	inmr_lot_ctrl			type	char	1
+field	inmr_costing_flag		type	char	1
+field	inmr_sale_unit			type	char	4
+field	inmr_pack_size			type	char	5
+field	inmr_weight				type	float
+field	inmr_on_hand			type	float
+field	inmr_on_order			type	float
+field	inmr_committed			type	float
+field	inmr_backorder			type	float
+field	inmr_forward			type	float
+field	inmr_wo_qty_anti		type	float
+field	inmr_qc_qty				type	float
+field	inmr_source				type	char	2
+field	inmr_dec_pt				type	integer
+field	inmr_ex_code			type	char	3
+field	inmr_bo_flag			type	char	1
+field	inmr_bo_release			type	char	1
+field	inmr_sellgrp			type	char	6
+field	inmr_buygrp				type	char	6
+field	inmr_disc_pc			type	float
+field	inmr_gst_pc				type	float
+field	inmr_min_quan			type	float
+field	inmr_max_quan			type	float
+field	inmr_safety_stock		type	float
+field	inmr_licence			type	char	2
+field	inmr_duty				type	char	2
+field	inmr_duty_amt			type	float
+field	inmr_std_uom			type	long
+field	inmr_alt_uom			type	long
+field	inmr_uom_cfactor		type	float
+field	inmr_outer_uom			type	long
+field	inmr_outer_size			type	float
+field	inmr_pc_off_trade		type	float
+field	inmr_scrap_pc			type	float
+field	inmr_tax_pc				type	float
+field	inmr_tax_amount			type	money
+field	inmr_ltd_sales			type	float
+field	inmr_active_status		type	char	1
+field	inmr_schg_flag			type	char	1
+field	inmr_dflt_bom			type	int
+field	inmr_dflt_rtg			type	int
+field	inmr_eoq				type	float
+field	inmr_qc_reqd			type	char	1
+field	inmr_min_sell_pric		type	money
+field	inmr_asm_pct			type	float
+field	inmr_asm_chg			type	money
+field	inmr_dpay_pct			type	float
+field	inmr_item_type			type	char	1
+field	inmr_stat_flag			type	char	1
+field	inmr_brand				type	char	11
+field	inmr_id_no				type	composite
+			inmr_co_no,
+			inmr_item_no									index	primary
+field	inmr_id_no_3			type	composite
+			inmr_co_no,
+			inmr_class,
+			inmr_category,
+			inmr_item_no									index
+field	inmr_id_no_4			type	composite
+			inmr_co_no,
+			inmr_maker_no									index	dups
+field	inmr_quick_id			type	composite
+			inmr_co_no,
+			inmr_quick_code									index	dups
+field	inmr_id_buy				type	composite
+			inmr_co_no,
+			inmr_buygrp										index	dups
+field	inmr_id_sell			type	composite
+			inmr_co_no,
+			inmr_sellgrp									index	dups
+field	inmr_id_cat				type	composite
+			inmr_co_no,
+			inmr_category									index 	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inmr_co_no			-	Company number.
+	inmr_item_no		-	Item Number.
+	inmr_hhbr_hash		-	Serial hash used to link to inmr.
+	inmr_hhsi_hash		-	Alternate. (links to inmr_hhbr_hash)
+	inmr_alpha_code		-	Alpha Code.
+	inmr_commodity   	-	Tariff item code.   
+	inmr_supercession	-	Supercession number.
+	inmr_maker_no		-	Maker number.
+	inmr_alternate		-	Alternate Number.
+	inmr_class			-	Item Class.
+	inmr_description	-	Item Description Part one.
+	inmr_description2	-	Item Description Part two.
+	inmr_category		-	Item category.
+	inmr_quick_code		-	Quick (Pharma) code.
+	inmr_abc_code		-	Item ABC Code.
+	inmr_reorder		-	Allows item(s) to be prompted at reorder time
+	inmr_grade			-	Item's Inventory Grade.
+	inmr_abc_update		-	Abc analysis update (Y/N)
+	inmr_serial_item	-	Serial Item (Y/N)
+	inmr_lot_ctrl		-	Lot control (Y/N)
+								(If Y, costing_flag forced to Fifo)
+	inmr_costing_flag	-	Costing Flag (F/I/A/L/S/B)
+	inmr_sale_unit		-	Sale unit.
+	inmr_pack_size		-	Pack size.
+	inmr_weight			-	Weight.
+	inmr_on_hand		-	On Hand.
+	inmr_on_order		-	On Order.
+	inmr_committed		-	Committed.
+	inmr_backorder		-	Backorder.
+	inmr_forward		-	Forward Order.
+	inmr_wo_qty_anti	-	Works Order Quantity Anticipated.
+	inmr_qc_qty			-	Quantity Requiring QC Checking.
+	inmr_source			-	PP/RM/MP/MC/BM/BP
+	inmr_dec_pt			-	Decimal points (0-6)
+	inmr_ex_code		-	Extra description code.
+	inmr_bo_flag		-	Backorders allowed (Y/N/F)
+	inmr_bo_release		-	Backorder release (A(utomatic)/M(anual))
+	inmr_sellgrp		-	Look up to ingp
+	inmr_buygrp			-	Look up to ingp
+	inmr_disc_pc		-	Discount Percent.
+	inmr_gst_pc			-	Gst Percent.
+	inmr_min_quan		-	Min Order quantity.
+	inmr_max_quan		-	Max Order quantity.
+	inmr_safety_stock	-	Safety Stock.
+	inmr_licence		-	Licence Code -> polc
+	inmr_duty			-	Duty Code -> pocf.
+	inmr_duty_amt		-	Duty amount
+	inmr_std_uom		-	Standard (Holding) UOM
+	inmr_alt_uom		-	Alternate UOM
+	inmr_uom_cfactor	-	Alternate UOM conversion.
+	inmr_outer_uom		-	Outer UOM (Pricing/Costing)
+	inmr_outer_size		-	Outer Size (Used in pricing/costing)
+	inmr_pc_off_trade	-	Percentage of trade price.
+	inmr_scrap_pc		-	Scrap Percent.
+	inmr_tax_pc			-	Tax percent.
+	inmr_tax_amount		-	Tax Absolute amount.
+	inmr_ltd_sales		-	Life to date sales.
+	inmr_active_status	-	Active status. Look up on inas.
+	inmr_schg_flag		-	Surcharge flag.
+	inmr_dflt_bom		-	Default BOM Number.
+	inmr_dflt_rtg		-	Default Routing Number.
+	inmr_eoq			-	Economic Order Quantity.
+	inmr_qc_reqd		-	QC Check Required (Yes/No).
+	inmr_min_sell_price	- 	Min Selling Price.
+	inmr_asm_pct		-	Assembly Percentage of sale price to charge
+	inmr_asm_chg		-	Assembly Charge as a fixed amount for item.
+	inmr_dpay_pct		-	Deposit Payment Percent.
+	inmr_item_type		-	Item Type	(Used in IKEA only)
+							A	-	Full Service Item.
+										can be delivered.
+										AND	can be Assembled.
+							B	-	Self Service Item.
+										can be delivered
+										OR can be Assembled.
+							C	-	Satellite Item.
+										Cash and Carry item.
+							D	-	DDS item
+										Like a backorder.   
+										Item is picked and delivered from W/H
+	inmr_stat_flag		-	Status flag.
+
+Example of UOM conversion:
+	If an items alt UOM is milligrams (inum_cnv_fct = 0.001) and
+	the   items std UOM is kilograms  (inum_cnv_fct = 1000),
+	then, the items UOM conversion factor is:
+		(1000 / .001) = 1000000
+	The rule of thumb is that applications programs need to DIVIDE by
+	the conversion factor to convert foreign UOMs into std UOMs.
+	Conversely, they must MULTIPLY by the conversion factor to convert
+	std UOMs into foreign UOMs.
+}

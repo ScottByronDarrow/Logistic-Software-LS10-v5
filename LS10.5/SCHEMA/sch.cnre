@@ -1,0 +1,53 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cnre,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cnre)
+|  Schema Desc  : (Customer Contract Rebates Due File. )
+|----------------------------------------------------------------------
+| $Log: sch.cnre,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:27  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file cnre
+
+field	cnre_co_no				type	char	2
+field	cnre_hhch_hash			type	long		index	dups
+field	cnre_hhcu_hash			type	long
+field	cnre_hhbr_hash			type	long
+field	cnre_hhsu_hash			type	long		index 	dups
+field	cnre_qty_sold			type	float
+field	cnre_sup_cost			type	money
+field	cnre_std_cost			type	money
+field	cnre_inv_no				type	char	8
+field	cnre_inv_date			type	edate
+field	cnre_status				type	char	1
+field	cnre_id_no				type	comp
+			cnre_hhcu_hash,
+			cnre_hhbr_hash							index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cnre_hhch_hash		-	Link to Contract header file ( cnch )
+	cnre_hhcu_hash		-	Link to Customer master file ( cumr )
+	cnre_hhbr_hash		-	Link to Inventory master file ( inmr )
+	cnre_hhsu_hash		-	Link to Supplier master file ( sumr )
+	cnre_qty_sold		-	Quantity sold on contract.
+	cnre_sup_cost		-	Agreed supplier cost of item on contract.
+	cnre_std_cost		-	Standard cost of item.
+	cnre_inv_no			-	Invoice number.
+	cnre_inv_date		-	Invoice Date.
+	cnre_stat_flag		- 	R)ebated
+}

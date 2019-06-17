@@ -1,0 +1,47 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:18:30 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:18:30  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/05/31 10:00:25  scott
+#	Updated to add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_on_hand
+	field inmr_on_order
+	field inmr_committed
+	field inmr_backorder
+	field inmr_forward
+	field inmr_stat_flag
+end
+
+table cumr
+	field cumr_hhcu_hash
+end
+
+table sobg
+	field sobg_co_no
+	field sobg_br_no
+	field sobg_type
+	field sobg_lpno
+	field sobg_hash
+	field sobg_hash2
+	field sobg_value
+end
+

@@ -1,0 +1,144 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:20:06 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:20:06  scott
+#	CVS administration
+#	
+#	Revision 1.4  2001/09/11 23:14:02  scott
+#	Updated from Scott machine - 12th Sep 2001
+#	
+#	
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_gl_date        
+	field comm_dbt_date       
+	field comm_fiscal        
+	field comm_pay_terms      
+end
+
+table comr
+	field comr_co_no          
+	field comr_co_name        
+	field comr_co_short_name  
+	field comr_fiscal        
+end
+table glis
+	field glis_co_no          
+	field glis_code           
+	field glis_desc           
+	field glis_find_inf       
+	field glis_use_inf        
+end
+
+table cumr
+	field cumr_co_no          
+	field cumr_est_no         
+	field cumr_dbt_no         
+	field cumr_dbt_acronym         
+	field cumr_hhcu_hash      
+	field cumr_gl_ctrl_acct   
+	field cumr_stat_flag      
+end
+
+table cuin
+	field cuin_hhcu_hash      
+	field cuin_type           
+	field cuin_est            
+	field cuin_date_of_inv    
+	field cuin_exch_rate      
+	field cuin_disc           
+	field cuin_amt            
+	field cuin_stat_flag      
+end
+
+table cuhd
+	field cuhd_hhcu_hash      
+	field cuhd_receipt_no     
+	field cuhd_index_date     
+	field cuhd_type           
+	field cuhd_hhcp_hash      
+	field cuhd_date_payment   
+	field cuhd_tot_amt_paid   
+	field cuhd_loc_amt_paid   
+	field cuhd_disc_given     
+	field cuhd_loc_disc_give  
+	field cuhd_exch_variance  
+	field cuhd_stat_flag      
+end
+
+table suin
+	field suin_hhsu_hash
+	field suin_type
+	field suin_est
+	field suin_inv_no
+	field suin_date_of_inv
+	field suin_amt
+	field suin_exch_rate
+	field suin_approved
+	field suin_stat_flag
+end
+
+table suhd
+	field suhd_hhsu_hash
+	field suhd_cheq_no
+	field suhd_date_payment
+	field suhd_date_post
+	field suhd_tot_amt_paid
+	field suhd_loc_amt_paid
+	field suhd_exch_variance
+	field suhd_stat_flag
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_acronym
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_curr_code
+	field sumr_gl_ctrl_acct   
+	field sumr_stat_flag
+end
+
+table excf
+	field excf_co_no          
+	field excf_cat_no         
+	field excf_cat_desc       
+end
+
+table incc
+	field incc_hhcc_hash      
+	field incc_hhbr_hash      
+	field incc_hhwh_hash      
+	field incc_sort           
+	field incc_closing_stock  
+	field incc_stat_flag      
+end
+
+table inmr
+	field inmr_co_no          
+	field inmr_item_no        
+	field inmr_hhbr_hash      
+	field inmr_supercession   
+	field inmr_maker_no       
+	field inmr_class          
+	field inmr_description    
+	field inmr_category       
+	field inmr_abc_update     
+	field inmr_costing_flag   
+	field inmr_dec_pt         
+	field inmr_outer_size     
+end
+
+table sttf
+	field sttf_hhwh_hash      
+	field sttf_location       
+	field sttf_qty            
+end

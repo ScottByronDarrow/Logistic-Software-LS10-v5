@@ -1,0 +1,14 @@
+Customer Number : ^CN
+^DN
+^A1
+^A2
+^A3
+^FD
+
+Dear ^DN
+
+Your account still appears to be $ ^OB in debit.
+Failure to settle your account within 7 days will result in a suspension
+of your credit that you have with us.
+
+Yours faithfully

@@ -1,0 +1,40 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inbs,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.inbs)
+|  Schema Desc  : (Inventory Supplier Brand Category Relation File.)
+|----------------------------------------------------------------------
+| $Log: sch.inbs,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:49  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.3  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file inbs 
+
+field	inbs_co_no                   	type	char	2
+field	inbs_hhsu_hash					type	long
+field	inbs_brand		            	type	char	11
+field	inbs_category       			type	char	11
+field	inbs_id_no                   	type	composite 
+			inbs_co_no, 
+			inbs_hhsu_hash,
+			inbs_brand,
+			inbs_category				index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inbs_co_no			-	Company number.
+	inbs_hhsu_hash		-	Link to supplier master.
+	inbs_brand			-	Brand number link to brand master.
+	inbs_category		- 	Category code link to category master.
+}

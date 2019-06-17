@@ -1,0 +1,14 @@
+Supplier Price Updates. (SUB)
+po_reports
+Supplier Maintenance Menu. <a> (1,1)
+menu MENUSYS/po_smaint.mdf
+Maintain Supplier Prices. <a> (1,1)
+ff_suprice~N~
+Maintain Supplier Prices Using % Markup. <a> (1,1)
+ff_suprice~Y~
+Supplier Mass Update. <a> (1,1)
+sk_inis_mup~LPNO~
+Supplier Update by Selected Item's. <a> (1,1)
+sk_inis_up~LPNO~
+((
+))

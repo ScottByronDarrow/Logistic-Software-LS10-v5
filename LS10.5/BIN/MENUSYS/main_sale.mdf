@@ -1,0 +1,24 @@
+Sales Master Menu (SALE)
+main_help
+Master Menu <a> (1,2)
+menu MENUSYS/main.mdf
+Direct Invoicing <a> (1,2)
+menu MENUSYS/in_master.mdf
+On-Line / Counter Sales <a> (1,2)
+menu MENUSYS/ol_menu.mdf
+Sales Order Entry <a> (1,2)
+menu MENUSYS/so_master.mdf
+Quotations <a> (1,2)
+menu MENUSYS/qt_master.mdf
+Tele-Sales <a> (1,2)
+menu MENUSYS/ts_master.mdf
+((
+quadrant(25,6)
+quadrant(45,6)
+box(18,3,40,14)
+line(19,5,39)
+HEADING_ON
+TRAILER_ON
+FAST_ON
+SUB_ON
+))

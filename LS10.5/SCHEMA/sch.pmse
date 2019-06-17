@@ -1,0 +1,60 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pmse,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.pmse)
+|  Schema Desc  : (Customer Service note pad header. )
+|----------------------------------------------------------------------
+| $Log: sch.pmse,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:09  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:40  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file pmse 
+
+field	pmse_call_no			type	serial		index	primary
+field	pmse_nx_seq			type 	int
+field	pmse_sender			type	char	14
+field	pmse_to				type	char	14
+field	pmse_termno			type	int
+field	pmse_subject			type	char	40
+field	pmse_priority			type	int
+field	pmse_link_type			type	char	1
+field	pmse_link_hash			type	long
+field	pmse_phone_no			type	char	15
+field	pmse_contact_name		type	char	25
+field	pmse_date			type	edate
+field	pmse_time			type	char	8
+field	pmse_id_no			type	comp
+		pmse_sender,
+		pmse_termno,
+		pmse_date,
+		pmse_time					index
+field	pmse_status			type	char	1
+field	pmse_stat_flag			type	char	1
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pmse_call_no		- 	Call number ( Unique serial )
+	pmse_nx_seq		- 	Next action number.
+	pmse_sender		-	Sender of Mail.
+	pmse_to			-	Receiver of Mail.
+	pmse_subject		-	Subject of mail.
+	pmse_link_type		-	C(ustomer) S(upplier) N(one) 
+	pmse_link_hash		-	Link to cumr or sumr or 0L
+	pmse_phone_no		-	Phone number.
+	pmse_contact_name	-	Contact name.
+	pmse_date		-	Date of Creation.
+	pmse_time		-	Time of Creation.
+	pmse_status		-	C(urrent) D(elete) A(rchive) 
+	pmse_stat_flag		-	Spare stat flag.
+}

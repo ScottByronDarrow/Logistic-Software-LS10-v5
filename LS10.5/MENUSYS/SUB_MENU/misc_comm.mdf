@@ -1,0 +1,20 @@
+Salesman Commissions Menu (SUB)
+anni_help
+Ambreed Master Menu. <a> (1,1)
+menu MENUSYS/amb.mdf
+Salesman Master File Maintenance. <a> (1,2)
+ex_miscinp~S~
+Salesman and Item Commission Matrix Maintenance. <a> (1,1)
+ex_commstr~
+Calculation of Commission from Invoices  & Orders. <a> (1,2)
+lp_chain~warning "POST INVOICES / CREDITS"~day.sh~
+Salesman Commissions File Edit <a> (1,1)
+ex_scedit~
+Commission by Area/Subarea/Salesman Report. <a> (1,1)
+ex_cmarsman~"Commission by Area/Subarea Report"~
+Commission by Area/Item Class Report. <a> (1,1)
+ex_cmitecls~"Commission by Area/Item Class Report"~
+Commission File Purge. <a> (1,1)
+lp_chain~ex_scpurge LPNO~
+((
+))

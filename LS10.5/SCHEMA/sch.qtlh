@@ -1,0 +1,40 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.qtlh,v 5.0 2001/06/19 10:17:29 cha Exp $
+|  Schema Name  : (sch.qtlh)
+|  Schema Desc  : (Quotation Paragraph Header File. )
+|----------------------------------------------------------------------
+| $Log: sch.qtlh,v $
+| Revision 5.0  2001/06/19 10:17:29  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:17  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+
+file qtlh 
+
+field	qtlh_co_no			type	char	2
+field	qtlh_par_code		type	char	10
+field	qtlh_par_desc		type	char	40
+field	qtlh_hhlh_hash		type	serial					index primary
+field	qtlh_id_no			type	composite
+			qtlh_co_no,
+			qtlh_par_code									index 
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	qtlh_co_no			-	Company Number
+	qtlh_par_code		-	Paragraph Code.
+	qtlh_par_desc		-	Paragraph Description.
+	qtlh_hhlh_hash		-	Hash to link to paragraph Lines.
+}

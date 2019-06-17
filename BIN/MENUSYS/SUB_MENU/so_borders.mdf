@@ -1,0 +1,14 @@
+SOP - Backorder Functions. (SUB)
+so_help
+Sales Order Master Menu. <a> (1,1)
+menu MENUSYS/so_master.mdf
+Selective Sales Order Release By Item Number. <a> (1,1)
+so_usr_rel~
+Selective Transfer Release By Item Number. <a> (1,1)
+so_usr_trel~
+Manual Release By Item Number. <a> (1,1)
+so_autorel~M~S~
+Automatic Release By Item Number. <a> (1,1)
+chain~warning "AUTO  BACKORDER  RELEASE"~so_autorel A S~
+((
+))

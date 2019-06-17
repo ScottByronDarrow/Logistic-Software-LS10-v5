@@ -1,0 +1,61 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.mnhr,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.mnhr)
+|  Schema Desc  : (Menu System Menu Header File)
+|----------------------------------------------------------------------
+| $Log: sch.mnhr,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:01  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:35  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	mnhr
+
+field	mnhr_name			type	char	14
+field	mnhr_description		type	char	60
+field	mnhr_help			type	char	14
+field	mnhr_fast_access		type	char	6
+field	mnhr_hhmn_hash			type	serial		index
+field	mnhr_is_sub			type	char	1
+field	mnhr_heading			type	int
+field	mnhr_trailer			type	int
+field	mnhr_fast			type	int
+field	mnhr_sub			type	int
+field	mnhr_menu_name			type	int
+field	mnhr_shell_out			type	int
+field	mnhr_id_no			type	composite
+		mnhr_is_sub,
+		mnhr_name					index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	mnhr_name		-	Menu file name
+	mnhr_description	-	On screen description
+	mnhr_help		-	Help file name
+	mnhr_fast_access	-	Fast access
+	mnhr_hhmn_hash		-	Unique number
+	mnhr_is_sub		-	Is this a 'sub_menu' (Y/N)
+	mnhr_heading		-	See note below.
+	mnhr_trailer		-	See note below.
+	mnhr_fast		-	See note below.
+	mnhr_sub		-	See note below.
+	mnhr_menu_name		-	See note below.
+	mnhr_shell_out		-	See note below.
+
+
+NOTE:
+	-1 = Not set (Do NOT process as ON or OFF!!)
+	 0 = OFF
+	 1 = ON
+}

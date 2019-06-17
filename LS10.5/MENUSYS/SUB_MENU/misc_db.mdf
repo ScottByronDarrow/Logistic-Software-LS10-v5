@@ -1,0 +1,24 @@
+Miscellaneous Maintenance - Customers. (SUB)
+misc_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Maintain Department Master. <a> (1,1)
+dp_maint~
+Maintain Customer Defaults. <a> (1,1)
+psl_default~C~
+Maintain Customer Types. <a> (1,1)
+ex_miscinp~EXCL~
+Maintain Contract Types. <a> (1,1)
+ex_miscinp~EXCT~
+Maintain Delivery Address file. <a> (1,1)
+db_cdelinp~
+Maintain Currency details. <a> (1,1)
+po_mnt_inp~C~
+Maintain Country / Freight details. <a> (1,1)
+po_mnt_inp~F~
+Maintain Default Discounts. <a> (1,1)
+db_exdisinp~
+Maintain Statement Messages. <a> (1,1)
+db_stmtinp~S~
+((
+))

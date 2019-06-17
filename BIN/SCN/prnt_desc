@@ -1,0 +1,55 @@
+#=========================================================================
+#  Copyright (C) 1991 Pinnacle Software Limited.                   	 |
+#=========================================================================
+#
+#  Author: Campbell Mander	Date: 17/01/91
+#
+# prnt_desc file stores printer attribute, description and whether required
+# THIS FILE BELONGS IN $PROG_PATH/BIN/SCN.    
+#
+# The attribute may be only 3 characters long.
+# The description must be enclosed in quotes eg. "HELLO"
+# If the attribute is required append (NEEDED) to the end of the required line
+#
+# NB. A line starting with a # is a comment.
+TF=  	"Top of Form."				(NEEDED)
+XN=  	"Expanded Print on."			(NEEDED)
+XF=  	"Expanded Print off."			(NEEDED)
+I1=  	"Initialisation string."
+I2=  	"Deinitialisation string."
+P0=  	"Set '10' Pitch."			(NEEDED)
+P2=  	"Set '12' Pitch."			(NEEDED)
+P6=  	"Set '16' Pitch."			(NEEDED)
+us= 	"Underscore on."
+ue= 	"Underscore off."
+F1=  	"Select Font number 1."
+F2=  	"Select Font number 2."
+F3=  	"Select Font number 3."
+SN=  	"Select Character overstrike."
+SF=  	"Deselect Character overstrike."
+EX=  	"Divisor for centering."
+so= 	"Turn on bold print."
+se= 	"Turn off bold print."
+go= 	"Turn on graphics mode."
+ge= 	"Turn off graphics mode."
+bx= 	"Box chars."
+#===========================================================================
+# DOCUMENTATION ON BOX CHARACTERS
+#    Position in string  Character Printed
+#            0         -        top_left
+#            1         -        top_right
+#            2         -        bottom_left
+#            3         -        bottom_right
+#            4         -        vertical_bar
+#            5         -        vertical_bar
+#            6         -        horizontal_bar
+#            7         -        cross
+#            8         -        down_tick
+#            9         -        up_tick
+#           10         -        left_tick
+#           11         -        right_tick
+#           12         -        100% box
+#           13         -        66%  box
+#           14         -        33%  box
+#           15         -        0%   box
+#===========================================================================

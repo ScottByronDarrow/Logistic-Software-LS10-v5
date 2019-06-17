@@ -1,0 +1,79 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/10/18 06:54:30 cha Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/10/18 06:54:30  cha
+#	Clean and convert program sk_ir_disp.c (unmatched transfers).
+#	Modified by Scott.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_category
+	field inmr_serial_item
+	field inmr_sale_unit
+	field inmr_stat_flag
+end
+
+table ithr
+	field ithr_co_no
+	field ithr_type
+	field ithr_del_no
+	field ithr_hhit_hash
+	field ithr_iss_sdate
+	field ithr_iss_date
+	field ithr_rec_date
+	field ithr_tran_ref
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_i_hhcc_hash
+	field itln_r_hhcc_hash
+	field itln_serial_no
+	field itln_qty_order
+	field itln_qty_border
+	field itln_qty_rec
+	field itln_cost
+	field itln_stock
+	field itln_due_date
+	field itln_status
+	field itln_item_desc
+end
+

@@ -1,0 +1,42 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/08 05:06:27 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/08 05:06:27  scott
+#	Updated to use app.schema
+#	Updated to clean code and bring inline with standard.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table tmcf
+	field tmcf_co_no
+	field tmcf_campaign_no
+	field tmcf_hhcf_hash
+	field tmcf_c_name1
+	field tmcf_c_name2
+	field tmcf_c_obj1
+	field tmcf_c_obj2
+	field tmcf_c_obj3
+	field tmcf_c_obj4
+	field tmcf_c_obj5
+	field tmcf_c_manager
+	field tmcf_start_date
+	field tmcf_end_date
+	field tmcf_bg_incalls
+	field tmcf_bg_insales
+	field tmcf_bg_invalue
+	field tmcf_bg_outcalls
+	field tmcf_bg_outsales
+	field tmcf_bg_outvalue
+end
+

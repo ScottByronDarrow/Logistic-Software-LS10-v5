@@ -1,0 +1,89 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:18:11 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:18:11  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:39:29  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/02/06 10:07:50  scott
+#	Updated to deal with length change in the following fields
+#	intr_ref1 from 10 to 15 characters
+#	intr_ref2 from 10 to 15 characters
+#	inaf_ref1 from 10 to 15 characters
+#	inaf_ref2 from 10 to 15 characters
+#	
+#
+#
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_master_wh
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_type
+	field ccmr_sal_ok
+	field ccmr_pur_ok
+	field ccmr_issues_ok
+	field ccmr_receipts
+	field ccmr_reports_ok
+	field ccmr_stat_flag
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_inv_date
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_no_trans
+	field excf_no_days
+	field excf_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_serial_item
+	field inmr_lot_ctrl
+end
+
+table intr
+	field intr_co_no
+	field intr_br_no
+	field intr_hhbr_hash
+	field intr_hhcc_hash
+	field intr_hhum_hash
+	field intr_type
+	field intr_date
+	field intr_batch_no
+	field intr_ref1
+	field intr_ref2
+	field intr_qty
+	field intr_cost_price
+	field intr_sale_price
+	field intr_stat_flag
+end
+

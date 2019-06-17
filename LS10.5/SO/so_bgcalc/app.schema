@@ -1,0 +1,241 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.2 2001/10/23 07:16:33 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.2  2001/10/23 07:16:33  scott
+#	Updated to check and correct rounding.
+#	Changes to ensure ALL inputs and reports round the same way.
+#	
+#	Revision 5.1  2001/09/07 06:28:44  cha
+#	Checked to reflect scott's changes and
+#	to reflect the same principle in  so_check
+#	
+#	Revision 5.0  2001/06/19 08:18:44  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:40:09  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/03/06 01:18:11  scott
+#	Added new App.schema
+#	
+#
+#
+
+table sobg
+	field sobg_co_no
+	field sobg_br_no
+	field sobg_type
+	field sobg_lpno
+	field sobg_hash
+	field sobg_hash2
+	field sobg_pid
+	field sobg_last_line
+end
+
+table bpro
+	field bpro_co_no
+	field bpro_br_no
+	field bpro_program
+	field bpro_hash
+	field bpro_pid
+end
+
+table cmrd
+	field cmrd_hhrq_hash
+	field cmrd_line_no
+	field cmrd_hhcm_hash
+	field cmrd_hhbr_hash
+	field cmrd_hhcc_hash
+	field cmrd_serial_no
+	field cmrd_qty_order
+	field cmrd_qty_border
+	field cmrd_qty_iss
+	field cmrd_cost
+	field cmrd_sale_price
+	field cmrd_disc_pc
+	field cmrd_due_date
+	field cmrd_item_desc
+	field cmrd_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_class
+	field inmr_outer_size
+	field inmr_on_order
+	field inmr_committed
+	field inmr_backorder
+	field inmr_forward
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_dec_pt
+	field inmr_wo_qty_anti
+	field inmr_qc_qty
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_wo_qty_anti
+	field incc_qc_qty
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhsl_hash
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_sale_price
+	field soln_dis_pc
+	field soln_bonus_flag
+	field soln_status
+end
+
+table coln
+	field coln_hhsl_hash
+	field coln_status
+	field coln_stat_flag
+end
+
+table soic
+	field soic_pid
+	field soic_line
+	field soic_hhbr_hash
+	field soic_hhcc_hash
+	field soic_qty
+	field soic_program
+	field soic_op_id
+	field soic_time_create
+	field soic_date_create
+	field soic_status
+end
+
+table pohr
+	field pohr_hhsu_hash
+	field pohr_hhpo_hash
+	field pohr_drop_ship
+end
+
+table poln
+	field poln_hhpo_hash
+	field poln_hhbr_hash
+	field poln_hhcc_hash
+	field poln_qty_ord
+	field poln_qty_rec
+end
+
+table pcwo
+	field pcwo_co_no
+	field pcwo_req_br_no
+	field pcwo_req_wh_no
+	field pcwo_hhwo_hash
+	field pcwo_hhbr_hash
+	field pcwo_hhcc_hash
+	field pcwo_prod_qty
+	field pcwo_act_prod_qty
+	field pcwo_act_rej_qty
+	field pcwo_order_status
+end
+
+table pcms
+	field pcms_mabr_hash
+	field pcms_uom
+	field pcms_matl_qty
+	field pcms_matl_wst_pc
+	field pcms_qty_issued
+	field pcms_hhwo_hash
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_cnv_fct
+end
+
+table cohr
+	field cohr_hhcu_hash
+	field cohr_type
+	field cohr_gross
+	field cohr_disc
+	field cohr_stat_flag
+end
+
+table sohr
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_status
+end
+
+table cumr
+	field cumr_hhcu_hash
+	field cumr_ord_value
+end
+
+table itln
+	field itln_itff_hash
+	field itln_hhit_hash
+	field itln_line_no
+	field itln_hhbr_hash
+	field itln_r_hhbr_hash
+	field itln_i_hhcc_hash
+	field itln_r_hhcc_hash
+	field itln_serial_no
+	field itln_qty_order
+	field itln_qty_border
+	field itln_qty_rec
+	field itln_cost
+	field itln_status
+end
+
+table sokt
+	field sokt_co_no
+	field sokt_hhbr_hash
+	field sokt_line_no
+	field sokt_mabr_hash
+	field sokt_matl_qty
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inme
+	field inme_hhwh_hash
+	field inme_receipts
+	field inme_pur
+	field inme_issues
+	field inme_adj
+	field inme_sales
+	field inme_stat_flag
+end
+
+table qchr
+	field qchr_co_no          
+	field qchr_br_no          
+	field qchr_wh_no          
+	field qchr_hhbr_hash      
+	field qchr_hhqc_hash      
+end
+table qcln
+	field qcln_hhqc_hash      
+	field qcln_line_no        
+	field qcln_rel_qty        
+	field qcln_rej_qty        
+end

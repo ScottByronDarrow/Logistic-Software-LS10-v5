@@ -1,0 +1,90 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/14 02:50:05 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/14 02:50:05  scott
+#	Updated for new delete wizard
+#	
+#	Revision 5.0  2001/06/19 08:08:53  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:30:10  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/02/06 10:07:35  scott
+#	Updated to deal with length change in the following fields
+#	intr_ref1 from 10 to 15 characters
+#	intr_ref2 from 10 to 15 characters
+#	inaf_ref1 from 10 to 15 characters
+#	inaf_ref2 from 10 to 15 characters
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_cc_no
+end
+
+table cfhs
+	field cfhs_co_no
+	field cfhs_br_no
+	field cfhs_wh_no
+	field cfhs_date
+	field cfhs_stat_flag
+end
+
+table bach
+	field bach_co_no
+	field bach_type
+	field bach_run_no
+	field bach_batch_no
+	field bach_date
+	field bach_stat_flag
+end
+
+table extr
+	field extr_co_no
+	field extr_jnl_type
+	field extr_gl_per
+	field extr_run_no
+	field extr_int_no
+	field extr_ref_no
+	field extr_date
+	field extr_stat_flag
+end
+
+table cucc
+	field cucc_hhcu_hash
+	field cucc_cont_date
+	field cucc_hold_ref
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_inv_no
+end
+
+table cuph
+	field cuph_hhcu_hash
+	field cuph_date_cheq
+	field cuph_stat_flag
+end
+
+table inaf
+	field inaf_co_no
+	field inaf_br_no
+	field inaf_wh_no
+	field inaf_sys_date
+	field inaf_hhbr_hash
+	field inaf_hhcc_hash
+	field inaf_type
+	field inaf_date
+	field inaf_ref1
+	field inaf_ref2
+end
+

@@ -1,0 +1,105 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:19 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:19  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/05/04 01:33:46  scott
+#	Updated to add incf_gr_number as required by standard function
+#	
+#	Revision 4.0  2001/03/09 02:38:20  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:40:23  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#	Revision 3.0  2000/10/10 12:20:51  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/08/10 09:57:39  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_outer_size
+	field inmr_dec_pt
+end
+
+table sttf
+	field sttf_hhwh_hash
+	field sttf_location
+	field sttf_exp_date
+	field sttf_lot_no
+	field sttf_slot_no
+	field sttf_lot_expiry
+	field sttf_qty
+	field sttf_hhum_hash
+	field sttf_page_no
+	field sttf_stat_flag
+end
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_location
+	field incc_stake
+	field incc_closing_stock
+	field incc_stat_flag
+end
+
+table inum
+	field inum_hhum_hash
+	field inum_uom
+	field inum_cnv_fct
+end
+
+table inlo
+	field inlo_inlo_hash      
+	field inlo_hhwh_hash      
+	field inlo_hhum_hash      
+	field inlo_location       
+	field inlo_loc_type       
+	field inlo_lot_no         
+	field inlo_qty            
+	field inlo_stake          
+end

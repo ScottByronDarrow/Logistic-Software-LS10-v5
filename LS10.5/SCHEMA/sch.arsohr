@@ -1,0 +1,100 @@
+{======================================================================
+|  Copyright (C) 1998 - 2002 LogisticSoftware
+|======================================================================
+| $Id: sch.arsohr,v 5.0 2002/05/07 10:16:41 scott Exp $
+|  Schema Name  : (sch.arsohr)
+|  Schema Desc  : (Archive Copy - Sales Order Header File)
+|----------------------------------------------------------------------
+| $Log: sch.arsohr,v $
+| Revision 5.0  2002/05/07 10:16:41  scott
+| Updated to bring version number to 5.0
+|
+| Revision 1.3  2002/05/07 08:26:33  scott
+| Updated for indexes
+|
+| Revision 1.2  2002/05/02 04:20:29  scott
+| Updated to remove as not required in archiving system
+|
+| Revision 1.1  2002/04/29 07:48:47  scott
+| Update for new Archive modifications;
+|
+|=====================================================================}
+file	arsohr	
+
+field	arsohr_co_no				type	char	2
+field	arsohr_br_no				type	char	2
+field	arsohr_dp_no				type	char	2
+field	arsohr_order_no				type	char	8
+field	arsohr_cont_no				type	char	6
+field	arsohr_hhcu_hash			type	long				index	dups
+field	arsohr_chg_hhcu     		type	long	
+field	arsohr_hhso_hash			type	long				index	dups
+field	arsohr_inv_no  	        	type	char	8
+field	arsohr_cus_ord_ref			type	char	20
+field	arsohr_chg_ord_ref			type	char	20
+field	arsohr_op_id				type	char	14
+field	arsohr_time_create			type	char	5
+field	arsohr_date_create			type	edate
+field	arsohr_cons_no				type	char	16
+field	arsohr_del_zone  	    	type	char	6
+field	arsohr_del_req  	    	type	char	1
+field	arsohr_del_date  	    	type	edate
+field	arsohr_asm_req  	    	type	char	1
+field	arsohr_asm_date  	    	type	edate
+field	arsohr_s_timeslot	    	type	char	1
+field	arsohr_e_timeslot	    	type	char	1
+field	arsohr_carr_code			type	char	4
+field	arsohr_carr_area			type	char	2
+field	arsohr_no_cartons			type	int
+field	arsohr_no_kgs				type	float
+field	arsohr_sch_ord				type	char	1		
+field	arsohr_ord_type				type	char	1
+field	arsohr_pri_type				type	char	1	
+field	arsohr_frei_req				type	char	1	
+field	arsohr_dt_raised			type	edate
+field	arsohr_dt_required			type	edate
+field	arsohr_tax_code				type	char	1
+field	arsohr_tax_no				type	char	15
+field	arsohr_area_code			type	char	2
+field	arsohr_sman_code			type	char	2
+field	arsohr_sell_terms			type	char	3
+field	arsohr_pay_term				type	char	40
+field	arsohr_freight				type	money
+field	arsohr_insurance			type	money
+field	arsohr_ins_det				type	char	30
+field	arsohr_o_cost_1				type	money
+field	arsohr_o_cost_2				type	money
+field	arsohr_o_cost_3				type	money
+field	arsohr_deposit				type	money
+field	arsohr_discount				type	money
+field	arsohr_exch_rate			type	double
+field	arsohr_fix_exch				type	char	1
+field	arsohr_batch_no				type	char	5
+field	arsohr_cont_name			type	char	20
+field	arsohr_cont_phone			type	char	15
+field	arsohr_del_name				type	char	40
+field	arsohr_del_add1				type	char	40
+field	arsohr_del_add2				type	char	40
+field	arsohr_del_add3				type	char	40
+field	arsohr_din_1				type	char	60
+field	arsohr_din_2				type	char	60
+field	arsohr_din_3				type	char	60
+field	arsohr_new					type	char	1
+field	arsohr_prt_price			type	char	1
+field	arsohr_full_supply			type	char	1
+field	arsohr_two_step				type	char	1
+field	arsohr_status				type	char	1
+field	arsohr_stat_flag			type	char	1
+field	arsohr_id_no				type	composite
+			arsohr_co_no,
+			arsohr_br_no,
+			arsohr_hhcu_hash,
+			arsohr_order_no										index
+end
+
+{
+              =====================================
+              | LOGISTIC SCHEMA COMMENTS SECTION. |
+              =====================================
+			  SEE SOHR - THIS IS AN EXACT COPY FOR ARCHIVING
+}

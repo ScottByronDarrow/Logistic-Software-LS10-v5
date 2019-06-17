@@ -1,0 +1,93 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inin,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.inin)
+|  Schema Desc  : (Inventory Indent Control File. )
+|----------------------------------------------------------------------
+| $Log: sch.inin,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:53  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:30  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inin
+
+field	inin_co_no				type	char	2
+field	inin_item_no			type	char	16
+field	inin_next_indent		type	long
+field	inin_class				type	char	1
+field	inin_category			type	char	11
+field	inin_serial_item		type	char	1
+field	inin_abc_code			type	char	1
+field	inin_abc_update			type	char	1
+field	inin_ff_option			type	char	1
+field	inin_ff_method			type	char	1
+field	inin_allow_repl			type	char	1
+field	inin_reorder			type	char	1
+field	inin_active_status		type	char	1
+field	inin_costing_flag		type	char	1
+field	inin_gst_pc				type	float
+field	inin_tax_pc				type	float
+field	inin_tax_amount			type	double
+field	inin_lot_ctrl			type	char	1
+field	inin_sale_unit			type	char	4
+field	inin_pack_size			type	char	5
+field	inin_dec_pt				type	int
+field	inin_std_uom			type	long
+field	inin_alt_uom			type	long
+field	inin_source				type	char	2
+field	inin_uom_cfactor		type	float
+field	inin_outer_size			type	float
+field	inin_sellgrp			type	char	6
+field	inin_buygrp				type	char	6
+field	inin_qc_reqd			type	char	1
+field	inin_qc_time			type	float
+field	inin_stat_flag			type	char	1
+field	inin_id_no				type	composite
+			inin_co_no,
+			inin_item_no					index	primary
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inin_co_no			-	Company number.
+	inin_item_no		-	Base indent item number.
+	inin_next_indent	-	Next indent sequence number.
+	inin_class			-	Default class for indent item.
+	inin_category		-	Default category for indent item.
+	inin_serial_item	-	Default serial item flag for item.
+	inin_abc_code		-	Item ABC code.
+	inin_abc_update		-	ABC analysis code update.
+	inin_ff_option		-	LRP option A(utomatic) M(anual) P(redetermined)
+	inin_ff_method		-   LRP Method (A/B/C/D)
+	inin_allow_repl		-	Allow replenishment flag (Y/N)
+	inin_reorder		- 	Allow items to be re-ordered.
+	inin_active_status	- 	Active status code.
+	inin_costing_flag	-	Default costing flag indent item.
+	inin_gst_pc			-	Default gst % for indent item.
+	inin_tax_pc			-	Default tax % for indent item.
+	inin_tax_amount		-	Default tax amt for indent item.
+	inin_lot_ctrl		-	Lot Control.
+	inin_sale_unit		-	Sale unit.
+	inin_pack_size		-	Pack size
+	inin_dec_pt			-	Decimal Point.
+	inin_std_uom		-	Standard Unit of Measure. 
+	inin_alt_uom		-	Alternate Unit of Measure. 
+	inin_source			-	Source Code.
+	inin_uom_cfactor	-	Unit of measure.
+	inin_outer_size		-	Outer Size.
+	inin_sellgrp		-   Default selling group for indent item.
+	inin_buygrp			-   Default buying group for indent item.
+	inin_qc_reqd		-	Indent item requires to be QC checked
+	inin_qc_time		-	QC checking time
+	inin_stat_flag		-	Default stat flag for indent item.
+}

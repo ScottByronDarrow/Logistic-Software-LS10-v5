@@ -1,0 +1,516 @@
+wrpd|Warranty registration parts details|
+wrpc|Warranty registration problem code|
+wrod|Warranty registration outwork details|
+wrno|Warranty registration notes|
+wrmr|Warranty registration master file|
+wrjc|Warranty job codes|
+wrex|Warranty exchange rate|
+wrdn|Warranty registration dealer notes|
+wfbc|Work File Batch Control File|
+webusers|Web order users|
+websoln|Web order detail file|
+websohr|Web order header file|
+webmails|Web order mail file|
+weblog|Web order log file|
+watj|Warranty type job code|
+wati|Warranty type interface|
+wath|Warranty type header|
+wasi|Warranty Service plan interface|
+wash|Warranty Service plan header|
+wasd|Warranty Service plan details|
+wasc|Warranty Supplier Claim|
+wajc|Warranty Job code|
+udih|User defined Inventory header file|
+udid|User defined inventory master file|
+tsxd|Tele-Sales External detail file|
+tspm|Tele-Sales Prospect Master file|
+tsls|Tele-Sales Letters Sent History file|
+tsln|Tele-Sales Letter Detail File|
+tslh|Tele-Sales Letter Header file|
+tslb|Tele-Sales Letters Sent History file|
+tshs|Tele-Sales item History File|
+tsci|Telesales Complimentary Item File|
+tsbc|Tele-Sales Brand Code Description File|
+tsal|Tele-Sales lead Allocation file|
+trzm|Transport carrier zone maintenance|
+trzc|Transport carrier timeslot capacity file|
+trve|Transport vehicle file record|
+trsh|Transport carrier schedule file|
+trln|Transpoer line detail file|
+trhr|Transport Heder file|
+trcm|Transport carrier master file|
+trcl|Transport carrier line file|
+trch|Transport carrier history file|
+trcg|Transport cargo file|
+tmxf|Tele-Marketing External detail file|
+tmud|Tele-Marketing User defined prompts|
+tmsl|Tele-Marketing Script Line file|
+tmsh|Tele-Marketing Script Header file|
+tmrc|Telemarketing Response Criteria File|
+tmpm|Tele-Marketing Prospect Master file|
+tmpf|Tele-Marketing Position File|
+tmop|Tele-Marketing OPerator file|
+tmoh|Tele-Marketing Operator Campaign History|
+tmof|Tele-Marketing Origin File|
+tmln|Telemarketing Letter Detail File|
+tmlh|Tele-Marketing Letter Header file|
+tmdl|Tele-Marketing Default Detail File|
+tmdf|Tele-Marketing Prospect Master file|
+tmct|Tele-Marketing ConTrol file|
+tmcl|Tele-Marketing Call line detail file|
+tmch|Tele-Marketing Call Header file|
+tmcf|Tele-Marketing Campaign file|
+tmal|Tele-Marketing lead Allocation line file|
+tmah|Tele-Marketing lead Allocation header file|
+suwm|Creditors Merge Work File|
+suwk|Creditors Work File|
+susc|Creditors Sundry Cheque Work File|
+sura|Suppliers Rebate Assignment File|
+suph|Stock Supplier Purchase history file|
+sunt|Supplier Notes File|
+sumr|Creditors Master File|
+suin|Creditors Invoice File|
+suid|Creditors Invoice / Credit Detail File|
+suht|Creditors Held Payments Detail File|
+suhp|Creditors Held Payments Header File|
+suhd|Creditors Payments Header File|
+sudt|Creditors Payments Detail File|
+suds|Supplier Discount Price File|
+sucf|Supplier contract file|
+succ|Creditors Cheques Work File|
+stts|Stock Take Transaction FileSerial Items|
+sttf|Stock Take Transaction File|
+strm|Statement And Remmittance Messages File|
+srsk|SeaRch file for Stock|
+srdb|SeaRch file for Debtors|
+srcr|SeaRch file for Creditor|
+sosu|Packing Slip Summary Picking Chart|
+sosf|Sales order service file|
+sosd|Sales Order Shipping Detail File|
+sosa|Sales Order Analysis File|
+sons|Sales order non stock item description file|
+somi|Sales Order Processing Missing Invoice Control|
+somc|Sales Order Processing Missing Invoice Control|
+soln|Sales Order Detail Lines File|
+sokt|Sales Order kitting file|
+sokd|Phantom kit details for packing slips + invoices|
+soic|Real-Time Item Committal File|
+sohr|Sales Order Header File|
+sobg|Background Processing file|
+sknh|Goods receipts number plate header|
+sknd|Goods receipts number plate lines|
+sjvh|Service job Vehicle File|
+sjsr|Service Job Serviceperson Rates File|
+sjsp|Service Job Spare Parts Usage File|
+sjsd|Service Job Service Cost Detail File|
+sjsc|Service Job Service Cost Item File|
+sjlr|Service Job Labour rate File|
+sjld|Labour analysis detail file|
+sjjd|Service Job - Job Detail File|
+sjis|Service Job Invoice Summary File|
+sjig|Service Job Invoice G/L analysis file|
+sjhr|Service Job Header Record File|
+sjdc|Service Job Disbursement Cost|
+sjcr|Service Job Extras Rate File|
+sasr|Sales Analysis Sub Ranges of Categories|
+sasg|Selling group file|
+sasf|Sales Anslysis Sales Man file|
+sapc|Sales Analysis By Product/Customer|
+sale|Sales Analysis By Customer/Category/Salesman|
+saem|Sales expense master file|
+saed|Sales expense detail file|
+sadf|Sales Analysis Detail file By Item/Customer|
+sact|Sales Anslysis Customer type file|
+sacm|Sales Call master file|
+sacl|Sales Commission Detail lines|
+sach|Sales commission header file.|
+sacf|Sales Anslysis By Category file|
+sacd|Sales call detail file|
+sabg|Sales / Budget file|
+saaf|Sales Anslysis By Area file|
+rymr|Royalty Type Master File Base Record|
+ryln|Royalty Header File Record|
+ryhs|Royalty History File|
+ryhr|Royalty Header File Record|
+rgyl|Routing Yield-calcs File|
+rgrs|Routing Resource Master file|
+rgln|Routing Line detail File|
+rghr|Routing Header File|
+rgbp|Routing By-Product File|
+qtty|Prospect Type Master File|
+qtsr|Quotation source file|
+qtph|Quotation System Prospect Header File|
+qtpd|Quotation System Prospect Detail File|
+qtlp|Quotation Letter Paragraph File|
+qtln|Quotation detail lines|
+qtlh|Quotation Paragraph Header File|
+qtld|Quotation Paragraph Detail File|
+qthr|Quotation header file|
+qcmr|QC Centre Master File|
+qcln|Inventory QC Purchased Items Reveival File|
+qchr|Inventory QC Purchased Items Reveival File|
+qasd|Quality Assurance Supplier Detail|
+qamr|Quality Assurance Master file|
+qabs|Quality Assurance British Standard Spec Text|
+pstq|Production Scheduling Temporary Queue|
+psqm|Production Scheduling Q Modelling Control File|
+prvr|PayRoll Valid Resources file|
+prmr|PayRoll employee Master file|
+ppmr|Logistic Phone Master File|
+powk|Purchase Order G/L Work file|
+potb|Trading Bill Details|
+poso|Purchase order / Sales order linking file|
+posl|Shipment Line Detail File|
+posh|Overseas Shipment Detail File|
+posd|Overseas Shipment Detail File|
+popc|Purchase order / Creditors interface|
+pons|Purchase order non stock item description file|
+poln|Purchase order detail lines|
+poli|Purchase order line details file|
+polh|Purchase order licence control|
+pold|Purchase Order Licence Detail Maintenance|
+pohs|Purchase Order HiStory file|
+pohr|Purchase order header file|
+pogl|Goods received Line File|
+pogh|Goods received header file|
+pogf|Purchase Order / General ledger Control File|
+pogd|Goods Received Header Details File|
+pofh|Forward Exchange Contract Header File|
+pofd|Forward Exchange Contract Detail File|
+podt|Composition or Duty File|
+pocr|Currency File Record|
+poco|Purchase Order Control File|
+pocl|Purchase Order Classification File|
+poch|Letter of Credit Detail File|
+pocf|Country / Freight File|
+pocd|Letter of Credit Allocation Detail|
+poca|Purchase Order Costing Audit File|
+poap|Purchase order approval file|
+pmtx|Customer Service note pad header|
+pmsp|User scratch pad notes|
+pmse|Customer Service note pad header|
+pmre|Customer Service note pad detail|
+pmpr|Project Monitoring Prospects File|
+pmpq|Project Monitoring Project Quote File|
+pmpm|Project Monitoring Project Master file|
+pmpc|Project-Contractor File|
+pmnt|Project Monitoring Project Notes|
+pmnd|Project Note Detail File|
+pmhs|Logistic Mail History Header File|
+pmhl|Logistic Mail History Line Detail File|
+pmct|Logistic Mail Control File|
+pmat|Project Monitoring Action Table|
+pint|PINnacle sysTables extensions file|
+pcwo|Production Control Works Order File|
+pcwl|Production Control Works order Link File|
+pcwc|Work Centre Code file|
+pcsf|Production Control Serial Tracking File|
+pcrq|Production Control Resource Queue|
+pcpx|Production class eXclusion File|
+pcoi|Order Special Instruction Records|
+pcms|BoM Material Specification File|
+pcmi|Master Instruction File|
+pclt|Production Control Lots Trace File|
+pcln|Routing Line detail File|
+pcli|Labour Item File|
+pcid|Process Control Instruction Detail File|
+pchw|Hazard Warning File|
+pchs|Works Order History File|
+pchc|Hazard Class/Handling Class File|
+pcgl|Production Control G/L Transactions File|
+pccl|Production Control CaLendars|
+pcbp|Routing By-Product File|
+pcat|Production Control Actual Times File|
+optx|System options menu used sk_alldisp etc|
+opts|System options menu used sk_alldisp etc|
+odlt|Overdue Letter File|
+move|Inventory movements file|
+mnsc|Menu System Security Link File|
+mnln|Menu System Menu Line File|
+mnhr|Menu System Menu Header File|
+mncd|Menu System Comment Details File|
+mnac|Menu System Access Description File|
+mldb|Screen generator field label text|
+mlcf|Screen generator field label text|
+mhsd|Spec_type and Code Control File|
+mhdr|Machine History Detail Record File|
+mect|Month End Information File Record|
+mdel|Misc delete control file|
+mccf|Machine History Control File|
+lrph|LRP-hostory file|
+lomr|Location Master File|
+llct|System Lot/location control file|
+iudi|Inventory user defined item allocation file|
+itlo|Inventory Location File for transfers|
+itln|Inventory Transfer Detail File|
+ithr|Inventory Transfer Header File|
+itgl|Inventory Transfer General Ledger work file|
+itff|Inventory Transfer Fifo/Lifo holding records|
+itbc|Inventory Transfer Batch Control File|
+inwu|Inventory WH UOM file|
+inws|Inventory warehouse supply record|
+inwo|Inventory Write-Off file|
+inwd|Stock Inventory warehouse supply detail records|
+inuv|Items UOM/Volume master file|
+inum|Inventory Unit of Measure File|
+intr|Inventory Transactions File|
+inth|Inventory Tax Header File|
+intd|Inventory Tax Detail File|
+insp|Inventory/Supplier Pricing By Qty|
+insl|System sort location file|
+insf|Inventory Serial Number File|
+insc|Inventory Stock Take Control File|
+inrh|Reel History File for Reel Certificates|
+inrb|Inventory Rebate File|
+inpt|Price Book Title File|
+inps|Price Book Header File|
+inpr|Inventory Price File|
+inpl|Price Book Detail File|
+inpi|Price Book Index File|
+inph|Price Book Header File|
+inpd|Price Book Description File|
+inpc|Price Book Column Headings File|
+inpb|Price Book File|
+inoi|Outlet inventory file|
+innh|Inventory Note Pad Header Record|
+innd|Inventory Note Pad Detail Record|
+inmu|Inventory Movements File|
+inmr|Inventory Master File Base Record|
+inml|Invemtory movements log file.|
+inme|Inventory month end processing file|
+inmd|Inventory Master File default file|
+inmb|Inventory movements balance records|
+inls|Inventory Lost Sales File|
+inlo|Inventory Location File|
+inld|Stock Inventory-supplier Lead Dates Record|
+inla|Inventory Allocation Detail File|
+inis|Stock Inventory Supplier Record|
+inir|Inventory Issue/Receipt file record|
+inin|Inventory Indent Control File|
+inim|Inventory Management abc cutoff defaults|
+ingu|Global Price Update File|
+ingp|Inventory Buying and Selling Groups|
+ingd|Inventory Grading Master File|
+infp|Inventory Furture price file update|
+inex|Inventory EXtra description file|
+inem|Inventory Establishment/Branch Manufacturing|
+inei|Inventory Establishment/Branch Stock File|
+ined|Inventory Message Code File|
+inds|Customer Discount Subranges File|
+indd|Unknown|
+incs|Inventory Compeditors Subsitute file|
+incp|Inventory Contract Price File|
+incf|Inventory cost fileFIFO, LIFO|
+incc|Inventory Cost Centre|
+inbu|Item and Unit of Measure Link Master File|
+inbs|Inventory Supplier brand category relation file.|
+inas|Inventory Active Status File|
+inal|Advertising Levy file|
+inah|Inventory Allocation Header File|
+inaf|Inventory Transactions Audit File|
+inad|Inventory Allocation Detail File|
+ifdg|Debtors / General Ledger Interface File|
+glzl|General Ledger - Unknown - Not used|
+glzh|General Ledger - Unknown - Not used|
+glwk|General Ledger Transactions Work File|
+glus|General ledger user security record|
+gltr|General Ledger Transaction File|
+glsj|General Ledger Standing Journals|
+glsh|General ledger Spread Table Header|
+glsd|General ledger Spread Table Detail|
+glra|General Ledger Recovery Allocation|
+glpd|General Ledger Period Balance file|
+glpc|General Ledger Currency File for Each glpd|
+glmr|General Ledger Master FileAccount Header|
+glln|Link between parent/child accounts|
+gllg|General Ledger Log file|
+gljt|General Ledger - Journal Type File by Currency|
+gljc|General Ledger Journal Control Record|
+glih|General Ledger Interface Header File|
+glif|General Ledger Interface Code|
+glid|General Ledger Interface Detail File|
+glic|General Ledger Interface Code File|
+glct|General ledger control record|
+glcm|General Ledger Control Account Master File|
+glca|General ledger chart of accounts record|
+glbl|General Ledger batch control line item file|
+glbh|General Ledger batch control file header|
+glbd|General ledger Budget header|
+glaj|General Ledger Automatic Journal Master File|
+ffwk|Focus Forecasting Work File|
+ffpr|Focus Forcasting Reorder Review Period file|
+ffhs|Focus forecasting history file|
+ffex|Focus forecasting exception file|
+ffdm|Daily Demand History File|
+fetr|Forward Exchange Transaction File|
+feln|Forward Exchange Assignment File|
+fehr|Forward Exchange Header file|
+fatr|Fixed Asset Transactions file|
+famr|Fixed Assets Master Record|
+fagl|Fixed asset General Ledger work file|
+exwo|External inventory Write-Off file|
+extr|External Tax Return Audit file|
+extf|External Trucker file|
+exst|External Sales Tax Master File|
+exsi|External Special Instructions File|
+exsf|External Salesman File|
+exmm|External Merchandiser Master file|
+exmh|Extenal marketing header file|
+exmd|Extenal marketing detail file|
+exls|External Lost Sale File|
+exlq|Lost Quote Reason Code Header File|
+exlc|Competitor Header File|
+exdf|Customer External Discount File|
+exct|Debtors Contract Type Master File|
+excl|Debtors Class Type Master File|
+excg|External Category/ General Ledger File|
+excf|External Category File Record|
+exaf|External Area file|
+essr|Establishment/Branch Security Record|
+esmr|Establishment/Branch Master File Record|
+ddsh|Direct Delivery Shipment File|
+ddln|Direct Delivery Order Line File|
+ddhr|Direct Delivery Order Header File|
+ddgd|Direct Delivery On-Cost Detail File|
+dbry|Debtor Royalty Type Master File Base Record|
+dbph|Letter Header File|
+dbpd|Letter Detail Lines|
+dblh|Debtors Paragraph Header File|
+dbld|Debtors Paragraph Detail File|
+cuwk|Debtors Invoice/Credits Work File|
+cush|Customer Sales history file|
+cusf|Customer Salesmen File|
+cusc|Customer sales commission file|
+cusa|Customer 24 Month Sales Analysis Record|
+curh|Customers Rebate History File|
+cura|Customers Rebate Assignment File|
+cuqb|Customer Quantity Break Default file|
+cuph|Customer Payment History file|
+cuoc|Unknown|
+cumr|Customer Master File Base Record|
+cumd|Customer Master Defaults|
+cuit|Customer Specific Inventory Item File|
+cuin|Debtors Invoice Accounting Invoice/Credit file|
+cuhd|Debtors Payments Header File Record|
+cudt|Debtors Payments Detail Record|
+cudr|Creditors/Debtors Receipts Work File Record|
+cudp|Department Master File|
+cudi|Customer Delivery Address File|
+cudb|Customer Discount level Break file|
+cucr|Customer Credit Return Description File|
+cuch|Debtors Letter of Credit Header Record|
+cucf|Customer Contract file|
+cucd|Debtors Letter of Credit Draw Off Record|
+cucc|Customer Credit Control Record|
+cubg|Customer Buying Group Description File|
+cubd|Customer Bank detail file|
+cttln|Cont. Manag. (retail) - Temporary Contract - Lines|
+ctthr|Cont. Manag. (retail) - Temporary Contract - Header|
+cttdc|Cont. Manag. (retail) - Temporary Contract - deductables|
+ctmhr|Cont. Manag. (retail) - Main Contract Header|
+ctmff|Cont. Manag. (retail) - Floating Fees|
+ctmdf|Cont. Manag. (retail) - Fee Codes|
+ctmdc|Cont. Manag. (retail) - Deductables - Sales Range|
+crtl|Creditors Total File|
+crbk|Creditors Bank File|
+comr|Company Master File Base Record|
+comm|System Common File|
+coln|Customer Order/Invoice/Credit Detail File|
+cohr|Customer P-slip/ Invoice/Credit Header File|
+cnre|Customer Contract Rebates Due File|
+cncl|Debtors/Contract Link File|
+cnch|Debtors Contract header file|
+cncd|Debtors Contract detail lines|
+cmws|Contract Management WIP Statuses Master File|
+cmts|Contract Management Time Sheet Trans File|
+cmtr|Contract Management Transaction File|
+cmrh|Contract Management Requisition Header|
+cmrd|Contract Management Requisition Detail File|
+cmpb|Contract Management Progress Billing File|
+cmjt|Contract Management Job type master file.|
+cmjh|Contract Management Job Type Master File|
+cmjd|Contract Management Job Type Details File|
+cmit|Contract Management Issue To Master File|
+cmhr|Contract Management Header File|
+cmer|Contract Management Employee Rates Master File|
+cmeq|Contract Management Equipment Master File|
+cmem|Contract Management Employee Master File|
+cmcm|Contract Management Costheads Master File|
+cmcd|Contract Management Contract Description File|
+cmcb|Contract Management Costheads/Contract Budget|
+cfln|Carrier file line item records|
+cfhs|Carrier History file|
+cfhr|Carrier file header record|
+ccmr|Cost Centre/Warehouse Master File Record|
+cbtr|Reconciled Transaction File|
+cbbt|System Bank Transaction File|
+cbbs|Bank Statement File|
+bpro|System Batch Control file|
+bmms|BoM Material Specification File|
+bmin|BoM Material INstruction File|
+blhd|Bank Lodgment Header File|
+bldt|Bank Lodgment Detail File|
+bkmr|System Backup Master File|
+bkhs|System Backup History File|
+bkct|System Backup Control File|
+bkcr|Currency File Record|
+bach|System Batch Control file|
+asmv|Asset Movements file.|
+asmr|Asset Master File.|
+asdt|Asset details file|
+arln|Customer Order/Invoice/Credit Detail File|
+arhr|Archive P-slip/ Invoice/Credit Header File|
+ wrpd|Warranty Registration Parts Details|
+ wrpc|Warranty Registration Problem Code|
+ wrod|Warranty Registration Outwork Details|
+ wrno|Warranty Registration Notes|
+ wrmr|Warranty Registration Masterfile|
+ wrex|Warranty Exchange Rate|
+ wrdn|Warranty Registrattion Dealer Notes|
+ watj|Warranty Type Job Code|
+ wati|Warranty Type Interface|
+ wath|Warranty Type Header|
+ wasi|Warranty Service Plan Interface|
+ wash|Warranty Service Plan Header|
+ wasd|Warranty Service Plan Details|
+ wasc|Warranty Supplier Claim|
+ wajc|Warranty Job Code|
+ udih|User Defines Inventory Header file|
+ udid|User Defines Inventory Master file|
+ trzm|TRansport Zone Maintenance|
+ trzc|TRansport Timeslot Capacity Maintenance|
+ trsh|TRansport SHedule file|
+ trcm|TRansport Carrier Master File|
+ trcl|TRansport Carrier Line File|
+ trch|TRansport Carrier History File|
+ trcg|Transport cargo file record|
+ sucf|Supplier Contact File|
+ sosf|Sales Order Service File|
+ sknh|Goods receipts number plate Header|
+ sknd|Goods receipts number plate Lines|
+ saem|Sales Expense Master file|
+ saed|Sales Expense Detail file|
+ sacm|Sales Call Master file|
+ sacl|Sales commission Detail file|
+ sach|Sales commission Header file|
+ sacd|Sales Call Detail file|
+ poli|Purchase order Line details|
+ move|Movement file|
+ iudi|Inventory User Defined Item allocation file|
+ inws|Inventory Warehouse Supply record|
+ inwd|Stock Inventory Warehouse supply detail record|
+ insl|System Sort location file|
+ inoi|Outlet Inventory file|
+ inmb|Inventory Movements Balance Record|
+ incs|Inventory Competitors Substitute file|
+ inbs|Inventory Supplier Brand Category Relation File)|
+ glra|General Ledger Recovery Allocation|
+ exmm|External Merchandiser Master File|
+ exmh|External Market Header File|
+ exmd|External Market Detail File|
+ cusc|Customers Salesman Commission file|
+ cucf|Customer Contact File|
+ cmjh|Contract Management Job Type Master File|
+ asmv|Asset Movement File|
+ asmr|Asset Master File|
+ asdt|Asset Detail File|

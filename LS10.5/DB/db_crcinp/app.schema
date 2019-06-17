@@ -1,0 +1,274 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:05 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:05  scott
+#	Update - LS10.5
+#	
+#	Revision 5.0  2001/06/19 08:04:18  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:24:47  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:13:34  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.2  2000/09/11 09:36:22  scott
+#	Removed delete from schema
+#	
+#	Revision 2.1  2000/09/06 05:31:43  scott
+#	*** empty log message ***
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_gl_date
+end
+
+table comr
+	field comr_co_no
+	field comr_nx_rec_no
+	field comr_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_class_type
+	field cumr_curr_code
+	field cumr_ctry_code
+	field cumr_crd_prd
+	field cumr_chq_prd
+	field cumr_bank_code
+	field cumr_branch_code
+	field cumr_sman_code
+	field cumr_ho_dbt_hash
+	field cumr_date_lastpay
+	field cumr_amt_lastpay
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_ho_hash
+	field cuin_hhci_hash
+	field cuin_type
+	field cuin_co_no
+	field cuin_est
+	field cuin_dp
+	field cuin_inv_no
+	field cuin_narrative
+	field cuin_date_of_inv
+	field cuin_date_posted
+	field cuin_pay_terms
+	field cuin_due_date
+	field cuin_currency
+	field cuin_exch_rate
+	field cuin_er_fixed
+	field cuin_disc
+	field cuin_amt
+	field cuin_stat_flag
+	field cuin_drop_ship
+	field cuin_grn_no
+end
+
+table cuhd
+	field cuhd_hhcu_hash
+	field cuhd_receipt_no
+	field cuhd_index_date
+	field cuhd_cheque_no
+	field cuhd_or_no
+	field cuhd_type
+	field cuhd_bank_id
+	field cuhd_bank_amt
+	field cuhd_bank_exch
+	field cuhd_bank_lcl_exch
+	field cuhd_bank_chg
+	field cuhd_rec_type
+	field cuhd_alt_drawer
+	field cuhd_due_date
+	field cuhd_present_date
+	field cuhd_hhcp_hash
+	field cuhd_narrative
+	field cuhd_date_payment
+	field cuhd_date_posted
+	field cuhd_tot_amt_paid
+	field cuhd_loc_amt_paid
+	field cuhd_disc_given
+	field cuhd_loc_disc_give
+	field cuhd_exch_variance
+	field cuhd_lodge_flag
+	field cuhd_clear_fee
+	field cuhd_db_bank
+	field cuhd_db_branch
+	field cuhd_dishonoured
+	field cuhd_stat_flag
+end
+
+table cudt
+	field cudt_hhcp_hash
+	field cudt_hhci_hash
+	field cudt_amt_paid_inv
+	field cudt_loc_paid_inv
+	field cudt_exch_variatio
+	field cudt_exch_rate
+	field cudt_stat_flag
+end
+
+table cuch
+	field cuch_co_no
+	field cuch_hhcu_hash
+	field cuch_letter_no
+	field cuch_hhch_hash
+	field cuch_curr_code
+	field cuch_bank_id
+	field cuch_create_date
+	field cuch_expiry_date
+	field cuch_limit
+	field cuch_stat_flag
+end
+
+table cucd
+	field cucd_hhch_hash
+	field cucd_rec_date
+	field cucd_hhcp_hash
+	field cucd_amount
+	field cucd_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_dflt_bank
+	field esmr_dbt_date
+	field esmr_stat_flag
+end
+
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_bank_name
+	field crbk_branch_name
+	field crbk_acct_name
+	field crbk_curr_code
+	field crbk_clear_fee
+	field crbk_stat_flag
+end
+
+table bkcr
+	field bkcr_co_no
+	field bkcr_bank_id
+	field bkcr_curr_code
+	field bkcr_description
+	field bkcr_ex1_factor
+	field bkcr_ldate_up
+	field bkcr_stat_flag
+end
+
+table blhd
+	field blhd_co_no
+	field blhd_bank_id
+	field blhd_hhbl_hash
+	field blhd_nx_lodge_no
+	field blhd_stat_flag
+end
+
+table bldt
+	field bldt_hhbl_hash
+	field bldt_lodge_no
+	field bldt_rec_type
+	field bldt_lodge_date
+	field bldt_lodge_time
+	field bldt_hhcu_hash
+	field bldt_dbt_name
+	field bldt_bank_code
+	field bldt_branch_code
+	field bldt_hhcp_hash
+	field bldt_sundry_rec
+	field bldt_bank_chg
+	field bldt_amount
+	field bldt_chq_fees
+	field bldt_bk_lcl_exch
+	field bldt_due_date
+	field bldt_posted_gl
+	field bldt_presented
+	field bldt_reconcile
+	field bldt_stat_flag
+end
+
+table cuph
+	field cuph_hhcu_hash
+	field cuph_cheq_no
+	field cuph_amt_cheq
+	field cuph_date_cheq
+	field cuph_bank_code
+	field cuph_branch_code
+	field cuph_stat_flag
+end
+
+table fehr
+	field fehr_co_no
+	field fehr_cont_no
+	field fehr_hhfe_hash
+	field fehr_bank_id
+	field fehr_curr_code
+	field fehr_date_wef
+	field fehr_date_exp
+	field fehr_val_orig
+	field fehr_val_avail
+	field fehr_stat_flag
+	field fehr_exch_rate
+end
+
+table feln
+	field feln_hhfe_hash
+	field feln_index_by
+	field feln_index_hash
+	field feln_value
+end
+
+table fetr
+	field fetr_hhfe_hash
+	field fetr_index_by
+	field fetr_index_hash
+	field fetr_hhcp_hash
+	field fetr_value
+end
+
+table sach
+	field sach_sach_hash
+	field sach_hhcu_hash
+	field sach_hhci_hash
+	field sach_inv_amt
+	field sach_com_val
+end
+
+table sacl
+	field sacl_sach_hash
+	field sacl_hhcp_hash
+	field sacl_rec_amt
+	field sacl_rec_date
+	field sacl_com_amt
+	field sacl_status
+end
+

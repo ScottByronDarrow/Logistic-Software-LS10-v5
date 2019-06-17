@@ -1,0 +1,66 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pclt,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pclt)
+|  Schema Desc  : (Production Control Lots Trace File. )
+|----------------------------------------------------------------------
+| $Log: sch.pclt,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:02  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:38  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pclt	
+
+field	pclt_co_no					type	char	2
+field	pclt_br_no					type	char	2
+field	pclt_hhwo_hash				type	long		index	dups
+field	pclt_hhbr_hash				type	long
+field	pclt_lot_number				type	char	7
+field	pclt_issue_date				type	edate
+field	pclt_slot_no				type	char	7
+field	pclt_lot_location			type	char	10
+field	pclt_qty_used				type	float
+field	pclt_iss_uom				type	long
+
+field	pclt_id_no					type	composite
+		pclt_co_no,
+		pclt_br_no,
+		pclt_hhwo_hash,
+		pclt_hhbr_hash,
+		pclt_lot_number,
+		pclt_lot_location			index	dups
+
+field	pclt_id_no2					type	composite
+		pclt_co_no,
+		pclt_br_no,
+		pclt_hhwo_hash,
+		pclt_lot_number,
+		pclt_hhbr_hash,
+		pclt_lot_location			index	dups
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pclt_co_no			- Company Number
+	pclt_br_no			- Branch Number
+	pclt_hhwo_hash		- Link to works order master file (pcwo)
+	pclt_hhwh_hash		- Link to warehouse master file (incc)
+	pclt_hhbr_hash		- Link to item master file (inmr)
+	pclt_lot_number		- Lot number
+	pclt_issue_date		- Date item was issued from lot & location
+	pclt_slot_no		- Supplier lot number
+	pclt_lot_location	- Lot location
+	pclt_qty_used		- Quantity used for lot, in location (held in ISS UOM)
+	pclt_iss_uom		- UOM quantity was issued as
+}

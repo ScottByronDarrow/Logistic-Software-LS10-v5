@@ -1,0 +1,20 @@
+Telesales Report Menu (TSRP)
+ts_help
+Telesales Master Menu <a|tsales> (1,2)
+menu MENUSYS/ts_master.mdf
+Print Tele-sales Complaints <a|tsales> (1,1)
+ts_complaint~Telesales Complaints~C~
+Print Tele-sales Call Notes <a|tsales> (1,1)
+ts_complaint~Telesales Call Notes~L~
+Print Tele-sales Notes <a|tsales> (1,1)
+ts_complaint~Telesales Notes~N~
+Print Tele-sales Next Visit Notes <a|tsales> (1,2)
+ts_complaint~Telesales Next Visit Notes~V~
+Print Tele-sales Rep Sheet <a|tsales> (1,1)
+ts_ld_sheet~Telesales Rep Lead Sheet~
+((
+quadrant(21,6)
+quadrant(46,8)
+box(14,3,50,10)
+line(15,5,49)
+))

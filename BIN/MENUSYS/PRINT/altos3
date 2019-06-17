@@ -1,0 +1,22 @@
+#
+#  Termcap for Altos III terminal
+#
+altos3|alt3|a3|altos 3|Altos III:\
+	:EX=2:tf=:xn=:xf=:i1=:i2=:p0=:p2=:f1=:f2=:f3=:sn=:sf=:\
+	:dW#:\
+	:cd=\E[J:ce=\E[K:\
+	:cl=\E[;H\E[2J:SD=\E[;H\E[2J.:\
+	:dc=\E[P:dl=\E[M:\
+	:ho=\E[H:\
+	:ic=\E[@:\
+	:so=\E[7m:se=\E[0m:\
+	:us=\E[9p:ue=\E[0p:\
+	:bx=MLNKYYJOXWUVBPR :\
+	:rv=\E[7m:re=\E[0m:\
+	:cm=\E[%i%d;%dH:\
+	:go=\E(0:ge=\E(B:\
+	:fl=\E[7m:fe=\E[0m:\
+	:sW=\E[?3h:sN=\E[?3l:\
+	:cc=\E[>5h:cb=\E[>5l:\
+	:CM=\E[%i%d;%df:\
+	:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:

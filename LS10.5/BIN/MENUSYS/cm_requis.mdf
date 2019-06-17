@@ -1,0 +1,26 @@
+Contract Requisition Menu (CMRQ)
+psl_help
+Contract Management Master Menu. <a> (1,2)
+menu MENUSYS/cm_master.mdf
+Requisition Entry/Maintenance <a> (1,1)
+lp_chain~cm_req_inpt LPNO~
+Reprint Requisitions <a> (1,1)
+lp_chain~cm_reqrprt.i LPNO~
+Requisition Despatch Confirmation <a> (1,2)
+lp_chain~cm_des_conf PID LPNO~
+Requisition Delete <a> (1,2)
+lp_chain~cm_req_del LPNO~
+Requisition Forward Order Release <a> (1,1)
+cm_req_rel~F~
+Requisition Backorder Release <a> (1,1)
+cm_req_rel~B~
+Print Outstanding Requisitions <a> (1,2)
+cm_req_stat~Print Outstanding Contract Requisitions~
+Direct Stock Issue <a> (1,1)
+lp_chain~cm_stk_iss LPNO~
+((
+quadrant(16,6)
+quadrant(44,8)
+box(10,3,54,15)
+line(11,5,53)
+))

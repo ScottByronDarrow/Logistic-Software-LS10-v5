@@ -1,0 +1,28 @@
+Customer Discount Maintenance. (SUB)
+sk_cus_disc
+Stock New Pricing Menu. <a> (1,1)
+menu MENUSYS/sk_price.mdf
+Set Discounts By Customer and Item. <a> (1,1)
+sk_cus_disc~1~
+Set Discounts By Customer and Selling Group. <a> (1,1)
+sk_cus_disc~3~
+Set Discounts By Customer and Category. <a> (1,1)
+sk_cus_disc~2~
+Set Discounts By Customer Type and Item. <a> (1,1)
+sk_cus_disc~4~
+Set Discounts By Customer Type and Selling Group. <a> (1,1)
+sk_cus_disc~6~
+Set Discounts By Customer Type and Category. <a> (1,1)
+sk_cus_disc~5~
+Set Discounts By Price Type and Item. <a> (1,1)
+sk_cus_disc~7~
+Set Discounts By Price Type and Selling Group. <a> (1,1)
+sk_cus_disc~9~
+Set Discounts By Price Type and Category. <a> (1,1)
+sk_cus_disc~8~
+Set Standard Discount Rates. <a> (1,1)
+db_exdisinp~
+Print Discount Structures. <a> (1,1)
+so_disprn~
+((
+))

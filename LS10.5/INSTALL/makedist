@@ -1,0 +1,121 @@
+#!/bin/sh
+#
+#	$Source: /usr/LS10/REPOSITORY/LS10.5/INSTALL/makedist,v $
+#	$Revision: 4.2 $
+#
+#	This script makes a distribution tape for the current machine
+#
+#	$Log: makedist,v $
+#	Revision 4.2  2001/11/08 03:05:53  scott
+#	Updated from further testing
+#	
+#	Revision 4.1  2001/09/12 03:21:30  scott
+#	Updated from Scott machine - 12th Sep 2001
+#	
+#	Revision 4.0  2001/03/09 02:48:28  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 1.5  2001/02/01 06:06:14  scott
+#	Updated from more testing
+#	
+#	Revision 1.4  2001/01/18 00:33:27  scott
+#	Updated from testing.
+#	
+#	Revision 1.3  2001/01/17 08:21:04  scott
+#	Updated from testing
+#	
+#	Revision 1.2  2001/01/16 03:07:25  scott
+#	Add more samples
+#	
+#	Revision 1.1  2001/01/12 07:19:40  scott
+#	New install system
+#	
+#
+
+(cd bin/src/subst; make >/dev/null 2>&1)
+(cd bin/src/CheckForSU; make >/dev/null 2>&1)
+
+super=`./bin/CheckForSU 0`
+if [ ! "$super" = "TRUE" ]
+then
+	clear
+        echo "Sorry $LOGNAME only super-user can run $0"
+	sleep 3
+	exit
+fi
+
+clear
+. ./InstallShellVars
+
+WORKFILE=/tmp/makedist.$$
+
+grep '^[^ 	#]' $DISTINFO > $WORKFILE
+case $# in
+	0)	
+		echo "========================================================="
+		echo "Choose a Distribution to make :"
+		echo " "
+		cat $WORKFILE
+		echo " "
+		echo "========================================================="
+		echo "Distribution"
+		echo "------------"
+		read DIST
+		;;
+
+	1)
+		DIST=$1
+		;;
+
+	*)
+		echo Usage : $0 [distribution]
+		exit 1
+		;;
+esac
+
+if [ -n "$DIST" ] && grep "^${DIST}$" $WORKFILE > /dev/null
+then
+	:
+else
+	rm -f $WORKFILE
+	echo ABORTED : Bad distribution
+	exit 1
+fi
+
+#
+#	Handle support binaries
+#
+(cd bin; make >/dev/null 2>&1)
+
+#
+#	Make up list of stuff to go
+#
+clear
+echo "Generating file"
+ListDist $DIST > $WORKFILE
+
+echo "Log machine type"
+#
+#	Put in machine name in first line of $DISTRIB
+echo $MACHINE > $DISTRIB
+
+#
+#	Expand files singly for broken sh(1) [in particular SCO's]
+BreakWork ()
+{
+	while read ls_line
+	do
+		find $ls_line -type f -print | egrep -v "CVS|\.#" 
+	done
+}
+
+#
+#	Write to MANIFEST first (so that we have list of files)
+#
+echo "Cleaning files."
+bin/CleanSource
+echo "Processing data"
+( cd ..; BreakWork < $WORKFILE ) > $MANIFEST
+echo "Creating archive /tmp/${DIST}.cpio"
+( cd ..; cpio -ocB -O /tmp/${DIST}.cpio ) < MANIFEST
+#rm -f $WORKFILE

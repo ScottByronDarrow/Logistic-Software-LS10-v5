@@ -1,0 +1,10 @@
+RF MENU (RF)
+admin_help
+STOCK SCAN <a> (1,1)
+sk_rf_disp~
+STOCK TAKE <a> (1,1)
+sk_rf_stinp~
+Logout <a> (1,1)
+logout~
+((
+))

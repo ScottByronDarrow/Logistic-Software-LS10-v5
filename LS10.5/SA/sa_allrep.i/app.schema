@@ -1,0 +1,76 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/03/04 04:59:21 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/03/04 04:59:21  scott
+#	S/C 00791 - Sales Analysis; SAMR2-Sales Analysis (Budget); SAMR3-Sales Analysis (Normal) WINDOWS CLIENT (1) No delay in error display at fields 'Printer Number', 'Enter Lower Value, 'Enter Upper Value' CHAR-BASED / WINDOWS CLIENT (2) Range is not validated at fields 'Enter Lower Value, 'Enter Upper Value' SAMR8-Customer Two Year Analysis WINDOWS CLIENT (3) No delay in error display at fields 'Area No', 'Printer' SAMR10-Maintain Budgets WINDOWS CLIENT (4) No delay in error display in second screen, whether field is 'Salesman', 'Category', 'Area', or 'Class Type'
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_name
+	field ccmr_acronym
+end
+
+table cudp
+	field cudp_co_no
+	field cudp_br_no
+	field cudp_dp_no
+	field cudp_dp_name
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+	field exsf_stat_flag
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_stat_flag
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_stat_flag
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+

@@ -1,0 +1,214 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/03/05 05:44:20 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/03/05 05:44:20  scott
+#	S/C 00884 - Customer Services Enquiry; CHAR-BASED (1) The second time field Display Option is modified, the prompt 'Include archived invoices/credits [Y/N]?' does not clear. (screens A,B) WINDOWS CLIENT (2) When focus is at Display Option, value 'O' is displayed 's' while value 'C' is space. (screen C,D) (3) There is no description for Display Option whether value is 'O' or 'C' unlike in char-based. 'O' is Orders,Invoices while 'C' is Credits. (4) When F12 is pressed to process inquiry, the prompt 'Include archived invoices/credits [Y/N]?' will display even if it is not needed (this does not happen in char-based).
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_short
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_tax_code
+	field cumr_item_codes
+end
+
+table cuit
+	field cuit_hhcu_hash
+	field cuit_hhbr_hash
+	field cuit_item_no
+	field cuit_item_desc
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_sale_unit
+	field inmr_std_uom
+	field inmr_outer_size
+	field inmr_ex_code
+	field inmr_tax_amount
+	field inmr_stat_flag
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_committed
+	field incc_forward
+	field incc_closing_stock
+	field incc_stat_flag
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_dp_no
+	field sohr_order_no
+	field sohr_inv_no
+	field sohr_hhcu_hash
+	field sohr_hhso_hash
+	field sohr_cus_ord_ref
+	field sohr_dt_raised
+	field sohr_dt_required
+	field sohr_status
+end
+
+table soln
+	field soln_hhso_hash
+	field soln_line_no
+	field soln_hhbr_hash
+	field soln_hhcc_hash
+	field soln_hhum_hash
+	field soln_qty_order
+	field soln_qty_bord
+	field soln_cus_ord_ref
+	field soln_item_desc
+	field soln_due_date
+	field soln_status
+	field soln_stat_flag
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_dp_no
+	field cohr_inv_no
+	field cohr_app_inv_no
+	field cohr_hhcu_hash
+	field cohr_type
+	field cohr_cus_ord_ref
+	field cohr_cons_no
+	field cohr_carr_code
+	field cohr_carr_area
+	field cohr_no_cartons
+	field cohr_no_kgs
+	field cohr_hhso_hash
+	field cohr_hhco_hash
+	field cohr_date_raised
+	field cohr_date_required
+	field cohr_op_id
+	field cohr_status
+	field cohr_stat_flag
+end
+
+table arhr
+	field arhr_co_no
+	field arhr_br_no
+	field arhr_dp_no
+	field arhr_inv_no
+	field arhr_app_inv_no
+	field arhr_hhcu_hash
+	field arhr_type
+	field arhr_cus_ord_ref
+	field arhr_cons_no
+	field arhr_carr_code
+	field arhr_carr_area
+	field arhr_no_cartons
+	field arhr_no_kgs
+	field arhr_hhso_hash
+	field arhr_hhco_hash
+	field arhr_date_raised
+	field arhr_date_required
+	field arhr_op_id
+	field arhr_status
+	field arhr_stat_flag
+end
+
+table coln
+	field coln_hhco_hash
+	field coln_line_no
+	field coln_hhbr_hash
+	field coln_hhum_hash
+	field coln_incc_hash
+	field coln_crd_type
+	field coln_serial_no
+	field coln_q_order
+	field coln_q_backorder
+	field coln_cus_ord_ref
+	field coln_item_desc
+	field coln_due_date
+	field coln_status
+	field coln_stat_flag
+end
+
+table arln
+	field arln_hhco_hash
+	field arln_line_no
+	field arln_hhbr_hash
+	field arln_incc_hash
+	field arln_hhum_hash
+	field arln_crd_type
+	field arln_serial_no
+	field arln_q_order
+	field arln_q_backorder
+	field arln_cus_ord_ref
+	field arln_item_desc
+	field arln_due_date
+	field arln_status
+	field arln_stat_flag
+end
+
+table poln
+	field poln_hhbr_hash
+	field poln_hhcc_hash
+	field poln_qty_ord
+	field poln_qty_rec
+	field poln_hhso_hash
+	field poln_due_date
+end
+
+table cfhs
+	field cfhs_co_no
+	field cfhs_br_no
+	field cfhs_wh_no
+	field cfhs_ref_no
+	field cfhs_date
+	field cfhs_hhcu_hash
+	field cfhs_cons_no
+	field cfhs_carr_code
+	field cfhs_area_code
+	field cfhs_no_cartons
+	field cfhs_no_kgs
+	field cfhs_est_frt_cst
+	field cfhs_act_frt_cst
+	field cfhs_cumr_chg
+	field cfhs_stat_flag
+end
+

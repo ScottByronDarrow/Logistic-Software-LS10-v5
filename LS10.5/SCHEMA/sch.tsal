@@ -1,0 +1,43 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.tsal,v 5.0 2001/06/19 10:17:34 cha Exp $
+|  Schema Name  : (sch.tsal)
+|  Schema Desc  : (Tele-Sales lead Allocation file. )
+|----------------------------------------------------------------------
+| $Log: sch.tsal,v $
+| Revision 5.0  2001/06/19 10:17:34  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:36  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:54  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file tsal
+
+field	tsal_hhop_hash			type	long
+field	tsal_line_no			type	int
+field	tsal_hhcu_hash			type	long		index	dups
+field	tsal_hhlh_hash			type	long		index	dups
+
+field	tsal_id_no			type	composite 
+		tsal_hhop_hash,
+		tsal_line_no					index	primary
+
+field	tsal_id_no2			type	composite 
+		tsal_hhop_hash,
+		tsal_hhcu_hash					index
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	tsal_hhop_hash		-	Link To Operator Master (tmop)
+	tsal_line_no		-	Sequence line number.
+	tsal_hhcu_hash		-	Link To Debtor Master File   (cumr)
+	tsal_hhlh_hash		-	Link To Letter Header File   (tslh)
+}

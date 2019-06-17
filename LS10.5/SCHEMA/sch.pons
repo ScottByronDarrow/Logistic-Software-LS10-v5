@@ -1,0 +1,38 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pons,v 5.0 2001/06/19 10:17:23 cha Exp $
+|  Schema Name  : (sch.pons)
+|  Schema Desc  : (Purchase order non stock item description file. )
+|----------------------------------------------------------------------
+| $Log: sch.pons,v $
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:15  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pons
+
+field	pons_hhpl_hash			type	long
+field	pons_line_no			type	int
+field	pons_desc				type	char	40
+field	pons_id_no				type	composite
+			pons_hhpl_hash,
+			pons_line_no										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pons_hhpl_hash		-	Unique link to purchase order detail line. 
+								( poln_hhpl_hash = pons_hhpl_hash )
+	pons_line_no		-	Line number as more than one line could exists
+							for a purchase order.
+	pons_desc			-	Non stock line description.
+}

@@ -1,0 +1,30 @@
+Transport Management Menu. (SOTM)
+so_help
+Sales Master Menu. <a|acct> (1,2)
+menu MENUSYS/main_sale.mdf
+Manual Transport P/Slip Confirmation. <a> (1,1)
+so_des_conf~X~T~so_des_conf.s~LPNO~
+Auto.  Transport P/Slip Confirmation. <a> (1,2)
+so_ades_conf~X~T~LPNO~
+Allocate Packing Slips to vehicle. <a> (1,1)
+tr_manage~T~
+Print Allocated P/Slips. <a> (1,2)
+tr_delsheet~
+Print Load Order Manifest. <a> (1,2)
+tr_load_rpt~
+Delivery Confirmation. <a> (1,2)
+tr_del_conf~
+Maintain Vehicle Master. <a> (2,1)
+tr_vehimaint~
+Print Vehicle Master. <a> (2,2)
+tr_vehilist~
+Maintain Driver Master. <a> (2,1)
+tr_maint~
+Print Driver Master. <a> (2,1)
+tr_truck_list~
+((
+quadrant(6,6)
+quadrant(50,8)
+box(1,3,76,14)
+line(2,5,75)
+))

@@ -1,0 +1,47 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cucc,v 5.0 2001/06/19 10:17:10 cha Exp $
+|  Schema Name  : (sch.cucc)
+|  Schema Desc  : (Customer Credit Control Record. )
+|----------------------------------------------------------------------
+| $Log: sch.cucc,v $
+| Revision 5.0  2001/06/19 10:17:10  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:28  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:24  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cucc
+
+field	cucc_hhcu_hash			type	long		index	dups
+field	cucc_record_no			type	serial		index
+field	cucc_id_no				type	comp
+			cucc_hhcu_hash,
+			cucc_record_no							index
+field	cucc_con_person			type	char	20
+field	cucc_comment			type	char	80
+field	cucc_cont_date			type	edate
+field	cucc_hold_flag			type	char	1
+field	cucc_hold_ref			type	char	8
+field	cucc_id_no2				type	comp
+			cucc_hhcu_hash,
+			cucc_hold_ref							index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cucc_hhcu_hash		-	Link to Customer master file ( cumr )
+	cucc_record_no		-	Unique record number.
+	cucc_con_person		-	Contact Person.
+	cucc_comment		-	Comments.
+	cucc_cont_date		-	Contact Date.
+	cucc_hold_flag		-	Hold transaction flag.
+	cucc_hold_ref		-	Hold Invoice Ref.
+}

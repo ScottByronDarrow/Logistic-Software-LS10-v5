@@ -1,0 +1,19 @@
+OUTLET INVENTORY MONITORING MENU (SUB)
+main_help
+Stock Master Menu <a> (1,2)
+menu MENUSYS/sk_master.mdf
+Physical Count Outlet Inventory <a> (1,2)
+sk_inoi_stk~
+Maintain Outlet Inventory <a> (1,2)
+sk_inoi_inp~
+Display Outlet Inventory <a> (1,2)
+sk_inoi_dsp~
+((
+quadrant(23,6)
+box(15,3,45,9)
+line(16,5,43)
+HEADING_ON
+TRAILER_ON
+FAST_ON
+SUB_ON
+))

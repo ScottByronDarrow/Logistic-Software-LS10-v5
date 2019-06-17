@@ -1,0 +1,35 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/13 04:01:21 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/13 04:01:21  scott
+#	Updated to add app.schema
+#	Updated to clean program.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_dbt_date
+	field comm_crd_date
+	field comm_inv_date
+	field comm_payroll_date
+	field comm_gl_date
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_logname
+	field exsf_salesman
+	field exsf_com_type
+	field exsf_com_pc
+	field exsf_com_min
+	field exsf_stat_flag
+end
+

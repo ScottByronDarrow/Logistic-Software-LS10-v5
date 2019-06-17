@@ -1,0 +1,19 @@
+Games Menu (GAME)
+game_help
+Misc Menu. <a> (1,2)
+menu MENUSYS/main.mdf
+Software Engineering - (Snake Game). <a> (1,2)
+snakea~
+Software Engineering - (Robot Game). <a> (1,2)
+robot~
+Software Engineering - (Rogue Game). <a> (1,2)
+rogue~
+Software Engineering - (Lotto Game). <a> (1,2)
+lotto~
+((
+quadrant(24,6)
+box(18,3,42,11)
+comment(" W e l c o m e   t o ",26,16,1)
+comment(" S o f t w a r e  E n g i n e e r i n g   M e n u. ",9,18,1)
+line(19,5,41)
+))

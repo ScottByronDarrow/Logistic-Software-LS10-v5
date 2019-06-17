@@ -1,0 +1,57 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cbbt,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cbbt)
+|  Schema Desc  : (System Bank Transaction File. 				 )
+|----------------------------------------------------------------------
+| $Log: sch.cbbt,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:22  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cbbt
+
+field	cbbt_co_no			type	char	2
+field	cbbt_bank_id		type	char	5
+field	cbbt_tran_no		type	long
+field	cbbt_tran_date		type	edate
+field	cbbt_tran_desc		type	char	40
+field	cbbt_tran_type		type	char	1	
+field	cbbt_tran_amt		type	money		
+field	cbbt_stat_post		type 	char	1
+field	cbbt_reconciled		type 	char	1
+field	cbbt_select			type 	char	1
+field	cbbt_period		    type	edate	
+field	cbbt_id_no1         type    composite
+            cbbt_co_no,
+            cbbt_bank_id,
+            cbbt_tran_no                            index 
+field	cbbt_id_no2			type	composite
+            cbbt_co_no,
+			cbbt_bank_id,
+			cbbt_tran_date							index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cbbt_co_no			-	Company Number.
+	cbbt_bank_id		-	Bank Code.
+	cbbt_tran_no		-	Transaction Number.	
+	cbbt_tran_date		-	Transaction Date.
+	cbbt_tran_desc		-	Transaction Description.
+	cbbt_tran_type		-	Transaction Type.
+	cbbt_tran_amt		-	Transaction Amount.
+	cbbt_stat_post		-	Status
+	cbbt_select			-   Selection 	
+	cbbt_period		    -	 
+
+}

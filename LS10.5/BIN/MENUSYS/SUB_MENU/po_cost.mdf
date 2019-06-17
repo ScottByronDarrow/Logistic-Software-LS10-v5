@@ -1,0 +1,10 @@
+Purchase Order Costing (SUB)
+po_receipt
+Purchase Order Processing Menu. <a> (1,1)
+menu MENUSYS/po_process.mdf
+Input Final Costings for Normal Orders. <a> (1,1)
+lp_chain~po_rec_cst~po_costupd LPNO~gl_po_cons LPNO A C N~
+Input Final Costings for Quick Orders. <a> (1,1)
+lp_chain~po_qk_cost PID~po_qkcstupd LPNO~gl_po_cons LPNO A C N~cr_percalc PID~po_ictogl PID~gl_wupd_cr " 7" PID~cr_wicjnl LPNO PID I~gl_wdel_cr PID~
+((
+))

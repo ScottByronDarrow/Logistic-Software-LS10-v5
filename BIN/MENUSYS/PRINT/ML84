@@ -1,0 +1,7 @@
+#
+#  Printer Entry For ML84 printer.
+#
+ML84|Microline 84 printer|This is a printer entry:\
+	:TF=\014:XN=\037:XF=\034:I1=:I2=:\
+	:P0=\036:P2=\034:UN=\EC:UF=\ED:F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\EI:EX=2:

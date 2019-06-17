@@ -1,0 +1,45 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inad,v 5.0 2001/06/19 10:17:14 cha Exp $
+|  Schema Name  : (sch.inad)
+|  Schema Desc  : (Inventory Allocation Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.inad,v $
+| Revision 5.0  2001/06/19 10:17:14  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:46  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:28  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inad
+
+field	inad_hhah_hash			type	long
+field	inad_date_created		type	edate
+field	inad_hhwh_hash			type	long
+field	inad_lot_no			type	char	7
+field	inad_qty_alloc			type	float
+field	inad_id_no			type	comp
+		inad_hhah_hash,
+		inad_hhwh_hash,
+		inad_lot_no					index
+field	inad_id_no2			type	comp
+		inad_hhwh_hash,
+		inad_lot_no					index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inad_hhah_hash			Unique allocation number (System-wide)
+	inad_date_created		Date of last change (To this record)
+	inad_hhwh_hash			Link to incc record
+	inad_lot_no			Link to inbc record (With hhwh_hash)
+	inad_qty_alloc			Quantity actually allocated.
+}

@@ -1,0 +1,116 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:16:55 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:16:55  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:38:13  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.2  2000/12/12 00:58:26  scott
+#	Updated as field missing from app.schema
+#	
+#	Revision 3.1  2000/11/20 07:40:20  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#	Revision 3.0  2000/10/10 12:20:48  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/07/28 08:30:59  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table inex
+	field inex_hhbr_hash
+	field inex_line_no
+	field inex_desc
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_supercession
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_abc_code
+	field inmr_serial_item
+	field inmr_sale_unit
+	field inmr_std_uom
+	field inmr_dec_pt
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_location
+	field incc_closing_stock
+	field incc_stat_flag
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+end
+
+table insc
+	field insc_hhcc_hash
+	field insc_stake_code
+	field insc_start_date
+	field insc_start_time
+	field insc_page_no
+	field insc_description
+end
+
+table inwu
+	field inwu_hhwh_hash
+	field inwu_hhum_hash
+	field inwu_closing_stock
+end
+table inlo
+	field inlo_inlo_hash      
+	field inlo_hhwh_hash      
+	field inlo_hhum_hash      
+	field inlo_location       
+	field inlo_loc_type       
+	field inlo_lot_no       
+	field inlo_uom            
+	field inlo_cnv_fct        
+	field inlo_qty            
+end

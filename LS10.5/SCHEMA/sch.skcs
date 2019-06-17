@@ -1,0 +1,36 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.skcs,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.skcs)
+|  Schema Desc  : (Stock/Transport - Container Status File. )
+|----------------------------------------------------------------------
+| $Log: sch.skcs,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:24  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:47  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	skcs	
+
+field	skcs_co_no          type	char	2
+field	skcs_code           type	char	2
+field	skcs_desc           type	char	40
+field	skcs_id_no			type	composite
+			skcs_co_no,
+			skcs_code											index	
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		skcs_co_no          -	Company Number
+		skcs_code           -	Status Code
+		skcs_desc           -	Status Description
+}

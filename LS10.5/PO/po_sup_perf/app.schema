@@ -1,0 +1,54 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:12:21 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:12:21  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:33:33  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:29  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+end
+
+table suph
+	field suph_br_no
+	field suph_hhbr_hash
+	field suph_hhcc_hash
+	field suph_hhsu_hash
+	field suph_rec_date
+	field suph_due_date
+	field suph_ord_qty
+	field suph_rec_qty
+	field suph_status
+	field suph_ship_no
+	field suph_csm_no
+	field suph_grn_no
+	field suph_po_no
+end
+

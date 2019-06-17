@@ -1,0 +1,90 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.posh,v 5.1 2001/08/20 23:34:16 scott Exp $
+|  Schema Name  : (sch.posh)
+|  Schema Desc  : (Overseas Shipment Detail File. )
+|----------------------------------------------------------------------
+| $Log: sch.posh,v $
+| Revision 5.1  2001/08/20 23:34:16  scott
+| Updated for development related to bullet proofing
+|
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	posh
+
+field	posh_co_no          type	char 2
+field	posh_hhsh_hash      type	serial					index
+field	posh_ship_depart    type	date
+field	posh_ship_arrive    type	date
+field	posh_csm_no         type	char 12
+field	posh_curr_code      type	char 3
+field	posh_ex_rate        type	double
+field	posh_ship_method    type	char 1
+field	posh_vessel         type	char 20
+field	posh_v_comm1        type	char 60
+field	posh_v_comm2        type	char 60
+field	posh_s_comm1        type	char 60
+field	posh_s_comm2        type	char 60
+field	posh_r_comm1        type	char 60
+field	posh_r_comm2        type	char 60
+field	posh_port           type	char 20
+field	posh_destination    type	char 20
+field	posh_doc_rec        type	date
+field	posh_doc_agent      type	date
+field	posh_neg_bol        type	date
+field	posh_bol_no         type	char 12
+field	posh_costing_date   type	date
+field	posh_status         type	char 1
+field	posh_bucode         type	char 5
+field	posh_butype         type	char 3
+field	posh_csm_id         type	composite
+			posh_co_no,
+			posh_csm_no									index
+field	posh_id_no          type	composite
+			posh_co_no,
+			posh_hhsh_hash								index
+field	posh_id_no2         type	composite
+			posh_co_no,
+			posh_ship_arrive							index	dups
+field	posh_id_no3			type	composite
+			posh_co_no,
+			posh_vessel									index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	posh_co_no			-	Company number.
+	posh_hhsh_hash		-	Link to shipment header.(posh_hhsh_hash)
+	posh_ship_depart	-	Shipment departure date.
+	posh_ship_arrive	-	Shipment Arrival date.
+	posh_curr_code		-	Currency Code.
+	posh_ex_rate		-	Exchange rate.
+	posh_ship_method	-	Shipment Method.
+								A(ir) / S(ea) / L(and)
+	posh_vessel			-	Vessel.
+	posh_v_comm1		-	Vessel Comment #1
+	posh_v_comm2		-	Vessel Comment #2
+	posh_s_comm1		-	Shipment Departure Comment #1
+	posh_s_comm2		-	Shipment Departure Comment #2
+	posh_r_comm1		-	Shipment Receiving Comment #1
+	posh_r_comm2		-	Shipment Receiving Comment #2
+	posh_port			-	Port of origin.
+	posh_destination	-	Destination.
+	posh_doc_rec		-	Documents Received.
+	posh_doc_agent		-	Documents to Agent.
+	posh_neg_bol		-	Negotiable B.O.L.
+	posh_bol_no			-	B.O.L. number.
+	posh_costing_date	-	Costing Date 
+	posh_status			-	Status.
+}

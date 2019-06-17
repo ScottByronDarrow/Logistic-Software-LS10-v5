@@ -1,0 +1,296 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:18:11 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:18:11  scott
+#	Update - LS10.5
+#	
+#	Revision 4.0  2001/03/09 02:28:22  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:15:23  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:58:34  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/06/13 05:23:48  scott
+#	Added app.schema
+#	
+#
+#
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_lrp_ok
+	field ccmr_stat_flag
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_inv_date
+end
+
+table comr
+	field comr_co_no
+	field comr_contingency
+	field comr_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_inv_date
+end
+
+table ffpr
+	field ffpr_category
+	field ffpr_hhbr_hash
+	field ffpr_br_no
+	field ffpr_review_prd
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_stocking_unit
+	field incc_ff_method
+	field incc_first_stocked
+	field incc_wks_demand
+	field incc_safety_stock
+	field incc_on_order
+	field incc_committed
+	field incc_backorder
+	field incc_forward
+	field incc_closing_stock
+	field incc_stat_flag
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_part
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_fob_cost
+	field inis_lcost_date
+	field inis_duty
+	field inis_licence
+	field inis_sup_uom
+	field inis_pur_conv
+	field inis_min_order
+	field inis_norm_order
+	field inis_ord_multiple
+	field inis_pallet_size
+	field inis_lead_time
+	field inis_sea_time
+	field inis_air_time
+	field inis_lnd_time
+	field inis_dflt_lead
+	field inis_weight
+	field inis_volume
+	field inis_stat_flag
+end
+
+table inws
+	field inws_hhbr_hash
+	field inws_hhcf_hash
+	field inws_hhcc_hash
+	field inws_inws_hash
+	field inws_sup_priority
+	field inws_min_order
+	field inws_norm_order
+	field inws_ord_multiple
+	field inws_pallet_size
+	field inws_weight
+	field inws_volume
+	field inws_upft_pc
+	field inws_upft_amt
+	field inws_stat_flag
+end
+
+table inwd
+	field inwd_inws_hash
+	field inwd_hhcc_hash
+	field inwd_hhbr_hash
+	field inwd_hhcf_hash
+	field inwd_sup_priority
+	field inwd_km
+	field inwd_dflt_lead
+	field inwd_sea_time
+	field inwd_air_time
+	field inwd_lnd_time
+	field inwd_upft_pc
+	field inwd_upft_amt
+	field inwd_demand
+end
+
+table inld
+	field inld_hhis_hash
+	field inld_ord_date
+	field inld_sup_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_weight
+	field inmr_sellgrp
+	field inmr_buygrp
+	field inmr_min_quan
+	field inmr_max_quan
+	field inmr_safety_stock
+	field inmr_dec_pt
+	field inmr_stat_flag
+end
+
+table pocf
+	field pocf_co_no
+	field pocf_code
+	field pocf_description
+	field pocf_load_type
+	field pocf_freight_load
+	field pocf_lead_time
+	field pocf_last_update
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_ex1_factor
+	field pocr_stat_flag
+end
+
+table podt
+	field podt_co_no
+	field podt_code
+	field podt_duty_type
+	field podt_im_duty
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_ctry_code
+end
+
+table insp
+	field insp_hhsu_hash
+	field insp_hhbr_hash
+	field insp_qty_brk1
+	field insp_qty_brk2
+	field insp_qty_brk3
+	field insp_qty_brk4
+	field insp_qty_brk5
+	field insp_price1
+	field insp_price2
+	field insp_price3
+	field insp_price4
+	field insp_price5
+end
+
+table suds
+	field suds_hhsu_hash
+	field suds_buy_group
+	field suds_reg_pc
+	field suds_qty_brk1
+	field suds_qty_brk2
+	field suds_qty_brk3
+	field suds_qty_brk4
+	field suds_qty_brk5
+	field suds_qty_brk6
+	field suds_disca_pc1
+	field suds_disca_pc2
+	field suds_disca_pc3
+	field suds_disca_pc4
+	field suds_disca_pc5
+	field suds_disca_pc6
+	field suds_discb_pc1
+	field suds_discb_pc2
+	field suds_discb_pc3
+	field suds_discb_pc4
+	field suds_discb_pc5
+	field suds_discb_pc6
+	field suds_discc_pc1
+	field suds_discc_pc2
+	field suds_discc_pc3
+	field suds_discc_pc4
+	field suds_discc_pc5
+	field suds_discc_pc6
+	field suds_cumulative
+	field suds_anticipated
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_hhcf_hash
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table lrph
+	field lrph_hhwh_hash
+	field lrph_curr_sel
+	field lrph_prev_sel
+	field lrph_a_actual
+	field lrph_a_forecast
+	field lrph_a_wks_dem
+	field lrph_a_sqr_err
+	field lrph_a_pc_err
+	field lrph_b_actual
+	field lrph_b_forecast
+	field lrph_b_wks_dem
+	field lrph_b_sqr_err
+	field lrph_b_pc_err
+	field lrph_c_actual
+	field lrph_c_forecast
+	field lrph_c_wks_dem
+	field lrph_c_sqr_err
+	field lrph_c_pc_err
+	field lrph_d_actual
+	field lrph_d_forecast
+	field lrph_d_wks_dem
+	field lrph_d_sqr_err
+	field lrph_d_pc_err
+end
+

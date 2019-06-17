@@ -1,0 +1,20 @@
+MISCELLANEOUS ASSETS FILES MENU (SUB)
+ta_misc
+TRADE ASSETS MENU <a> (1,2)
+menu MENUSYS/ta_master.mdf
+Maintain Trade Assets Suppliers <a> (1,2)
+cr_sm_inpt~
+Maintain Trade Assets Specifications <a> (1,2)
+as_spec_inp~
+Maintain Trade Assets Types <a> (1,2)
+as_type_inp~
+Maintain Trade Assets Movement Types <a> (1,2)
+as_type_mov~
+Maintain Trade Assets Brands <a> (1,2)
+as_brnd_inp~
+Maintain Trade Assets Status <a> (1,2)
+as_stat_inp~
+Maintain Trade Assets Service Types <a> (1,2)
+as_srty_inp~
+((
+))

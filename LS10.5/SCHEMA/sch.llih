@@ -1,0 +1,53 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.llih,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.llih)
+|  Schema Desc  : (System Lot/location Invoice History)
+|----------------------------------------------------------------------
+| $Log: sch.llih,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:59  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:34  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	llih
+
+field	llih_hhcl_hash			type	long			index	dups
+field	llih_hhcu_hash			type	long		
+field	llih_hhbr_hash			type	long			
+field	llih_inv_no				type	char	8
+field	llih_des_date			type	edate
+field	llih_lot_no				type	char	7
+field	llih_slot_no			type	char	7
+field	llih_expiry_date		type	edate
+field	llih_uom				type	char	4
+field	llih_qty				type	float
+field	llih_id_no				type	composite
+			llih_hhcu_hash,
+			llih_inv_no,
+			llih_des_date								index	dups
+field	llih_id_no2				type	composite
+			llih_hhbr_hash,
+			llih_des_date								index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		llih_hhcl_hash			-	Link to invoice line
+		llih_hhcu_hash			-	Link to customer (cumr_hhcu_hash)
+		llih_inv_no				-	Invoice Number.
+		llih_des_date			-	Despatch date
+		llih_lot_no				-	Lot Number
+		llih_slot_no			-	Supplier Lot Number
+		llih_expiry_date		-	Expiry Date
+		llih_uom				-	UOM
+		llih_qty				-	Quantity
+}

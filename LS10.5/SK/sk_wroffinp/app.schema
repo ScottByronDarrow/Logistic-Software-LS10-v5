@@ -1,0 +1,139 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:45 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:45  scott
+#	Update - LS10.5
+#	
+#	Revision 4.1  2001/05/04 01:33:48  scott
+#	Updated to add incf_gr_number as required by standard function
+#	
+#	Revision 4.0  2001/03/09 02:39:38  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/11/20 07:24:40  scott
+#	New features related to 3PL environment
+#	New features related to Number Plates
+#	All covered in release 3 notes
+#	
+#
+#
+
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:45 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:45  scott
+#	Update - LS10.5
+#	
+#
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_co_short        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_est_short       
+	field comm_cc_no         
+	field comm_cc_name       
+	field comm_cc_short       
+	field comm_gl_date        
+	field comm_inv_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+end
+
+table exwo
+	field exwo_co_no
+	field exwo_code
+	field exwo_description
+	field exwo_hhmr_hash
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_first_stocked
+	field incc_stocking_unit
+	field incc_location
+	field incc_opening_stock
+	field incc_receipts
+	field incc_pur
+	field incc_issues
+	field incc_adj
+	field incc_sales
+	field incc_closing_stock
+	field incc_ytd_receipts
+	field incc_ytd_pur
+	field incc_ytd_issues
+	field incc_stat_flag
+	field incc_os_date
+	field incc_os_ldate
+end
+
+table inwu
+	field inwu_hhwh_hash
+	field inwu_hhum_hash
+	field inwu_opening_stock
+	field inwu_receipts
+	field inwu_pur
+	field inwu_issues
+	field inwu_adj
+	field inwu_sales
+	field inwu_closing_stock
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_std_uom
+	field inmr_sale_unit
+	field inmr_dec_pt
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_ex_code
+end
+
+table inwo
+	field inwo_hhwo_hash
+	field inwo_code
+	field inwo_hhcc_hash
+	field inwo_hhbr_hash
+	field inwo_narrative
+	field inwo_date
+	field inwo_hhmr_hash
+	field inwo_quantity
+	field inwo_cost_price
+	field inwo_sale_price
+	field inwo_stat_flag
+end
+

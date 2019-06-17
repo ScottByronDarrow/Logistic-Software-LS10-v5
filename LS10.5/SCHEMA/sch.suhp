@@ -1,0 +1,77 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.suhp,v 5.1 2001/08/07 00:07:43 scott Exp $
+|  Schema Name  : (sch.suhp)
+|  Schema Desc  : (Creditors Held Payments - Header File. )
+|----------------------------------------------------------------------
+| $Log: sch.suhp,v $
+| Revision 5.1  2001/08/07 00:07:43  scott
+| RELEASE 5.0
+|
+| Revision 5.0  2001/06/19 10:17:32  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:29  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:49  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	suhp
+
+field	suhp_co_no			type	char	2		index	dups
+field	suhp_hhsq_hash		type	serial			index
+field	suhp_cheq_no		type	char	15		index	dups
+field	suhp_hhsp_hash		type	long			index	dups
+field	suhp_payee_name		type	char	40
+field	suhp_payee_acr		type	char	9		index	dups
+field	suhp_narrative		type	char	20
+field	suhp_date_payment	type	edate
+field	suhp_date_post		type	edate
+field	suhp_tot_amt_paid	type	money
+field	suhp_loc_amt_paid	type	money
+field	suhp_disc_taken		type	money
+field	suhp_loc_disc_take	type	money
+field	suhp_bank_id		type	char	5
+field	suhp_pay_type		type	char	1
+field	suhp_stat_flag		type	char	1
+field	suhp_presented		type	char	1
+field	suhp_id_no			type	composite
+			suhp_co_no,
+			suhp_cheq_no							index	dups
+field	suhp_id_no2			type	composite
+			suhp_co_no,
+			suhp_bank_id,							
+			suhp_cheq_no							index	
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	suhp_co_no		-	Company Number.
+	suhp_hhsq_hash		-	Link to suht.
+	suhp_cheq_no		-	Cheque Number.
+	suhp_hhsp_hash		-	Link to suhd
+	suhp_payee_name		-	Payee name.
+	suhp_payee_acr		-	Payee acronym.
+	suhp_narrative		-	Narrative.
+	suhp_date_payment	-	Date of payment.
+	suhp_date_post		-	Date of posted.
+	suhp_tot_amt_paid	-	Amount of Cheque O/S Currency.
+	suhp_loc_amt_paid	-	Amount of Cheque LOC Currency.
+	suhp_disc_taken		-	Amount of Discount O/S Currency.
+	suhp_loc_disc_taken	-	Amount of Discount LOC Currency.
+	suhp_bank_id		-	Bank ID.
+	suhp_pay_type		-	Pay Type.
+					   1 = Manual Cheques.
+	                   		   2 = Draft Cheques.
+	                   		   3 = Deposit Cheques.
+	                   		   4 = Deposit Drafts.
+	                   		   5 = Sundry Cheques.
+	                   		   6 = Computer Cheques.
+	suhp_stat_flag		-	Spare Status flag.
+	suhp_presented		-	Cheque Presented. Y(es) / N(o)
+}

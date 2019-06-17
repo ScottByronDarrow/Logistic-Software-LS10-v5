@@ -1,0 +1,30 @@
+Purchase Order Status Menu (POST)
+po_status
+Purchase Order Master Menu. <a> (1,2)
+menu MENUSYS/po_master.mdf
+Enter/Maintain Overdue P/O Information <a> (1,1)
+po_oduemnt~
+Print Overdue P/O Lines for Supplier <a> (1,2)
+lp_chain~po_odueprt LPNO~
+Print Purchase Order(s) 16 Week Projection. <a> (1,1)
+po_select.i~po_16wkprt~P/O 16 Week Projection~
+Print Purchase Order(s) Late List. <a> (1,1)
+po_select.i~po_lstprt~P/O Late List~
+Print Purchase Receipt Report by Location. <a> (1,1)
+po_locprn~L~
+Print Purchase Receipt Report by Item. <a> (1,1)
+po_locprn~I~
+Print Purchase Receipt Report by PO. <a> (1,1)
+po_locprn~P~
+Print Purchase Order Completion Status. <a> (1,1)
+BACK~po_comprt~LPNO~
+Print Shipping Schedule. <a> (1,1)
+po_shipschd~Shipping Schedule~
+Print Cash Commitments. <a> (1,1)
+po_cashprt~LPNO~
+((
+quadrant(20,6)
+quadrant(48,8)
+box(14,3,50,15)
+line(15,5,49)
+))

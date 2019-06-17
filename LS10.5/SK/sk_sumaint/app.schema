@@ -1,0 +1,175 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:19:36 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:19:36  scott
+#	Update - LS10.5
+#	
+#	Revision 4.0  2001/03/09 02:39:12  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/01/30 09:47:51  scott
+#	Updated to use app.schema
+#	
+#
+#
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_hhlo_hash
+	field ccmr_master_wh
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_type
+	field ccmr_sal_ok
+	field ccmr_pur_ok
+	field ccmr_issues_ok
+	field ccmr_receipts
+	field ccmr_reports_ok
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_inv_date
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_hhis_hash
+end
+
+table inis
+	field inis_co_no
+	field inis_br_no
+	field inis_wh_no
+	field inis_hhbr_hash
+	field inis_hhsu_hash
+	field inis_sup_part
+	field inis_sup_priority
+	field inis_hhis_hash
+	field inis_fob_cost
+	field inis_lcost_date
+	field inis_duty
+	field inis_licence
+	field inis_sup_uom
+	field inis_pur_conv
+	field inis_min_order
+	field inis_norm_order
+	field inis_ord_multiple
+	field inis_pallet_size
+	field inis_lead_time
+	field inis_sea_time
+	field inis_air_time
+	field inis_lnd_time
+	field inis_dflt_lead
+	field inis_weight
+	field inis_volume
+	field inis_stat_flag
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+	field inmr_std_uom
+	field inmr_duty
+	field inmr_licence
+	field inmr_outer_size
+	field inmr_dec_pt
+end
+
+table pocf
+	field pocf_co_no
+	field pocf_code
+	field pocf_description
+	field pocf_load_type
+	field pocf_freight_load
+	field pocf_lead_time
+	field pocf_last_update
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+	field pocr_ex2_factor
+	field pocr_ex3_factor
+	field pocr_ex4_factor
+	field pocr_ex5_factor
+	field pocr_ex6_factor
+	field pocr_ex7_factor
+	field pocr_ldate_up
+	field pocr_stat_flag
+end
+
+table podt
+	field podt_co_no
+	field podt_code
+	field podt_description
+end
+
+table polh
+	field polh_co_no
+	field polh_est_no
+	field polh_lic_cate
+	field polh_lic_no
+	field polh_type
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+	field sumr_ctry_code
+	field sumr_ship_method
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_lead_time
+end
+
+table inuv
+	field inuv_hhbr_hash
+	field inuv_hhum_hash
+	field inuv_volume
+end
+

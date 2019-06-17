@@ -1,0 +1,38 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:30 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:30  scott
+#	Update - LS10.5
+#	
+#
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table glaj
+	field glaj_co_no
+	field glaj_dbt_acc_no
+	field glaj_crd_acc_no
+	field glaj_type
+	field glaj_user_ref
+	field glaj_ef_frm
+	field glaj_ef_to
+	field glaj_date_appl
+	field glaj_orig_amt
+	field glaj_loc_amt
+	field glaj_exch_rate
+	field glaj_curr_code
+	field glaj_date_lproc
+	field glaj_stat_flag
+end
+

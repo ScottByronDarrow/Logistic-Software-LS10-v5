@@ -1,0 +1,712 @@
+arhr|Archive P-slip/ Invoice/Credit Header File|arhr_asm_hash|trhr_hhtr_hash|trhr|Transport Heder file|N|
+arhr|Archive P-slip/ Invoice/Credit Header File|arhr_chg_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+arhr|Archive P-slip/ Invoice/Credit Header File|arhr_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+arhr|Archive P-slip/ Invoice/Credit Header File|arhr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+arhr|Archive P-slip/ Invoice/Credit Header File|arhr_hhds_hash|ddsh_hhds_hash|ddsh|Direct Delivery Shipment File|N|
+arhr|Archive P-slip/ Invoice/Credit Header File|arhr_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|N|
+arhr|Archive P-slip/ Invoice/Credit Header File|arhr_hhtr_hash|trhr_hhtr_hash|trhr|Transport Heder file|N|
+arhr|Archive P-slip/ Invoice/Credit Header File|arhr_wrmr_hash|wrmr_wrmr_hash|wrmr|Warranty registration master file|N|
+arln|Customer Order/Invoice/Credit Detail File|arln_hhah_hash|inah_hhah_hash|inah|Inventory Allocation Header File|N|
+arln|Customer Order/Invoice/Credit Detail File|arln_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+arln|Customer Order/Invoice/Credit Detail File|arln_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+arln|Customer Order/Invoice/Credit Detail File|arln_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+arln|Customer Order/Invoice/Credit Detail File|arln_hhdl_hash|ddln_hhdl_hash|ddln|Direct Delivery Order Line File|N|
+arln|Customer Order/Invoice/Credit Detail File|arln_hhsl_hash|soln_hhsl_hash|soln|Sales Order Detail Lines File|N|
+arln|Customer Order/Invoice/Credit Detail File|arln_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+arln|Customer Order/Invoice/Credit Detail File|arln_incc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+asdt|Asset details file|asdt_hhar_hash|asmr_hhas_hash|asmr|Asset Master File.|N|
+asmr|Asset Master File.|asmr_hham_hash|asmv_hham_hash|asmv|Asset Movements file.|N|
+asmr|Asset Master File.|asmr_hhas_hash|asmr_hhas_hash|asmr|Asset Master File.|Y|
+asmr|Asset Master File.|asmr_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+asmv|Asset Movements file.|asmv_from_crdt|sumr_hhcu_hash|sumr|Creditors Master File|N|
+asmv|Asset Movements file.|asmv_from_hhcu|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+asmv|Asset Movements file.|asmv_hham_hash|asmv_hham_hash|asmv|Asset Movements file.|Y|
+asmv|Asset Movements file.|asmv_hhar_hash|asmr_hhas_hash|asmr|Asset Master File.|N|
+asmv|Asset Movements file.|asmv_to_crdt|sumr_hhcu_hash|sumr|Creditors Master File|N|
+asmv|Asset Movements file.|asmv_to_hhcu|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+bkct|System Backup Control File|bkct_hhct_hash|bkct_hhct_hash|bkct|System Backup Control File|Y|
+bkhs|System Backup History File|bkhs_hhct_hash|bkct_hhct_hash|bkct|System Backup Control File|N|
+bkmr|System Backup Master File|bkmr_hhct_hash|bkct_hhct_hash|bkct|System Backup Control File|N|
+bldt|Bank Lodgment Detail File|bldt_bldt_hash|bldt_bldt_hash|bldt|Bank Lodgment Detail File|Y|
+bldt|Bank Lodgment Detail File|bldt_hhbl_hash|blhd_hhbl_hash|blhd|Bank Lodgment Header File|N|
+bldt|Bank Lodgment Detail File|bldt_hhcp_hash|cuhd_hhcp_hash|cuhd|Debtors Payments Header File Record|N|
+bldt|Bank Lodgment Detail File|bldt_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+blhd|Bank Lodgment Header File|blhd_hhbl_hash|blhd_hhbl_hash|blhd|Bank Lodgment Header File|Y|
+bmin|BoM Material INstruction File|bmin_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+bmms|BoM Material Specification File|bmms_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+bmms|BoM Material Specification File|bmms_mabr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+ccmr|Cost Centre/Warehouse Master File Record|ccmr_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|Y|
+ccmr|Cost Centre/Warehouse Master File Record|ccmr_hhlo_hash|inlo_hhlo_hash|inlo|Inventory Location File|N|
+cfhr|Carrier file header record|cfhr_cfhh_hash|cfhr_cfhh_hash|cfhr|Carrier file header record|Y|
+cfhs|Carrier History file|cfhs_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cfln|Carrier file line item records|cfln_cfhh_hash|cfhr_cfhh_hash|cfhr|Carrier file header record|N|
+cmcb|Contract Management Costheads/Contract Budget|cmcb_hhcm_hash|cmcm_hhcm_hash|cmcm|Contract Management Costheads Master File|N|
+cmcb|Contract Management Costheads/Contract Budget|cmcb_hhhr_hash|cmhr_hhhr_hash|cmhr|Contract Management Header File|N|
+cmcd|Contract Management Contract Description File|cmcd_hhhr_hash|cmhr_hhhr_hash|cmhr|Contract Management Header File|N|
+cmcm|Contract Management Costheads Master File|cmcm_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+cmcm|Contract Management Costheads Master File|cmcm_hhcm_hash|cmcm_hhcm_hash|cmcm|Contract Management Costheads Master File|Y|
+cmcm|Contract Management Costheads Master File|cmcm_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+cmem|Contract Management Employee Master File|cmem_hhem_hash|cmem_hhem_hash|cmem|Contract Management Employee Master File|Y|
+cmem|Contract Management Employee Master File|cmem_hheq_hash|cmeq_hheq_hash|cmeq|Contract Management Equipment Master File|N|
+cmeq|Contract Management Equipment Master File|cmeq_hheq_hash|cmeq_hheq_hash|cmeq|Contract Management Equipment Master File|Y|
+cmeq|Contract Management Equipment Master File|cmeq_inum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+cmer|Contract Management Employee Rates Master File|cmer_hhcm_hash|cmcm_hhcm_hash|cmcm|Contract Management Costheads Master File|N|
+cmer|Contract Management Employee Rates Master File|cmer_hhem_hash|cmem_hhem_hash|cmem|Contract Management Employee Master File|N|
+cmer|Contract Management Employee Rates Master File|cmer_hhhr_hash|cmhr_hhhr_hash|cmhr|Contract Management Header File|N|
+cmhr|Contract Management Header File|cmhr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cmhr|Contract Management Header File|cmhr_hhhr_hash|cmhr_hhhr_hash|cmhr|Contract Management Header File|Y|
+cmhr|Contract Management Header File|cmhr_hhit_hash|cmit_hhit_hash|cmit|Contract Management Issue To Master File|N|
+cmhr|Contract Management Header File|cmhr_hhjt_hash|cmjt_hhjt_hash|cmjt|Contract Management Job type master file.|N|
+cmit|Contract Management Issue To Master File|cmit_hhem_hash|cmem_hhem_hash|cmem|Contract Management Employee Master File|N|
+cmit|Contract Management Issue To Master File|cmit_hhit_hash|cmit_hhit_hash|cmit|Contract Management Issue To Master File|Y|
+cmit|Contract Management Issue To Master File|cmit_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+cmjd|Contract Management Job Type Details File|cmjd_hhcm_hash|cmcm_hhcm_hash|cmcm|Contract Management Costheads Master File|N|
+cmjd|Contract Management Job Type Details File|cmjd_hhjt_hash|cmjt_hhjt_hash|cmjt|Contract Management Job type master file.|N|
+cmjt|Contract Management Job type master file.|cmjt_hhjt_hash|cmjt_hhjt_hash|cmjt|Contract Management Job type master file.|Y|
+cmpb|Contract Management Progress Billing File|cmpb_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+cmpb|Contract Management Progress Billing File|cmpb_hhhr_hash|cmhr_hhhr_hash|cmhr|Contract Management Header File|N|
+cmrd|Contract Management Requisition Detail File|cmrd_cmrd_hash|cmrd_cmrd_hash|cmrd|Contract Management Requisition Detail File|Y|
+cmrd|Contract Management Requisition Detail File|cmrd_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+cmrd|Contract Management Requisition Detail File|cmrd_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+cmrd|Contract Management Requisition Detail File|cmrd_hhcm_hash|cmcm_hhcm_hash|cmcm|Contract Management Costheads Master File|N|
+cmrd|Contract Management Requisition Detail File|cmrd_hhrq_hash|cmrh_hhrq_hash|cmrh|Contract Management Requisition Header|N|
+cmrd|Contract Management Requisition Detail File|cmrd_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+cmrh|Contract Management Requisition Header|cmrh_hhhr_hash|cmhr_hhhr_hash|cmhr|Contract Management Header File|N|
+cmrh|Contract Management Requisition Header|cmrh_hhrq_hash|cmrh_hhrq_hash|cmrh|Contract Management Requisition Header|Y|
+cmtr|Contract Management Transaction File|cmtr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+cmtr|Contract Management Transaction File|cmtr_hhcm_hash|cmcm_hhcm_hash|cmcm|Contract Management Costheads Master File|N|
+cmtr|Contract Management Transaction File|cmtr_hhhr_hash|cmhr_hhhr_hash|cmhr|Contract Management Header File|N|
+cmts|Contract Management Time Sheet Trans File|cmts_hhcm_hash|cmcm_hhcm_hash|cmcm|Contract Management Costheads Master File|N|
+cmts|Contract Management Time Sheet Trans File|cmts_hhem_hash|cmem_hhem_hash|cmem|Contract Management Employee Master File|N|
+cmts|Contract Management Time Sheet Trans File|cmts_hheq_hash|cmeq_hheq_hash|cmeq|Contract Management Equipment Master File|N|
+cmts|Contract Management Time Sheet Trans File|cmts_hhhr_hash|cmhr_hhhr_hash|cmhr|Contract Management Header File|N|
+cncd|Debtors Contract detail lines|cncd_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+cncd|Debtors Contract detail lines|cncd_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+cncd|Debtors Contract detail lines|cncd_hhch_hash|cuch_hhch_hash|cuch|Debtors Letter of Credit Header Record|N|
+cncd|Debtors Contract detail lines|cncd_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+cncd|Debtors Contract detail lines|cncd_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+cnch|Debtors Contract header file|cnch_hhch_hash|cuch_hhch_hash|cuch|Debtors Letter of Credit Header Record|Y|
+cncl|Debtors/Contract Link File|cncl_hhch_hash|cuch_hhch_hash|cuch|Debtors Letter of Credit Header Record|N|
+cncl|Debtors/Contract Link File|cncl_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cnre|Customer Contract Rebates Due File|cnre_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+cnre|Customer Contract Rebates Due File|cnre_hhch_hash|cuch_hhch_hash|cuch|Debtors Letter of Credit Header Record|N|
+cnre|Customer Contract Rebates Due File|cnre_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cnre|Customer Contract Rebates Due File|cnre_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+cohr|Customer P-slip/ Invoice/Credit Header File|cohr_asm_hash|trhr_hhtr_hash|trhr|Transport Heder file|N|
+cohr|Customer P-slip/ Invoice/Credit Header File|cohr_chg_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cohr|Customer P-slip/ Invoice/Credit Header File|cohr_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|Y|
+cohr|Customer P-slip/ Invoice/Credit Header File|cohr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cohr|Customer P-slip/ Invoice/Credit Header File|cohr_hhds_hash|ddsh_hhds_hash|ddsh|Direct Delivery Shipment File|N|
+cohr|Customer P-slip/ Invoice/Credit Header File|cohr_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|N|
+cohr|Customer P-slip/ Invoice/Credit Header File|cohr_hhtr_hash|trhr_hhtr_hash|trhr|Transport Heder file|N|
+cohr|Customer P-slip/ Invoice/Credit Header File|cohr_wrmr_hash|wrmr_wrmr_hash|wrmr|Warranty registration master file|N|
+coln|Customer Order/Invoice/Credit Detail File|coln_hhah_hash|inah_hhah_hash|inah|Inventory Allocation Header File|N|
+coln|Customer Order/Invoice/Credit Detail File|coln_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+coln|Customer Order/Invoice/Credit Detail File|coln_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|Y|
+coln|Customer Order/Invoice/Credit Detail File|coln_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+coln|Customer Order/Invoice/Credit Detail File|coln_hhdl_hash|ddln_hhdl_hash|ddln|Direct Delivery Order Line File|N|
+coln|Customer Order/Invoice/Credit Detail File|coln_hhsl_hash|soln_hhsl_hash|soln|Sales Order Detail Lines File|N|
+coln|Customer Order/Invoice/Credit Detail File|coln_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+coln|Customer Order/Invoice/Credit Detail File|coln_incc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+comr|Company Master File Base Record|comr_fin_susp|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+comr|Company Master File Base Record|comr_nfn_susp|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+comr|Company Master File Base Record|comr_pl_app_acc|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+crbk|Creditors Bank File|crbk_hhac_hash|crbk_hhac_hash|crbk|Creditors Bank File|Y|
+ctmdc|Cont. Manag. (retail) - Deductables - Sales Range|ctmdc_mhr_hash|ctmhr_mhr_hash|ctmhr|Cont. Manag. (retail) - Main Contract Header|N|
+ctmdf|Cont. Manag. (retail) - Fee Codes|ctmdf_mhr_hash|ctmhr_mhr_hash|ctmhr|Cont. Manag. (retail) - Main Contract Header|N|
+ctmff|Cont. Manag. (retail) - Floating Fees|ctmff_mhr_hash|ctmhr_mhr_hash|ctmhr|Cont. Manag. (retail) - Main Contract Header|N|
+ctmhr|Cont. Manag. (retail) - Main Contract Header|ctmhr_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+ctmhr|Cont. Manag. (retail) - Main Contract Header|ctmhr_mhr_hash|ctmhr_mhr_hash|ctmhr|Cont. Manag. (retail) - Main Contract Header|Y|
+cttdc|Cont. Manag. (retail) - Temporary Contract - deductables|cttdc_thr_hash|ctthr_thr_hash|ctthr|Cont. Manag. (retail) - Temporary Contract - Header|N|
+ctthr|Cont. Manag. (retail) - Temporary Contract - Header|ctthr_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+ctthr|Cont. Manag. (retail) - Temporary Contract - Header|ctthr_mhr_hash|ctmhr_mhr_hash|ctmhr|Cont. Manag. (retail) - Main Contract Header|N|
+ctthr|Cont. Manag. (retail) - Temporary Contract - Header|ctthr_thr_hash|ctthr_thr_hash|ctthr|Cont. Manag. (retail) - Temporary Contract - Header|Y|
+cttln|Cont. Manag. (retail) - Temporary Contract - Lines|cttln_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+cttln|Cont. Manag. (retail) - Temporary Contract - Lines|cttln_thr_hash|ctthr_thr_hash|ctthr|Cont. Manag. (retail) - Temporary Contract - Header|N|
+cucc|Customer Credit Control Record|cucc_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cucd|Debtors Letter of Credit Draw Off Record|cucd_hhch_hash|cuch_hhch_hash|cuch|Debtors Letter of Credit Header Record|N|
+cucd|Debtors Letter of Credit Draw Off Record|cucd_hhcp_hash|cuhd_hhcp_hash|cuhd|Debtors Payments Header File Record|N|
+cucf|Customer Contract file|cucf_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cuch|Debtors Letter of Credit Header Record|cuch_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cudi|Customer Delivery Address File|cudi_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cudt|Debtors Payments Detail Record|cudt_hhci_hash|cuin_hhci_hash|cuin|Debtors Invoice Accounting Invoice/Credit file|N|
+cudt|Debtors Payments Detail Record|cudt_hhcp_hash|cuhd_hhcp_hash|cuhd|Debtors Payments Header File Record|N|
+cudt|Debtors Payments Detail Record|cudt_hhdt_hash|cudt_hhdt_hash|cudt|Debtors Payments Detail Record|Y|
+cuhd|Debtors Payments Header File Record|cuhd_hhcp_hash|cuhd_hhcp_hash|cuhd|Debtors Payments Header File Record|Y|
+cuhd|Debtors Payments Header File Record|cuhd_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cuin|Debtors Invoice Accounting Invoice/Credit file|cuin_hhci_hash|cuin_hhci_hash|cuin|Debtors Invoice Accounting Invoice/Credit file|Y|
+cuin|Debtors Invoice Accounting Invoice/Credit file|cuin_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cuin|Debtors Invoice Accounting Invoice/Credit file|cuin_ho_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cuin|Debtors Invoice Accounting Invoice/Credit file|cuin_ord_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cuit|Customer Specific Inventory Item File|cuit_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+cuit|Customer Specific Inventory Item File|cuit_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cumr|Customer Master File Base Record|cumr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|Y|
+cumr|Customer Master File Base Record|cumr_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+cumr|Customer Master File Base Record|cumr_ho_dbt_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cuoc|Unknown|cuoc_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cuph|Customer Payment History file|cuph_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cura|Customers Rebate Assignment File|cura_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+curh|Customers Rebate History File|curh_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+curh|Customers Rebate History File|curh_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cusa|Customer 24 Month Sales Analysis Record|cusa_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cusc|Customer sales commission file|cusc_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+cusc|Customer sales commission file|cusc_hhsf_hash|exsf_hhsf_hash|exsf|External Salesman File|N|
+cusf|Customer Salesmen File|cusf_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+cush|Customer Sales history file|cush_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+dbld|Debtors Paragraph Detail File|dbld_dblh_hash|dblh_dblh_hash|dblh|Debtors Paragraph Header File|N|
+dblh|Debtors Paragraph Header File|dblh_dblh_hash|dblh_dblh_hash|dblh|Debtors Paragraph Header File|Y|
+dbpd|Letter Detail Lines|dbpd_dblh_hash|dblh_dblh_hash|dblh|Debtors Paragraph Header File|N|
+dbpd|Letter Detail Lines|dbpd_dbph_hash|dbph_dbph_hash|dbph|Letter Header File|N|
+dbph|Letter Header File|dbph_dbph_hash|dbph_dbph_hash|dbph|Letter Header File|Y|
+ddgd|Direct Delivery On-Cost Detail File|ddgd_hhds_hash|ddsh_hhds_hash|ddsh|Direct Delivery Shipment File|N|
+ddhr|Direct Delivery Order Header File|ddhr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+ddhr|Direct Delivery Order Header File|ddhr_hhdd_hash|ddhr_hhdd_hash|ddhr|Direct Delivery Order Header File|Y|
+ddln|Direct Delivery Order Line File|ddln_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+ddln|Direct Delivery Order Line File|ddln_hhdd_hash|ddhr_hhdd_hash|ddhr|Direct Delivery Order Header File|N|
+ddln|Direct Delivery Order Line File|ddln_hhdl_hash|ddln_hhdl_hash|ddln|Direct Delivery Order Line File|Y|
+ddln|Direct Delivery Order Line File|ddln_hhds_hash|ddsh_hhds_hash|ddsh|Direct Delivery Shipment File|N|
+ddln|Direct Delivery Order Line File|ddln_hhfe_hash|fehr_hhfe_hash|fehr|Forward Exchange Header file|N|
+ddln|Direct Delivery Order Line File|ddln_hhpl_hash|poln_hhpl_hash|poln|Purchase order detail lines|N|
+ddln|Direct Delivery Order Line File|ddln_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+ddsh|Direct Delivery Shipment File|ddsh_hhdd_hash|ddhr_hhdd_hash|ddhr|Direct Delivery Order Header File|N|
+ddsh|Direct Delivery Shipment File|ddsh_hhds_hash|ddsh_hhds_hash|ddsh|Direct Delivery Shipment File|Y|
+ddsh|Direct Delivery Shipment File|ddsh_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+excf|External Category File Record|excf_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|Y|
+exmd|Extenal marketing detail file|exmd_exmh_hash|exmh_exmh_hash|exmh|Extenal marketing header file|N|
+exmd|Extenal marketing detail file|exmd_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+exmd|Extenal marketing detail file|exmd_insc_hash|insc_insc_hash|insc|Inventory Stock Take Control File|N|
+exmh|Extenal marketing header file|exmh_exmh_hash|exmh_exmh_hash|exmh|Extenal marketing header file|Y|
+exmh|Extenal marketing header file|exmh_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+exmh|Extenal marketing header file|exmh_hhsf_hash|exsf_hhsf_hash|exsf|External Salesman File|N|
+exmm|External Merchandiser Master file|exmm_exmm_hash|exmm_exmm_hash|exmm|External Merchandiser Master file|Y|
+exsf|External Salesman File|exsf_hhsf_hash|exsf_hhsf_hash|exsf|External Salesman File|Y|
+exsf|External Salesman File|exsf_up_sman1|exsf_hhsf_hash|exsf|External Salesman File|N|
+exsf|External Salesman File|exsf_up_sman2|exsf_hhsf_hash|exsf|External Salesman File|N|
+exsf|External Salesman File|exsf_up_sman3|exsf_hhsf_hash|exsf|External Salesman File|N|
+exwo|External inventory Write-Off file|exwo_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+fagl|Fixed asset General Ledger work file|fagl_famr_hash|famr_famr_hash|famr|Fixed Assets Master Record|N|
+famr|Fixed Assets Master Record|famr_famr_hash|famr_famr_hash|famr|Fixed Assets Master Record|Y|
+fehr|Forward Exchange Header file|fehr_hhfe_hash|fehr_hhfe_hash|fehr|Forward Exchange Header file|Y|
+feln|Forward Exchange Assignment File|feln_hhfe_hash|fehr_hhfe_hash|fehr|Forward Exchange Header file|N|
+fetr|Forward Exchange Transaction File|fetr_hhcp_hash|cuhd_hhcp_hash|cuhd|Debtors Payments Header File Record|N|
+fetr|Forward Exchange Transaction File|fetr_hhfe_hash|fehr_hhfe_hash|fehr|Forward Exchange Header file|N|
+ffdm|Daily Demand History File|ffdm_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+ffdm|Daily Demand History File|ffdm_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+ffex|Focus forecasting exception file|ffex_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+ffex|Focus forecasting exception file|ffex_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+ffhs|Focus forecasting history file|ffhs_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+ffhs|Focus forecasting history file|ffhs_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+ffpr|Focus Forcasting Reorder Review Period file|ffpr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+ffwk|Focus Forecasting Work File|ffwk_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+ffwk|Focus Forecasting Work File|ffwk_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+ffwk|Focus Forecasting Work File|ffwk_hhit_hash|ithr_hhit_hash|ithr|Inventory Transfer Header File|N|
+ffwk|Focus Forecasting Work File|ffwk_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|N|
+ffwk|Focus Forecasting Work File|ffwk_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+ffwk|Focus Forecasting Work File|ffwk_hhwo_hash|inwo_hhwo_hash|inwo|Inventory Write-Off file|N|
+ffwk|Focus Forecasting Work File|ffwk_r_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+glbh|General Ledger batch control file header|glbh_hhbh_hash|glbh_hhbh_hash|glbh|General Ledger batch control file header|Y|
+glbl|General Ledger batch control line item file|glbl_hhbh_hash|glbh_hhbh_hash|glbh|General Ledger batch control file header|N|
+glbl|General Ledger batch control line item file|glbl_hhgl_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+glca|General ledger chart of accounts record|glca_hhca_hash|glca_hhca_hash|glca|General ledger chart of accounts record|Y|
+glid|General Ledger Interface Detail File|glid_hhih_hash|glih_hhih_hash|glih|General Ledger Interface Header File|N|
+glih|General Ledger Interface Header File|glih_hhih_hash|glih_hhih_hash|glih|General Ledger Interface Header File|Y|
+glmr|General Ledger Master FileAccount Header|glmr_hhca_hash|glca_hhca_hash|glca|General ledger chart of accounts record|N|
+glmr|General Ledger Master FileAccount Header|glmr_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|Y|
+glpd|General Ledger Period Balance file|glpd_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+glra|General Ledger Recovery Allocation|glra_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+glsd|General ledger Spread Table Detail|glsd_hhsh_hash|glsh_hhsh_hash|glsh|General ledger Spread Table Header|N|
+glsh|General ledger Spread Table Header|glsh_hhsh_hash|glsh_hhsh_hash|glsh|General ledger Spread Table Header|Y|
+glsj|General Ledger Standing Journals|glsj_hhbh_hash|glbh_hhbh_hash|glbh|General Ledger batch control file header|N|
+gltr|General Ledger Transaction File|gltr_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+glwk|General Ledger Transactions Work File|glwk_hhgl_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+glzh|General Ledger - Unknown - Not used|glzh_hhbh_hash|glbh_hhbh_hash|glbh|General Ledger batch control file header|Y|
+glzl|General Ledger - Unknown - Not used|glzl_hhbh_hash|glbh_hhbh_hash|glbh|General Ledger batch control file header|N|
+glzl|General Ledger - Unknown - Not used|glzl_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+inad|Inventory Allocation Detail File|inad_hhah_hash|inah_hhah_hash|inah|Inventory Allocation Header File|N|
+inad|Inventory Allocation Detail File|inad_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+inaf|Inventory Transactions Audit File|inaf_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inaf|Inventory Transactions Audit File|inaf_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+inaf|Inventory Transactions Audit File|inaf_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+inah|Inventory Allocation Header File|inah_hhah_hash|inah_hhah_hash|inah|Inventory Allocation Header File|Y|
+inal|Advertising Levy file|inal_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inbs|Inventory Supplier brand category relation file.|inbs_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+incc|Inventory Cost Centre|incc_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+incc|Inventory Cost Centre|incc_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+incc|Inventory Cost Centre|incc_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|Y|
+incf|Inventory cost fileFIFO, LIFO|incf_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|Y|
+incf|Inventory cost fileFIFO, LIFO|incf_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+incf|Inventory cost fileFIFO, LIFO|incf_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+incp|Inventory Contract Price File|incp_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+incp|Inventory Contract Price File|incp_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+incs|Inventory Compeditors Subsitute file|incs_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+incs|Inventory Compeditors Subsitute file|incs_incs_hash|incs_incs_hash|incs|Inventory Compeditors Subsitute file|Y|
+indd|Unknown|indd_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+indd|Unknown|indd_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+inds|Customer Discount Subranges File|inds_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inds|Customer Discount Subranges File|inds_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+inds|Customer Discount Subranges File|inds_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+inei|Inventory Establishment/Branch Stock File|inei_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inei|Inventory Establishment/Branch Stock File|inei_hhis_hash|inis_hhis_hash|inis|Stock Inventory Supplier Record|N|
+inem|Inventory Establishment/Branch Manufacturing|inem_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inex|Inventory EXtra description file|inex_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+infp|Inventory Furture price file update|infp_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+ingu|Global Price Update File|ingu_hhgu_hash|inpr_hhgu_hash|inpr|Inventory Price File|Y|
+inir|Inventory Issue/Receipt file record|inir_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+inis|Stock Inventory Supplier Record|inis_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inis|Stock Inventory Supplier Record|inis_hhis_hash|inis_hhis_hash|inis|Stock Inventory Supplier Record|Y|
+inis|Stock Inventory Supplier Record|inis_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+inla|Inventory Allocation Detail File|inla_cmrd_hash|cmrd_cmrd_hash|cmrd|Contract Management Requisition Detail File|N|
+inla|Inventory Allocation Detail File|inla_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+inla|Inventory Allocation Detail File|inla_hhsl_hash|soln_hhsl_hash|soln|Sales Order Detail Lines File|N|
+inla|Inventory Allocation Detail File|inla_inlo_hash|inlo_inlo_hash|inlo|Inventory Location File|N|
+inla|Inventory Allocation Detail File|inla_itff_hash|itln_itff_hash|itln|Inventory Transfer Detail File|N|
+inla|Inventory Allocation Detail File|inla_pcms_hash|pcms_pcms_hash|pcms|BoM Material Specification File|N|
+inld|Stock Inventory-supplier Lead Dates Record|inld_hhis_hash|inis_hhis_hash|inis|Stock Inventory Supplier Record|N|
+inlo|Inventory Location File|inlo_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+inlo|Inventory Location File|inlo_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+inlo|Inventory Location File|inlo_inlo_hash|inlo_inlo_hash|inlo|Inventory Location File|Y|
+inls|Inventory Lost Sales File|inls_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inls|Inventory Lost Sales File|inls_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+inls|Inventory Lost Sales File|inls_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+inmb|Inventory movements balance records|inmb_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inmb|Inventory movements balance records|inmb_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+inme|Inventory month end processing file|inme_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+inml|Invemtory movements log file.|inml_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+inmr|Inventory Master File Base Record|inmr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|Y|
+inmr|Inventory Master File Base Record|inmr_hhsi_hash|suin_hhsi_hash|suin|Creditors Invoice File|N|
+innd|Inventory Note Pad Detail Record|innd_hhnh_hash|innh_hhnh_hash|innh|Inventory Note Pad Header Record|N|
+innh|Inventory Note Pad Header Record|innh_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+innh|Inventory Note Pad Header Record|innh_hhnh_hash|innh_hhnh_hash|innh|Inventory Note Pad Header Record|Y|
+innh|Inventory Note Pad Header Record|innh_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+inoi|Outlet inventory file|inoi_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inoi|Outlet inventory file|inoi_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+inpb|Price Book File|inpb_hhpb_hash|inpb_hhpb_hash|inpb|Price Book File|Y|
+inpc|Price Book Column Headings File|inpc_hhpr_hash|inps_hhpr_hash|inps|Price Book Header File|N|
+inpd|Price Book Description File|inpd_hhpb_hash|inpb_hhpb_hash|inpb|Price Book File|N|
+inpd|Price Book Description File|inpd_hhph_hash|inph_hhph_hash|inph|Price Book Header File|N|
+inph|Price Book Header File|inph_hhph_hash|inph_hhph_hash|inph|Price Book Header File|Y|
+inpi|Price Book Index File|inpi_hhph_hash|inph_hhph_hash|inph|Price Book Header File|N|
+inpl|Price Book Detail File|inpl_hhbr_hash_1|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inpl|Price Book Detail File|inpl_hhbr_hash_2|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inpl|Price Book Detail File|inpl_hhbr_hash_3|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inpl|Price Book Detail File|inpl_hhbr_hash_4|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inpl|Price Book Detail File|inpl_hhbr_hash_5|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inpl|Price Book Detail File|inpl_hhbr_hash_6|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inpl|Price Book Detail File|inpl_hhbr_hash_7|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inpl|Price Book Detail File|inpl_hhpr_hash|inps_hhpr_hash|inps|Price Book Header File|N|
+inpr|Inventory Price File|inpr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inpr|Inventory Price File|inpr_hhgu_hash|inpr_hhgu_hash|inpr|Inventory Price File|N|
+inps|Price Book Header File|inps_hhph_hash|inph_hhph_hash|inph|Price Book Header File|N|
+inps|Price Book Header File|inps_hhpr_hash|inps_hhpr_hash|inps|Price Book Header File|Y|
+inpt|Price Book Title File|inpt_hhpr_hash|inps_hhpr_hash|inps|Price Book Header File|N|
+inrh|Reel History File for Reel Certificates|inrh_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inrh|Reel History File for Reel Certificates|inrh_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+inrh|Reel History File for Reel Certificates|inrh_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+insc|Inventory Stock Take Control File|insc_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+insf|Inventory Serial Number File|insf_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+insf|Inventory Serial Number File|insf_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+insf|Inventory Serial Number File|insf_hhsf_hash|exsf_hhsf_hash|exsf|External Salesman File|N|
+insf|Inventory Serial Number File|insf_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+insf|Inventory Serial Number File|insf_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+insl|System sort location file|insl_ccmr_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+insp|Inventory/Supplier Pricing By Qty|insp_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+insp|Inventory/Supplier Pricing By Qty|insp_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+intd|Inventory Tax Detail File|intd_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+intd|Inventory Tax Detail File|intd_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|N|
+intd|Inventory Tax Detail File|intd_hhth_hash|inth_hhth_hash|inth|Inventory Tax Header File|N|
+inth|Inventory Tax Header File|inth_hhth_hash|inth_hhth_hash|inth|Inventory Tax Header File|Y|
+intr|Inventory Transactions File|intr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+intr|Inventory Transactions File|intr_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+intr|Inventory Transactions File|intr_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+inum|Inventory Unit of Measure File|inum_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|Y|
+inuv|Items UOM/Volume master file|inuv_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inuv|Items UOM/Volume master file|inuv_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+inwd|Stock Inventory warehouse supply detail records|inwd_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inwd|Stock Inventory warehouse supply detail records|inwd_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+inwd|Stock Inventory warehouse supply detail records|inwd_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|N|
+inwd|Stock Inventory warehouse supply detail records|inwd_inws_hash|inws_inws_hash|inws|Inventory warehouse supply record|N|
+inwo|Inventory Write-Off file|inwo_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inwo|Inventory Write-Off file|inwo_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+inwo|Inventory Write-Off file|inwo_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+inwo|Inventory Write-Off file|inwo_hhwo_hash|inwo_hhwo_hash|inwo|Inventory Write-Off file|Y|
+inws|Inventory warehouse supply record|inws_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+inws|Inventory warehouse supply record|inws_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+inws|Inventory warehouse supply record|inws_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|N|
+inws|Inventory warehouse supply record|inws_inws_hash|inws_inws_hash|inws|Inventory warehouse supply record|Y|
+inwu|Inventory WH UOM file|inwu_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+inwu|Inventory WH UOM file|inwu_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+itff|Inventory Transfer Fifo/Lifo holding records|itff_itff_hash|itln_itff_hash|itln|Inventory Transfer Detail File|N|
+itgl|Inventory Transfer General Ledger work file|itgl_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+itgl|Inventory Transfer General Ledger work file|itgl_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+ithr|Inventory Transfer Header File|ithr_hhit_hash|ithr_hhit_hash|ithr|Inventory Transfer Header File|Y|
+ithr|Inventory Transfer Header File|ithr_hhtr_hash|trhr_hhtr_hash|trhr|Transport Heder file|N|
+itln|Inventory Transfer Detail File|itln_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+itln|Inventory Transfer Detail File|itln_hhit_hash|ithr_hhit_hash|ithr|Inventory Transfer Header File|N|
+itln|Inventory Transfer Detail File|itln_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+itln|Inventory Transfer Detail File|itln_i_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+itln|Inventory Transfer Detail File|itln_itff_hash|itln_itff_hash|itln|Inventory Transfer Detail File|Y|
+itln|Inventory Transfer Detail File|itln_r_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+itln|Inventory Transfer Detail File|itln_r_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+itlo|Inventory Location File for transfers|itlo_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+itlo|Inventory Location File for transfers|itlo_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+itlo|Inventory Location File for transfers|itlo_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+itlo|Inventory Location File for transfers|itlo_inlo_hash|inlo_inlo_hash|inlo|Inventory Location File|N|
+itlo|Inventory Location File for transfers|itlo_itff_hash|itln_itff_hash|itln|Inventory Transfer Detail File|N|
+iudi|Inventory user defined item allocation file|iudi_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+iudi|Inventory user defined item allocation file|iudi_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|N|
+llct|System Lot/location control file|llct_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+lomr|Location Master File|lomr_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+lrph|LRP-hostory file|lrph_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+mhdr|Machine History Detail Record File|mhdr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+mhdr|Machine History Detail Record File|mhdr_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+mhdr|Machine History Detail Record File|mhdr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+mnac|Menu System Access Description File|mnac_hhac_hash|mnac_hhac_hash|mnac|Menu System Access Description File|Y|
+mncd|Menu System Comment Details File|mncd_hhmn_hash|mnhr_hhmn_hash|mnhr|Menu System Menu Header File|N|
+mnhr|Menu System Menu Header File|mnhr_hhmn_hash|mnhr_hhmn_hash|mnhr|Menu System Menu Header File|Y|
+mnln|Menu System Menu Line File|mnln_hhln_hash|mnln_hhln_hash|mnln|Menu System Menu Line File|Y|
+mnln|Menu System Menu Line File|mnln_hhmn_hash|mnhr_hhmn_hash|mnhr|Menu System Menu Header File|N|
+mnsc|Menu System Security Link File|mnsc_hhac_hash|mnac_hhac_hash|mnac|Menu System Access Description File|N|
+mnsc|Menu System Security Link File|mnsc_hhln_hash|mnln_hhln_hash|mnln|Menu System Menu Line File|N|
+move|Inventory movements file|move_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+move|Inventory movements file|move_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+move|Inventory movements file|move_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+move|Inventory movements file|move_move_hash|move_move_hash|move|Inventory movements file|Y|
+pcat|Production Control Actual Times File|pcat_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+pcat|Production Control Actual Times File|pcat_hhrs_hash|rgrs_hhrs_hash|rgrs|Routing Resource Master file|N|
+pcat|Production Control Actual Times File|pcat_hhwc_hash|pcwc_hhwc_hash|pcwc|Work Centre Code file|N|
+pcat|Production Control Actual Times File|pcat_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pcbp|Routing By-Product File|pcbp_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pcbp|Routing By-Product File|pcbp_hhgr_hash|pogh_hhgr_hash|pogh|Goods received header file|N|
+pcbp|Routing By-Product File|pcbp_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pccl|Production Control CaLendars|pccl_hhrs_hash|rgrs_hhrs_hash|rgrs|Routing Resource Master file|N|
+pcgl|Production Control G/L Transactions File|pcgl_hhgl_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+pchs|Works Order History File|pchs_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pchs|Works Order History File|pchs_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pchw|Hazard Warning File|pchw_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pcid|Process Control Instruction Detail File|pcid_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pcid|Process Control Instruction Detail File|pcid_hhwc_hash|pcwc_hhwc_hash|pcwc|Work Centre Code file|N|
+pcli|Labour Item File|pcli_hhli_hash|pcli_hhli_hash|pcli|Labour Item File|Y|
+pcln|Routing Line detail File|pcln_hhgr_hash|pogh_hhgr_hash|pogh|Goods received header file|N|
+pcln|Routing Line detail File|pcln_hhrs_hash|rgrs_hhrs_hash|rgrs|Routing Resource Master file|N|
+pcln|Routing Line detail File|pcln_hhwc_hash|pcwc_hhwc_hash|pcwc|Work Centre Code file|N|
+pcln|Routing Line detail File|pcln_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pclt|Production Control Lots Trace File|pclt_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pclt|Production Control Lots Trace File|pclt_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pcms|BoM Material Specification File|pcms_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pcms|BoM Material Specification File|pcms_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pcms|BoM Material Specification File|pcms_mabr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pcms|BoM Material Specification File|pcms_pcms_hash|pcms_pcms_hash|pcms|BoM Material Specification File|Y|
+pcoi|Order Special Instruction Records|pcoi_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pcrq|Production Control Resource Queue|pcrq_hhrs_hash|rgrs_hhrs_hash|rgrs|Routing Resource Master file|N|
+pcrq|Production Control Resource Queue|pcrq_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pcsf|Production Control Serial Tracking File|pcsf_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pcwc|Work Centre Code file|pcwc_hhwc_hash|pcwc_hhwc_hash|pcwc|Work Centre Code file|Y|
+pcwl|Production Control Works order Link File|pcwl_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+pcwl|Production Control Works order Link File|pcwl_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+pcwo|Production Control Works Order File|pcwo_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pcwo|Production Control Works Order File|pcwo_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+pcwo|Production Control Works Order File|pcwo_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|Y|
+pmnd|Project Note Detail File|pmnd_hhnt_hash|pmnd_hhnt_hash|pmnd|Project Note Detail File|N|
+pocd|Letter of Credit Allocation Detail|pocd_hhsh_hash|posh_hhsh_hash|posh|Overseas Shipment Detail File|N|
+poch|Letter of Credit Detail File|poch_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+pogd|Goods Received Header Details File|pogd_hhgr_hash|pogh_hhgr_hash|pogh|Goods received header file|N|
+pogd|Goods Received Header Details File|pogd_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|N|
+pogd|Goods Received Header Details File|pogd_hhsh_hash|posh_hhsh_hash|posh|Overseas Shipment Detail File|N|
+pogd|Goods Received Header Details File|pogd_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+pogf|Purchase Order / General ledger Control File|pogf_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pogf|Purchase Order / General ledger Control File|pogf_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+pogh|Goods received header file|pogh_hhds_hash|ddsh_hhds_hash|ddsh|Direct Delivery Shipment File|N|
+pogh|Goods received header file|pogh_hhgr_hash|pogh_hhgr_hash|pogh|Goods received header file|Y|
+pogh|Goods received header file|pogh_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|N|
+pogh|Goods received header file|pogh_hhsh_hash|posh_hhsh_hash|posh|Overseas Shipment Detail File|N|
+pogh|Goods received header file|pogh_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+pogl|Goods received Line File|pogl_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pogl|Goods received Line File|pogl_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+pogl|Goods received Line File|pogl_hhgl_hash|pogl_hhgl_hash|pogl|Goods received Line File|Y|
+pogl|Goods received Line File|pogl_hhgr_hash|pogh_hhgr_hash|pogh|Goods received header file|N|
+pogl|Goods received Line File|pogl_hhlc_hash|polh_hhlc_hash|polh|Purchase order licence control|N|
+pogl|Goods received Line File|pogl_hhpl_hash|poln_hhpl_hash|poln|Purchase order detail lines|N|
+pogl|Goods received Line File|pogl_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+pohr|Purchase order header file|pohr_hhdd_hash|ddhr_hhdd_hash|ddhr|Direct Delivery Order Header File|N|
+pohr|Purchase order header file|pohr_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|Y|
+pohr|Purchase order header file|pohr_hhsh_hash|posh_hhsh_hash|posh|Overseas Shipment Detail File|N|
+pohr|Purchase order header file|pohr_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+pohs|Purchase Order HiStory file|pohs_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+pold|Purchase Order Licence Detail Maintenance|pold_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+pold|Purchase Order Licence Detail Maintenance|pold_hhlc_hash|polh_hhlc_hash|polh|Purchase order licence control|N|
+pold|Purchase Order Licence Detail Maintenance|pold_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|N|
+polh|Purchase order licence control|polh_hhlc_hash|polh_hhlc_hash|polh|Purchase order licence control|Y|
+poli|Purchase order line details file|poli_hhpl_hash|poln_hhpl_hash|poln|Purchase order detail lines|N|
+poln|Purchase order detail lines|poln_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+poln|Purchase order detail lines|poln_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+poln|Purchase order detail lines|poln_hhlc_hash|polh_hhlc_hash|polh|Purchase order licence control|N|
+poln|Purchase order detail lines|poln_hhpl_hash|poln_hhpl_hash|poln|Purchase order detail lines|Y|
+poln|Purchase order detail lines|poln_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|N|
+poln|Purchase order detail lines|poln_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|N|
+poln|Purchase order detail lines|poln_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+pons|Purchase order non stock item description file|pons_hhpl_hash|poln_hhpl_hash|poln|Purchase order detail lines|N|
+popc|Purchase order / Creditors interface|popc_hhgr_hash|pogh_hhgr_hash|pogh|Goods received header file|N|
+popc|Purchase order / Creditors interface|popc_hhpc_hash|popc_hhpc_hash|popc|Purchase order / Creditors interface|Y|
+popc|Purchase order / Creditors interface|popc_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|N|
+popc|Purchase order / Creditors interface|popc_hhsh_hash|posh_hhsh_hash|posh|Overseas Shipment Detail File|N|
+popc|Purchase order / Creditors interface|popc_hhsi_hash|suin_hhsi_hash|suin|Creditors Invoice File|N|
+popc|Purchase order / Creditors interface|popc_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+posd|Overseas Shipment Detail File|posd_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|N|
+posd|Overseas Shipment Detail File|posd_hhsh_hash|posh_hhsh_hash|posh|Overseas Shipment Detail File|N|
+posh|Overseas Shipment Detail File|posh_hhsh_hash|posh_hhsh_hash|posh|Overseas Shipment Detail File|Y|
+posl|Shipment Line Detail File|posl_hhpl_hash|poln_hhpl_hash|poln|Purchase order detail lines|N|
+posl|Shipment Line Detail File|posl_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|N|
+posl|Shipment Line Detail File|posl_hhsh_hash|posh_hhsh_hash|posh|Overseas Shipment Detail File|N|
+poso|Purchase order / Sales order linking file|poso_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+poso|Purchase order / Sales order linking file|poso_hhpl_hash|poln_hhpl_hash|poln|Purchase order detail lines|N|
+poso|Purchase order / Sales order linking file|poso_hhsl_hash|soln_hhsl_hash|soln|Sales Order Detail Lines File|N|
+poso|Purchase order / Sales order linking file|poso_itff_hash|itln_itff_hash|itln|Inventory Transfer Detail File|N|
+potb|Trading Bill Details|potb_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+potb|Trading Bill Details|potb_hhtb_hash|pobt_hhtb_hash|potb|Trading Bill Details|Y|
+powk|Purchase Order G/L Work file|powk_crd_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+powk|Purchase Order G/L Work file|powk_dbt_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+prmr|PayRoll employee Master file|prmr_hhmr_hash|prmr_hhmr_hash|prmr|PayRoll employee Master file|Y|
+prmr|PayRoll employee Master file|prmr_hhrs_hash|rgrs_hhrs_hash|rgrs|Routing Resource Master file|N|
+prvr|PayRoll Valid Resources file|prvr_hhmr_hash|prmr_hhmr_hash|prmr|PayRoll employee Master file|N|
+prvr|PayRoll Valid Resources file|prvr_hhrs_hash|rgrs_hhrs_hash|rgrs|Routing Resource Master file|N|
+psqm|Production Scheduling Q Modelling Control File|psqm_hhqm_hash|psqm_hhqm_hash|psqm|Production Scheduling Q Modelling Control File|Y|
+pstq|Production Scheduling Temporary Queue|pstq_hhqm_hash|psqm_hhqm_hash|psqm|Production Scheduling Q Modelling Control File|N|
+pstq|Production Scheduling Temporary Queue|pstq_hhrs_hash|rgrs_hhrs_hash|rgrs|Routing Resource Master file|N|
+pstq|Production Scheduling Temporary Queue|pstq_hhwo_hash|pcwo_hhwo_hash|pcwo|Production Control Works Order File|N|
+qasd|Quality Assurance Supplier Detail|qasd_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+qchr|Inventory QC Purchased Items Reveival File|qchr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+qchr|Inventory QC Purchased Items Reveival File|qchr_hhqc_hash|qchr_hhqc_hash|qchr|Inventory QC Purchased Items Reveival File|Y|
+qchr|Inventory QC Purchased Items Reveival File|qchr_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+qchr|Inventory QC Purchased Items Reveival File|qchr_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+qchr|Inventory QC Purchased Items Reveival File|qchr_inlo_hash|inlo_inlo_hash|inlo|Inventory Location File|N|
+qcln|Inventory QC Purchased Items Reveival File|qcln_hhqc_hash|qchr_hhqc_hash|qchr|Inventory QC Purchased Items Reveival File|N|
+qcln|Inventory QC Purchased Items Reveival File|qcln_inlo_hash|inlo_inlo_hash|inlo|Inventory Location File|N|
+qthr|Quotation header file|qthr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+qthr|Quotation header file|qthr_hhqt_hash|qthr_hhqt_hash|qthr|Quotation header file|Y|
+qtld|Quotation Paragraph Detail File|qtld_hhlh_hash|qtlh_hhlh_hash|qtlh|Quotation Paragraph Header File|N|
+qtlh|Quotation Paragraph Header File|qtlh_hhlh_hash|qtlh_hhlh_hash|qtlh|Quotation Paragraph Header File|Y|
+qtln|Quotation detail lines|qtln_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+qtln|Quotation detail lines|qtln_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+qtln|Quotation detail lines|qtln_hhqt_hash|qthr_hhqt_hash|qthr|Quotation header file|N|
+qtln|Quotation detail lines|qtln_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+qtlp|Quotation Letter Paragraph File|qtlp_hhlh_hash|qthl_hhlh_hash|qtlh|Quotation Paragraph Header File|N|
+qtlp|Quotation Letter Paragraph File|qtlp_hhqt_hash|qthr_hhqt_hash|qthr|Quotation header file|N|
+qtpd|Quotation System Prospect Detail File|qtpd_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+qtpd|Quotation System Prospect Detail File|qtpd_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+qtpd|Quotation System Prospect Detail File|qtpd_hhph_hash|qtph_hhph_hash|qtph|Quotation System Prospect Header File|N|
+qtph|Quotation System Prospect Header File|qtph_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+qtph|Quotation System Prospect Header File|qtph_hhph_hash|qtph_hhph_hash|qtph|Quotation System Prospect Header File|Y|
+rgbp|Routing By-Product File|rgbp_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+rgbp|Routing By-Product File|rgbp_hhgr_hash|rghr_hhgr_hash|rghr|Routing Header File|N|
+rghr|Routing Header File|rghr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+rghr|Routing Header File|rghr_hhgr_hash|rghr_hhgr_hash|rghr|Routing Header File|Y|
+rgln|Routing Line detail File|rgln_hhgr_hash|rghr_hhgr_hash|rghr|Routing Header File|N|
+rgln|Routing Line detail File|rgln_hhrs_hash|rgrs_hhrs_hash|rgrs|Routing Resource Master file|N|
+rgln|Routing Line detail File|rgln_hhwc_hash|pcwc_hhwc_hash|pcwc|Work Centre Code file|N|
+rgrs|Routing Resource Master file|rgrs_hhrs_hash|rgrs_hhrs_hash|rgrs|Routing Resource Master file|Y|
+ryhr|Royalty Header File Record|ryhr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+ryhr|Royalty Header File Record|ryhr_hhry_hash|ryhr_hhry_hash|ryhr|Royalty Header File Record|Y|
+ryhs|Royalty History File|ryhs_hhry_hash|ryhr_hhry_hash|ryhr|Royalty Header File Record|N|
+ryln|Royalty Header File Record|ryln_e_hhgl_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+ryln|Royalty Header File Record|ryln_hhry_hash|ryhr_hhry_hash|ryhr|Royalty Header File Record|N|
+ryln|Royalty Header File Record|ryln_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+ryln|Royalty Header File Record|ryln_t_hhgl_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+sabg|Sales / Budget file|sabg_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sacd|Sales call detail file|sacd_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sacd|Sales call detail file|sacd_sacm_hash|sacm_sacm_hash|sacm|Sales Call master file|N|
+sach|Sales commission header file.|sach_hhci_hash|cuin_hhci_hash|cuin|Debtors Invoice Accounting Invoice/Credit file|N|
+sach|Sales commission header file.|sach_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sach|Sales commission header file.|sach_hhsf_hash|exsf_hhsf_hash|exsf|External Salesman File|N|
+sach|Sales commission header file.|sach_hhsi_hash|suin_hhsi_hash|suin|Creditors Invoice File|N|
+sach|Sales commission header file.|sach_sach_hash|sach_sach_hash|sach|Sales commission header file.|Y|
+sacl|Sales Commission Detail lines|sacl_hhcp_hash|cuhd_hhcp_hash|cuhd|Debtors Payments Header File Record|N|
+sacl|Sales Commission Detail lines|sacl_sach_hash|sach_sach_hash|sach|Sales commission header file.|N|
+sacm|Sales Call master file|sacm_hhsf_hash|exsf_hhsf_hash|exsf|External Salesman File|N|
+sacm|Sales Call master file|sacm_sacm_hash|sacm_sacm_hash|sacm|Sales Call master file|Y|
+sadf|Sales Analysis Detail file By Item/Customer|sadf_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+sadf|Sales Analysis Detail file By Item/Customer|sadf_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+saed|Sales expense detail file|saed_saem_hash|saem_saem_hash|saem|Sales expense master file|N|
+saem|Sales expense master file|saem_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+saem|Sales expense master file|saem_hhsf_hash|exsf_hhsf_hash|exsf|External Salesman File|N|
+saem|Sales expense master file|saem_saem_hash|saem_saem_hash|saem|Sales expense master file|Y|
+sapc|Sales Analysis By Product/Customer|sapc_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+sapc|Sales Analysis By Product/Customer|sapc_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sjdc|Service Job Disbursement Cost|sjdc_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+sjhr|Service Job Header Record File|sjhr_chg_client|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sjhr|Service Job Header Record File|sjhr_end_client|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sjis|Service Job Invoice Summary File|sjis_chg_client|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sjis|Service Job Invoice Summary File|sjis_end_client|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sjsc|Service Job Service Cost Item File|sjsc_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+sknd|Goods receipts number plate lines|sknd_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+sknd|Goods receipts number plate lines|sknd_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+sknd|Goods receipts number plate lines|sknd_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+sknd|Goods receipts number plate lines|sknd_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sknd|Goods receipts number plate lines|sknd_hhpl_hash|poln_hhpl_hash|poln|Purchase order detail lines|N|
+sknd|Goods receipts number plate lines|sknd_hhsl_hash|soln_hhsl_hash|soln|Sales Order Detail Lines File|N|
+sknd|Goods receipts number plate lines|sknd_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+sknd|Goods receipts number plate lines|sknd_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+sknd|Goods receipts number plate lines|sknd_sknh_hash|sknh_sknh_hash|sknh|Goods receipts number plate header|N|
+sknh|Goods receipts number plate header|sknh_sknh_hash|sknh_sknh_hash|sknh|Goods receipts number plate header|Y|
+sohr|Sales Order Header File|sohr_chg_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sohr|Sales Order Header File|sohr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sohr|Sales Order Header File|sohr_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|Y|
+soic|Real-Time Item Committal File|soic_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+soic|Real-Time Item Committal File|soic_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+sokd|Phantom kit details for packing slips + invoices|sokd_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+sokt|Sales Order kitting file|sokt_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+sokt|Sales Order kitting file|sokt_mabr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+soln|Sales Order Detail Lines File|soln_hhah_hash|inah_hhah_hash|inah|Inventory Allocation Header File|N|
+soln|Sales Order Detail Lines File|soln_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+soln|Sales Order Detail Lines File|soln_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+soln|Sales Order Detail Lines File|soln_hhsl_hash|soln_hhsl_hash|soln|Sales Order Detail Lines File|Y|
+soln|Sales Order Detail Lines File|soln_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|N|
+soln|Sales Order Detail Lines File|soln_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+sons|Sales order non stock item description file|sons_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+sons|Sales order non stock item description file|sons_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+sons|Sales order non stock item description file|sons_hhsl_hash|soln_hhsl_hash|soln|Sales Order Detail Lines File|N|
+sons|Sales order non stock item description file|sons_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|N|
+sosa|Sales Order Analysis File|sosa_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+sosa|Sales Order Analysis File|sosa_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sosa|Sales Order Analysis File|sosa_hhsa_hash|sosa_hhsa_hash|sosa|Sales Order Analysis File|N|
+sosd|Sales Order Shipping Detail File|sosd_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+sosd|Sales Order Shipping Detail File|sosd_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|N|
+sosf|Sales order service file|sosf_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+sosf|Sales order service file|sosf_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+sosf|Sales order service file|sosf_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|N|
+sosu|Packing Slip Summary Picking Chart|sosu_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+srcr|SeaRch file for Creditor|srcr_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+srdb|SeaRch file for Debtors|srdb_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+srsk|SeaRch file for Stock|srsk_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+sttf|Stock Take Transaction File|sttf_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+sttf|Stock Take Transaction File|sttf_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+stts|Stock Take Transaction FileSerial Items|stts_hhwh_hash|incc_hhwh_hash|incc|Inventory Cost Centre|N|
+sucf|Supplier contract file|sucf_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+suds|Supplier Discount Price File|suds_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+sudt|Creditors Payments Detail File|sudt_hhsi_hash|suin_hhsi_hash|suin|Creditors Invoice File|N|
+sudt|Creditors Payments Detail File|sudt_hhsp_hash|suhd_hhsp_hash|suhd|Creditors Payments Header File|N|
+suhd|Creditors Payments Header File|suhd_hhsp_hash|suhd_hhsp_hash|suhd|Creditors Payments Header File|Y|
+suhd|Creditors Payments Header File|suhd_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+suhp|Creditors Held Payments Header File|suhp_hhsp_hash|suhd_hhsp_hash|suhd|Creditors Payments Header File|N|
+suhp|Creditors Held Payments Header File|suhp_hhsq_hash|suhp_hhsq_hash|suhp|Creditors Held Payments Header File|Y|
+suht|Creditors Held Payments Detail File|suht_hhsq_hash|suhp_hhsq_hash|suhp|Creditors Held Payments Header File|N|
+suid|Creditors Invoice / Credit Detail File|suid_hhgr_hash|pogh_hhgr_hash|pogh|Goods received header file|N|
+suid|Creditors Invoice / Credit Detail File|suid_hhpo_hash|pohr_hhpo_hash|pohr|Purchase order header file|N|
+suid|Creditors Invoice / Credit Detail File|suid_hhsh_hash|posh_hhsh_hash|posh|Overseas Shipment Detail File|N|
+suid|Creditors Invoice / Credit Detail File|suid_hhsi_hash|suin_hhsi_hash|suin|Creditors Invoice File|N|
+suin|Creditors Invoice File|suin_hhsi_hash|suin_hhsi_hash|suin|Creditors Invoice File|Y|
+suin|Creditors Invoice File|suin_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+sumr|Creditors Master File|sumr_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|Y|
+sunt|Supplier Notes File|sunt_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+suph|Stock Supplier Purchase history file|suph_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+suph|Stock Supplier Purchase history file|suph_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+suph|Stock Supplier Purchase history file|suph_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+suph|Stock Supplier Purchase history file|suph_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+sura|Suppliers Rebate Assignment File|sura_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+suwm|Creditors Merge Work File|suwm_crd_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+suwm|Creditors Merge Work File|suwm_dest_crd_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+tmah|Tele-Marketing lead Allocation header file|tmah_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|N|
+tmah|Tele-Marketing lead Allocation header file|tmah_hhla_hash|tmah_hhla_hash|tmah|Tele-Marketing lead Allocation header file|Y|
+tmah|Tele-Marketing lead Allocation header file|tmah_hhop_hash|tmop_hhop_hash|tmop|Tele-Marketing OPerator file|N|
+tmal|Tele-Marketing lead Allocation line file|tmal_hhla_hash|tmlh_hhla_hash|tmlh|Tele-Marketing Letter Header file|N|
+tmal|Tele-Marketing lead Allocation line file|tmal_hhpm_hash|tmpm_hhpm_hash|tmpm|Tele-Marketing Prospect Master file|N|
+tmcf|Tele-Marketing Campaign file|tmcf_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|Y|
+tmch|Tele-Marketing Call Header file|tmch_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|N|
+tmch|Tele-Marketing Call Header file|tmch_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+tmch|Tele-Marketing Call Header file|tmch_hhop_hash|tmop_hhop_hash|tmop|Tele-Marketing OPerator file|N|
+tmch|Tele-Marketing Call Header file|tmch_hhpm_hash|tmpm_hhpm_hash|tmpm|Tele-Marketing Prospect Master file|N|
+tmch|Tele-Marketing Call Header file|tmch_hhsh_hash|tmsh_hhsh_hash|tmsh|Tele-Marketing Script Header file|N|
+tmcl|Tele-Marketing Call line detail file|tmcl_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+tmcl|Tele-Marketing Call line detail file|tmcl_hhsh_hash|tmsh_hhsh_hash|tmsh|Tele-Marketing Script Header file|N|
+tmdf|Tele-Marketing Prospect Master file|tmdf_hhdf_hash|tmdf_hhdf_hash|tmdf|Tele-Marketing Prospect Master file|Y|
+tmdl|Tele-Marketing Default Detail File|tmdl_hhdf_hash|tmdf_hhdf_hash|tmdf|Tele-Marketing Prospect Master file|N|
+tmlh|Tele-Marketing Letter Header file|tmlh_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|N|
+tmlh|Tele-Marketing Letter Header file|tmlh_hhlh_hash|tmlh_hhlh_hash|tmlh|Tele-Marketing Letter Header file|Y|
+tmln|Telemarketing Letter Detail File|tmln_hhlh_hash|tmlh_hhlh_hash|tmlh|Tele-Marketing Letter Header file|N|
+tmoh|Tele-Marketing Operator Campaign History|tmoh_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|N|
+tmoh|Tele-Marketing Operator Campaign History|tmoh_hhop_hash|tmop_hhop_hash|tmop|Tele-Marketing OPerator file|N|
+tmop|Tele-Marketing OPerator file|tmop_hhop_hash|tmop_hhop_hash|tmop|Tele-Marketing OPerator file|Y|
+tmpm|Tele-Marketing Prospect Master file|tmpm_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+tmpm|Tele-Marketing Prospect Master file|tmpm_hhpm_hash|tmpm_hhpm_hash|tmpm|Tele-Marketing Prospect Master file|Y|
+tmrc|Telemarketing Response Criteria File|tmrc_hhcf_hash|incf_hhcf_hash|incf|Inventory cost fileFIFO, LIFO|N|
+tmrc|Telemarketing Response Criteria File|tmrc_hhlh_hash|tmlh_hhlh_hash|tmlh|Tele-Marketing Letter Header file|N|
+tmrc|Telemarketing Response Criteria File|tmrc_hhsh_hash|tmsh_hhsh_hash|tmsh|Tele-Marketing Script Header file|N|
+tmsh|Tele-Marketing Script Header file|tmsh_hhsh_hash|tmsh_hhsh_hash|tmsh|Tele-Marketing Script Header file|Y|
+tmsl|Tele-Marketing Script Line file|tmsl_hhsh_hash|tmsh_hhsh_hash|tmsh|Tele-Marketing Script Header file|N|
+tmxf|Tele-Marketing External detail file|tmxf_hhpm_hash|tmpm_hhpm_hash|tmpm|Tele-Marketing Prospect Master file|N|
+trcg|Transport cargo file|trcg_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+trcg|Transport cargo file|trcg_hhcl_hash|coln_hhcl_hash|coln|Customer Order/Invoice/Credit Detail File|N|
+trcg|Transport cargo file|trcg_itff_hash|itln_itff_hash|itln|Inventory Transfer Detail File|N|
+trcg|Transport cargo file|trcg_trln_hash|trln_hhln_hash|trln|Transpoer line detail file|N|
+trch|Transport carrier history file|trch_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+trcl|Transport carrier line file|trcl_trcm_hash|trcm_trcm_hash|trcm|Transport carrier master file|N|
+trcl|Transport carrier line file|trcl_trzm_hash|trzm_trzm_hash|trzm|Transport carrier zone maintenance|N|
+trcm|Transport carrier master file|trcm_trcm_hash|trcm_trcm_hash|trcm|Transport carrier master file|Y|
+trhr|Transport Heder file|trhr_hhtr_hash|trhr_hhtr_hash|trhr|Transport Heder file|Y|
+trhr|Transport Heder file|trhr_hhve_hash|trve_hhve_hash|trve|Transport vehicle file record|N|
+trln|Transpoer line detail file|trln_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+trln|Transpoer line detail file|trln_hhit_hash|ithr_hhit_hash|ithr|Inventory Transfer Header File|N|
+trln|Transpoer line detail file|trln_hhln_hash|trln_hhln_hash|trln|Transpoer line detail file|Y|
+trln|Transpoer line detail file|trln_hhtr_hash|trhr_hhtr_hash|trhr|Transport Heder file|N|
+trsh|Transport carrier schedule file|trsh_hhco_hash|cohr_hhco_hash|cohr|Customer P-slip/ Invoice/Credit Header File|N|
+trsh|Transport carrier schedule file|trsh_hhit_hash|ithr_hhit_hash|ithr|Inventory Transfer Header File|N|
+trsh|Transport carrier schedule file|trsh_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|N|
+trsh|Transport carrier schedule file|trsh_trzm_hash|trzm_trzm_hash|trzm|Transport carrier zone maintenance|N|
+trve|Transport vehicle file record|trve_hhmr_hash|glmr_hhmr_hash|glmr|General Ledger Master FileAccount Header|N|
+trve|Transport vehicle file record|trve_hhve_hash|trve_hhve_hash|trve|Transport vehicle file record|Y|
+trve|Transport vehicle file record|trve_trcm_hash|trcm_trcm_hash|trcm|Transport carrier master file|N|
+trzc|Transport carrier timeslot capacity file|trzc_trzm_hash|trzm_trzm_hash|trzm|Transport carrier zone maintenance|N|
+trzm|Transport carrier zone maintenance|trzm_trzm_hash|trzm_trzm_hash|trzm|Transport carrier zone maintenance|Y|
+tsal|Tele-Sales lead Allocation file|tsal_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+tsal|Tele-Sales lead Allocation file|tsal_hhlh_hash|tslh_hhlh_hash|tslh|Tele-Sales Letter Header file|N|
+tsal|Tele-Sales lead Allocation file|tsal_hhop_hash|tmop_hhop_hash|tmop|Tele-Marketing OPerator file|N|
+tsci|Telesales Complimentary Item File|tsci_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+tsci|Telesales Complimentary Item File|tsci_mabr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+tshs|Tele-Sales item History File|tshs_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+tshs|Tele-Sales item History File|tshs_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+tslb|Tele-Sales Letters Sent History file|tslb_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+tslb|Tele-Sales Letters Sent History file|tslb_hhlb_hash|tslb_hhlb_hash|tslb|Tele-Sales Letters Sent History file|Y|
+tslb|Tele-Sales Letters Sent History file|tslb_hhlh_hash|tslh_hhlh_hash|tslh|Tele-Sales Letter Header file|N|
+tslh|Tele-Sales Letter Header file|tslh_hhlh_hash|tslh_hhlh_hash|tslh|Tele-Sales Letter Header file|Y|
+tsln|Tele-Sales Letter Detail File|tsln_hhlh_hash|tslh_hhlh_hash|tslh|Tele-Sales Letter Header file|N|
+tsls|Tele-Sales Letters Sent History file|tsls_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+tsls|Tele-Sales Letters Sent History file|tsls_hhlh_hash|tslh_hhlh_hash|tslh|Tele-Sales Letter Header file|N|
+tspm|Tele-Sales Prospect Master file|tspm_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+tsxd|Tele-Sales External detail file|tsxd_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+udid|User defined inventory master file|udid_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+udid|User defined inventory master file|udid_udih_hash|udih_udih_hash|udih|User defined Inventory header file|N|
+udih|User defined Inventory header file|udih_udih_hash|udih_udih_hash|udih|User defined Inventory header file|Y|
+wajc|Warranty Job code|wajc_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+wasc|Warranty Supplier Claim|wasc_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+wasc|Warranty Supplier Claim|wasc_hhsu_hash|sumr_hhcu_hash|sumr|Creditors Master File|N|
+wasd|Warranty Service plan details|wasd_wash_hash|wash_wash_hash|wash|Warranty Service plan header|N|
+wash|Warranty Service plan header|wash_wash_hash|wash_wash_hash|wash|Warranty Service plan header|Y|
+wasi|Warranty Service plan interface|wasi_wash_hash|wash_wash_hash|wash|Warranty Service plan header|N|
+wath|Warranty type header|wath_wath_hash|wath_wath_hash|wath|Warranty type header|Y|
+wati|Warranty type interface|wati_wath_hash|wath_wath_hash|wath|Warranty type header|N|
+watj|Warranty type job code|watj_wath_hash|wath_wath_hash|wath|Warranty type header|N|
+weblog|Web order log file|cumr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+weblog|Web order log file|inmr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+webmails|Web order mail file|web_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+websohr|Web order header file|wsohr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+websohr|Web order header file|wsohr_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|Y|
+websoln|Web order detail file|wsoln_hhah_hash|inah_hhah_hash|inah|Inventory Allocation Header File|N|
+websoln|Web order detail file|wsoln_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+websoln|Web order detail file|wsoln_hhcc_hash|ccmr_hhcc_hash|ccmr|Cost Centre/Warehouse Master File Record|N|
+websoln|Web order detail file|wsoln_hhsl_hash|soln_hhsl_hash|soln|Sales Order Detail Lines File|Y|
+websoln|Web order detail file|wsoln_hhso_hash|sohr_hhso_hash|sohr|Sales Order Header File|N|
+websoln|Web order detail file|wsoln_hhum_hash|inum_hhum_hash|inum|Inventory Unit of Measure File|N|
+webusers|Web order users|web_cumr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+wrdn|Warranty registration dealer notes|wrdn_wrmr_hash|wrmr_wrmr_hash|wrmr|Warranty registration master file|N|
+wrex|Warranty exchange rate|wrex_wrex_hash|wrex_wrex_hash|wrex|Warranty exchange rate|Y|
+wrjc|Warranty job codes|wrjc_wrpc_hash|wrpc_wrpc_hash|wrpc|Warranty registration problem code|N|
+wrmr|Warranty registration master file|wrmr_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+wrmr|Warranty registration master file|wrmr_hhcu_hash|cumr_hhcu_hash|cumr|Customer Master File Base Record|N|
+wrmr|Warranty registration master file|wrmr_wrmr_hash|wrmr_wrmr_hash|wrmr|Warranty registration master file|Y|
+wrno|Warranty registration notes|wrno_wrmr_hash|wrmr_wrmr_hash|wrmr|Warranty registration master file|N|
+wrod|Warranty registration outwork details|wrod_wrmr_hash|wrmr_wrmr_hash|wrmr|Warranty registration master file|N|
+wrod|Warranty registration outwork details|wrod_wrod_hash|wrod_wrod_hash|wrod|Warranty registration outwork details|Y|
+wrpc|Warranty registration problem code|wrpc_wrmr_hash|wrmr_wrmr_hash|wrmr|Warranty registration master file|N|
+wrpc|Warranty registration problem code|wrpc_wrpc_hash|wrpc_wrpc_hash|wrpc|Warranty registration problem code|Y|
+wrpd|Warranty registration parts details|wrpd_hhbr_hash|inmr_hhbr_hash|inmr|Inventory Master File Base Record|N|
+wrpd|Warranty registration parts details|wrpd_wrmr_hash|wrmr_wrmr_hash|wrmr|Warranty registration master file|N|
+wrpd|Warranty registration parts details|wrpd_wrpd_hash|wrpd_wrpd_hash|wrpd|Warranty registration parts details|Y|

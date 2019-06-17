@@ -1,0 +1,57 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.inum,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.inum)
+|  Schema Desc  : (Inventory Unit of Measure File. )
+|----------------------------------------------------------------------
+| $Log: sch.inum,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.1  2001/03/28 09:49:11  scott
+| Updated as someone had made uom unique
+|
+| Revision 4.0  2001/03/09 01:00:58  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:33  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	inum
+
+field	inum_uom_group			type	char	20
+field	inum_hhum_hash			type	serial		index	primary
+field	inum_uom				type	char	4	index	dups
+field	inum_desc				type	char	40
+field	inum_cnv_fct			type	float
+field	inum_id_no2				type	comp
+			inum_uom_group,
+			inum_uom								index
+field	inum_id_no				type	comp
+			inum_uom_group,
+			inum_hhum_hash							index
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	inum_uom_group			- Group Classification Descripiton.   
+	inum_hhud_hash			- Unique hash of this record
+	inum_uom				- UOM as used within PSL. (eg: Km)
+	inum_desc				- Long description (eg: Kilometres)
+	inum_cnv_fct			- Conversion Factor (eg: 1000)
+
+Example of UOM conversion:
+	If an items alt UOM is milligrams (inum_cnv_fct = 0.001) and
+	the   items std UOM is kilograms  (inum_cnv_fct = 1000),
+	then, the items UOM conversion factor is:
+		(1000 / .001) = 1000000
+	The rule of thumb is that applications programs need to DIVIDE by
+	the conversion factor to convert foreign UOMs into std UOMs.
+	Conversely, they must MULTIPLY by the conversion factor to convert
+	std UOMs into foreign UOMs.
+}

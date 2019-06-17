@@ -1,0 +1,128 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:15:10 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:15:10  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:36:35  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/02/06 10:07:40  scott
+#	Updated to deal with length change in the following fields
+#	intr_ref1 from 10 to 15 characters
+#	intr_ref2 from 10 to 15 characters
+#	inaf_ref1 from 10 to 15 characters
+#	inaf_ref2 from 10 to 15 characters
+#	
+#	Revision 3.0  2000/10/10 12:19:49  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.1  2000/08/10 09:30:17  scott
+#	Added app.schema
+#	
+#
+#
+
+table bpro
+	field bpro_co_no
+	field bpro_br_no
+	field bpro_program
+	field bpro_hash
+	field bpro_pid
+end
+
+table inmu
+	field inmu_co_no
+	field inmu_br_no
+	field inmu_wh_no
+	field inmu_class
+	field inmu_category
+	field inmu_year
+	field inmu_period
+	field inmu_trin_dly
+	field inmu_trin_mty
+	field inmu_trin_qty
+	field inmu_trout_dly
+	field inmu_trout_mty
+	field inmu_trout_qty
+	field inmu_pur_dly
+	field inmu_pur_mty
+	field inmu_pur_qty
+	field inmu_sal_dly
+	field inmu_sal_mty
+	field inmu_sal_qty
+	field inmu_icst_dly
+	field inmu_icst_mty
+	field inmu_crd_dly
+	field inmu_crd_mty
+	field inmu_crd_qty
+	field inmu_ccst_dly
+	field inmu_ccst_mty
+	field inmu_stat_flag
+end
+
+table intr
+	field intr_co_no
+	field intr_br_no
+	field intr_hhbr_hash
+	field intr_hhcc_hash
+	field intr_hhum_hash
+	field intr_type
+	field intr_date
+	field intr_batch_no
+	field intr_ref1
+	field intr_ref2
+	field intr_qty
+	field intr_cost_price
+	field intr_sale_price
+	field intr_stat_flag
+end
+
+table inaf
+	field inaf_co_no
+	field inaf_br_no
+	field inaf_wh_no
+	field inaf_sys_date
+	field inaf_hhbr_hash
+	field inaf_hhcc_hash
+	field inaf_hhum_hash
+	field inaf_type
+	field inaf_date
+	field inaf_batch_no
+	field inaf_ref1
+	field inaf_ref2
+	field inaf_qty
+	field inaf_cost_price
+	field inaf_sale_price
+	field inaf_op_id
+	field inaf_time_create
+	field inaf_date_create
+	field inaf_stat_flag
+end
+
+table move
+	field move_move_hash
+	field move_co_no
+	field move_br_no
+	field move_wh_no
+	field move_hhbr_hash
+	field move_hhcc_hash
+	field move_hhum_hash
+	field move_date_tran
+	field move_type_tran
+	field move_batch_no
+	field move_class
+	field move_category
+	field move_ref1
+	field move_ref2
+	field move_qty
+	field move_cost_price
+	field move_sale_price
+	field move_op_id
+	field move_time_create
+	field move_date_create
+end
+

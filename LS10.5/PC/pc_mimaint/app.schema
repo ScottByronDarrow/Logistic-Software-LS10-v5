@@ -1,0 +1,92 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2002/05/08 01:23:50 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2002/05/08 01:23:50  scott
+#	CVS administration
+#	
+#	Revision 1.1  2002/03/06 08:29:17  scott
+#	..
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_std_batch
+	field inei_min_batch
+	field inei_max_batch
+	field inei_hzrd_class
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_description2
+	field inmr_quick_code
+	field inmr_dec_pt
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+end
+
+table inum
+	field inum_hhum_hash
+	field inum_uom
+end
+
+table pchc
+	field pchc_co_no
+	field pchc_type
+	field pchc_class
+	field pchc_desc
+end
+
+table pchw
+	field pchw_co_no
+	field pchw_hhbr_hash
+	field pchw_line_no
+	field pchw_text
+end
+
+table pcid
+	field pcid_co_no
+	field pcid_hhbr_hash
+	field pcid_hhwc_hash
+	field pcid_instr_no
+	field pcid_line_no
+	field pcid_version
+	field pcid_text
+end
+
+table pcmi
+	field pcmi_co_no
+	field pcmi_inst_name
+	field pcmi_line_no
+	field pcmi_text
+end
+
+table pcwc
+	field pcwc_hhwc_hash
+	field pcwc_co_no
+	field pcwc_br_no
+	field pcwc_work_cntr
+	field pcwc_name
+end
+

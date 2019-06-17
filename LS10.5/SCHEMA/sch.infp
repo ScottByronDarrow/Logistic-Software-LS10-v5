@@ -1,0 +1,56 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.infp,v 5.0 2001/06/19 10:17:15 cha Exp $
+|  Schema Name  : (sch.infp)
+|  Schema Desc  : (Inventory Furture price file update. )
+|----------------------------------------------------------------------
+| $Log: sch.infp,v $
+| Revision 5.0  2001/06/19 10:17:15  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:53  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:29  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	infp
+
+field	infp_hhbr_hash			type	long
+field	infp_up_status			type	char	1
+field	infp_date_from			type	edate
+field	infp_id_no			type	composite	
+		infp_hhbr_hash,	
+		infp_up_status,
+		infp_date_from					index	primary
+field	infp_date_to			type	edate
+field	infp_price1			type	money
+field	infp_price2			type	money
+field	infp_price3			type	money
+field	infp_price4			type	money
+field	infp_price5			type	money
+field	infp_comment			type	char	40
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	infp_hhbr_hash		-	Link to inmr_hhbr_hash
+	infp_up_status		-	C(urrent), 
+				    	F(uture), 
+				    	A(ctive), 
+				    	D(elete), 
+				    	H(istory), 
+				    	P(ropotional), 
+	infp_date_from		-	Effective from date.
+	infp_date_to		-	Effective to date.
+	infp_price1		-	Inventory price 1
+	infp_price2		-	Inventory price 2
+	infp_price3		-	Inventory price 3
+	infp_price4		-	Inventory price 4
+	infp_price5		-	Inventory price 5
+	infp_comment		-	Comments relating to price update.
+}

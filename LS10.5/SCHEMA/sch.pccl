@@ -1,0 +1,49 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.pccl,v 5.0 2001/06/19 10:17:21 cha Exp $
+|  Schema Name  : (sch.pccl)
+|  Schema Desc  : (Production Control CaLendar(s). )
+|----------------------------------------------------------------------
+| $Log: sch.pccl,v $
+| Revision 5.0  2001/06/19 10:17:21  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:01  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:37  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	pccl
+
+field	pccl_co_no			type	char	2
+field	pccl_br_no			type	char	2
+field	pccl_hhrs_hash			type	long
+field	pccl_act_date			type	edate
+field	pccl_act_time			type	long
+field	pccl_duration			type	long
+field	pccl_stat_flag			type	char	1
+field	pccl_id_no			type	composite
+		pccl_co_no,
+		pccl_br_no,
+		pccl_hhrs_hash,
+		pccl_act_date,
+		pccl_act_time					index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	pccl_co_no			- Company number.
+	pccl_br_no			- Branch number.
+	pccl_hhrs_hash			- Link -> rgrs (or 0L for systemwide)
+	pccl_act_date			- Date @ which record becomes 'valid'
+	pccl_act_time			- Time @ which record becomes 'valid'
+	pccl_duration			- Time (in hrs) for which rec is 'valid'
+	pccl_stat_flag			- Added to keep SBD happy!!! (TvB)
+}

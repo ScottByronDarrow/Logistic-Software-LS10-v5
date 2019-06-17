@@ -1,0 +1,46 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/22 06:38:08 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/22 06:38:08  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_contact_name
+	field cumr_phone_no
+	field cumr_fax_no
+	field cumr_total_days_sc
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_crd_flag
+	field cumr_credit_ref
+	field cumr_ho_dbt_hash
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_od_flag
+	field cumr_stat_flag
+end
+

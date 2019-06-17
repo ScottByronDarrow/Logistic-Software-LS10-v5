@@ -1,0 +1,28 @@
+Direct Delivery Processing Menu (DDMR)
+ds_process
+Distribution Master Menu. <a> (1,2)
+menu MENUSYS/main_dist.mdf
+Add / Maintain Direct Delivery Orders <a> (1,1)
+dd_ordinp~dd_ordinp.s~
+Approve Direct Delivery Purchase Orders <a> (1,1)
+po_app_inp~
+Direct Delivery Supplier Confirmation. <a> (1,1)
+dd_supconf~C~dd_supconf.s~
+Direct Delivery Supplier Despatch. <a> (1,1)
+dd_supconf~D~dd_supconf.s~
+Invoice Customer For Despatched Shipments. <a> (1,2)
+lp_chain~dd_makeinv M~gl_po_cons LPNO R R Y~po_stkupd LPNO R Y~po_so_rel LPNO U 7 Y~so_invledup M 3 I LPNO~
+Reprint Order Confirmation Audit. <a> (1,1)
+lp_chain~po_stkupd LPNO U Y~
+Print Direct Delivery Quotations. <a> (1,1)
+dd_print.i~LPNO~Q~
+Print Direct Delivery Orders. <a> (1,1)
+dd_print.i~LPNO~O~
+Print Direct Delivery Supplier Confirmation. <a> (1,1)
+dd_print.i~LPNO~S~
+((
+quadrant(18,6)
+quadrant(45,8)
+box(12,3,54,15)
+line(13,5,53)
+))

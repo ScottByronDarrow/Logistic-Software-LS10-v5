@@ -1,0 +1,89 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.qchr,v 5.1 2001/09/07 06:31:28 cha Exp $
+|  Schema Name  : (sch.qchr)
+|  Schema Desc  : (Inventory QC Purchased Items Reveival File. )
+|----------------------------------------------------------------------
+| $Log: sch.qchr,v $
+| Revision 5.1  2001/09/07 06:31:28  cha
+| Udpated to add index on hhbr_hash
+| old so_bgcalc did not recalculate QC quantity
+|
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:17  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:43  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	qchr
+
+field	qchr_co_no				type	char	2
+field	qchr_br_no				type	char	2
+field	qchr_wh_no				type	char	2
+field	qchr_qc_centre			type	char	4
+field	qchr_hhbr_hash			type	long			index	dups
+field	qchr_hhum_hash			type	long
+field	qchr_inlo_hash			type	long
+field	qchr_hhqc_hash			type	serial			index	primary
+field	qchr_origin_qty			type	float
+field	qchr_receipt_dt			type	edate
+field	qchr_exp_rel_dt			type	edate
+field	qchr_rel_qty			type	float
+field	qchr_rej_qty			type	float
+field	qchr_serial_no			type	char	25
+field	qchr_hhsu_hash			type	long
+field	qchr_ref_1				type	char	10
+field	qchr_ref_2				type	char	10
+field	qchr_shipment			type	long
+field	qchr_next_seq			type	int
+field	qchr_source_type		type	char	1
+field	qchr_id_no				type	composite
+			qchr_co_no,
+			qchr_br_no,
+			qchr_wh_no,
+			qchr_qc_centre,
+			qchr_hhbr_hash									index	dups
+field	qchr_id_no2				type	composite
+			qchr_co_no,
+			qchr_br_no,
+			qchr_wh_no,
+			qchr_hhbr_hash,
+			qchr_qc_centre									index	dups
+field	qchr_id_no3				type	composite
+			qchr_co_no,
+			qchr_hhbr_hash									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	qchr_co_no				- Company Number
+	qchr_br_no				- Branch Number
+	qchr_wh_no				- Warehouse Number
+	qchr_qc_centre			- QC Centre (link to qcmr)
+	qchr_hhbr_hash			- Item Hash (link to inmr)
+	qchr_hhum_hash			- Item Hash (link to inum)
+	qchr_inlo_hash			- Item Hash (link to inlo)
+	qchr_hhqc_hash			- QC Hash Linking To Details (qcln)
+	qchr_origin_qty			- Origin Quantity
+	qchr_receipt_dt			- Receipt Date
+	qchr_exp_rel_dt			- Expected Release Date
+	qchr_rel_qty			- Released Quantity
+	qchr_rej_qty			- Rejected Quantity
+	qchr_serial_no			- Serial Number
+	qchr_hhsu_hash			- Supplier (link to sumr)
+	qchr_ref_1				- Reference Number One
+	qchr_ref_2				- Reference Number Two
+	qchr_shipment			- Shipment Number (link to posh)
+	qchr_next_seq			- Next Line Sequence Number For Line Release Details
+	qchr_source_type		- QC Type	(P)urchase Order
+										(W)orks Order
+										(M)anual
+}

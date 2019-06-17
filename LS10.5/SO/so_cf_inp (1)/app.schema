@@ -1,0 +1,55 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:19:13 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:19:13  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:40:32  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2001/03/06 04:13:58  scott
+#	added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table cfhr
+	field cfhr_co_no
+	field cfhr_br_no
+	field cfhr_carr_code
+	field cfhr_cfhh_hash
+	field cfhr_carr_desc
+	field cfhr_phone
+	field cfhr_fax_no
+	field cfhr_contact_name
+	field cfhr_markup_pc
+	field cfhr_stat_flag
+end
+
+table cfln
+	field cfln_cfhh_hash
+	field cfln_area_code
+	field cfln_carr_code
+	field cfln_cost_kg
+	field cfln_stat_flag
+end
+
+table exaf
+	field exaf_co_no
+	field exaf_area_code
+	field exaf_area
+	field exaf_rate
+	field exaf_stat_flag
+end
+

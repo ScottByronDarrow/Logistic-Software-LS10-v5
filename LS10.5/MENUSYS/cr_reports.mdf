@@ -1,0 +1,20 @@
+Supplier Reports Menu (APPR)
+creditors_help
+Supplier Master Menu. <a> (1,2)
+menu MENUSYS/cr_master.mdf
+Print Ageing Schedules. <a> (1,2)
+cr_sagebal~LPNO~
+List Unapproved Invoices. <a> (1,2)
+cr_uainvrep~LPNO~
+Print Supplier Listings. <a> (1,2)
+cr_lists.i~
+Print Supplier Control Report. <a> (1,2)
+cr_cont_prt~LPNO~
+User Specified Supplier. <a> (1,2)
+std_report~S~
+((
+quadrant(22,6)
+quadrant(46,6)
+box(16,3,47,13)
+line(17,5,46)
+))

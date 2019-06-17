@@ -1,0 +1,60 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:10:23 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:10:23  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:31:32  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:17:06  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 09:03:14  gerry
+#	forced Revision no start 2.0 Rel-15072000
+#	
+#	Revision 1.1  2000/07/10 09:32:54  scott
+#	Added app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_short
+	field comm_est_no
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_short
+end
+
+table inmr
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_description
+end
+
+table pcms
+	field pcms_iss_seq
+	field pcms_act_qty_in
+	field pcms_hhwo_hash
+end
+
+table pcwo
+	field pcwo_co_no
+	field pcwo_br_no
+	field pcwo_wh_no
+	field pcwo_order_no
+	field pcwo_hhwo_hash
+	field pcwo_reqd_date
+	field pcwo_priority
+	field pcwo_hhbr_hash
+	field pcwo_prod_qty
+	field pcwo_order_status
+	field pcwo_batch_no
+end
+

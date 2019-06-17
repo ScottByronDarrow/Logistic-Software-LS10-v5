@@ -1,0 +1,104 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:09:15 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:09:15  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/05/29 06:02:28  scott
+#	Updated to add app.schema
+#	Updated to include new validations for picking locations
+#	
+#
+#
+
+table comr
+	field comr_co_no
+	field comr_co_name
+	field comr_co_short_name
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_hhlo_hash
+	field ccmr_master_wh
+	field ccmr_only_loc
+	field ccmr_sman_no
+	field ccmr_name
+	field ccmr_acronym
+	field ccmr_whse_add1
+	field ccmr_whse_add2
+	field ccmr_whse_add3
+	field ccmr_whse_add4
+	field ccmr_type
+	field ccmr_sal_ok
+	field ccmr_pur_ok
+	field ccmr_issues_ok
+	field ccmr_receipts
+	field ccmr_reports_ok
+	field ccmr_lrp_ok
+	field ccmr_lpno
+	field ccmr_stat_flag
+end
+
+table lomr
+	field lomr_hhcc_hash
+	field lomr_location
+	field lomr_desc
+	field lomr_comm1
+	field lomr_comm2
+	field lomr_comm3
+	field lomr_min_wgt
+	field lomr_max_wgt
+	field lomr_min_vol
+	field lomr_max_vol
+	field lomr_no_picks
+	field lomr_no_hits
+	field lomr_loc_type
+	field lomr_access
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_salesman
+	field exsf_stat_flag
+end
+
+table llct
+	field llct_hhcc_hash
+	field llct_pick_ord
+	field llct_pick_flg1
+	field llct_pick_flg2
+	field llct_pick_flg3
+	field llct_alt_uom
+	field llct_auto_all
+	field llct_exp_items
+	field llct_all_locs
+	field llct_val_locs
+	field llct_pick_locs
+	field llct_rept_locs
+	field llct_qc_locs
+	field llct_invoice
+	field llct_input
+	field llct_credit
+	field llct_ccn_inp
+	field llct_des_conf
+	field llct_ades_conf
+	field llct_pc_issue
+	field llct_only_loc
+	field llct_dflt_loc
+	field llct_stat_flag
+end
+

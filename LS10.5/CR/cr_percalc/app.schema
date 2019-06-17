@@ -1,0 +1,84 @@
+#
+################################################################################
+#	
+#	$Id: app.schema,v 5.1 2002/06/25 03:17:05 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/06/25 03:17:05  scott
+#	Updated to ensure cheque number length is 15 characters as per schema.
+#	
+#	Revision 5.0  2001/06/19 08:03:42  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:24:09  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.0  2000/10/10 12:13:07  gerry
+#	Revision No. 3 Start
+#	<after Rel-10102000>
+#	
+#	Revision 2.0  2000/07/15 08:41:06  gerry
+#	Forced Revision No. Start 2.0 Rel-15072000
+#	
+#	Revision 1.1  1999/11/11 03:44:03  scott
+#	Added app.schema
+#	
+#	
+#
+table suin
+	field suin_hhsu_hash      
+	field suin_hhsi_hash      
+	field suin_type           
+	field suin_est            
+	field suin_inv_no         
+	field suin_date_of_inv    
+	field suin_amt            
+	field suin_pay_amt        
+	field suin_amt_paid       
+	field suin_exch_rate      
+	field suin_stat_flag      
+end
+
+table suhd
+	field suhd_hhsu_hash      
+	field suhd_cheq_no        
+	field suhd_hhsp_hash      
+	field suhd_narrative      
+	field suhd_date_payment   
+	field suhd_date_post      
+	field suhd_tot_amt_paid   
+	field suhd_loc_amt_paid   
+	field suhd_disc_taken     
+	field suhd_exch_variance  
+	field suhd_stat_flag      
+end
+
+table sudt
+	field sudt_hhsp_hash      
+	field sudt_hhsi_hash      
+	field sudt_amt_paid_inv   
+	field sudt_loc_paid_inv   
+	field sudt_exch_variatio  
+	field sudt_exch_rate      
+	field sudt_stat_flag      
+end
+
+table sumr
+	field sumr_co_no          
+	field sumr_est_no         
+	field sumr_crd_no         
+	field sumr_hhsu_hash      
+	field sumr_acronym        
+	field sumr_bo_curr        
+	field sumr_bo_per1        
+	field sumr_bo_per2        
+	field sumr_bo_per3        
+end
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_crd_date       
+	field comm_pay_terms      
+end

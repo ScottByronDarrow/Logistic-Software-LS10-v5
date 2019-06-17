@@ -1,0 +1,22 @@
+Forward Exchange Contract Menu (FEMR)
+fe_cont
+Customer Master Menu. <a> (1,2)
+menu MENUSYS/db_master.mdf
+F/E Contract Enquiry. <a> (1,2)
+fe_contmnt~E~
+Maintain F/E Contracts. <a> (1,2)
+fe_contmnt~M~
+Close F/E Contracts. <a> (1,2)
+fe_contmnt~C~
+Allocate F/E Contracts to Invoices. <a> (1,2)
+lp_chain~fe_invallc LPNO PID~
+F/E Currency Exposure Report. <a> (1,2)
+fe_exp_rep~
+F/E Report by Customer. <a> (1,1)
+db_fxrep~LPNO~
+((
+quadrant(20,6)
+quadrant(42,8)
+box(14,3,50,15)
+line(15,5,49)
+))

@@ -1,0 +1,49 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/14 05:05:38 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/14 05:05:38  scott
+#	Updated to convert to app.schema
+#	Updated to clean code.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+end
+
+table comr
+	field comr_co_no
+	field comr_prospect_no
+end
+
+table tmdf
+	field tmdf_co_no
+	field tmdf_type
+	field tmdf_fmt_name
+	field tmdf_delimit
+	field tmdf_fmt_desc
+	field tmdf_hhdf_hash
+end
+
+table tmdl
+	field tmdl_hhdf_hash
+	field tmdl_line_no
+	field tmdl_field_name
+	field tmdl_offset
+	field tmdl_length
+	field tmdl_default
+end
+

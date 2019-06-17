@@ -1,0 +1,30 @@
+LRP - DEMAND MENU (LRPD)
+lrp_help
+LRP - MASTER MENU <a> (1,2)
+menu MENUSYS/lrp_master.mdf
+Maintain Item Demand <a> (1,1)
+lrp_his_inp~
+Update/Generate Item Demand <a> (1,1)
+lrp_his_upd~
+Maintain Lost Sale Demand Codes. <a> (1,1)
+so_lsmaint~
+Update Forecast Option and Safety Stock. <a> (1,2)
+lrp_fcst_upd~
+Update/Print Demand Forecast by Company. <a> (1,1)
+lrp_demand.i~lrp_cdemand~Update/Print Demand Forecast By Company~
+Update/Print Demand Forecast by Branch. <a> (1,1)
+lrp_demand.i~lrp_bdemand~Update/Print Demand Forecast By Branch~
+Update/Print Demand Forecast by Warehouse. <a> (1,1)
+lrp_demand.i~lrp_demand~Update/Print Demand Forecast By Warehouse~
+Print Summary Demand Forecast Report by Company. <a> (1,1)
+lrp_cdsummary~LPNO~
+Print Summary Demand Forecast Report by Branch. <a> (1,1)
+lrp_bdsummary~LPNO~
+Print Summary Demand Forecast Report by Warehouse. <a> (1,2)
+lrp_dsummary~LPNO~
+((
+quadrant(15,6)
+quadrant(46,8)
+box(10,3,58,15)
+line(11,5,57)
+))

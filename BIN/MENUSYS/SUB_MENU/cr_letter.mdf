@@ -1,0 +1,16 @@
+Supplier Letters Sub Menu (CRLE)
+cr_letter
+Supplier Master Menu. <a> (1,2)
+menu MENUSYS/cr_master.mdf
+Paragraph Maintenance. <a> (1,1)
+cr_para_inp~
+Assemble Letters. <a> (1,2)
+cr_para_asm~
+Display/Print Letters. <a> (2,1)
+cr_lett_prn~
+((
+quadrant(7,6)
+quadrant(46,8)
+box(2,3,74,14)
+line(3,5,73)
+))

@@ -1,0 +1,7 @@
+#
+#  Printer Entry For Microline 182/183 printer.
+#
+ML182|Microline 182/183 Printer|This is a printer entry:\
+	:TF=\014:XN=\037:XF=\034:I1=:I2=:\
+	:P0=\036:P2=\034:UN= :UF= :F1=\E0:F2=\E1:\
+	:SN=\EH:SF=\ET:EX=2:

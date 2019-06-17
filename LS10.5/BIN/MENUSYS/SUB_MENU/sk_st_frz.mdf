@@ -1,0 +1,18 @@
+Stock-Take Selection Menu (SKFZ)
+sk_stake
+Stock Take Master Menu. <a> (1,1)
+menu MENUSYS/sk_st_mst.mdf
+Select Stock Take Without Freezing Stock. <a> (1,1)
+sk_nst_sel~sk_freeze~F~
+Select Items For Stock-Take By Item. <a> (1,1)
+sk_nst_sel~sk_nst_frz~I~
+Select Items For Stock-Take By Product Group. <a> (1,1)
+sk_nst_sel~sk_nst_frz~G~
+Select Items For Stock-Take By ABC Code. <a> (1,1)
+sk_nst_sel~sk_nst_frz~A~
+Select Serial-Items For Stock-Take By Item. <a> (1,1)
+sk_nst_sel~sk_nst_sfrz~I~
+Select Serial-Items For Stock-Take By Product Group. <a> (1,1)
+sk_nst_sel~sk_nst_sfrz~G~
+((
+))

@@ -1,0 +1,41 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 23:41:17 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 23:41:17  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dp_no
+end
+
+table cudp
+	field cudp_co_no
+	field cudp_br_no
+	field cudp_dp_no
+	field cudp_dp_name
+end
+
+table sjcr
+	field sjcr_co_no
+	field sjcr_est_no
+	field sjcr_dp_no
+	field sjcr_dis_pc_markup
+	field sjcr_gl_wip
+	field sjcr_gl_ext_sales
+	field sjcr_gl_int_sales
+	field sjcr_gl_ext_cos
+	field sjcr_gl_int_cos
+	field sjcr_gl_ext_cos_var
+	field sjcr_gl_int_cos_var
+end
+

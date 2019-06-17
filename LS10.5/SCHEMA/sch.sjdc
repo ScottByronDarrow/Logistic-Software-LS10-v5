@@ -1,0 +1,47 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sjdc,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sjdc)
+|  Schema Desc  : (Service Job Disbursement Cost. )
+|----------------------------------------------------------------------
+| $Log: sch.sjdc,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:22  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sjdc 
+
+field	sjdc_co_no				type	char	2  
+field	sjdc_est_no				type	char	2  
+field	sjdc_dp_no				type	char	2  
+field	sjdc_order_no			type	long   
+field	sjdc_po_no				type	char	8 
+field	sjdc_desc				type	char	30
+field	sjdc_hhsu_hash			type	long 
+field	sjdc_invoice_no			type	char	8 
+field	sjdc_date				type	edate 
+field	sjdc_est_cost			type	double  
+field	sjdc_act_cost			type	double  
+field	sjdc_chg_cost			type	double 
+field	sjdc_pc_markup			type	float 
+field	sjdc_id_no				type	composite
+			sjdc_co_no,
+			sjdc_est_no,
+			sjdc_dp_no,
+			sjdc_order_no,
+			sjdc_po_no										index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

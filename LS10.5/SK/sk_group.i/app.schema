@@ -1,0 +1,45 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:15:41 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:15:41  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.1  2001/03/16 07:56:12  scott
+#	Updated to ensure screen selections looks and works OK with LS10-GUI.
+#	Updated to clean code and add app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_name
+	field ccmr_reports_ok
+end
+

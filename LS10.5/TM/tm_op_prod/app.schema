@@ -1,0 +1,84 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/14 08:16:54 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/14 08:16:54  scott
+#	Updated to convert to app.schema
+#	Clean code
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table tmop
+	field tmop_co_no
+	field tmop_op_id
+	field tmop_hhop_hash
+	field tmop_op_passwd
+	field tmop_op_name
+	field tmop_short_id
+	field tmop_campaign_no
+	field tmop_unscripted
+	field tmop_in_scr_no
+	field tmop_out_scr_no
+	field tmop_curr_c_no
+	field tmop_curr_l_no
+	field tmop_curr_prmpt
+	field tmop_sman_code
+	field tmop_login_time
+	field tmop_cam_time
+	field tmop_stat_flag
+end
+
+table tmoh
+	field tmoh_hhcf_hash
+	field tmoh_hhop_hash
+	field tmoh_campgn_time
+end
+
+table tmcf
+	field tmcf_co_no
+	field tmcf_campaign_no
+	field tmcf_hhcf_hash
+	field tmcf_c_name1
+	field tmcf_c_name2
+	field tmcf_c_obj1
+	field tmcf_c_obj2
+	field tmcf_c_obj3
+	field tmcf_c_obj4
+	field tmcf_c_obj5
+	field tmcf_c_manager
+	field tmcf_start_date
+	field tmcf_end_date
+	field tmcf_bg_incalls
+	field tmcf_bg_insales
+	field tmcf_bg_invalue
+	field tmcf_bg_outcalls
+	field tmcf_bg_outsales
+	field tmcf_bg_outvalue
+end
+
+table tmch
+	field tmch_co_no
+	field tmch_call_no
+	field tmch_call_date
+	field tmch_hhpm_hash
+	field tmch_hhcf_hash
+	field tmch_hhop_hash
+	field tmch_hhsh_hash
+	field tmch_hhcl_hash
+	field tmch_io_flag
+	field tmch_cus_ord_ref
+	field tmch_ord_value
+	field tmch_stat_flag
+end
+

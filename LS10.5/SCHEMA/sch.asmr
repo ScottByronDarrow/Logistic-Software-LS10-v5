@@ -1,0 +1,77 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.asmr,v 5.0 2001/06/19 10:17:08 cha Exp $
+|  Schema Name  : (sch.asmr)
+|  Schema Desc  : (Asset Master File )
+|----------------------------------------------------------------------
+| $Log: sch.asmr,v $
+| Revision 5.0  2001/06/19 10:17:08  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:22  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:21  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file asmr
+
+field	asmr_co_no					type	char	2	
+field	asmr_br_no					type	char	2	
+field	asmr_ass_group              type  	char 	5 
+field	asmr_ass_no                 type  	char 	5 
+field	asmr_serial_no				type	char	25
+field	asmr_type     				type	char	3
+field	asmr_brand     				type	char	8
+field	asmr_pur_date  				type	edate
+field	asmr_hhas_hash 				type	serial				index
+field	asmr_desc      				type	char	80
+field	asmr_spec1_code				type	char	8
+field	asmr_spec2_code				type	char	8
+field	asmr_crd_no    				type	char	6
+field	asmr_hhsu_hash 				type	long				index	dups
+field	asmr_capacity  				type	double
+field	asmr_status_code			type	char	2
+field	asmr_products   			type	char	80
+field	asmr_hham_hash  			type	long
+field	asmr_id_no					type	composite
+			asmr_co_no,
+			asmr_br_no,
+			asmr_ass_group,
+			asmr_ass_no,
+			asmr_serial_no			 							index	primary
+field	asmr_id_no2					type	composite
+			asmr_co_no,
+			asmr_br_no,
+			asmr_brand											index	dups
+field	asmr_id_no3					type	composite
+			asmr_co_no,
+			asmr_br_no,
+			asmr_serial_no										index	dups
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+     	asmr_co_no			- 	Asset Company Number
+     	asmr_br_no			-	Asset Branch Number
+		famr_ass_group		-	Asset Group code.
+		famr_ass_no			-	Asset number
+     	asmr_serial_no		-	Asset Serial Number
+     	asmr_type     		-	Asset Type
+     	asmr_brand     		-	Asset Brand
+     	asmr_pur_date  		-	Asset Purchase Date
+     	asmr_hhar_hash 		-	Asset Master ID number
+     	asmr_desc      		-	Asset Description
+     	asmr_spec1_code		-	Asset Specification Code
+     	asmr_spec2_code		-	Asset Specification Code
+     	asmr_crd_no    		-	Asset Supplier Number
+     	asmr_hhsu_hash  	-	Asset link to supplier file (sumr)
+     	asmr_capacity  		-	Asset Capacity
+     	asmr_status_code	-	Asset Status Code
+     	asmr_products   	-	Products Assigned to Asset
+     	asmr_hham_hash  	-	Asset Movement ID number
+}

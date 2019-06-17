@@ -1,0 +1,70 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.0 2001/06/19 08:21:56 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.0  2001/06/19 08:21:56  robert
+#	LS10-5.0 New Release as of 19 JUNE 2001
+#	
+#	Revision 4.0  2001/03/09 02:43:09  scott
+#	LS10-4.0 New Release as at 10th March 2001
+#	
+#	Revision 3.1  2000/12/19 03:09:17  scott
+#	Updated to add add.schema, clean code and add printing option.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_short
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_dbt_date
+end
+
+table trve
+	field trve_co_no
+	field trve_br_no
+	field trve_ref
+	field trve_desc
+	field trve_cap
+	field trve_fr_chg
+	field trve_internal
+	field trve_hhmr_hash
+	field trve_vehi_type
+	field trve_hhve_hash
+	field trve_truck_type
+	field trve_avail
+	field trve_unav_res
+	field trve_trcm_hash
+	field trve_min_vol
+	field trve_max_vol
+	field trve_min_wgt
+	field trve_max_wgt
+	field trve_min_hei
+	field trve_max_hei
+	field trve_min_wid
+	field trve_max_wid
+	field trve_per_month
+	field trve_per_day
+	field trve_per_trip
+	field trve_per_weight
+	field trve_per_vol
+end
+
+table trcm
+	field trcm_co_no
+	field trcm_br_no
+	field trcm_carr_code
+	field trcm_trcm_hash
+	field trcm_carr_desc
+	field trcm_stat_flag
+end
+

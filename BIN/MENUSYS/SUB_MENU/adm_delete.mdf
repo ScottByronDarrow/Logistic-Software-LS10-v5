@@ -1,0 +1,20 @@
+Miscellaneous Deletes. (SUB)
+deletes
+Administrators Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Delete completed goods receipts. <a> (1,1)
+po_grin_del~
+Delete completed sales order. <a> (1,1)
+so_rt_del~
+Delete completed transfers. <a> (1,1)
+sk_it_del~1~
+Delete completed batch data. <a> (1,1)
+psl_misc_del~
+Delete real time committed data. <a> (1,1)
+so_cmmt_del~LPNO~
+Delete completed GL batch records. <a> (1,1)
+gl_batch_del~
+Delete completed FIFO. <a> (1,1)
+sk_fifo_del~
+((
+))

@@ -1,0 +1,26 @@
+Customers Contract Menu (DBCN)
+db_cont
+Customers Master Menu. <a> (1,2)
+menu MENUSYS/db_master.mdf
+Maintain Customers Contracts. <a> (1,2)
+db_cn_maint~
+Print Customers Contracts. <a> (1,2)
+db_cn_prt~
+Delete Customers Contracts. <a> (1,2)
+db_cn_del~
+Assign Contracts To Customers. <a> (1,1)
+db_cust_ass~N~
+Unassign Contracts From Customers. <a> (1,1)
+db_cust_ass~D~
+Assign Customers To Contract. <a> (1,1)
+db_cont_ass~N~
+Unassign Customers From Contract. <a> (1,1)
+db_cont_ass~D~
+Expired Contract Rebate Claim Report. <a> (1,1)
+db_cn_rebclm~
+((
+quadrant(20,6)
+quadrant(42,8)
+box(14,3,50,15)
+line(15,5,49)
+))

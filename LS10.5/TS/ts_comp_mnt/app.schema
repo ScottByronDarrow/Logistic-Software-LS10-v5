@@ -1,0 +1,42 @@
+#
+############################################
+#
+#	$Id: app.schema,v 1.1 2002/06/26 06:32:59 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 1.1  2002/06/26 06:32:59  scott
+#	Updated to add SetSortArray () for new LS10-GUI screen features
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_description
+	field inmr_quick_code
+	field inmr_on_hand
+end
+
+table tsci
+	field tsci_hhbr_hash
+	field tsci_line_no
+	field tsci_mabr_hash
+	field tsci_comment
+	field tsci_stat_flag
+end
+

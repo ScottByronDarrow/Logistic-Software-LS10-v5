@@ -1,0 +1,39 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.webusers,v 5.0 2001/06/19 10:17:35 cha Exp $
+|  Schema Name  : (sch.webusers)
+|  Schema Desc  : (Web Users)
+|----------------------------------------------------------------------
+| $Log: sch.webusers,v $
+| Revision 5.0  2001/06/19 10:17:35  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:42  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:56  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file    webusers	
+field   web_dbt_no        type char 6         
+field   web_password      type char 20
+field   web_master_email  type char 50           
+field   web_co_no		  type char 2
+field   web_br_no		  type char 2
+field   web_wh_no		  type char 2
+field   web_type		  type int
+field   web_numbmails	  type int
+field   web_envisage	  type int
+field   web_userhost	  type char 50
+field   web_cumr_hhcu_hash	  type long	index dups
+field   webusers_id_no    type composite
+		web_dbt_no,
+		web_password      index primary
+field   webusers_id_no2  type composite    
+		web_dbt_no  index dups
+end
+{
+}

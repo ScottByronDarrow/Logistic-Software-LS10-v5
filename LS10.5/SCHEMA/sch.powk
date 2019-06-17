@@ -1,0 +1,69 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.powk,v 5.1 2001/07/25 01:15:52 scott Exp $
+|  Schema Name  : (sch.powk)
+|  Schema Desc  : (Purchase Order G/L Work file. )
+|----------------------------------------------------------------------
+| $Log: sch.powk,v $
+| Revision 5.1  2001/07/25 01:15:52  scott
+| Updated for LS10.5
+|
+| Revision 5.0  2001/06/19 10:17:23  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:16  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.2  2001/01/25 06:55:42  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	powk
+
+field	powk_co_no				type	char	2
+field	powk_br_no				type	char	2
+field	powk_sort				type	char	15
+field	powk_dbt_acc			type	char	16
+field	powk_crd_acc			type	char	16
+field	powk_dbt_hash			type	long
+field	powk_crd_hash			type	long
+field	powk_amount				type	double
+field	powk_narrative			type	char	20
+field	powk_alt_desc1			type	char	20
+field	powk_alt_desc2			type	char	20
+field	powk_user_ref			type	char	15
+field	powk_stat_flag			type	char	1
+field	powk_id_no				type	composite
+			powk_co_no,
+			powk_br_no,
+			powk_sort										index	dups
+field	powk_id_no_1			type	composite
+			powk_co_no,
+			powk_br_no,
+			powk_sort,
+			powk_dbt_acc									index	dups
+field	powk_id_no_2			type	composite
+			powk_co_no,
+			powk_br_no,
+			powk_sort,
+			powk_crd_acc									index	dups
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	powk_co_no			-	Company number.
+	powk_br_no			-	Branch number.
+	powk_sort			-	Sort.
+	powk_dbt_acc		-	Debit Account.
+	powk_crd_acc		-	Credit Account.
+	powk_dbt_hash		-	Debit hash linked to glmr.
+	powk_crd_hash		-	Credit hash linked to glmr.
+	powk_amount			-	Amount of Transaction.
+	powk_narrative		-	Narrative.
+	powk_user_ref		-	User Ref.
+	powk_stat_flag		-	Spare Status flag.
+}

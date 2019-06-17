@@ -1,0 +1,26 @@
+Stock Adjustments Menu (SKAJ)
+sk_adj
+Stock Master Menu. <a> (1,2)
+menu MENUSYS/sk_master.mdf
+Misc. Stock Purchase/Receipts. >> <a> (1,2)
+pmenu MENUSYS/SUB_MENU/sk_adjust.mdf
+Inter-Company Stock Transfers Menu. <a> (1,1)
+menu MENUSYS/sk_mc_tran.mdf
+One-Step Stock Transfers. <a> (1,1)
+lp_chain~sk_trans LPNO~
+Location Transfers Single   UOM. <a> (1,1)
+sk_loctran~LPNO~
+Location Transfers Multiple UOM. <a> (1,2)
+sk_locbtran~LPNO~
+Input Stock Adj. (Normal). <a> (1,1)
+sk_adj~LPNO~
+Input Stock Adj. (Serial). <a> (1,2)
+sk_seradj~LPNO~
+Stock Write-Offs. <a> (1,2)
+lp_chain~sk_wroffinp LPNO~
+((
+quadrant(18,6)
+quadrant(44,9)
+box(12,3,54,15)
+line(13,5,53)
+))

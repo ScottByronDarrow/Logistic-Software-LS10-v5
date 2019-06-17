@@ -1,0 +1,61 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.2 2001/09/04 08:15:38 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.2  2001/09/04 08:15:38  scott
+#	Updated as structure needed to be same as glwk in app.schema
+#	
+#	Revision 5.1  2001/08/06 23:34:59  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_est_no         
+	field comm_est_name       
+	field comm_gl_date        
+	field comm_fiscal         
+end
+
+table comr
+	field comr_co_no          
+	field comr_base_curr      
+end
+
+table pcgl
+	field pcgl_acc_no         
+	field pcgl_co_no          
+	field pcgl_est_no         
+	field pcgl_acronym        
+	field pcgl_name           
+	field pcgl_chq_inv_no     
+	field pcgl_ci_amt         
+	field pcgl_o1_amt         
+	field pcgl_o2_amt         
+	field pcgl_o3_amt         
+	field pcgl_o4_amt         
+	field pcgl_hhgl_hash      
+	field pcgl_tran_type      
+	field pcgl_sys_ref        
+	field pcgl_batch_no       
+	field pcgl_tran_date      
+	field pcgl_period_no      
+	field pcgl_post_date      
+	field pcgl_narrative      
+	field pcgl_alt_desc1      
+	field pcgl_alt_desc2      
+	field pcgl_alt_desc3      
+	field pcgl_user_ref       
+	field pcgl_amount         
+	field pcgl_loc_amount     
+	field pcgl_jnl_type       
+	field pcgl_currency       
+	field pcgl_exch_rate      
+	field pcgl_stat_flag      
+	field pcgl_run_no         
+end

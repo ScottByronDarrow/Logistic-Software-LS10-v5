@@ -1,0 +1,136 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/21 01:58:19 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/21 01:58:19  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_acronym
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+	field esmr_adr1
+	field esmr_adr2
+	field esmr_adr3
+	field esmr_area_code
+end
+
+table cnch
+	field cnch_co_no
+	field cnch_cont_no
+	field cnch_hhch_hash
+	field cnch_desc
+	field cnch_contact
+	field cnch_date_wef
+	field cnch_date_rev
+	field cnch_date_ren
+	field cnch_date_exp
+	field cnch_exch_type
+end
+
+table cncd
+	field cncd_hhch_hash
+	field cncd_line_no
+	field cncd_hhbr_hash
+	field cncd_hhcc_hash
+	field cncd_hhsu_hash
+	field cncd_hhcl_hash
+	field cncd_price
+	field cncd_curr_code
+	field cncd_disc_ok
+	field cncd_cost
+end
+
+table inei
+	field inei_hhbr_hash
+	field inei_est_no
+	field inei_last_cost
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+	field inmr_quick_code
+	field inmr_active_status
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_ex1_factor
+end
+
+table qthr
+	field qthr_co_no
+	field qthr_cont_no
+	field qthr_hhqt_hash
+end
+
+table qtph
+	field qtph_co_no
+	field qtph_hhph_hash
+	field qtph_cont_no
+end
+
+table cohr
+	field cohr_co_no
+	field cohr_br_no
+	field cohr_inv_no
+	field cohr_hhcu_hash
+	field cohr_type
+	field cohr_cont_no
+end
+
+table sohr
+	field sohr_co_no
+	field sohr_br_no
+	field sohr_order_no
+	field sohr_cont_no
+	field sohr_hhcu_hash
+end
+
+table sumr
+	field sumr_co_no
+	field sumr_est_no
+	field sumr_crd_no
+	field sumr_hhsu_hash
+	field sumr_crd_name
+	field sumr_acronym
+	field sumr_curr_code
+end
+

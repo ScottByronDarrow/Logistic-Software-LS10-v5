@@ -1,0 +1,22 @@
+System Setup Functions. (SUB)
+setup.help
+Administrator Menu. <a> (1,1)
+menu MENUSYS/admin.mdf
+Enter Customer Invoices (SETUP). <a> (1,1)
+db_allinp~I~PID~J~
+Enter Customer Credits (SETUP). <a> (1,1)
+db_allinp~C~PID~J~
+Enter Supplier Invoices (SETUP). <a> (1,1)
+lp_chain~cr_im_inp I PID J~cr_percalc PID~
+Enter Supplier Credits (SETUP). <a> (1,1)
+lp_chain~cr_im_inp C PID J~cr_percalc PID~
+Setup General Ledger Page Numbers. <a> (1,1)
+gl_jnlpage~
+Setup General Default Interface Table. <a> (1,1)
+gl_ariface~S~
+Setup Customer defaults. <a> (1,1)
+psl_default~C~
+Setup Inventory defaults. <a> (1,1)
+psl_default~I~
+((
+))

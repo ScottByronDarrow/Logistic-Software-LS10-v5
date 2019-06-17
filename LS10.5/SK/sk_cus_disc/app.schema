@@ -1,0 +1,163 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.2 2001/12/18 02:23:31 robert Exp $
+#	$Log: app.schema,v $
+#	Revision 5.2  2001/12/18 02:23:31  robert
+#	Updated to remove posdtup from schema as LS10-GUI doesn't allow empty structure
+#	
+#	Revision 5.1  2001/12/13 05:48:10  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+	field ccmr_acronym
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_item_codes
+end
+
+table cuit
+	field cuit_hhcu_hash
+	field cuit_hhbr_hash
+	field cuit_item_no
+	field cuit_item_desc
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+	field esmr_short_name
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_barcode
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_on_hand
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_stocking_unit
+	field incc_ff_option
+	field incc_ff_method
+	field incc_wks_demand
+	field incc_stat_flag
+end
+
+table inds
+	field inds_co_no
+	field inds_br_no
+	field inds_hhcu_hash
+	field inds_price_type
+	field inds_category
+	field inds_sel_group
+	field inds_cust_type
+	field inds_hhbr_hash
+	field inds_hhcc_hash
+	field inds_disc_by
+	field inds_qty_brk1
+	field inds_qty_brk2
+	field inds_qty_brk3
+	field inds_qty_brk4
+	field inds_qty_brk5
+	field inds_qty_brk6
+	field inds_disca_pc1
+	field inds_disca_pc2
+	field inds_disca_pc3
+	field inds_disca_pc4
+	field inds_disca_pc5
+	field inds_disca_pc6
+	field inds_discb_pc1
+	field inds_discb_pc2
+	field inds_discb_pc3
+	field inds_discb_pc4
+	field inds_discb_pc5
+	field inds_discb_pc6
+	field inds_discc_pc1
+	field inds_discc_pc2
+	field inds_discc_pc3
+	field inds_discc_pc4
+	field inds_discc_pc5
+	field inds_discc_pc6
+	field inds_cum_disc
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_hhcf_hash
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+end
+

@@ -1,0 +1,30 @@
+Miscellaneous Maintenance. (SUB)
+misc_help
+Miscellaneous Menu. <a> (1,1)
+menu MENUSYS/misc.mdf
+Add / Change Department Master. <a> (1,1)
+dp_maint~
+Add / Change Page Numbers. <a> (1,1)
+co_page~
+Add / Change Customer Types. <a> (1,1)
+ex_miscinp~EXCL~
+Add / Change Area Codes. <a> (1,1)
+ex_miscinp~EXAF~
+Add / Change Salesman Codes. <a> (1,1)
+ex_miscinp~EXSF~
+Add / Change Contract Types. <a> (1,1)
+ex_miscinp~EXCT~
+Add / Change Lost Sales Codes. <a> (1,1)
+so_lsmaint~
+Add / Change Product Categories. <a> (1,1)
+excfmaint~
+Add / Change Special Instructions. <a> (1,1)
+ex_miscinp~EXSI~
+Add / Change Extra Inventory Desc. <a> (1,1)
+sk_xdes_inp~I~
+Add / Change Credit Reason Codes. <a> (1,1)
+so_cucr_inp~
+Add / Change Carrier / Area Control file. <a> (1,1)
+so_cf_inp~
+((
+))

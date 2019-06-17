@@ -1,0 +1,24 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/07/25 02:17:20 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/07/25 02:17:20  scott
+#	Update - LS10.5
+#	
+#
+#
+table comm
+	field comm_term           
+	field comm_co_no          
+	field comm_co_name        
+	field comm_fiscal        
+end
+
+table comr
+	field comr_co_no          
+	field comr_co_name          
+	field comr_gl_date        
+	field comr_fiscal         
+	field comr_base_curr      
+end

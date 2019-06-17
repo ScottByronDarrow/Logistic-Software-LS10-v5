@@ -1,0 +1,111 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/22 10:24:39 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/22 10:24:39  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_dbt_date
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_dbt_date
+	field esmr_stat_flag
+end
+
+table cudp
+	field cudp_co_no
+	field cudp_br_no
+	field cudp_dp_no
+	field cudp_dp_short
+	field cudp_stat_flag
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_ho_hash
+	field cuin_hhci_hash
+	field cuin_type
+	field cuin_est
+	field cuin_dp
+	field cuin_inv_no
+	field cuin_narrative
+	field cuin_date_of_inv
+	field cuin_date_posted
+	field cuin_pay_terms
+	field cuin_due_date
+	field cuin_currency
+	field cuin_exch_rate
+	field cuin_disc
+	field cuin_amt
+	field cuin_stat_flag
+end
+
+table cuhd
+	field cuhd_hhcu_hash
+	field cuhd_receipt_no
+	field cuhd_type
+	field cuhd_present_date
+	field cuhd_hhcp_hash
+	field cuhd_narrative
+	field cuhd_date_payment
+	field cuhd_date_posted
+	field cuhd_tot_amt_paid
+	field cuhd_disc_given
+end
+
+table cudt
+	field cudt_hhcp_hash
+	field cudt_hhci_hash
+	field cudt_amt_paid_inv
+	field cudt_loc_paid_inv
+	field cudt_exch_variatio
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_curr_code
+	field cumr_payment_flag
+	field cumr_contact_name
+	field cumr_phone_no
+	field cumr_stop_credit
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_int_flag
+	field cumr_ho_dbt_hash
+	field cumr_date_lastpay
+	field cumr_amt_lastpay
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_stat_flag
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+	field pocr_stat_flag
+end
+

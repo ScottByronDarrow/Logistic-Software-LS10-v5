@@ -1,0 +1,82 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.cmem,v 5.0 2001/06/19 10:17:09 cha Exp $
+|  Schema Name  : (sch.cmem)
+|  Schema Desc  : (Contract Management Employee Master File )
+|----------------------------------------------------------------------
+| $Log: sch.cmem,v $
+| Revision 5.0  2001/06/19 10:17:09  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:25  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:23  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	cmem
+
+field	cmem_co_no			type	char	2
+field	cmem_emp_no			type	char	10
+field	cmem_emp_name		type	char	40
+field	cmem_hhem_hash		type	serial	index
+field	cmem_hheq_hash		type 	long
+field	cmem_clab_rate		type	money
+field	cmem_clab_pc		type	float
+field	cmem_coh_rate		type	money
+field	cmem_coh_pc			type	float
+field	cmem_olab_rate		type	money
+field	cmem_olab_pc		type	float
+field	cmem_ooh_rate		type	money
+field	cmem_ooh_pc			type	float
+field	cmem_id_no			type	composite
+			cmem_co_no,
+			cmem_emp_no									index	primary
+
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	cmem_co_no			-	Company Number
+	cmem_emp_no			-	Employee Number
+	cmem_emp_name		-	Employee Name
+	cmem_hhem_hash		-	Unique Hash
+	cmem_hheq_hash		-	Link to hheq (Equipment Master File)
+	cmem_clab_rate		-	Cost of Labour Rate/Hr
+	cmem_clab_pc		-	Cost of Labour O/H %
+	cmem_coh_rate		-	Cost of O/H Rate/Hr
+	cmem_coh_pc			-	Cost of O/H %
+	cmem_olab_rate		-	Charge-Out of Labour Rate/Hr
+	cmem_olab_pc		-	Charge-Out of Labour O/H %
+	cmem_ooh_rate		-	Charge-Out of O/H/Hr
+	cmem_ooh_pc			-	Charge-Out O/H %
+
+	NOTES
+	=====
+	An example of the Rates is :
+
+	Employee Fred costs us $10 /hr	cmem_clab_rate = $10
+
+	For every $1 Fred earns there
+	are sundry expenses of $0.05	cmem_clab_pc = 5.00%
+
+	Office space for Fred or anyone
+	is $5 /hr			cmem_coh_rate = $5
+
+	cmem_coh_pc = ???????????
+
+	We charge Fred out at $20 /hr	cmem_olab_rate = $20	
+
+	We charge Fred's sundrys at  
+	7.00 %				cmem_olab_pc = 7.00%
+
+	We charge the Office space at	
+	$8 /hr				cmem_ooh_rate = $8.00
+
+	We charge a markup of 2%	cmem_ooh_pc = 2.00
+}

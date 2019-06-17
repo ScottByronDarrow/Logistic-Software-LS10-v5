@@ -1,0 +1,176 @@
+#
+############################################
+#
+#	$Id: app.schema,v 1.1 2002/12/01 06:47:21 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 1.1  2002/12/01 06:47:21  scott
+#	.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_name
+	field comm_cc_short
+	field comm_price1_desc
+	field comm_price2_desc
+	field comm_price3_desc
+	field comm_price4_desc
+	field comm_price5_desc
+	field comm_price6_desc
+	field comm_price7_desc
+	field comm_price8_desc
+	field comm_price9_desc
+end
+
+table ccmr
+	field ccmr_co_no
+	field ccmr_est_no
+	field ccmr_cc_no
+	field ccmr_hhcc_hash
+	field ccmr_name
+end
+
+table cuqb
+	field cuqb_co_no
+	field cuqb_buygrp
+	field cuqb_sellgrp
+	field cuqb_category
+	field cuqb_price_type
+	field cuqb_qty_brk1
+	field cuqb_qty_brk2
+	field cuqb_qty_brk3
+	field cuqb_qty_brk4
+	field cuqb_qty_brk5
+	field cuqb_qty_brk6
+	field cuqb_qty_brk7
+	field cuqb_qty_brk8
+	field cuqb_qty_brk9
+	field cuqb_update_flag
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_category
+	field inmr_quick_code
+	field inmr_serial_item
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_outer_size
+	field inmr_on_hand
+	field inmr_sellgrp
+	field inmr_buygrp
+end
+
+table incc
+	field incc_hhcc_hash
+	field incc_hhbr_hash
+	field incc_hhwh_hash
+	field incc_sort
+	field incc_stocking_unit
+	field incc_ff_option
+	field incc_ff_method
+	field incc_wks_demand
+	field incc_stat_flag
+end
+
+table ingu
+	field ingu_co_no
+	field ingu_br_no
+	field ingu_wh_no
+	field ingu_curr_code
+	field ingu_file_code
+	field ingu_file_desc
+	field ingu_price_type
+	field ingu_eff_date
+	field ingu_hhgu_hash
+end
+
+table inpr
+	field inpr_hhbr_hash
+	field inpr_price_type
+	field inpr_br_no
+	field inpr_wh_no
+	field inpr_curr_code
+	field inpr_area_code
+	field inpr_cust_type
+	field inpr_hhgu_hash
+	field inpr_price_by
+	field inpr_qty_brk1
+	field inpr_qty_brk2
+	field inpr_qty_brk3
+	field inpr_qty_brk4
+	field inpr_qty_brk5
+	field inpr_qty_brk6
+	field inpr_qty_brk7
+	field inpr_qty_brk8
+	field inpr_qty_brk9
+	field inpr_base
+	field inpr_price1
+	field inpr_price2
+	field inpr_price3
+	field inpr_price4
+	field inpr_price5
+	field inpr_price6
+	field inpr_price7
+	field inpr_price8
+	field inpr_price9
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_hhcf_hash
+	field excf_ex_rate
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table excl
+	field excl_co_no
+	field excl_class_type
+	field excl_class_desc
+	field excl_stat_flag
+end
+
+table ingp
+	field ingp_co_no
+	field ingp_code
+	field ingp_desc
+	field ingp_type
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+end
+
+table exaf
+	field exaf_co_no          
+	field exaf_area_code      
+	field exaf_area           
+end

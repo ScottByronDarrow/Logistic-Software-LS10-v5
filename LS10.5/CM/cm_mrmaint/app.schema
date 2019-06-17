@@ -1,0 +1,191 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/08/06 22:56:22 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/08/06 22:56:22  scott
+#	RELEASE 5.0
+#	
+#
+#
+
+table cmjd
+	field cmjd_hhjt_hash
+	field cmjd_line_no
+	field cmjd_hhcm_hash
+	field cmjd_dtl_lvl
+end
+
+table cmcb
+	field cmcb_hhhr_hash
+	field cmcb_hhcm_hash
+	field cmcb_dtl_lvl
+end
+
+table cmtr
+	field cmtr_hhhr_hash
+end
+
+table cmts
+	field cmts_hhhr_hash
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_cc_no
+	field comm_cc_name
+	field comm_dbt_date
+	field comm_fiscal
+end
+
+table cmit
+	field cmit_co_no
+	field cmit_issto
+	field cmit_hhit_hash
+	field cmit_iss_name
+	field cmit_hhsu_hash
+	field cmit_hhem_hash
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_department
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_contact_name
+	field cumr_class_type
+	field cumr_price_type
+	field cumr_bo_flag
+	field cumr_po_flag
+	field cumr_ch_adr1
+	field cumr_ch_adr2
+	field cumr_ch_adr3
+	field cumr_dl_adr1
+	field cumr_dl_adr2
+	field cumr_dl_adr3
+	field cumr_stop_credit
+	field cumr_credit_limit
+	field cumr_crd_prd
+	field cumr_crd_flag
+	field cumr_area_code
+	field cumr_sman_code
+	field cumr_disc_code
+	field cumr_tax_code
+	field cumr_tax_no
+	field cumr_ho_dbt_hash
+	field cumr_freight_chg
+	field cumr_inst_fg1
+	field cumr_inst_fg2
+	field cumr_inst_fg3
+	field cumr_ord_value
+	field cumr_bo_current
+	field cumr_bo_per1
+	field cumr_bo_per2
+	field cumr_bo_per3
+	field cumr_bo_per4
+	field cumr_bo_fwd
+	field cumr_od_flag
+	field cumr_stat_flag
+end
+
+table cmcd
+	field cmcd_hhhr_hash
+	field cmcd_line_no
+	field cmcd_text
+	field cmcd_stat_flag
+end
+
+table cmhr
+	field cmhr_co_no
+	field cmhr_br_no
+	field cmhr_cont_no
+	field cmhr_hhhr_hash
+	field cmhr_mast_hhhr
+	field cmhr_hhcu_hash
+	field cmhr_hhit_hash
+	field cmhr_cus_ref
+	field cmhr_contact
+	field cmhr_adr1
+	field cmhr_adr2
+	field cmhr_adr3
+	field cmhr_it_date
+	field cmhr_wip_date
+	field cmhr_st_date
+	field cmhr_due_date
+	field cmhr_end_date
+	field cmhr_hhjt_hash
+	field cmhr_wip_glacc
+	field cmhr_lab_glacc
+	field cmhr_o_h_glacc
+	field cmhr_sal_glacc
+	field cmhr_cog_glacc
+	field cmhr_var_glacc
+	field cmhr_int_glacc
+	field cmhr_wip_status
+	field cmhr_quote_type
+	field cmhr_progress
+	field cmhr_anni_day
+	field cmhr_quote_val
+	field cmhr_est_costs
+	field cmhr_est_prof
+	field cmhr_usr_ref1
+	field cmhr_usr_ref2
+	field cmhr_usr_ref3
+	field cmhr_usr_ref4
+	field cmhr_usr_ref5
+	field cmhr_internal
+	field cmhr_lab_rate
+	field cmhr_oh_rate
+	field cmhr_status
+end
+
+table cmjt
+	field cmjt_co_no
+	field cmjt_br_no
+	field cmjt_job_type
+	field cmjt_hhjt_hash
+	field cmjt_desc
+	field cmjt_wip_glacc
+	field cmjt_lab_glacc
+	field cmjt_o_h_glacc
+	field cmjt_sal_glacc
+	field cmjt_cog_glacc
+	field cmjt_var_glacc
+	field cmjt_int_glacc
+end
+
+table cmws
+	field cmws_co_no
+	field cmws_wp_stat
+	field cmws_desc
+end
+
+table comr
+	field comr_co_no
+	field comr_base_curr      
+	field comr_nx_job_no
+end
+
+table cudi
+	field cudi_hhcu_hash
+	field cudi_del_no
+	field cudi_name
+	field cudi_adr1
+	field cudi_adr2
+	field cudi_adr3
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_short_name
+	field esmr_nx_job_no
+end
+

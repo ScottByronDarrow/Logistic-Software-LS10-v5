@@ -1,0 +1,50 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.fagl,v 5.0 2001/06/19 10:17:12 cha Exp $
+|  Schema Name  : (sch.fagl)
+|  Schema Desc  : (Fixed asset General Ledger work file. )
+|----------------------------------------------------------------------
+| $Log: sch.fagl,v $
+| Revision 5.0  2001/06/19 10:17:12  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:00:39  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:27  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file fagl
+
+field	fagl_famr_hash			type	long			index	dups
+field	fagl_posted				type	char	1
+field	fagl_tran_date			type	edate
+field	fagl_dep_rule 			type	char	1
+field	fagl_crd_acc			type	char	16
+field	fagl_dbt_acc			type	char	16
+field	fagl_int_amt			type	money
+field	fagl_tax_amt			type	money
+field	fagl_int_pc				type	float
+field	fagl_tax_pc				type	float
+field	fagl_stat_flag			type	char	1
+field	fagl_id_no				type	composite
+			fagl_famr_hash,
+			fagl_posted,
+			fagl_tran_date								index	primary
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		fagl_famr_hash		-	Link to fixed asset master file.
+		fagl_posted			-	Posted flag N or Y
+		fagl_tran_date		-	Transaction date
+		fagl_dep_rule		-	Depreciation rule - See famr
+		fagl_crd_acc		-	Debit posting.
+		fagl_dbt_acc		-	Credit Posting
+		fagl_amount			-	Amount posted
+		fagl_stat_flag		-	Spare status flag
+}

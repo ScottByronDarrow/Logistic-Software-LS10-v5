@@ -1,0 +1,29 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/03/06 08:47:58 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/03/06 08:47:58  scott
+#	S/C 00883 - BOMMT8-Maintain Exclusion File. When pressed <F1> then <F4>, the 'Code' column displays different data. When steps are repeated, code column displays an additional data which is the exclusion data. All data should be displayed on the first querry.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_co_short
+	field comm_dbt_date
+	field comm_crd_date
+	field comm_inv_date
+	field comm_payroll_date
+	field comm_gl_date
+end
+
+table pcpx
+	field pcpx_co_no
+	field pcpx_class
+	field pcpx_excl_class
+end
+

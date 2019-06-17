@@ -1,0 +1,145 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/03/06 05:49:35 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/03/06 05:49:35  scott
+#	S/C 00790 - SAMK14- Display Sales Commissions; WINDOWS CLIENT  (1)  When <enter> is pressed at first field 'Start Sales Person', default is space, then press <enter> in all fields.  .  But when focus goes back to first field, press F12, the error message is 'Salesman Not Found'  CHAR-BASED / WINDOWS CLIENT
+#	(2) Other characters are accepted by the field Display/Print.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_est_no
+	field comm_est_name
+	field comm_est_short
+	field comm_cc_no
+	field comm_cc_short
+end
+
+table esmr
+	field esmr_co_no
+	field esmr_est_no
+	field esmr_est_name
+end
+
+table cumr
+	field cumr_co_no
+	field cumr_est_no
+	field cumr_dbt_no
+	field cumr_hhcu_hash
+	field cumr_dbt_name
+	field cumr_dbt_acronym
+	field cumr_tax_code
+	field cumr_curr_code
+end
+
+table cuin
+	field cuin_hhcu_hash
+	field cuin_ho_hash
+	field cuin_hhci_hash
+	field cuin_type
+	field cuin_co_no
+	field cuin_est
+	field cuin_dp
+	field cuin_inv_no
+	field cuin_narrative
+	field cuin_date_of_inv
+	field cuin_date_posted
+	field cuin_pay_terms
+	field cuin_due_date
+	field cuin_currency
+	field cuin_exch_rate
+	field cuin_er_fixed
+	field cuin_disc
+	field cuin_amt
+	field cuin_stat_flag
+	field cuin_drop_ship
+	field cuin_grn_no
+end
+
+table cuhd
+	field cuhd_hhcu_hash
+	field cuhd_receipt_no
+	field cuhd_cheque_no
+	field cuhd_or_no
+	field cuhd_type
+	field cuhd_bank_id
+	field cuhd_bank_amt
+	field cuhd_bank_exch
+	field cuhd_bank_chg
+	field cuhd_rec_type
+	field cuhd_alt_drawer
+	field cuhd_due_date
+	field cuhd_present_date
+	field cuhd_hhcp_hash
+	field cuhd_narrative
+	field cuhd_date_payment
+	field cuhd_date_posted
+	field cuhd_tot_amt_paid
+	field cuhd_loc_amt_paid
+	field cuhd_disc_given
+	field cuhd_loc_disc_give
+	field cuhd_exch_variance
+	field cuhd_lodge_flag
+	field cuhd_clear_fee
+	field cuhd_db_bank
+	field cuhd_db_branch
+	field cuhd_stat_flag
+end
+
+table exsf
+	field exsf_co_no
+	field exsf_salesman_no
+	field exsf_hhsf_hash
+	field exsf_logname
+	field exsf_salesman
+	field exsf_sell_type
+	field exsf_sell_grp
+	field exsf_sell_pos
+	field exsf_area_code
+	field exsf_route_no
+	field exsf_carr_code
+	field exsf_up_sman1
+	field exsf_up_sman2
+	field exsf_up_sman3
+	field exsf_sale_stat
+	field exsf_com_status
+	field exsf_com_type
+	field exsf_com_pc
+	field exsf_com_min
+	field exsf_sman_com
+	field exsf_lev1_com
+	field exsf_lev2_com
+	field exsf_lev3_com
+	field exsf_lev4_com
+	field exsf_stat_flag
+	field exsf_update
+end
+
+table sacl
+	field sacl_sach_hash
+	field sacl_hhcp_hash
+	field sacl_rec_amt
+	field sacl_rec_date
+	field sacl_com_amt
+	field sacl_status
+end
+
+table sach
+	field sach_sach_hash
+	field sach_hhsf_hash
+	field sach_hhcu_hash
+	field sach_hhci_hash
+	field sach_inv_amt
+	field sach_amt
+	field sach_com_val
+	field sach_com_rate
+	field sach_sman_pos
+	field sach_sale_flag
+end
+

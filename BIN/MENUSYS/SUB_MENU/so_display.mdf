@@ -1,0 +1,24 @@
+SOP - Status Displays. (SUB)
+so_help
+Sales Order Master Menu. <a> (1,1)
+menu MENUSYS/so_master.mdf
+Display Customer Credit Status. <a> (1,1)
+so_cc_disp~M~
+Display Order Tracking. <a> (1,1)
+so_trackdsp~
+Display Order Status. <a> (1,1)
+so_sts_disp~
+Display Order By Customer. <a> (1,1)
+so_cusdisp~
+Display Order By Item. <a> (1,1)
+so_stkdisp~
+Display Sales Order. <a> (1,1)
+so_display~R~so_display.s~
+Display Packing Slip. <a> (1,1)
+so_invdisp~N~7~P~so_invoice.s~
+Display Backorder Report. <a> (1,1)
+so_bo_prt~D~
+Customer Services Enquiry. <a> (1,1)
+so_cus_ser~
+((
+))

@@ -1,0 +1,29 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2001/11/22 08:11:23 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2001/11/22 08:11:23  scott
+#	Updated to convert to app.schema and perform a general code clean.
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+	field comm_gl_date
+end
+
+table gljc
+	field gljc_co_no
+	field gljc_journ_type
+	field gljc_tot_1
+	field gljc_tot_2
+	field gljc_tot_3
+	field gljc_tot_4
+	field gljc_tot_5
+	field gljc_tot_6
+end
+

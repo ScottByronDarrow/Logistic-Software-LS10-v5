@@ -1,0 +1,64 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.sjis,v 5.0 2001/06/19 10:17:30 cha Exp $
+|  Schema Name  : (sch.sjis)
+|  Schema Desc  : (Service Job Invoice Summary File. )
+|----------------------------------------------------------------------
+| $Log: sch.sjis,v $
+| Revision 5.0  2001/06/19 10:17:30  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:23  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:46  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file sjis 
+
+field	sjis_co_no				type	char	2  
+field	sjis_est_no				type	char	2  
+field	sjis_dp_no				type	char	2  
+field	sjis_invno				type	char	8
+field	sjis_order_no			type	long
+field	sjis_date				type	edate  
+field	sjis_end_client			type	long
+field	sjis_cust_ord_no		type	char	10
+field	sjis_cost_estim			type	double 
+field	sjis_invoice_cost		type	double
+field	sjis_invoice_chg		type	double 
+field	sjis_prebill_amt		type	double 
+field	sjis_gl_code			type	char	10
+field	sjis_status				type	char	1  	index dups
+field	sjis_gst_pc				type	float 
+field	sjis_type				type	char	1
+field	sjis_prt_stat			type	char	1  	index dups
+field	sjis_chg_client			type	long
+field	sjis_id_no				type	composite
+			sjis_co_no,
+			sjis_est_no,
+			sjis_dp_no,
+			sjis_invno 										index
+field	sjis_id_no2				type	composite
+			sjis_co_no,
+			sjis_est_no,
+			sjis_dp_no,
+			sjis_order_no,
+			sjis_invno 										index dups
+field	sjis_id_no3				type	composite
+			sjis_co_no,
+			sjis_est_no,
+			sjis_dp_no,
+			sjis_date,
+			sjis_invno 										index
+
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+}

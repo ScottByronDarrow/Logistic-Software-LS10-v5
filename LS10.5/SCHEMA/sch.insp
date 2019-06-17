@@ -1,0 +1,57 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.insp,v 5.0 2001/06/19 10:17:20 cha Exp $
+|  Schema Name  : (sch.insp)
+|  Schema Desc  : (Inventory/Supplier Pricing By Qty. )
+|----------------------------------------------------------------------
+| $Log: sch.insp,v $
+| Revision 5.0  2001/06/19 10:17:20  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.1  2001/04/28 04:02:50  scott
+| Updated to change money fields to double
+|
+| Revision 4.0  2001/03/09 01:00:57  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:32  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	insp
+field	insp_hhsu_hash			type	long
+field	insp_hhbr_hash			type	long		index		dups
+field	insp_qty_brk1			type	float
+field	insp_qty_brk2			type	float
+field	insp_qty_brk3			type	float
+field	insp_qty_brk4			type	float
+field	insp_qty_brk5			type	float
+field	insp_price1				type	double
+field	insp_price2				type	double
+field	insp_price3				type	double
+field	insp_price4				type	double
+field	insp_price5				type	double
+field	insp_id_no				type	composite
+			insp_hhsu_hash,
+			insp_hhbr_hash								index	primary
+end
+
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+		insp_hhsu_hash		- link to sumr
+		insp_hhbr_hash		- link to inmr
+		insp_qty_brk1		- qty break
+		insp_qty_brk2		- qty break
+		insp_qty_brk3		- qty break
+		insp_qty_brk4		- qty break
+		insp_qty_brk5		- qty break
+		insp_price1			- price for respective qty break
+		insp_price2			- price for respective qty break
+		insp_price3			- price for respective qty break
+		insp_price4			- price for respective qty break
+		insp_price5			- price for respective qty break
+}

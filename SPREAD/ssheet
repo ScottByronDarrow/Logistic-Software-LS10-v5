@@ -1,0 +1,76 @@
+:
+#
+#	Spread-sheet control script.
+#
+#SSHEET="123"
+FLAGS=""
+if [ "$SPREAD_SHEET" != "" ]
+then
+	SSHEET=$SPREAD_SHEET
+fi
+cd $PROG_PATH/SPREAD
+
+set - - `getopt u $*`
+for i in $*
+do
+	case $i in
+	-u)	FLAGS="-u"
+		;;
+
+	-|--)
+		;;
+
+	*)	xx=`echo $i | grep ".uss$" | wc -l`
+		if [ $xx -gt 0 ]
+		then
+			xx=`file $i | grep "data" | wc -l`
+			if [ $xx -gt 0 ]
+			then
+				FILE=`basename $i "\.uss"`
+				FILE="$FILE.use"
+				FLAGS="-u"
+			else
+				FILE=$i
+			fi
+		else
+			FILE=$i
+		fi
+		;;
+	esac
+done
+
+case $SSHEET in
+	2plus)	
+		echo "NO SPREAD SHEET ON UNIX HOST. \c"
+		;;
+
+	excel)	
+		echo "NO SPREAD SHEET ON UNIX HOST. \c"
+		sleep 2
+		;;
+
+	123)	
+		echo "NO SPREAD SHEET ON UNIX HOST. \c"
+		sleep 2
+		;;
+
+	2plusv6)
+		Uredirect=/usr
+		export Uredirect
+		exec /usr/UAP/bin/ucalc $FLAGS $FILE
+		;;
+
+	2020)	
+		echo "NO SPREAD SHEET ON UNIX HOST. \c"
+		;;
+
+	*)	tput smso;
+		tput cup 23 0
+		tput el
+		echo -n "Spread-sheet $SSHEET is not yet supported."
+		tput bel
+		tput rmso
+		sleep 2
+		exit 1
+		;;
+esac

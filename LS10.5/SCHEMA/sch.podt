@@ -1,0 +1,51 @@
+{======================================================================
+|  Copyright (C) 1998 - 2001 LogisticSoftware
+|======================================================================
+| $Id: sch.podt,v 5.0 2001/06/19 10:17:22 cha Exp $
+|  Schema Name  : (sch.podt)
+|  Schema Desc  : (Composition or Duty File. )
+|----------------------------------------------------------------------
+| $Log: sch.podt,v $
+| Revision 5.0  2001/06/19 10:17:22  cha
+| LS10-5.0 New Release as of 19 JUNE 2001
+|
+| Revision 4.0  2001/03/09 01:01:10  scott
+| LS10-4.0 New Release as at 10th March 2001
+|
+| Revision 3.1  2001/01/25 06:55:41  scott
+| Updated to make all schema headers standard.
+| Long overdue for some clean up action
+|
+|=====================================================================}
+file	podt	
+
+field	podt_co_no			type	char	2	
+field	podt_code			type	char	2	
+field	podt_id_no			type	composite
+						podt_co_no,
+						podt_code	index	primary
+field	podt_description		type	char	20
+field	podt_im_tariff			type	char	10
+field	podt_im_band			type	char	1
+field	podt_ex_tariff			type	char	10
+field	podt_ex_band			type	char	1
+field	podt_duty_type			type	char	1
+field	podt_im_duty			type	double
+field	podt_ex_draw			type	double
+
+end
+{
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+              ! LOGISTIC SCHEMA COMMENTS SECTION. !
+              +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+	podt_co_no		-	Company number.
+	podt_code		-	Duty Code.
+	podt_description	-	Duty Description.
+	podt_im_tariff		-	Import Tariff Code.
+	podt_im_band		-	Import Tariff Band.
+	podt_ex_tariff		-	Export Tariff Code.
+	podt_ex_band		-	Export Tariff Band.
+	podt_duty_type		-	Duty Type P(ercent, D(ollar.
+	podt_im_duty		-	Import Duty Percent.
+	podt_ex_draw		-	Export Duty Percent.
+}

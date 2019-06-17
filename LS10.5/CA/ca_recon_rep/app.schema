@@ -1,0 +1,56 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/07/09 09:09:04 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/07/09 09:09:04  scott
+#	Converted to app.schema
+#	
+#
+#
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table crbk
+	field crbk_co_no
+	field crbk_bank_id
+	field crbk_bank_name
+	field crbk_acct_name
+	field crbk_bank_acct_no
+	field crbk_curr_code
+end
+
+table cbbt
+	field cbbt_co_no
+	field cbbt_bank_id
+	field cbbt_tran_no
+	field cbbt_tran_date
+	field cbbt_tran_desc
+	field cbbt_tran_type
+	field cbbt_tran_amt
+	field cbbt_stat_post
+	field cbbt_reconciled
+	field cbbt_select
+	field cbbt_period
+end
+
+table cbbs
+	field cbbs_co_no
+	field cbbs_bank_id
+	field cbbs_period
+	field cbbs_end_period
+	field cbbs_st_bal
+	field cbbs_end_bal
+	field cbbs_stat
+end
+
+table pocr
+	field pocr_co_no
+	field pocr_code
+	field pocr_description
+end
+

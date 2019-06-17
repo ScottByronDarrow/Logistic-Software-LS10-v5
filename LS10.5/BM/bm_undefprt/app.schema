@@ -1,0 +1,98 @@
+#
+############################################
+#
+#	$Id: app.schema,v 5.1 2002/06/03 08:22:11 scott Exp $
+#	$Log: app.schema,v $
+#	Revision 5.1  2002/06/03 08:22:11  scott
+#	Updated to remove sort functions
+#	Updated to convert to app.schema
+#	
+#
+#
+
+table bmms
+	field bmms_co_no
+	field bmms_hhbr_hash
+	field bmms_line_no
+	field bmms_mabr_hash
+	field bmms_uom
+	field bmms_matl_qty
+	field bmms_matl_wst_pc
+	field bmms_instr_no
+end
+
+table comm
+	field comm_term
+	field comm_co_no
+	field comm_co_name
+end
+
+table excf
+	field excf_co_no
+	field excf_cat_no
+	field excf_cat_desc
+	field excf_stat_flag
+end
+
+table inmr
+	field inmr_co_no
+	field inmr_item_no
+	field inmr_hhbr_hash
+	field inmr_hhsi_hash
+	field inmr_alpha_code
+	field inmr_supercession
+	field inmr_maker_no
+	field inmr_alternate
+	field inmr_class
+	field inmr_description
+	field inmr_description2
+	field inmr_category
+	field inmr_quick_code
+	field inmr_abc_code
+	field inmr_abc_update
+	field inmr_serial_item
+	field inmr_lot_ctrl
+	field inmr_costing_flag
+	field inmr_sale_unit
+	field inmr_pack_size
+	field inmr_weight
+	field inmr_on_hand
+	field inmr_on_order
+	field inmr_committed
+	field inmr_backorder
+	field inmr_forward
+	field inmr_source
+	field inmr_dec_pt
+	field inmr_ex_code
+	field inmr_bo_flag
+	field inmr_bo_release
+	field inmr_disc_pc
+	field inmr_gst_pc
+	field inmr_min_quan
+	field inmr_max_quan
+	field inmr_safety_stock
+	field inmr_licence
+	field inmr_duty
+	field inmr_duty_amt
+	field inmr_std_uom
+	field inmr_alt_uom
+	field inmr_uom_cfactor
+	field inmr_outer_uom
+	field inmr_outer_size
+	field inmr_pc_off_trade
+	field inmr_scrap_pc
+	field inmr_tax_pc
+	field inmr_tax_amount
+	field inmr_ltd_sales
+	field inmr_schg_flag
+	field inmr_stat_flag
+end
+
+table inum
+	field inum_uom_group
+	field inum_hhum_hash
+	field inum_uom
+	field inum_desc
+	field inum_cnv_fct
+end
+
